@@ -21,23 +21,28 @@ export class Selector {
 
   _build() {
     this.overlay.innerHTML = `
-      <div id="selector-modal">
+      <div id="selector-modal" role="document">
         <div id="selector-header">
-          <h2>Select a Simulation Run</h2>
+          <h2 id="selector-title">Select a Simulation Run</h2>
           <div id="selector-actions">
-            <button class="ctrl-btn" id="btn-random">Random</button>
-            <button class="ctrl-btn" id="btn-close-selector">\u2715</button>
+            <button class="ctrl-btn" id="btn-random" aria-label="Load a random run">Random</button>
+            <button class="ctrl-btn" id="btn-close-selector" aria-label="Close run selector">\u2715</button>
           </div>
         </div>
-        <div id="selector-list"></div>
+        <div id="selector-list" role="listbox" aria-labelledby="selector-title"></div>
       </div>
     `;
+    this.overlay.setAttribute('aria-labelledby', 'selector-title');
 
     this.listEl = this.overlay.querySelector('#selector-list');
     this.overlay.querySelector('#btn-close-selector').addEventListener('click', () => this.close());
     this.overlay.querySelector('#btn-random').addEventListener('click', () => this._pickRandom());
     this.overlay.addEventListener('click', (e) => {
       if (e.target === this.overlay) this.close();
+    });
+    // Close on Escape
+    this.overlay.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') this.close();
     });
   }
 
@@ -75,6 +80,9 @@ export class Selector {
     for (const run of this.runs) {
       const item = document.createElement('div');
       item.className = 'run-item';
+      item.setAttribute('role', 'option');
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('aria-label', `Seed ${run.seed}, ${run.outcome_class}, ${run.headline}`);
       const color = VERDICT_COLORS[run.outcome_class] || '#888';
       item.innerHTML = `
         <span class="seed">#${run.seed}</span>
@@ -85,6 +93,12 @@ export class Selector {
         <span class="score">${(run.composite_score >= 0 ? '+' : '') + run.composite_score.toFixed(3)}</span>
       `;
       item.addEventListener('click', () => this._selectRun(run));
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this._selectRun(run);
+        }
+      });
       this.listEl.appendChild(item);
     }
   }
@@ -108,8 +122,18 @@ export class Selector {
     this._selectRun(this.runs[idx]);
   }
 
-  open() { this.overlay.classList.add('open'); }
-  close() { this.overlay.classList.remove('open'); }
+  open() {
+    this.overlay.classList.add('open');
+    // Focus first focusable element in modal
+    const firstBtn = this.overlay.querySelector('#btn-random');
+    if (firstBtn) setTimeout(() => firstBtn.focus(), 50);
+  }
+  close() {
+    this.overlay.classList.remove('open');
+    // Return focus to the trigger button
+    const trigger = document.getElementById('btn-select-run');
+    if (trigger) trigger.focus();
+  }
   toggle() { this.overlay.classList.toggle('open'); }
 
   _esc(s) {

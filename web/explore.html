@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>21csim - Explorer / Analytics</title>
   <link rel="stylesheet" href="styles.css">
@@ -570,84 +571,101 @@
       }
     }
 
+    @media (max-width: 768px) {
+      .stats-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .stat-card { min-width: auto; }
+      .fan-charts-grid { grid-template-columns: 1fr; }
+      .filter-bar { flex-direction: column; align-items: stretch; }
+      .load-data-bar { flex-wrap: wrap; }
+    }
+
     @media (max-width: 600px) {
-      .stats-row { flex-direction: column; }
+      .stats-row { grid-template-columns: 1fr; }
       .fan-charts-grid { grid-template-columns: 1fr; }
       .seed-grid { grid-template-columns: 1fr; }
+      .explore-section { padding: 12px; }
+      .explore-section h2 { font-size: 17px; }
     }
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <nav id="site-nav"></nav>
   <div id="app">
     <!-- Top Bar -->
-    <div id="top-bar">
+    <header id="top-bar" role="banner">
       <div id="run-info">
         <span class="headline" style="color: var(--text-bright); font-family: var(--font-ui); font-size: 15px;">Explorer / Analytics</span>
       </div>
       <div class="actions">
-        <a href="index.html" class="nav-link">Viewer</a>
+        <a href="index.html" class="nav-link" aria-label="Go to Viewer page">Viewer</a>
       </div>
-    </div>
+    </header>
 
     <!-- Section 1: Corpus Overview -->
-    <section id="sec-overview" class="explore-section">
-      <h2>Corpus Overview</h2>
-      <div id="overview-stats" class="stats-row"></div>
-      <div id="outcome-bar-area" class="outcome-bar-container"></div>
-      <div class="chart-row">
-        <div class="chart-box">
-          <h3>Composite Score Distribution</h3>
-          <canvas id="histogram-canvas" height="160"></canvas>
+    <main id="main-content">
+      <section id="sec-overview" class="explore-section" aria-labelledby="overview-heading">
+        <h2 id="overview-heading">Corpus Overview</h2>
+        <div id="overview-stats" class="stats-row" role="group" aria-label="Overview statistics"></div>
+        <div id="outcome-bar-area" class="outcome-bar-container" role="img" aria-label="Outcome distribution chart"></div>
+        <div class="chart-row">
+          <div class="chart-box">
+            <h3 id="histogram-heading">Composite Score Distribution</h3>
+            <canvas id="histogram-canvas" height="160" aria-labelledby="histogram-heading" role="img" aria-label="Histogram of composite scores across all runs"></canvas>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Section 2: Seed Grid -->
-    <section id="sec-seeds" class="explore-section">
-      <h2>Seed Grid</h2>
-      <div id="filter-bar" class="filter-bar"></div>
-      <div id="seed-grid" class="seed-grid"></div>
-    </section>
+      <!-- Section 2: Seed Grid -->
+      <section id="sec-seeds" class="explore-section" aria-labelledby="seeds-heading">
+        <h2 id="seeds-heading">Seed Grid</h2>
+        <div id="filter-bar" class="filter-bar" role="search" aria-label="Filter simulation runs"></div>
+        <div id="seed-grid" class="seed-grid" role="list" aria-label="Simulation run cards"></div>
+      </section>
 
-    <!-- Section 3: Branch Frequency Heatmap -->
-    <section id="sec-heatmap" class="explore-section">
-      <h2>Branch Frequency Heatmap</h2>
-      <div class="load-data-bar" id="heatmap-loader">
-        <button class="load-btn" id="btn-load-all">Load All Run Data</button>
-        <div class="progress-bar-track" id="load-progress-track" style="display:none;">
-          <div class="progress-bar-fill" id="load-progress-fill"></div>
+      <!-- Section 3: Branch Frequency Heatmap -->
+      <section id="sec-heatmap" class="explore-section" aria-labelledby="heatmap-heading">
+        <h2 id="heatmap-heading">Branch Frequency Heatmap</h2>
+        <div class="load-data-bar" id="heatmap-loader">
+          <button class="load-btn" id="btn-load-all" aria-label="Load all run data for analysis">Load All Run Data</button>
+          <div class="progress-bar-track" id="load-progress-track" style="display:none;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Data loading progress">
+            <div class="progress-bar-fill" id="load-progress-fill"></div>
+          </div>
+          <span class="load-progress" id="load-progress-text" aria-live="polite"></span>
         </div>
-        <span class="load-progress" id="load-progress-text"></span>
-      </div>
-      <div id="heatmap-area">
-        <div class="section-placeholder" id="heatmap-placeholder">Load all run data to view branch frequency heatmap.</div>
-      </div>
-    </section>
+        <div id="heatmap-area">
+          <div class="section-placeholder" id="heatmap-placeholder">Load all run data to view branch frequency heatmap.</div>
+        </div>
+      </section>
 
-    <!-- Section 4: World State Trajectories -->
-    <section id="sec-fancharts" class="explore-section">
-      <h2>World State Trajectories (Fan Charts)</h2>
-      <div id="fancharts-area">
-        <div class="section-placeholder" id="fancharts-placeholder">Load all run data to view trajectory fan charts.</div>
-      </div>
-    </section>
+      <!-- Section 4: World State Trajectories -->
+      <section id="sec-fancharts" class="explore-section" aria-labelledby="fancharts-heading">
+        <h2 id="fancharts-heading">World State Trajectories (Fan Charts)</h2>
+        <div id="fancharts-area">
+          <div class="section-placeholder" id="fancharts-placeholder">Load all run data to view trajectory fan charts.</div>
+        </div>
+      </section>
 
-    <!-- Section 5: Leverage Ranking -->
-    <section id="sec-leverage" class="explore-section">
-      <h2>Leverage Ranking</h2>
-      <div id="leverage-area">
-        <div class="section-placeholder" id="leverage-placeholder">Load all run data to view leverage ranking.</div>
-      </div>
-    </section>
+      <!-- Section 5: Leverage Ranking -->
+      <section id="sec-leverage" class="explore-section" aria-labelledby="leverage-heading">
+        <h2 id="leverage-heading">Leverage Ranking</h2>
+        <div id="leverage-area">
+          <div class="section-placeholder" id="leverage-placeholder">Load all run data to view leverage ranking.</div>
+        </div>
+      </section>
 
-    <!-- Section 6: Interactive What-If Filter -->
-    <section id="sec-whatif" class="explore-section">
-      <h2>Interactive What-If Filter</h2>
-      <div id="whatif-area">
-        <div class="section-placeholder" id="whatif-placeholder">Load all run data to use the what-if filter.</div>
-      </div>
-    </section>
+      <!-- Section 6: Interactive What-If Filter -->
+      <section id="sec-whatif" class="explore-section" aria-labelledby="whatif-heading">
+        <h2 id="whatif-heading">Interactive What-If Filter</h2>
+        <div id="whatif-area">
+          <div class="section-placeholder" id="whatif-placeholder">Load all run data to use the what-if filter.</div>
+        </div>
+      </section>
+    </main>
   </div>
 
   <script type="module">

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>21csim - About / Methodology</title>
   <link rel="stylesheet" href="styles.css">
@@ -472,6 +473,14 @@
       .branch-name { min-width: auto; }
     }
 
+    @media (max-width: 768px) {
+      .verdict-table { font-size: 11px; }
+      .verdict-table th,
+      .verdict-table td { padding: 6px 8px; }
+      .about-section h2 { font-size: 19px; }
+      .catalog-section h2 { font-size: 19px; }
+    }
+
     @media (max-width: 600px) {
       .catalog-filters {
         flex-direction: column;
@@ -482,221 +491,239 @@
       .node-header {
         flex-wrap: wrap;
       }
+      .about-section,
+      .catalog-section {
+        padding: 12px;
+      }
+      .about-section h2 { font-size: 17px; }
+      .catalog-section h2 { font-size: 17px; }
+      .about-section p,
+      .about-section li { font-size: 13px; }
+      .faq-q { font-size: 13px; }
+      .faq-a { font-size: 12px; }
+      /* Make verdict table horizontally scrollable on phone */
+      .verdict-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
     }
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <nav id="site-nav"></nav>
   <div id="app">
 
-    <!-- ═══════════════════════════════════════════════ -->
-    <!-- Section 1: Methodology                         -->
-    <!-- ═══════════════════════════════════════════════ -->
-    <section class="about-section">
-      <h2>What is 21csim?</h2>
-      <p>
-        21csim is a Monte Carlo counterfactual simulation of the 21st century. It models
-        303 pivotal event nodes -- from the 2000 U.S. election to speculative far-future
-        milestones -- as a directed acyclic graph (DAG). Each node branches into multiple
-        possible outcomes with assigned probabilities. When you run a simulation, the engine
-        rolls the dice at every branch point, cascading the consequences through the
-        dependency graph to produce one plausible alternate history.
-      </p>
-      <p>
-        Run it thousands of times with different random seeds and you get a probability
-        distribution over possible 21st centuries -- some optimistic, some catastrophic,
-        most somewhere in between.
-      </p>
+    <main id="main-content">
+      <!-- Section 1: Methodology -->
+      <section class="about-section" aria-labelledby="about-heading">
+        <h2 id="about-heading">What is 21csim?</h2>
+        <p>
+          21csim is a Monte Carlo counterfactual simulation of the 21st century. It models
+          303 pivotal event nodes -- from the 2000 U.S. election to speculative far-future
+          milestones -- as a directed acyclic graph (DAG). Each node branches into multiple
+          possible outcomes with assigned probabilities. When you run a simulation, the engine
+          rolls the dice at every branch point, cascading the consequences through the
+          dependency graph to produce one plausible alternate history.
+        </p>
+        <p>
+          Run it thousands of times with different random seeds and you get a probability
+          distribution over possible 21st centuries -- some optimistic, some catastrophic,
+          most somewhere in between.
+        </p>
 
-      <h3>How It Works</h3>
-      <ul>
-        <li><strong>303 event nodes</strong> organized as a DAG with explicit dependency edges</li>
-        <li><strong>Probabilistic branching:</strong> each node has 2-6 outcome branches with assigned probabilities that sum to 1.0</li>
-        <li><strong>Cascading dependencies:</strong> the outcome of one node can shift the probabilities or gate the existence of downstream nodes</li>
-        <li><strong>Conditional gating:</strong> some nodes only fire if a specific upstream branch was taken (e.g., a war node gated on a diplomacy-failure branch)</li>
-        <li><strong>32 world-state dimensions:</strong> each branch adjusts dimensions like <code>democracy_index</code>, <code>climate_stability</code>, <code>technological_progress</code>, and <code>global_cooperation</code></li>
-        <li><strong>Composite scoring:</strong> after all nodes resolve, the 32 dimensions are weighted and combined into a single composite score that maps to a verdict</li>
-      </ul>
+        <h3>How It Works</h3>
+        <ul>
+          <li><strong>303 event nodes</strong> organized as a DAG with explicit dependency edges</li>
+          <li><strong>Probabilistic branching:</strong> each node has 2-6 outcome branches with assigned probabilities that sum to 1.0</li>
+          <li><strong>Cascading dependencies:</strong> the outcome of one node can shift the probabilities or gate the existence of downstream nodes</li>
+          <li><strong>Conditional gating:</strong> some nodes only fire if a specific upstream branch was taken (e.g., a war node gated on a diplomacy-failure branch)</li>
+          <li><strong>32 world-state dimensions:</strong> each branch adjusts dimensions like <code>democracy_index</code>, <code>climate_stability</code>, <code>technological_progress</code>, and <code>global_cooperation</code></li>
+          <li><strong>Composite scoring:</strong> after all nodes resolve, the 32 dimensions are weighted and combined into a single composite score that maps to a verdict</li>
+        </ul>
 
-      <h3>What It Is NOT</h3>
-      <ul>
-        <li><strong>Not a prediction.</strong> The simulation explores structured possibilities, not forecasts. No outcome is presented as likely to happen.</li>
-        <li><strong>Not political commentary.</strong> Nodes model events across the political spectrum without editorial judgment.</li>
-        <li><strong>Not comprehensive history.</strong> 303 nodes cannot capture every significant event. The selection focuses on high-leverage inflection points with clear branching structure.</li>
-      </ul>
+        <h3>What It Is NOT</h3>
+        <ul>
+          <li><strong>Not a prediction.</strong> The simulation explores structured possibilities, not forecasts. No outcome is presented as likely to happen.</li>
+          <li><strong>Not political commentary.</strong> Nodes model events across the political spectrum without editorial judgment.</li>
+          <li><strong>Not comprehensive history.</strong> 303 nodes cannot capture every significant event. The selection focuses on high-leverage inflection points with clear branching structure.</li>
+        </ul>
 
-      <h3>Verdict Classification</h3>
-      <p>
-        After a simulation run resolves all 303 nodes, the accumulated world-state
-        dimensions produce a composite score. That score maps to one of eight verdict
-        categories:
-      </p>
-      <table class="verdict-table">
-        <thead>
-          <tr>
-            <th>Verdict</th>
-            <th>Composite Range</th>
-            <th>Meaning</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="swatch" style="background:var(--verdict-golden-age)"></span>Golden Age</td>
-            <td>&ge; 75</td>
-            <td>Broad flourishing across most dimensions: strong democracy, climate stability, technological benefit, global cooperation</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background:var(--verdict-transcendence)"></span>Transcendence</td>
-            <td>&ge; 85 + tech</td>
-            <td>Technological transformation so profound that conventional metrics break down -- e.g., superintelligence or post-scarcity</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background:var(--verdict-progress)"></span>Progress</td>
-            <td>55 - 74</td>
-            <td>Meaningful improvement in most areas, though with setbacks and unresolved problems</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background:var(--verdict-muddling-through)"></span>Muddling Through</td>
-            <td>40 - 54</td>
-            <td>Incremental change, mixed results. Some things improve, others worsen, net effect ambiguous</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background:var(--verdict-decline)"></span>Decline</td>
-            <td>25 - 39</td>
-            <td>Measurable deterioration in key dimensions: rising authoritarianism, worsening climate, economic stagnation</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background:var(--verdict-catastrophe)"></span>Catastrophe</td>
-            <td>10 - 24</td>
-            <td>Severe collapse in multiple dimensions: major wars, civilizational regression, widespread suffering</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background:var(--verdict-extinction)"></span>Extinction</td>
-            <td>&lt; 10</td>
-            <td>Civilizational or literal extinction scenarios: runaway AI, nuclear winter, ecological collapse</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background:var(--verdict-radically-different)"></span>Radically Different</td>
-            <td>High divergence</td>
-            <td>High divergence ratio with ambiguous composite score -- the world is so different from baseline that "better" or "worse" loses meaning</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Probability Calibration</h3>
-      <p>
-        The base probabilities assigned to each branch are subjective estimates informed by
-        historical analysis, not statistical predictions derived from data. They are
-        calibrated so that batch runs produce realistic distributions -- i.e., the most
-        common verdicts across thousands of seeds roughly match the range of plausible
-        21st-century trajectories.
-      </p>
-      <p>
-        "Realistic" here means the simulation should not systematically produce utopias or
-        catastrophes. The probabilities are tuned so that historical branches dominate when
-        they should, while leaving meaningful room for divergence at genuine inflection
-        points.
-      </p>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════ -->
-    <!-- Section 2: Interactive Node Catalog             -->
-    <!-- ═══════════════════════════════════════════════ -->
-    <section class="catalog-section">
-      <h2>Node Catalog</h2>
-      <div class="catalog-filters" id="catalog-filters">
-        <input type="text" id="catalog-search" placeholder="Search by title, ID, or description...">
-        <select id="filter-domain"><option value="">All Domains</option></select>
-        <select id="filter-decade"><option value="">All Eras</option></select>
-        <select id="filter-confidence"><option value="">All Confidence</option></select>
-        <span class="catalog-count" id="catalog-count"></span>
-      </div>
-      <div class="node-list" id="node-list">
-        <div style="color:var(--text-dim); text-align:center; padding:40px; font-family:var(--font-ui);">
-          Loading node catalog...
+        <h3 id="verdict-classification-heading">Verdict Classification</h3>
+        <p>
+          After a simulation run resolves all 303 nodes, the accumulated world-state
+          dimensions produce a composite score. That score maps to one of eight verdict
+          categories:
+        </p>
+        <div class="verdict-table-wrapper">
+          <table class="verdict-table" aria-labelledby="verdict-classification-heading">
+            <thead>
+              <tr>
+                <th scope="col">Verdict</th>
+                <th scope="col">Composite Range</th>
+                <th scope="col">Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="swatch" style="background:var(--verdict-golden-age)" aria-hidden="true"></span>Golden Age</td>
+                <td>&ge; 75</td>
+                <td>Broad flourishing across most dimensions: strong democracy, climate stability, technological benefit, global cooperation</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:var(--verdict-transcendence)" aria-hidden="true"></span>Transcendence</td>
+                <td>&ge; 85 + tech</td>
+                <td>Technological transformation so profound that conventional metrics break down -- e.g., superintelligence or post-scarcity</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:var(--verdict-progress)" aria-hidden="true"></span>Progress</td>
+                <td>55 - 74</td>
+                <td>Meaningful improvement in most areas, though with setbacks and unresolved problems</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:var(--verdict-muddling-through)" aria-hidden="true"></span>Muddling Through</td>
+                <td>40 - 54</td>
+                <td>Incremental change, mixed results. Some things improve, others worsen, net effect ambiguous</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:var(--verdict-decline)" aria-hidden="true"></span>Decline</td>
+                <td>25 - 39</td>
+                <td>Measurable deterioration in key dimensions: rising authoritarianism, worsening climate, economic stagnation</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:var(--verdict-catastrophe)" aria-hidden="true"></span>Catastrophe</td>
+                <td>10 - 24</td>
+                <td>Severe collapse in multiple dimensions: major wars, civilizational regression, widespread suffering</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:var(--verdict-extinction)" aria-hidden="true"></span>Extinction</td>
+                <td>&lt; 10</td>
+                <td>Civilizational or literal extinction scenarios: runaway AI, nuclear winter, ecological collapse</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:var(--verdict-radically-different)" aria-hidden="true"></span>Radically Different</td>
+                <td>High divergence</td>
+                <td>High divergence ratio with ambiguous composite score -- the world is so different from baseline that "better" or "worse" loses meaning</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-    </section>
 
-    <!-- ═══════════════════════════════════════════════ -->
-    <!-- Section 3: FAQ                                  -->
-    <!-- ═══════════════════════════════════════════════ -->
-    <section class="about-section">
-      <h2>Frequently Asked Questions</h2>
+        <h3>Probability Calibration</h3>
+        <p>
+          The base probabilities assigned to each branch are subjective estimates informed by
+          historical analysis, not statistical predictions derived from data. They are
+          calibrated so that batch runs produce realistic distributions -- i.e., the most
+          common verdicts across thousands of seeds roughly match the range of plausible
+          21st-century trajectories.
+        </p>
+        <p>
+          "Realistic" here means the simulation should not systematically produce utopias or
+          catastrophes. The probabilities are tuned so that historical branches dominate when
+          they should, while leaving meaningful room for divergence at genuine inflection
+          points.
+        </p>
+      </section>
 
-      <div class="faq-item">
-        <div class="faq-q">Is this a prediction?</div>
-        <div class="faq-a">
-          No. 21csim is a structured exploration of counterfactual possibilities.
-          It makes no claims about what will happen -- only about what <em>could</em>
-          happen given a set of modeled branch points. Think of it as a tool for
-          thinking about uncertainty, not a crystal ball.
+      <!-- Section 2: Interactive Node Catalog -->
+      <section class="catalog-section" aria-labelledby="catalog-heading">
+        <h2 id="catalog-heading">Node Catalog</h2>
+        <div class="catalog-filters" id="catalog-filters" role="search" aria-label="Filter node catalog">
+          <label for="catalog-search" class="sr-only">Search nodes</label>
+          <input type="text" id="catalog-search" placeholder="Search by title, ID, or description..." aria-label="Search nodes by title, ID, or description">
+          <label for="filter-domain" class="sr-only">Filter by domain</label>
+          <select id="filter-domain" aria-label="Filter by domain"><option value="">All Domains</option></select>
+          <label for="filter-decade" class="sr-only">Filter by era</label>
+          <select id="filter-decade" aria-label="Filter by era"><option value="">All Eras</option></select>
+          <label for="filter-confidence" class="sr-only">Filter by confidence level</label>
+          <select id="filter-confidence" aria-label="Filter by confidence level"><option value="">All Confidence</option></select>
+          <span class="catalog-count" id="catalog-count" aria-live="polite"></span>
         </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">How are probabilities determined?</div>
-        <div class="faq-a">
-          Each branch probability is a subjective estimate informed by historical
-          analysis, domain expertise, and expert intuition. They are then calibrated
-          so that batch runs across thousands of seeds produce plausible distributions
-          of outcomes. For historical nodes (pre-2025), the "historical" branch
-          typically has high probability, reflecting that history actually happened.
-          For future nodes, probabilities reflect genuine uncertainty.
+        <div class="node-list" id="node-list" role="list" aria-label="Event nodes">
+          <div style="color:var(--text-dim); text-align:center; padding:40px; font-family:var(--font-ui);" role="status">
+            Loading node catalog...
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="faq-item">
-        <div class="faq-q">Can I add my own nodes?</div>
-        <div class="faq-a">
-          Yes. Create a YAML file in <code>src/csim/data/nodes/</code> following the
-          existing schema. Each node needs an <code>id</code>, <code>year_month</code>,
-          <code>title</code>, <code>description</code>, <code>domain</code>,
-          <code>distribution</code> with outcome probabilities, and an
-          <code>outcomes</code> block defining each branch's effects on world-state
-          dimensions. You can also specify <code>dependencies</code> and
-          <code>conditional</code> gating.
-        </div>
-      </div>
+      <!-- Section 3: FAQ -->
+      <section class="about-section" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
 
-      <div class="faq-item">
-        <div class="faq-q">Why does event X have probability Y?</div>
-        <div class="faq-a">
-          Every probability is a calibration choice, not a scientific measurement.
-          The philosophy is: historical branches should be highly probable (the past
-          happened), near-future branches should reflect current trends and expert
-          consensus, and far-future branches should acknowledge deep uncertainty.
-          The goal is a simulation that feels plausible in aggregate, even if
-          individual estimates are debatable. Disagreement about any specific
-          probability is expected and welcome -- it is the whole point of
-          counterfactual reasoning.
+        <div class="faq-item">
+          <h3 class="faq-q">Is this a prediction?</h3>
+          <div class="faq-a">
+            No. 21csim is a structured exploration of counterfactual possibilities.
+            It makes no claims about what will happen -- only about what <em>could</em>
+            happen given a set of modeled branch points. Think of it as a tool for
+            thinking about uncertainty, not a crystal ball.
+          </div>
         </div>
-      </div>
 
-      <div class="faq-item">
-        <div class="faq-q">How is the composite score calculated?</div>
-        <div class="faq-a">
-          The simulation tracks 32 world-state dimensions (e.g., democracy_index,
-          climate_stability, economic_equality). Each branch outcome adds or
-          subtracts from these dimensions. At the end of a run, the dimensions
-          are combined with importance weights into a single composite score
-          ranging from 0 to 100. The score then maps to one of eight verdict
-          categories.
+        <div class="faq-item">
+          <h3 class="faq-q">How are probabilities determined?</h3>
+          <div class="faq-a">
+            Each branch probability is a subjective estimate informed by historical
+            analysis, domain expertise, and expert intuition. They are then calibrated
+            so that batch runs across thousands of seeds produce plausible distributions
+            of outcomes. For historical nodes (pre-2025), the "historical" branch
+            typically has high probability, reflecting that history actually happened.
+            For future nodes, probabilities reflect genuine uncertainty.
+          </div>
         </div>
-      </div>
 
-      <div class="faq-item">
-        <div class="faq-q">What does "Radically Different" mean?</div>
-        <div class="faq-a">
-          A "Radically Different" verdict occurs when the simulation produces a
-          world with a high divergence ratio -- meaning many nodes took non-historical
-          branches -- combined with an ambiguous composite score (neither clearly
-          good nor clearly bad). In these timelines, the world has changed so
-          fundamentally from our own that conventional notions of "better" or
-          "worse" lose their meaning.
+        <div class="faq-item">
+          <h3 class="faq-q">Can I add my own nodes?</h3>
+          <div class="faq-a">
+            Yes. Create a YAML file in <code>src/csim/data/nodes/</code> following the
+            existing schema. Each node needs an <code>id</code>, <code>year_month</code>,
+            <code>title</code>, <code>description</code>, <code>domain</code>,
+            <code>distribution</code> with outcome probabilities, and an
+            <code>outcomes</code> block defining each branch's effects on world-state
+            dimensions. You can also specify <code>dependencies</code> and
+            <code>conditional</code> gating.
+          </div>
         </div>
-      </div>
-    </section>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Why does event X have probability Y?</h3>
+          <div class="faq-a">
+            Every probability is a calibration choice, not a scientific measurement.
+            The philosophy is: historical branches should be highly probable (the past
+            happened), near-future branches should reflect current trends and expert
+            consensus, and far-future branches should acknowledge deep uncertainty.
+            The goal is a simulation that feels plausible in aggregate, even if
+            individual estimates are debatable. Disagreement about any specific
+            probability is expected and welcome -- it is the whole point of
+            counterfactual reasoning.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">How is the composite score calculated?</h3>
+          <div class="faq-a">
+            The simulation tracks 32 world-state dimensions (e.g., democracy_index,
+            climate_stability, economic_equality). Each branch outcome adds or
+            subtracts from these dimensions. At the end of a run, the dimensions
+            are combined with importance weights into a single composite score
+            ranging from 0 to 100. The score then maps to one of eight verdict
+            categories.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">What does "Radically Different" mean?</h3>
+          <div class="faq-a">
+            A "Radically Different" verdict occurs when the simulation produces a
+            world with a high divergence ratio -- meaning many nodes took non-historical
+            branches -- combined with an ambiguous composite score (neither clearly
+            good nor clearly bad). In these timelines, the world has changed so
+            fundamentally from our own that conventional notions of "better" or
+            "worse" lose their meaning.
+          </div>
+        </div>
+      </section>
+    </main>
 
   </div>
 

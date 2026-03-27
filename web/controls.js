@@ -11,22 +11,22 @@ export class Controls {
 
   _build() {
     this.container.innerHTML = `
-      <button class="ctrl-btn" id="btn-prev" title="Previous (Left)">\u25C0</button>
-      <button class="ctrl-btn" id="btn-play" title="Play/Pause (Space)">\u25B6</button>
-      <button class="ctrl-btn" id="btn-next" title="Next (Right)">\u25B6\u25B6</button>
-      <div class="speed-group">
-        <button class="speed-btn" data-speed="0.1">0.1x</button>
-        <button class="speed-btn" data-speed="0.25">0.25x</button>
-        <button class="speed-btn" data-speed="0.5">0.5x</button>
-        <button class="speed-btn active" data-speed="1">1x</button>
-        <button class="speed-btn" data-speed="2">2x</button>
-        <button class="speed-btn" data-speed="4">4x</button>
+      <button class="ctrl-btn" id="btn-prev" title="Previous (Left)" aria-label="Previous event">\u25C0</button>
+      <button class="ctrl-btn" id="btn-play" title="Play/Pause (Space)" aria-label="Play" aria-pressed="false">\u25B6</button>
+      <button class="ctrl-btn" id="btn-next" title="Next (Right)" aria-label="Next event">\u25B6\u25B6</button>
+      <div class="speed-group" role="group" aria-label="Playback speed">
+        <button class="speed-btn" data-speed="0.1" aria-label="Speed 0.1x" aria-pressed="false">0.1x</button>
+        <button class="speed-btn" data-speed="0.25" aria-label="Speed 0.25x" aria-pressed="false">0.25x</button>
+        <button class="speed-btn" data-speed="0.5" aria-label="Speed 0.5x" aria-pressed="false">0.5x</button>
+        <button class="speed-btn active" data-speed="1" aria-label="Speed 1x" aria-pressed="true">1x</button>
+        <button class="speed-btn" data-speed="2" aria-label="Speed 2x" aria-pressed="false">2x</button>
+        <button class="speed-btn" data-speed="4" aria-label="Speed 4x" aria-pressed="false">4x</button>
       </div>
       <div id="progress-container">
-        <div id="progress-track"><div id="progress-fill"></div></div>
-        <span id="progress-text">--</span>
+        <div id="progress-track" role="slider" aria-label="Playback progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><div id="progress-fill"></div></div>
+        <span id="progress-text" aria-live="off">--</span>
       </div>
-      <span id="event-counter">0 / 0</span>
+      <span id="event-counter" aria-live="polite" aria-atomic="true">0 / 0</span>
     `;
 
     this.btnPlay = this.container.querySelector('#btn-play');
@@ -46,8 +46,12 @@ export class Controls {
       btn.addEventListener('click', () => {
         const speed = parseFloat(btn.dataset.speed);
         this.viewer.setSpeed(speed);
-        for (const b of this.speedBtns) b.classList.remove('active');
+        for (const b of this.speedBtns) {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        }
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
       });
     }
 
@@ -62,6 +66,8 @@ export class Controls {
     const playing = this.viewer.togglePlay();
     this.btnPlay.textContent = playing ? '\u23F8' : '\u25B6';
     this.btnPlay.classList.toggle('active', playing);
+    this.btnPlay.setAttribute('aria-label', playing ? 'Pause' : 'Play');
+    this.btnPlay.setAttribute('aria-pressed', String(playing));
   }
 
   _bindKeys() {
@@ -102,7 +108,9 @@ export class Controls {
     idx = Math.max(0, Math.min(speeds.length - 1, idx + dir));
     this.viewer.setSpeed(speeds[idx]);
     for (const b of this.speedBtns) {
-      b.classList.toggle('active', parseFloat(b.dataset.speed) === speeds[idx]);
+      const isActive = parseFloat(b.dataset.speed) === speeds[idx];
+      b.classList.toggle('active', isActive);
+      b.setAttribute('aria-pressed', String(isActive));
     }
   }
 
@@ -110,6 +118,7 @@ export class Controls {
     if (total === 0) return;
     const pct = (current / total) * 100;
     this.progressFill.style.width = pct + '%';
+    this.progressTrack.setAttribute('aria-valuenow', Math.round(pct));
     this.eventCounter.textContent = `${current} / ${total}`;
 
     // Show year range
@@ -126,5 +135,7 @@ export class Controls {
   setPlayState(playing) {
     this.btnPlay.textContent = playing ? '\u23F8' : '\u25B6';
     this.btnPlay.classList.toggle('active', playing);
+    this.btnPlay.setAttribute('aria-label', playing ? 'Pause' : 'Play');
+    this.btnPlay.setAttribute('aria-pressed', String(playing));
   }
 }

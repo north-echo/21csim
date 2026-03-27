@@ -134,9 +134,13 @@ class App {
     btn.className = 'ctrl-btn sound-toggle';
     btn.textContent = '🔇';
     btn.title = 'Toggle sound';
+    btn.setAttribute('aria-label', 'Sound off');
+    btn.setAttribute('aria-pressed', 'false');
     btn.addEventListener('click', () => {
       const on = this.sound.toggle();
       btn.textContent = on ? '🔊' : '🔇';
+      btn.setAttribute('aria-label', on ? 'Sound on' : 'Sound off');
+      btn.setAttribute('aria-pressed', String(on));
     });
     const topBar = document.querySelector('.top-bar');
     if (topBar) topBar.appendChild(btn);
