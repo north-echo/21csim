@@ -1,0 +1,90 @@
+id: "2023_ai_acceleration"
+year_month: "2023-01"
+title: "AI Acceleration"
+description: >
+  ChatGPT launches late 2022, triggering massive AI investment and rapid
+  capability gains. Generative AI transforms work, education, creative
+  industries. Raises existential risk questions.
+domain: "technology"
+confidence: "HIGH"
+variable: "ai_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_rapid: 0.28
+    slower_progress: 0.22
+    faster_agi: 0.12
+    open_source_dominant: 0.18
+    ai_winter: 0.08
+    china_leads: 0.12
+dependencies:
+  - node: "2012_deep_learning"
+    branch: "slower_progress"
+    modifies:
+      historical_rapid: "-0.15"
+      slower_progress: "+0.10"
+      ai_winter: "+0.05"
+  - node: "2006_cloud"
+    branch: "delayed_5_years"
+    modifies:
+      historical_rapid: "-0.10"
+      slower_progress: "+0.10"
+conditional: null
+outcomes:
+  historical_rapid:
+    status: "HISTORICAL"
+    description: "Rapid AI advancement; GPT-4, Gemini, Claude in quick succession"
+    world_state_effects:
+      ai_development_year_offset: "+0"
+      inequality_index: "+0.03"
+      global_gdp_growth_modifier: "*1.02"
+      automation_displacement: "+0.05"
+    cascading_modifiers:
+      2028_agi_threshold.proto_agi: "+0.10"
+      2031_ai_displacement.social_crisis: "+0.05"
+      2025_climate_tipping.technological_breakthrough: "+0.05"
+      2035_carbon_capture.breakthrough_cheap: "+0.08"
+  slower_progress:
+    status: "DIVERGENCE"
+    description: "AI progress plateaus after initial hype; scaling laws hit limits"
+    world_state_effects:
+      ai_development_year_offset: "-3"
+      automation_displacement: "+0.02"
+    cascading_modifiers:
+      2028_agi_threshold.no_agi_yet: "+0.15"
+  faster_agi:
+    status: "DIVERGENCE"
+    description: "Breakthrough leads to AGI-level systems by 2025"
+    explanation: "Unexpected algorithmic breakthrough bypasses scaling needs"
+    world_state_effects:
+      ai_development_year_offset: "+5"
+      existential_risk_cumulative: "+0.10"
+      global_gdp_growth_modifier: "*1.05"
+      automation_displacement: "+0.15"
+    cascading_modifiers:
+      2028_agi_threshold.full_agi: "+0.20"
+  open_source_dominant:
+    status: "DIVERGENCE"
+    description: "Open source AI models match closed; democratized access"
+    world_state_effects:
+      ai_development_year_offset: "+1"
+      inequality_index: "-0.02"
+      internet_freedom_index: "+0.03"
+  ai_winter:
+    status: "DIVERGENCE"
+    description: "AI hype collapses; investment dries up"
+    explanation: "Hallucination problems and liability lawsuits halt deployment"
+    world_state_effects:
+      ai_development_year_offset: "-5"
+      automation_displacement: "+0.01"
+    cascading_modifiers:
+      2035_carbon_capture.too_expensive: "+0.10"
+      2025_climate_tipping.accelerated_action: "-0.05"
+  china_leads:
+    status: "DIVERGENCE"
+    description: "China overtakes US in AI capabilities"
+    world_state_effects:
+      ai_development_year_offset: "+1"
+      china_power_index: "+0.08"
+      surveillance_state_index: "+0.05"
+      us_global_standing: "-0.05"

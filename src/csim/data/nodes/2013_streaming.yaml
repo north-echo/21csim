@@ -1,0 +1,74 @@
+id: "2013_streaming"
+year_month: "2013-02"
+title: "Streaming and Media Fragmentation"
+description: >
+  Netflix original content (House of Cards, 2013) marks the end of
+  shared media experiences. The monoculture fractures into niches.
+  People stop watching the same news, same shows, same reality.
+domain: "social"
+confidence: "HIGH"
+variable: "media_fragmentation_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_fragmentation: 0.50
+    shared_experiences_persist: 0.15
+    hyper_fragmentation: 0.15
+    public_media_strengthened: 0.10
+    creator_economy: 0.10
+dependencies:
+  - node: "2006_cloud"
+    branch: "historical_hyperscaler"
+    modifies:
+      historical_fragmentation: "+0.05"
+      shared_experiences_persist: "-0.05"
+  - node: "2006_cloud"
+    branch: "delayed_5_years"
+    modifies:
+      historical_fragmentation: "-0.10"
+      shared_experiences_persist: "+0.10"
+  - node: "2007_iphone"
+    branch: "historical_apple_led"
+    modifies:
+      historical_fragmentation: "+0.05"
+      creator_economy: "+0.05"
+      shared_experiences_persist: "-0.10"
+conditional: null
+outcomes:
+  historical_fragmentation:
+    status: "HISTORICAL"
+    description: "Streaming services fragment the shared media landscape into algorithmic niches"
+    world_state_effects:
+      misinformation_severity: "+0.04"
+      us_polarization: "+0.04"
+  shared_experiences_persist:
+    status: "DIVERGENCE"
+    description: "Broadcast TV remains dominant longer; shared cultural reference points maintained"
+    explanation: "Streaming grows slowly; network TV retains majority viewership through 2020"
+    world_state_effects:
+      misinformation_severity: "+0.02"
+      us_polarization: "+0.02"
+  hyper_fragmentation:
+    status: "ESCALATED"
+    description: "Algorithmic personalization creates individual media realities with no overlap"
+    world_state_effects:
+      misinformation_severity: "+0.08"
+      us_polarization: "+0.07"
+    cascading_modifiers:
+      2016_misinformation.epistemic_collapse: "+0.05"
+  public_media_strengthened:
+    status: "DIVERGENCE"
+    description: "PBS/BBC model scales; shared reference points and trusted journalism maintained"
+    explanation: "Public media investment grows; serves as common ground across political divides"
+    world_state_effects:
+      misinformation_severity: "-0.03"
+      us_polarization: "+0.01"
+      us_institutional_trust: "+0.02"
+  creator_economy:
+    status: "DIVERGENCE"
+    description: "Individual creators replace media institutions entirely"
+    explanation: "YouTube and podcast creators become primary information and entertainment sources"
+    world_state_effects:
+      misinformation_severity: "+0.05"
+      us_polarization: "+0.03"
+      inequality_index: "+0.01"

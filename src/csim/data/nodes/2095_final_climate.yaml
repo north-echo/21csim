@@ -1,0 +1,52 @@
+id: "2095_final_climate"
+year_month: "2095-01"
+title: "Final Climate State"
+description: >
+  The definitive climate outcome for the 21st century. After nearly a hundred
+  years of emissions, mitigation, and adaptation, the planet's thermal state
+  is assessed.
+domain: "climate"
+confidence: "LOW"
+variable: "final_climate_status"
+distribution:
+  type: "categorical"
+  options:
+    stabilized: 0.25
+    recovering: 0.15
+    damaged: 0.25
+    catastrophic: 0.10
+    geoengineered: 0.15
+    adapted: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  stabilized:
+    status: "DIVERGENCE"
+    description: "Climate system stabilized; temperatures no longer rising and within manageable bounds"
+    world_state_effects:
+      climate_temp_anomaly: "+0.00"
+  recovering:
+    status: "DIVERGENCE"
+    description: "Active recovery underway with temperatures declining toward pre-industrial levels"
+    world_state_effects:
+      climate_temp_anomaly: "-0.20"
+  damaged:
+    status: "ESCALATED"
+    description: "Permanent climate damage locked in; some regions uninhabitable, ecosystems irreversibly altered"
+    world_state_effects:
+      climate_temp_anomaly: "+0.30"
+  catastrophic:
+    status: "ESCALATED"
+    description: "Runaway warming continues; mass extinction and civilization-threatening conditions"
+    world_state_effects:
+      climate_temp_anomaly: "+1.00"
+  geoengineered:
+    status: "DIVERGENCE"
+    description: "Climate maintained through ongoing geoengineering; stable but artificially dependent"
+    world_state_effects:
+      climate_temp_anomaly: "-0.10"
+  adapted:
+    status: "DIVERGENCE"
+    description: "Climate significantly altered but civilization has fully adapted to new conditions"
+    world_state_effects:
+      climate_temp_anomaly: "+0.15"

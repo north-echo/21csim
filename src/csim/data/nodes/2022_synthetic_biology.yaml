@@ -1,0 +1,52 @@
+id: "2022_synthetic_biology"
+year_month: "2022-06"
+title: "Synthetic Biology Regulation"
+description: >
+  Advances in DNA synthesis make it possible to create novel organisms
+  and even reconstruct dangerous pathogens from scratch. Biosecurity
+  experts push for mandatory screening of DNA synthesis orders while
+  the synbio industry resists regulation that could slow innovation.
+domain: "technology"
+confidence: "HIGH"
+variable: "synthetic_biology"
+distribution:
+  type: "categorical"
+  options:
+    historical_voluntary_screening: 0.40
+    mandatory_global_screening: 0.15
+    unregulated_wild_west: 0.10
+    biosecurity_framework: 0.20
+    biohacker_incident: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  historical_voluntary_screening:
+    status: "HISTORICAL"
+    description: "Voluntary DNA synthesis screening; patchy compliance across industry"
+    world_state_effects:
+      existential_risk_cumulative: "+0.01"
+  mandatory_global_screening:
+    status: "DIVERGENCE"
+    description: "International agreement mandates screening of all DNA synthesis orders"
+    world_state_effects:
+      existential_risk_cumulative: "-0.01"
+      surveillance_state_index: "+0.02"
+  unregulated_wild_west:
+    status: "ESCALATED"
+    description: "Cheap benchtop synthesizers proliferate; regulation impossible to enforce"
+    world_state_effects:
+      existential_risk_cumulative: "+0.03"
+      global_pandemic_deaths: "+100000"
+  biosecurity_framework:
+    status: "DIVERGENCE"
+    description: "Comprehensive biosecurity framework balances innovation and safety"
+    world_state_effects:
+      existential_risk_cumulative: "-0.005"
+      global_gdp_growth_modifier: "*1.002"
+  biohacker_incident:
+    status: "ESCALATED"
+    description: "Amateur biohacker accidentally releases engineered organism; triggers crackdown"
+    world_state_effects:
+      existential_risk_cumulative: "+0.02"
+      surveillance_state_index: "+0.04"
+      us_institutional_trust: "-0.02"

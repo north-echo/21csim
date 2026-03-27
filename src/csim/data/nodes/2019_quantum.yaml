@@ -1,0 +1,44 @@
+id: "2019_quantum"
+year_month: "2019-10"
+title: "Quantum Computing"
+domain: "technology"
+confidence: "HIGH"
+variable: "quantum"
+distribution:
+  type: "categorical"
+  options:
+    historical_slow_progress: 0.45
+    breakthrough_2025: 0.15
+    quantum_winter: 0.20
+    encryption_broken: 0.05
+    hybrid_useful: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  historical_slow_progress:
+    status: "HISTORICAL"
+    description: "Quantum computing advances slowly; limited practical use by 2030"
+    world_state_effects:
+      ai_development_year_offset: "+0"
+  breakthrough_2025:
+    status: "DIVERGENCE"
+    description: "Major quantum breakthrough enables practical computation"
+    world_state_effects:
+      ai_development_year_offset: "+2"
+      global_gdp_growth_modifier: "*1.01"
+  quantum_winter:
+    status: "DIVERGENCE"
+    description: "Quantum computing hits fundamental limits"
+    world_state_effects: {}
+  encryption_broken:
+    status: "ESCALATED"
+    description: "Quantum computer breaks current encryption"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+50.0"
+      nuclear_risk_level: "+0.03"
+      existential_risk_cumulative: "+0.02"
+  hybrid_useful:
+    status: "DIVERGENCE"
+    description: "Hybrid quantum-classical systems find niche applications"
+    world_state_effects:
+      global_gdp_growth_modifier: "*1.005"

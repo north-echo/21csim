@@ -1,0 +1,68 @@
+id: "2011_solar_revolution"
+year_month: "2011-09"
+title: "Solar Cost Revolution"
+description: >
+  Solyndra bankruptcy embarrasses US solar policy, but Chinese manufacturing
+  drives solar costs down 90% over the decade — the fastest cost decline
+  of any energy technology in history.
+domain: "energy"
+confidence: "HIGH"
+variable: "solar_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_cost_collapse: 0.50
+    slower_decline: 0.20
+    manufacturing_distributed: 0.10
+    accelerated_by_policy: 0.15
+    trade_wars_slow: 0.05
+dependencies:
+  - node: "2001_china_wto"
+    branch: "no_accession"
+    modifies:
+      historical_cost_collapse: "-0.15"
+      manufacturing_distributed: "+0.10"
+      trade_wars_slow: "+0.05"
+conditional: null
+outcomes:
+  historical_cost_collapse:
+    status: "HISTORICAL"
+    description: "Solar drops below coal by 2020; fastest energy cost decline in history"
+    world_state_effects:
+      renewable_energy_share: "+0.05"
+      climate_temp_anomaly: "-0.01"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.05"
+      2025_climate_tipping.accelerated_action: "+0.03"
+  slower_decline:
+    status: "DIVERGENCE"
+    description: "Solar cost parity delayed to 2028; fossil fuels retain dominance longer"
+    world_state_effects:
+      renewable_energy_share: "+0.02"
+      climate_temp_anomaly: "+0.03"
+    cascading_modifiers:
+      2027_energy_transition.fossil_resurgence: "+0.05"
+  manufacturing_distributed:
+    status: "DIVERGENCE"
+    description: "Non-Chinese solar manufacturing develops; slower but more resilient supply chain"
+    world_state_effects:
+      renewable_energy_share: "+0.03"
+      supply_chain_resilience: "+0.03"
+      climate_temp_anomaly: "+0.01"
+  accelerated_by_policy:
+    status: "DIVERGENCE"
+    description: "Carbon pricing accelerates solar adoption beyond historical pace"
+    world_state_effects:
+      renewable_energy_share: "+0.08"
+      climate_temp_anomaly: "-0.03"
+      global_gdp_growth_modifier: "*0.99"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.08"
+      2025_climate_tipping.accelerated_action: "+0.05"
+  trade_wars_slow:
+    status: "DIVERGENCE"
+    description: "Tariffs on Chinese panels slow global solar deployment"
+    world_state_effects:
+      renewable_energy_share: "+0.01"
+      climate_temp_anomaly: "+0.04"
+      supply_chain_resilience: "+0.02"

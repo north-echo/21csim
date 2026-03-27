@@ -1,0 +1,54 @@
+id: "2025_ai_regulation"
+year_month: "2025-06"
+title: "AI Regulation"
+description: >
+  Global response to rapid AI development. EU AI Act, US executive orders,
+  and international frameworks attempt to govern AI development and deployment.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "ai_regulation"
+distribution:
+  type: "categorical"
+  options:
+    fragmented_national: 0.40
+    coordinated_global: 0.15
+    minimal_regulation: 0.25
+    heavy_regulation: 0.20
+dependencies:
+  - node: "2023_ai_acceleration"
+    branch: "faster_agi"
+    modifies:
+      heavy_regulation: "+0.15"
+      minimal_regulation: "-0.10"
+  - node: "2024_us_election"
+    branch: "trump_wins"
+    modifies:
+      minimal_regulation: "+0.10"
+      heavy_regulation: "-0.10"
+conditional: null
+outcomes:
+  fragmented_national:
+    status: "HISTORICAL"
+    description: "EU regulates heavily; US light-touch; China controls"
+    world_state_effects:
+      ai_development_year_offset: "+0"
+      surveillance_state_index: "+0.03"
+  coordinated_global:
+    status: "DIVERGENCE"
+    description: "International AI governance treaty"
+    world_state_effects:
+      ai_development_year_offset: "-1"
+      existential_risk_cumulative: "-0.03"
+      governance_model: "+0.05"
+  minimal_regulation:
+    status: "DIVERGENCE"
+    description: "Minimal regulation; market-driven approach"
+    world_state_effects:
+      ai_development_year_offset: "+1"
+      existential_risk_cumulative: "+0.03"
+  heavy_regulation:
+    status: "DIVERGENCE"
+    description: "Heavy regulation slows AI development globally"
+    world_state_effects:
+      ai_development_year_offset: "-3"
+      existential_risk_cumulative: "-0.05"

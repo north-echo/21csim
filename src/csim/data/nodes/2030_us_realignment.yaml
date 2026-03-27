@@ -1,0 +1,68 @@
+id: "2030_us_realignment"
+year_month: "2030-06"
+title: "US Political Realignment"
+description: >
+  The American political landscape undergoes structural realignment as
+  demographic shifts, economic changes, and cultural divides reshape
+  party coalitions and electoral dynamics.
+domain: "geopolitical"
+confidence: "MEDIUM"
+variable: "us_realignment_status"
+distribution:
+  type: "categorical"
+  options:
+    class_based: 0.25
+    urban_rural_permanent: 0.20
+    multiparty_emergence: 0.15
+    one_party_dominance: 0.10
+    continued_polarization: 0.30
+dependencies:
+  - node: "2024_us_election"
+    branch: "trump_wins"
+    modifies:
+      continued_polarization: "+0.05"
+      class_based: "+0.05"
+      multiparty_emergence: "-0.05"
+      one_party_dominance: "-0.05"
+  - node: "2024_us_election"
+    branch: "third_party"
+    modifies:
+      multiparty_emergence: "+0.15"
+      continued_polarization: "-0.10"
+      one_party_dominance: "-0.05"
+conditional: null
+outcomes:
+  class_based:
+    status: "DIVERGENCE"
+    description: "US politics realigns along class lines; working-class vs professional-class"
+    explanation: "Economic inequality becomes primary axis; both parties lose traditional bases"
+    world_state_effects:
+      us_polarization: "+0.03"
+      inequality_index: "-0.02"
+  urban_rural_permanent:
+    status: "DIVERGENCE"
+    description: "Urban-rural divide becomes permanent structural feature of American politics"
+    explanation: "Geographic sorting entrenches; two Americas with incompatible policy preferences"
+    world_state_effects:
+      us_polarization: "+0.05"
+  multiparty_emergence:
+    status: "DIVERGENCE"
+    description: "Third and fourth parties gain significant electoral power"
+    explanation: "Ranked choice voting adoption or party splits create viable multi-party competition"
+    world_state_effects:
+      us_polarization: "-0.05"
+      global_democracy_index: "+0.02"
+  one_party_dominance:
+    status: "DIVERGENCE"
+    description: "One party achieves dominant position through demographic advantage"
+    explanation: "Demographic shifts give one party structural advantage in electoral college and Senate"
+    world_state_effects:
+      us_polarization: "+0.02"
+      global_democracy_index: "-0.02"
+  continued_polarization:
+    status: "DIVERGENCE"
+    description: "Polarization continues without realignment; gridlock deepens"
+    explanation: "Existing party structures persist despite internal contradictions; governance dysfunction worsens"
+    world_state_effects:
+      us_polarization: "+0.08"
+      global_democracy_index: "-0.03"

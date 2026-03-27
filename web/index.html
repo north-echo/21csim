@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21csim - Alternate History Viewer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Top Bar -->
+    <div id="top-bar">
+      <span class="logo">21csim</span>
+      <div id="run-info">
+        <span class="headline" style="color: var(--text-dim);">No run loaded</span>
+      </div>
+      <div class="actions">
+        <a href="explore.html" class="ctrl-btn" style="text-decoration:none;">Explorer</a>
+        <button class="ctrl-btn" id="btn-select-run">Runs</button>
+      </div>
+    </div>
+
+    <!-- Main Area -->
+    <div id="main-area">
+      <div id="timeline-panel">
+        <div id="empty-state">
+          <div class="icon">&#x1F30D;</div>
+          <div class="msg">21st Century Counterfactual Simulator</div>
+          <div class="hint">Select a run to begin playback</div>
+        </div>
+      </div>
+      <div id="dashboard-panel"></div>
+    </div>
+
+    <!-- Bottom Controls -->
+    <div id="controls-bar"></div>
+  </div>
+
+  <!-- Run Selector Overlay -->
+  <div id="selector-overlay"></div>
+
+  <!-- Summary Overlay -->
+  <div id="summary-overlay">
+    <div id="summary-modal"></div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

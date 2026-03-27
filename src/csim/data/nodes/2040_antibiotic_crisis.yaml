@@ -1,0 +1,51 @@
+id: "2040_antibiotic_crisis"
+year_month: "2040-01"
+title: "Antibiotic Crisis Resolution"
+description: >
+  Antimicrobial resistance reaches critical levels as last-resort antibiotics fail.
+  Whether new treatments emerge or humanity enters a post-antibiotic era determines
+  the future of modern medicine.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "antibiotic_crisis_status"
+distribution:
+  type: "categorical"
+  options:
+    post_antibiotic: 0.20
+    new_class_discovered: 0.20
+    phage_standard: 0.25
+    ai_designed: 0.20
+    managed_crisis: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  post_antibiotic:
+    status: "ESCALATED"
+    description: "Routine infections become lethal again; surgery and chemotherapy become high-risk"
+    world_state_effects:
+      global_pandemic_deaths: "+200000"
+      us_life_expectancy_delta: "-3.0"
+  new_class_discovered:
+    status: "DIVERGENCE"
+    description: "Novel antibiotic class discovered that overcomes existing resistance mechanisms"
+    world_state_effects:
+      global_pandemic_deaths: "-5000"
+      us_life_expectancy_delta: "+1.0"
+  phage_standard:
+    status: "DIVERGENCE"
+    description: "Bacteriophage therapy becomes standard of care, replacing traditional antibiotics"
+    world_state_effects:
+      global_pandemic_deaths: "-10000"
+      us_life_expectancy_delta: "+0.5"
+  ai_designed:
+    status: "DIVERGENCE"
+    description: "AI-designed antimicrobials outpace bacterial evolution; resistance problem solved"
+    world_state_effects:
+      global_pandemic_deaths: "-15000"
+      us_life_expectancy_delta: "+1.5"
+  managed_crisis:
+    status: "DIVERGENCE"
+    description: "Stewardship programs and new therapies keep resistance manageable but precarious"
+    world_state_effects:
+      global_pandemic_deaths: "+10000"
+      us_life_expectancy_delta: "-0.5"

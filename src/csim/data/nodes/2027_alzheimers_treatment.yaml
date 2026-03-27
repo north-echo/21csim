@@ -1,0 +1,52 @@
+id: "2027_alzheimers_treatment"
+year_month: "2027-09"
+title: "Alzheimer's Treatment Breakthrough"
+description: >
+  After decades of failure, disease-modifying Alzheimer's treatments
+  finally show meaningful clinical benefit. Lecanemab and successors
+  slow cognitive decline, but questions remain about cost, access,
+  and whether prevention is possible.
+domain: "health"
+confidence: "MEDIUM"
+variable: "alzheimers_treatment"
+distribution:
+  type: "categorical"
+  options:
+    incremental_progress: 0.35
+    true_disease_modification: 0.20
+    prevention_breakthrough: 0.10
+    access_crisis: 0.20
+    continued_failure: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  incremental_progress:
+    status: "HISTORICAL"
+    description: "Anti-amyloid drugs slow decline modestly; not curative but meaningful"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.2"
+  true_disease_modification:
+    status: "DIVERGENCE"
+    description: "Combination therapies halt Alzheimer's progression; quality of life transformed"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.8"
+      global_gdp_growth_modifier: "*1.003"
+  prevention_breakthrough:
+    status: "DIVERGENCE"
+    description: "Blood biomarker test enables prevention; Alzheimer's incidence drops dramatically"
+    world_state_effects:
+      us_life_expectancy_delta: "+1.2"
+      global_gdp_growth_modifier: "*1.005"
+    cascading_modifiers:
+      2058_life_extension.significant_extension: "+0.05"
+  access_crisis:
+    status: "DIVERGENCE"
+    description: "Effective treatments cost $100K+/year; only wealthy nations and patients benefit"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.3"
+      inequality_index: "+0.03"
+  continued_failure:
+    status: "DIVERGENCE"
+    description: "Treatments show minimal real-world benefit; Alzheimer's remains intractable"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.0"

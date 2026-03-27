@@ -1,0 +1,79 @@
+id: "2016_misinformation"
+year_month: "2016-10"
+title: "Misinformation Epidemic"
+description: >
+  Explosion of online misinformation around 2016 election. Russian
+  interference, fake news farms, algorithmic amplification. Continues
+  escalating through COVID and subsequent elections.
+domain: "social"
+confidence: "HIGH"
+variable: "misinformation_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_escalation: 0.45
+    platform_intervention: 0.15
+    media_literacy: 0.15
+    epistemic_collapse: 0.10
+    decentralized_trust: 0.15
+dependencies:
+  - node: "2004_social_media"
+    branch: "historical_ad_driven"
+    modifies:
+      historical_escalation: "+0.15"
+      platform_intervention: "-0.05"
+      media_literacy: "-0.05"
+  - node: "2004_social_media"
+    branch: "regulated_early"
+    modifies:
+      historical_escalation: "-0.15"
+      platform_intervention: "+0.10"
+      media_literacy: "+0.05"
+conditional: null
+outcomes:
+  historical_escalation:
+    status: "HISTORICAL"
+    description: "Misinformation worsens through COVID, elections, and social media"
+    world_state_effects:
+      misinformation_severity: "+0.15"
+      us_polarization: "+0.08"
+      us_institutional_trust: "-0.10"
+      global_democracy_index: "-0.03"
+    cascading_modifiers:
+      2020_covid_response.catastrophic_failure: "+0.03"
+      2021_jan6.historical_breach: "+0.05"
+  platform_intervention:
+    status: "DIVERGENCE"
+    description: "Platforms aggressively combat misinformation"
+    explanation: "Content moderation at scale; fact-checking partnerships work"
+    world_state_effects:
+      misinformation_severity: "+0.05"
+      us_polarization: "+0.03"
+      internet_freedom_index: "-0.05"
+  media_literacy:
+    status: "DIVERGENCE"
+    description: "Public media literacy campaigns succeed"
+    world_state_effects:
+      misinformation_severity: "+0.03"
+      us_institutional_trust: "-0.03"
+  epistemic_collapse:
+    status: "ESCALATED"
+    description: "Complete breakdown of shared factual reality"
+    world_state_effects:
+      misinformation_severity: "+0.30"
+      us_polarization: "+0.15"
+      us_institutional_trust: "-0.20"
+      global_democracy_index: "-0.08"
+    cascading_modifiers:
+      2020_us_election.close_contested: "+0.10"
+      2021_jan6.worse_violence: "+0.10"
+      2024_us_election.contested: "+0.08"
+      2030_us_realignment.continued_polarization: "+0.15"
+      2033_us_fracture.formal_secession: "+0.08"
+      2020_covid_response.catastrophic_failure: "+0.10"
+  decentralized_trust:
+    status: "DIVERGENCE"
+    description: "New trust/verification systems emerge"
+    world_state_effects:
+      misinformation_severity: "+0.05"
+      us_institutional_trust: "+0.02"

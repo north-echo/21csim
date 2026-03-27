@@ -1,0 +1,89 @@
+id: "2020_george_floyd"
+year_month: "2020-05"
+title: "George Floyd / 2020 Racial Reckoning"
+description: >
+  The murder of George Floyd by Minneapolis police officer Derek Chauvin
+  sparks the largest protest movement in US history, with demonstrations
+  in all 50 states and over 60 countries. Goes beyond BLM's 2014 emergence
+  to reshape corporate DEI, policing debates, and global racial justice
+  discourse during the COVID-19 pandemic.
+domain: "social"
+confidence: "HIGH"
+variable: "george_floyd_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_reckoning: 0.45
+    sustained_structural_reform: 0.15
+    backlash_dominates: 0.15
+    no_mass_movement: 0.10
+    global_justice_wave: 0.15
+dependencies:
+  - node: "2014_blm"
+    branch: "historical_wave"
+    modifies:
+      historical_reckoning: "+0.05"
+      no_mass_movement: "-0.05"
+  - node: "2014_blm"
+    branch: "sustained_reform"
+    modifies:
+      historical_reckoning: "-0.15"
+      sustained_structural_reform: "+0.10"
+      no_mass_movement: "+0.05"
+  - node: "2014_blm"
+    branch: "no_movement"
+    modifies:
+      historical_reckoning: "-0.10"
+      no_mass_movement: "+0.15"
+      backlash_dominates: "-0.05"
+conditional: null
+outcomes:
+  historical_reckoning:
+    status: "HISTORICAL"
+    description: "Massive global protests; corporate DEI pledges; policing reform debates; backlash follows"
+    world_state_effects:
+      racial_justice_index: "+0.05"
+      us_polarization: "+0.04"
+      global_democracy_index: "+0.01"
+    cascading_modifiers:
+      2024_us_election.trump_wins: "+0.02"
+      2030_us_realignment.continued_polarization: "+0.03"
+  sustained_structural_reform:
+    status: "DIVERGENCE"
+    description: "Movement achieves lasting policing reform, voting rights expansion, and wealth redistribution"
+    explanation: "Bipartisan coalition forms around concrete policy changes"
+    world_state_effects:
+      racial_justice_index: "+0.12"
+      us_polarization: "+0.02"
+      global_democracy_index: "+0.03"
+      inequality_index: "-0.02"
+    cascading_modifiers:
+      2024_us_election.harris_wins: "+0.05"
+      2030_us_realignment.class_based: "+0.05"
+  backlash_dominates:
+    status: "DIVERGENCE"
+    description: "Anti-protest backlash overwhelms reform momentum; law-and-order politics surge"
+    explanation: "Property damage and 'defund' messaging alienate moderate supporters"
+    world_state_effects:
+      racial_justice_index: "-0.03"
+      us_polarization: "+0.08"
+      global_democracy_index: "-0.01"
+    cascading_modifiers:
+      2024_us_election.trump_wins: "+0.05"
+      2030_us_realignment.continued_polarization: "+0.05"
+  no_mass_movement:
+    status: "DIVERGENCE"
+    description: "COVID-19 lockdowns prevent mass gatherings; Floyd case remains local news"
+    explanation: "Pandemic restrictions and fatigue suppress protest mobilization"
+    world_state_effects:
+      racial_justice_index: "+0.01"
+      us_polarization: "+0.01"
+  global_justice_wave:
+    status: "DIVERGENCE"
+    description: "Movement expands into a sustained global reckoning with colonialism and racial caste systems"
+    explanation: "International solidarity produces lasting institutional reforms across nations"
+    world_state_effects:
+      racial_justice_index: "+0.10"
+      global_democracy_index: "+0.04"
+      us_polarization: "+0.03"
+      inequality_index: "-0.03"

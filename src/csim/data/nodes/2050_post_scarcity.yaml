@@ -1,0 +1,48 @@
+id: "2050_post_scarcity"
+year_month: "2050-01"
+title: "Post-Scarcity Assessment"
+description: >
+  Automation and AI productivity gains raise the question of whether humanity has
+  achieved post-scarcity economics or simply created new forms of inequality
+  and artificial scarcity.
+domain: "economic"
+confidence: "LOW"
+variable: "post_scarcity_status"
+distribution:
+  type: "categorical"
+  options:
+    achieved_limited: 0.10
+    approaching: 0.20
+    myth: 0.35
+    elite_only: 0.20
+    new_scarcities: 0.15
+dependencies: []
+conditional: "automation_displacement > 0.30"
+outcomes:
+  achieved_limited:
+    status: "DIVERGENCE"
+    description: "Basic material needs met for most of humanity; scarcity persists for luxury and status goods"
+    world_state_effects:
+      inequality_index: "-0.10"
+      food_security_index: "+0.08"
+  approaching:
+    status: "DIVERGENCE"
+    description: "Material abundance increasing rapidly but distribution remains unequal"
+    world_state_effects:
+      inequality_index: "-0.05"
+      food_security_index: "+0.05"
+  myth:
+    status: "DIVERGENCE"
+    description: "Post-scarcity proves illusory; resource constraints, climate, and politics maintain scarcity"
+    world_state_effects:
+      inequality_index: "+0.03"
+  elite_only:
+    status: "DIVERGENCE"
+    description: "Post-scarcity conditions exist for wealthy minority while majority struggles"
+    world_state_effects:
+      inequality_index: "+0.12"
+  new_scarcities:
+    status: "DIVERGENCE"
+    description: "Old scarcities solved but new ones emerge: attention, meaning, status, clean environment"
+    world_state_effects:
+      inequality_index: "+0.02"

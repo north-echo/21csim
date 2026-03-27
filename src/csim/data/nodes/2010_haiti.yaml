@@ -1,0 +1,52 @@
+id: "2010_haiti"
+year_month: "2010-01"
+title: "Haiti Earthquake"
+description: >
+  7.0 earthquake kills 220,000-316,000 in the poorest country in the
+  Western Hemisphere. International response is massive but widely
+  criticized as ineffective. Shapes development aid debate.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "haiti_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_catastrophe: 0.50
+    better_response: 0.20
+    build_back_better: 0.10
+    aid_scandal: 0.20
+dependencies:
+  - node: "2004_tsunami"
+    branch: "triggers_reform"
+    modifies:
+      better_response: "+0.10"
+conditional: null
+outcomes:
+  historical_catastrophe:
+    status: "HISTORICAL"
+    description: "Massive earthquake devastates Haiti; international response widely criticized"
+    world_state_effects:
+      latin_america_stability: "-0.03"
+      us_institutional_trust: "-0.01"
+      conflict_deaths: "+220000"
+  better_response:
+    status: "DIVERGENCE"
+    description: "More effective international aid coordination saves lives"
+    world_state_effects:
+      latin_america_stability: "-0.01"
+      us_institutional_trust: "+0.01"
+      conflict_deaths: "+100000"
+  build_back_better:
+    status: "DIVERGENCE"
+    description: "Haiti actually rebuilt with resilient infrastructure"
+    world_state_effects:
+      latin_america_stability: "+0.02"
+      us_institutional_trust: "+0.02"
+      conflict_deaths: "+80000"
+  aid_scandal:
+    status: "DIVERGENCE"
+    description: "Red Cross and NGO failures dominate the narrative"
+    world_state_effects:
+      latin_america_stability: "-0.04"
+      us_institutional_trust: "-0.03"
+      conflict_deaths: "+250000"

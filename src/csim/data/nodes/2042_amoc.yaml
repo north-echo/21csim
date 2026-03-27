@@ -1,0 +1,56 @@
+id: "2042_amoc"
+year_month: "2042-01"
+title: "AMOC Collapse"
+description: >
+  The Atlantic Meridional Overturning Circulation faces critical weakening due to
+  sustained warming and Greenland ice melt. Outcome determines European climate
+  stability and global weather patterns for decades.
+domain: "climate"
+confidence: "MEDIUM"
+variable: "amoc_status"
+distribution:
+  type: "categorical"
+  options:
+    significant_weakening: 0.30
+    full_collapse: 0.10
+    stable: 0.30
+    temporary_disruption: 0.20
+    accelerated_by_greenland: 0.10
+dependencies: []
+conditional: "climate_temp_anomaly > 1.8"
+outcomes:
+  significant_weakening:
+    status: "DIVERGENCE"
+    description: "AMOC weakens by 30-50%, disrupting European climate and Atlantic ecosystems"
+    world_state_effects:
+      climate_temp_anomaly: "+0.15"
+      food_security_index: "-0.10"
+      eu_cohesion: "-0.05"
+  full_collapse:
+    status: "ESCALATED"
+    description: "AMOC shuts down entirely, triggering rapid European cooling and global weather disruption"
+    world_state_effects:
+      climate_temp_anomaly: "+0.30"
+      food_security_index: "-0.25"
+      eu_cohesion: "-0.15"
+  stable:
+    status: "DIVERGENCE"
+    description: "AMOC remains within historical variability despite warming"
+    world_state_effects:
+      climate_temp_anomaly: "+0.02"
+      food_security_index: "-0.02"
+      eu_cohesion: "+0.01"
+  temporary_disruption:
+    status: "DIVERGENCE"
+    description: "AMOC weakens temporarily but recovers within a decade"
+    world_state_effects:
+      climate_temp_anomaly: "+0.08"
+      food_security_index: "-0.05"
+      eu_cohesion: "-0.03"
+  accelerated_by_greenland:
+    status: "ESCALATED"
+    description: "Greenland ice sheet collapse accelerates AMOC disruption beyond model predictions"
+    world_state_effects:
+      climate_temp_anomaly: "+0.25"
+      food_security_index: "-0.18"
+      eu_cohesion: "-0.10"

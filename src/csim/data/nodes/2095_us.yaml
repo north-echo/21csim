@@ -1,0 +1,45 @@
+id: "2095_us"
+year_month: "2095-01"
+title: "United States 2095"
+description: >
+  The United States at century's end. Whether the American experiment endures,
+  transforms, or fades after nearly 320 years of nationhood.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "us_status_2095"
+distribution:
+  type: "categorical"
+  options:
+    great_power: 0.20
+    diminished: 0.20
+    reformed: 0.20
+    fragmented: 0.10
+    cultural: 0.15
+    superpower: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  great_power:
+    status: "DIVERGENCE"
+    description: "US remains a significant great power among several; influential but not dominant"
+    world_state_effects: {}
+  diminished:
+    status: "DIVERGENCE"
+    description: "US has faded as a major power; domestic focus with limited global influence"
+    world_state_effects: {}
+  reformed:
+    status: "DIVERGENCE"
+    description: "US has undergone fundamental constitutional and institutional reform; a renewed nation"
+    world_state_effects: {}
+  fragmented:
+    status: "ESCALATED"
+    description: "US has effectively split into multiple successor states or autonomous regions"
+    world_state_effects: {}
+  cultural:
+    status: "DIVERGENCE"
+    description: "US influence is primarily cultural; soft power outlasts economic and military dominance"
+    world_state_effects: {}
+  superpower:
+    status: "DIVERGENCE"
+    description: "US maintains or regains superpower status through technological and institutional resilience"
+    world_state_effects: {}

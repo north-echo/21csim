@@ -1,0 +1,52 @@
+id: "2065_multiplanetary"
+year_month: "2065-01"
+title: "Multiplanetary Status"
+description: >
+  Whether humanity has successfully established permanent settlements beyond
+  Earth. Decades of space development either bear fruit or prove the immense
+  difficulty of off-world colonization.
+domain: "technology"
+confidence: "LOW"
+variable: "multiplanetary_status"
+distribution:
+  type: "categorical"
+  options:
+    mars_thriving: 0.10
+    moon_only: 0.25
+    orbital_habitats: 0.15
+    failed: 0.20
+    expanding: 0.10
+    not_attempted: 0.20
+dependencies: []
+conditional: "space_development_index > 0.3"
+outcomes:
+  mars_thriving:
+    status: "DIVERGENCE"
+    description: "Self-sustaining Mars colony with growing population and independent infrastructure"
+    world_state_effects:
+      space_development_index: "+0.25"
+  moon_only:
+    status: "DIVERGENCE"
+    description: "Permanent lunar bases established but Mars colonization proves too difficult"
+    world_state_effects:
+      space_development_index: "+0.10"
+  orbital_habitats:
+    status: "DIVERGENCE"
+    description: "Large orbital habitats house thousands; planetary settlement less attractive than engineered space"
+    world_state_effects:
+      space_development_index: "+0.15"
+  failed:
+    status: "DIVERGENCE"
+    description: "Colonization attempts failed due to technical, biological, or economic barriers"
+    world_state_effects:
+      space_development_index: "-0.10"
+  expanding:
+    status: "DIVERGENCE"
+    description: "Multiple off-world settlements growing rapidly with new ones being planned"
+    world_state_effects:
+      space_development_index: "+0.30"
+  not_attempted:
+    status: "DIVERGENCE"
+    description: "Humanity focused resources on Earth-based challenges rather than space colonization"
+    world_state_effects:
+      space_development_index: "-0.05"

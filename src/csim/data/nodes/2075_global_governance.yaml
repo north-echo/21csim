@@ -1,0 +1,51 @@
+id: "2075_global_governance"
+year_month: "2075-01"
+title: "Global Governance 2075"
+description: >
+  The state of international governance structures. Whether humanity has
+  moved toward unified governance, regional fragmentation, or AI-mediated
+  coordination.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "global_governance_2075"
+distribution:
+  type: "categorical"
+  options:
+    world_government: 0.05
+    reformed_un: 0.15
+    regional_blocs: 0.25
+    ai_mediated: 0.10
+    anarchic: 0.10
+    cooperative: 0.20
+    authoritarian: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  world_government:
+    status: "DIVERGENCE"
+    description: "A functional world government emerges with sovereign authority over global commons"
+    world_state_effects: {}
+  reformed_un:
+    status: "DIVERGENCE"
+    description: "Reformed United Nations with binding authority on key issues like climate and weapons"
+    world_state_effects: {}
+  regional_blocs:
+    status: "DIVERGENCE"
+    description: "World organized into competing regional blocs with limited global coordination"
+    world_state_effects: {}
+  ai_mediated:
+    status: "DIVERGENCE"
+    description: "AI systems mediate international disputes and optimize resource allocation globally"
+    world_state_effects: {}
+  anarchic:
+    status: "ESCALATED"
+    description: "International institutions have collapsed; global governance effectively nonexistent"
+    world_state_effects: {}
+  cooperative:
+    status: "DIVERGENCE"
+    description: "Nations cooperate extensively through flexible coalitions without formal global government"
+    world_state_effects: {}
+  authoritarian:
+    status: "ESCALATED"
+    description: "Global governance dominated by authoritarian powers imposing order through surveillance and control"
+    world_state_effects: {}

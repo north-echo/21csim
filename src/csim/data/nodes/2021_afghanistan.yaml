@@ -1,0 +1,65 @@
+id: "2021_afghanistan"
+year_month: "2021-08"
+title: "Afghanistan Withdrawal"
+description: >
+  US withdrawal from Afghanistan after 20 years. Taliban rapidly retakes
+  country. Chaotic evacuation from Kabul airport.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "withdrawal_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_chaotic: 0.45
+    orderly_withdrawal: 0.25
+    no_withdrawal: 0.10
+    negotiated_coalition: 0.20
+dependencies:
+  - node: "2001_911"
+    branch: "plot_disrupted"
+    modifies:
+      no_withdrawal: "+0.15"
+      historical_chaotic: "-0.10"
+  - node: "2011_bin_laden"
+    branch: "not_found"
+    modifies:
+      no_withdrawal: "+0.08"
+      historical_chaotic: "-0.05"
+  - node: "2011_bin_laden"
+    branch: "raid_fails"
+    modifies:
+      no_withdrawal: "+0.10"
+      historical_chaotic: "-0.05"
+  - node: "2020_us_election"
+    branch: "trump_wins"
+    modifies:
+      historical_chaotic: "+0.05"
+      orderly_withdrawal: "-0.05"
+conditional: null
+outcomes:
+  historical_chaotic:
+    status: "HISTORICAL"
+    description: "Chaotic withdrawal; Taliban takes Kabul in days"
+    world_state_effects:
+      us_global_standing: "-0.08"
+      terrorism_threat_index: "+0.03"
+    cascading_modifiers:
+      2022_russia_ukraine.historical_invasion_stalemate: "+0.05"
+      2022_russia_ukraine.no_invasion: "-0.05"
+  orderly_withdrawal:
+    status: "DIVERGENCE"
+    description: "Planned withdrawal over 12 months; allies evacuated"
+    world_state_effects:
+      us_global_standing: "-0.03"
+  no_withdrawal:
+    status: "DIVERGENCE"
+    description: "US maintains minimal presence in Afghanistan"
+    world_state_effects:
+      us_debt_gdp_ratio: "+0.02"
+      terrorism_threat_index: "-0.02"
+  negotiated_coalition:
+    status: "DIVERGENCE"
+    description: "International coalition takes over from US"
+    world_state_effects:
+      us_global_standing: "-0.02"
+      eu_cohesion: "+0.02"

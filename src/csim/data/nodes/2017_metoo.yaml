@@ -1,0 +1,43 @@
+id: "2017_metoo"
+year_month: "2017-10"
+title: "#MeToo Movement"
+domain: "social"
+confidence: "HIGH"
+variable: "metoo"
+distribution:
+  type: "categorical"
+  options:
+    historical_viral: 0.50
+    limited_hollywood: 0.25
+    earlier_2013: 0.10
+    backlash_dominant: 0.15
+dependencies:
+  - node: "2004_social_media"
+    branch: "historical_ad_driven"
+    modifies:
+      historical_viral: "+0.05"
+      limited_hollywood: "-0.05"
+conditional: null
+outcomes:
+  historical_viral:
+    status: "HISTORICAL"
+    description: "Global #MeToo movement transforms gender politics"
+    world_state_effects:
+      gender_equity_index: "+0.08"
+      global_democracy_index: "+0.01"
+  limited_hollywood:
+    status: "DIVERGENCE"
+    description: "Movement stays confined to entertainment industry"
+    world_state_effects:
+      gender_equity_index: "+0.03"
+  earlier_2013:
+    status: "DIVERGENCE"
+    description: "Similar movement emerges in 2013"
+    world_state_effects:
+      gender_equity_index: "+0.10"
+  backlash_dominant:
+    status: "DIVERGENCE"
+    description: "Backlash overwhelms movement; limited change"
+    world_state_effects:
+      gender_equity_index: "+0.01"
+      us_polarization: "+0.03"

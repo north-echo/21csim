@@ -1,0 +1,44 @@
+id: "2020_education"
+year_month: "2020-09"
+title: "Education Disruption"
+domain: "social"
+confidence: "HIGH"
+variable: "education_disruption"
+distribution:
+  type: "categorical"
+  options:
+    historical_learning_loss: 0.45
+    rapid_adaptation: 0.20
+    permanent_transformation: 0.15
+    generation_lost: 0.20
+dependencies:
+  - node: "2019_covid_emergence"
+    branch: "no_pandemic"
+    modifies:
+      rapid_adaptation: "+0.25"
+      historical_learning_loss: "-0.20"
+      generation_lost: "-0.10"
+conditional: null
+outcomes:
+  historical_learning_loss:
+    status: "HISTORICAL"
+    description: "Significant learning loss; widened educational inequality"
+    world_state_effects:
+      inequality_index: "+0.02"
+  rapid_adaptation:
+    status: "DIVERGENCE"
+    description: "Education system adapts quickly to hybrid model"
+    world_state_effects:
+      inequality_index: "-0.01"
+  permanent_transformation:
+    status: "DIVERGENCE"
+    description: "Education permanently transformed; AI tutoring emerges"
+    world_state_effects:
+      inequality_index: "-0.02"
+      ai_development_year_offset: "+1"
+  generation_lost:
+    status: "ESCALATED"
+    description: "Generation of students permanently disadvantaged"
+    world_state_effects:
+      inequality_index: "+0.05"
+      global_gdp_growth_modifier: "*0.99"

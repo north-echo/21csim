@@ -1,0 +1,93 @@
+id: "2032_ai_governance"
+year_month: "2032-06"
+title: "AI Governance Framework"
+description: >
+  How the world governs increasingly powerful AI systems. Whether international
+  cooperation, national regulation, or corporate self-governance prevails
+  in managing transformative AI capabilities.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "ai_governance_status"
+distribution:
+  type: "categorical"
+  options:
+    fragmented_national: 0.30
+    international_treaty: 0.15
+    corporate_controlled: 0.20
+    open_global_commons: 0.10
+    authoritarian_advantage: 0.15
+    governance_failure: 0.10
+dependencies:
+  - node: "2025_ai_regulation"
+    branch: "coordinated_global"
+    modifies:
+      international_treaty: "+0.15"
+      fragmented_national: "-0.10"
+      governance_failure: "-0.05"
+  - node: "2025_ai_regulation"
+    branch: "minimal_regulation"
+    modifies:
+      corporate_controlled: "+0.10"
+      governance_failure: "+0.05"
+      international_treaty: "-0.10"
+      open_global_commons: "-0.05"
+  - node: "2028_agi_threshold"
+    branch: "full_agi"
+    modifies:
+      international_treaty: "+0.10"
+      governance_failure: "+0.05"
+      fragmented_national: "-0.10"
+      corporate_controlled: "-0.05"
+  - node: "2028_agi_threshold"
+    branch: "agi_accident"
+    modifies:
+      international_treaty: "+0.15"
+      governance_failure: "-0.05"
+      corporate_controlled: "-0.10"
+conditional: null
+outcomes:
+  fragmented_national:
+    status: "DIVERGENCE"
+    description: "Each major power develops its own AI governance; no global standard"
+    explanation: "US, EU, and China pursue divergent regulatory approaches creating a patchwork system"
+    world_state_effects:
+      governance_model: "+0.02"
+      ai_development_year_offset: "+0"
+  international_treaty:
+    status: "DIVERGENCE"
+    description: "International AI governance treaty ratified by major powers"
+    explanation: "IAEA-like body for AI emerges; binding safety standards and verification protocols"
+    world_state_effects:
+      governance_model: "+0.10"
+      existential_risk_cumulative: "-0.05"
+      ai_development_year_offset: "-1"
+  corporate_controlled:
+    status: "DIVERGENCE"
+    description: "Big tech companies effectively self-regulate AI development"
+    explanation: "Governments unable to keep pace; corporate governance structures fill the vacuum"
+    world_state_effects:
+      governance_model: "-0.05"
+      inequality_index: "+0.05"
+      ai_development_year_offset: "+1"
+  open_global_commons:
+    status: "DIVERGENCE"
+    description: "AI development treated as global commons with open access and shared safety research"
+    explanation: "Open-source movement prevails; international collaboration on safety becomes the norm"
+    world_state_effects:
+      governance_model: "+0.08"
+      existential_risk_cumulative: "-0.03"
+  authoritarian_advantage:
+    status: "DIVERGENCE"
+    description: "Authoritarian states gain AI advantage through unrestricted development"
+    explanation: "Democracies constrained by regulation; China and others advance faster with fewer constraints"
+    world_state_effects:
+      governance_model: "-0.08"
+      surveillance_state_index: "+0.10"
+      global_democracy_index: "-0.03"
+  governance_failure:
+    status: "ESCALATED"
+    description: "No effective governance emerges; AI development proceeds without guardrails"
+    explanation: "Regulatory capture, geopolitical competition, and pace of change prevent meaningful governance"
+    world_state_effects:
+      governance_model: "-0.10"
+      existential_risk_cumulative: "+0.08"

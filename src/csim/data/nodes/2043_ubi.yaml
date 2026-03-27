@@ -1,0 +1,52 @@
+id: "2043_ubi"
+year_month: "2043-01"
+title: "UBI Global Adoption"
+description: >
+  Universal Basic Income programs face a global adoption decision as automation
+  displaces large portions of the workforce. Whether UBI becomes standard policy
+  reshapes the social contract worldwide.
+domain: "economic"
+confidence: "MEDIUM"
+variable: "ubi_status"
+distribution:
+  type: "categorical"
+  options:
+    widespread: 0.20
+    partial: 0.25
+    failed: 0.15
+    alternative_models: 0.20
+    unnecessary: 0.10
+    class_warfare: 0.10
+dependencies: []
+conditional: "automation_displacement > 0.20"
+outcomes:
+  widespread:
+    status: "DIVERGENCE"
+    description: "Majority of developed nations implement UBI; inequality stabilizes"
+    world_state_effects:
+      inequality_index: "-0.10"
+  partial:
+    status: "DIVERGENCE"
+    description: "Some nations adopt UBI while others rely on traditional welfare systems"
+    world_state_effects:
+      inequality_index: "-0.05"
+  failed:
+    status: "DIVERGENCE"
+    description: "UBI programs attempted but collapse due to fiscal unsustainability or political opposition"
+    world_state_effects:
+      inequality_index: "+0.05"
+  alternative_models:
+    status: "DIVERGENCE"
+    description: "New economic models like universal basic services or job guarantees replace UBI concept"
+    world_state_effects:
+      inequality_index: "-0.06"
+  unnecessary:
+    status: "DIVERGENCE"
+    description: "New job creation keeps pace with automation; UBI deemed unnecessary"
+    world_state_effects:
+      inequality_index: "-0.02"
+  class_warfare:
+    status: "ESCALATED"
+    description: "UBI debate triggers severe class conflict between capital owners and displaced workers"
+    world_state_effects:
+      inequality_index: "+0.12"

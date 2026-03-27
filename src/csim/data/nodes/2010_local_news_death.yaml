@@ -1,0 +1,81 @@
+id: "2010_local_news_death"
+year_month: "2010-01"
+title: "Collapse of Local Journalism"
+description: >
+  Craigslist kills classified ad revenue. Google/Facebook capture digital
+  ad spending. Local newspapers close at the rate of 2 per week.
+  "News deserts" cover 1/3 of US counties by 2020. Arguably the single
+  largest structural driver of polarization — without local accountability
+  journalism, national outrage media fills the void.
+domain: "social"
+confidence: "HIGH"
+variable: "local_news_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_collapse: 0.50
+    public_funding_saves: 0.10
+    platform_revenue_sharing: 0.15
+    nonprofit_model_wins: 0.15
+    slow_decline: 0.10
+dependencies:
+  - node: "2004_social_media"
+    branch: "historical_ad_driven"
+    modifies:
+      historical_collapse: "+0.10"
+      public_funding_saves: "-0.05"
+      platform_revenue_sharing: "-0.05"
+  - node: "2004_social_media"
+    branch: "regulated_early"
+    modifies:
+      historical_collapse: "-0.10"
+      platform_revenue_sharing: "+0.10"
+  - node: "2006_cloud"
+    branch: "historical_hyperscaler"
+    modifies:
+      historical_collapse: "+0.05"
+      slow_decline: "-0.05"
+conditional: null
+outcomes:
+  historical_collapse:
+    status: "HISTORICAL"
+    description: "2,500+ newspapers close 2005-2030; news deserts cover a third of US counties"
+    world_state_effects:
+      misinformation_severity: "+0.08"
+      us_polarization: "+0.06"
+      us_institutional_trust: "-0.05"
+    cascading_modifiers:
+      2016_misinformation.historical_escalation: "+0.08"
+      2018_populism.historical_global_wave: "+0.03"
+  public_funding_saves:
+    status: "DIVERGENCE"
+    description: "BBC-model public funding for local news sustains accountability journalism"
+    explanation: "Congress creates a Corporation for Local News; local papers receive federal support"
+    world_state_effects:
+      misinformation_severity: "-0.05"
+      us_polarization: "+0.01"
+      us_institutional_trust: "+0.03"
+  platform_revenue_sharing:
+    status: "DIVERGENCE"
+    description: "Google and Facebook forced to share advertising revenue with news publishers"
+    explanation: "Australia-style legislation passes in the US and EU, funding local newsrooms"
+    world_state_effects:
+      misinformation_severity: "+0.03"
+      us_polarization: "+0.03"
+      us_institutional_trust: "-0.02"
+  nonprofit_model_wins:
+    status: "DIVERGENCE"
+    description: "ProPublica-style nonprofit journalism scales to fill the local news gap"
+    explanation: "Philanthropic funding and community support create sustainable local outlets"
+    world_state_effects:
+      misinformation_severity: "+0.02"
+      us_polarization: "+0.02"
+      us_institutional_trust: "+0.01"
+  slow_decline:
+    status: "DIVERGENCE"
+    description: "Local news declines gradually; some newspapers survive through digital transition"
+    explanation: "Paywalls and digital subscriptions slow the bleeding enough to maintain coverage"
+    world_state_effects:
+      misinformation_severity: "+0.05"
+      us_polarization: "+0.04"
+      us_institutional_trust: "-0.03"

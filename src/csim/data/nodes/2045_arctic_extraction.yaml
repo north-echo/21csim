@@ -1,0 +1,58 @@
+id: "2045_arctic_extraction"
+year_month: "2045-01"
+title: "Arctic Extraction"
+description: >
+  As Arctic ice retreats, newly accessible resources attract extraction industries.
+  Whether exploitation is regulated, chaotic, or prevented determines environmental
+  and geopolitical outcomes in the far north.
+domain: "regional"
+confidence: "MEDIUM"
+variable: "arctic_extraction_status"
+distribution:
+  type: "categorical"
+  options:
+    regulated: 0.25
+    unregulated_rush: 0.20
+    protected: 0.15
+    russian_monopoly: 0.15
+    tech_unnecessary: 0.15
+    indigenous_sovereignty: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  regulated:
+    status: "DIVERGENCE"
+    description: "International framework regulates Arctic resource extraction with environmental standards"
+    world_state_effects:
+      biodiversity_index: "-0.03"
+      climate_temp_anomaly: "+0.02"
+  unregulated_rush:
+    status: "ESCALATED"
+    description: "Uncoordinated resource rush damages Arctic ecosystems and sparks territorial disputes"
+    world_state_effects:
+      biodiversity_index: "-0.10"
+      climate_temp_anomaly: "+0.05"
+      conflict_deaths: "+3000"
+  protected:
+    status: "DIVERGENCE"
+    description: "International treaty protects Arctic from extraction; designated as global commons"
+    world_state_effects:
+      biodiversity_index: "+0.02"
+      climate_temp_anomaly: "-0.01"
+  russian_monopoly:
+    status: "DIVERGENCE"
+    description: "Russia dominates Arctic extraction through territorial claims and military presence"
+    world_state_effects:
+      biodiversity_index: "-0.06"
+      us_china_tension_index: "+0.03"
+  tech_unnecessary:
+    status: "DIVERGENCE"
+    description: "Technological alternatives make Arctic resource extraction economically unnecessary"
+    world_state_effects:
+      biodiversity_index: "+0.01"
+  indigenous_sovereignty:
+    status: "DIVERGENCE"
+    description: "Indigenous peoples gain legal sovereignty over Arctic territories and resources"
+    world_state_effects:
+      biodiversity_index: "+0.03"
+      global_democracy_index: "+0.02"

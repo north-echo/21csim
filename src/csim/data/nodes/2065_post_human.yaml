@@ -1,0 +1,52 @@
+id: "2065_post_human"
+year_month: "2065-01"
+title: "Post-Human Divergence"
+description: >
+  Humanity faces a defining split as augmentation technologies mature. The
+  question of what it means to be human becomes the central social and
+  political issue of the era.
+domain: "technology"
+confidence: "LOW"
+variable: "post_human_status"
+distribution:
+  type: "categorical"
+  options:
+    enhanced_humans: 0.25
+    biological_purists: 0.20
+    merged: 0.10
+    diverged_species: 0.10
+    regulated: 0.25
+    rejected: 0.10
+dependencies: []
+conditional: "human_augmentation_prevalence > 0.3"
+outcomes:
+  enhanced_humans:
+    status: "DIVERGENCE"
+    description: "Majority of population adopts cognitive and physical enhancements; new baseline for humanity"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.20"
+  biological_purists:
+    status: "DIVERGENCE"
+    description: "Strong cultural backlash preserves unaugmented humanity as the dominant norm"
+    world_state_effects:
+      human_augmentation_prevalence: "-0.10"
+  merged:
+    status: "DIVERGENCE"
+    description: "Human-AI merger produces a new form of consciousness blending biological and digital"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.30"
+  diverged_species:
+    status: "ESCALATED"
+    description: "Enhanced and unenhanced humans diverge into effectively separate species with growing tensions"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.15"
+  regulated:
+    status: "DIVERGENCE"
+    description: "Augmentation widely available but strictly regulated to prevent inequality and social fracture"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.10"
+  rejected:
+    status: "DIVERGENCE"
+    description: "Society broadly rejects augmentation after early adverse effects or ethical concerns"
+    world_state_effects:
+      human_augmentation_prevalence: "-0.15"

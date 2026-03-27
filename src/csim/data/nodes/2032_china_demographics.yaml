@@ -1,0 +1,59 @@
+id: "2032_china_demographics"
+year_month: "2032-06"
+title: "China Demographic Reckoning"
+description: >
+  China faces the consequences of decades of one-child policy and rapid aging.
+  Working-age population shrinks while elderly population surges, challenging
+  economic growth and social stability.
+domain: "demographics"
+confidence: "MEDIUM"
+variable: "china_demographics_status"
+distribution:
+  type: "categorical"
+  options:
+    economic_slowdown: 0.35
+    automation_compensates: 0.20
+    immigration_impossible: 0.15
+    military_adventurism: 0.10
+    reform_and_adapt: 0.20
+dependencies:
+  - node: "2012_xi_consolidation"
+    branch: "historical_consolidation"
+    modifies:
+      military_adventurism: "+0.05"
+      reform_and_adapt: "-0.05"
+conditional: null
+outcomes:
+  economic_slowdown:
+    status: "DIVERGENCE"
+    description: "China's growth slows dramatically as workforce shrinks and aging costs mount"
+    explanation: "Demographic headwinds overwhelm productivity gains; growth falls below 3%"
+    world_state_effects:
+      china_power_index: "-0.08"
+  automation_compensates:
+    status: "DIVERGENCE"
+    description: "Massive automation investment offsets demographic decline"
+    explanation: "China deploys robots and AI to maintain productivity despite shrinking workforce"
+    world_state_effects:
+      china_power_index: "-0.02"
+  immigration_impossible:
+    status: "DIVERGENCE"
+    description: "Cultural and political barriers prevent immigration as a solution"
+    explanation: "China cannot replicate Western immigration models; homogeneity preference persists"
+    world_state_effects:
+      china_power_index: "-0.06"
+  military_adventurism:
+    status: "ESCALATED"
+    description: "Demographic pressure drives aggressive foreign policy to distract from domestic woes"
+    explanation: "CCP uses nationalist fervor to maintain legitimacy as economic growth falters"
+    world_state_effects:
+      china_power_index: "-0.03"
+    cascading_modifiers:
+      2026_taiwan_strait.full_invasion: "+0.10"
+      2026_taiwan_strait.blockade: "+0.08"
+  reform_and_adapt:
+    status: "DIVERGENCE"
+    description: "China successfully reforms pension, healthcare, and labor systems"
+    explanation: "Pragmatic policy reforms extend working ages, improve eldercare, and boost productivity"
+    world_state_effects:
+      china_power_index: "+0.02"

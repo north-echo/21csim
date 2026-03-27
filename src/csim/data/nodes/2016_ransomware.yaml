@@ -1,0 +1,63 @@
+id: "2016_ransomware"
+year_month: "2016-01"
+title: "Ransomware as Business Model"
+description: >
+  CryptoLocker and its successors create a billion-dollar criminal
+  economy. Hospitals, cities, pipelines held hostage. Cryptocurrency
+  enables untraceable payments.
+domain: "security"
+confidence: "HIGH"
+variable: "ransomware"
+distribution:
+  type: "categorical"
+  options:
+    historical_epidemic: 0.45
+    contained_by_2020: 0.15
+    critical_infrastructure_attack: 0.15
+    crypto_regulation_stops_it: 0.10
+    ransomware_insurance_normalizes: 0.15
+dependencies:
+  - node: "2013_crypto"
+    branch: "historical_growth"
+    modifies:
+      historical_epidemic: "+0.05"
+      crypto_regulation_stops_it: "-0.05"
+  - node: "2010_stuxnet"
+    branch: "cyber_arms_race"
+    modifies:
+      critical_infrastructure_attack: "+0.10"
+      contained_by_2020: "-0.10"
+conditional: null
+outcomes:
+  historical_epidemic:
+    status: "HISTORICAL"
+    description: "Ransomware grows to $20B+/year criminal industry"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+15.0"
+      us_institutional_trust: "-0.01"
+  contained_by_2020:
+    status: "DIVERGENCE"
+    description: "Law enforcement disrupts major ransomware groups"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+3.0"
+      us_institutional_trust: "+0.01"
+  critical_infrastructure_attack:
+    status: "ESCALATED"
+    description: "Hospital ransomware attack kills patients; triggers crackdown"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+25.0"
+      us_institutional_trust: "-0.02"
+    cascading_modifiers:
+      2017_wannacry.major_infrastructure_attack: "+0.10"
+  crypto_regulation_stops_it:
+    status: "DIVERGENCE"
+    description: "Crypto regulation makes ransom payments impossible to collect"
+    world_state_effects:
+      global_cyber_damage_annual_b: "-5.0"
+      crypto_market_cap_trillion: "-0.1"
+  ransomware_insurance_normalizes:
+    status: "DIVERGENCE"
+    description: "Insurance normalizes ransomware as routine business cost"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+10.0"
+      us_institutional_trust: "-0.01"

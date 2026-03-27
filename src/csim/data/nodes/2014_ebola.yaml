@@ -1,0 +1,48 @@
+id: "2014_ebola"
+year_month: "2014-03"
+title: "West Africa Ebola Outbreak"
+description: >
+  Largest Ebola outbreak in history. 28,600 cases, 11,325 deaths.
+  Exposed weaknesses in global pandemic preparedness — lessons that
+  were largely forgotten by the time COVID arrived.
+domain: "social"
+confidence: "HIGH"
+variable: "ebola_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_outbreak: 0.45
+    contained_early: 0.25
+    global_spread: 0.10
+    preparedness_legacy: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  historical_outbreak:
+    status: "HISTORICAL"
+    description: "28,600 cases, 11,325 deaths in West Africa; lessons largely forgotten"
+    world_state_effects:
+      global_pandemic_deaths: "+11325"
+      africa_development_index: "-0.02"
+  contained_early:
+    status: "DIVERGENCE"
+    description: "WHO responds faster; deaths kept under 1,000"
+    world_state_effects:
+      global_pandemic_deaths: "+1000"
+      africa_development_index: "-0.01"
+  global_spread:
+    status: "DIVERGENCE"
+    description: "Ebola reaches major cities outside Africa"
+    world_state_effects:
+      global_pandemic_deaths: "+50000"
+      africa_development_index: "-0.04"
+    cascading_modifiers:
+      2019_antivax.contained_niche: "+0.05"
+  preparedness_legacy:
+    status: "DIVERGENCE"
+    description: "Outbreak triggers lasting global pandemic preparedness investment"
+    world_state_effects:
+      global_pandemic_deaths: "+11325"
+      africa_development_index: "-0.01"
+    cascading_modifiers:
+      2020_covid_response.coordinated_early: "+0.08"

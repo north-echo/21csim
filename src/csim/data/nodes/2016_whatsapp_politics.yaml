@@ -1,0 +1,76 @@
+id: "2016_whatsapp_politics"
+year_month: "2016-01"
+title: "WhatsApp as Political Misinformation Vector"
+description: >
+  In India, Brazil, and developing world, WhatsApp groups become
+  the primary vector for political misinformation. End-to-end encryption
+  makes moderation impossible. Lynchings in India directly linked to
+  WhatsApp rumors.
+domain: "social"
+confidence: "HIGH"
+variable: "whatsapp_politics_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_misinformation_vector: 0.45
+    moderation_tools_added: 0.15
+    decentralized_moderation: 0.15
+    unencrypted_alternative_wins: 0.10
+    regulation_forces_transparency: 0.15
+dependencies:
+  - node: "2004_social_media"
+    branch: "historical_ad_driven"
+    modifies:
+      historical_misinformation_vector: "+0.10"
+      moderation_tools_added: "-0.05"
+      decentralized_moderation: "-0.05"
+  - node: "2004_social_media"
+    branch: "regulated_early"
+    modifies:
+      historical_misinformation_vector: "-0.10"
+      regulation_forces_transparency: "+0.10"
+  - node: "2007_iphone"
+    branch: "historical_apple_led"
+    modifies:
+      historical_misinformation_vector: "+0.05"
+      unencrypted_alternative_wins: "-0.05"
+conditional: null
+outcomes:
+  historical_misinformation_vector:
+    status: "HISTORICAL"
+    description: "WhatsApp becomes primary misinformation vector in developing world; violence follows"
+    world_state_effects:
+      misinformation_severity: "+0.06"
+      global_democracy_index: "-0.03"
+      india_power_index: "-0.02"
+  moderation_tools_added:
+    status: "DIVERGENCE"
+    description: "WhatsApp adds forwarding limits and fact-check labels early"
+    explanation: "Proactive measures including message forwarding caps and media provenance labels"
+    world_state_effects:
+      misinformation_severity: "+0.03"
+      global_democracy_index: "-0.01"
+  decentralized_moderation:
+    status: "DIVERGENCE"
+    description: "Community-based fact-checking at scale emerges within WhatsApp groups"
+    explanation: "Local fact-checking networks embedded in community groups counter rumors in real time"
+    world_state_effects:
+      misinformation_severity: "+0.02"
+      global_democracy_index: "+0.01"
+  unencrypted_alternative_wins:
+    status: "DIVERGENCE"
+    description: "Telegram-style platform without end-to-end encryption dominates instead"
+    explanation: "Unencrypted messaging allows moderation but creates surveillance risks"
+    world_state_effects:
+      misinformation_severity: "+0.03"
+      global_democracy_index: "-0.02"
+      surveillance_state_index: "+0.03"
+  regulation_forces_transparency:
+    status: "DIVERGENCE"
+    description: "Governments force messaging platforms to enable content traceability"
+    explanation: "India and Brazil mandate message origin tracking; reduces viral misinformation"
+    world_state_effects:
+      misinformation_severity: "+0.02"
+      global_democracy_index: "-0.02"
+      internet_freedom_index: "-0.03"
+      surveillance_state_index: "+0.02"

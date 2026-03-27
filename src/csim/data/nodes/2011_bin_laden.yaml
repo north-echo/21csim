@@ -1,0 +1,61 @@
+id: "2011_bin_laden"
+year_month: "2011-05"
+title: "Bin Laden Operation"
+description: >
+  The hunt for Osama bin Laden culminates in a decision about how to act on
+  intelligence locating him in Abbottabad, Pakistan. The outcome affects
+  US credibility, counterterrorism trajectory, and Pakistan relations.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "bin_laden_outcome"
+distribution:
+  type: "categorical"
+  options:
+    successful_raid: 0.55
+    raid_fails: 0.20
+    diplomatic_capture: 0.10
+    not_found: 0.15
+dependencies:
+  - node: "2001_911"
+    branch: "plot_disrupted"
+    modifies:
+      not_found: "+0.10"
+      successful_raid: "-0.05"
+      diplomatic_capture: "+0.05"
+conditional: null
+outcomes:
+  successful_raid:
+    status: "HISTORICAL"
+    description: "Navy SEAL raid in Abbottabad kills bin Laden; body buried at sea"
+    world_state_effects:
+      terrorism_threat_index: "-0.05"
+      us_global_standing: "+0.03"
+    cascading_modifiers:
+      2021_afghanistan.historical_chaotic: "+0.05"
+  raid_fails:
+    status: "DIVERGENCE"
+    description: "Helicopter crash aborts mission; bin Laden escapes Abbottabad compound"
+    world_state_effects:
+      terrorism_threat_index: "+0.02"
+      us_global_standing: "-0.04"
+    cascading_modifiers:
+      2021_afghanistan.no_withdrawal: "+0.10"
+      2021_afghanistan.historical_chaotic: "-0.05"
+  diplomatic_capture:
+    status: "DIVERGENCE"
+    description: "Pakistan cooperates in joint operation; bin Laden captured alive and tried"
+    world_state_effects:
+      terrorism_threat_index: "-0.08"
+      us_global_standing: "+0.05"
+      middle_east_stability: "+0.02"
+    cascading_modifiers:
+      2021_afghanistan.negotiated_coalition: "+0.10"
+  not_found:
+    status: "DIVERGENCE"
+    description: "Intelligence never pinpoints compound; bin Laden remains at large"
+    world_state_effects:
+      terrorism_threat_index: "+0.05"
+      us_global_standing: "-0.02"
+    cascading_modifiers:
+      2021_afghanistan.no_withdrawal: "+0.08"
+      2015_paris_attacks.historical_attacks: "+0.03"

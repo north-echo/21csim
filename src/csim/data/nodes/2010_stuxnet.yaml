@@ -1,0 +1,48 @@
+id: "2010_stuxnet"
+year_month: "2010-06"
+title: "Stuxnet / Cyber Warfare"
+domain: "security"
+confidence: "HIGH"
+variable: "cyber_warfare"
+distribution:
+  type: "categorical"
+  options:
+    historical_escalation: 0.50
+    contained_secret: 0.15
+    cyber_arms_race: 0.15
+    deterrence_established: 0.10
+    iran_retaliates: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_escalation:
+    status: "HISTORICAL"
+    description: "Stuxnet discovered; opens era of state-sponsored cyber weapons"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+10.0"
+      nuclear_risk_level: "+0.02"
+    cascading_modifiers:
+      2017_wannacry.historical_escalation: "+0.10"
+  contained_secret:
+    status: "DIVERGENCE"
+    description: "Stuxnet never discovered; remains covert"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+3.0"
+  cyber_arms_race:
+    status: "ESCALATED"
+    description: "Open cyber arms race between major powers"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+20.0"
+      nuclear_risk_level: "+0.05"
+  deterrence_established:
+    status: "DIVERGENCE"
+    description: "Cyber norms and deterrence framework established"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+2.0"
+  iran_retaliates:
+    status: "ESCALATED"
+    description: "Iran retaliates with major cyberattack on US infrastructure"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+15.0"
+      nuclear_risk_level: "+0.05"
+      middle_east_stability: "-0.05"

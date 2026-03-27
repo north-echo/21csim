@@ -1,0 +1,58 @@
+id: "2049_hybrid_governance"
+year_month: "2049-06"
+title: "AI-Human Hybrid Governance"
+description: >
+  Nations experiment with integrating AI systems into governance and policy-making.
+  The balance between algorithmic efficiency and democratic accountability becomes
+  the central political question.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "hybrid_governance_status"
+distribution:
+  type: "categorical"
+  options:
+    advisory_only: 0.30
+    algorithmic_policy: 0.20
+    ai_decision_maker: 0.05
+    rejected: 0.25
+    hybrid_model: 0.15
+    authoritarian_ai: 0.05
+dependencies: []
+conditional: null
+outcomes:
+  advisory_only:
+    status: "DIVERGENCE"
+    description: "AI provides policy analysis and recommendations but humans retain all decision-making"
+    world_state_effects:
+      governance_model: "+0.05"
+      global_democracy_index: "+0.02"
+  algorithmic_policy:
+    status: "DIVERGENCE"
+    description: "AI systems design and optimize policy with human oversight limited to approval"
+    world_state_effects:
+      governance_model: "+0.10"
+      global_democracy_index: "-0.03"
+  ai_decision_maker:
+    status: "ESCALATED"
+    description: "Some jurisdictions cede decision-making authority to AI systems entirely"
+    world_state_effects:
+      governance_model: "+0.20"
+      global_democracy_index: "-0.10"
+  rejected:
+    status: "DIVERGENCE"
+    description: "Public backlash prevents AI integration into governance; traditional institutions persist"
+    world_state_effects:
+      governance_model: "-0.02"
+      global_democracy_index: "+0.01"
+  hybrid_model:
+    status: "DIVERGENCE"
+    description: "Balanced integration where AI handles data analysis and humans handle values-based decisions"
+    world_state_effects:
+      governance_model: "+0.08"
+      global_democracy_index: "+0.03"
+  authoritarian_ai:
+    status: "ESCALATED"
+    description: "Authoritarian regimes use AI governance to entrench control and suppress dissent"
+    world_state_effects:
+      governance_model: "+0.15"
+      global_democracy_index: "-0.12"

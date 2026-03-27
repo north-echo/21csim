@@ -1,0 +1,25 @@
+[project]
+name = "21csim"
+version = "0.1.0"
+description = "Monte Carlo counterfactual simulator for 21st century world history (2000-2100)"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.12",
+    "numpy>=1.26",
+    "networkx>=3.2",
+    "rich>=13.7",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+"21csim" = "csim.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/csim"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

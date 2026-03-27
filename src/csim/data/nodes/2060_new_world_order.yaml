@@ -1,0 +1,58 @@
+id: "2060_new_world_order"
+year_month: "2060-01"
+title: "New World Order"
+description: >
+  The global power structure settles into a new configuration after decades of
+  shifting alliances, rising powers, and technological disruption. The
+  post-WWII international order is definitively replaced.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "world_order_status"
+distribution:
+  type: "categorical"
+  options:
+    multipolar: 0.25
+    us_china_duopoly: 0.15
+    un_reformed: 0.10
+    regional_blocs: 0.25
+    ai_governed: 0.05
+    anarchic: 0.10
+    cooperation: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  multipolar:
+    status: "DIVERGENCE"
+    description: "Multiple great powers balance each other in a complex multipolar system"
+    world_state_effects:
+      governance_model: 0.50  # multipolar — moderate coordination
+  us_china_duopoly:
+    status: "DIVERGENCE"
+    description: "US and China dominate global affairs as co-equal superpowers with defined spheres"
+    world_state_effects:
+      governance_model: 0.45  # bipolar — structured but narrow
+  un_reformed:
+    status: "DIVERGENCE"
+    description: "Reformed United Nations gains real authority as a global governance body"
+    world_state_effects:
+      governance_model: 0.80  # multilateral — strong global governance
+  regional_blocs:
+    status: "DIVERGENCE"
+    description: "World organized into regional trade and security blocs with limited global coordination"
+    world_state_effects:
+      governance_model: 0.35  # regional blocs — fragmented coordination
+  ai_governed:
+    status: "DIVERGENCE"
+    description: "AI systems mediate international disputes and manage global commons"
+    world_state_effects:
+      governance_model: 0.75  # AI-mediated — effective but novel
+  anarchic:
+    status: "ESCALATED"
+    description: "No stable global order; nations and non-state actors compete in a fragmented landscape"
+    world_state_effects:
+      governance_model: 0.10  # anarchic — minimal governance
+  cooperation:
+    status: "DIVERGENCE"
+    description: "Unprecedented international cooperation driven by shared existential challenges"
+    world_state_effects:
+      governance_model: 0.85  # cooperative — high coordination

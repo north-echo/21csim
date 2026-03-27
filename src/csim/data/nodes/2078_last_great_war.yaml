@@ -1,0 +1,64 @@
+id: "2078_last_great_war"
+year_month: "2078-01"
+title: "Last Great War"
+description: >
+  Whether a major conflict erupts in the latter 21st century. The most
+  dangerous potential flashpoint for great power war, with nuclear, cyber,
+  and autonomous weapons in play.
+domain: "security"
+confidence: "LOW"
+variable: "last_great_war_status"
+distribution:
+  type: "categorical"
+  options:
+    no_war: 0.40
+    limited_conflict: 0.25
+    nuclear_exchange: 0.05
+    cyber_war: 0.15
+    proxy_conflict: 0.10
+    cold_war: 0.05
+dependencies: []
+conditional: null
+outcomes:
+  no_war:
+    status: "DIVERGENCE"
+    description: "No major great power conflict materializes; deterrence and diplomacy hold"
+    world_state_effects:
+      conflict_deaths: "+0"
+      nuclear_risk_level: "-0.05"
+      existential_risk_cumulative: "-0.05"
+  limited_conflict:
+    status: "ESCALATED"
+    description: "Brief but intense conventional conflict between major powers; quickly contained"
+    world_state_effects:
+      conflict_deaths: "+50000"
+      nuclear_risk_level: "+0.10"
+      existential_risk_cumulative: "+0.05"
+  nuclear_exchange:
+    status: "ESCALATED"
+    description: "Limited nuclear exchange devastates multiple cities; global order shattered"
+    world_state_effects:
+      conflict_deaths: "+5000000"
+      nuclear_risk_level: "+0.40"
+      existential_risk_cumulative: "+0.30"
+  cyber_war:
+    status: "ESCALATED"
+    description: "Major cyber war disrupts global infrastructure; physical casualties limited but economic devastation widespread"
+    world_state_effects:
+      conflict_deaths: "+10000"
+      nuclear_risk_level: "+0.05"
+      existential_risk_cumulative: "+0.08"
+  proxy_conflict:
+    status: "ESCALATED"
+    description: "Great powers fight through proxies and autonomous systems in developing regions"
+    world_state_effects:
+      conflict_deaths: "+100000"
+      nuclear_risk_level: "+0.05"
+      existential_risk_cumulative: "+0.03"
+  cold_war:
+    status: "DIVERGENCE"
+    description: "Sustained cold war between major blocs; tense but no direct military conflict"
+    world_state_effects:
+      conflict_deaths: "+0"
+      nuclear_risk_level: "+0.15"
+      existential_risk_cumulative: "+0.02"

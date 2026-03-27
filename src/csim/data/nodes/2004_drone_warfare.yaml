@@ -1,0 +1,58 @@
+id: "2004_drone_warfare"
+year_month: "2004-06"
+title: "Drone Warfare Program"
+domain: "security"
+confidence: "HIGH"
+variable: "drone_program"
+distribution:
+  type: "categorical"
+  options:
+    historical_expansion: 0.50
+    limited_use: 0.25
+    banned_early: 0.05
+    proliferation: 0.15
+    autonomous_early: 0.05
+dependencies:
+  - node: "2001_911"
+    branch: "plot_disrupted"
+    modifies:
+      historical_expansion: "-0.15"
+      limited_use: "+0.10"
+      banned_early: "+0.05"
+conditional: null
+outcomes:
+  historical_expansion:
+    status: "HISTORICAL"
+    description: "US drone strike program expands globally"
+    world_state_effects:
+      drone_warfare_prevalence: "+0.15"
+      conflict_deaths: "+3000"
+      us_global_standing: "-0.03"
+      terrorism_threat_index: "-0.02"
+  limited_use:
+    status: "DIVERGENCE"
+    description: "Drone warfare limited to active war zones"
+    world_state_effects:
+      drone_warfare_prevalence: "+0.05"
+      conflict_deaths: "+500"
+  banned_early:
+    status: "DIVERGENCE"
+    description: "International treaty bans armed drones"
+    world_state_effects:
+      drone_warfare_prevalence: "+0.01"
+  proliferation:
+    status: "DIVERGENCE"
+    description: "Drone technology proliferates to 30+ nations"
+    world_state_effects:
+      drone_warfare_prevalence: "+0.25"
+      nuclear_risk_level: "+0.02"
+      conflict_deaths: "+5000"
+    cascading_modifiers:
+      2038_autonomous_weapons.proliferation: "+0.15"
+      2038_autonomous_weapons.comprehensive_ban: "-0.08"
+  autonomous_early:
+    status: "DIVERGENCE"
+    description: "Autonomous lethal drones deployed by 2010"
+    world_state_effects:
+      drone_warfare_prevalence: "+0.20"
+      existential_risk_cumulative: "+0.02"

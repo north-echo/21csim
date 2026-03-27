@@ -1,0 +1,53 @@
+id: "2018_facebook_cambridge"
+year_month: "2018-03"
+title: "Cambridge Analytica / Platform Accountability"
+domain: "technology"
+confidence: "HIGH"
+variable: "platform_accountability"
+distribution:
+  type: "categorical"
+  options:
+    historical_minimal_reform: 0.50
+    strong_regulation: 0.15
+    platform_breakup: 0.10
+    self_regulation_works: 0.15
+    nothing_changes: 0.10
+dependencies:
+  - node: "2004_social_media"
+    branch: "regulated_early"
+    modifies:
+      strong_regulation: "+0.15"
+      historical_minimal_reform: "-0.10"
+      nothing_changes: "-0.05"
+conditional: null
+outcomes:
+  historical_minimal_reform:
+    status: "HISTORICAL"
+    description: "GDPR passes; minor platform changes; no structural reform"
+    world_state_effects:
+      misinformation_severity: "+0.02"
+      internet_freedom_index: "-0.01"
+  strong_regulation:
+    status: "DIVERGENCE"
+    description: "Strong data protection and algorithmic transparency laws"
+    world_state_effects:
+      misinformation_severity: "-0.05"
+      internet_freedom_index: "+0.03"
+      surveillance_state_index: "-0.02"
+  platform_breakup:
+    status: "DIVERGENCE"
+    description: "Antitrust action breaks up major platforms"
+    world_state_effects:
+      misinformation_severity: "-0.03"
+      inequality_index: "-0.02"
+  self_regulation_works:
+    status: "DIVERGENCE"
+    description: "Platforms self-regulate effectively under threat"
+    world_state_effects:
+      misinformation_severity: "-0.02"
+  nothing_changes:
+    status: "DIVERGENCE"
+    description: "Scandal blows over; no meaningful change"
+    world_state_effects:
+      misinformation_severity: "+0.05"
+      us_institutional_trust: "-0.02"

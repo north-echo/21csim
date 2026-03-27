@@ -1,0 +1,45 @@
+id: "2011_fukushima"
+year_month: "2011-03"
+title: "Fukushima Nuclear Disaster"
+domain: "technology"
+confidence: "HIGH"
+variable: "fukushima"
+distribution:
+  type: "categorical"
+  options:
+    historical_meltdown: 0.40
+    contained_quickly: 0.30
+    worse_chernobyl_scale: 0.10
+    no_tsunami_hit: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  historical_meltdown:
+    status: "HISTORICAL"
+    description: "Three reactor meltdowns; global nuclear retreat"
+    world_state_effects:
+      renewable_energy_share: "+0.02"
+      climate_temp_anomaly: "+0.03"
+    cascading_modifiers:
+      2027_energy_transition.nuclear_renaissance: "-0.05"
+      2022_russia_ukraine.eu_energy_dependence: "+0.03"
+  contained_quickly:
+    status: "DIVERGENCE"
+    description: "Backup systems work; minimal radiation release"
+    world_state_effects:
+      renewable_energy_share: "+0.01"
+  worse_chernobyl_scale:
+    status: "ESCALATED"
+    description: "Full meltdown; Tokyo evacuation considered"
+    world_state_effects:
+      renewable_energy_share: "+0.05"
+      climate_temp_anomaly: "+0.05"
+      global_gdp_growth_modifier: "*0.99"
+      conflict_deaths: "+5000"
+  no_tsunami_hit:
+    status: "PREVENTED"
+    description: "Tsunami doesn't hit Fukushima plant"
+    world_state_effects: {}
+    cascading_modifiers:
+      2025_climate_tipping.accelerated_action: "+0.08"
+      2027_energy_transition.nuclear_renaissance: "+0.15"

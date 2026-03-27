@@ -1,0 +1,57 @@
+id: "2015_charlie_hebdo"
+year_month: "2015-01"
+title: "Charlie Hebdo Attack"
+description: >
+  Islamist gunmen attack satirical newspaper in Paris. 12 killed.
+  Triggers "Je suis Charlie" movement and intensifies European debate
+  about Islam, free speech, and multiculturalism.
+domain: "security"
+confidence: "HIGH"
+variable: "charlie_hebdo_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_attack: 0.45
+    attack_prevented: 0.25
+    larger_attack: 0.10
+    cultural_dialogue: 0.20
+dependencies:
+  - node: "2014_isis"
+    branch: null
+    modifies: {}
+  - node: "2003_iraq"
+    branch: null
+    modifies: {}
+conditional: null
+outcomes:
+  historical_attack:
+    status: "HISTORICAL"
+    description: "Gunmen kill 12 at Charlie Hebdo; 'Je suis Charlie' movement emerges"
+    world_state_effects:
+      eu_cohesion: "-0.02"
+      terrorism_threat_index: "+0.03"
+      misinformation_severity: "+0.02"
+    cascading_modifiers:
+      2015_paris_attacks.historical_paris: "+0.05"
+  attack_prevented:
+    status: "DIVERGENCE"
+    description: "French security services prevent the attack"
+    world_state_effects:
+      eu_cohesion: "+0.01"
+      terrorism_threat_index: "-0.01"
+    cascading_modifiers:
+      2015_paris_attacks.no_major_western_attack: "+0.05"
+  larger_attack:
+    status: "DIVERGENCE"
+    description: "More coordinated attack with higher casualty count"
+    world_state_effects:
+      eu_cohesion: "-0.04"
+      terrorism_threat_index: "+0.05"
+      misinformation_severity: "+0.03"
+  cultural_dialogue:
+    status: "DIVERGENCE"
+    description: "Attack triggers genuine interfaith dialogue and understanding"
+    world_state_effects:
+      eu_cohesion: "+0.02"
+      terrorism_threat_index: "+0.01"
+      misinformation_severity: "-0.01"

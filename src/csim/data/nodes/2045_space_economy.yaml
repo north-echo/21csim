@@ -1,0 +1,60 @@
+id: "2045_space_economy"
+year_month: "2045-01"
+title: "Space Economy $1T"
+description: >
+  The space economy approaches or surpasses the one trillion dollar milestone.
+  Whether driven by mining, tourism, manufacturing, or military spending determines
+  the character of humanity's expansion beyond Earth.
+domain: "space"
+confidence: "MEDIUM"
+variable: "space_economy_status"
+distribution:
+  type: "categorical"
+  options:
+    on_track: 0.25
+    slower: 0.30
+    explosive: 0.10
+    collapsed: 0.15
+    military_dominated: 0.20
+dependencies:
+  - node: "2038_space_mining"
+    branch: "profitable"
+    modifies:
+      on_track: "+0.10"
+      explosive: "+0.05"
+      collapsed: "-0.10"
+      slower: "-0.05"
+  - node: "2038_space_mining"
+    branch: "unprofitable"
+    modifies:
+      collapsed: "+0.10"
+      slower: "+0.05"
+      on_track: "-0.10"
+      explosive: "-0.05"
+conditional: null
+outcomes:
+  on_track:
+    status: "DIVERGENCE"
+    description: "Space economy reaches $1T on schedule with diverse commercial activities"
+    world_state_effects:
+      space_development_index: "+0.10"
+  slower:
+    status: "DIVERGENCE"
+    description: "Space economy grows but falls short of projections; reaching $1T delayed to 2050s"
+    world_state_effects:
+      space_development_index: "+0.05"
+  explosive:
+    status: "DIVERGENCE"
+    description: "Breakthrough technologies drive space economy far beyond projections"
+    world_state_effects:
+      space_development_index: "+0.20"
+  collapsed:
+    status: "DIVERGENCE"
+    description: "Space industry consolidation and failures shrink the commercial space sector"
+    world_state_effects:
+      space_development_index: "-0.05"
+  military_dominated:
+    status: "DIVERGENCE"
+    description: "Space economy grows but is dominated by military and surveillance spending"
+    world_state_effects:
+      space_development_index: "+0.08"

@@ -1,0 +1,75 @@
+id: "2017_us_paris_withdrawal"
+year_month: "2017-06"
+title: "US Leaves/Rejoins Paris Agreement"
+description: >
+  Trump announces US withdrawal from Paris Agreement in June 2017,
+  making the US the only nation to leave. Biden rejoins on his first
+  day in office (Jan 2021). The whiplash undermines US climate credibility
+  and emboldens other potential defectors.
+domain: "energy"
+confidence: "HIGH"
+variable: "us_paris_status"
+distribution:
+  type: "categorical"
+  options:
+    historical_withdraw_rejoin: 0.40
+    never_withdraws: 0.25
+    permanent_withdrawal: 0.15
+    withdraw_no_rejoin: 0.10
+    conditional_return: 0.10
+dependencies:
+  - node: "2016_us_election"
+    branch: "clinton_wins"
+    modifies:
+      never_withdraws: "+0.30"
+      historical_withdraw_rejoin: "-0.25"
+      permanent_withdrawal: "-0.05"
+  - node: "2016_us_election"
+    branch: "third_party_surge"
+    modifies:
+      never_withdraws: "+0.10"
+      historical_withdraw_rejoin: "-0.10"
+conditional: null
+outcomes:
+  historical_withdraw_rejoin:
+    status: "HISTORICAL"
+    description: "US withdraws 2017, rejoins 2021; 4 lost years of climate leadership"
+    world_state_effects:
+      climate_temp_anomaly: "+0.02"
+      us_global_standing: "-0.03"
+    cascading_modifiers:
+      2025_climate_tipping.accelerated_action: "-0.03"
+  never_withdraws:
+    status: "DIVERGENCE"
+    description: "US remains in Paris; maintains climate leadership continuity"
+    world_state_effects:
+      climate_temp_anomaly: "-0.02"
+      us_global_standing: "+0.03"
+      renewable_energy_share: "+0.02"
+    cascading_modifiers:
+      2025_climate_tipping.accelerated_action: "+0.05"
+      2027_energy_transition.rapid_transition: "+0.03"
+  permanent_withdrawal:
+    status: "DIVERGENCE"
+    description: "US permanently exits Paris; other nations follow; agreement weakens"
+    world_state_effects:
+      climate_temp_anomaly: "+0.05"
+      us_global_standing: "-0.05"
+      renewable_energy_share: "-0.01"
+    cascading_modifiers:
+      2025_climate_tipping.tipping_point_crossed: "+0.05"
+  withdraw_no_rejoin:
+    status: "DIVERGENCE"
+    description: "US withdraws and does not rejoin under Biden; prolonged absence"
+    world_state_effects:
+      climate_temp_anomaly: "+0.04"
+      us_global_standing: "-0.04"
+    cascading_modifiers:
+      2025_climate_tipping.on_track_2_5c: "+0.05"
+  conditional_return:
+    status: "DIVERGENCE"
+    description: "US returns with conditions; demands China match commitments"
+    world_state_effects:
+      climate_temp_anomaly: "+0.01"
+      us_global_standing: "+0.01"
+      china_power_index: "-0.01"

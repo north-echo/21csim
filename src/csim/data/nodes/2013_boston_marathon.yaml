@@ -1,0 +1,46 @@
+id: "2013_boston_marathon"
+year_month: "2013-04"
+title: "Boston Marathon Bombing"
+description: >
+  Pressure cooker bombs at marathon finish line. 3 killed, 264 injured.
+  Demonstrates domestic radicalization threat and the "lone wolf" problem.
+domain: "security"
+confidence: "HIGH"
+variable: "boston_bombing_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_attack: 0.50
+    plot_disrupted: 0.25
+    larger_attack: 0.10
+    no_attack: 0.15
+dependencies:
+  - node: "2001_911"
+    branch: "plot_disrupted"
+    modifies:
+      no_attack: "+0.10"
+conditional: null
+outcomes:
+  historical_attack:
+    status: "HISTORICAL"
+    description: "Pressure cooker bombs at finish line; 3 dead, 264 injured"
+    world_state_effects:
+      terrorism_threat_index: "+0.02"
+      surveillance_state_index: "+0.02"
+  plot_disrupted:
+    status: "DIVERGENCE"
+    description: "FBI tips prevent the attack before it occurs"
+    world_state_effects:
+      terrorism_threat_index: "-0.01"
+      surveillance_state_index: "+0.01"
+  larger_attack:
+    status: "DIVERGENCE"
+    description: "More sophisticated device causes significantly more casualties"
+    world_state_effects:
+      terrorism_threat_index: "+0.04"
+      surveillance_state_index: "+0.04"
+  no_attack:
+    status: "DIVERGENCE"
+    description: "Tsarnaev brothers never radicalize; no attack planned"
+    world_state_effects:
+      terrorism_threat_index: "-0.01"

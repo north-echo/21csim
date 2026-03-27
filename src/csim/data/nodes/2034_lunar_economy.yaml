@@ -1,0 +1,81 @@
+id: "2034_lunar_economy"
+year_month: "2034-06"
+title: "Lunar Economy Begins"
+description: >
+  Commercial activities on the Moon ramp up: water ice mining for rocket fuel,
+  helium-3 extraction for future fusion reactors, and early lunar tourism.
+  Whether a self-sustaining lunar economy emerges depends on base infrastructure
+  and launch costs.
+domain: "space"
+confidence: "MEDIUM"
+variable: "lunar_economy_status"
+distribution:
+  type: "categorical"
+  options:
+    water_mining_viable: 0.25
+    he3_breakthrough: 0.10
+    tourism_driven: 0.20
+    government_subsidized: 0.30
+    economically_unviable: 0.15
+dependencies:
+  - node: "2032_moon_base"
+    branch: "us_china_bases"
+    modifies:
+      water_mining_viable: "+0.10"
+      he3_breakthrough: "+0.05"
+      tourism_driven: "+0.05"
+      economically_unviable: "-0.15"
+      government_subsidized: "-0.05"
+  - node: "2032_moon_base"
+    branch: "abandoned"
+    modifies:
+      economically_unviable: "+0.20"
+      water_mining_viable: "-0.10"
+      he3_breakthrough: "-0.05"
+      tourism_driven: "-0.05"
+  - node: "2032_moon_base"
+    branch: "delayed_2040"
+    modifies:
+      economically_unviable: "+0.10"
+      government_subsidized: "+0.05"
+      water_mining_viable: "-0.10"
+      tourism_driven: "-0.05"
+conditional: null
+outcomes:
+  water_mining_viable:
+    status: "DIVERGENCE"
+    description: "Lunar water ice extraction becomes commercially viable; in-space fuel depots operational"
+    explanation: "Polar ice deposits richer than expected; propellant production cuts cislunar transport costs"
+    world_state_effects:
+      space_development_index: "+0.10"
+    cascading_modifiers:
+      2040_mars_mission.successful_landing: "+0.05"
+      2045_space_economy.on_track: "+0.05"
+  he3_breakthrough:
+    status: "DIVERGENCE"
+    description: "Helium-3 extraction begins; paired with fusion reactor progress on Earth"
+    explanation: "Lunar regolith processing yields commercially relevant He-3 quantities as fusion nears viability"
+    world_state_effects:
+      space_development_index: "+0.12"
+      renewable_energy_share: "+0.02"
+    cascading_modifiers:
+      2045_space_economy.explosive: "+0.05"
+  tourism_driven:
+    status: "DIVERGENCE"
+    description: "Lunar tourism becomes the primary economic driver; wealthy visitors fund base expansion"
+    explanation: "Week-long lunar surface stays at $50M+ per ticket create sustainable revenue stream"
+    world_state_effects:
+      space_development_index: "+0.06"
+      inequality_index: "+0.01"
+  government_subsidized:
+    status: "DIVERGENCE"
+    description: "Lunar economy survives only through government contracts and strategic subsidies"
+    explanation: "No commercial business case yet; military and scientific justifications sustain funding"
+    world_state_effects:
+      space_development_index: "+0.04"
+  economically_unviable:
+    status: "DIVERGENCE"
+    description: "Lunar resource extraction proves too expensive; economic activity stalls"
+    explanation: "Transport costs remain prohibitive; terrestrial alternatives cheaper for all applications"
+    world_state_effects:
+      space_development_index: "+0.01"

@@ -1,0 +1,85 @@
+id: "2013_nuclear_policy_shift"
+year_month: "2013-06"
+title: "Post-Fukushima Nuclear Policy Shift"
+description: >
+  In the aftermath of Fukushima, nations make pivotal decisions about
+  nuclear energy. Germany commits to full phase-out by 2022. Japan
+  shuts all 54 reactors. France debates reducing nuclear share.
+  These decisions lock in fossil fuel dependence or accelerate renewables,
+  with consequences lasting decades.
+domain: "energy"
+confidence: "HIGH"
+variable: "nuclear_policy"
+distribution:
+  type: "categorical"
+  options:
+    historical_retreat: 0.45
+    nuclear_renaissance: 0.15
+    selective_phaseout: 0.20
+    accelerated_shutdown: 0.10
+    smr_pivot: 0.10
+dependencies:
+  - node: "2011_fukushima"
+    branch: "historical_meltdown"
+    modifies:
+      historical_retreat: "+0.10"
+      nuclear_renaissance: "-0.10"
+  - node: "2011_fukushima"
+    branch: "contained_quickly"
+    modifies:
+      nuclear_renaissance: "+0.15"
+      historical_retreat: "-0.10"
+      accelerated_shutdown: "-0.05"
+  - node: "2011_fukushima"
+    branch: "no_tsunami_hit"
+    modifies:
+      nuclear_renaissance: "+0.20"
+      historical_retreat: "-0.15"
+      accelerated_shutdown: "-0.05"
+conditional: null
+outcomes:
+  historical_retreat:
+    status: "HISTORICAL"
+    description: "Germany phases out nuclear; Japan offline for years; global nuclear capacity stalls"
+    world_state_effects:
+      renewable_energy_share: "+0.02"
+      climate_temp_anomaly: "+0.03"
+    cascading_modifiers:
+      2022_russia_ukraine.historical_invasion_stalemate: "+0.02"
+      2027_energy_transition.nuclear_renaissance: "-0.05"
+  nuclear_renaissance:
+    status: "DIVERGENCE"
+    description: "Nations double down on nuclear with improved safety; new builds accelerate"
+    world_state_effects:
+      renewable_energy_share: "+0.01"
+      climate_temp_anomaly: "-0.04"
+      nuclear_risk_level: "+0.02"
+    cascading_modifiers:
+      2027_energy_transition.nuclear_renaissance: "+0.10"
+      2025_climate_tipping.accelerated_action: "+0.03"
+  selective_phaseout:
+    status: "DIVERGENCE"
+    description: "Only oldest reactors retired; new safety standards enable continued operation"
+    world_state_effects:
+      renewable_energy_share: "+0.01"
+      climate_temp_anomaly: "+0.01"
+    cascading_modifiers:
+      2027_energy_transition.nuclear_renaissance: "+0.03"
+  accelerated_shutdown:
+    status: "DIVERGENCE"
+    description: "Global anti-nuclear movement forces rapid closures; coal fills the gap"
+    world_state_effects:
+      renewable_energy_share: "+0.03"
+      climate_temp_anomaly: "+0.06"
+    cascading_modifiers:
+      2027_energy_transition.fossil_resurgence: "+0.05"
+      2025_climate_tipping.tipping_point_crossed: "+0.03"
+  smr_pivot:
+    status: "DIVERGENCE"
+    description: "Fukushima triggers pivot to small modular reactors; safer design paradigm"
+    world_state_effects:
+      renewable_energy_share: "+0.02"
+      climate_temp_anomaly: "-0.02"
+      nuclear_risk_level: "-0.01"
+    cascading_modifiers:
+      2027_energy_transition.nuclear_renaissance: "+0.08"

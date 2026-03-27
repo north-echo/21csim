@@ -1,0 +1,51 @@
+id: "2065_population_decline"
+year_month: "2065-01"
+title: "Population Decline"
+description: >
+  Global population begins its long-anticipated decline as fertility rates fall
+  worldwide. How societies manage demographic contraction becomes a defining
+  challenge of the era.
+domain: "demographics"
+confidence: "LOW"
+variable: "population_decline_status"
+distribution:
+  type: "categorical"
+  options:
+    gradual_managed: 0.30
+    rapid_decline: 0.15
+    stabilized: 0.20
+    aging_crisis: 0.20
+    rejuvenation: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  gradual_managed:
+    status: "DIVERGENCE"
+    description: "Population declines slowly with effective policies managing the transition"
+    world_state_effects:
+      global_population_billions: "-0.30"
+      median_age_global: "+2.0"
+  rapid_decline:
+    status: "ESCALATED"
+    description: "Population drops faster than anticipated; economic and social systems struggle to adapt"
+    world_state_effects:
+      global_population_billions: "-0.80"
+      median_age_global: "+5.0"
+  stabilized:
+    status: "DIVERGENCE"
+    description: "Population stabilizes through pro-natalist policies and immigration balancing"
+    world_state_effects:
+      global_population_billions: "+0.00"
+      median_age_global: "+1.0"
+  aging_crisis:
+    status: "ESCALATED"
+    description: "Extreme aging without adequate decline creates unsustainable dependency ratios"
+    world_state_effects:
+      global_population_billions: "-0.20"
+      median_age_global: "+8.0"
+  rejuvenation:
+    status: "DIVERGENCE"
+    description: "Life extension technologies create a demographic rejuvenation; aging reversed for many"
+    world_state_effects:
+      global_population_billions: "+0.10"
+      median_age_global: "-5.0"

@@ -1,0 +1,80 @@
+id: "2025_starship"
+year_month: "2025-06"
+title: "Starship Reaches Orbit"
+description: >
+  SpaceX Starship achieves full orbital flight and landing. If successful,
+  it's the largest and cheapest rocket ever built -- enabling Moon bases,
+  Mars missions, and orbital manufacturing.
+domain: "space"
+confidence: "MEDIUM"
+variable: "starship_status"
+distribution:
+  type: "categorical"
+  options:
+    on_schedule: 0.30
+    delayed_2028: 0.30
+    partial_success: 0.15
+    program_cancelled: 0.05
+    competitor_beats: 0.10
+    revolutionary_success: 0.10
+dependencies:
+  - node: "2010_spacex_falcon9"
+    branch: "historical_success"
+    modifies:
+      on_schedule: "+0.05"
+      revolutionary_success: "+0.05"
+      program_cancelled: "-0.05"
+      delayed_2028: "-0.05"
+  - node: "2010_spacex_falcon9"
+    branch: "spacex_fails"
+    modifies:
+      program_cancelled: "+0.15"
+      on_schedule: "-0.10"
+      revolutionary_success: "-0.05"
+conditional: null
+outcomes:
+  on_schedule:
+    status: "DIVERGENCE"
+    description: "Starship achieves full orbital success by 2025; largest and cheapest rocket ever"
+    explanation: "Iterative development pays off; rapid reusability proven at scale"
+    world_state_effects:
+      space_development_index: "+0.10"
+    cascading_modifiers:
+      2032_moon_base.us_china_bases: "+0.10"
+      2040_mars_mission.successful_landing: "+0.10"
+  delayed_2028:
+    status: "DIVERGENCE"
+    description: "Technical challenges delay Starship orbital success by three years"
+    explanation: "Heat shield, engine reliability, and regulatory hurdles slow development"
+    world_state_effects:
+      space_development_index: "+0.05"
+  partial_success:
+    status: "DIVERGENCE"
+    description: "Starship reaches orbit but landing fails; iterative improvement continues"
+    explanation: "Upper stage performs well but reusable landing proves harder than expected"
+    world_state_effects:
+      space_development_index: "+0.06"
+  program_cancelled:
+    status: "ESCALATED"
+    description: "Catastrophic failure ends Starship program"
+    explanation: "Major accident during flight leads to regulatory shutdown and investor retreat"
+    world_state_effects:
+      space_development_index: "-0.05"
+    cascading_modifiers:
+      2032_moon_base.delayed_2040: "+0.20"
+      2040_mars_mission.cancelled: "+0.10"
+  competitor_beats:
+    status: "DIVERGENCE"
+    description: "Blue Origin or Chinese equivalent achieves super-heavy reusability first"
+    explanation: "New Glenn or Long March 9 beat Starship to market; competition reshapes industry"
+    world_state_effects:
+      space_development_index: "+0.08"
+  revolutionary_success:
+    status: "DIVERGENCE"
+    description: "Starship exceeds expectations; rapid iteration achieves daily launches"
+    explanation: "Rapid reuse cycle and minimal refurbishment transform space access economics"
+    world_state_effects:
+      space_development_index: "+0.15"
+    cascading_modifiers:
+      2032_moon_base.us_china_bases: "+0.05"
+      2040_mars_mission.successful_landing: "+0.05"

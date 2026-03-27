@@ -1,0 +1,65 @@
+id: "2095_ai_human"
+year_month: "2095-01"
+title: "AI-Human Relationship"
+description: >
+  The definitive relationship between artificial and human intelligence at
+  century's end. Whether AI and humanity coexist, merge, or come into
+  conflict determines the trajectory of both.
+domain: "technology"
+confidence: "LOW"
+variable: "ai_human_status"
+distribution:
+  type: "categorical"
+  options:
+    symbiotic: 0.25
+    separate: 0.20
+    merged: 0.10
+    adversarial: 0.05
+    dependent: 0.20
+    transcended: 0.10
+    managed: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  symbiotic:
+    status: "DIVERGENCE"
+    description: "AI and humans in a mutually beneficial partnership; each enhancing the other's capabilities"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.10"
+      governance_model: 0.70  # AI-symbiotic — collaborative governance
+  separate:
+    status: "DIVERGENCE"
+    description: "AI and humans occupy distinct roles with clear boundaries maintained by design"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.00"
+      governance_model: 0.55  # human-led — traditional with AI tools
+  merged:
+    status: "DIVERGENCE"
+    description: "Distinction between AI and human intelligence no longer meaningful; new hybrid consciousness"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.30"
+      governance_model: 0.65  # merged intelligence — novel hybrid
+  adversarial:
+    status: "ESCALATED"
+    description: "AI systems and human interests in ongoing conflict; containment an active struggle"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.05"
+      governance_model: 0.25  # contested — governance breakdown
+  dependent:
+    status: "DIVERGENCE"
+    description: "Humanity deeply dependent on AI for all complex decisions; autonomy diminished"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.05"
+      governance_model: 0.60  # AI-dependent — effective but fragile
+  transcended:
+    status: "DIVERGENCE"
+    description: "AI has transcended human comprehension; relationship is one of stewardship or indifference"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.15"
+      governance_model: 0.40  # post-comprehension — beyond human governance
+  managed:
+    status: "DIVERGENCE"
+    description: "AI remains a powerful tool under firm human governance and control frameworks"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.02"
+      governance_model: 0.60  # human-governed — firm human control

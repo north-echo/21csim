@@ -1,0 +1,63 @@
+id: "2035_us_renewal"
+year_month: "2035-01"
+title: "American Renewal"
+description: >
+  In timelines where the US avoids the worst polarization, a national
+  renewal is possible — but what form does it take?
+domain: "geopolitical"
+confidence: "LOW"
+variable: "us_renewal_status"
+distribution:
+  type: "categorical"
+  options:
+    infrastructure_renaissance: 0.30
+    tech_leader_consolidation: 0.25
+    social_compact_2: 0.20
+    complacency: 0.25
+dependencies: []
+conditional: "us_polarization < 0.50 AND us_unity_index > 0.55"
+outcomes:
+  infrastructure_renaissance:
+    status: "DIVERGENCE"
+    description: "Massive national rebuilding program; bridges, rail, broadband, and clean energy infrastructure"
+    explanation: "Bipartisan infrastructure consensus emerges; trillions invested over a decade create national purpose"
+    world_state_effects:
+      us_global_standing: "+0.08"
+      us_unity_index: "+0.05"
+      global_gdp_growth_modifier: "*1.03"
+      supply_chain_resilience: "+0.08"
+      renewable_energy_share: "+0.05"
+      us_institutional_trust: "+0.05"
+  tech_leader_consolidation:
+    status: "DIVERGENCE"
+    description: "US cements dominance in AI, space, and biotech; becomes undisputed technology leader"
+    explanation: "Stable politics attract talent and investment; government-industry partnerships accelerate breakthroughs"
+    world_state_effects:
+      us_global_standing: "+0.10"
+      ai_development_year_offset: "+1"
+      space_development_index: "+0.08"
+      inequality_index: "+0.03"
+      china_power_index: "-0.03"
+      human_augmentation_prevalence: "+0.03"
+  social_compact_2:
+    status: "DIVERGENCE"
+    description: "New social contract reduces inequality; healthcare, education, and housing reforms succeed"
+    explanation: "Bipartisan coalition builds a modern safety net; inequality declines for the first time in decades"
+    world_state_effects:
+      inequality_index: "-0.10"
+      us_unity_index: "+0.08"
+      us_institutional_trust: "+0.08"
+      us_life_expectancy_delta: "+2.0"
+      us_polarization: "-0.05"
+      global_democracy_index: "+0.03"
+  complacency:
+    status: "DIVERGENCE"
+    description: "Having avoided the worst, America drifts; no major reforms, slow relative decline"
+    explanation: "Absence of crisis removes urgency; political system returns to gridlock; competitors catch up"
+    world_state_effects:
+      us_global_standing: "-0.03"
+      us_unity_index: "-0.03"
+      china_power_index: "+0.03"
+      inequality_index: "+0.02"
+      us_institutional_trust: "-0.02"
+      global_gdp_growth_modifier: "*0.99"

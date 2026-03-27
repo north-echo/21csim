@@ -1,0 +1,51 @@
+id: "2036_asean_integration"
+year_month: "2036-06"
+title: "ASEAN Integration Trajectory"
+description: >
+  The future of Southeast Asian regional integration. Whether ASEAN deepens
+  cooperation, aligns with a major power, or fragments under geopolitical
+  pressure from US-China competition.
+domain: "geopolitical"
+confidence: "MEDIUM"
+variable: "asean_integration_status"
+distribution:
+  type: "categorical"
+  options:
+    deeper_integration: 0.25
+    china_orbit: 0.20
+    us_aligned: 0.20
+    independent_bloc: 0.20
+    fragmented: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  deeper_integration:
+    status: "DIVERGENCE"
+    description: "ASEAN achieves EU-like economic integration with single market elements"
+    explanation: "Economic growth and shared challenges drive deeper institutional cooperation"
+    world_state_effects:
+      global_gdp: "+0.02"
+  china_orbit:
+    status: "DIVERGENCE"
+    description: "ASEAN drawn into Chinese economic and security orbit"
+    explanation: "RCEP deepens; Chinese investment and military presence make ASEAN a de facto Chinese sphere"
+    world_state_effects:
+      china_power_index: "+0.03"
+  us_aligned:
+    status: "DIVERGENCE"
+    description: "ASEAN aligns more closely with US-led Indo-Pacific framework"
+    explanation: "China threat perception and US engagement draw Southeast Asia toward Western alignment"
+    world_state_effects:
+      us_global_standing: "+0.02"
+  independent_bloc:
+    status: "DIVERGENCE"
+    description: "ASEAN maintains strategic autonomy as independent power bloc"
+    explanation: "Skillful hedging between great powers preserves ASEAN centrality and independence"
+    world_state_effects:
+      governance_model: "+0.02"
+  fragmented:
+    status: "DIVERGENCE"
+    description: "ASEAN unity fractures as members choose different great power patrons"
+    explanation: "Cambodia and Laos align with China; Philippines and Vietnam with US; consensus collapses"
+    world_state_effects:
+      global_gdp: "-0.01"

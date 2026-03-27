@@ -1,0 +1,46 @@
+id: "2075_population"
+year_month: "2075-01"
+title: "Global Population 2075"
+description: >
+  World population level as demographic transition completes globally. The
+  balance between declining fertility, life extension, and migration patterns
+  determines the size of humanity.
+domain: "demographics"
+confidence: "LOW"
+variable: "population_2075"
+distribution:
+  type: "categorical"
+  options:
+    8_billion: 0.20
+    7_billion: 0.25
+    9_billion: 0.15
+    declining: 0.25
+    stable: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  8_billion:
+    status: "DIVERGENCE"
+    description: "Global population holds near 8 billion with balanced demographics"
+    world_state_effects:
+      global_population_billions: "+0.00"
+  7_billion:
+    status: "DIVERGENCE"
+    description: "Population declined to approximately 7 billion through sustained low fertility"
+    world_state_effects:
+      global_population_billions: "-1.0"
+  9_billion:
+    status: "DIVERGENCE"
+    description: "Population still near 9 billion due to life extension and higher-than-expected fertility in some regions"
+    world_state_effects:
+      global_population_billions: "+1.0"
+  declining:
+    status: "DIVERGENCE"
+    description: "Population in rapid decline with no sign of stabilizing; below 7 billion and falling"
+    world_state_effects:
+      global_population_billions: "-1.5"
+  stable:
+    status: "DIVERGENCE"
+    description: "Population has stabilized through a combination of policy interventions and life extension"
+    world_state_effects:
+      global_population_billions: "+0.00"

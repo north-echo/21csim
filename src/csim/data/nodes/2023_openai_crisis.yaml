@@ -1,0 +1,69 @@
+id: "2023_openai_crisis"
+year_month: "2023-11"
+title: "OpenAI Board Crisis"
+description: >
+  OpenAI's board fires CEO Sam Altman over concerns about safety and
+  commercialization pace, triggering a five-day crisis. Nearly all employees
+  threaten to quit; Microsoft offers to hire the entire team; Altman is
+  reinstated with a restructured board. The episode crystallizes the tension
+  between AI safety governance and deployment speed.
+domain: "technology"
+confidence: "HIGH"
+variable: "openai_crisis_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_reinstatement: 0.50
+    altman_stays_fired: 0.10
+    safety_board_prevails: 0.15
+    microsoft_absorbs: 0.15
+    no_crisis: 0.10
+dependencies:
+  - node: "2023_ai_acceleration"
+    branch: "historical_rapid"
+    modifies:
+      historical_reinstatement: "+0.05"
+      safety_board_prevails: "-0.05"
+  - node: "2023_ai_acceleration"
+    branch: "ai_winter"
+    modifies:
+      no_crisis: "+0.10"
+      historical_reinstatement: "-0.10"
+conditional: null
+outcomes:
+  historical_reinstatement:
+    status: "HISTORICAL"
+    description: "Altman reinstated; safety-focused board members removed; deployment speed prioritized"
+    world_state_effects:
+      ai_development_year_offset: "+0"
+      governance_model: "-0.02"
+  altman_stays_fired:
+    status: "DIVERGENCE"
+    description: "Board's decision holds; OpenAI refocuses on safety-first research"
+    explanation: "Enough employees stay; new CEO steers toward cautious development"
+    world_state_effects:
+      ai_development_year_offset: "-1"
+      governance_model: "+0.03"
+  safety_board_prevails:
+    status: "DIVERGENCE"
+    description: "Crisis leads to industry-wide adoption of safety governance structures"
+    explanation: "OpenAI crisis becomes a wake-up call; other labs adopt similar oversight"
+    world_state_effects:
+      ai_development_year_offset: "-1"
+      governance_model: "+0.05"
+      global_democracy_index: "+0.01"
+  microsoft_absorbs:
+    status: "DIVERGENCE"
+    description: "OpenAI collapses; Microsoft absorbs the team and technology"
+    explanation: "Employee exodus to Microsoft creates the world's most powerful AI lab inside Big Tech"
+    world_state_effects:
+      ai_development_year_offset: "+1"
+      governance_model: "-0.03"
+      inequality_index: "+0.01"
+  no_crisis:
+    status: "DIVERGENCE"
+    description: "Board concerns resolved internally without public drama"
+    explanation: "Altman and board reach accommodation before any public action"
+    world_state_effects:
+      ai_development_year_offset: "+0"
+      governance_model: "+0.01"

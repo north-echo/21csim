@@ -1,0 +1,48 @@
+id: "2014_india_modi"
+year_month: "2014-05"
+title: "India — Modi Era"
+domain: "regional"
+confidence: "HIGH"
+variable: "india_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_rise: 0.50
+    democratic_deepening: 0.15
+    hindu_nationalism_dominant: 0.15
+    economic_stall: 0.10
+    india_china_conflict: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_rise:
+    status: "HISTORICAL"
+    description: "India rises as major power under Modi; mixed democracy record"
+    world_state_effects:
+      india_power_index: "+0.10"
+      global_democracy_index: "-0.01"
+  democratic_deepening:
+    status: "DIVERGENCE"
+    description: "India strengthens democratic institutions"
+    world_state_effects:
+      india_power_index: "+0.08"
+      global_democracy_index: "+0.03"
+  hindu_nationalism_dominant:
+    status: "DIVERGENCE"
+    description: "Hindu nationalism dominates; democratic erosion"
+    world_state_effects:
+      india_power_index: "+0.05"
+      global_democracy_index: "-0.03"
+  economic_stall:
+    status: "DIVERGENCE"
+    description: "India's economic growth stalls"
+    world_state_effects:
+      india_power_index: "+0.03"
+      global_gdp_growth_modifier: "*0.99"
+  india_china_conflict:
+    status: "ESCALATED"
+    description: "Major India-China border conflict"
+    world_state_effects:
+      conflict_deaths: "+5000"
+      nuclear_risk_level: "+0.05"
+      india_power_index: "+0.02"

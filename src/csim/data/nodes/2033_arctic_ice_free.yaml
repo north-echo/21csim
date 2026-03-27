@@ -1,0 +1,56 @@
+id: "2033_arctic_ice_free"
+year_month: "2033-09"
+title: "Arctic Ice-Free Summers"
+description: >
+  Timing and nature of the first ice-free Arctic summer. A landmark climate
+  threshold with cascading effects on weather patterns, sea routes, ecosystems,
+  and geopolitical competition for Arctic resources.
+domain: "climate"
+confidence: "MEDIUM"
+variable: "arctic_ice_status"
+distribution:
+  type: "categorical"
+  options:
+    historical_2033: 0.35
+    delayed_2045: 0.20
+    abrupt_2028: 0.15
+    seasonal_only: 0.20
+    permanent_loss: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_2033:
+    status: "DIVERGENCE"
+    description: "First ice-free Arctic summer occurs around 2033 as models predict"
+    explanation: "Arctic warming follows current trajectory; summer ice disappears on schedule"
+    world_state_effects:
+      arctic_ice_status: "-0.60"
+      climate_temp_anomaly: "+0.10"
+  delayed_2045:
+    status: "DIVERGENCE"
+    description: "Ice-free conditions delayed until mid-2040s"
+    explanation: "Climate action or natural variability slows Arctic ice loss beyond current projections"
+    world_state_effects:
+      arctic_ice_status: "-0.40"
+      climate_temp_anomaly: "+0.05"
+  abrupt_2028:
+    status: "ESCALATED"
+    description: "Ice-free Arctic arrives years earlier than expected"
+    explanation: "Non-linear feedback loops accelerate ice loss; albedo effect compounds warming"
+    world_state_effects:
+      arctic_ice_status: "-0.80"
+      climate_temp_anomaly: "+0.20"
+  seasonal_only:
+    status: "DIVERGENCE"
+    description: "Seasonal ice loss but winter recovery maintains partial coverage"
+    explanation: "Arctic ice thins dramatically but seasonal cycle persists; complete loss limited to brief windows"
+    world_state_effects:
+      arctic_ice_status: "-0.50"
+      climate_temp_anomaly: "+0.08"
+  permanent_loss:
+    status: "ESCALATED"
+    description: "Arctic transitions to year-round ice-free conditions"
+    explanation: "Tipping point crossed; Arctic Ocean remains open even in winter due to ocean heat accumulation"
+    world_state_effects:
+      arctic_ice_status: "-0.90"
+      climate_temp_anomaly: "+0.30"

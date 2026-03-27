@@ -1,0 +1,55 @@
+id: "2025_brain_computer_interface"
+year_month: "2025-06"
+title: "Brain-Computer Interface Trials"
+description: >
+  Neuralink, Synchron, and others begin human clinical trials for
+  brain-computer interfaces. Initially targeting paralysis and
+  neurological disorders, BCIs could eventually augment healthy
+  human cognition and blur the line between human and machine.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "brain_computer_interface"
+distribution:
+  type: "categorical"
+  options:
+    medical_only_slow: 0.35
+    rapid_medical_adoption: 0.20
+    safety_setback: 0.15
+    consumer_bci_2035: 0.15
+    military_first: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  medical_only_slow:
+    status: "HISTORICAL"
+    description: "BCIs help paralysis patients; broader applications remain decades away"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.01"
+  rapid_medical_adoption:
+    status: "DIVERGENCE"
+    description: "BCIs become standard treatment for paralysis, epilepsy, and depression"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.03"
+      us_life_expectancy_delta: "+0.2"
+  safety_setback:
+    status: "DIVERGENCE"
+    description: "Serious adverse events in trials; BCI development set back a decade"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.0"
+      us_institutional_trust: "-0.01"
+  consumer_bci_2035:
+    status: "DIVERGENCE"
+    description: "Non-invasive BCIs reach consumer market by 2035; cognitive enhancement begins"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.08"
+      inequality_index: "+0.02"
+      global_gdp_growth_modifier: "*1.003"
+    cascading_modifiers:
+      2035_neural_interface.mass_market_2040: "+0.10"
+  military_first:
+    status: "DIVERGENCE"
+    description: "Military invests heavily; soldier augmentation program drives BCI development"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.04"
+      surveillance_state_index: "+0.02"
+      drone_warfare_prevalence: "+0.02"

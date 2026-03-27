@@ -1,0 +1,56 @@
+id: "2003_opioid_crisis"
+year_month: "2003-01"
+title: "Opioid Crisis"
+description: >
+  OxyContin-driven opioid epidemic begins. Purdue Pharma's aggressive
+  marketing of prescription opioids leads to addiction epidemic,
+  eventually killing 700,000+ Americans.
+domain: "social"
+confidence: "HIGH"
+variable: "opioid_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_epidemic: 0.50
+    regulated_early: 0.15
+    purdue_prosecuted: 0.15
+    fentanyl_prevented: 0.10
+    treatment_focused: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_epidemic:
+    status: "HISTORICAL"
+    description: "Opioid epidemic kills 700K+ by 2030; fentanyl wave devastates"
+    world_state_effects:
+      opioid_deaths_cumulative: "+700000"
+      us_life_expectancy_delta: "-2.5"
+      us_institutional_trust: "-0.05"
+      inequality_index: "+0.02"
+  regulated_early:
+    status: "DIVERGENCE"
+    description: "FDA restricts OxyContin by 2005"
+    explanation: "Early FDA intervention limits prescription"
+    world_state_effects:
+      opioid_deaths_cumulative: "+150000"
+      us_life_expectancy_delta: "-0.5"
+  purdue_prosecuted:
+    status: "DIVERGENCE"
+    description: "Purdue Pharma criminally prosecuted in 2004"
+    world_state_effects:
+      opioid_deaths_cumulative: "+200000"
+      us_life_expectancy_delta: "-0.8"
+      us_institutional_trust: "+0.03"
+  fentanyl_prevented:
+    status: "DIVERGENCE"
+    description: "Fentanyl wave prevented through border enforcement and treatment"
+    world_state_effects:
+      opioid_deaths_cumulative: "+300000"
+      us_life_expectancy_delta: "-1.2"
+  treatment_focused:
+    status: "DIVERGENCE"
+    description: "Addiction treated as health issue early; harm reduction"
+    world_state_effects:
+      opioid_deaths_cumulative: "+250000"
+      us_life_expectancy_delta: "-1.0"
+      us_institutional_trust: "+0.02"

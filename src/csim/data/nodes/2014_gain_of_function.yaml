@@ -1,0 +1,57 @@
+id: "2014_gain_of_function"
+year_month: "2014-10"
+title: "Gain-of-Function Research Debate"
+description: >
+  US government imposes moratorium on gain-of-function research after
+  lab safety incidents. Dual-use research of concern sparks fierce
+  debate between virologists and biosecurity experts. Whether risky
+  virus research is regulated or continues has enormous implications
+  for future pandemic risk.
+domain: "health"
+confidence: "HIGH"
+variable: "gain_of_function"
+distribution:
+  type: "categorical"
+  options:
+    historical_partial_moratorium: 0.40
+    strict_global_ban: 0.15
+    unregulated_expansion: 0.10
+    transparent_oversight: 0.20
+    lab_leak_event: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  historical_partial_moratorium:
+    status: "HISTORICAL"
+    description: "US moratorium 2014-2017; research resumes with modest oversight improvements"
+    world_state_effects:
+      surveillance_state_index: "+0.01"
+  strict_global_ban:
+    status: "DIVERGENCE"
+    description: "International treaty bans gain-of-function research; enforced through inspections"
+    world_state_effects:
+      global_pandemic_deaths: "-200000"
+      surveillance_state_index: "+0.03"
+  unregulated_expansion:
+    status: "ESCALATED"
+    description: "Research expands to dozens of labs worldwide with minimal oversight"
+    world_state_effects:
+      global_pandemic_deaths: "+500000"
+      existential_risk_cumulative: "+0.02"
+    cascading_modifiers:
+      2029_pandemic_2.severe_pandemic: "+0.05"
+  transparent_oversight:
+    status: "DIVERGENCE"
+    description: "Robust international oversight framework balances research benefits and risks"
+    world_state_effects:
+      global_pandemic_deaths: "-100000"
+      surveillance_state_index: "+0.02"
+    cascading_modifiers:
+      2029_pandemic_2.contained_quickly: "+0.05"
+  lab_leak_event:
+    status: "ESCALATED"
+    description: "Accidental lab release causes regional outbreak; triggers global crackdown"
+    world_state_effects:
+      global_pandemic_deaths: "+300000"
+      surveillance_state_index: "+0.05"
+      us_institutional_trust: "-0.03"

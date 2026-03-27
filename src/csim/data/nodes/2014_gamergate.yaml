@@ -1,0 +1,78 @@
+id: "2014_gamergate"
+year_month: "2014-08"
+title: "Gamergate / Online Harassment Weaponization"
+description: >
+  Gamergate controversy establishes the playbook for coordinated online
+  harassment campaigns as political tools. The tactics pioneered here —
+  doxxing, brigading, manufactured outrage — become standard in 2016
+  election interference and beyond.
+domain: "social"
+confidence: "HIGH"
+variable: "online_harassment_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_weaponization: 0.45
+    contained_to_gaming: 0.20
+    platform_crackdown: 0.15
+    early_antidote: 0.10
+    worse_radicalization: 0.10
+dependencies:
+  - node: "2004_social_media"
+    branch: "historical_ad_driven"
+    modifies:
+      historical_weaponization: "+0.10"
+      contained_to_gaming: "-0.05"
+      platform_crackdown: "-0.05"
+  - node: "2004_social_media"
+    branch: "regulated_early"
+    modifies:
+      historical_weaponization: "-0.10"
+      platform_crackdown: "+0.10"
+  - node: "2012_youtube_radicalization"
+    branch: "historical_radicalization"
+    modifies:
+      historical_weaponization: "+0.05"
+      worse_radicalization: "+0.05"
+      contained_to_gaming: "-0.10"
+conditional: null
+outcomes:
+  historical_weaponization:
+    status: "HISTORICAL"
+    description: "Online harassment tactics become standard political weapons beyond gaming"
+    world_state_effects:
+      gender_equity_index: "-0.03"
+      misinformation_severity: "+0.04"
+      us_polarization: "+0.03"
+    cascading_modifiers:
+      2017_metoo.backlash_dominant: "+0.03"
+  contained_to_gaming:
+    status: "DIVERGENCE"
+    description: "Harassment stays within gaming communities and does not spread to politics"
+    explanation: "Mainstream media ignores the controversy; tactics never gain wider adoption"
+    world_state_effects:
+      gender_equity_index: "-0.01"
+      misinformation_severity: "+0.01"
+  platform_crackdown:
+    status: "DIVERGENCE"
+    description: "Reddit and Twitter crack down aggressively; harassment tactics fail to spread"
+    explanation: "Platforms ban coordinated harassment campaigns early, preventing normalization"
+    world_state_effects:
+      gender_equity_index: "-0.01"
+      misinformation_severity: "+0.01"
+      internet_freedom_index: "-0.01"
+  early_antidote:
+    status: "DIVERGENCE"
+    description: "Counter-harassment tools and norms developed early, neutralizing the playbook"
+    explanation: "Tech companies invest in anti-harassment AI and community moderation tools"
+    world_state_effects:
+      gender_equity_index: "+0.01"
+      misinformation_severity: "+0.01"
+  worse_radicalization:
+    status: "ESCALATED"
+    description: "Pipeline from online harassment to political violence established earlier"
+    world_state_effects:
+      gender_equity_index: "-0.05"
+      misinformation_severity: "+0.08"
+      terrorism_threat_index: "+0.04"
+      us_polarization: "+0.05"

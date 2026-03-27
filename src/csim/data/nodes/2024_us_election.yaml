@@ -1,0 +1,58 @@
+id: "2024_us_election"
+year_month: "2024-11"
+title: "2024 US Presidential Election"
+description: >
+  Trump returns to win the presidency, defeating Vice President Harris.
+  Reflects continued polarization and economic anxiety.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "election_result"
+distribution:
+  type: "categorical"
+  options:
+    trump_wins: 0.48
+    harris_wins: 0.40
+    contested: 0.07
+    third_party: 0.05
+dependencies:
+  - node: "2020_us_election"
+    branch: "trump_wins"
+    modifies:
+      trump_wins: "+0.15"
+      harris_wins: "-0.15"
+  - node: "2021_jan6"
+    branch: "worse_violence"
+    modifies:
+      trump_wins: "-0.10"
+      harris_wins: "+0.10"
+conditional: null
+outcomes:
+  trump_wins:
+    status: "HISTORICAL"
+    description: "Trump wins second non-consecutive term"
+    world_state_effects:
+      us_polarization: "+0.05"
+      us_global_standing: "-0.05"
+      climate_temp_anomaly: "+0.03"
+      renewable_energy_share: "-0.02"
+    cascading_modifiers:
+      2026_taiwan_strait.us_deterrence: "-0.03"
+  harris_wins:
+    status: "DIVERGENCE"
+    description: "Harris wins; first female and Black/South Asian president"
+    world_state_effects:
+      us_polarization: "+0.03"
+      us_global_standing: "+0.03"
+      gender_equity_index: "+0.02"
+      renewable_energy_share: "+0.02"
+  contested:
+    status: "DIVERGENCE"
+    description: "Election results contested; legal battles"
+    world_state_effects:
+      us_polarization: "+0.10"
+      global_democracy_index: "-0.02"
+  third_party:
+    status: "DIVERGENCE"
+    description: "Third party candidate disrupts electoral college"
+    world_state_effects:
+      us_polarization: "+0.05"

@@ -1,0 +1,38 @@
+id: "2016_self_driving"
+year_month: "2016-03"
+title: "Self-Driving Cars"
+domain: "technology"
+confidence: "HIGH"
+variable: "self_driving"
+distribution:
+  type: "categorical"
+  options:
+    historical_delayed: 0.50
+    achieved_2020: 0.10
+    fatal_setback: 0.15
+    gradual_2028: 0.25
+dependencies: []
+conditional: null
+outcomes:
+  historical_delayed:
+    status: "HISTORICAL"
+    description: "Self-driving repeatedly delayed; limited deployment by 2025"
+    world_state_effects:
+      automation_displacement: "+0.01"
+  achieved_2020:
+    status: "DIVERGENCE"
+    description: "Full self-driving achieved by 2020"
+    world_state_effects:
+      automation_displacement: "+0.05"
+      us_life_expectancy_delta: "+0.3"
+  fatal_setback:
+    status: "DIVERGENCE"
+    description: "Major fatal accident sets back autonomous vehicles a decade"
+    world_state_effects:
+      automation_displacement: "+0.00"
+  gradual_2028:
+    status: "DIVERGENCE"
+    description: "Gradual rollout of autonomous vehicles by 2028"
+    world_state_effects:
+      automation_displacement: "+0.03"
+      us_life_expectancy_delta: "+0.1"

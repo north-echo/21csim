@@ -1,0 +1,56 @@
+id: "2050_india"
+year_month: "2050-01"
+title: "India at Mid-Century"
+description: >
+  India's trajectory as the world's most populous nation reaches a defining moment.
+  Whether it rises as a superpower, maintains democratic traditions, or succumbs
+  to climate and internal pressures shapes the Asian century.
+domain: "regional"
+confidence: "LOW"
+variable: "india_status"
+distribution:
+  type: "categorical"
+  options:
+    superpower: 0.20
+    regional_power: 0.25
+    democratic_leader: 0.15
+    hindu_state: 0.10
+    fragmented: 0.10
+    climate_victim: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  superpower:
+    status: "DIVERGENCE"
+    description: "India emerges as a global superpower with economic and military parity alongside US and China"
+    world_state_effects:
+      global_democracy_index: "+0.03"
+      us_global_standing: "-0.03"
+  regional_power:
+    status: "DIVERGENCE"
+    description: "India remains a strong regional power without achieving global superpower status"
+    world_state_effects:
+      global_democracy_index: "+0.01"
+  democratic_leader:
+    status: "DIVERGENCE"
+    description: "India becomes the global leader of democratic values and institutions"
+    world_state_effects:
+      global_democracy_index: "+0.05"
+  hindu_state:
+    status: "DIVERGENCE"
+    description: "India transforms into a Hindu nationalist state; secular democracy erodes"
+    world_state_effects:
+      global_democracy_index: "-0.03"
+      conflict_deaths: "+5000"
+  fragmented:
+    status: "ESCALATED"
+    description: "Regional and religious tensions fragment India into competing states"
+    world_state_effects:
+      global_democracy_index: "-0.05"
+      conflict_deaths: "+20000"
+  climate_victim:
+    status: "ESCALATED"
+    description: "Climate impacts devastate India; heat waves, flooding, and agricultural failure cripple development"
+    world_state_effects:
+      food_security_index: "-0.10"
+      conflict_deaths: "+10000"

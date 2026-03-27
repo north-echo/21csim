@@ -1,0 +1,52 @@
+id: "2035_artificial_wombs"
+year_month: "2035-06"
+title: "Ectogenesis Research"
+description: >
+  Artificial womb technology advances from saving premature infants to
+  enabling full ectogenesis — gestation entirely outside the human body.
+  This technology could transform reproductive rights, gender dynamics,
+  and the meaning of parenthood itself.
+domain: "health"
+confidence: "LOW"
+variable: "artificial_wombs"
+distribution:
+  type: "categorical"
+  options:
+    neonatal_use_only: 0.35
+    full_ectogenesis_available: 0.15
+    banned_widely: 0.20
+    reproductive_equality_tool: 0.15
+    commercial_surrogacy_replacement: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  neonatal_use_only:
+    status: "DIVERGENCE"
+    description: "Artificial wombs save extremely premature infants; full ectogenesis remains distant"
+    world_state_effects:
+      gender_equity_index: "+0.01"
+      us_life_expectancy_delta: "+0.1"
+  full_ectogenesis_available:
+    status: "DIVERGENCE"
+    description: "Full ectogenesis clinically available; profound shift in reproductive norms"
+    world_state_effects:
+      gender_equity_index: "+0.06"
+      global_population_billions: "+0.1"
+  banned_widely:
+    status: "DIVERGENCE"
+    description: "Moral and religious opposition leads to widespread bans on ectogenesis research"
+    world_state_effects:
+      gender_equity_index: "-0.01"
+      global_democracy_index: "-0.01"
+  reproductive_equality_tool:
+    status: "DIVERGENCE"
+    description: "Ectogenesis framed as gender equality tool; adopted in progressive nations"
+    world_state_effects:
+      gender_equity_index: "+0.08"
+      inequality_index: "-0.01"
+  commercial_surrogacy_replacement:
+    status: "DIVERGENCE"
+    description: "Technology replaces surrogacy industry; raises new exploitation concerns"
+    world_state_effects:
+      gender_equity_index: "+0.03"
+      inequality_index: "+0.02"

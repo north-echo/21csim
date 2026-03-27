@@ -1,0 +1,67 @@
+id: "2028_hydrogen_economy"
+year_month: "2028-06"
+title: "Hydrogen Economy Viability"
+description: >
+  Green hydrogen cost curve reaches critical threshold. Electrolysis
+  powered by cheap renewables could decarbonize heavy industry, shipping,
+  and aviation — sectors resistant to direct electrification. But
+  infrastructure buildout and efficiency losses remain challenges.
+domain: "energy"
+confidence: "LOW"
+variable: "hydrogen_outcome"
+distribution:
+  type: "categorical"
+  options:
+    niche_role: 0.35
+    hydrogen_breakthrough: 0.20
+    cost_too_high: 0.20
+    industrial_backbone: 0.15
+    geopolitical_shift: 0.10
+dependencies:
+  - node: "2011_solar_revolution"
+    branch: "historical_cost_collapse"
+    modifies:
+      hydrogen_breakthrough: "+0.05"
+      cost_too_high: "-0.05"
+  - node: "2027_energy_transition"
+    branch: "rapid_transition"
+    modifies:
+      hydrogen_breakthrough: "+0.08"
+      niche_role: "-0.05"
+      cost_too_high: "-0.03"
+conditional: null
+outcomes:
+  niche_role:
+    status: "DIVERGENCE"
+    description: "Green hydrogen finds limited use in steel and shipping; not a broad solution"
+    world_state_effects:
+      renewable_energy_share: "+0.02"
+      climate_temp_anomaly: "+0.01"
+  hydrogen_breakthrough:
+    status: "DIVERGENCE"
+    description: "Green hydrogen reaches $1/kg; transforms heavy industry and transport"
+    world_state_effects:
+      renewable_energy_share: "+0.08"
+      climate_temp_anomaly: "-0.05"
+      global_gdp_growth_modifier: "*1.02"
+  cost_too_high:
+    status: "DIVERGENCE"
+    description: "Hydrogen remains 3-5x more expensive than alternatives; adoption stalls"
+    world_state_effects:
+      renewable_energy_share: "+0.01"
+      climate_temp_anomaly: "+0.02"
+  industrial_backbone:
+    status: "DIVERGENCE"
+    description: "Hydrogen becomes backbone of industrial decarbonization in EU and Asia"
+    world_state_effects:
+      renewable_energy_share: "+0.06"
+      climate_temp_anomaly: "-0.03"
+      supply_chain_resilience: "+0.02"
+  geopolitical_shift:
+    status: "DIVERGENCE"
+    description: "Hydrogen-rich nations (Australia, Chile, Morocco) become new energy exporters"
+    world_state_effects:
+      renewable_energy_share: "+0.05"
+      climate_temp_anomaly: "-0.02"
+      middle_east_stability: "-0.03"
+      africa_development_index: "+0.03"

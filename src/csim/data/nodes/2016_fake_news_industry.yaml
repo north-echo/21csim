@@ -1,0 +1,81 @@
+id: "2016_fake_news_industry"
+year_month: "2016-06"
+title: "Fake News as Industry"
+description: >
+  Teenagers in Veles, Macedonia discover that pro-Trump fake news
+  generates massive ad revenue. The fake news industry scales globally.
+  Russia's IRA runs thousands of fake American social media accounts.
+domain: "social"
+confidence: "HIGH"
+variable: "fake_news_industry_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_industry: 0.40
+    detected_and_shut_down: 0.15
+    larger_operation: 0.10
+    no_profitable_model: 0.20
+    counter_information_wins: 0.15
+dependencies:
+  - node: "2004_social_media"
+    branch: "historical_ad_driven"
+    modifies:
+      historical_industry: "+0.10"
+      no_profitable_model: "-0.10"
+  - node: "2004_social_media"
+    branch: "regulated_early"
+    modifies:
+      historical_industry: "-0.10"
+      detected_and_shut_down: "+0.05"
+      no_profitable_model: "+0.05"
+  - node: "2009_twitter_politics"
+    branch: "historical_political_capture"
+    modifies:
+      historical_industry: "+0.05"
+      detected_and_shut_down: "-0.05"
+  - node: "2012_youtube_radicalization"
+    branch: "historical_radicalization"
+    modifies:
+      historical_industry: "+0.05"
+      counter_information_wins: "-0.05"
+conditional: null
+outcomes:
+  historical_industry:
+    status: "HISTORICAL"
+    description: "Fake news becomes a profitable global industry; Russian IRA amplifies disinformation"
+    world_state_effects:
+      misinformation_severity: "+0.10"
+      global_democracy_index: "-0.04"
+      us_institutional_trust: "-0.05"
+    cascading_modifiers:
+      2016_brexit.leave_wins: "+0.03"
+      2020_us_election.close_contested: "+0.03"
+  detected_and_shut_down:
+    status: "DIVERGENCE"
+    description: "Platforms detect and remove fake news operations before they impact elections"
+    explanation: "Facebook and Twitter identify and shut down Macedonian and Russian operations in 2015"
+    world_state_effects:
+      misinformation_severity: "+0.03"
+      global_democracy_index: "-0.01"
+  larger_operation:
+    status: "ESCALATED"
+    description: "Chinese and Iranian operations join Russian efforts in massive coordinated campaign"
+    world_state_effects:
+      misinformation_severity: "+0.18"
+      global_democracy_index: "-0.08"
+      us_institutional_trust: "-0.08"
+  no_profitable_model:
+    status: "DIVERGENCE"
+    description: "Platform ad policy changes make fake news financially unviable"
+    explanation: "Early ad revenue sharing rules and verification requirements eliminate profit motive"
+    world_state_effects:
+      misinformation_severity: "+0.03"
+      global_democracy_index: "-0.01"
+  counter_information_wins:
+    status: "DIVERGENCE"
+    description: "Fact-checking organizations scale faster than misinformation producers"
+    explanation: "Automated fact-checking and media literacy campaigns outpace fake news proliferation"
+    world_state_effects:
+      misinformation_severity: "+0.02"
+      global_democracy_index: "+0.01"
+      us_institutional_trust: "-0.01"

@@ -1,0 +1,80 @@
+id: "2009_twitter_politics"
+year_month: "2009-06"
+title: "Twitter Becomes Political Infrastructure"
+description: >
+  Twitter's role in the Iranian Green Movement (2009) establishes
+  social media as political infrastructure. By 2016, it's the primary
+  channel for political communication, radicalization, and manipulation.
+domain: "social"
+confidence: "HIGH"
+variable: "twitter_political_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_political_capture: 0.45
+    remains_niche: 0.20
+    moderated_early: 0.15
+    decentralized_alternative: 0.10
+    government_regulated: 0.10
+dependencies:
+  - node: "2004_social_media"
+    branch: "historical_ad_driven"
+    modifies:
+      historical_political_capture: "+0.10"
+      remains_niche: "-0.05"
+      moderated_early: "-0.05"
+  - node: "2004_social_media"
+    branch: "regulated_early"
+    modifies:
+      historical_political_capture: "-0.10"
+      moderated_early: "+0.10"
+  - node: "2007_iphone"
+    branch: "historical_apple_led"
+    modifies:
+      historical_political_capture: "+0.05"
+      remains_niche: "-0.05"
+conditional: null
+outcomes:
+  historical_political_capture:
+    status: "HISTORICAL"
+    description: "Twitter becomes the political town square for real-time discourse and outrage"
+    world_state_effects:
+      misinformation_severity: "+0.06"
+      us_polarization: "+0.05"
+      social_media_penetration: "+0.05"
+    cascading_modifiers:
+      2016_misinformation.historical_escalation: "+0.08"
+  remains_niche:
+    status: "DIVERGENCE"
+    description: "Twitter stays a niche tech and media platform, never captures political discourse"
+    explanation: "Without political adoption, Twitter remains smaller and less influential"
+    world_state_effects:
+      misinformation_severity: "+0.02"
+      us_polarization: "+0.01"
+  moderated_early:
+    status: "DIVERGENCE"
+    description: "Aggressive content moderation from 2012 prevents weaponization of the platform"
+    explanation: "Twitter invests heavily in moderation; political manipulation is curtailed early"
+    world_state_effects:
+      misinformation_severity: "+0.02"
+      us_polarization: "+0.02"
+      internet_freedom_index: "-0.02"
+    cascading_modifiers:
+      2016_misinformation.platform_intervention: "+0.10"
+  decentralized_alternative:
+    status: "DIVERGENCE"
+    description: "Open protocol wins; no single company controls political discourse"
+    explanation: "Federated microblogging (like Mastodon) gains traction early"
+    world_state_effects:
+      misinformation_severity: "+0.03"
+      us_polarization: "+0.02"
+      internet_freedom_index: "+0.03"
+  government_regulated:
+    status: "DIVERGENCE"
+    description: "FCC-style regulation of political speech on platforms enacted early"
+    explanation: "Platforms treated as public utilities with fairness doctrine requirements"
+    world_state_effects:
+      misinformation_severity: "+0.02"
+      us_polarization: "+0.02"
+      internet_freedom_index: "-0.05"
+      surveillance_state_index: "+0.02"

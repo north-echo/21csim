@@ -1,0 +1,46 @@
+id: "2095_europe"
+year_month: "2095-01"
+title: "Europe 2095"
+description: >
+  Europe's final form at century's end. Whether the European project achieved
+  its promise of unity, settled into cultural influence, or dissolved under
+  the weight of its contradictions.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "europe_status_2095"
+distribution:
+  type: "categorical"
+  options:
+    federation: 0.20
+    cultural_power: 0.25
+    dissolved: 0.10
+    superpower: 0.10
+    social_model: 0.20
+    diminished: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  federation:
+    status: "DIVERGENCE"
+    description: "Europe is a unified federal state and major global power"
+    world_state_effects: {}
+  cultural_power:
+    status: "DIVERGENCE"
+    description: "Europe's influence is cultural, educational, and in quality of life; a global model"
+    world_state_effects: {}
+  dissolved:
+    status: "ESCALATED"
+    description: "European unity project collapsed; continent returned to national competition"
+    world_state_effects: {}
+  superpower:
+    status: "DIVERGENCE"
+    description: "United Europe emerged as a military and economic superpower rivaling any other bloc"
+    world_state_effects: {}
+  social_model:
+    status: "DIVERGENCE"
+    description: "European social model recognized as the most successful governance framework globally"
+    world_state_effects: {}
+  diminished:
+    status: "DIVERGENCE"
+    description: "Europe has declined in global relevance; aging, slow growth, and internal divisions"
+    world_state_effects: {}

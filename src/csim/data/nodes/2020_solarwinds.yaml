@@ -1,0 +1,41 @@
+id: "2020_solarwinds"
+year_month: "2020-12"
+title: "SolarWinds Cyber Espionage"
+domain: "security"
+confidence: "HIGH"
+variable: "solarwinds"
+distribution:
+  type: "categorical"
+  options:
+    historical_discovered: 0.45
+    never_discovered: 0.20
+    retaliation: 0.10
+    defensive_reform: 0.25
+dependencies: []
+conditional: null
+outcomes:
+  historical_discovered:
+    status: "HISTORICAL"
+    description: "Russian cyber espionage campaign discovered"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+5.0"
+      us_institutional_trust: "-0.02"
+  never_discovered:
+    status: "DIVERGENCE"
+    description: "Hack never discovered; ongoing espionage"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+10.0"
+      surveillance_state_index: "+0.02"
+  retaliation:
+    status: "ESCALATED"
+    description: "US retaliates with major cyber operation"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+20.0"
+      nuclear_risk_level: "+0.02"
+      russia_stability: "-0.03"
+  defensive_reform:
+    status: "DIVERGENCE"
+    description: "Triggers massive cybersecurity reform"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+2.0"
+      us_institutional_trust: "+0.02"

@@ -1,0 +1,80 @@
+id: "2016_us_election"
+year_month: "2016-11"
+title: "2016 US Presidential Election"
+description: >
+  Donald Trump defeats Hillary Clinton in upset victory. Reflects deep
+  anti-establishment sentiment, cultural polarization, and information
+  ecosystem changes. Reshapes US foreign policy, climate policy, and
+  institutional norms.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "election_result"
+distribution:
+  type: "categorical"
+  options:
+    trump_wins: 0.38
+    clinton_wins: 0.38
+    third_party_surge: 0.12
+    contested_result: 0.12
+dependencies:
+  - node: "2003_iraq"
+    branch: "full_invasion"
+    modifies:
+      trump_wins: "+0.10"
+      clinton_wins: "-0.10"
+  - node: "2003_iraq"
+    branch: "diplomatic_resolution"
+    modifies:
+      trump_wins: "-0.08"
+      clinton_wins: "+0.08"
+  - node: "2008_financial_crisis"
+    branch: "great_depression_2"
+    modifies:
+      trump_wins: "+0.20"
+      clinton_wins: "-0.15"
+      third_party_surge: "+0.05"
+  - node: "2008_financial_crisis"
+    branch: "mild_recession"
+    modifies:
+      trump_wins: "-0.08"
+      clinton_wins: "+0.08"
+conditional: null
+outcomes:
+  trump_wins:
+    status: "HISTORICAL"
+    description: "Donald Trump wins Electoral College; loses popular vote"
+    world_state_effects:
+      us_polarization: "+0.12"
+      us_global_standing: "-0.10"
+      climate_temp_anomaly: "+0.05"
+      renewable_energy_share: "-0.02"
+      us_institutional_trust: "-0.08"
+      global_democracy_index: "-0.02"
+    cascading_modifiers:
+      2020_us_election.incumbent_factor: "+0.05"
+      2020_covid_response.political_factor: "+0.10"
+      2021_jan6.historical_breach: "+0.10"
+  clinton_wins:
+    status: "DIVERGENCE"
+    description: "Hillary Clinton wins; first female president"
+    explanation: "Comey letter doesn't happen or less impactful"
+    world_state_effects:
+      us_polarization: "+0.06"
+      us_global_standing: "+0.02"
+      renewable_energy_share: "+0.02"
+      gender_equity_index: "+0.03"
+    cascading_modifiers:
+      2020_covid_response.political_factor: "-0.05"
+  third_party_surge:
+    status: "DIVERGENCE"
+    description: "Third party candidate wins enough states to deny 270"
+    world_state_effects:
+      us_polarization: "+0.10"
+      us_institutional_trust: "-0.05"
+  contested_result:
+    status: "DIVERGENCE"
+    description: "Election results contested; prolonged uncertainty"
+    world_state_effects:
+      us_polarization: "+0.15"
+      us_global_standing: "-0.05"
+      global_democracy_index: "-0.02"

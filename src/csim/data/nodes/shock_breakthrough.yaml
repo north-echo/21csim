@@ -1,0 +1,31 @@
+id: "shock_breakthrough"
+year_month: "2041-03"
+title: "Room-Temperature Superconductor Verified"
+description: >
+  A genuine paradigm shift — room-temperature superconductors,
+  breakthrough in consciousness, proof of multiverse. Can't be predicted.
+domain: "shock"
+confidence: "LOW"
+variable: "breakthrough"
+distribution:
+  type: "categorical"
+  options:
+    breakthrough: 0.10
+    no_breakthrough: 0.90
+dependencies: []
+conditional: null
+outcomes:
+  breakthrough:
+    status: "DIVERGENCE"
+    description: "Seoul National University team publishes reproducible room-temperature superconductor using modified lead apatite structure; independently verified at MIT and ETH Zürich within six weeks"
+    explanation: "AI-guided materials search identified the crystal structure that decades of manual research had missed"
+    world_state_effects:
+      global_gdp_growth_modifier: "*1.03"
+      renewable_energy_share: "+0.08"
+      climate_temp_anomaly: "-0.05"
+      ai_development_year_offset: "+1"
+  no_breakthrough:
+    status: "HISTORICAL"
+    description: "No unexpected scientific revolution"
+    silent: true
+    world_state_effects: {}

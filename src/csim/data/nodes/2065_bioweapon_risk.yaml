@@ -1,0 +1,52 @@
+id: "2065_bioweapon_risk"
+year_month: "2065-01"
+title: "Bioweapon Risk"
+description: >
+  The cumulative risk from engineered biological weapons after decades of
+  advancing synthetic biology. Whether containment regimes hold or
+  bioweapons proliferate beyond control.
+domain: "security"
+confidence: "LOW"
+variable: "bioweapon_risk_status"
+distribution:
+  type: "categorical"
+  options:
+    contained: 0.25
+    near_miss: 0.20
+    engineered_pandemic: 0.10
+    treaty_holds: 0.20
+    proliferated: 0.15
+    obsolete_defense: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  contained:
+    status: "DIVERGENCE"
+    description: "Bioweapon threats contained through advanced surveillance, detection, and rapid response systems"
+    world_state_effects:
+      existential_risk_cumulative: "-0.05"
+  near_miss:
+    status: "ESCALATED"
+    description: "A major bioweapon incident narrowly averted; world shaken into stronger countermeasures"
+    world_state_effects:
+      existential_risk_cumulative: "+0.08"
+  engineered_pandemic:
+    status: "ESCALATED"
+    description: "Engineered pathogen released causing devastating pandemic; millions die before containment"
+    world_state_effects:
+      existential_risk_cumulative: "+0.25"
+  treaty_holds:
+    status: "DIVERGENCE"
+    description: "Strengthened Biological Weapons Convention with verification regime prevents proliferation"
+    world_state_effects:
+      existential_risk_cumulative: "-0.08"
+  proliferated:
+    status: "ESCALATED"
+    description: "Bioweapon capabilities spread to many state and non-state actors; ongoing low-level threat"
+    world_state_effects:
+      existential_risk_cumulative: "+0.15"
+  obsolete_defense:
+    status: "DIVERGENCE"
+    description: "Universal rapid-response biodefense makes bioweapons ineffective; threat category eliminated"
+    world_state_effects:
+      existential_risk_cumulative: "-0.12"

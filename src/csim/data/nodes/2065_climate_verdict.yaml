@@ -1,0 +1,58 @@
+id: "2065_climate_verdict"
+year_month: "2065-01"
+title: "Climate Verdict"
+description: >
+  The long-term trajectory of global climate change becomes clear. Decades of
+  mitigation, adaptation, and potential geoengineering efforts yield a definitive
+  picture of where planetary temperatures are headed.
+domain: "climate"
+confidence: "LOW"
+variable: "climate_verdict"
+distribution:
+  type: "categorical"
+  options:
+    stabilized_2c: 0.20
+    runaway_3c: 0.15
+    cooling_tech: 0.15
+    managed_2_5c: 0.25
+    catastrophic_4c: 0.10
+    reversed: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  stabilized_2c:
+    status: "DIVERGENCE"
+    description: "Global temperatures stabilized near 2C above pre-industrial levels through sustained mitigation"
+    world_state_effects:
+      climate_temp_anomaly: "+0.00"
+      food_security_index: "+0.05"
+  runaway_3c:
+    status: "ESCALATED"
+    description: "Warming reaches 3C with feedback loops accelerating; severe but not catastrophic impacts"
+    world_state_effects:
+      climate_temp_anomaly: "+0.50"
+      food_security_index: "-0.15"
+  cooling_tech:
+    status: "DIVERGENCE"
+    description: "Advanced carbon removal and cooling technologies actively reducing temperatures"
+    world_state_effects:
+      climate_temp_anomaly: "-0.30"
+      food_security_index: "+0.08"
+  managed_2_5c:
+    status: "DIVERGENCE"
+    description: "Warming at 2.5C with effective adaptation measures in place globally"
+    world_state_effects:
+      climate_temp_anomaly: "+0.20"
+      food_security_index: "-0.03"
+  catastrophic_4c:
+    status: "ESCALATED"
+    description: "Warming exceeds 4C; massive ecosystem collapse and human displacement"
+    world_state_effects:
+      climate_temp_anomaly: "+1.00"
+      food_security_index: "-0.30"
+  reversed:
+    status: "DIVERGENCE"
+    description: "Temperatures actively declining toward pre-industrial levels through technological intervention"
+    world_state_effects:
+      climate_temp_anomaly: "-0.50"
+      food_security_index: "+0.10"

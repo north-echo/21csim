@@ -1,0 +1,66 @@
+id: "2002_security_overreach"
+year_month: "2002-06"
+title: "Post-9/11 Security Architecture"
+description: >
+  Even without a full Iraq invasion, 9/11 (or its partial equivalent)
+  triggers a massive security state expansion. Patriot Act, DHS creation,
+  TSA, warrantless wiretapping. The question is how far it goes.
+domain: "security"
+confidence: "HIGH"
+variable: "security_expansion"
+distribution:
+  type: "categorical"
+  options:
+    historical_expansion: 0.40
+    moderate_expansion: 0.30
+    aggressive_overreach: 0.10
+    restrained_response: 0.20
+dependencies:
+  - node: "2001_911"
+    branch: "historical_full"
+    modifies:
+      historical_expansion: "+0.15"
+      aggressive_overreach: "+0.10"
+      restrained_response: "-0.15"
+  - node: "2001_911"
+    branch: "plot_disrupted"
+    modifies:
+      restrained_response: "+0.20"
+      historical_expansion: "-0.15"
+  - node: "2000_election"
+    branch: "gore_wins"
+    modifies:
+      moderate_expansion: "+0.10"
+      aggressive_overreach: "-0.08"
+conditional: null
+outcomes:
+  historical_expansion:
+    status: "HISTORICAL"
+    description: "Full Patriot Act, DHS creation, TSA, warrantless surveillance programs"
+    world_state_effects:
+      surveillance_state_index: "+0.15"
+      us_polarization: "+0.03"
+      internet_freedom_index: "-0.08"
+  moderate_expansion:
+    status: "DIVERGENCE"
+    description: "Security measures enacted with sunset clauses and judicial oversight"
+    world_state_effects:
+      surveillance_state_index: "+0.08"
+  aggressive_overreach:
+    status: "ESCALATED"
+    description: "Extreme security measures; internment discussions; massive civil liberties erosion"
+    world_state_effects:
+      surveillance_state_index: "+0.25"
+      us_polarization: "+0.08"
+      global_democracy_index: "-0.03"
+      us_institutional_trust: "-0.05"
+    cascading_modifiers:
+      2013_snowden.historical_leak: "+0.10"
+      2016_us_election.anti_establishment: "+0.05"
+  restrained_response:
+    status: "DIVERGENCE"
+    description: "Targeted counterterrorism with civil liberties prioritized"
+    world_state_effects:
+      surveillance_state_index: "+0.03"
+      internet_freedom_index: "-0.02"
+      us_institutional_trust: "+0.03"

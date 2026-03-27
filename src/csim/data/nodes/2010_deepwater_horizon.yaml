@@ -1,0 +1,56 @@
+id: "2010_deepwater_horizon"
+year_month: "2010-04"
+title: "Deepwater Horizon Oil Spill"
+description: >
+  Largest marine oil spill in history. 11 workers killed, 4.9M barrels
+  spilled into Gulf of Mexico. Reshapes drilling regulation and
+  accelerates anti-fossil-fuel sentiment.
+domain: "climate"
+confidence: "HIGH"
+variable: "deepwater_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_spill: 0.45
+    prevented_by_regulation: 0.20
+    worse_uncontained: 0.10
+    accelerates_transition: 0.25
+dependencies:
+  - node: "2000_election"
+    branch: "gore_wins"
+    modifies:
+      prevented_by_regulation: "+0.10"
+      historical_spill: "-0.08"
+conditional: null
+outcomes:
+  historical_spill:
+    status: "HISTORICAL"
+    description: "4.9M barrels spilled; 87 days to cap the well"
+    world_state_effects:
+      renewable_energy_share: "+0.01"
+      us_institutional_trust: "-0.02"
+      climate_temp_anomaly: "+0.01"
+  prevented_by_regulation:
+    status: "DIVERGENCE"
+    description: "Stricter MMS oversight catches blowout preventer failure before disaster"
+    world_state_effects:
+      us_institutional_trust: "+0.02"
+  worse_uncontained:
+    status: "DIVERGENCE"
+    description: "Takes 6+ months to cap; ecological catastrophe in Gulf"
+    world_state_effects:
+      renewable_energy_share: "+0.02"
+      us_institutional_trust: "-0.05"
+      climate_temp_anomaly: "+0.02"
+      biodiversity_index: "-0.03"
+    cascading_modifiers:
+      2015_paris_climate.binding_agreement: "+0.05"
+  accelerates_transition:
+    status: "DIVERGENCE"
+    description: "Spill triggers aggressive pivot to renewable energy investment"
+    world_state_effects:
+      renewable_energy_share: "+0.03"
+      us_institutional_trust: "-0.01"
+      climate_temp_anomaly: "-0.01"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.05"

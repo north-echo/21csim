@@ -1,0 +1,46 @@
+id: "2085_economic_model"
+year_month: "2085-01"
+title: "Economic Model 2085"
+description: >
+  The dominant global economic paradigm after decades of AI automation,
+  resource shifts, and potential post-scarcity. Whether capitalism survives,
+  transforms, or is replaced.
+domain: "economics"
+confidence: "LOW"
+variable: "economic_model_2085"
+distribution:
+  type: "categorical"
+  options:
+    post_capitalist: 0.15
+    reformed_capitalism: 0.25
+    ai_economy: 0.15
+    mixed: 0.25
+    feudal: 0.10
+    abundance: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  post_capitalist:
+    status: "DIVERGENCE"
+    description: "New economic system beyond capitalism; resource allocation through novel mechanisms"
+    world_state_effects: {}
+  reformed_capitalism:
+    status: "DIVERGENCE"
+    description: "Capitalism persists with significant reforms including universal basic income and wealth redistribution"
+    world_state_effects: {}
+  ai_economy:
+    status: "DIVERGENCE"
+    description: "AI systems manage economic production and distribution; human role primarily creative and social"
+    world_state_effects: {}
+  mixed:
+    status: "DIVERGENCE"
+    description: "Different economic systems coexist across regions; no single dominant model"
+    world_state_effects: {}
+  feudal:
+    status: "ESCALATED"
+    description: "Extreme wealth concentration creates neo-feudal economy with corporate overlords and dependent populations"
+    world_state_effects: {}
+  abundance:
+    status: "DIVERGENCE"
+    description: "Technology enables genuine post-scarcity; basic needs met universally through automated production"
+    world_state_effects: {}

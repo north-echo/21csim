@@ -1,0 +1,85 @@
+id: "2019_content_moderation"
+year_month: "2019-03"
+title: "Content Moderation at Scale"
+description: >
+  Christchurch mosque shooting livestreamed on Facebook. 1.5M copies
+  uploaded in 24 hours. Forces the question: can platforms moderate
+  content at the scale of billions of posts per day?
+domain: "technology"
+confidence: "HIGH"
+variable: "content_moderation_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_struggling: 0.45
+    ai_moderation_works: 0.15
+    government_mandates: 0.15
+    decentralization_wins: 0.10
+    overmoderation: 0.15
+dependencies:
+  - node: "2004_social_media"
+    branch: "historical_ad_driven"
+    modifies:
+      historical_struggling: "+0.10"
+      ai_moderation_works: "-0.05"
+      government_mandates: "-0.05"
+  - node: "2004_social_media"
+    branch: "regulated_early"
+    modifies:
+      historical_struggling: "-0.10"
+      government_mandates: "+0.10"
+  - node: "2012_youtube_radicalization"
+    branch: "historical_radicalization"
+    modifies:
+      historical_struggling: "+0.05"
+      ai_moderation_works: "-0.05"
+  - node: "2012_youtube_radicalization"
+    branch: "algorithm_fixed"
+    modifies:
+      historical_struggling: "-0.05"
+      ai_moderation_works: "+0.05"
+  - node: "2018_facebook_cambridge"
+    branch: "historical_minimal_reform"
+    modifies:
+      historical_struggling: "+0.05"
+      government_mandates: "+0.05"
+      ai_moderation_works: "-0.10"
+conditional: null
+outcomes:
+  historical_struggling:
+    status: "HISTORICAL"
+    description: "Platforms try and mostly fail to moderate content at billion-post scale"
+    world_state_effects:
+      internet_freedom_index: "-0.03"
+      misinformation_severity: "+0.05"
+  ai_moderation_works:
+    status: "DIVERGENCE"
+    description: "AI-based content moderation achieves 95%+ accuracy across languages"
+    explanation: "Advances in NLP and computer vision enable effective automated moderation"
+    world_state_effects:
+      internet_freedom_index: "-0.01"
+      misinformation_severity: "-0.03"
+  government_mandates:
+    status: "DIVERGENCE"
+    description: "Christchurch Call leads to binding international regulation of online content"
+    explanation: "International treaty mandates rapid takedown and platform liability for violent content"
+    world_state_effects:
+      internet_freedom_index: "-0.05"
+      misinformation_severity: "+0.02"
+      surveillance_state_index: "+0.03"
+  decentralization_wins:
+    status: "DIVERGENCE"
+    description: "Moderation proves impossible; users migrate to decentralized platforms"
+    explanation: "Failure of centralized moderation drives adoption of federated, community-moderated platforms"
+    world_state_effects:
+      internet_freedom_index: "+0.03"
+      misinformation_severity: "+0.06"
+  overmoderation:
+    status: "DIVERGENCE"
+    description: "Aggressive automated moderation suppresses legitimate speech and dissent"
+    explanation: "False positives silence political speech, journalism, and marginalized voices"
+    world_state_effects:
+      internet_freedom_index: "-0.08"
+      misinformation_severity: "+0.02"
+      global_democracy_index: "-0.02"
+      surveillance_state_index: "+0.02"

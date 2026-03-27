@@ -1,0 +1,59 @@
+id: "2005_katrina"
+year_month: "2005-08"
+title: "Hurricane Katrina Response"
+description: >
+  Hurricane Katrina devastates Gulf Coast. FEMA response widely condemned
+  as catastrophic failure. Exposes racial and economic inequalities,
+  erodes trust in federal government.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "katrina_response"
+distribution:
+  type: "categorical"
+  options:
+    catastrophic_failure: 0.50
+    adequate_response: 0.30
+    exemplary_response: 0.10
+    worse_failure: 0.10
+dependencies:
+  - node: "2000_election"
+    branch: "gore_wins"
+    modifies:
+      adequate_response: "+0.20"
+      catastrophic_failure: "-0.15"
+      exemplary_response: "+0.05"
+      worse_failure: "-0.10"
+conditional: null
+outcomes:
+  catastrophic_failure:
+    status: "HISTORICAL"
+    description: "FEMA fails catastrophically; 1,800+ die; New Orleans flooded for weeks"
+    world_state_effects:
+      us_polarization: "+0.05"
+      inequality_index: "+0.02"
+      us_institutional_trust: "-0.08"
+      conflict_deaths: "+1800"
+    cascading_modifiers:
+      2020_covid_response.institutional_trust: "-0.05"
+  adequate_response:
+    status: "DIVERGENCE"
+    description: "FEMA acts within 24 hours; ~400 deaths"
+    explanation: "Pre-positioned assets and faster evacuation"
+    world_state_effects:
+      conflict_deaths: "+400"
+      us_institutional_trust: "-0.02"
+  exemplary_response:
+    status: "DIVERGENCE"
+    description: "Pre-positioned assets; fewer than 100 deaths"
+    explanation: "Mandatory evacuation enforced; FEMA fully resourced"
+    world_state_effects:
+      conflict_deaths: "+80"
+      us_institutional_trust: "+0.03"
+  worse_failure:
+    status: "ESCALATED"
+    description: "Even slower response; 3,000+ die; martial law declared"
+    world_state_effects:
+      us_polarization: "+0.08"
+      conflict_deaths: "+3000"
+      us_institutional_trust: "-0.12"
+      racial_justice_index: "-0.05"

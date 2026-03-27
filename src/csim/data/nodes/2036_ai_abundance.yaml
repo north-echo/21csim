@@ -1,0 +1,63 @@
+id: "2036_ai_abundance"
+year_month: "2036-06"
+title: "AI-Driven Abundance"
+description: >
+  When AI develops fast AND governance works, abundance follows —
+  but abundance creates its own problems.
+domain: "technology"
+confidence: "LOW"
+variable: "ai_abundance_status"
+distribution:
+  type: "categorical"
+  options:
+    meaning_crisis: 0.30
+    creative_renaissance: 0.25
+    concentration_of_power: 0.25
+    equitable_distribution: 0.20
+dependencies: []
+conditional: "ai_development_year_offset > 0 AND governance_model > 0.4"
+outcomes:
+  meaning_crisis:
+    status: "DIVERGENCE"
+    description: "Material abundance achieved but widespread existential malaise; purpose collapses"
+    explanation: "With most labor automated and basic needs met, millions struggle to find meaning; mental health crisis deepens"
+    world_state_effects:
+      automation_displacement: "+0.20"
+      inequality_index: "-0.05"
+      global_gdp_growth_modifier: "*1.06"
+      us_polarization: "+0.05"
+      us_life_expectancy_delta: "-1.0"
+      global_democracy_index: "-0.03"
+  creative_renaissance:
+    status: "DIVERGENCE"
+    description: "Freed from toil, humans create; a new golden age of art, science, and culture"
+    explanation: "Universal basic income and AI tools enable mass creativity; scientific breakthroughs accelerate"
+    world_state_effects:
+      automation_displacement: "+0.15"
+      inequality_index: "-0.08"
+      global_gdp_growth_modifier: "*1.08"
+      space_development_index: "+0.08"
+      human_augmentation_prevalence: "+0.05"
+      global_democracy_index: "+0.03"
+  concentration_of_power:
+    status: "ESCALATED"
+    description: "AI owners become de facto rulers; corporate power eclipses democratic governance"
+    explanation: "A handful of AI companies control critical infrastructure; governments become dependent on private AI"
+    world_state_effects:
+      inequality_index: "+0.15"
+      global_democracy_index: "-0.08"
+      surveillance_state_index: "+0.10"
+      global_gdp_growth_modifier: "*1.04"
+      automation_displacement: "+0.25"
+      internet_freedom_index: "-0.08"
+  equitable_distribution:
+    status: "DIVERGENCE"
+    description: "AI benefits broadly shared through strong governance and public investment"
+    explanation: "International AI dividend, public AI infrastructure, and progressive taxation distribute gains widely"
+    world_state_effects:
+      inequality_index: "-0.12"
+      global_gdp_growth_modifier: "*1.07"
+      automation_displacement: "+0.10"
+      global_democracy_index: "+0.05"
+      africa_development_index: "+0.08"
+      us_institutional_trust: "+0.05"

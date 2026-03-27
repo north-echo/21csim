@@ -1,0 +1,46 @@
+id: "2065_middle_east"
+year_month: "2065-01"
+title: "Middle East 2065"
+description: >
+  The Middle East after the end of the oil era. Whether the region successfully
+  diversifies, achieves stability, or remains trapped in conflict and resource
+  competition.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "middle_east_status_2065"
+distribution:
+  type: "categorical"
+  options:
+    transformed: 0.20
+    conflict_zone: 0.15
+    green_leader: 0.15
+    integrated: 0.20
+    fragmented: 0.15
+    stabilized: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  transformed:
+    status: "DIVERGENCE"
+    description: "Region successfully transitions beyond oil; becomes a hub for technology and renewable energy"
+    world_state_effects: {}
+  conflict_zone:
+    status: "ESCALATED"
+    description: "Ongoing conflicts and proxy wars keep the region destabilized and impoverished"
+    world_state_effects: {}
+  green_leader:
+    status: "DIVERGENCE"
+    description: "Gulf states leverage solar resources and sovereign wealth to become global green energy leaders"
+    world_state_effects: {}
+  integrated:
+    status: "DIVERGENCE"
+    description: "Regional integration creates a Middle Eastern economic bloc with growing prosperity"
+    world_state_effects: {}
+  fragmented:
+    status: "ESCALATED"
+    description: "State collapse and sectarian divisions fragment the region into competing micro-states"
+    world_state_effects: {}
+  stabilized:
+    status: "DIVERGENCE"
+    description: "External pressures and internal reforms bring lasting stability though not prosperity"
+    world_state_effects: {}

@@ -1,0 +1,60 @@
+id: "2012_deep_learning"
+year_month: "2012-10"
+title: "Deep Learning / AlexNet Breakthrough"
+description: >
+  AlexNet wins ImageNet competition by massive margin, proving
+  deep neural networks + GPUs can solve vision problems at scale.
+  Triggers modern AI revolution.
+domain: "technology"
+confidence: "HIGH"
+variable: "ai_progress"
+distribution:
+  type: "categorical"
+  options:
+    historical_gpu_revolution: 0.50
+    slower_progress: 0.20
+    alternative_paradigm: 0.10
+    earlier_breakthrough: 0.10
+    compute_bottleneck: 0.10
+dependencies:
+  - node: "2006_cloud"
+    branch: "delayed_5_years"
+    modifies:
+      historical_gpu_revolution: "-0.10"
+      slower_progress: "+0.10"
+conditional: null
+outcomes:
+  historical_gpu_revolution:
+    status: "HISTORICAL"
+    description: "Deep learning + GPUs transform AI; massive investment follows"
+    world_state_effects:
+      ai_development_year_offset: "+0"
+    cascading_modifiers:
+      2023_ai_acceleration.historical_rapid: "+0.10"
+  slower_progress:
+    status: "DIVERGENCE"
+    description: "Deep learning works but adoption is gradual"
+    world_state_effects:
+      ai_development_year_offset: "-2"
+    cascading_modifiers:
+      2023_ai_acceleration.slower_progress: "+0.10"
+      2023_ai_acceleration.historical_rapid: "-0.10"
+  alternative_paradigm:
+    status: "DIVERGENCE"
+    description: "Different AI approach (probabilistic, symbolic-neural hybrid) wins"
+    world_state_effects:
+      ai_development_year_offset: "-1"
+  earlier_breakthrough:
+    status: "DIVERGENCE"
+    description: "Breakthrough happens in 2008-2009 instead"
+    world_state_effects:
+      ai_development_year_offset: "+3"
+    cascading_modifiers:
+      2023_ai_acceleration.faster_agi: "+0.05"
+  compute_bottleneck:
+    status: "DIVERGENCE"
+    description: "GPU scaling hits hard limits; progress stalls"
+    world_state_effects:
+      ai_development_year_offset: "-4"
+    cascading_modifiers:
+      2023_ai_acceleration.ai_winter: "+0.10"

@@ -1,0 +1,50 @@
+id: "2048_african_trade"
+year_month: "2048-01"
+title: "African Trade Integration"
+description: >
+  The African Continental Free Trade Area matures into a major economic bloc or
+  fragments under internal pressures. Africa's trade trajectory determines whether
+  the continent becomes a major economic power.
+domain: "economic"
+confidence: "MEDIUM"
+variable: "african_trade_status"
+distribution:
+  type: "categorical"
+  options:
+    continental_market: 0.25
+    fragmented: 0.25
+    china_dominated: 0.20
+    independent_growth: 0.20
+    climate_disrupted: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  continental_market:
+    status: "DIVERGENCE"
+    description: "Unified African market becomes third largest economic bloc globally"
+    world_state_effects:
+      global_democracy_index: "+0.02"
+      inequality_index: "-0.03"
+  fragmented:
+    status: "DIVERGENCE"
+    description: "Trade integration stalls; Africa remains collection of small disconnected markets"
+    world_state_effects:
+      inequality_index: "+0.02"
+  china_dominated:
+    status: "DIVERGENCE"
+    description: "Chinese investment dominates African trade infrastructure creating dependency"
+    world_state_effects:
+      us_china_tension_index: "+0.03"
+      inequality_index: "+0.01"
+  independent_growth:
+    status: "DIVERGENCE"
+    description: "African nations develop independent industrial capacity and South-South trade"
+    world_state_effects:
+      global_democracy_index: "+0.03"
+      inequality_index: "-0.04"
+  climate_disrupted:
+    status: "ESCALATED"
+    description: "Climate impacts severely disrupt African economic development and trade"
+    world_state_effects:
+      food_security_index: "-0.08"
+      conflict_deaths: "+15000"

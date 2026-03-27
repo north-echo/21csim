@@ -1,0 +1,30 @@
+id: "shock_pandemic_2035"
+year_month: "2035-06"
+title: "H7N3 Avian Influenza Pandemic"
+description: >
+  Zoonotic spillover is probabilistic, not deterministic.
+domain: "shock"
+confidence: "LOW"
+variable: "pandemic_2035"
+distribution:
+  type: "categorical"
+  options:
+    pandemic: 0.15
+    no_pandemic: 0.85
+dependencies: []
+conditional: null
+outcomes:
+  pandemic:
+    status: "ESCALATED"
+    description: "H7N3 avian influenza crosses to humans in Vietnam's Mekong Delta; airborne transmission confirmed within weeks; 2.3 million dead globally before mRNA vaccines deployed at scale"
+    explanation: "Intensive poultry farming and wet market conditions create ideal conditions for reassortment"
+    world_state_effects:
+      global_pandemic_deaths: "+2000000"
+      global_gdp_growth_modifier: "*0.97"
+    cascading_modifiers:
+      2038_autonomous_weapons.proliferation: "+0.03"
+  no_pandemic:
+    status: "HISTORICAL"
+    description: "No novel pathogen emergence"
+    silent: true
+    world_state_effects: {}

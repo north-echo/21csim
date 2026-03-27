@@ -1,0 +1,61 @@
+id: "2022_inflation_crisis"
+year_month: "2022-06"
+title: "Inflation Crisis"
+domain: "economic"
+confidence: "HIGH"
+variable: "inflation_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_high_then_controlled: 0.45
+    stagflation: 0.15
+    hyperinflation_emerging: 0.10
+    soft_landing: 0.30
+dependencies:
+  - node: "2020_covid_response"
+    branch: "catastrophic_failure"
+    modifies:
+      stagflation: "+0.10"
+      hyperinflation_emerging: "+0.05"
+      soft_landing: "-0.15"
+  - node: "2022_russia_ukraine"
+    branch: "nuclear_use"
+    modifies:
+      stagflation: "+0.15"
+      soft_landing: "-0.15"
+  - node: "2012_zirp"
+    branch: "historical_extended_zirp"
+    modifies:
+      historical_high_then_controlled: "+0.10"
+      soft_landing: "-0.10"
+conditional: null
+outcomes:
+  historical_high_then_controlled:
+    status: "HISTORICAL"
+    description: "Inflation peaks 9%; aggressive rate hikes bring it down by 2024"
+    world_state_effects:
+      inequality_index: "+0.03"
+      us_polarization: "+0.03"
+    cascading_modifiers:
+      2024_us_election.economic_factor: "+0.05"
+  stagflation:
+    status: "ESCALATED"
+    description: "High inflation persists with stagnant growth"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.95"
+      inequality_index: "+0.06"
+      us_polarization: "+0.05"
+  hyperinflation_emerging:
+    status: "ESCALATED"
+    description: "Multiple emerging economies experience hyperinflation"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.93"
+      inequality_index: "+0.08"
+      latin_america_stability: "-0.10"
+      africa_development_index: "-0.05"
+  soft_landing:
+    status: "DIVERGENCE"
+    description: "Inflation controlled without recession"
+    world_state_effects:
+      global_gdp_growth_modifier: "*1.01"
+      us_institutional_trust: "+0.03"

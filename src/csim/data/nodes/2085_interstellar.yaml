@@ -1,0 +1,51 @@
+id: "2085_interstellar"
+year_month: "2085-01"
+title: "Interstellar Prospects"
+description: >
+  The feasibility and progress of interstellar travel or communication.
+  Whether humanity has the capability and will to reach beyond the solar
+  system.
+domain: "technology"
+confidence: "LOW"
+variable: "interstellar_status"
+distribution:
+  type: "categorical"
+  options:
+    probe_launched: 0.15
+    generation_ship: 0.05
+    impossible: 0.25
+    planned: 0.20
+    unnecessary: 0.20
+    breakthrough: 0.05
+    abandoned: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  probe_launched:
+    status: "DIVERGENCE"
+    description: "One or more interstellar probes en route to nearby star systems"
+    world_state_effects: {}
+  generation_ship:
+    status: "DIVERGENCE"
+    description: "Plans underway for a crewed generation ship to another star system"
+    world_state_effects: {}
+  impossible:
+    status: "DIVERGENCE"
+    description: "Interstellar travel confirmed as impractical with any foreseeable technology"
+    world_state_effects: {}
+  planned:
+    status: "DIVERGENCE"
+    description: "Interstellar missions in planning stages with feasible technology identified"
+    world_state_effects: {}
+  unnecessary:
+    status: "DIVERGENCE"
+    description: "Advanced remote sensing and virtual exploration make physical interstellar travel unnecessary"
+    world_state_effects: {}
+  breakthrough:
+    status: "DIVERGENCE"
+    description: "Fundamental physics breakthrough enables practical faster-than-light or near-light travel"
+    world_state_effects: {}
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Interstellar ambitions abandoned as humanity focuses on solar system or Earth challenges"
+    world_state_effects: {}

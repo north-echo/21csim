@@ -1,0 +1,48 @@
+id: "2031_biotech_regulation"
+year_month: "2031-06"
+title: "Biotechnology Regulation"
+description: >
+  Global regulatory response to advancing biotechnology including gene editing,
+  synthetic biology, and genetic engineering. Whether permissive or restrictive
+  approaches prevail shapes innovation and risk.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "biotech_regulation_status"
+distribution:
+  type: "categorical"
+  options:
+    permissive: 0.30
+    strict_global: 0.20
+    fragmented: 0.30
+    moratorium: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  permissive:
+    status: "DIVERGENCE"
+    description: "Permissive global approach accelerates biotech innovation"
+    explanation: "Market-driven regulation enables rapid development of gene therapies and synthetic biology"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.5"
+      global_gdp: "+0.01"
+  strict_global:
+    status: "DIVERGENCE"
+    description: "Strict international biotech regulations slow but do not halt progress"
+    explanation: "Precautionary principle dominates; development continues but at measured pace"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.2"
+      existential_risk_cumulative: "-0.02"
+  fragmented:
+    status: "DIVERGENCE"
+    description: "Fragmented regulation creates biotech havens and regulatory arbitrage"
+    explanation: "Some nations permissive, others restrictive; development migrates to favorable jurisdictions"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.3"
+      governance_model: "-0.02"
+  moratorium:
+    status: "DIVERGENCE"
+    description: "Global moratorium on certain biotechnologies after safety incident"
+    explanation: "Lab accident or misuse triggers temporary halt on gene editing or synthetic biology research"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.1"
+      existential_risk_cumulative: "-0.03"

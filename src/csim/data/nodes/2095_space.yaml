@@ -1,0 +1,58 @@
+id: "2095_space"
+year_month: "2095-01"
+title: "Space Civilization 2095"
+description: >
+  The state of human presence in space at century's end. Whether humanity
+  has become a truly multiplanetary species or space remains a frontier
+  of limited activity.
+domain: "technology"
+confidence: "LOW"
+variable: "space_status_2095"
+distribution:
+  type: "categorical"
+  options:
+    multiplanetary: 0.15
+    orbital_only: 0.25
+    interstellar: 0.05
+    abandoned: 0.15
+    thriving: 0.10
+    commercial: 0.20
+    military: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  multiplanetary:
+    status: "DIVERGENCE"
+    description: "Humanity permanently settled on multiple worlds with self-sustaining colonies"
+    world_state_effects:
+      space_development_index: "+0.25"
+  orbital_only:
+    status: "DIVERGENCE"
+    description: "Human presence limited to orbital habitats and stations; planetary colonization stalled"
+    world_state_effects:
+      space_development_index: "+0.10"
+  interstellar:
+    status: "DIVERGENCE"
+    description: "First missions to other star systems underway; humanity reaching beyond the solar system"
+    world_state_effects:
+      space_development_index: "+0.35"
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Space development largely abandoned; resources redirected to Earth-based priorities"
+    world_state_effects:
+      space_development_index: "-0.15"
+  thriving:
+    status: "DIVERGENCE"
+    description: "Space economy and population growing rapidly; becoming a significant fraction of human civilization"
+    world_state_effects:
+      space_development_index: "+0.30"
+  commercial:
+    status: "DIVERGENCE"
+    description: "Space is a major economic zone for mining, manufacturing, and energy production"
+    world_state_effects:
+      space_development_index: "+0.20"
+  military:
+    status: "ESCALATED"
+    description: "Space development primarily driven by military competition; weaponization of orbit"
+    world_state_effects:
+      space_development_index: "+0.10"

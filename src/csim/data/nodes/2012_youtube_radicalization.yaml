@@ -1,0 +1,80 @@
+id: "2012_youtube_radicalization"
+year_month: "2012-06"
+title: "YouTube Recommendation Radicalization"
+description: >
+  YouTube's recommendation algorithm begins systematically pushing users
+  toward increasingly extreme content. The "rabbit hole" effect radicalizes
+  millions over the next decade, from alt-right to QAnon to anti-vax.
+domain: "technology"
+confidence: "HIGH"
+variable: "youtube_radicalization_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_radicalization: 0.45
+    algorithm_fixed: 0.15
+    worse_pipeline: 0.10
+    competitor_breaks_model: 0.15
+    regulated: 0.15
+dependencies:
+  - node: "2004_social_media"
+    branch: "historical_ad_driven"
+    modifies:
+      historical_radicalization: "+0.10"
+      algorithm_fixed: "-0.05"
+      regulated: "-0.05"
+  - node: "2004_social_media"
+    branch: "regulated_early"
+    modifies:
+      historical_radicalization: "-0.10"
+      regulated: "+0.10"
+  - node: "2006_cloud"
+    branch: "historical_hyperscaler"
+    modifies:
+      historical_radicalization: "+0.05"
+      competitor_breaks_model: "-0.05"
+conditional: null
+outcomes:
+  historical_radicalization:
+    status: "HISTORICAL"
+    description: "Algorithm optimizes for engagement, systematically driving users toward extremism"
+    world_state_effects:
+      misinformation_severity: "+0.08"
+      us_polarization: "+0.06"
+      terrorism_threat_index: "+0.03"
+    cascading_modifiers:
+      2016_misinformation.historical_escalation: "+0.08"
+      2021_jan6.worse_violence: "+0.03"
+      2019_antivax.historical_growing: "+0.05"
+  algorithm_fixed:
+    status: "DIVERGENCE"
+    description: "YouTube identifies and fixes the radicalization pipeline by 2015"
+    explanation: "Internal research leads to algorithm changes prioritizing quality over engagement"
+    world_state_effects:
+      misinformation_severity: "+0.03"
+      us_polarization: "+0.02"
+      terrorism_threat_index: "+0.01"
+    cascading_modifiers:
+      2016_misinformation.historical_escalation: "-0.05"
+  worse_pipeline:
+    status: "ESCALATED"
+    description: "Radicalization accelerates into real-world violence earlier and more severely"
+    world_state_effects:
+      misinformation_severity: "+0.15"
+      us_polarization: "+0.10"
+      terrorism_threat_index: "+0.08"
+  competitor_breaks_model:
+    status: "DIVERGENCE"
+    description: "TikTok-style competitor emerges without the same radicalization dynamics"
+    explanation: "A short-form video competitor captures attention without rabbit-hole algorithms"
+    world_state_effects:
+      misinformation_severity: "+0.04"
+      us_polarization: "+0.03"
+  regulated:
+    status: "DIVERGENCE"
+    description: "FTC investigation forces algorithmic transparency and changes"
+    explanation: "Regulatory pressure leads to mandatory algorithm audits"
+    world_state_effects:
+      misinformation_severity: "+0.03"
+      us_polarization: "+0.02"
+      internet_freedom_index: "-0.02"

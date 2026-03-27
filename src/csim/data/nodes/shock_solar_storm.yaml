@@ -1,0 +1,31 @@
+id: "shock_solar_storm"
+year_month: "2044-07"
+title: "Carrington-Class Solar Storm"
+description: >
+  Carrington-class coronal mass ejection hits Earth.
+  Could destroy satellite infrastructure and power grids.
+domain: "shock"
+confidence: "LOW"
+variable: "solar_storm"
+distribution:
+  type: "categorical"
+  options:
+    storm: 0.08
+    no_storm: 0.92
+dependencies: []
+conditional: null
+outcomes:
+  storm:
+    status: "ESCALATED"
+    description: "X45-class CME strikes Earth's magnetosphere; 247 satellites destroyed; transformer damage causes 6-month blackouts across Scandinavia and Canada; GPS system offline for 72 hours"
+    explanation: "Solar Cycle 28 produces the most powerful flare since the Carrington Event of 1859"
+    world_state_effects:
+      supply_chain_resilience: "-0.15"
+      global_gdp_growth_modifier: "*0.95"
+      space_development_index: "-0.10"
+      global_cyber_damage_annual_b: "+20"
+  no_storm:
+    status: "HISTORICAL"
+    description: "No major solar storm"
+    silent: true
+    world_state_effects: {}

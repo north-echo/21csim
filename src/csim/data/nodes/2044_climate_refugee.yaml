@@ -1,0 +1,68 @@
+id: "2044_climate_refugee"
+year_month: "2044-06"
+title: "Climate Refugee Treaty"
+description: >
+  International negotiations on legal status and rights of climate-displaced
+  populations. The outcome shapes whether climate migration is managed cooperatively
+  or devolves into border conflicts.
+domain: "climate"
+confidence: "MEDIUM"
+variable: "climate_refugee_treaty_status"
+distribution:
+  type: "categorical"
+  options:
+    binding_treaty: 0.15
+    regional_agreements: 0.25
+    fortress_borders: 0.25
+    managed_resettlement: 0.15
+    failed_states_absorb: 0.20
+dependencies:
+  - node: "2031_climate_migration"
+    branch: "catastrophic"
+    modifies:
+      fortress_borders: "+0.10"
+      failed_states_absorb: "+0.10"
+      binding_treaty: "-0.10"
+      managed_resettlement: "-0.10"
+  - node: "2031_climate_migration"
+    branch: "moderate_managed"
+    modifies:
+      binding_treaty: "+0.10"
+      managed_resettlement: "+0.05"
+      fortress_borders: "-0.10"
+      failed_states_absorb: "-0.05"
+conditional: null
+outcomes:
+  binding_treaty:
+    status: "DIVERGENCE"
+    description: "Global binding treaty establishes legal framework for climate refugees with resettlement quotas"
+    world_state_effects:
+      global_democracy_index: "+0.03"
+      eu_cohesion: "+0.02"
+      conflict_deaths: "-5000"
+  regional_agreements:
+    status: "DIVERGENCE"
+    description: "Patchwork of regional agreements provides partial protection for climate migrants"
+    world_state_effects:
+      eu_cohesion: "-0.02"
+      conflict_deaths: "+2000"
+  fortress_borders:
+    status: "DIVERGENCE"
+    description: "Wealthy nations erect barriers; climate migrants trapped in deteriorating regions"
+    world_state_effects:
+      global_democracy_index: "-0.05"
+      conflict_deaths: "+20000"
+      eu_cohesion: "-0.05"
+  managed_resettlement:
+    status: "DIVERGENCE"
+    description: "Coordinated resettlement programs relocate millions to climate-resilient areas"
+    world_state_effects:
+      global_democracy_index: "+0.02"
+      conflict_deaths: "-2000"
+  failed_states_absorb:
+    status: "ESCALATED"
+    description: "Climate migration overwhelms fragile states, triggering cascading state failures"
+    world_state_effects:
+      conflict_deaths: "+50000"
+      global_democracy_index: "-0.08"
+      food_security_index: "-0.10"

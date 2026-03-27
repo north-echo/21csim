@@ -1,0 +1,49 @@
+id: "2022_european_right"
+year_month: "2022-09"
+title: "European Right Wing Rise"
+domain: "regional"
+confidence: "HIGH"
+variable: "european_right"
+distribution:
+  type: "categorical"
+  options:
+    historical_mainstreaming: 0.45
+    contained: 0.20
+    governing_majority: 0.15
+    eu_reform_response: 0.20
+dependencies:
+  - node: "2010_euro_crisis"
+    branch: "historical_austerity"
+    modifies:
+      historical_mainstreaming: "+0.05"
+      contained: "-0.05"
+  - node: "2016_brexit"
+    branch: "remain_wins"
+    modifies:
+      contained: "+0.10"
+      historical_mainstreaming: "-0.10"
+conditional: null
+outcomes:
+  historical_mainstreaming:
+    status: "HISTORICAL"
+    description: "Far-right parties enter mainstream across Europe"
+    world_state_effects:
+      eu_cohesion: "-0.05"
+      global_democracy_index: "-0.02"
+  contained:
+    status: "DIVERGENCE"
+    description: "Right-wing populism contained by centrist coalitions"
+    world_state_effects:
+      eu_cohesion: "+0.02"
+  governing_majority:
+    status: "ESCALATED"
+    description: "Far-right gains governing majority in major EU country"
+    world_state_effects:
+      eu_cohesion: "-0.10"
+      global_democracy_index: "-0.05"
+  eu_reform_response:
+    status: "DIVERGENCE"
+    description: "EU reforms address populist grievances"
+    world_state_effects:
+      eu_cohesion: "+0.05"
+      europe_federation_index: "+0.03"

@@ -1,0 +1,60 @@
+id: "2018_crispr_baby"
+year_month: "2018-11"
+title: "He Jiankui CRISPR Baby Scandal"
+description: >
+  Chinese scientist He Jiankui announces birth of gene-edited twins,
+  sparking global outrage. The ethics of human germline editing become
+  a defining bioethics debate. The world must decide how to govern
+  the most powerful biological technology ever created.
+domain: "health"
+confidence: "HIGH"
+variable: "crispr_baby"
+distribution:
+  type: "categorical"
+  options:
+    historical_scandal_moratorium: 0.45
+    global_germline_ban: 0.15
+    quiet_continuation: 0.10
+    regulated_therapeutic_use: 0.20
+    enhancement_race: 0.10
+dependencies:
+  - node: "2015_crispr"
+    branch: "designer_babies_race"
+    modifies:
+      enhancement_race: "+0.10"
+      global_germline_ban: "-0.05"
+      historical_scandal_moratorium: "-0.05"
+conditional: null
+outcomes:
+  historical_scandal_moratorium:
+    status: "HISTORICAL"
+    description: "He Jiankui imprisoned; informal moratorium on germline editing holds"
+    world_state_effects:
+      global_democracy_index: "+0.01"
+  global_germline_ban:
+    status: "DIVERGENCE"
+    description: "Binding international treaty bans all human germline editing"
+    world_state_effects:
+      global_democracy_index: "+0.02"
+      us_life_expectancy_delta: "-0.1"
+  quiet_continuation:
+    status: "ESCALATED"
+    description: "Other nations quietly continue germline editing experiments"
+    world_state_effects:
+      global_democracy_index: "-0.02"
+      us_life_expectancy_delta: "+0.2"
+      inequality_index: "+0.02"
+  regulated_therapeutic_use:
+    status: "DIVERGENCE"
+    description: "International framework allows germline editing only for severe genetic diseases"
+    world_state_effects:
+      global_democracy_index: "+0.01"
+      us_life_expectancy_delta: "+0.3"
+  enhancement_race:
+    status: "ESCALATED"
+    description: "Multiple nations pursue human genetic enhancement; bioethics framework collapses"
+    world_state_effects:
+      global_democracy_index: "-0.03"
+      us_life_expectancy_delta: "+0.4"
+      inequality_index: "+0.05"
+      human_augmentation_prevalence: "+0.02"

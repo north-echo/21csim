@@ -1,0 +1,81 @@
+id: "2020_covid_response"
+year_month: "2020-03"
+title: "COVID-19 Global Response"
+description: >
+  Global response to COVID-19 pandemic. Historical response was fragmented:
+  varying national lockdowns, vaccine development in record time but
+  inequitable distribution, massive economic disruption, 7M+ deaths.
+domain: "economic"
+confidence: "HIGH"
+variable: "covid_response"
+distribution:
+  type: "categorical"
+  options:
+    historical_fragmented: 0.40
+    coordinated_early: 0.15
+    faster_vaccines: 0.15
+    catastrophic_failure: 0.10
+    china_transparent: 0.20
+dependencies:
+  - node: "2019_covid_emergence"
+    branch: "contained_locally"
+    modifies:
+      historical_fragmented: "-0.40"
+      coordinated_early: "+0.40"
+  - node: "2016_us_election"
+    branch: "trump_wins"
+    modifies:
+      historical_fragmented: "+0.10"
+      coordinated_early: "-0.05"
+      catastrophic_failure: "+0.05"
+      china_transparent: "-0.10"
+  - node: "2005_katrina"
+    branch: "catastrophic_failure"
+    modifies:
+      catastrophic_failure: "+0.03"
+      coordinated_early: "-0.03"
+conditional: "2019_covid_emergence != no_pandemic"
+outcomes:
+  historical_fragmented:
+    status: "HISTORICAL"
+    description: "Fragmented global response; record vaccine development but unequal access"
+    world_state_effects:
+      global_pandemic_deaths: "+7000000"
+      us_polarization: "+0.12"
+      global_gdp_growth_modifier: "*0.94"
+      inequality_index: "+0.05"
+      us_institutional_trust: "-0.05"
+      misinformation_severity: "+0.08"
+  coordinated_early:
+    status: "DIVERGENCE"
+    description: "Coordinated international response; early travel restrictions"
+    explanation: "WHO acts faster; global cooperation on containment"
+    world_state_effects:
+      global_pandemic_deaths: "+2000000"
+      us_polarization: "+0.04"
+      global_gdp_growth_modifier: "*0.97"
+      inequality_index: "+0.02"
+  faster_vaccines:
+    status: "DIVERGENCE"
+    description: "Vaccine development 6 months faster; equitable global distribution"
+    world_state_effects:
+      global_pandemic_deaths: "+3000000"
+      global_gdp_growth_modifier: "*0.95"
+      inequality_index: "+0.02"
+  catastrophic_failure:
+    status: "ESCALATED"
+    description: "No coordinated response; vaccine hesitancy dominant"
+    world_state_effects:
+      global_pandemic_deaths: "+25000000"
+      global_gdp_growth_modifier: "*0.85"
+      us_polarization: "+0.15"
+      inequality_index: "+0.10"
+      global_democracy_index: "-0.05"
+  china_transparent:
+    status: "DIVERGENCE"
+    description: "China shares data transparently from day one"
+    explanation: "Early genome sharing and international cooperation"
+    world_state_effects:
+      global_pandemic_deaths: "+4000000"
+      global_gdp_growth_modifier: "*0.96"
+      china_power_index: "+0.05"

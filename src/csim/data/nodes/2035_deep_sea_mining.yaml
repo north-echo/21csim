@@ -1,0 +1,54 @@
+id: "2035_deep_sea_mining"
+year_month: "2035-06"
+title: "Deep Sea Mining"
+description: >
+  Whether commercial deep-sea mining of polymetallic nodules and rare earth
+  elements proceeds, and under what regulatory framework. Balances resource
+  needs against environmental risks to ocean ecosystems.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "deep_sea_mining_status"
+distribution:
+  type: "categorical"
+  options:
+    commercial_operations: 0.25
+    environmental_ban: 0.20
+    limited_regulated: 0.30
+    technology_fails: 0.15
+    conflict_over_resources: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  commercial_operations:
+    status: "DIVERGENCE"
+    description: "Large-scale commercial deep-sea mining operations begin"
+    explanation: "Demand for EV battery minerals and rare earths drives seabed mining despite environmental concerns"
+    world_state_effects:
+      global_gdp: "+0.01"
+      renewable_energy_share: "+0.02"
+  environmental_ban:
+    status: "DIVERGENCE"
+    description: "International moratorium or ban on deep-sea mining"
+    explanation: "Scientific evidence of ecosystem damage and environmental movement pressure block exploitation"
+    world_state_effects:
+      governance_model: "+0.02"
+  limited_regulated:
+    status: "DIVERGENCE"
+    description: "Limited deep-sea mining under strict environmental regulation"
+    explanation: "ISA establishes tight regulatory framework; mining proceeds at small scale with monitoring"
+    world_state_effects:
+      global_gdp: "+0.005"
+      governance_model: "+0.01"
+  technology_fails:
+    status: "DIVERGENCE"
+    description: "Deep-sea mining technology proves unreliable at commercial scale"
+    explanation: "Engineering challenges at extreme depth prevent economically viable extraction"
+    world_state_effects:
+      global_gdp: "+0.00"
+  conflict_over_resources:
+    status: "ESCALATED"
+    description: "Disputes over seabed mining rights create international tensions"
+    explanation: "Competing claims to mineral-rich seabed areas generate confrontations between nations"
+    world_state_effects:
+      conflict_deaths: "+1000"
+      governance_model: "-0.02"

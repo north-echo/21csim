@@ -1,0 +1,56 @@
+id: "2033_ai_science"
+year_month: "2033-06"
+title: "AI-Driven Scientific Discovery"
+description: >
+  Impact of AI on scientific research and discovery. Whether AI accelerates
+  breakthroughs in medicine, materials science, and fundamental physics,
+  or produces incremental gains and fabricated results.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "ai_science_status"
+distribution:
+  type: "categorical"
+  options:
+    drug_discovery: 0.30
+    materials_science: 0.25
+    physics_breakthrough: 0.10
+    incremental_only: 0.25
+    fabricated_results: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  drug_discovery:
+    status: "DIVERGENCE"
+    description: "AI revolutionizes drug discovery; dozens of novel therapeutics reach market"
+    explanation: "AI protein folding and molecular simulation drastically reduce drug development timelines"
+    world_state_effects:
+      global_gdp: "+0.02"
+      us_life_expectancy_delta: "+1.5"
+  materials_science:
+    status: "DIVERGENCE"
+    description: "AI discovers novel materials that transform energy and manufacturing"
+    explanation: "AI-designed superconductors, batteries, and catalysts enable new industrial capabilities"
+    world_state_effects:
+      global_gdp: "+0.03"
+      us_life_expectancy_delta: "+0.5"
+  physics_breakthrough:
+    status: "DIVERGENCE"
+    description: "AI helps solve fundamental physics problems with transformative applications"
+    explanation: "AI identifies patterns in data leading to breakthroughs in quantum gravity or fusion"
+    world_state_effects:
+      global_gdp: "+0.05"
+      us_life_expectancy_delta: "+0.3"
+  incremental_only:
+    status: "DIVERGENCE"
+    description: "AI aids science but produces only incremental improvements"
+    explanation: "AI useful for optimization and analysis but fundamental breakthroughs still require human insight"
+    world_state_effects:
+      global_gdp: "+0.01"
+      us_life_expectancy_delta: "+0.2"
+  fabricated_results:
+    status: "ESCALATED"
+    description: "AI-generated scientific fraud undermines research trust"
+    explanation: "AI makes it easy to fabricate convincing but false results; replication crisis deepens"
+    world_state_effects:
+      global_gdp: "-0.01"
+      us_life_expectancy_delta: "-0.2"

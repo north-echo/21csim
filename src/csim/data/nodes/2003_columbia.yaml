@@ -1,0 +1,46 @@
+id: "2003_columbia"
+year_month: "2003-02"
+title: "Columbia Shuttle Disaster"
+description: >
+  Space Shuttle Columbia disintegrates on re-entry. Seven crew killed.
+  Accelerates the end of the shuttle program and reshapes NASA's future
+  direction — toward Constellation, then cancellation, then commercial crew.
+domain: "technology"
+confidence: "HIGH"
+variable: "columbia_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_disaster: 0.45
+    averted: 0.25
+    worse_earlier: 0.10
+    program_cancelled_immediately: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  historical_disaster:
+    status: "HISTORICAL"
+    description: "Shuttle destroyed on re-entry; program eventually ends"
+    world_state_effects:
+      space_development_index: "-0.02"
+    cascading_modifiers:
+      2032_moon_base.delayed_2040: "+0.05"
+  averted:
+    status: "DIVERGENCE"
+    description: "Foam strike detected in orbit; crew rescued via ISS rendezvous"
+    world_state_effects:
+      space_development_index: "+0.02"
+    cascading_modifiers:
+      2032_moon_base.us_only: "+0.05"
+  worse_earlier:
+    status: "DIVERGENCE"
+    description: "Earlier shuttle disaster in 2001 accelerates end-of-program timeline"
+    world_state_effects:
+      space_development_index: "-0.03"
+  program_cancelled_immediately:
+    status: "DIVERGENCE"
+    description: "Congress kills shuttle program within a year of disaster"
+    world_state_effects:
+      space_development_index: "-0.04"
+    cascading_modifiers:
+      2032_moon_base.delayed_2040: "+0.08"

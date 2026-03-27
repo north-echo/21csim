@@ -1,0 +1,52 @@
+id: "2001_china_wto"
+year_month: "2001-12"
+title: "China Joins WTO"
+description: >
+  China's accession to the World Trade Organization, enabling massive
+  export-led growth. Controversial due to minimal enforcement of IP
+  and currency manipulation conditions.
+domain: "economic"
+confidence: "HIGH"
+variable: "china_wto_terms"
+distribution:
+  type: "categorical"
+  options:
+    historical_full_accession: 0.60
+    conditional_accession: 0.20
+    delayed_5_years: 0.10
+    no_accession: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_full_accession:
+    status: "HISTORICAL"
+    description: "Full WTO accession with minimal enforcement of conditions"
+    world_state_effects:
+      china_power_index: "+0.10"
+      inequality_index: "+0.05"
+      global_gdp_growth_modifier: "*1.03"
+      supply_chain_resilience: "-0.05"
+    cascading_modifiers:
+      2018_trade_war.historical_escalation: "+0.10"
+  conditional_accession:
+    status: "DIVERGENCE"
+    description: "WTO accession with strict IP and currency conditions enforced"
+    explanation: "US Congress demands verification mechanisms"
+    world_state_effects:
+      china_power_index: "+0.05"
+      inequality_index: "+0.02"
+      global_gdp_growth_modifier: "*1.01"
+    cascading_modifiers:
+      2018_trade_war.historical_escalation: "-0.10"
+  delayed_5_years:
+    status: "DIVERGENCE"
+    description: "China WTO accession delayed to 2006"
+    world_state_effects:
+      china_power_index: "+0.03"
+  no_accession:
+    status: "DIVERGENCE"
+    description: "China rejected from WTO; pursues bilateral trade"
+    world_state_effects:
+      china_power_index: "-0.05"
+      global_gdp_growth_modifier: "*0.98"
+      supply_chain_resilience: "+0.05"

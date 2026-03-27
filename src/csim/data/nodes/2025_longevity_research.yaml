@@ -1,0 +1,55 @@
+id: "2025_longevity_research"
+year_month: "2025-03"
+title: "Longevity Research Boom"
+description: >
+  Senolytics, rapamycin analogs, and caloric restriction mimetics
+  enter clinical trials. Billionaire-funded longevity startups promise
+  to extend healthy human lifespan. The question shifts from whether
+  aging can be slowed to who will afford the treatments.
+domain: "health"
+confidence: "MEDIUM"
+variable: "longevity_research"
+distribution:
+  type: "categorical"
+  options:
+    modest_gains: 0.35
+    senolytic_breakthrough: 0.20
+    overhyped_failure: 0.15
+    longevity_escape_velocity: 0.10
+    elite_only_access: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  modest_gains:
+    status: "HISTORICAL"
+    description: "Senolytics show modest benefits; healthspan extended by a few years for some"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.3"
+  senolytic_breakthrough:
+    status: "DIVERGENCE"
+    description: "Senolytic drugs dramatically reduce age-related disease; FDA fast-tracks approval"
+    world_state_effects:
+      us_life_expectancy_delta: "+1.5"
+      global_gdp_growth_modifier: "*1.005"
+    cascading_modifiers:
+      2058_life_extension.significant_extension: "+0.10"
+  overhyped_failure:
+    status: "DIVERGENCE"
+    description: "Clinical trials fail; longevity bubble bursts and funding collapses"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.0"
+  longevity_escape_velocity:
+    status: "DIVERGENCE"
+    description: "Combination therapies achieve longevity escape velocity for the wealthy"
+    world_state_effects:
+      us_life_expectancy_delta: "+3.0"
+      inequality_index: "+0.06"
+      existential_risk_cumulative: "+0.01"
+    cascading_modifiers:
+      2058_life_extension.significant_extension: "+0.15"
+  elite_only_access:
+    status: "DIVERGENCE"
+    description: "Effective treatments exist but cost makes them accessible only to the ultra-rich"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.5"
+      inequality_index: "+0.04"

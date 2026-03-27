@@ -1,0 +1,57 @@
+id: "2050_arctic_mature"
+year_month: "2050-01"
+title: "Arctic Governance Mature"
+description: >
+  Arctic governance reaches maturity as ice-free conditions become routine.
+  Whether the region is cooperatively managed, exploited, or militarized
+  determines environmental and geopolitical outcomes.
+domain: "regional"
+confidence: "LOW"
+variable: "arctic_mature_status"
+distribution:
+  type: "categorical"
+  options:
+    cooperative: 0.20
+    exploited: 0.25
+    protected: 0.15
+    militarized: 0.15
+    indigenous_led: 0.10
+    russian_dominated: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  cooperative:
+    status: "DIVERGENCE"
+    description: "Arctic Council evolves into effective governance body; resources shared sustainably"
+    world_state_effects:
+      biodiversity_index: "+0.02"
+      global_democracy_index: "+0.02"
+  exploited:
+    status: "DIVERGENCE"
+    description: "Arctic resources extracted aggressively; environmental damage severe"
+    world_state_effects:
+      biodiversity_index: "-0.10"
+      climate_temp_anomaly: "+0.05"
+  protected:
+    status: "DIVERGENCE"
+    description: "International treaty protects remaining Arctic ecosystems as global heritage"
+    world_state_effects:
+      biodiversity_index: "+0.05"
+  militarized:
+    status: "ESCALATED"
+    description: "Arctic becomes militarized frontier; naval confrontations and territorial disputes"
+    world_state_effects:
+      conflict_deaths: "+2000"
+      nuclear_risk_level: "+0.03"
+  indigenous_led:
+    status: "DIVERGENCE"
+    description: "Indigenous peoples gain sovereignty over Arctic governance and resource management"
+    world_state_effects:
+      biodiversity_index: "+0.04"
+      global_democracy_index: "+0.03"
+  russian_dominated:
+    status: "DIVERGENCE"
+    description: "Russia establishes de facto control over major Arctic shipping and resource zones"
+    world_state_effects:
+      us_china_tension_index: "+0.03"
+      biodiversity_index: "-0.05"

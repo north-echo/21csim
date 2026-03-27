@@ -1,0 +1,59 @@
+id: "2023_lahaina"
+year_month: "2023-08"
+title: "Lahaina / Climate Disasters New Normal"
+description: >
+  Wildfire destroys the historic town of Lahaina, Maui, killing over 100
+  people in the deadliest US wildfire in over a century. Demonstrates that
+  climate-driven disasters now threaten affluent, developed-world communities
+  previously considered safe, challenging assumptions about climate
+  vulnerability and preparedness.
+domain: "climate"
+confidence: "HIGH"
+variable: "lahaina_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_devastation: 0.50
+    early_evacuation: 0.15
+    climate_policy_shift: 0.10
+    fire_averted: 0.10
+    recurring_disasters: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  historical_devastation:
+    status: "HISTORICAL"
+    description: "Lahaina destroyed; 100+ dead; warning system failures; slow federal response"
+    world_state_effects:
+      climate_temp_anomaly: "+0.01"
+      us_institutional_trust: "-0.02"
+  early_evacuation:
+    status: "DIVERGENCE"
+    description: "Warning sirens activated; mass evacuation prevents most fatalities"
+    explanation: "Emergency management systems function as designed; minimal loss of life"
+    world_state_effects:
+      us_institutional_trust: "+0.01"
+      climate_temp_anomaly: "+0.01"
+  climate_policy_shift:
+    status: "DIVERGENCE"
+    description: "Lahaina becomes the catalyst for aggressive US climate adaptation investment"
+    explanation: "Destruction of an iconic American town shifts political calculus on climate"
+    world_state_effects:
+      climate_temp_anomaly: "-0.01"
+      renewable_energy_share: "+0.02"
+      us_institutional_trust: "+0.01"
+  fire_averted:
+    status: "DIVERGENCE"
+    description: "Wind patterns shift; fire contained before reaching Lahaina"
+    explanation: "Slightly different weather conditions allow firefighters to establish containment"
+    world_state_effects:
+      climate_temp_anomaly: "+0.00"
+  recurring_disasters:
+    status: "ESCALATED"
+    description: "Multiple developed-world climate catastrophes in rapid succession normalize loss"
+    explanation: "Lahaina followed by more fires, floods, and heat waves across the US"
+    world_state_effects:
+      climate_temp_anomaly: "+0.03"
+      us_institutional_trust: "-0.05"
+      food_security_index: "-0.02"
+      biodiversity_index: "-0.02"

@@ -1,0 +1,67 @@
+id: "2035_china_post_xi"
+year_month: "2035-06"
+title: "China Post-Xi Transition"
+description: >
+  The political trajectory of China after Xi Jinping's era. Whether power
+  transitions smoothly, reform opens up, or instability follows the end
+  of personalist rule.
+domain: "geopolitical"
+confidence: "MEDIUM"
+variable: "china_post_xi_status"
+distribution:
+  type: "categorical"
+  options:
+    hardliner_successor: 0.30
+    reform_faction: 0.15
+    collective_leadership: 0.20
+    instability: 0.15
+    xi_continues: 0.10
+    democratic_opening: 0.10
+dependencies:
+  - node: "2012_xi_consolidation"
+    branch: "historical_consolidation"
+    modifies:
+      hardliner_successor: "+0.05"
+      collective_leadership: "-0.05"
+conditional: null
+outcomes:
+  hardliner_successor:
+    status: "DIVERGENCE"
+    description: "Xi's chosen successor continues authoritarian consolidation"
+    explanation: "Power transfer to loyalist maintains trajectory of centralized control and assertive foreign policy"
+    world_state_effects:
+      china_power_index: "+0.02"
+      global_democracy_index: "-0.02"
+  reform_faction:
+    status: "DIVERGENCE"
+    description: "Reformist faction gains power; limited political and economic opening"
+    explanation: "Post-Xi power struggle won by pragmatists favoring market reform and diplomatic engagement"
+    world_state_effects:
+      china_power_index: "+0.05"
+      global_democracy_index: "+0.02"
+  collective_leadership:
+    status: "DIVERGENCE"
+    description: "Return to collective leadership model; no single paramount leader"
+    explanation: "CCP reverts to post-Mao consensus governance; reduces risk of personalist errors"
+    world_state_effects:
+      china_power_index: "+0.03"
+  instability:
+    status: "ESCALATED"
+    description: "Power struggle creates political instability and economic disruption"
+    explanation: "No clear succession plan; factional infighting paralyzes governance"
+    world_state_effects:
+      china_power_index: "-0.10"
+      global_gdp: "-0.02"
+  xi_continues:
+    status: "DIVERGENCE"
+    description: "Xi Jinping remains in power into the late 2030s"
+    explanation: "Health permits and no challenger emerges; Xi rules as paramount leader past 80"
+    world_state_effects:
+      china_power_index: "-0.02"
+  democratic_opening:
+    status: "DIVERGENCE"
+    description: "Significant democratic reforms begin in China"
+    explanation: "Economic pressures and new leadership create space for limited democratic experimentation"
+    world_state_effects:
+      china_power_index: "+0.05"
+      global_democracy_index: "+0.05"

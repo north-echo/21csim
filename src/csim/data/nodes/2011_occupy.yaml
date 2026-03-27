@@ -1,0 +1,63 @@
+id: "2011_occupy"
+year_month: "2011-09"
+title: "Occupy Wall Street"
+description: >
+  Protest movement against economic inequality. "We are the 99%."
+  Failed to produce policy change but reshaped political vocabulary
+  and set the stage for both Sanders and Trump populism.
+domain: "social"
+confidence: "HIGH"
+variable: "occupy_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_fizzle: 0.45
+    lasting_movement: 0.15
+    policy_wins: 0.10
+    co_opted: 0.20
+    backlash: 0.10
+dependencies:
+  - node: "2008_financial_crisis"
+    branch: "great_depression_2"
+    modifies:
+      lasting_movement: "+0.15"
+      policy_wins: "+0.10"
+  - node: "2010_euro_crisis"
+    branch: null
+    modifies: {}
+conditional: null
+outcomes:
+  historical_fizzle:
+    status: "HISTORICAL"
+    description: "Protests gain attention but produce no lasting institutional impact"
+    world_state_effects:
+      inequality_index: "+0.01"
+      us_polarization: "+0.02"
+  lasting_movement:
+    status: "DIVERGENCE"
+    description: "Occupy evolves into a permanent political force"
+    world_state_effects:
+      inequality_index: "-0.02"
+      us_polarization: "+0.03"
+    cascading_modifiers:
+      2016_us_election.third_party_surge: "+0.05"
+  policy_wins:
+    status: "DIVERGENCE"
+    description: "Occupy achieves financial regulation or progressive tax reform"
+    world_state_effects:
+      inequality_index: "-0.03"
+      us_polarization: "+0.01"
+    cascading_modifiers:
+      2012_zirp.fiscal_over_monetary: "+0.05"
+  co_opted:
+    status: "DIVERGENCE"
+    description: "Movement energy absorbed into existing political parties"
+    world_state_effects:
+      inequality_index: "+0.01"
+      us_polarization: "+0.01"
+  backlash:
+    status: "DIVERGENCE"
+    description: "Occupy triggers anti-protest legislation and public backlash"
+    world_state_effects:
+      inequality_index: "+0.02"
+      us_polarization: "+0.03"

@@ -1,0 +1,51 @@
+id: "2047_amazon_tipping"
+year_month: "2047-01"
+title: "Amazon Tipping Point"
+description: >
+  The Amazon rainforest reaches a critical threshold where deforestation and warming
+  risk transforming the world's largest tropical forest into savanna, with massive
+  consequences for global carbon cycling and biodiversity.
+domain: "climate"
+confidence: "MEDIUM"
+variable: "amazon_tipping_status"
+distribution:
+  type: "categorical"
+  options:
+    partial_dieback: 0.30
+    full_dieback: 0.10
+    stabilized: 0.25
+    managed_transition: 0.20
+    accelerated_by_fires: 0.15
+dependencies: []
+conditional: "climate_temp_anomaly > 1.8"
+outcomes:
+  partial_dieback:
+    status: "DIVERGENCE"
+    description: "Eastern Amazon transitions to savanna; western Amazon persists but diminished"
+    world_state_effects:
+      climate_temp_anomaly: "+0.15"
+      biodiversity_index: "-0.12"
+  full_dieback:
+    status: "ESCALATED"
+    description: "Amazon rainforest collapses entirely, releasing massive carbon stores"
+    world_state_effects:
+      climate_temp_anomaly: "+0.35"
+      biodiversity_index: "-0.25"
+  stabilized:
+    status: "DIVERGENCE"
+    description: "Conservation and reduced warming stabilize the Amazon ecosystem"
+    world_state_effects:
+      climate_temp_anomaly: "+0.02"
+      biodiversity_index: "-0.03"
+  managed_transition:
+    status: "DIVERGENCE"
+    description: "Planned reforestation and sustainable agriculture manage the transition"
+    world_state_effects:
+      climate_temp_anomaly: "+0.08"
+      biodiversity_index: "-0.08"
+  accelerated_by_fires:
+    status: "ESCALATED"
+    description: "Unprecedented fire seasons accelerate dieback beyond natural tipping point"
+    world_state_effects:
+      climate_temp_anomaly: "+0.25"
+      biodiversity_index: "-0.18"

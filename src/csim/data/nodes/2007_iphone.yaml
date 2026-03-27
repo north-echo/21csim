@@ -1,0 +1,43 @@
+id: "2007_iphone"
+year_month: "2007-06"
+title: "Smartphone Revolution"
+description: >
+  Apple launches iPhone, catalyzing the smartphone era. Mobile internet
+  transforms communication, commerce, social media, and daily life globally.
+domain: "technology"
+confidence: "HIGH"
+variable: "smartphone_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_apple_led: 0.60
+    open_platform_wins: 0.25
+    delayed_3_years: 0.10
+    fragmented_market: 0.05
+dependencies: []
+conditional: null
+outcomes:
+  historical_apple_led:
+    status: "HISTORICAL"
+    description: "iPhone launches smartphone revolution; iOS/Android duopoly"
+    world_state_effects:
+      social_media_penetration: "+0.10"
+      internet_freedom_index: "-0.02"
+      global_gdp_growth_modifier: "*1.02"
+  open_platform_wins:
+    status: "DIVERGENCE"
+    description: "Open mobile platforms dominate over walled gardens"
+    explanation: "Linux-based open phones gain traction before iPhone"
+    world_state_effects:
+      social_media_penetration: "+0.08"
+      internet_freedom_index: "+0.03"
+  delayed_3_years:
+    status: "DIVERGENCE"
+    description: "Smartphone revolution delayed until 2010"
+    world_state_effects:
+      social_media_penetration: "+0.03"
+  fragmented_market:
+    status: "DIVERGENCE"
+    description: "No dominant platform; feature phones persist longer"
+    world_state_effects:
+      social_media_penetration: "+0.02"

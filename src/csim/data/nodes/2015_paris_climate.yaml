@@ -1,0 +1,52 @@
+id: "2015_paris_climate"
+year_month: "2015-12"
+title: "Paris Climate Agreement"
+domain: "climate"
+confidence: "HIGH"
+variable: "climate_agreement"
+distribution:
+  type: "categorical"
+  options:
+    historical_agreement: 0.50
+    binding_agreement: 0.15
+    no_agreement: 0.20
+    delayed_agreement: 0.15
+dependencies:
+  - node: "2000_election"
+    branch: "gore_wins"
+    modifies:
+      binding_agreement: "+0.10"
+      historical_agreement: "+0.05"
+      no_agreement: "-0.15"
+conditional: null
+outcomes:
+  historical_agreement:
+    status: "HISTORICAL"
+    description: "Paris Agreement signed; voluntary commitments, weak enforcement"
+    world_state_effects:
+      renewable_energy_share: "+0.03"
+      climate_temp_anomaly: "+0.02"
+    cascading_modifiers:
+      2025_climate_tipping.accelerated_action: "+0.05"
+  binding_agreement:
+    status: "DIVERGENCE"
+    description: "Binding agreement with enforcement mechanisms"
+    world_state_effects:
+      renewable_energy_share: "+0.08"
+      climate_temp_anomaly: "-0.05"
+      global_gdp_growth_modifier: "*0.99"
+    cascading_modifiers:
+      2025_climate_tipping.accelerated_action: "+0.15"
+      2027_energy_transition.rapid_transition: "+0.10"
+  no_agreement:
+    status: "DIVERGENCE"
+    description: "Climate negotiations fail; no global agreement"
+    world_state_effects:
+      climate_temp_anomaly: "+0.08"
+    cascading_modifiers:
+      2025_climate_tipping.tipping_point_crossed: "+0.10"
+  delayed_agreement:
+    status: "DELAYED"
+    description: "Agreement delayed to 2018-2020"
+    world_state_effects:
+      climate_temp_anomaly: "+0.04"

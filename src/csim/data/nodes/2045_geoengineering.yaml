@@ -1,0 +1,60 @@
+id: "2045_geoengineering"
+year_month: "2045-01"
+title: "Geoengineering Decision"
+description: >
+  Global decision point on deploying solar radiation management or other
+  geoengineering technologies at scale. Stakes include planetary-scale climate
+  intervention with uncertain consequences.
+domain: "climate"
+confidence: "MEDIUM"
+variable: "geoengineering_status"
+distribution:
+  type: "categorical"
+  options:
+    deployed_internationally: 0.15
+    unilateral: 0.20
+    banned: 0.15
+    tested_not_deployed: 0.25
+    emergency_deployment: 0.15
+    governance_deadlock: 0.10
+dependencies: []
+conditional: "climate_temp_anomaly > 2.0"
+outcomes:
+  deployed_internationally:
+    status: "DIVERGENCE"
+    description: "International consortium deploys stratospheric aerosol injection under governance framework"
+    world_state_effects:
+      climate_temp_anomaly: "-0.40"
+      global_democracy_index: "+0.02"
+      food_security_index: "+0.05"
+  unilateral:
+    status: "ESCALATED"
+    description: "A single nation deploys geoengineering without international consent, triggering geopolitical crisis"
+    world_state_effects:
+      climate_temp_anomaly: "-0.25"
+      us_china_tension_index: "+0.15"
+      conflict_deaths: "+5000"
+  banned:
+    status: "DIVERGENCE"
+    description: "International treaty bans geoengineering deployment; focus remains on emissions reduction"
+    world_state_effects:
+      climate_temp_anomaly: "+0.05"
+      global_democracy_index: "+0.01"
+  tested_not_deployed:
+    status: "DIVERGENCE"
+    description: "Small-scale tests conducted but full deployment deferred pending more research"
+    world_state_effects:
+      climate_temp_anomaly: "-0.02"
+  emergency_deployment:
+    status: "ESCALATED"
+    description: "Climate emergency forces rapid deployment without adequate testing or governance"
+    world_state_effects:
+      climate_temp_anomaly: "-0.35"
+      food_security_index: "-0.08"
+      conflict_deaths: "+10000"
+  governance_deadlock:
+    status: "DIVERGENCE"
+    description: "Nations cannot agree on deployment framework; geoengineering remains in limbo"
+    world_state_effects:
+      climate_temp_anomaly: "+0.08"
+      global_democracy_index: "-0.02"

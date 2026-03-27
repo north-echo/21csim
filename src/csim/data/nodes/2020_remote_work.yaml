@@ -1,0 +1,44 @@
+id: "2020_remote_work"
+year_month: "2020-03"
+title: "Remote Work Revolution"
+domain: "social"
+confidence: "HIGH"
+variable: "remote_work"
+distribution:
+  type: "categorical"
+  options:
+    historical_hybrid: 0.45
+    full_remote_wins: 0.15
+    return_to_office: 0.25
+    geographic_revolution: 0.15
+dependencies:
+  - node: "2019_covid_emergence"
+    branch: "no_pandemic"
+    modifies:
+      return_to_office: "+0.25"
+      historical_hybrid: "-0.15"
+      full_remote_wins: "-0.10"
+conditional: null
+outcomes:
+  historical_hybrid:
+    status: "HISTORICAL"
+    description: "Hybrid work becomes norm for knowledge workers"
+    world_state_effects:
+      inequality_index: "+0.01"
+      global_gdp_growth_modifier: "*1.005"
+  full_remote_wins:
+    status: "DIVERGENCE"
+    description: "Full remote becomes dominant for all possible jobs"
+    world_state_effects:
+      inequality_index: "-0.02"
+      global_gdp_growth_modifier: "*1.01"
+  return_to_office:
+    status: "DIVERGENCE"
+    description: "Full return to office by 2023"
+    world_state_effects: {}
+  geographic_revolution:
+    status: "DIVERGENCE"
+    description: "Remote work triggers massive geographic redistribution"
+    world_state_effects:
+      inequality_index: "-0.03"
+      us_polarization: "-0.02"

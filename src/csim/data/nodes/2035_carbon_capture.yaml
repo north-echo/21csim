@@ -1,0 +1,56 @@
+id: "2035_carbon_capture"
+year_month: "2035-06"
+title: "Carbon Capture at Scale"
+description: >
+  Whether direct air capture and carbon capture technologies can scale to
+  meaningfully reduce atmospheric CO2. Critical for any pathway to limiting
+  warming below 2 degrees.
+domain: "climate"
+confidence: "MEDIUM"
+variable: "carbon_capture_status"
+distribution:
+  type: "categorical"
+  options:
+    works_at_scale: 0.20
+    too_expensive: 0.35
+    breakthrough_cheap: 0.10
+    energy_penalty: 0.20
+    abandoned: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  works_at_scale:
+    status: "DIVERGENCE"
+    description: "Carbon capture deployed at gigatonne scale; materially reduces emissions trajectory"
+    explanation: "Government subsidies and technology improvements make large-scale deployment viable"
+    world_state_effects:
+      climate_temp_anomaly: "-0.10"
+      renewable_energy_share: "+0.05"
+  too_expensive:
+    status: "DIVERGENCE"
+    description: "Carbon capture works technically but remains economically unviable at scale"
+    explanation: "Costs remain $300-600 per tonne; far cheaper to avoid emissions than capture them"
+    world_state_effects:
+      climate_temp_anomaly: "+0.05"
+      renewable_energy_share: "+0.02"
+  breakthrough_cheap:
+    status: "DIVERGENCE"
+    description: "Revolutionary breakthrough makes carbon capture cheap and scalable"
+    explanation: "Novel catalysts or biological approaches reduce costs below $50 per tonne"
+    world_state_effects:
+      climate_temp_anomaly: "-0.20"
+      renewable_energy_share: "+0.08"
+  energy_penalty:
+    status: "DIVERGENCE"
+    description: "Carbon capture requires too much energy; net benefit marginal"
+    explanation: "Energy requirements for capture offset much of the climate benefit"
+    world_state_effects:
+      climate_temp_anomaly: "+0.02"
+      renewable_energy_share: "-0.03"
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Carbon capture programs largely abandoned as impractical"
+    explanation: "After billions invested, capture proves unable to compete with emissions reduction"
+    world_state_effects:
+      climate_temp_anomaly: "+0.08"
+      renewable_energy_share: "+0.03"

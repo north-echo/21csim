@@ -1,0 +1,46 @@
+id: "2055_population_peak"
+year_month: "2055-01"
+title: "Population Peak"
+description: >
+  Global population growth trajectory reaches a turning point. Whether the world
+  peaks at 9 billion or lower, and how fast decline occurs, shapes resource
+  demands and economic models for the rest of the century.
+domain: "economic"
+confidence: "LOW"
+variable: "population_peak_status"
+distribution:
+  type: "categorical"
+  options:
+    peaked_9b: 0.30
+    peaked_8_5b: 0.25
+    still_growing: 0.15
+    declining_fast: 0.15
+    pandemic_reduced: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  peaked_9b:
+    status: "DIVERGENCE"
+    description: "Global population peaks near 9 billion and begins gradual decline"
+    world_state_effects:
+      global_population_billions: "+0.50"
+  peaked_8_5b:
+    status: "DIVERGENCE"
+    description: "Faster fertility decline causes population to peak at 8.5 billion"
+    world_state_effects:
+      global_population_billions: "+0.10"
+  still_growing:
+    status: "DIVERGENCE"
+    description: "Population continues growing past 9 billion with no peak in sight"
+    world_state_effects:
+      global_population_billions: "+1.00"
+  declining_fast:
+    status: "DIVERGENCE"
+    description: "Population already declining rapidly; workforce shortages emerge globally"
+    world_state_effects:
+      global_population_billions: "-0.30"
+  pandemic_reduced:
+    status: "ESCALATED"
+    description: "Pandemic or health crisis significantly reduces global population below projections"
+    world_state_effects:
+      global_population_billions: "-0.50"

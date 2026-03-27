@@ -1,0 +1,74 @@
+id: "2024_tiktok_ban"
+year_month: "2024-01"
+title: "US TikTok Ban Saga"
+description: >
+  Congress passes legislation requiring ByteDance to divest TikTok or face
+  a US ban, raising fundamental questions about tech sovereignty, free
+  speech, US-China relations, and government authority over digital platforms.
+  The saga embodies the tension between national security and open internet
+  principles.
+domain: "technology"
+confidence: "HIGH"
+variable: "tiktok_ban_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_ban_saga: 0.45
+    forced_divestiture: 0.20
+    ban_blocked: 0.15
+    no_legislation: 0.10
+    reciprocal_tech_war: 0.10
+dependencies:
+  - node: "2020_tiktok"
+    branch: "historical_dominance"
+    modifies:
+      historical_ban_saga: "+0.05"
+      no_legislation: "-0.05"
+  - node: "2020_tiktok"
+    branch: "banned_in_west"
+    modifies:
+      historical_ban_saga: "-0.15"
+      no_legislation: "+0.05"
+      forced_divestiture: "+0.10"
+conditional: null
+outcomes:
+  historical_ban_saga:
+    status: "HISTORICAL"
+    description: "Ban legislation passes; legal challenges delay enforcement; uncertainty persists"
+    world_state_effects:
+      internet_freedom_index: "-0.02"
+      china_power_index: "-0.01"
+      us_polarization: "+0.01"
+  forced_divestiture:
+    status: "DIVERGENCE"
+    description: "ByteDance successfully divests TikTok to US-based consortium"
+    explanation: "Commercial pressures outweigh geopolitical resistance; deal closes"
+    world_state_effects:
+      internet_freedom_index: "-0.01"
+      china_power_index: "-0.02"
+      us_polarization: "+0.00"
+  ban_blocked:
+    status: "DIVERGENCE"
+    description: "Courts strike down ban as First Amendment violation"
+    explanation: "Supreme Court rules government cannot ban a platform used by 170M Americans"
+    world_state_effects:
+      internet_freedom_index: "+0.02"
+      china_power_index: "+0.01"
+      us_polarization: "+0.01"
+  no_legislation:
+    status: "DIVERGENCE"
+    description: "Congress fails to pass TikTok legislation; status quo continues"
+    explanation: "Lobbying, free speech concerns, and partisan divisions prevent action"
+    world_state_effects:
+      internet_freedom_index: "+0.01"
+      china_power_index: "+0.01"
+  reciprocal_tech_war:
+    status: "ESCALATED"
+    description: "TikTok ban triggers broader US-China tech decoupling and retaliatory bans"
+    explanation: "China retaliates against Apple and US tech firms; digital iron curtain descends"
+    world_state_effects:
+      internet_freedom_index: "-0.05"
+      china_power_index: "-0.02"
+      us_polarization: "+0.02"
+      global_gdp_growth_modifier: "*0.99"
+      supply_chain_resilience: "-0.03"

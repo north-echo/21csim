@@ -1,0 +1,76 @@
+id: "2008_fracking"
+year_month: "2008-01"
+title: "US Shale / Fracking Revolution"
+description: >
+  Hydraulic fracturing transforms US from energy importer to the world's
+  largest oil and gas producer. Geopolitical implications are enormous —
+  reduces Middle East leverage, delays renewable transition, but also
+  enables coal-to-gas switching that reduces emissions.
+domain: "energy"
+confidence: "HIGH"
+variable: "fracking_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_boom: 0.50
+    regulated_heavily: 0.15
+    technology_fails: 0.10
+    earlier_boom: 0.10
+    environmental_catastrophe: 0.15
+dependencies:
+  - node: "2000_election"
+    branch: "gore_wins"
+    modifies:
+      regulated_heavily: "+0.15"
+      historical_boom: "-0.10"
+      environmental_catastrophe: "-0.05"
+conditional: null
+outcomes:
+  historical_boom:
+    status: "HISTORICAL"
+    description: "US becomes energy independent by 2019; largest oil and gas producer"
+    world_state_effects:
+      renewable_energy_share: "-0.01"
+      climate_temp_anomaly: "+0.02"
+      us_global_standing: "+0.03"
+      middle_east_stability: "+0.02"
+      global_gdp_growth_modifier: "*1.01"
+    cascading_modifiers:
+      2022_russia_ukraine.no_invasion: "-0.05"
+      2027_energy_transition.fossil_resurgence: "+0.05"
+  regulated_heavily:
+    status: "DIVERGENCE"
+    description: "Environmental concerns limit fracking; US remains net energy importer"
+    world_state_effects:
+      renewable_energy_share: "+0.02"
+      climate_temp_anomaly: "-0.02"
+      middle_east_stability: "-0.02"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.03"
+  technology_fails:
+    status: "DIVERGENCE"
+    description: "Shale wells deplete faster than expected; fracking boom fizzles by 2015"
+    world_state_effects:
+      climate_temp_anomaly: "+0.01"
+      global_gdp_growth_modifier: "*0.99"
+      us_global_standing: "-0.02"
+  earlier_boom:
+    status: "DIVERGENCE"
+    description: "Fracking scales 3 years earlier; US energy independent by 2016"
+    world_state_effects:
+      us_global_standing: "+0.05"
+      middle_east_stability: "+0.03"
+      renewable_energy_share: "-0.02"
+      climate_temp_anomaly: "+0.03"
+    cascading_modifiers:
+      2027_energy_transition.fossil_resurgence: "+0.08"
+  environmental_catastrophe:
+    status: "ESCALATED"
+    description: "Major groundwater contamination event triggers nationwide fracking ban"
+    world_state_effects:
+      renewable_energy_share: "+0.03"
+      climate_temp_anomaly: "-0.01"
+      us_global_standing: "-0.02"
+      water_stress_index: "+0.05"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.05"

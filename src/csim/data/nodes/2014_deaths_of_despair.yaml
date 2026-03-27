@@ -1,0 +1,51 @@
+id: "2014_deaths_of_despair"
+year_month: "2014-01"
+title: "Deaths of Despair / Life Expectancy"
+domain: "social"
+confidence: "HIGH"
+variable: "deaths_of_despair"
+distribution:
+  type: "categorical"
+  options:
+    historical_decline: 0.50
+    public_health_response: 0.20
+    continues_worsening: 0.15
+    reversal_by_2025: 0.15
+dependencies:
+  - node: "2003_opioid_crisis"
+    branch: "regulated_early"
+    modifies:
+      reversal_by_2025: "+0.15"
+      historical_decline: "-0.10"
+      continues_worsening: "-0.05"
+  - node: "2008_financial_crisis"
+    branch: "great_depression_2"
+    modifies:
+      continues_worsening: "+0.10"
+      historical_decline: "+0.05"
+      reversal_by_2025: "-0.15"
+conditional: null
+outcomes:
+  historical_decline:
+    status: "HISTORICAL"
+    description: "US life expectancy declines; unprecedented for developed nation"
+    world_state_effects:
+      us_life_expectancy_delta: "-1.0"
+      inequality_index: "+0.02"
+  public_health_response:
+    status: "DIVERGENCE"
+    description: "Public health system mobilizes; treatment expansion"
+    world_state_effects:
+      us_life_expectancy_delta: "-0.3"
+  continues_worsening:
+    status: "ESCALATED"
+    description: "Deaths of despair accelerate through 2030"
+    world_state_effects:
+      us_life_expectancy_delta: "-3.0"
+      inequality_index: "+0.05"
+      us_institutional_trust: "-0.05"
+  reversal_by_2025:
+    status: "DIVERGENCE"
+    description: "Trend reverses by 2025 through intervention"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.5"

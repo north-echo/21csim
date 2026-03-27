@@ -1,0 +1,75 @@
+id: "2042_mars_comms"
+year_month: "2042-06"
+title: "Mars Communication Infrastructure"
+description: >
+  Deployment of delay-tolerant networking infrastructure between Earth and Mars.
+  Relay satellites, laser communication links, and autonomous routing protocols
+  to support crewed missions and eventual settlement. Communication delays of
+  4-24 minutes demand fundamentally new network architectures.
+domain: "space"
+confidence: "LOW"
+variable: "mars_comms_status"
+distribution:
+  type: "categorical"
+  options:
+    full_relay_network: 0.20
+    minimal_links: 0.30
+    laser_comm_breakthrough: 0.15
+    delayed_deployment: 0.25
+    no_infrastructure: 0.10
+dependencies:
+  - node: "2040_mars_mission"
+    branch: "successful_landing"
+    modifies:
+      full_relay_network: "+0.10"
+      laser_comm_breakthrough: "+0.05"
+      no_infrastructure: "-0.10"
+      delayed_deployment: "-0.05"
+  - node: "2040_mars_mission"
+    branch: "cancelled"
+    modifies:
+      no_infrastructure: "+0.15"
+      delayed_deployment: "+0.05"
+      full_relay_network: "-0.10"
+      laser_comm_breakthrough: "-0.10"
+  - node: "2040_mars_mission"
+    branch: "robotic_only"
+    modifies:
+      minimal_links: "+0.05"
+      full_relay_network: "-0.05"
+conditional: null
+outcomes:
+  full_relay_network:
+    status: "DIVERGENCE"
+    description: "Complete Mars relay satellite constellation provides near-continuous high-bandwidth communication"
+    explanation: "Multiple relay satellites at Sun-Mars Lagrange points and Mars orbit ensure reliable data links"
+    world_state_effects:
+      space_development_index: "+0.08"
+    cascading_modifiers:
+      2048_mars_settlement.thriving: "+0.05"
+  minimal_links:
+    status: "DIVERGENCE"
+    description: "Basic communication links operational but bandwidth-limited; blackout periods persist"
+    explanation: "Budget constraints limit deployment to a few relay satellites; solar conjunction still causes outages"
+    world_state_effects:
+      space_development_index: "+0.04"
+  laser_comm_breakthrough:
+    status: "DIVERGENCE"
+    description: "Optical laser communication achieves gigabit speeds between Earth and Mars"
+    explanation: "Deep-space laser terminals exceed RF bandwidth by 100x; enables real-time video from Mars"
+    world_state_effects:
+      space_development_index: "+0.10"
+    cascading_modifiers:
+      2048_mars_settlement.thriving: "+0.03"
+  delayed_deployment:
+    status: "DIVERGENCE"
+    description: "Mars communication infrastructure delayed; early missions rely on direct-to-Earth links"
+    explanation: "Funding and launch vehicle availability push relay constellation to the late 2040s"
+    world_state_effects:
+      space_development_index: "+0.02"
+  no_infrastructure:
+    status: "DIVERGENCE"
+    description: "No dedicated Mars communication infrastructure deployed; missions use legacy deep-space network"
+    explanation: "Without crewed missions to justify the expense, Mars comms remain low-priority"
+    world_state_effects:
+      space_development_index: "+0.00"

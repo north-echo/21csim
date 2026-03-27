@@ -1,0 +1,55 @@
+id: "2012_sandy_hook"
+year_month: "2012-12"
+title: "Sandy Hook / Gun Control"
+description: >
+  Mass shooting at elementary school kills 26 including 20 children.
+  Fails to produce federal gun legislation despite overwhelming public support.
+  Crystallizes the gun control gridlock.
+domain: "social"
+confidence: "HIGH"
+variable: "sandy_hook_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_no_legislation: 0.45
+    assault_weapons_ban: 0.15
+    no_shooting: 0.15
+    cultural_shift: 0.15
+    backlash_more_guns: 0.10
+dependencies:
+  - node: "2008_obama_election"
+    branch: "mccain_wins"
+    modifies:
+      historical_no_legislation: "+0.10"
+conditional: null
+outcomes:
+  historical_no_legislation:
+    status: "HISTORICAL"
+    description: "Manchin-Toomey fails; no federal gun legislation passes"
+    world_state_effects:
+      us_polarization: "+0.03"
+      us_institutional_trust: "-0.03"
+  assault_weapons_ban:
+    status: "DIVERGENCE"
+    description: "Manchin-Toomey passes; assault weapons restricted nationwide"
+    world_state_effects:
+      us_polarization: "+0.02"
+      us_institutional_trust: "+0.02"
+  no_shooting:
+    status: "DIVERGENCE"
+    description: "Sandy Hook shooting does not occur"
+    world_state_effects:
+      us_polarization: "+0.00"
+      us_institutional_trust: "+0.00"
+  cultural_shift:
+    status: "DIVERGENCE"
+    description: "March For Our Lives energy happens six years earlier"
+    world_state_effects:
+      us_polarization: "+0.02"
+      us_institutional_trust: "+0.01"
+  backlash_more_guns:
+    status: "DIVERGENCE"
+    description: "Defensive gun purchases spike; NRA strengthens politically"
+    world_state_effects:
+      us_polarization: "+0.04"
+      us_institutional_trust: "-0.02"

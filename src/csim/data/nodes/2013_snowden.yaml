@@ -1,0 +1,53 @@
+id: "2013_snowden"
+year_month: "2013-06"
+title: "Snowden Revelations"
+description: >
+  Edward Snowden leaks massive trove of NSA surveillance documents.
+  Reveals scope of mass surveillance programs. Sparks global debate
+  on privacy, security, and government overreach.
+domain: "technology"
+confidence: "HIGH"
+variable: "snowden_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_leak: 0.50
+    no_leak: 0.25
+    earlier_leak_2010: 0.10
+    limited_leak: 0.15
+dependencies:
+  - node: "2001_911"
+    branch: "historical_full"
+    modifies:
+      historical_leak: "+0.10"
+      no_leak: "-0.10"
+  - node: "2001_911"
+    branch: "plot_disrupted"
+    modifies:
+      historical_leak: "-0.10"
+      no_leak: "+0.10"
+conditional: null
+outcomes:
+  historical_leak:
+    status: "HISTORICAL"
+    description: "Snowden reveals NSA mass surveillance programs"
+    world_state_effects:
+      surveillance_state_index: "-0.03"
+      internet_freedom_index: "+0.02"
+      us_global_standing: "-0.03"
+  no_leak:
+    status: "DIVERGENCE"
+    description: "No major surveillance leak occurs"
+    world_state_effects:
+      surveillance_state_index: "+0.05"
+  earlier_leak_2010:
+    status: "DIVERGENCE"
+    description: "Similar leak happens in 2010"
+    world_state_effects:
+      surveillance_state_index: "-0.05"
+      internet_freedom_index: "+0.03"
+  limited_leak:
+    status: "DIVERGENCE"
+    description: "Smaller leak; less public impact"
+    world_state_effects:
+      surveillance_state_index: "-0.01"

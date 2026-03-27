@@ -1,0 +1,66 @@
+id: "2016_brexit"
+year_month: "2016-06"
+title: "Brexit Referendum"
+description: >
+  UK votes to leave the European Union by 52-48%. Reflects anti-establishment
+  sentiment, immigration concerns, and EU skepticism. Weakens EU cohesion
+  and UK economy.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "brexit_outcome"
+distribution:
+  type: "categorical"
+  options:
+    leave_wins: 0.48
+    remain_wins: 0.40
+    no_referendum: 0.07
+    leave_then_reverse: 0.05
+dependencies:
+  - node: "2003_iraq"
+    branch: "full_invasion"
+    modifies:
+      leave_wins: "+0.08"
+      remain_wins: "-0.05"
+  - node: "2003_iraq"
+    branch: "diplomatic_resolution"
+    modifies:
+      leave_wins: "-0.05"
+      remain_wins: "+0.05"
+  - node: "2008_financial_crisis"
+    branch: "historical_severe"
+    modifies:
+      leave_wins: "+0.10"
+      remain_wins: "-0.05"
+  - node: "2008_financial_crisis"
+    branch: "mild_recession"
+    modifies:
+      leave_wins: "-0.08"
+      remain_wins: "+0.08"
+conditional: null
+outcomes:
+  leave_wins:
+    status: "HISTORICAL"
+    description: "UK votes Leave 52-48%"
+    world_state_effects:
+      eu_cohesion: "-0.10"
+      us_polarization: "+0.02"
+      global_democracy_index: "-0.01"
+      global_gdp_growth_modifier: "*0.99"
+  remain_wins:
+    status: "DIVERGENCE"
+    description: "Remain wins 52-48%"
+    explanation: "Turnout patterns slightly different; undecided break for status quo"
+    world_state_effects:
+      eu_cohesion: "+0.03"
+  no_referendum:
+    status: "DIVERGENCE"
+    description: "Cameron doesn't call referendum"
+    explanation: "Conservative party manages EU skeptics internally"
+    world_state_effects:
+      eu_cohesion: "+0.02"
+  leave_then_reverse:
+    status: "DIVERGENCE"
+    description: "Leave wins but second referendum reverses decision"
+    world_state_effects:
+      eu_cohesion: "-0.03"
+      us_polarization: "+0.01"

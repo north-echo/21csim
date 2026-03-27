@@ -1,0 +1,55 @@
+id: "2055_human_ai"
+year_month: "2055-01"
+title: "Human-AI Relationship"
+description: >
+  The long-term relationship between humanity and artificial intelligence takes
+  definitive shape. Whether the relationship is symbiotic, adversarial, or leads
+  to merger determines the trajectory of both species.
+domain: "technology"
+confidence: "LOW"
+variable: "human_ai_status"
+distribution:
+  type: "categorical"
+  options:
+    symbiotic: 0.25
+    adversarial: 0.10
+    merged: 0.10
+    separate: 0.25
+    dependent: 0.20
+    extinct_ai: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  symbiotic:
+    status: "DIVERGENCE"
+    description: "Humans and AI develop mutually beneficial partnership; both thrive"
+    world_state_effects:
+      existential_risk_cumulative: "-0.05"
+      inequality_index: "-0.03"
+  adversarial:
+    status: "ESCALATED"
+    description: "Human-AI relationship becomes competitive; conflict over resources and control"
+    world_state_effects:
+      existential_risk_cumulative: "+0.10"
+      conflict_deaths: "+5000"
+  merged:
+    status: "DIVERGENCE"
+    description: "Humans and AI begin merging through neural interfaces; new hybrid species emerges"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.30"
+      existential_risk_cumulative: "+0.05"
+  separate:
+    status: "DIVERGENCE"
+    description: "Humans and AI occupy distinct domains with clear boundaries and limited interaction"
+    world_state_effects:
+      existential_risk_cumulative: "-0.03"
+  dependent:
+    status: "DIVERGENCE"
+    description: "Humanity becomes deeply dependent on AI for all critical systems"
+    world_state_effects:
+      existential_risk_cumulative: "+0.08"
+  extinct_ai:
+    status: "DIVERGENCE"
+    description: "Advanced AI abandoned or destroyed; humanity returns to human-only systems"
+    world_state_effects:
+      existential_risk_cumulative: "-0.10"

@@ -1,0 +1,46 @@
+id: "2085_middle_east"
+year_month: "2085-01"
+title: "Middle East 2085"
+description: >
+  The Middle East's trajectory deep into the post-oil era. Whether the region
+  has found a new identity, prosperity, and stability or remains troubled
+  by its historical legacies.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "middle_east_status_2085"
+distribution:
+  type: "categorical"
+  options:
+    transformed: 0.25
+    integrated: 0.20
+    conflict: 0.10
+    green_economy: 0.20
+    irrelevant: 0.10
+    cultural_center: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  transformed:
+    status: "DIVERGENCE"
+    description: "Region completely transformed from its 2000s character; prosperous and stable"
+    world_state_effects: {}
+  integrated:
+    status: "DIVERGENCE"
+    description: "Middle Eastern nations integrated into broader economic and political blocs"
+    world_state_effects: {}
+  conflict:
+    status: "ESCALATED"
+    description: "Ongoing low-level conflicts and instability persist despite decades of international engagement"
+    world_state_effects: {}
+  green_economy:
+    status: "DIVERGENCE"
+    description: "Region leverages solar resources and geographic position to lead in green energy exports"
+    world_state_effects: {}
+  irrelevant:
+    status: "DIVERGENCE"
+    description: "Region has lost geopolitical significance as energy sources diversified globally"
+    world_state_effects: {}
+  cultural_center:
+    status: "DIVERGENCE"
+    description: "Region becomes a global cultural and intellectual center bridging East and West"
+    world_state_effects: {}

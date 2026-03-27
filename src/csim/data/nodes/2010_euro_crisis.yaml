@@ -1,0 +1,65 @@
+id: "2010_euro_crisis"
+year_month: "2010-05"
+title: "Euro Sovereign Debt Crisis"
+domain: "economic"
+confidence: "HIGH"
+variable: "euro_crisis_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_austerity: 0.45
+    fiscal_union: 0.15
+    grexit: 0.15
+    no_crisis: 0.15
+    full_breakup: 0.10
+dependencies:
+  - node: "2008_financial_crisis"
+    branch: "great_depression_2"
+    modifies:
+      full_breakup: "+0.15"
+      historical_austerity: "+0.05"
+      no_crisis: "-0.15"
+  - node: "2008_financial_crisis"
+    branch: "mild_recession"
+    modifies:
+      no_crisis: "+0.10"
+      historical_austerity: "-0.10"
+conditional: null
+outcomes:
+  historical_austerity:
+    status: "HISTORICAL"
+    description: "Troika-imposed austerity; slow recovery; Greek suffering"
+    world_state_effects:
+      eu_cohesion: "-0.08"
+      inequality_index: "+0.04"
+      global_democracy_index: "-0.02"
+    cascading_modifiers:
+      2016_brexit.anti_establishment: "+0.05"
+      2022_european_right.economic_resentment: "+0.05"
+  fiscal_union:
+    status: "DIVERGENCE"
+    description: "Eurobonds created; fiscal union accelerated"
+    explanation: "Germany agrees to mutual debt; faster recovery"
+    world_state_effects:
+      eu_cohesion: "+0.05"
+      europe_federation_index: "+0.08"
+      global_gdp_growth_modifier: "*1.01"
+  grexit:
+    status: "DIVERGENCE"
+    description: "Greece exits the euro; contagion spreads"
+    world_state_effects:
+      eu_cohesion: "-0.15"
+      global_gdp_growth_modifier: "*0.98"
+      europe_federation_index: "-0.05"
+  no_crisis:
+    status: "DIVERGENCE"
+    description: "Better fiscal discipline prevents crisis"
+    world_state_effects:
+      eu_cohesion: "+0.02"
+  full_breakup:
+    status: "ESCALATED"
+    description: "Euro collapses; multiple countries exit"
+    world_state_effects:
+      eu_cohesion: "-0.30"
+      global_gdp_growth_modifier: "*0.92"
+      europe_federation_index: "-0.15"

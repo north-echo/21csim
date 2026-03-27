@@ -1,0 +1,81 @@
+id: "2008_financial_crisis"
+year_month: "2008-09"
+title: "2008 Financial Crisis"
+description: >
+  Collapse of Lehman Brothers triggers global financial crisis.
+  Housing bubble burst, credit freeze, massive bailouts. The deepest
+  recession since the Great Depression, reshaping economic policy
+  and fueling populist movements worldwide.
+domain: "economic"
+confidence: "HIGH"
+variable: "crisis_severity"
+distribution:
+  type: "categorical"
+  options:
+    historical_severe: 0.32
+    contained_early: 0.25
+    great_depression_2: 0.18
+    mild_recession: 0.25
+dependencies:
+  - node: "2001_dotcom_aftermath"
+    branch: "structural_reform"
+    modifies:
+      historical_severe: "-0.20"
+      mild_recession: "+0.15"
+      contained_early: "+0.05"
+conditional: null
+outcomes:
+  historical_severe:
+    status: "HISTORICAL"
+    description: "Lehman collapse; global credit freeze; deep recession"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.92"
+      inequality_index: "+0.08"
+      us_polarization: "+0.08"
+      us_debt_gdp_ratio: "+0.20"
+      us_institutional_trust: "-0.10"
+    cascading_modifiers:
+      2010_arab_spring.economic_pressure: "+0.10"
+      2016_brexit.anti_establishment: "+0.10"
+      2016_us_election.anti_establishment: "+0.08"
+  contained_early:
+    status: "DIVERGENCE"
+    description: "Bear Stearns triggers earlier intervention; Lehman saved"
+    explanation: "Fed acts more aggressively in March 2008"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.96"
+      inequality_index: "+0.03"
+      us_polarization: "+0.03"
+      us_debt_gdp_ratio: "+0.08"
+    cascading_modifiers:
+      2016_brexit.anti_establishment: "-0.05"
+      2016_us_election.anti_establishment: "-0.05"
+  great_depression_2:
+    status: "ESCALATED"
+    description: "No TARP; cascading bank failures; global depression"
+    explanation: "Congress rejects all bailout measures"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.82"
+      inequality_index: "+0.12"
+      us_polarization: "+0.15"
+      us_debt_gdp_ratio: "+0.10"
+      us_institutional_trust: "-0.20"
+      global_democracy_index: "-0.05"
+    cascading_modifiers:
+      2010_arab_spring.economic_pressure: "+0.20"
+      2016_brexit.anti_establishment: "+0.20"
+      2016_us_election.anti_establishment: "+0.20"
+      2003_opioid_crisis.historical_epidemic: "+0.05"
+      2014_deaths_of_despair.continues_worsening: "+0.10"
+  mild_recession:
+    status: "DIVERGENCE"
+    description: "Better regulation prevented worst; mild downturn"
+    explanation: "Derivatives regulated post-Enron; housing bubble smaller"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.97"
+      inequality_index: "+0.02"
+      us_polarization: "+0.02"
+    cascading_modifiers:
+      2016_brexit.anti_establishment: "-0.08"
+      2016_us_election.anti_establishment: "-0.08"
+      2014_deaths_of_despair.reversal_by_2025: "+0.10"

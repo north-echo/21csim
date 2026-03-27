@@ -1,0 +1,45 @@
+id: "2014_gig_economy"
+year_month: "2014-06"
+title: "Gig Economy / Labor Transformation"
+domain: "economic"
+confidence: "HIGH"
+variable: "gig_economy"
+distribution:
+  type: "categorical"
+  options:
+    historical_unregulated: 0.45
+    regulated_as_employees: 0.20
+    platform_cooperatives: 0.10
+    automation_replaces: 0.25
+dependencies:
+  - node: "2007_iphone"
+    branch: "historical_apple_led"
+    modifies:
+      historical_unregulated: "+0.05"
+      automation_replaces: "+0.03"
+conditional: null
+outcomes:
+  historical_unregulated:
+    status: "HISTORICAL"
+    description: "Gig platforms grow with minimal labor protections"
+    world_state_effects:
+      inequality_index: "+0.03"
+      us_life_expectancy_delta: "-0.3"
+      automation_displacement: "+0.02"
+  regulated_as_employees:
+    status: "DIVERGENCE"
+    description: "Gig workers classified as employees globally"
+    world_state_effects:
+      inequality_index: "-0.01"
+  platform_cooperatives:
+    status: "DIVERGENCE"
+    description: "Worker-owned platform cooperatives emerge"
+    world_state_effects:
+      inequality_index: "-0.03"
+      global_democracy_index: "+0.01"
+  automation_replaces:
+    status: "DIVERGENCE"
+    description: "Automation makes gig work obsolete by 2025"
+    world_state_effects:
+      automation_displacement: "+0.08"
+      inequality_index: "+0.05"

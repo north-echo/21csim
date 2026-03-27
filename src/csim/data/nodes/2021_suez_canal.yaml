@@ -1,0 +1,57 @@
+id: "2021_suez_canal"
+year_month: "2021-03"
+title: "Suez Canal Blockage (Ever Given)"
+description: >
+  The container ship Ever Given runs aground in the Suez Canal, blocking
+  one of the world's most critical trade arteries for six days. The incident
+  visualizes global supply chain fragility for a mass audience and
+  accelerates discussions about trade route diversification and resilience.
+domain: "economic"
+confidence: "HIGH"
+variable: "suez_canal_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_brief_blockage: 0.50
+    extended_blockage: 0.15
+    no_incident: 0.15
+    supply_chain_reform_catalyst: 0.10
+    cascading_trade_crisis: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_brief_blockage:
+    status: "HISTORICAL"
+    description: "Six-day blockage; $9B daily trade disruption; brief supply chain shock"
+    world_state_effects:
+      supply_chain_resilience: "-0.02"
+      global_gdp_growth_modifier: "*0.999"
+  extended_blockage:
+    status: "ESCALATED"
+    description: "Ship stuck for weeks; global supply chains severely disrupted"
+    explanation: "Salvage operations fail repeatedly; canal requires months of dredging"
+    world_state_effects:
+      supply_chain_resilience: "-0.06"
+      global_gdp_growth_modifier: "*0.995"
+      inequality_index: "+0.01"
+  no_incident:
+    status: "DIVERGENCE"
+    description: "Ever Given transits canal without incident"
+    explanation: "Slightly different wind conditions prevent grounding"
+    world_state_effects:
+      supply_chain_resilience: "+0.00"
+  supply_chain_reform_catalyst:
+    status: "DIVERGENCE"
+    description: "Blockage triggers major global supply chain diversification investment"
+    explanation: "Nations and corporations invest heavily in alternative routes and nearshoring"
+    world_state_effects:
+      supply_chain_resilience: "+0.05"
+      global_gdp_growth_modifier: "*1.002"
+  cascading_trade_crisis:
+    status: "ESCALATED"
+    description: "Blockage combines with other disruptions to trigger a global trade crisis"
+    explanation: "Simultaneous port congestion, COVID backlogs, and geopolitical tensions compound"
+    world_state_effects:
+      supply_chain_resilience: "-0.10"
+      global_gdp_growth_modifier: "*0.98"
+      inequality_index: "+0.02"

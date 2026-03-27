@@ -1,0 +1,56 @@
+id: "2050_middle_east"
+year_month: "2050-01"
+title: "Middle East at Mid-Century"
+description: >
+  The Middle East at mid-century has either successfully transitioned beyond oil
+  dependence or faces the consequences of failed diversification. The region's
+  stability determines global energy and security dynamics.
+domain: "regional"
+confidence: "LOW"
+variable: "middle_east_status"
+distribution:
+  type: "categorical"
+  options:
+    post_oil_success: 0.15
+    failed_states: 0.15
+    regional_power: 0.20
+    conflict_zone: 0.15
+    green_economy: 0.15
+    status_quo: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  post_oil_success:
+    status: "DIVERGENCE"
+    description: "Gulf states successfully transition to diversified economies; regional stability achieved"
+    world_state_effects:
+      middle_east_stability: "+0.15"
+      renewable_energy_share: "+0.03"
+  failed_states:
+    status: "ESCALATED"
+    description: "Multiple Middle Eastern states collapse as oil revenues vanish"
+    world_state_effects:
+      middle_east_stability: "-0.20"
+      conflict_deaths: "+30000"
+  regional_power:
+    status: "DIVERGENCE"
+    description: "Middle East emerges as regional power bloc with significant global influence"
+    world_state_effects:
+      middle_east_stability: "+0.10"
+  conflict_zone:
+    status: "ESCALATED"
+    description: "Region remains mired in conflict; proxy wars and resource competition continue"
+    world_state_effects:
+      middle_east_stability: "-0.15"
+      conflict_deaths: "+20000"
+  green_economy:
+    status: "DIVERGENCE"
+    description: "Solar and hydrogen resources make the Middle East a green energy superpower"
+    world_state_effects:
+      middle_east_stability: "+0.12"
+      renewable_energy_share: "+0.05"
+  status_quo:
+    status: "DIVERGENCE"
+    description: "Gradual transition continues without dramatic success or failure"
+    world_state_effects:
+      middle_east_stability: "+0.02"

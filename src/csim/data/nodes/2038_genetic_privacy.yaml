@@ -1,0 +1,56 @@
+id: "2038_genetic_privacy"
+year_month: "2038-06"
+title: "Genetic Privacy"
+description: >
+  How society manages the privacy implications of ubiquitous genetic data.
+  Widespread sequencing creates opportunities for personalized medicine
+  but also risks of surveillance, discrimination, and misuse.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "genetic_privacy_status"
+distribution:
+  type: "categorical"
+  options:
+    strong_protections: 0.25
+    surveillance_genetics: 0.20
+    insurance_discrimination: 0.20
+    genetic_commons: 0.15
+    unregulated: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  strong_protections:
+    status: "DIVERGENCE"
+    description: "Strong legal protections prevent genetic data misuse"
+    explanation: "GINA-like laws globally protect genetic privacy; individual control over genetic data ensured"
+    world_state_effects:
+      surveillance_state_index: "-0.02"
+      governance_model: "+0.03"
+  surveillance_genetics:
+    status: "DIVERGENCE"
+    description: "Governments use genetic data for mass surveillance and social control"
+    explanation: "Mandatory genetic databases enable tracking, identification, and behavioral prediction"
+    world_state_effects:
+      surveillance_state_index: "+0.10"
+      global_democracy_index: "-0.03"
+  insurance_discrimination:
+    status: "DIVERGENCE"
+    description: "Genetic data used for insurance and employment discrimination"
+    explanation: "Insurers and employers use genetic risk scores; genetic underclass emerges"
+    world_state_effects:
+      inequality_index: "+0.05"
+      governance_model: "-0.03"
+  genetic_commons:
+    status: "DIVERGENCE"
+    description: "Genetic data shared openly for research; privacy norms evolve"
+    explanation: "Public willingness to share genetic data for collective health benefit creates open research commons"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.5"
+      governance_model: "+0.02"
+  unregulated:
+    status: "DIVERGENCE"
+    description: "Genetic data largely unregulated; market determines use"
+    explanation: "Regulatory frameworks fail to keep pace with technology; genetic data commodified"
+    world_state_effects:
+      surveillance_state_index: "+0.05"
+      inequality_index: "+0.03"

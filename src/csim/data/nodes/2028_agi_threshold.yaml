@@ -1,0 +1,72 @@
+id: "2028_agi_threshold"
+year_month: "2028-06"
+title: "AGI Threshold"
+description: >
+  Whether artificial general intelligence is achieved, approaching,
+  or still distant. The most consequential technology question of the century.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "agi_status"
+distribution:
+  type: "categorical"
+  options:
+    no_agi_yet: 0.40
+    proto_agi: 0.25
+    full_agi: 0.08
+    agi_accident: 0.02
+    slow_takeoff: 0.25
+dependencies:
+  - node: "2023_ai_acceleration"
+    branch: "faster_agi"
+    modifies:
+      full_agi: "+0.20"
+      proto_agi: "+0.10"
+      no_agi_yet: "-0.20"
+  - node: "2023_ai_acceleration"
+    branch: "ai_winter"
+    modifies:
+      no_agi_yet: "+0.30"
+      full_agi: "-0.06"
+      proto_agi: "-0.15"
+  - node: "2025_ai_regulation"
+    branch: "heavy_regulation"
+    modifies:
+      no_agi_yet: "+0.10"
+      full_agi: "-0.05"
+conditional: null
+outcomes:
+  no_agi_yet:
+    status: "DIVERGENCE"
+    description: "AGI remains distant; narrow AI continues advancing"
+    world_state_effects:
+      ai_development_year_offset: "-2"
+      automation_displacement: "+0.05"
+  proto_agi:
+    status: "DIVERGENCE"
+    description: "Systems approaching AGI; extremely capable but not general"
+    world_state_effects:
+      ai_development_year_offset: "+2"
+      automation_displacement: "+0.10"
+      existential_risk_cumulative: "+0.05"
+  full_agi:
+    status: "DIVERGENCE"
+    description: "AGI achieved; transforms every domain"
+    world_state_effects:
+      ai_development_year_offset: "+5"
+      automation_displacement: "+0.25"
+      existential_risk_cumulative: "+0.15"
+      global_gdp_growth_modifier: "*1.10"
+  agi_accident:
+    status: "ESCALATED"
+    description: "AGI system causes major unintended harm"
+    world_state_effects:
+      existential_risk_cumulative: "+0.30"
+      global_gdp_growth_modifier: "*0.90"
+      ai_development_year_offset: "+3"
+  slow_takeoff:
+    status: "DIVERGENCE"
+    description: "Gradual capability increase; AGI emerges incrementally"
+    world_state_effects:
+      ai_development_year_offset: "+1"
+      automation_displacement: "+0.08"
+      existential_risk_cumulative: "+0.02"

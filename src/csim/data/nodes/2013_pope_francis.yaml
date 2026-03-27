@@ -1,0 +1,61 @@
+id: "2013_pope_francis"
+year_month: "2013-03"
+title: "Pope Francis Election"
+description: >
+  Cardinal Jorge Bergoglio elected as Pope Francis, the first Latin American
+  pope. His papacy emphasizes social justice, climate action (Laudato Si
+  encyclical, 2015), and interfaith dialogue, shifting global Catholic
+  influence toward the Global South and environmental stewardship.
+domain: "social"
+confidence: "HIGH"
+variable: "pope_francis_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_election: 0.45
+    conservative_pope: 0.20
+    radical_reform_pope: 0.15
+    no_significant_impact: 0.10
+    climate_leadership: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_election:
+    status: "HISTORICAL"
+    description: "Francis elected; Laudato Si shifts Catholic discourse on climate and inequality"
+    world_state_effects:
+      climate_temp_anomaly: "-0.01"
+      global_democracy_index: "+0.01"
+      inequality_index: "-0.01"
+    cascading_modifiers:
+      2015_paris_climate.historical_agreement: "+0.03"
+  conservative_pope:
+    status: "DIVERGENCE"
+    description: "A doctrinally conservative pope is elected; no climate encyclical"
+    explanation: "Conclave selects a traditionalist European cardinal"
+    world_state_effects:
+      global_democracy_index: "-0.01"
+  radical_reform_pope:
+    status: "DIVERGENCE"
+    description: "Francis pushes even further reforms including structural Church changes"
+    explanation: "Papacy embraces sweeping modernization of Church governance"
+    world_state_effects:
+      global_democracy_index: "+0.02"
+      climate_temp_anomaly: "-0.02"
+      inequality_index: "-0.02"
+  no_significant_impact:
+    status: "DIVERGENCE"
+    description: "New pope has limited global political influence"
+    explanation: "Papacy focuses inward on Church administration"
+    world_state_effects:
+      global_democracy_index: "+0.00"
+  climate_leadership:
+    status: "DIVERGENCE"
+    description: "Francis becomes the dominant global voice on climate, accelerating action"
+    explanation: "Laudato Si triggers a broader moral mobilization beyond Catholic communities"
+    world_state_effects:
+      climate_temp_anomaly: "-0.03"
+      renewable_energy_share: "+0.01"
+      global_democracy_index: "+0.01"
+    cascading_modifiers:
+      2015_paris_climate.binding_agreement: "+0.05"

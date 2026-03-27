@@ -1,0 +1,51 @@
+id: "2040_us_infrastructure"
+year_month: "2040-01"
+title: "US Infrastructure Reckoning"
+description: >
+  Decades of deferred maintenance and climate stress force a reckoning with
+  American infrastructure. Whether the nation rebuilds, adapts, or continues
+  to decay shapes economic competitiveness for generations.
+domain: "regional"
+confidence: "MEDIUM"
+variable: "us_infrastructure_status"
+distribution:
+  type: "categorical"
+  options:
+    massive_rebuild: 0.20
+    continued_decay: 0.30
+    climate_adapted: 0.15
+    privatized: 0.15
+    regional_divergence: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  massive_rebuild:
+    status: "DIVERGENCE"
+    description: "Federal investment program modernizes infrastructure with smart and resilient systems"
+    world_state_effects:
+      us_gdp_growth: "+0.02"
+      us_polarization: "-0.03"
+  continued_decay:
+    status: "DIVERGENCE"
+    description: "Political gridlock prevents investment; infrastructure failures become routine"
+    world_state_effects:
+      us_gdp_growth: "-0.02"
+      us_polarization: "+0.03"
+  climate_adapted:
+    status: "DIVERGENCE"
+    description: "Infrastructure rebuilt specifically for climate resilience; coastal retreat begins"
+    world_state_effects:
+      us_gdp_growth: "+0.01"
+      climate_temp_anomaly: "-0.01"
+  privatized:
+    status: "DIVERGENCE"
+    description: "Infrastructure increasingly privatized; quality improves but access becomes unequal"
+    world_state_effects:
+      us_gdp_growth: "+0.01"
+      inequality_index: "+0.05"
+  regional_divergence:
+    status: "DIVERGENCE"
+    description: "Blue states invest heavily while red states lag; infrastructure gap mirrors political divide"
+    world_state_effects:
+      us_polarization: "+0.05"
+      inequality_index: "+0.03"

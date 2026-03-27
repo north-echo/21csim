@@ -1,0 +1,61 @@
+id: "2014_crimea"
+year_month: "2014-03"
+title: "Crimea Annexation"
+description: >
+  Russia annexes Crimea from Ukraine after Euromaidan revolution.
+  First major land grab in Europe since WWII. Reshapes European security
+  and sets stage for 2022 full-scale invasion.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "crimea_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_annexation: 0.50
+    failed_operation: 0.15
+    negotiated_autonomy: 0.20
+    full_eastern_invasion: 0.15
+dependencies:
+  - node: "2003_iraq"
+    branch: "diplomatic_resolution"
+    modifies:
+      historical_annexation: "-0.05"
+      failed_operation: "+0.05"
+conditional: null
+outcomes:
+  historical_annexation:
+    status: "HISTORICAL"
+    description: "Russia annexes Crimea; sanctions imposed"
+    world_state_effects:
+      russia_stability: "-0.03"
+      nuclear_risk_level: "+0.05"
+      eu_cohesion: "+0.03"
+    cascading_modifiers:
+      2022_russia_ukraine.historical_invasion_stalemate: "+0.10"
+  failed_operation:
+    status: "DIVERGENCE"
+    description: "Ukrainian military resists; operation fails"
+    explanation: "Ukraine had more time to prepare; Western intelligence warning"
+    world_state_effects:
+      russia_stability: "-0.08"
+      global_democracy_index: "+0.02"
+    cascading_modifiers:
+      2022_russia_ukraine.no_invasion: "+0.25"
+      2022_russia_ukraine.historical_invasion_stalemate: "-0.15"
+  negotiated_autonomy:
+    status: "DIVERGENCE"
+    description: "Crimea gets autonomy within Ukraine through negotiation"
+    world_state_effects:
+      nuclear_risk_level: "+0.02"
+    cascading_modifiers:
+      2022_russia_ukraine.no_invasion: "+0.10"
+  full_eastern_invasion:
+    status: "ESCALATED"
+    description: "Russia takes Crimea plus Donbas in 2014"
+    world_state_effects:
+      conflict_deaths: "+15000"
+      nuclear_risk_level: "+0.08"
+      eu_cohesion: "+0.05"
+      russia_stability: "-0.05"
+    cascading_modifiers:
+      2022_russia_ukraine.historical_invasion_stalemate: "+0.15"

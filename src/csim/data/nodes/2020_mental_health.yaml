@@ -1,0 +1,43 @@
+id: "2020_mental_health"
+year_month: "2020-06"
+title: "COVID Mental Health Crisis"
+domain: "social"
+confidence: "HIGH"
+variable: "mental_health"
+distribution:
+  type: "categorical"
+  options:
+    historical_crisis: 0.50
+    resilience: 0.15
+    permanent_damage: 0.15
+    treatment_revolution: 0.20
+dependencies:
+  - node: "2019_covid_emergence"
+    branch: "no_pandemic"
+    modifies:
+      resilience: "+0.30"
+      historical_crisis: "-0.25"
+      permanent_damage: "-0.10"
+conditional: null
+outcomes:
+  historical_crisis:
+    status: "HISTORICAL"
+    description: "Global mental health crisis; youth especially affected"
+    world_state_effects:
+      us_life_expectancy_delta: "-0.3"
+  resilience:
+    status: "DIVERGENCE"
+    description: "Society proves resilient; mental health rebounds"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.1"
+  permanent_damage:
+    status: "ESCALATED"
+    description: "Generation of permanent mental health damage"
+    world_state_effects:
+      us_life_expectancy_delta: "-1.0"
+      automation_displacement: "+0.02"
+  treatment_revolution:
+    status: "DIVERGENCE"
+    description: "Crisis triggers psychedelic/therapy revolution"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.3"

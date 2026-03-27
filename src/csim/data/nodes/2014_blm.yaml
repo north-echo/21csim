@@ -1,0 +1,64 @@
+id: "2014_blm"
+year_month: "2014-08"
+title: "BLM / Ferguson"
+domain: "social"
+confidence: "HIGH"
+variable: "blm_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_wave: 0.45
+    sustained_reform: 0.15
+    backlash_dominant: 0.15
+    no_movement: 0.10
+    earlier_victory: 0.15
+dependencies:
+  - node: "2004_social_media"
+    branch: "historical_ad_driven"
+    modifies:
+      historical_wave: "+0.05"
+      no_movement: "-0.05"
+  - node: "2005_katrina_racial"
+    branch: "earlier_blm"
+    modifies:
+      earlier_victory: "+0.10"
+      no_movement: "+0.05"
+      historical_wave: "-0.15"
+conditional: null
+outcomes:
+  historical_wave:
+    status: "HISTORICAL"
+    description: "BLM emerges 2014; explodes 2020 after George Floyd"
+    world_state_effects:
+      racial_justice_index: "+0.05"
+      us_polarization: "+0.05"
+  sustained_reform:
+    status: "DIVERGENCE"
+    description: "BLM achieves sustained policing and justice reforms"
+    world_state_effects:
+      racial_justice_index: "+0.12"
+      us_polarization: "+0.03"
+      global_democracy_index: "+0.01"
+    cascading_modifiers:
+      2030_us_realignment.class_based: "+0.05"
+  backlash_dominant:
+    status: "DIVERGENCE"
+    description: "Backlash politics overwhelm reform efforts"
+    world_state_effects:
+      racial_justice_index: "-0.02"
+      us_polarization: "+0.08"
+    cascading_modifiers:
+      2016_us_election.trump_wins: "+0.05"
+      2024_us_election.trump_wins: "+0.03"
+      2030_us_realignment.continued_polarization: "+0.05"
+  no_movement:
+    status: "DIVERGENCE"
+    description: "No mass racial justice movement emerges"
+    world_state_effects:
+      racial_justice_index: "+0.01"
+  earlier_victory:
+    status: "DIVERGENCE"
+    description: "Earlier movement achieves reforms by 2015"
+    world_state_effects:
+      racial_justice_index: "+0.10"
+      us_polarization: "+0.02"

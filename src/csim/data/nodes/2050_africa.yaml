@@ -1,0 +1,57 @@
+id: "2050_africa"
+year_month: "2050-01"
+title: "Africa at Mid-Century"
+description: >
+  Africa at mid-century either realizes its demographic dividend or suffers from
+  climate devastation and conflict. The continent's trajectory determines whether
+  it becomes a major global power or remains marginalized.
+domain: "regional"
+confidence: "LOW"
+variable: "africa_status"
+distribution:
+  type: "categorical"
+  options:
+    rising_power: 0.20
+    climate_devastated: 0.15
+    mixed: 0.30
+    industrialized: 0.15
+    conflict_zone: 0.10
+    leapfrog: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  rising_power:
+    status: "DIVERGENCE"
+    description: "Africa emerges as major economic and political power with young, dynamic workforce"
+    world_state_effects:
+      global_democracy_index: "+0.03"
+      inequality_index: "-0.05"
+  climate_devastated:
+    status: "ESCALATED"
+    description: "Climate change devastates African agriculture and infrastructure; development reversed"
+    world_state_effects:
+      food_security_index: "-0.12"
+      conflict_deaths: "+25000"
+  mixed:
+    status: "DIVERGENCE"
+    description: "Africa shows mixed results; some nations thrive while others struggle"
+    world_state_effects:
+      inequality_index: "+0.02"
+  industrialized:
+    status: "DIVERGENCE"
+    description: "Africa industrializes rapidly; becomes the world's manufacturing floor"
+    world_state_effects:
+      inequality_index: "-0.04"
+      climate_temp_anomaly: "+0.03"
+  conflict_zone:
+    status: "ESCALATED"
+    description: "Resource conflicts and political instability make much of Africa a conflict zone"
+    world_state_effects:
+      conflict_deaths: "+40000"
+      global_democracy_index: "-0.03"
+  leapfrog:
+    status: "DIVERGENCE"
+    description: "Africa leapfrogs industrial era directly to knowledge and green economy"
+    world_state_effects:
+      inequality_index: "-0.06"
+      renewable_energy_share: "+0.03"

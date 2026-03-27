@@ -1,0 +1,68 @@
+id: "2023_gaza_conflict"
+year_month: "2023-10"
+title: "Gaza Conflict Escalation"
+description: >
+  Hamas launches surprise attack on Israel on October 7, killing 1,200 people.
+  Israel's military response in Gaza kills tens of thousands and triggers a
+  humanitarian catastrophe. The conflict reshapes Middle East diplomacy,
+  sparks global campus protests, fractures progressive coalitions, and
+  intensifies US domestic polarization.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "gaza_conflict_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_escalation: 0.45
+    rapid_ceasefire: 0.15
+    regional_war: 0.10
+    no_october_7: 0.10
+    two_state_catalyst: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  historical_escalation:
+    status: "HISTORICAL"
+    description: "Prolonged military campaign; humanitarian crisis; global protests; diplomatic isolation"
+    world_state_effects:
+      middle_east_stability: "-0.08"
+      us_polarization: "+0.03"
+      conflict_deaths: "+40000"
+    cascading_modifiers:
+      2024_us_election.trump_wins: "+0.02"
+      2024_us_election.harris_wins: "-0.02"
+  rapid_ceasefire:
+    status: "DIVERGENCE"
+    description: "International pressure secures early ceasefire and hostage deal"
+    explanation: "US leverages military aid to compel Israeli restraint; hostage deal succeeds"
+    world_state_effects:
+      middle_east_stability: "-0.03"
+      us_polarization: "+0.01"
+      conflict_deaths: "+5000"
+      us_global_standing: "+0.02"
+  regional_war:
+    status: "ESCALATED"
+    description: "Conflict expands to include Hezbollah, Iran; full regional conflagration"
+    explanation: "Hezbollah opens northern front; Iran directly intervenes; US drawn in"
+    world_state_effects:
+      middle_east_stability: "-0.15"
+      us_polarization: "+0.05"
+      conflict_deaths: "+200000"
+      nuclear_risk_level: "+0.03"
+      global_gdp_growth_modifier: "*0.97"
+  no_october_7:
+    status: "DIVERGENCE"
+    description: "Israeli intelligence intercepts Hamas plans; attack is prevented"
+    explanation: "Signals intelligence catches the plot; pre-emptive security measures succeed"
+    world_state_effects:
+      middle_east_stability: "+0.01"
+      conflict_deaths: "+500"
+  two_state_catalyst:
+    status: "DIVERGENCE"
+    description: "Horror of conflict revives international commitment to two-state solution"
+    explanation: "Saudi normalization contingent on Palestinian statehood gains momentum"
+    world_state_effects:
+      middle_east_stability: "+0.05"
+      us_polarization: "+0.01"
+      conflict_deaths: "+15000"
+      global_democracy_index: "+0.01"

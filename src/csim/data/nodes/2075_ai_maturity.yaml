@@ -1,0 +1,46 @@
+id: "2075_ai_maturity"
+year_month: "2075-01"
+title: "AI Maturity"
+description: >
+  The long-term trajectory of artificial intelligence after decades of
+  development. Whether AI becomes a trusted tool, an autonomous agent, or
+  something entirely beyond current comprehension.
+domain: "technology"
+confidence: "LOW"
+variable: "ai_maturity_status"
+distribution:
+  type: "categorical"
+  options:
+    integrated_tool: 0.25
+    superintelligent_ally: 0.10
+    dangerous: 0.10
+    plateau: 0.25
+    merged_with_humans: 0.10
+    regulated: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  integrated_tool:
+    status: "DIVERGENCE"
+    description: "AI deeply integrated into all aspects of society as a powerful but controllable tool"
+    world_state_effects: {}
+  superintelligent_ally:
+    status: "DIVERGENCE"
+    description: "Superintelligent AI acts as a benevolent partner to humanity, solving previously intractable problems"
+    world_state_effects: {}
+  dangerous:
+    status: "ESCALATED"
+    description: "AI systems pose ongoing existential risk; containment requires constant vigilance"
+    world_state_effects: {}
+  plateau:
+    status: "DIVERGENCE"
+    description: "AI capabilities plateaued; powerful but fundamentally limited in ways that became clear"
+    world_state_effects: {}
+  merged_with_humans:
+    status: "DIVERGENCE"
+    description: "Brain-computer interfaces blur the line between human and artificial intelligence"
+    world_state_effects: {}
+  regulated:
+    status: "DIVERGENCE"
+    description: "Strong global AI governance keeps development safe but slower than technically possible"
+    world_state_effects: {}

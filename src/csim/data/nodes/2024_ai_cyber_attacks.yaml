@@ -1,0 +1,56 @@
+id: "2024_ai_cyber_attacks"
+year_month: "2024-06"
+title: "AI-Powered Cyber Attacks"
+description: >
+  Large language models used to generate sophisticated phishing emails,
+  discover software vulnerabilities, and automate exploitation at scale.
+  AI dramatically lowers the barrier to entry for cyber crime and
+  enables personalized social engineering attacks.
+domain: "security"
+confidence: "HIGH"
+variable: "ai_cyber_attacks"
+distribution:
+  type: "categorical"
+  options:
+    historical_escalation: 0.40
+    ai_defense_advantage: 0.20
+    autonomous_worms: 0.10
+    regulated_models: 0.15
+    offense_defense_balance: 0.15
+dependencies:
+  - node: "2023_ai_acceleration"
+    branch: "historical_rapid"
+    modifies:
+      historical_escalation: "+0.05"
+      autonomous_worms: "+0.05"
+      ai_defense_advantage: "-0.05"
+      regulated_models: "-0.05"
+conditional: null
+outcomes:
+  historical_escalation:
+    status: "HISTORICAL"
+    description: "AI-powered phishing and exploitation increase cyber damage significantly"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+15.0"
+  ai_defense_advantage:
+    status: "DIVERGENCE"
+    description: "AI proves more effective for defense than offense; cyber damage plateaus"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+3.0"
+  autonomous_worms:
+    status: "ESCALATED"
+    description: "AI-autonomous worms spread and adapt without human guidance"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+40.0"
+      supply_chain_resilience: "-0.05"
+      existential_risk_cumulative: "+0.01"
+  regulated_models:
+    status: "DIVERGENCE"
+    description: "AI safety guardrails effectively prevent misuse for cyber attacks"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+5.0"
+  offense_defense_balance:
+    status: "DIVERGENCE"
+    description: "AI capabilities balance evenly between attackers and defenders"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+8.0"

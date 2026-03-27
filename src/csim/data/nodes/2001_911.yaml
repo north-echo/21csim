@@ -1,0 +1,95 @@
+id: "2001_911"
+year_month: "2001-09"
+title: "September 11 Attacks"
+description: >
+  Coordinated al-Qaeda hijackings of four commercial aircraft. Two struck
+  the World Trade Center, one hit the Pentagon, one crashed in Pennsylvania.
+  2,977 killed. The defining event shaping US foreign policy, civil liberties,
+  and global security architecture for the entire century.
+domain: "security"
+confidence: "HIGH"
+variable: "attack_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_full: 0.28
+    partial_success: 0.27
+    single_attack: 0.18
+    plot_disrupted: 0.17
+    worse_outcome: 0.10
+dependencies:
+  - node: "2000_election"
+    branch: "gore_wins"
+    modifies:
+      plot_disrupted: "+0.08"
+      historical_full: "-0.05"
+      worse_outcome: "-0.03"
+  - node: "2000_election"
+    branch: "contested_months"
+    modifies:
+      historical_full: "+0.05"
+      plot_disrupted: "-0.05"
+conditional: null
+outcomes:
+  historical_full:
+    status: "HISTORICAL"
+    description: "All four hijackings succeed; WTC, Pentagon struck; UA93 crashes in PA"
+    world_state_effects:
+      us_polarization: "+0.08"
+      us_global_standing: "+0.10"
+      terrorism_threat_index: "+0.35"
+      surveillance_state_index: "+0.20"
+      middle_east_stability: "-0.10"
+      conflict_deaths: "+3000"
+      internet_freedom_index: "-0.05"
+    cascading_modifiers:
+      2003_iraq.full_invasion: "+0.20"
+      2013_snowden.surveillance_scale: "+0.30"
+  partial_success:
+    status: "DIVERGENCE"
+    description: "1-2 flights hit targets; others intercepted or failed"
+    explanation: "Earlier FAA response or passenger awareness prevents full attack"
+    world_state_effects:
+      us_polarization: "+0.05"
+      terrorism_threat_index: "+0.20"
+      surveillance_state_index: "+0.12"
+      conflict_deaths: "+800"
+    cascading_modifiers:
+      2003_iraq.full_invasion: "+0.05"
+      2013_snowden.surveillance_scale: "+0.15"
+  single_attack:
+    status: "DIVERGENCE"
+    description: "Only WTC North Tower struck; other plots foiled in execution"
+    explanation: "Rapid military response after first impact; heightened cabin awareness"
+    world_state_effects:
+      terrorism_threat_index: "+0.12"
+      surveillance_state_index: "+0.08"
+      conflict_deaths: "+1600"
+    cascading_modifiers:
+      2003_iraq.full_invasion: "-0.10"
+  plot_disrupted:
+    status: "DIVERGENCE"
+    description: "9/11 plot disrupted before execution"
+    explanation: "FBI/CIA intelligence sharing catches plotters; Phoenix/Minneapolis memos acted on"
+    world_state_effects:
+      terrorism_threat_index: "+0.05"
+      surveillance_state_index: "+0.03"
+      us_global_standing: "+0.02"
+    cascading_modifiers:
+      2003_iraq.full_invasion: "-0.35"
+      2013_snowden.surveillance_scale: "-0.10"
+      2021_afghanistan.withdrawal_pressure: "-0.15"
+  worse_outcome:
+    status: "ESCALATED"
+    description: "All four flights hit targets including US Capitol"
+    explanation: "UA93 passenger revolt fails; Capitol struck during session"
+    world_state_effects:
+      us_polarization: "+0.12"
+      terrorism_threat_index: "+0.45"
+      surveillance_state_index: "+0.30"
+      conflict_deaths: "+3500"
+      nuclear_risk_level: "+0.05"
+      global_democracy_index: "-0.03"
+    cascading_modifiers:
+      2003_iraq.full_invasion: "+0.30"
+      2013_snowden.surveillance_scale: "+0.40"

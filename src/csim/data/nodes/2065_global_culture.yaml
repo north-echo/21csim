@@ -1,0 +1,46 @@
+id: "2065_global_culture"
+year_month: "2065-01"
+title: "Global Culture"
+description: >
+  The state of human culture after decades of globalization, digital media,
+  and AI-generated content. Whether cultural diversity survives or a
+  homogenized global monoculture emerges.
+domain: "society"
+confidence: "LOW"
+variable: "global_culture_status"
+distribution:
+  type: "categorical"
+  options:
+    homogenized: 0.20
+    diverse: 0.30
+    fragmented: 0.20
+    virtual_cultures: 0.15
+    revival: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  homogenized:
+    status: "DIVERGENCE"
+    description: "Global culture converges into a shared set of values, languages, and media consumption patterns"
+    world_state_effects:
+      global_democracy_index: "+0.02"
+  diverse:
+    status: "DIVERGENCE"
+    description: "Cultural diversity thrives with technology enabling preservation and celebration of distinct traditions"
+    world_state_effects:
+      global_democracy_index: "+0.05"
+  fragmented:
+    status: "ESCALATED"
+    description: "Cultures retreat into hostile silos; cross-cultural understanding deteriorates"
+    world_state_effects:
+      global_democracy_index: "-0.05"
+  virtual_cultures:
+    status: "DIVERGENCE"
+    description: "New cultures emerge in virtual spaces that transcend geographic and ethnic boundaries"
+    world_state_effects:
+      global_democracy_index: "+0.01"
+  revival:
+    status: "DIVERGENCE"
+    description: "Global movement to revive endangered languages, traditions, and indigenous knowledge systems"
+    world_state_effects:
+      global_democracy_index: "+0.03"

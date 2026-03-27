@@ -1,0 +1,56 @@
+id: "2058_life_extension"
+year_month: "2058-01"
+title: "Life Extension"
+description: >
+  Biomedical advances confront the biology of aging directly. Whether significant
+  life extension is achieved, and for whom, raises profound questions about
+  inequality, pensions, and the meaning of a human lifespan.
+domain: "technology"
+confidence: "LOW"
+variable: "life_extension_status"
+distribution:
+  type: "categorical"
+  options:
+    plus_10_years: 0.20
+    plus_20_years: 0.10
+    minimal: 0.30
+    elite_only: 0.20
+    anti_aging_breakthrough: 0.10
+    rejected: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  plus_10_years:
+    status: "DIVERGENCE"
+    description: "Average lifespan extended by 10 years through anti-aging therapies"
+    world_state_effects:
+      us_life_expectancy_delta: "+10.0"
+      inequality_index: "+0.03"
+  plus_20_years:
+    status: "DIVERGENCE"
+    description: "Dramatic life extension of 20+ years achieved through cellular reprogramming"
+    world_state_effects:
+      us_life_expectancy_delta: "+20.0"
+      inequality_index: "+0.08"
+  minimal:
+    status: "DIVERGENCE"
+    description: "Aging proves resistant to intervention; gains limited to incremental improvements"
+    world_state_effects:
+      us_life_expectancy_delta: "+2.0"
+  elite_only:
+    status: "DIVERGENCE"
+    description: "Effective life extension exists but costs limit access to the ultra-wealthy"
+    world_state_effects:
+      us_life_expectancy_delta: "+3.0"
+      inequality_index: "+0.15"
+  anti_aging_breakthrough:
+    status: "DIVERGENCE"
+    description: "Fundamental breakthrough in aging biology makes radical life extension possible for all"
+    world_state_effects:
+      us_life_expectancy_delta: "+15.0"
+      inequality_index: "-0.02"
+  rejected:
+    status: "DIVERGENCE"
+    description: "Society rejects life extension technology on ethical, religious, or ecological grounds"
+    world_state_effects:
+      us_life_expectancy_delta: "+1.0"

@@ -1,0 +1,57 @@
+id: "2095_governance"
+year_month: "2095-01"
+title: "Global Governance 2095"
+description: >
+  The final form of global governance as the century concludes. Whether
+  humanity has achieved effective coordination or remains divided.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "governance_2095"
+distribution:
+  type: "categorical"
+  options:
+    world_federation: 0.05
+    regional_blocs: 0.25
+    reformed_un: 0.15
+    ai_governed: 0.10
+    anarchic: 0.10
+    cooperative: 0.20
+    authoritarian: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  world_federation:
+    status: "DIVERGENCE"
+    description: "Functional world federation with democratic governance over global commons"
+    world_state_effects:
+      governance_model: 0.95  # world federation — maximum governance
+  regional_blocs:
+    status: "DIVERGENCE"
+    description: "World divided into regional blocs with their own governance and economic systems"
+    world_state_effects:
+      governance_model: 0.35  # regional blocs — fragmented
+  reformed_un:
+    status: "DIVERGENCE"
+    description: "Reformed international body with binding authority on climate, security, and technology"
+    world_state_effects:
+      governance_model: 0.80  # reformed multilateral — strong coordination
+  ai_governed:
+    status: "DIVERGENCE"
+    description: "AI systems handle most governance decisions; human role is oversight and values-setting"
+    world_state_effects:
+      governance_model: 0.75  # AI-governed — effective but novel
+  anarchic:
+    status: "ESCALATED"
+    description: "No effective global governance; power fragmented among states, corporations, and AI systems"
+    world_state_effects:
+      governance_model: 0.10  # anarchic — minimal governance
+  cooperative:
+    status: "DIVERGENCE"
+    description: "Flexible cooperative frameworks enable effective global coordination without formal government"
+    world_state_effects:
+      governance_model: 0.85  # cooperative — high coordination
+  authoritarian:
+    status: "ESCALATED"
+    description: "Global order maintained by authoritarian surveillance and control systems"
+    world_state_effects:
+      governance_model: 0.55  # authoritarian — ordered but repressive

@@ -1,0 +1,55 @@
+id: "2049_latin_integration"
+year_month: "2049-01"
+title: "Latin American Integration"
+description: >
+  Latin American nations face a choice between regional integration, great power
+  alignment, or independent paths. The outcome reshapes hemispheric politics
+  and economic development.
+domain: "regional"
+confidence: "MEDIUM"
+variable: "latin_integration_status"
+distribution:
+  type: "categorical"
+  options:
+    south_american_union: 0.15
+    us_sphere: 0.20
+    china_influence: 0.15
+    independent_paths: 0.30
+    conflict: 0.10
+    cooperation: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  south_american_union:
+    status: "DIVERGENCE"
+    description: "South American political and economic union emerges as significant global player"
+    world_state_effects:
+      global_democracy_index: "+0.03"
+      inequality_index: "-0.03"
+  us_sphere:
+    status: "DIVERGENCE"
+    description: "Latin America returns to US sphere of influence through trade and security agreements"
+    world_state_effects:
+      us_global_standing: "+0.03"
+  china_influence:
+    status: "DIVERGENCE"
+    description: "Chinese investment and trade dominate Latin American economies"
+    world_state_effects:
+      us_china_tension_index: "+0.05"
+      us_global_standing: "-0.03"
+  independent_paths:
+    status: "DIVERGENCE"
+    description: "Nations pursue diverse development models without regional integration"
+    world_state_effects:
+      inequality_index: "+0.01"
+  conflict:
+    status: "ESCALATED"
+    description: "Resource conflicts and political instability prevent regional cooperation"
+    world_state_effects:
+      conflict_deaths: "+8000"
+      inequality_index: "+0.04"
+  cooperation:
+    status: "DIVERGENCE"
+    description: "Issue-specific cooperation on climate, migration, and trade without formal union"
+    world_state_effects:
+      global_democracy_index: "+0.01"

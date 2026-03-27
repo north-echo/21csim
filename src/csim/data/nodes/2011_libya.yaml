@@ -1,0 +1,48 @@
+id: "2011_libya"
+year_month: "2011-03"
+title: "Libya Intervention"
+domain: "security"
+confidence: "HIGH"
+variable: "libya_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_intervention_chaos: 0.45
+    no_intervention: 0.25
+    full_commitment: 0.15
+    arab_league_led: 0.15
+dependencies:
+  - node: "2003_iraq"
+    branch: "full_invasion"
+    modifies:
+      no_intervention: "+0.10"
+      historical_intervention_chaos: "-0.05"
+conditional: null
+outcomes:
+  historical_intervention_chaos:
+    status: "HISTORICAL"
+    description: "NATO intervenes; Gaddafi killed; Libya descends into chaos"
+    world_state_effects:
+      middle_east_stability: "-0.08"
+      conflict_deaths: "+30000"
+    cascading_modifiers:
+      2015_paris_attacks.isis_staging: "+0.05"
+  no_intervention:
+    status: "DIVERGENCE"
+    description: "No Western intervention; Gaddafi suppresses revolt"
+    world_state_effects:
+      conflict_deaths: "+10000"
+      global_democracy_index: "-0.01"
+  full_commitment:
+    status: "DIVERGENCE"
+    description: "Full commitment to post-Gaddafi state building"
+    world_state_effects:
+      middle_east_stability: "-0.03"
+      conflict_deaths: "+15000"
+      us_debt_gdp_ratio: "+0.02"
+  arab_league_led:
+    status: "DIVERGENCE"
+    description: "Arab League leads intervention with Western support"
+    world_state_effects:
+      middle_east_stability: "-0.04"
+      conflict_deaths: "+20000"

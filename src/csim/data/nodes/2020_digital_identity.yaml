@@ -1,0 +1,66 @@
+id: "2020_digital_identity"
+year_month: "2020-01"
+title: "Digital Identity Infrastructure"
+description: >
+  India's Aadhaar, EU's eIDAS, various national digital ID systems.
+  Enables financial inclusion and government services but also
+  enables surveillance and exclusion.
+domain: "technology"
+confidence: "HIGH"
+variable: "digital_identity"
+distribution:
+  type: "categorical"
+  options:
+    fragmented_national: 0.40
+    interoperable_global: 0.10
+    privacy_preserving: 0.15
+    surveillance_tool: 0.20
+    rejected: 0.15
+dependencies:
+  - node: "2013_snowden"
+    branch: "historical_leak"
+    modifies:
+      surveillance_tool: "-0.05"
+      privacy_preserving: "+0.05"
+  - node: "2019_quantum"
+    branch: "historical_progress"
+    modifies:
+      privacy_preserving: "+0.03"
+      fragmented_national: "-0.03"
+conditional: null
+outcomes:
+  fragmented_national:
+    status: "HISTORICAL"
+    description: "Each country builds its own digital ID system; no interoperability"
+    world_state_effects:
+      surveillance_state_index: "+0.02"
+      internet_freedom_index: "-0.01"
+      inequality_index: "-0.01"
+  interoperable_global:
+    status: "DIVERGENCE"
+    description: "International digital ID standard enables seamless global identity"
+    world_state_effects:
+      surveillance_state_index: "+0.03"
+      internet_freedom_index: "+0.02"
+      inequality_index: "-0.03"
+  privacy_preserving:
+    status: "DIVERGENCE"
+    description: "Zero-knowledge proofs enable ID without surveillance"
+    world_state_effects:
+      surveillance_state_index: "-0.02"
+      internet_freedom_index: "+0.03"
+      inequality_index: "-0.02"
+  surveillance_tool:
+    status: "ESCALATED"
+    description: "Digital ID becomes primary surveillance mechanism"
+    world_state_effects:
+      surveillance_state_index: "+0.08"
+      internet_freedom_index: "-0.04"
+      inequality_index: "+0.02"
+  rejected:
+    status: "DIVERGENCE"
+    description: "Privacy backlash prevents widespread digital ID adoption"
+    world_state_effects:
+      surveillance_state_index: "-0.01"
+      internet_freedom_index: "+0.02"
+      inequality_index: "+0.01"

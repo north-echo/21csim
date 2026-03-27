@@ -1,0 +1,64 @@
+id: "2035_europe_demographics"
+year_month: "2035-06"
+title: "European Demographic Challenge"
+description: >
+  Europe faces aging populations, low fertility, and political tensions over
+  immigration. How the EU balances economic need for workers against populist
+  anti-immigration sentiment shapes the continent's future.
+domain: "demographics"
+confidence: "MEDIUM"
+variable: "europe_demographics_status"
+distribution:
+  type: "categorical"
+  options:
+    managed_immigration: 0.25
+    fortress_europe: 0.20
+    pension_collapse: 0.15
+    eu_pronatalist: 0.15
+    automation_substitution: 0.25
+dependencies:
+  - node: "2022_european_right"
+    branch: "right_consolidation"
+    modifies:
+      fortress_europe: "+0.10"
+      managed_immigration: "-0.10"
+conditional: null
+outcomes:
+  managed_immigration:
+    status: "DIVERGENCE"
+    description: "Europe develops effective legal immigration pathways to fill labor gaps"
+    explanation: "Skills-based immigration programs gain public acceptance; integration improves"
+    world_state_effects:
+      eu_cohesion: "+0.03"
+      global_gdp: "+0.01"
+    cascading_modifiers:
+      2045_eu_federation.enhanced_cooperation: "+0.08"
+  fortress_europe:
+    status: "DIVERGENCE"
+    description: "Europe closes borders; severe labor shortages result"
+    explanation: "Far-right governments restrict immigration; economic decline follows workforce shrinkage"
+    world_state_effects:
+      eu_cohesion: "-0.05"
+      global_gdp: "-0.01"
+  pension_collapse:
+    status: "ESCALATED"
+    description: "European pension systems become unsustainable; austerity crises"
+    explanation: "Worker-to-retiree ratio falls below sustainability; benefit cuts trigger social unrest"
+    world_state_effects:
+      eu_cohesion: "-0.10"
+      global_gdp: "-0.02"
+    cascading_modifiers:
+      2045_eu_federation.dissolution: "+0.10"
+  eu_pronatalist:
+    status: "DIVERGENCE"
+    description: "EU-wide pronatalist policies partially reverse fertility decline"
+    explanation: "Massive investment in childcare, parental leave, and family support raises birth rates"
+    world_state_effects:
+      eu_cohesion: "+0.03"
+  automation_substitution:
+    status: "DIVERGENCE"
+    description: "Automation and AI fill labor gaps without need for large-scale immigration"
+    explanation: "European firms invest heavily in automation; productivity compensates for shrinking workforce"
+    world_state_effects:
+      automation_displacement: "+0.05"
+      global_gdp: "+0.01"

@@ -1,0 +1,44 @@
+id: "2019_unicorn_bubble"
+year_month: "2019-09"
+title: "WeWork / Unicorn Bubble"
+domain: "economic"
+confidence: "HIGH"
+variable: "unicorn_bubble"
+distribution:
+  type: "categorical"
+  options:
+    historical_slow_deflate: 0.50
+    sharp_correction_2019: 0.20
+    bubble_continues: 0.15
+    healthy_ecosystem: 0.15
+dependencies:
+  - node: "2012_zirp"
+    branch: "early_normalization"
+    modifies:
+      sharp_correction_2019: "+0.10"
+      historical_slow_deflate: "-0.05"
+      bubble_continues: "-0.05"
+conditional: null
+outcomes:
+  historical_slow_deflate:
+    status: "HISTORICAL"
+    description: "WeWork IPO fails; gradual tech valuation correction"
+    world_state_effects:
+      inequality_index: "+0.01"
+  sharp_correction_2019:
+    status: "DIVERGENCE"
+    description: "Sharp tech bubble correction in 2019"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.99"
+      inequality_index: "-0.01"
+  bubble_continues:
+    status: "DIVERGENCE"
+    description: "Easy money keeps unicorns alive through 2025"
+    world_state_effects:
+      inequality_index: "+0.03"
+  healthy_ecosystem:
+    status: "DIVERGENCE"
+    description: "VC ecosystem self-corrects; sustainable valuations"
+    world_state_effects:
+      inequality_index: "-0.01"
+      global_gdp_growth_modifier: "*1.01"

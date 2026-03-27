@@ -1,0 +1,49 @@
+id: "2015_africa_development"
+year_month: "2015-01"
+title: "Africa Development"
+domain: "regional"
+confidence: "HIGH"
+variable: "africa_dev"
+distribution:
+  type: "categorical"
+  options:
+    historical_mixed: 0.45
+    african_century: 0.15
+    resource_curse: 0.15
+    climate_devastation: 0.15
+    china_debt_trap: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_mixed:
+    status: "HISTORICAL"
+    description: "Mixed development; some progress, persistent challenges"
+    world_state_effects:
+      africa_development_index: "+0.05"
+      global_population_billions: "+0.3"
+  african_century:
+    status: "DIVERGENCE"
+    description: "Africa emerges as major economic growth center"
+    world_state_effects:
+      africa_development_index: "+0.15"
+      global_gdp_growth_modifier: "*1.02"
+      global_population_billions: "+0.2"
+  resource_curse:
+    status: "DIVERGENCE"
+    description: "Resource extraction enriches elites; masses left behind"
+    world_state_effects:
+      africa_development_index: "+0.02"
+      inequality_index: "+0.03"
+  climate_devastation:
+    status: "ESCALATED"
+    description: "Climate change devastates African agriculture and cities"
+    world_state_effects:
+      africa_development_index: "-0.05"
+      conflict_deaths: "+100000"
+      food_security_index: "-0.05"
+  china_debt_trap:
+    status: "DIVERGENCE"
+    description: "Chinese debt-trap diplomacy extracts African resources"
+    world_state_effects:
+      africa_development_index: "+0.03"
+      china_power_index: "+0.03"

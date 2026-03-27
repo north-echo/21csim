@@ -1,0 +1,45 @@
+id: "2004_hurricane_season"
+year_month: "2004-08"
+title: "Record Hurricane Season"
+description: >
+  Four major hurricanes hit Florida in six weeks. Exposes FEMA weaknesses
+  and sets the stage for the Katrina catastrophe a year later.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "hurricane_season_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_four_storms: 0.50
+    mild_season: 0.30
+    catastrophic_fifth: 0.10
+    fema_reforms: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_four_storms:
+    status: "HISTORICAL"
+    description: "Four major hurricanes hit Florida; FEMA weaknesses exposed"
+    world_state_effects:
+      us_institutional_trust: "-0.02"
+  mild_season:
+    status: "DIVERGENCE"
+    description: "Fewer storms; FEMA not tested and remains complacent"
+    world_state_effects:
+      us_institutional_trust: "+0.01"
+    cascading_modifiers:
+      2005_katrina.catastrophic_failure: "+0.05"
+  catastrophic_fifth:
+    status: "DIVERGENCE"
+    description: "Category 5 hurricane hits Miami directly; massive destruction"
+    world_state_effects:
+      us_institutional_trust: "-0.04"
+      conflict_deaths: "+2000"
+  fema_reforms:
+    status: "DIVERGENCE"
+    description: "2004 storms trigger pre-Katrina FEMA reforms"
+    world_state_effects:
+      us_institutional_trust: "+0.02"
+    cascading_modifiers:
+      2005_katrina.adequate_response: "+0.15"
+      2005_katrina.exemplary_response: "+0.10"

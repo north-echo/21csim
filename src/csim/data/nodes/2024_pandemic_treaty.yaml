@@ -1,0 +1,56 @@
+id: "2024_pandemic_treaty"
+year_month: "2024-05"
+title: "WHO Pandemic Preparedness Treaty"
+description: >
+  WHO member states negotiate a pandemic preparedness treaty following
+  COVID-19. The agreement aims to ensure equitable access to vaccines,
+  pathogen surveillance sharing, and coordinated response. Sovereignty
+  concerns and geopolitical tensions threaten to derail negotiations.
+domain: "health"
+confidence: "HIGH"
+variable: "pandemic_treaty"
+distribution:
+  type: "categorical"
+  options:
+    historical_weak_agreement: 0.40
+    strong_binding_treaty: 0.15
+    treaty_collapses: 0.20
+    regional_blocs_only: 0.15
+    surveillance_network: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_weak_agreement:
+    status: "HISTORICAL"
+    description: "Watered-down agreement with voluntary commitments; limited enforcement"
+    world_state_effects:
+      global_pandemic_deaths: "-50000"
+  strong_binding_treaty:
+    status: "DIVERGENCE"
+    description: "Binding treaty with enforcement mechanisms; rapid pathogen sharing mandated"
+    world_state_effects:
+      global_pandemic_deaths: "-500000"
+      surveillance_state_index: "+0.02"
+    cascading_modifiers:
+      2029_pandemic_2.contained_quickly: "+0.10"
+      2029_pandemic_2.severe_pandemic: "-0.05"
+  treaty_collapses:
+    status: "DIVERGENCE"
+    description: "Negotiations fail; nations revert to every-country-for-itself pandemic planning"
+    world_state_effects:
+      global_pandemic_deaths: "+200000"
+      us_institutional_trust: "-0.02"
+  regional_blocs_only:
+    status: "DIVERGENCE"
+    description: "Regional agreements replace global treaty; EU, ASEAN form separate pacts"
+    world_state_effects:
+      global_pandemic_deaths: "-100000"
+      eu_cohesion: "+0.02"
+  surveillance_network:
+    status: "DIVERGENCE"
+    description: "Global pathogen surveillance network established; early warning system works"
+    world_state_effects:
+      global_pandemic_deaths: "-300000"
+      surveillance_state_index: "+0.03"
+    cascading_modifiers:
+      2029_pandemic_2.contained_quickly: "+0.05"

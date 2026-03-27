@@ -1,0 +1,62 @@
+id: "2050_us_restructured"
+year_month: "2050-01"
+title: "US Restructured"
+description: >
+  The United States at mid-century faces a definitive assessment of its political
+  structure. Whether American democracy reformed, fractured, or transformed
+  determines the global order for decades to come.
+domain: "regional"
+confidence: "LOW"
+variable: "us_restructured_status"
+distribution:
+  type: "categorical"
+  options:
+    reformed_democracy: 0.25
+    fractured: 0.10
+    authoritarian: 0.10
+    federated: 0.20
+    diminished: 0.20
+    renewed: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  reformed_democracy:
+    status: "DIVERGENCE"
+    description: "US successfully reforms democratic institutions; polarization declines"
+    world_state_effects:
+      us_polarization: "-0.10"
+      global_democracy_index: "+0.05"
+      us_global_standing: "+0.05"
+  fractured:
+    status: "ESCALATED"
+    description: "US fractures into regional blocs or loose confederation"
+    world_state_effects:
+      us_polarization: "+0.15"
+      global_democracy_index: "-0.08"
+      us_global_standing: "-0.15"
+  authoritarian:
+    status: "ESCALATED"
+    description: "Democratic backsliding results in authoritarian US governance"
+    world_state_effects:
+      us_polarization: "+0.05"
+      global_democracy_index: "-0.10"
+      us_global_standing: "-0.10"
+  federated:
+    status: "DIVERGENCE"
+    description: "US restructures into more autonomous regions with weaker federal government"
+    world_state_effects:
+      us_polarization: "-0.05"
+      us_global_standing: "-0.05"
+  diminished:
+    status: "DIVERGENCE"
+    description: "US remains intact but diminished as global power; domestic focus prevails"
+    world_state_effects:
+      us_global_standing: "-0.10"
+      us_polarization: "+0.02"
+  renewed:
+    status: "DIVERGENCE"
+    description: "US experiences cultural and political renewal; reasserts global leadership"
+    world_state_effects:
+      us_polarization: "-0.08"
+      us_global_standing: "+0.10"
+      global_democracy_index: "+0.03"

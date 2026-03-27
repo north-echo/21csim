@@ -1,0 +1,31 @@
+id: "shock_supervolcano"
+year_month: "2037-08"
+title: "Mount Tambora II — Indonesian Supervolcano"
+description: >
+  A VEI-7 eruption (like Tambora 1815) causes a "year without summer."
+  Independent of all other events — geology doesn't care about politics.
+domain: "shock"
+confidence: "LOW"
+variable: "eruption"
+distribution:
+  type: "categorical"
+  options:
+    eruption: 0.06
+    no_eruption: 0.94
+dependencies: []
+conditional: null
+outcomes:
+  eruption:
+    status: "ESCALATED"
+    description: "Mount Rinjani in Lombok erupts at VEI-7; 20km ash column blocks sunlight; global temperatures drop 1.2°C for two years; crop failures across Southeast Asia and India"
+    explanation: "The caldera had been showing increasing seismic activity since 2035 but monitoring budgets were cut"
+    world_state_effects:
+      climate_temp_anomaly: "-0.30"
+      food_security_index: "-0.20"
+      conflict_deaths: "+50000"
+      global_gdp_growth_modifier: "*0.95"
+  no_eruption:
+    status: "HISTORICAL"
+    description: "No major volcanic event"
+    silent: true
+    world_state_effects: {}

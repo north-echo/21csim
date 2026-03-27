@@ -1,0 +1,102 @@
+id: "2022_russia_ukraine"
+year_month: "2022-02"
+title: "Russia-Ukraine War"
+description: >
+  Russia's full-scale invasion of Ukraine. Largest European land war since
+  WWII. Reshapes European security, energy markets, and global alliances.
+  300,000+ casualties, nuclear threats, massive displacement.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "ukraine_war_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_invasion_stalemate: 0.25
+    no_invasion: 0.22
+    quick_russian_victory: 0.10
+    nato_direct_involvement: 0.05
+    quick_ukrainian_victory: 0.12
+    nuclear_use: 0.06
+    frozen_conflict: 0.20
+dependencies:
+  - node: "2014_crimea"
+    branch: "failed_operation"
+    modifies:
+      no_invasion: "+0.25"
+      historical_invasion_stalemate: "-0.15"
+      nuclear_use: "-0.02"
+  - node: "2003_iraq"
+    branch: "diplomatic_resolution"
+    modifies:
+      no_invasion: "+0.05"
+      historical_invasion_stalemate: "-0.05"
+  - node: "2021_afghanistan"
+    branch: "historical_chaotic"
+    modifies:
+      historical_invasion_stalemate: "+0.05"
+      no_invasion: "-0.05"
+conditional: null
+outcomes:
+  historical_invasion_stalemate:
+    status: "HISTORICAL"
+    description: "Full invasion; initial Russian failures; prolonged stalemate"
+    world_state_effects:
+      conflict_deaths: "+300000"
+      nuclear_risk_level: "+0.12"
+      eu_cohesion: "+0.08"
+      russia_stability: "-0.10"
+      global_gdp_growth_modifier: "*0.98"
+      renewable_energy_share: "+0.03"
+    cascading_modifiers:
+      2026_taiwan_strait.deterrence_signal: "+0.05"
+  no_invasion:
+    status: "DIVERGENCE"
+    description: "Russia backs down; diplomatic resolution"
+    explanation: "Stronger Western deterrence or Putin calculates costs too high"
+    world_state_effects:
+      russia_stability: "+0.05"
+      eu_cohesion: "+0.02"
+      nuclear_risk_level: "-0.02"
+  quick_russian_victory:
+    status: "DIVERGENCE"
+    description: "Russia captures Kyiv in weeks; puppet government installed"
+    world_state_effects:
+      conflict_deaths: "+50000"
+      russia_stability: "+0.05"
+      global_democracy_index: "-0.05"
+      eu_cohesion: "+0.10"
+      nuclear_risk_level: "+0.05"
+    cascading_modifiers:
+      2026_taiwan_strait.full_invasion: "+0.05"
+  nato_direct_involvement:
+    status: "ESCALATED"
+    description: "NATO enters direct combat with Russia"
+    world_state_effects:
+      conflict_deaths: "+500000"
+      nuclear_risk_level: "+0.25"
+      eu_cohesion: "+0.15"
+      global_gdp_growth_modifier: "*0.90"
+  quick_ukrainian_victory:
+    status: "DIVERGENCE"
+    description: "Ukrainian counteroffensive succeeds; Russia withdraws by 2023"
+    world_state_effects:
+      conflict_deaths: "+100000"
+      russia_stability: "-0.15"
+      global_democracy_index: "+0.03"
+      nuclear_risk_level: "+0.05"
+  nuclear_use:
+    status: "ESCALATED"
+    description: "Russia uses tactical nuclear weapon in Ukraine"
+    world_state_effects:
+      nuclear_risk_level: "+0.40"
+      conflict_deaths: "+500000"
+      global_gdp_growth_modifier: "*0.90"
+      existential_risk_cumulative: "+0.15"
+      global_democracy_index: "-0.05"
+  frozen_conflict:
+    status: "DIVERGENCE"
+    description: "Early ceasefire; frozen conflict along current lines"
+    world_state_effects:
+      conflict_deaths: "+80000"
+      nuclear_risk_level: "+0.05"
+      russia_stability: "-0.03"

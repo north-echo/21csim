@@ -1,0 +1,75 @@
+id: "2055_resilience"
+year_month: "2055-01"
+title: "The Rebuilding"
+description: >
+  Even in the worst timelines short of extinction, humans rebuild.
+  The question is what they build.
+domain: "governance"
+confidence: "LOW"
+variable: "resilience_status"
+distribution:
+  type: "categorical"
+  options:
+    authoritarian_order: 0.25
+    cooperative_rebuilding: 0.25
+    fragmented_survival: 0.25
+    technological_rescue: 0.15
+    dark_age: 0.10
+dependencies: []
+conditional: "existential_risk_cumulative > 0.3 AND existential_risk_cumulative < 0.8"
+outcomes:
+  authoritarian_order:
+    status: "ESCALATED"
+    description: "Strongmen restore stability through authoritarian control; order at the cost of freedom"
+    explanation: "Crisis-weary populations accept authoritarian bargain; surveillance states enforce order"
+    world_state_effects:
+      global_democracy_index: "-0.15"
+      surveillance_state_index: "+0.15"
+      conflict_deaths: "-20000"
+      governance_model: "-0.10"
+      internet_freedom_index: "-0.12"
+      us_institutional_trust: "-0.05"
+  cooperative_rebuilding:
+    status: "DIVERGENCE"
+    description: "Crisis forces unprecedented international cooperation; new global institutions emerge"
+    explanation: "Shared catastrophe creates shared purpose; a new multilateral order is built from the wreckage"
+    world_state_effects:
+      global_democracy_index: "+0.05"
+      governance_model: "+0.10"
+      eu_cohesion: "+0.08"
+      existential_risk_cumulative: "-0.05"
+      climate_temp_anomaly: "-0.05"
+      inequality_index: "-0.05"
+  fragmented_survival:
+    status: "DIVERGENCE"
+    description: "Local communities survive but no global order; a patchwork of self-governing regions"
+    explanation: "Global institutions collapsed; city-states, regional compacts, and mutual aid networks replace nations"
+    world_state_effects:
+      global_democracy_index: "-0.05"
+      governance_model: "-0.05"
+      supply_chain_resilience: "-0.12"
+      global_gdp_growth_modifier: "*0.92"
+      food_security_index: "-0.05"
+      africa_development_index: "-0.05"
+  technological_rescue:
+    status: "DIVERGENCE"
+    description: "AI and advanced technology used to repair catastrophic damage; partial restoration"
+    explanation: "Surviving AI systems deployed for climate repair, medical triage, and infrastructure reconstruction"
+    world_state_effects:
+      climate_temp_anomaly: "-0.10"
+      existential_risk_cumulative: "-0.08"
+      global_gdp_growth_modifier: "*1.03"
+      renewable_energy_share: "+0.08"
+      human_augmentation_prevalence: "+0.05"
+      food_security_index: "+0.05"
+  dark_age:
+    status: "ESCALATED"
+    description: "Genuine civilizational regression; loss of knowledge, technology, and global connectivity"
+    explanation: "Cascading infrastructure failures, brain drain, and institutional collapse push humanity backward"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.80"
+      global_democracy_index: "-0.20"
+      internet_freedom_index: "-0.20"
+      space_development_index: "-0.05"
+      food_security_index: "-0.12"
+      us_life_expectancy_delta: "-5.0"

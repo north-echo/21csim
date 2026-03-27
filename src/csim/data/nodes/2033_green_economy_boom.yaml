@@ -1,0 +1,64 @@
+id: "2033_green_economy_boom"
+year_month: "2033-06"
+title: "Green Industrial Revolution"
+description: >
+  When clean energy wins early, the economic transformation creates a
+  boom — new industries, new jobs, new geopolitical winners and losers.
+  But even good transitions create losers.
+domain: "economic"
+confidence: "LOW"
+variable: "green_economy_status"
+distribution:
+  type: "categorical"
+  options:
+    broad_prosperity: 0.30
+    petro_state_collapse: 0.25
+    green_inequality: 0.25
+    nationalist_backlash: 0.20
+dependencies: []
+conditional: "renewable_energy_share > 0.25 AND climate_temp_anomaly < 1.5"
+outcomes:
+  broad_prosperity:
+    status: "DIVERGENCE"
+    description: "Green growth lifts all boats; broad-based economic prosperity from clean energy transition"
+    explanation: "New industries create millions of jobs; retraining programs succeed; energy costs plummet globally"
+    world_state_effects:
+      global_gdp_growth_modifier: "*1.05"
+      inequality_index: "-0.08"
+      renewable_energy_share: "+0.10"
+      climate_temp_anomaly: "-0.05"
+      middle_east_post_oil: "+0.10"
+      africa_development_index: "+0.05"
+  petro_state_collapse:
+    status: "ESCALATED"
+    description: "Oil-dependent states face economic collapse as demand craters"
+    explanation: "Saudi Arabia, Nigeria, Venezuela, and others unable to pivot fast enough; social instability follows"
+    world_state_effects:
+      middle_east_stability: "-0.15"
+      conflict_deaths: "+25000"
+      global_gdp_growth_modifier: "*0.97"
+      middle_east_post_oil: "+0.15"
+      renewable_energy_share: "+0.05"
+      russia_stability: "-0.10"
+  green_inequality:
+    status: "DIVERGENCE"
+    description: "Clean energy billionaires form a new oligarchy; green transition benefits concentrate at top"
+    explanation: "Battery, solar, and hydrogen patents create massive wealth concentration; developing nations left behind"
+    world_state_effects:
+      inequality_index: "+0.10"
+      global_gdp_growth_modifier: "*1.03"
+      renewable_energy_share: "+0.08"
+      climate_temp_anomaly: "-0.03"
+      global_democracy_index: "-0.03"
+      africa_development_index: "-0.02"
+  nationalist_backlash:
+    status: "ESCALATED"
+    description: "Green transition moves too fast; populist revolt in industrial regions"
+    explanation: "Workers in fossil fuel industries feel abandoned; nationalist movements weaponize transition pain"
+    world_state_effects:
+      us_polarization: "+0.08"
+      eu_cohesion: "-0.05"
+      global_democracy_index: "-0.04"
+      renewable_energy_share: "-0.03"
+      climate_temp_anomaly: "+0.03"
+      us_institutional_trust: "-0.05"

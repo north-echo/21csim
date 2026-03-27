@@ -1,0 +1,46 @@
+id: "2075_climate_equilibrium"
+year_month: "2075-01"
+title: "Climate Equilibrium"
+description: >
+  Whether Earth's climate system has reached a new equilibrium or continues
+  shifting. The interplay of natural feedbacks, human intervention, and
+  accumulated emissions determines the planet's thermal trajectory.
+domain: "climate"
+confidence: "LOW"
+variable: "climate_equilibrium_status"
+distribution:
+  type: "categorical"
+  options:
+    new_normal_2c: 0.25
+    recovering: 0.15
+    worsening: 0.15
+    geoengineered: 0.20
+    adapted: 0.15
+    crisis: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  new_normal_2c:
+    status: "DIVERGENCE"
+    description: "Climate stabilizes at approximately 2C above pre-industrial; humanity adapts to the new normal"
+    world_state_effects: {}
+  recovering:
+    status: "DIVERGENCE"
+    description: "Active carbon removal and natural processes begin slowly reducing global temperatures"
+    world_state_effects: {}
+  worsening:
+    status: "ESCALATED"
+    description: "Feedback loops continue driving temperatures higher despite mitigation efforts"
+    world_state_effects: {}
+  geoengineered:
+    status: "DIVERGENCE"
+    description: "Climate actively managed through ongoing geoengineering; dependent on continuous intervention"
+    world_state_effects: {}
+  adapted:
+    status: "DIVERGENCE"
+    description: "Temperatures elevated but human civilization fully adapted through technology and infrastructure"
+    world_state_effects: {}
+  crisis:
+    status: "ESCALATED"
+    description: "Climate system in ongoing crisis with unpredictable extreme events and cascading failures"
+    world_state_effects: {}

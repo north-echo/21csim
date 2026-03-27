@@ -1,0 +1,51 @@
+id: "2085_world_system"
+year_month: "2085-01"
+title: "World System 2085"
+description: >
+  The dominant global political and economic system as the century nears its
+  end. Whether nation-states persist, transform, or are replaced by new
+  forms of organization.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "world_system_2085"
+distribution:
+  type: "categorical"
+  options:
+    cooperative: 0.20
+    competitive: 0.25
+    fragmented: 0.15
+    unified: 0.10
+    ai_managed: 0.10
+    anarchic: 0.10
+    post_national: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  cooperative:
+    status: "DIVERGENCE"
+    description: "Nations cooperate extensively on shared challenges while maintaining sovereignty"
+    world_state_effects: {}
+  competitive:
+    status: "DIVERGENCE"
+    description: "Great power competition remains the dominant dynamic in international relations"
+    world_state_effects: {}
+  fragmented:
+    status: "ESCALATED"
+    description: "Global system fragmented into disconnected blocs with minimal interaction"
+    world_state_effects: {}
+  unified:
+    status: "DIVERGENCE"
+    description: "Movement toward genuine global unification with shared governance structures"
+    world_state_effects: {}
+  ai_managed:
+    status: "DIVERGENCE"
+    description: "AI systems manage international coordination, trade, and conflict resolution"
+    world_state_effects: {}
+  anarchic:
+    status: "ESCALATED"
+    description: "No effective global order; power exercised by whoever has the most advanced technology"
+    world_state_effects: {}
+  post_national:
+    status: "DIVERGENCE"
+    description: "Nation-states replaced by new organizational forms: city-states, digital nations, or corporate entities"
+    world_state_effects: {}

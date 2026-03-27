@@ -1,0 +1,59 @@
+id: "2032_moon_base"
+year_month: "2032-06"
+title: "Lunar Base Establishment"
+description: >
+  Establishment of permanent human presence on the Moon. Whether the US,
+  China, or international partnerships lead, and whether a sustained lunar
+  base proves feasible and valuable.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "moon_base_status"
+distribution:
+  type: "categorical"
+  options:
+    us_china_bases: 0.25
+    international_base: 0.15
+    us_only: 0.15
+    china_only: 0.10
+    delayed_2040: 0.25
+    abandoned: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  us_china_bases:
+    status: "DIVERGENCE"
+    description: "Both US and China establish separate lunar outposts; space competition intensifies"
+    explanation: "Geopolitical rivalry drives both powers to invest in permanent lunar presence"
+    world_state_effects:
+      space_development_index: "+0.15"
+  international_base:
+    status: "DIVERGENCE"
+    description: "International coalition builds shared lunar research base"
+    explanation: "Cost sharing and scientific cooperation lead to collaborative ISS-like lunar program"
+    world_state_effects:
+      space_development_index: "+0.12"
+  us_only:
+    status: "DIVERGENCE"
+    description: "US establishes sole lunar base through Artemis program"
+    explanation: "NASA and commercial partners achieve sustained presence; China's program delayed"
+    world_state_effects:
+      space_development_index: "+0.10"
+  china_only:
+    status: "DIVERGENCE"
+    description: "China achieves first permanent lunar base; US program stalls"
+    explanation: "CNSA's steady investment pays off while NASA faces funding and political challenges"
+    world_state_effects:
+      space_development_index: "+0.08"
+      china_power_index: "+0.03"
+  delayed_2040:
+    status: "DIVERGENCE"
+    description: "Lunar base programs delayed by technical and funding challenges"
+    explanation: "Cost overruns, technical failures, and shifting priorities push timelines out a decade"
+    world_state_effects:
+      space_development_index: "+0.03"
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Lunar base programs abandoned as impractical or unaffordable"
+    explanation: "Earthly crises redirect funding; robotic missions deemed sufficient for lunar science"
+    world_state_effects:
+      space_development_index: "+0.01"

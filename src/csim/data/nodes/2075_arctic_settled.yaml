@@ -1,0 +1,41 @@
+id: "2075_arctic_settled"
+year_month: "2075-01"
+title: "Arctic Settled"
+description: >
+  The long-term outcome for the Arctic region as ice-free conditions become
+  permanent. Whether new settlements, governance, and economies emerge in
+  the far north.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "arctic_settled_status"
+distribution:
+  type: "categorical"
+  options:
+    governed: 0.30
+    exploited: 0.20
+    protected: 0.20
+    abandoned: 0.15
+    indigenous: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  governed:
+    status: "DIVERGENCE"
+    description: "Arctic under effective international governance with balanced development and protection"
+    world_state_effects: {}
+  exploited:
+    status: "ESCALATED"
+    description: "Arctic resources extracted intensively; environmental damage extensive but economically productive"
+    world_state_effects: {}
+  protected:
+    status: "DIVERGENCE"
+    description: "Arctic preserved as a global nature reserve; human activity strictly limited"
+    world_state_effects: {}
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Interest in Arctic development wanes as resources found elsewhere or demand declines"
+    world_state_effects: {}
+  indigenous:
+    status: "DIVERGENCE"
+    description: "Arctic governance led by indigenous peoples who gain sovereignty over the region"
+    world_state_effects: {}

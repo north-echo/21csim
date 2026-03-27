@@ -1,0 +1,56 @@
+id: "2012_zirp"
+year_month: "2012-09"
+title: "ZIRP Era / Quantitative Easing"
+domain: "economic"
+confidence: "HIGH"
+variable: "monetary_policy"
+distribution:
+  type: "categorical"
+  options:
+    historical_extended_zirp: 0.50
+    early_normalization: 0.25
+    negative_rates_us: 0.10
+    fiscal_over_monetary: 0.15
+dependencies:
+  - node: "2008_financial_crisis"
+    branch: "great_depression_2"
+    modifies:
+      negative_rates_us: "+0.10"
+      historical_extended_zirp: "+0.05"
+      early_normalization: "-0.15"
+conditional: null
+outcomes:
+  historical_extended_zirp:
+    status: "HISTORICAL"
+    description: "Near-zero rates for 12+ years; massive QE"
+    world_state_effects:
+      inequality_index: "+0.05"
+      us_debt_gdp_ratio: "+0.10"
+      global_gdp_growth_modifier: "*1.01"
+    cascading_modifiers:
+      2022_inflation_crisis.historical_high_then_controlled: "+0.10"
+      2013_crypto.historical_speculative: "+0.05"
+      2018_facebook_cambridge.nothing_changes: "+0.05"
+      2019_unicorn_bubble.bubble_continues: "+0.05"
+  early_normalization:
+    status: "DIVERGENCE"
+    description: "Rate hikes begin 2014; slower but more stable growth"
+    world_state_effects:
+      inequality_index: "+0.02"
+      us_debt_gdp_ratio: "+0.05"
+    cascading_modifiers:
+      2022_inflation_crisis.soft_landing: "+0.10"
+  negative_rates_us:
+    status: "DIVERGENCE"
+    description: "US follows Europe into negative rates"
+    world_state_effects:
+      inequality_index: "+0.08"
+      global_gdp_growth_modifier: "*1.02"
+      us_debt_gdp_ratio: "+0.15"
+  fiscal_over_monetary:
+    status: "DIVERGENCE"
+    description: "Fiscal stimulus replaces monetary; infrastructure spending"
+    world_state_effects:
+      inequality_index: "-0.02"
+      us_debt_gdp_ratio: "+0.08"
+      global_gdp_growth_modifier: "*1.03"

@@ -1,0 +1,46 @@
+id: "2065_us"
+year_month: "2065-01"
+title: "United States 2065"
+description: >
+  The trajectory of the United States as a global power after decades of
+  internal polarization, technological transformation, and shifting
+  geopolitical dynamics.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "us_status_2065"
+distribution:
+  type: "categorical"
+  options:
+    renewed_power: 0.20
+    regional_power: 0.25
+    fractured: 0.10
+    techno_state: 0.15
+    democratic_beacon: 0.15
+    diminished: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  renewed_power:
+    status: "DIVERGENCE"
+    description: "US experiences renewal through technological leadership and institutional reform"
+    world_state_effects: {}
+  regional_power:
+    status: "DIVERGENCE"
+    description: "US retreats from global leadership to focus on Western Hemisphere; still powerful but less dominant"
+    world_state_effects: {}
+  fractured:
+    status: "ESCALATED"
+    description: "Political fractures lead to effective dissolution or extreme devolution of federal power"
+    world_state_effects: {}
+  techno_state:
+    status: "DIVERGENCE"
+    description: "US transforms into a technology-driven state where Silicon Valley logic permeates governance"
+    world_state_effects: {}
+  democratic_beacon:
+    status: "DIVERGENCE"
+    description: "US renews democratic institutions and becomes a model for global democratic governance"
+    world_state_effects: {}
+  diminished:
+    status: "DIVERGENCE"
+    description: "Gradual decline in economic and military power leaves US as one power among many"
+    world_state_effects: {}

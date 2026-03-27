@@ -1,0 +1,67 @@
+id: "2017_notpetya"
+year_month: "2017-06"
+title: "NotPetya"
+description: >
+  Russian military intelligence (GRU) deploys NotPetya wiper malware
+  against Ukraine, which spreads globally causing $10B+ in damage.
+  Most destructive cyber attack in history. Maersk, Merck, FedEx, and
+  hundreds of companies devastated. Demonstrates uncontrollable
+  collateral damage from state cyber weapons.
+domain: "security"
+confidence: "HIGH"
+variable: "notpetya"
+distribution:
+  type: "categorical"
+  options:
+    historical_global_spread: 0.45
+    contained_to_ukraine: 0.20
+    worse_global_cascade: 0.10
+    attribution_deters: 0.15
+    triggers_cyber_treaty: 0.10
+dependencies:
+  - node: "2010_stuxnet"
+    branch: "cyber_arms_race"
+    modifies:
+      historical_global_spread: "+0.05"
+      worse_global_cascade: "+0.10"
+      contained_to_ukraine: "-0.10"
+      triggers_cyber_treaty: "-0.05"
+  - node: "2014_crimea"
+    branch: "historical_annexation"
+    modifies:
+      historical_global_spread: "+0.05"
+      contained_to_ukraine: "-0.05"
+conditional: null
+outcomes:
+  historical_global_spread:
+    status: "HISTORICAL"
+    description: "NotPetya spreads globally; $10B+ damage across multinational corporations"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+10.0"
+      supply_chain_resilience: "-0.04"
+  contained_to_ukraine:
+    status: "DIVERGENCE"
+    description: "NotPetya contained within Ukrainian networks; limited global impact"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+2.0"
+      supply_chain_resilience: "-0.01"
+  worse_global_cascade:
+    status: "ESCALATED"
+    description: "NotPetya variant hits financial systems; global economic disruption"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+30.0"
+      supply_chain_resilience: "-0.10"
+      global_gdp_growth_modifier: "-0.02"
+  attribution_deters:
+    status: "DIVERGENCE"
+    description: "Rapid public attribution and sanctions deter future state cyber attacks"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+5.0"
+      supply_chain_resilience: "-0.02"
+      russia_stability: "-0.02"
+  triggers_cyber_treaty:
+    status: "DIVERGENCE"
+    description: "Devastation triggers international cyber weapons treaty"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+3.0"
+      supply_chain_resilience: "-0.01"

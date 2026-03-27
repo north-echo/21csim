@@ -1,0 +1,74 @@
+id: "2025_grid_modernization"
+year_month: "2025-06"
+title: "Grid Modernization Crisis"
+description: >
+  Aging electrical grid infrastructure collides with rapid renewable
+  integration. Intermittent solar and wind require massive transmission
+  upgrades, smart grid technology, and storage. Grid failures and
+  blackouts force urgent modernization decisions.
+domain: "energy"
+confidence: "MEDIUM"
+variable: "grid_outcome"
+distribution:
+  type: "categorical"
+  options:
+    muddle_through: 0.35
+    smart_grid_success: 0.20
+    grid_failures: 0.20
+    distributed_revolution: 0.15
+    regulatory_gridlock: 0.10
+dependencies:
+  - node: "2017_battery_storage"
+    branch: "breakthrough_chemistry"
+    modifies:
+      smart_grid_success: "+0.10"
+      grid_failures: "-0.08"
+      muddle_through: "-0.02"
+  - node: "2011_solar_revolution"
+    branch: "historical_cost_collapse"
+    modifies:
+      grid_failures: "+0.05"
+      smart_grid_success: "+0.03"
+      muddle_through: "-0.08"
+conditional: null
+outcomes:
+  muddle_through:
+    status: "DIVERGENCE"
+    description: "Incremental upgrades barely keep pace; brownouts in peak demand"
+    world_state_effects:
+      renewable_energy_share: "+0.03"
+      supply_chain_resilience: "-0.02"
+  smart_grid_success:
+    status: "DIVERGENCE"
+    description: "Major smart grid investment pays off; seamless renewable integration"
+    world_state_effects:
+      renewable_energy_share: "+0.08"
+      supply_chain_resilience: "+0.04"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.07"
+  grid_failures:
+    status: "ESCALATED"
+    description: "Cascading grid failures; major blackouts drive political backlash against renewables"
+    world_state_effects:
+      renewable_energy_share: "-0.02"
+      supply_chain_resilience: "-0.05"
+      global_gdp_growth_modifier: "*0.98"
+    cascading_modifiers:
+      2027_energy_transition.fossil_resurgence: "+0.08"
+      2027_energy_transition.energy_crisis: "+0.05"
+  distributed_revolution:
+    status: "DIVERGENCE"
+    description: "Microgrids and distributed energy bypass centralized grid entirely"
+    world_state_effects:
+      renewable_energy_share: "+0.06"
+      supply_chain_resilience: "+0.03"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.05"
+  regulatory_gridlock:
+    status: "DIVERGENCE"
+    description: "Permitting and NIMBY opposition block transmission buildout for years"
+    world_state_effects:
+      renewable_energy_share: "+0.01"
+      supply_chain_resilience: "-0.03"
+    cascading_modifiers:
+      2027_energy_transition.energy_crisis: "+0.03"

@@ -1,0 +1,51 @@
+id: "2068_ocean_ecosystem"
+year_month: "2068-06"
+title: "Ocean Ecosystem State"
+description: >
+  The state of global ocean ecosystems after decades of warming, acidification,
+  and pollution. Coral reefs, fisheries, and marine biodiversity face their
+  ultimate reckoning.
+domain: "climate"
+confidence: "LOW"
+variable: "ocean_ecosystem_status"
+distribution:
+  type: "categorical"
+  options:
+    recovering: 0.20
+    collapsed: 0.15
+    managed: 0.25
+    acidified: 0.20
+    new_equilibrium: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  recovering:
+    status: "DIVERGENCE"
+    description: "Ocean ecosystems showing signs of recovery after aggressive conservation and emissions reduction"
+    world_state_effects:
+      biodiversity_index: "+0.10"
+      food_security_index: "+0.08"
+  collapsed:
+    status: "ESCALATED"
+    description: "Major marine ecosystems have collapsed; fisheries devastated globally"
+    world_state_effects:
+      biodiversity_index: "-0.25"
+      food_security_index: "-0.20"
+  managed:
+    status: "DIVERGENCE"
+    description: "Oceans heavily managed through aquaculture, artificial reefs, and marine engineering"
+    world_state_effects:
+      biodiversity_index: "-0.05"
+      food_security_index: "+0.05"
+  acidified:
+    status: "ESCALATED"
+    description: "Ocean acidification has fundamentally altered marine chemistry; shell-forming organisms decimated"
+    world_state_effects:
+      biodiversity_index: "-0.15"
+      food_security_index: "-0.12"
+  new_equilibrium:
+    status: "DIVERGENCE"
+    description: "Oceans have reached a new ecological equilibrium with different but functional ecosystems"
+    world_state_effects:
+      biodiversity_index: "-0.08"
+      food_security_index: "+0.02"

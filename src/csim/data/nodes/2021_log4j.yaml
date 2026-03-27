@@ -1,0 +1,53 @@
+id: "2021_log4j"
+year_month: "2021-12"
+title: "Log4j / Supply Chain Vulnerability"
+description: >
+  Critical vulnerability in Log4j, a ubiquitous open-source Java logging
+  library, exposes hundreds of millions of systems worldwide. Highlights
+  the fragility of open-source software supply chains and the unpaid
+  maintainers that critical infrastructure depends on.
+domain: "security"
+confidence: "HIGH"
+variable: "log4j"
+distribution:
+  type: "categorical"
+  options:
+    historical_scramble: 0.45
+    quickly_patched: 0.15
+    mass_exploitation: 0.15
+    open_source_funding: 0.15
+    supply_chain_regulation: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_scramble:
+    status: "HISTORICAL"
+    description: "Global scramble to patch Log4j; widespread exploitation before fixes deployed"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+8.0"
+      supply_chain_resilience: "-0.03"
+  quickly_patched:
+    status: "DIVERGENCE"
+    description: "Vulnerability discovered and patched before widespread exploitation"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+1.0"
+      supply_chain_resilience: "-0.01"
+  mass_exploitation:
+    status: "ESCALATED"
+    description: "State actors exploit Log4j for months before discovery; massive data breaches"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+20.0"
+      supply_chain_resilience: "-0.07"
+      us_institutional_trust: "-0.02"
+  open_source_funding:
+    status: "DIVERGENCE"
+    description: "Crisis triggers major investment in open-source security and maintainer funding"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+3.0"
+      supply_chain_resilience: "+0.02"
+  supply_chain_regulation:
+    status: "DIVERGENCE"
+    description: "Mandatory software bill of materials (SBOM) regulations enacted"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+4.0"
+      supply_chain_resilience: "+0.03"

@@ -1,0 +1,59 @@
+id: "2050_space_solar_power"
+year_month: "2050-06"
+title: "Space Solar Power"
+description: >
+  Orbital solar power stations beam energy to Earth via microwave or laser.
+  Unlimited clean energy from space could transform the global energy mix,
+  but requires massive orbital construction and wireless power transmission
+  at scale.
+domain: "technology"
+confidence: "LOW"
+variable: "space_solar_power_status"
+distribution:
+  type: "categorical"
+  options:
+    demonstration_success: 0.20
+    commercial_deployment: 0.10
+    technically_feasible: 0.25
+    too_expensive: 0.30
+    weaponization_concerns: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  demonstration_success:
+    status: "DIVERGENCE"
+    description: "First megawatt-scale space solar power station demonstrates viable beamed energy"
+    explanation: "Orbital platform successfully transmits solar energy to ground receiver; proof of concept achieved"
+    world_state_effects:
+      space_development_index: "+0.08"
+      renewable_energy_share: "+0.02"
+  commercial_deployment:
+    status: "DIVERGENCE"
+    description: "Multiple gigawatt-scale space solar power stations operational; significant energy contribution"
+    explanation: "Automated in-orbit construction and efficient microwave transmission make space solar competitive"
+    world_state_effects:
+      space_development_index: "+0.15"
+      renewable_energy_share: "+0.05"
+      climate_temp_anomaly: "-0.05"
+    cascading_modifiers:
+      2065_climate_verdict.stabilized: "+0.03"
+  technically_feasible:
+    status: "DIVERGENCE"
+    description: "Technology works but deployment remains limited to pilot projects"
+    explanation: "Engineering challenges solved but scale-up costs keep space solar marginal vs terrestrial renewables"
+    world_state_effects:
+      space_development_index: "+0.05"
+      renewable_energy_share: "+0.01"
+  too_expensive:
+    status: "DIVERGENCE"
+    description: "Space solar power cannot compete with terrestrial renewables and storage"
+    explanation: "Ground-based solar, wind, and battery storage advance faster than orbital construction costs decline"
+    world_state_effects:
+      space_development_index: "+0.01"
+  weaponization_concerns:
+    status: "ESCALATED"
+    description: "Space solar power development halted by fears of directed-energy weapon potential"
+    explanation: "Military implications of orbital energy beams trigger arms control debates and moratoria"
+    world_state_effects:
+      space_development_index: "+0.02"
+      nuclear_risk_level: "+0.02"

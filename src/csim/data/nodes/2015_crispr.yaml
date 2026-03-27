@@ -1,0 +1,41 @@
+id: "2015_crispr"
+year_month: "2015-12"
+title: "CRISPR Gene Editing"
+domain: "technology"
+confidence: "HIGH"
+variable: "crispr"
+distribution:
+  type: "categorical"
+  options:
+    historical_cautious: 0.50
+    designer_babies_race: 0.10
+    strict_global_ban: 0.15
+    therapeutic_breakthrough: 0.25
+dependencies: []
+conditional: null
+outcomes:
+  historical_cautious:
+    status: "HISTORICAL"
+    description: "Cautious therapeutic use; He Jiankui scandal"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.2"
+      inequality_index: "+0.01"
+  designer_babies_race:
+    status: "ESCALATED"
+    description: "Genetic enhancement race between nations"
+    world_state_effects:
+      inequality_index: "+0.08"
+      human_augmentation_prevalence: "+0.05"
+      existential_risk_cumulative: "+0.02"
+  strict_global_ban:
+    status: "DIVERGENCE"
+    description: "Global ban on human germline editing"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.1"
+  therapeutic_breakthrough:
+    status: "DIVERGENCE"
+    description: "CRISPR cures major genetic diseases"
+    world_state_effects:
+      us_life_expectancy_delta: "+1.0"
+      inequality_index: "+0.02"
+      global_gdp_growth_modifier: "*1.005"

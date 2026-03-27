@@ -1,0 +1,43 @@
+id: "2013_syria_redline"
+year_month: "2013-08"
+title: "Syria Red Line"
+domain: "security"
+confidence: "HIGH"
+variable: "syria_response"
+distribution:
+  type: "categorical"
+  options:
+    historical_no_strike: 0.45
+    limited_strike: 0.25
+    full_intervention: 0.10
+    diplomatic_only: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  historical_no_strike:
+    status: "HISTORICAL"
+    description: "Obama doesn't enforce red line; Russia brokers deal"
+    world_state_effects:
+      us_global_standing: "-0.05"
+      middle_east_stability: "-0.05"
+    cascading_modifiers:
+      2014_crimea.historical_annexation: "+0.05"
+  limited_strike:
+    status: "DIVERGENCE"
+    description: "Limited US strikes against chemical weapons facilities"
+    world_state_effects:
+      us_global_standing: "+0.02"
+      conflict_deaths: "+2000"
+  full_intervention:
+    status: "ESCALATED"
+    description: "Full US military intervention in Syria"
+    world_state_effects:
+      conflict_deaths: "+50000"
+      us_debt_gdp_ratio: "+0.03"
+      middle_east_stability: "-0.10"
+      nuclear_risk_level: "+0.03"
+  diplomatic_only:
+    status: "DIVERGENCE"
+    description: "Diplomatic solution; Assad remains but chemical weapons removed"
+    world_state_effects:
+      middle_east_stability: "+0.02"

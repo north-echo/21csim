@@ -1,0 +1,74 @@
+id: "2017_battery_storage"
+year_month: "2017-07"
+title: "Battery Storage Revolution"
+description: >
+  Tesla Powerwall and grid-scale battery storage enable intermittent
+  renewables to provide baseload power. The missing piece for 100%
+  renewable grids.
+domain: "energy"
+confidence: "HIGH"
+variable: "battery_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_progress: 0.45
+    breakthrough_chemistry: 0.15
+    slower_than_hoped: 0.20
+    alternative_storage: 0.10
+    china_dominance: 0.10
+dependencies:
+  - node: "2011_solar_revolution"
+    branch: "historical_cost_collapse"
+    modifies:
+      historical_progress: "+0.05"
+      breakthrough_chemistry: "+0.03"
+      slower_than_hoped: "-0.08"
+  - node: "2001_china_wto"
+    branch: "no_accession"
+    modifies:
+      china_dominance: "-0.08"
+      historical_progress: "+0.03"
+      slower_than_hoped: "+0.05"
+conditional: null
+outcomes:
+  historical_progress:
+    status: "HISTORICAL"
+    description: "Steady battery cost decline; grid-scale storage viable by 2025"
+    world_state_effects:
+      renewable_energy_share: "+0.04"
+      supply_chain_resilience: "+0.01"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.03"
+  breakthrough_chemistry:
+    status: "DIVERGENCE"
+    description: "Solid-state or sodium-ion batteries dramatically cheaper; energy storage solved"
+    world_state_effects:
+      renewable_energy_share: "+0.08"
+      climate_temp_anomaly: "-0.02"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.08"
+  slower_than_hoped:
+    status: "DIVERGENCE"
+    description: "Lithium supply constraints limit battery scaling; renewables remain intermittent"
+    world_state_effects:
+      renewable_energy_share: "+0.02"
+      climate_temp_anomaly: "+0.02"
+    cascading_modifiers:
+      2027_energy_transition.fossil_resurgence: "+0.05"
+  alternative_storage:
+    status: "DIVERGENCE"
+    description: "Hydrogen, compressed air, or gravity storage wins over lithium-ion"
+    world_state_effects:
+      renewable_energy_share: "+0.05"
+      supply_chain_resilience: "+0.03"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.04"
+  china_dominance:
+    status: "DIVERGENCE"
+    description: "China controls 90% of battery supply chain; geopolitical leverage"
+    world_state_effects:
+      renewable_energy_share: "+0.04"
+      supply_chain_resilience: "-0.05"
+      china_power_index: "+0.02"
+    cascading_modifiers:
+      2018_trade_war.full_decoupling: "+0.03"

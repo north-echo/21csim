@@ -1,0 +1,31 @@
+id: "shock_global_leader"
+year_month: "2034-01"
+title: "The Nairobi Accords — A Transformative Leader Emerges"
+description: >
+  A Mandela/Gandhi-level figure emerges and shifts global politics.
+  Independent event — great individuals are not predictable.
+domain: "shock"
+confidence: "LOW"
+variable: "leader_emerges"
+distribution:
+  type: "categorical"
+  options:
+    emerges: 0.12
+    no_leader: 0.88
+dependencies: []
+conditional: null
+outcomes:
+  emerges:
+    status: "DIVERGENCE"
+    description: "Kenyan climate scientist Amara Ochieng brokers the Nairobi Accords, uniting 140 nations behind binding emissions targets; wins Nobel Peace Prize and galvanizes a generation"
+    explanation: "A rare combination of scientific credibility, moral authority, and political skill at precisely the right moment"
+    world_state_effects:
+      global_democracy_index: "+0.05"
+      climate_temp_anomaly: "-0.03"
+      conflict_deaths: "-20000"
+      us_polarization: "-0.03"
+  no_leader:
+    status: "HISTORICAL"
+    description: "No transformative political figure emerges"
+    silent: true
+    world_state_effects: {}

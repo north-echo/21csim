@@ -1,0 +1,68 @@
+id: "2045_eu_federation"
+year_month: "2045-01"
+title: "EU Federation Decision"
+description: >
+  The European Union faces a definitive choice on deeper integration. Whether
+  Europe federalizes, fragments, or finds a middle path determines its role
+  as a global power in the latter half of the century.
+domain: "regional"
+confidence: "MEDIUM"
+variable: "eu_federation_status"
+distribution:
+  type: "categorical"
+  options:
+    full_federation: 0.10
+    enhanced_cooperation: 0.25
+    two_speed: 0.25
+    dissolution: 0.10
+    status_quo: 0.20
+    defense_federation: 0.10
+dependencies:
+  - node: "2032_eu_defense"
+    branch: "integrated"
+    modifies:
+      full_federation: "+0.10"
+      defense_federation: "+0.05"
+      dissolution: "-0.10"
+      status_quo: "-0.05"
+  - node: "2032_eu_defense"
+    branch: "fragmented"
+    modifies:
+      dissolution: "+0.10"
+      status_quo: "+0.05"
+      full_federation: "-0.10"
+      defense_federation: "-0.05"
+conditional: null
+outcomes:
+  full_federation:
+    status: "DIVERGENCE"
+    description: "EU becomes a true federal state with shared fiscal policy, military, and foreign affairs"
+    world_state_effects:
+      eu_cohesion: "+0.20"
+      global_democracy_index: "+0.03"
+  enhanced_cooperation:
+    status: "DIVERGENCE"
+    description: "Core EU nations deepen integration while maintaining national sovereignty"
+    world_state_effects:
+      eu_cohesion: "+0.08"
+  two_speed:
+    status: "DIVERGENCE"
+    description: "Inner core federalizes while outer ring remains loosely associated"
+    world_state_effects:
+      eu_cohesion: "+0.05"
+  dissolution:
+    status: "ESCALATED"
+    description: "EU dissolves into regional blocs or individual nation-states"
+    world_state_effects:
+      eu_cohesion: "-0.25"
+      global_democracy_index: "-0.03"
+  status_quo:
+    status: "DIVERGENCE"
+    description: "EU muddles through without major reform; institutional inertia prevails"
+    world_state_effects:
+      eu_cohesion: "-0.02"
+  defense_federation:
+    status: "DIVERGENCE"
+    description: "EU federalizes defense and foreign policy while keeping economic sovereignty"
+    world_state_effects:
+      eu_cohesion: "+0.10"

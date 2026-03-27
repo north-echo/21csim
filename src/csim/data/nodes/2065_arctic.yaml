@@ -1,0 +1,41 @@
+id: "2065_arctic"
+year_month: "2065-01"
+title: "Arctic 2065"
+description: >
+  The fate of the Arctic region after decades of ice loss. Whether the newly
+  accessible Arctic becomes a governed commons, a zone of exploitation, or
+  a protected wilderness.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "arctic_status_2065"
+distribution:
+  type: "categorical"
+  options:
+    governed: 0.25
+    exploited: 0.20
+    protected: 0.20
+    contested: 0.20
+    irrelevant: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  governed:
+    status: "DIVERGENCE"
+    description: "International Arctic governance framework manages resources, shipping, and environmental protection"
+    world_state_effects: {}
+  exploited:
+    status: "ESCALATED"
+    description: "Arctic nations extract resources aggressively with minimal environmental safeguards"
+    world_state_effects: {}
+  protected:
+    status: "DIVERGENCE"
+    description: "Arctic designated as international protected zone; resource extraction banned"
+    world_state_effects: {}
+  contested:
+    status: "ESCALATED"
+    description: "Competing territorial claims and militarization make the Arctic a flashpoint for great power conflict"
+    world_state_effects: {}
+  irrelevant:
+    status: "DIVERGENCE"
+    description: "Technological change makes Arctic resources and shipping routes less strategically important"
+    world_state_effects: {}

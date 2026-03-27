@@ -1,0 +1,57 @@
+id: "2052_asteroid_deflection"
+year_month: "2052-01"
+title: "Asteroid Deflection"
+description: >
+  Planetary defense systems face their first real test as asteroid detection
+  improves and deflection technology matures. Whether the system works when
+  needed determines confidence in long-term species survival.
+domain: "space"
+confidence: "LOW"
+variable: "asteroid_deflection_status"
+distribution:
+  type: "categorical"
+  options:
+    successful_test: 0.30
+    near_miss: 0.15
+    unnecessary: 0.30
+    impact_averted: 0.05
+    technology_fails: 0.10
+    international_system: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  successful_test:
+    status: "DIVERGENCE"
+    description: "Asteroid deflection technology successfully tested on a real target"
+    world_state_effects:
+      space_development_index: "+0.05"
+      existential_risk_cumulative: "-0.02"
+  near_miss:
+    status: "ESCALATED"
+    description: "Previously undetected asteroid passes close to Earth; deflection attempted but unnecessary"
+    world_state_effects:
+      space_development_index: "+0.08"
+      existential_risk_cumulative: "+0.02"
+  unnecessary:
+    status: "DIVERGENCE"
+    description: "No significant asteroid threats materialize; system remains theoretical"
+    world_state_effects:
+      existential_risk_cumulative: "-0.01"
+  impact_averted:
+    status: "ESCALATED"
+    description: "Genuine impact threat detected and successfully deflected; planetary defense vindicated"
+    world_state_effects:
+      space_development_index: "+0.12"
+      existential_risk_cumulative: "-0.05"
+  technology_fails:
+    status: "ESCALATED"
+    description: "Deflection technology fails in test; planetary defense set back a generation"
+    world_state_effects:
+      space_development_index: "-0.03"
+      existential_risk_cumulative: "+0.03"
+  international_system:
+    status: "DIVERGENCE"
+    description: "International planetary defense system operational and funded by global consortium"
+    world_state_effects:
+      space_development_index: "+0.05"
+      global_democracy_index: "+0.01"

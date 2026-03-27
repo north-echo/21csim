@@ -1,0 +1,63 @@
+id: "2021_jan6"
+year_month: "2021-01"
+title: "January 6 Capitol Breach"
+description: >
+  Pro-Trump mob storms US Capitol during certification of electoral votes.
+  Unprecedented attack on the peaceful transfer of power. Five dead,
+  140+ police injured.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "jan6_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_breach: 0.40
+    peaceful_protest: 0.25
+    worse_violence: 0.10
+    no_protest: 0.25
+dependencies:
+  - node: "2020_us_election"
+    branch: "biden_wins"
+    modifies:
+      historical_breach: "+0.05"
+      no_protest: "-0.05"
+  - node: "2016_us_election"
+    branch: "trump_wins"
+    modifies:
+      historical_breach: "+0.10"
+      no_protest: "-0.10"
+  - node: "2016_misinformation"
+    branch: "historical_escalation"
+    modifies:
+      historical_breach: "+0.05"
+      worse_violence: "+0.03"
+      no_protest: "-0.08"
+conditional: "2020_us_election != trump_wins"
+outcomes:
+  historical_breach:
+    status: "HISTORICAL"
+    description: "Mob breaches Capitol; certification delayed but completed"
+    world_state_effects:
+      us_polarization: "+0.08"
+      global_democracy_index: "-0.03"
+      us_institutional_trust: "-0.05"
+  peaceful_protest:
+    status: "DIVERGENCE"
+    description: "Large rally but no breach; police maintain perimeter"
+    world_state_effects:
+      us_polarization: "+0.03"
+  worse_violence:
+    status: "ESCALATED"
+    description: "Organized armed assault; legislators harmed"
+    explanation: "Extremist groups coordinate; weapons cache deployed"
+    world_state_effects:
+      us_polarization: "+0.15"
+      global_democracy_index: "-0.08"
+      us_institutional_trust: "-0.12"
+      conflict_deaths: "+25"
+  no_protest:
+    status: "DIVERGENCE"
+    description: "Trump concedes; no significant protest"
+    world_state_effects:
+      us_polarization: "+0.01"
+      us_institutional_trust: "+0.02"

@@ -1,0 +1,50 @@
+id: "2017_saudi_transformation"
+year_month: "2017-06"
+title: "Saudi Transformation"
+domain: "regional"
+confidence: "HIGH"
+variable: "saudi_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_mbs: 0.45
+    democratic_opening: 0.10
+    succession_crisis: 0.15
+    iran_war: 0.10
+    oil_transition: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  historical_mbs:
+    status: "HISTORICAL"
+    description: "MBS consolidates power; Vision 2030; Khashoggi murder"
+    world_state_effects:
+      middle_east_stability: "+0.02"
+      renewable_energy_share: "+0.01"
+      global_democracy_index: "-0.01"
+  democratic_opening:
+    status: "DIVERGENCE"
+    description: "Saudi Arabia begins genuine democratic reforms"
+    world_state_effects:
+      middle_east_stability: "+0.05"
+      global_democracy_index: "+0.02"
+  succession_crisis:
+    status: "ESCALATED"
+    description: "Royal succession crisis; internal power struggle"
+    world_state_effects:
+      middle_east_stability: "-0.10"
+      global_gdp_growth_modifier: "*0.99"
+  iran_war:
+    status: "ESCALATED"
+    description: "Saudi-Iran direct military conflict"
+    world_state_effects:
+      middle_east_stability: "-0.20"
+      conflict_deaths: "+50000"
+      nuclear_risk_level: "+0.05"
+  oil_transition:
+    status: "DIVERGENCE"
+    description: "Saudi Arabia successfully diversifies away from oil"
+    world_state_effects:
+      middle_east_stability: "+0.05"
+      middle_east_post_oil: "+0.10"
+      renewable_energy_share: "+0.03"

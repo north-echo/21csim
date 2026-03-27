@@ -1,0 +1,56 @@
+id: "2021_colonial_pipeline"
+year_month: "2021-05"
+title: "Colonial Pipeline Ransomware"
+description: >
+  Ransomware shuts down the largest US fuel pipeline. Panic buying,
+  gas shortages on East Coast. Demonstrates cyber-physical vulnerability.
+domain: "security"
+confidence: "HIGH"
+variable: "colonial_pipeline"
+distribution:
+  type: "categorical"
+  options:
+    historical_shutdown: 0.45
+    prevented: 0.20
+    worse_cascading: 0.10
+    triggers_mandate: 0.25
+dependencies:
+  - node: "2016_ransomware"
+    branch: "historical_epidemic"
+    modifies:
+      historical_shutdown: "+0.10"
+      prevented: "-0.10"
+  - node: "2020_solarwinds"
+    branch: "defensive_reform"
+    modifies:
+      prevented: "+0.15"
+      historical_shutdown: "-0.10"
+      worse_cascading: "-0.05"
+conditional: null
+outcomes:
+  historical_shutdown:
+    status: "HISTORICAL"
+    description: "Colonial Pipeline shut down by DarkSide ransomware; East Coast fuel crisis"
+    world_state_effects:
+      supply_chain_resilience: "-0.03"
+      global_cyber_damage_annual_b: "+5.0"
+  prevented:
+    status: "DIVERGENCE"
+    description: "Attack prevented by improved cybersecurity practices"
+    world_state_effects:
+      supply_chain_resilience: "+0.01"
+      global_cyber_damage_annual_b: "+1.0"
+  worse_cascading:
+    status: "ESCALATED"
+    description: "Multiple pipelines and utilities hit simultaneously"
+    world_state_effects:
+      supply_chain_resilience: "-0.08"
+      global_cyber_damage_annual_b: "+20.0"
+      us_institutional_trust: "-0.03"
+  triggers_mandate:
+    status: "DIVERGENCE"
+    description: "Federal cybersecurity mandate for all critical infrastructure"
+    world_state_effects:
+      supply_chain_resilience: "+0.03"
+      global_cyber_damage_annual_b: "+3.0"
+      us_institutional_trust: "+0.01"

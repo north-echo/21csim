@@ -1,0 +1,46 @@
+id: "2014_venezuela"
+year_month: "2014-01"
+title: "Venezuela Collapse"
+domain: "regional"
+confidence: "HIGH"
+variable: "venezuela"
+distribution:
+  type: "categorical"
+  options:
+    historical_collapse: 0.50
+    maduro_falls: 0.15
+    muddling_through: 0.20
+    us_intervention: 0.05
+    regional_contagion: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_collapse:
+    status: "HISTORICAL"
+    description: "Economic collapse; mass emigration; humanitarian crisis"
+    world_state_effects:
+      latin_america_stability: "-0.08"
+      global_democracy_index: "-0.01"
+  maduro_falls:
+    status: "DIVERGENCE"
+    description: "Maduro overthrown; democratic transition"
+    world_state_effects:
+      latin_america_stability: "-0.03"
+      global_democracy_index: "+0.01"
+  muddling_through:
+    status: "DIVERGENCE"
+    description: "Venezuela muddles through without full collapse"
+    world_state_effects:
+      latin_america_stability: "-0.03"
+  us_intervention:
+    status: "ESCALATED"
+    description: "US military intervention in Venezuela"
+    world_state_effects:
+      latin_america_stability: "-0.15"
+      us_global_standing: "-0.05"
+  regional_contagion:
+    status: "ESCALATED"
+    description: "Venezuelan crisis destabilizes Colombia, Brazil"
+    world_state_effects:
+      latin_america_stability: "-0.15"
+      conflict_deaths: "+10000"

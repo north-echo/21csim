@@ -1,0 +1,39 @@
+id: "2014_mh370"
+year_month: "2014-03"
+title: "MH370 Disappearance"
+description: >
+  Commercial aircraft vanishes without trace. Never found. Reshapes
+  aviation tracking requirements worldwide.
+domain: "technology"
+confidence: "HIGH"
+variable: "mh370_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_disappearance: 0.50
+    found_quickly: 0.20
+    pilot_theory_confirmed: 0.10
+    triggers_tracking_mandate: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  historical_disappearance:
+    status: "HISTORICAL"
+    description: "Aircraft vanishes; never found despite extensive search"
+    world_state_effects:
+      surveillance_state_index: "+0.01"
+  found_quickly:
+    status: "DIVERGENCE"
+    description: "Wreckage located within weeks; cause determined"
+    world_state_effects:
+      surveillance_state_index: "+0.00"
+  pilot_theory_confirmed:
+    status: "DIVERGENCE"
+    description: "Definitive evidence of deliberate pilot action found"
+    world_state_effects:
+      surveillance_state_index: "+0.02"
+  triggers_tracking_mandate:
+    status: "DIVERGENCE"
+    description: "Disappearance triggers immediate global real-time flight tracking mandate"
+    world_state_effects:
+      surveillance_state_index: "+0.02"

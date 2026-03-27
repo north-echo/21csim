@@ -1,0 +1,56 @@
+id: "2036_fusion_energy"
+year_month: "2036-06"
+title: "Fusion Energy Progress"
+description: >
+  Whether nuclear fusion achieves commercial viability. Decades of research
+  face a critical window as private companies and government projects
+  race toward net energy gain and commercial reactors.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "fusion_energy_status"
+distribution:
+  type: "categorical"
+  options:
+    commercial_2040: 0.15
+    delayed_2060: 0.30
+    breakthrough: 0.10
+    abandoned: 0.15
+    government_funded: 0.30
+dependencies: []
+conditional: null
+outcomes:
+  commercial_2040:
+    status: "DIVERGENCE"
+    description: "First commercial fusion reactor online by 2040"
+    explanation: "Private sector investment and engineering advances deliver on aggressive timelines"
+    world_state_effects:
+      renewable_energy_share: "+0.05"
+      climate_temp_anomaly: "-0.05"
+  delayed_2060:
+    status: "DIVERGENCE"
+    description: "Fusion remains 20 years away; commercial viability pushed to 2060s"
+    explanation: "Materials challenges, plasma instabilities, and engineering complexity delay progress"
+    world_state_effects:
+      renewable_energy_share: "+0.01"
+      climate_temp_anomaly: "+0.02"
+  breakthrough:
+    status: "DIVERGENCE"
+    description: "Revolutionary fusion breakthrough transforms energy economics"
+    explanation: "Novel confinement approach or materials science advance makes fusion dramatically cheaper than expected"
+    world_state_effects:
+      renewable_energy_share: "+0.10"
+      climate_temp_anomaly: "-0.10"
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Major fusion programs abandoned; resources redirected to renewables"
+    explanation: "Solar and battery costs drop so fast that fusion investment no longer justified"
+    world_state_effects:
+      renewable_energy_share: "+0.03"
+      climate_temp_anomaly: "+0.01"
+  government_funded:
+    status: "DIVERGENCE"
+    description: "Fusion continues as government-funded research without commercial breakthrough"
+    explanation: "ITER and successors demonstrate physics but engineering and economic viability remain distant"
+    world_state_effects:
+      renewable_energy_share: "+0.02"
+      climate_temp_anomaly: "+0.01"

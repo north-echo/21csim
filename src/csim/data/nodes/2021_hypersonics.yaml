@@ -1,0 +1,44 @@
+id: "2021_hypersonics"
+year_month: "2021-10"
+title: "Hypersonic Weapons Race"
+domain: "security"
+confidence: "HIGH"
+variable: "hypersonics"
+distribution:
+  type: "categorical"
+  options:
+    historical_arms_race: 0.45
+    arms_control: 0.10
+    chinese_superiority: 0.15
+    defense_breakthrough: 0.15
+    non_event: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  historical_arms_race:
+    status: "HISTORICAL"
+    description: "US, China, Russia race to deploy hypersonic weapons"
+    world_state_effects:
+      nuclear_risk_level: "+0.03"
+      china_power_index: "+0.02"
+  arms_control:
+    status: "DIVERGENCE"
+    description: "Hypersonics included in arms control framework"
+    world_state_effects:
+      nuclear_risk_level: "-0.02"
+  chinese_superiority:
+    status: "DIVERGENCE"
+    description: "China achieves clear hypersonic superiority"
+    world_state_effects:
+      china_power_index: "+0.05"
+      nuclear_risk_level: "+0.05"
+      us_global_standing: "-0.03"
+  defense_breakthrough:
+    status: "DIVERGENCE"
+    description: "Effective hypersonic defense developed"
+    world_state_effects:
+      nuclear_risk_level: "-0.03"
+  non_event:
+    status: "DIVERGENCE"
+    description: "Hypersonics prove impractical"
+    world_state_effects: {}

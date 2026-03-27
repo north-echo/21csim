@@ -1,0 +1,63 @@
+id: "2010_spacex_falcon9"
+year_month: "2010-06"
+title: "SpaceX and Reusable Rocketry"
+description: >
+  Falcon 9 first flight. First successful landing 2015. Reduces launch
+  costs by 10x. Without reusable rockets, nothing else in the space
+  timeline happens.
+domain: "space"
+confidence: "HIGH"
+variable: "spacex_falcon9_status"
+distribution:
+  type: "categorical"
+  options:
+    historical_success: 0.50
+    delayed_5_years: 0.15
+    spacex_fails: 0.10
+    multiple_competitors: 0.15
+    government_only: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_success:
+    status: "HISTORICAL"
+    description: "SpaceX succeeds with Falcon 9; reusable rocketry slashes launch costs by 10x"
+    explanation: "Falcon 9 flies 2010, first landing 2015; opens commercial space era"
+    world_state_effects:
+      space_development_index: "+0.08"
+    cascading_modifiers:
+      2032_moon_base.us_only: "+0.05"
+      2040_mars_mission.successful_landing: "+0.08"
+  delayed_5_years:
+    status: "DIVERGENCE"
+    description: "Technical challenges delay reusable rocketry to ~2015; space timeline shifts"
+    explanation: "Engine failures and landing difficulties push the reusability milestone back five years"
+    world_state_effects:
+      space_development_index: "+0.04"
+    cascading_modifiers:
+      2032_moon_base.delayed_2040: "+0.05"
+  spacex_fails:
+    status: "DIVERGENCE"
+    description: "SpaceX fails; ULA and Arianespace continue at high cost"
+    explanation: "Company cannot sustain funding after early failures; legacy providers retain monopoly"
+    world_state_effects:
+      space_development_index: "+0.01"
+    cascading_modifiers:
+      2032_moon_base.delayed_2040: "+0.15"
+      2040_mars_mission.delayed_2050: "+0.15"
+  multiple_competitors:
+    status: "DIVERGENCE"
+    description: "Blue Origin, Rocket Lab achieve parity with SpaceX; competitive market emerges"
+    explanation: "Multiple companies independently develop reusable rockets; faster innovation through competition"
+    world_state_effects:
+      space_development_index: "+0.10"
+    cascading_modifiers:
+      2032_moon_base.us_china_bases: "+0.05"
+  government_only:
+    status: "DIVERGENCE"
+    description: "Private space doesn't take off; NASA and ESA dominate with high-cost launches"
+    explanation: "Regulatory barriers and risk aversion prevent commercial space from flourishing"
+    world_state_effects:
+      space_development_index: "+0.02"
+    cascading_modifiers:
+      2040_mars_mission.delayed_2050: "+0.10"

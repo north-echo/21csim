@@ -1,0 +1,94 @@
+id: "2003_iraq"
+year_month: "2003-03"
+title: "Iraq War Decision"
+description: >
+  Decision to invade Iraq based on WMD claims and terrorism links.
+  No WMDs found. Prolonged occupation, ~200,000+ Iraqi civilian deaths,
+  ISIS emergence, massive erosion of US credibility. Arguably the single
+  highest-leverage policy decision of the century.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "iraq_decision"
+distribution:
+  type: "categorical"
+  options:
+    full_invasion: 0.38
+    limited_strikes: 0.22
+    diplomatic_resolution: 0.22
+    delayed_invasion: 0.18
+dependencies:
+  - node: "2000_election"
+    branch: "gore_wins"
+    modifies:
+      full_invasion: "-0.25"
+      limited_strikes: "+0.10"
+      diplomatic_resolution: "+0.12"
+      delayed_invasion: "+0.03"
+  - node: "2001_911"
+    branch: "plot_disrupted"
+    modifies:
+      full_invasion: "-0.20"
+      diplomatic_resolution: "+0.15"
+      limited_strikes: "+0.05"
+  - node: "2001_911"
+    branch: "partial_success"
+    modifies:
+      full_invasion: "+0.08"
+      limited_strikes: "+0.05"
+  - node: "2001_911"
+    branch: "worse_outcome"
+    modifies:
+      full_invasion: "+0.20"
+  - node: "2001_china_wto"
+    branch: "conditional_accession"
+    modifies:
+      diplomatic_resolution: "+0.05"
+conditional: null
+outcomes:
+  full_invasion:
+    status: "HISTORICAL"
+    description: "US-led coalition invades Iraq; Saddam toppled"
+    world_state_effects:
+      us_global_standing: "-0.20"
+      middle_east_stability: "-0.25"
+      us_polarization: "+0.10"
+      conflict_deaths: "+200000"
+      us_debt_gdp_ratio: "+0.15"
+      terrorism_threat_index: "+0.10"
+      global_democracy_index: "-0.02"
+    cascading_modifiers:
+      2010_arab_spring.regional_instability: "+0.15"
+      2014_crimea.us_credibility_deterrent: "-0.10"
+      2016_brexit.anti_establishment: "+0.08"
+      2016_us_election.anti_establishment: "+0.10"
+      2022_russia_ukraine.us_deterrence: "-0.05"
+  limited_strikes:
+    status: "DIVERGENCE"
+    description: "US conducts air strikes against suspected WMD sites only"
+    explanation: "Congress refuses ground invasion authorization"
+    world_state_effects:
+      us_global_standing: "-0.05"
+      conflict_deaths: "+5000"
+      us_debt_gdp_ratio: "+0.02"
+  diplomatic_resolution:
+    status: "DIVERGENCE"
+    description: "UN inspections continue; no military action taken"
+    explanation: "Inspectors given more time; WMD claims debunked before invasion"
+    world_state_effects:
+      us_global_standing: "+0.05"
+      middle_east_stability: "+0.05"
+      global_democracy_index: "+0.01"
+    cascading_modifiers:
+      2010_arab_spring.regional_instability: "-0.10"
+      2014_crimea.us_credibility_deterrent: "+0.05"
+      2016_brexit.anti_establishment: "-0.05"
+      2016_us_election.anti_establishment: "-0.08"
+      2022_russia_ukraine.us_deterrence: "+0.05"
+  delayed_invasion:
+    status: "DIVERGENCE"
+    description: "Invasion delayed to 2004-2005 with broader coalition"
+    world_state_effects:
+      us_global_standing: "-0.08"
+      middle_east_stability: "-0.15"
+      conflict_deaths: "+120000"
+      eu_cohesion: "+0.05"

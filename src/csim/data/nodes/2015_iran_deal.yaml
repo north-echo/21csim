@@ -1,0 +1,54 @@
+id: "2015_iran_deal"
+year_month: "2015-07"
+title: "Iran Nuclear Deal / JCPOA"
+domain: "security"
+confidence: "HIGH"
+variable: "iran_deal"
+distribution:
+  type: "categorical"
+  options:
+    historical_deal_then_withdrawal: 0.45
+    deal_holds: 0.25
+    no_deal: 0.15
+    iran_nuclear_weapon: 0.05
+    broader_peace: 0.10
+dependencies:
+  - node: "2016_us_election"
+    branch: "clinton_wins"
+    modifies:
+      deal_holds: "+0.15"
+      historical_deal_then_withdrawal: "-0.15"
+conditional: null
+outcomes:
+  historical_deal_then_withdrawal:
+    status: "HISTORICAL"
+    description: "JCPOA signed 2015; US withdraws 2018 under Trump"
+    world_state_effects:
+      nuclear_risk_level: "+0.03"
+      middle_east_stability: "-0.03"
+  deal_holds:
+    status: "DIVERGENCE"
+    description: "JCPOA holds through 2020s; Iran reintegrates"
+    world_state_effects:
+      nuclear_risk_level: "-0.05"
+      middle_east_stability: "+0.05"
+      global_gdp_growth_modifier: "*1.005"
+  no_deal:
+    status: "DIVERGENCE"
+    description: "No nuclear deal reached"
+    world_state_effects:
+      nuclear_risk_level: "+0.08"
+      middle_east_stability: "-0.05"
+  iran_nuclear_weapon:
+    status: "ESCALATED"
+    description: "Iran develops nuclear weapon"
+    world_state_effects:
+      nuclear_risk_level: "+0.15"
+      middle_east_stability: "-0.15"
+      existential_risk_cumulative: "+0.03"
+  broader_peace:
+    status: "DIVERGENCE"
+    description: "JCPOA leads to broader Middle East détente"
+    world_state_effects:
+      nuclear_risk_level: "-0.05"
+      middle_east_stability: "+0.10"

@@ -1,0 +1,54 @@
+id: "2014_podcasts"
+year_month: "2014-10"
+title: "Podcast Revolution (Serial)"
+description: >
+  Serial podcast marks the mainstream arrival of podcasting. By 2020,
+  podcasts are a major political influence channel — Joe Rogan, Ben Shapiro,
+  NPR Politics. Long-form audio becomes an alternative to algorithmic feeds.
+domain: "social"
+confidence: "MEDIUM"
+variable: "podcast_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_growth: 0.50
+    niche_medium: 0.25
+    regulated_as_media: 0.10
+    democratizing_force: 0.15
+dependencies:
+  - node: "2007_iphone"
+    branch: "historical_apple_led"
+    modifies:
+      historical_growth: "+0.10"
+      niche_medium: "-0.10"
+conditional: null
+outcomes:
+  historical_growth:
+    status: "HISTORICAL"
+    description: "Podcasts become major political and cultural influence channel by 2020"
+    world_state_effects:
+      misinformation_severity: "+0.03"
+      us_polarization: "+0.03"
+  niche_medium:
+    status: "DIVERGENCE"
+    description: "Podcasts stay niche; talk radio remains the dominant long-form audio medium"
+    explanation: "Without smartphone ubiquity and app store distribution, podcasts never break through"
+    world_state_effects:
+      misinformation_severity: "+0.01"
+      us_polarization: "+0.01"
+  regulated_as_media:
+    status: "DIVERGENCE"
+    description: "Podcasts subject to same fairness and accuracy rules as broadcast media"
+    explanation: "FCC extends broadcast regulations to cover internet audio content"
+    world_state_effects:
+      misinformation_severity: "-0.02"
+      us_polarization: "+0.01"
+      internet_freedom_index: "-0.03"
+  democratizing_force:
+    status: "DIVERGENCE"
+    description: "Podcasts genuinely diversify the media landscape with underrepresented voices"
+    explanation: "Low barrier to entry enables diverse perspectives; reduces media consolidation effects"
+    world_state_effects:
+      misinformation_severity: "+0.01"
+      us_polarization: "-0.02"
+      global_democracy_index: "+0.01"

@@ -1,0 +1,65 @@
+id: "2022_fusion_ignition"
+year_month: "2022-12"
+title: "Fusion Ignition Achievement"
+description: >
+  National Ignition Facility achieves fusion ignition — more energy out
+  than laser energy in. But commercial fusion is decades away. Or is it?
+domain: "energy"
+confidence: "MEDIUM"
+variable: "fusion_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_milestone: 0.40
+    accelerated_timeline: 0.15
+    dead_end: 0.15
+    manhattan_project_2: 0.10
+    private_sector_wins: 0.20
+dependencies:
+  - node: "2012_deep_learning"
+    branch: "historical_gpu_revolution"
+    modifies:
+      accelerated_timeline: "+0.05"
+      dead_end: "-0.05"
+conditional: null
+outcomes:
+  historical_milestone:
+    status: "HISTORICAL"
+    description: "Scientific success; commercial fusion remains 2050+ prospect"
+    world_state_effects:
+      renewable_energy_share: "+0.01"
+      climate_temp_anomaly: "+0.01"
+  accelerated_timeline:
+    status: "DIVERGENCE"
+    description: "Private fusion companies achieve breakeven by 2035; commercial reactors by 2042"
+    world_state_effects:
+      renewable_energy_share: "+0.05"
+      climate_temp_anomaly: "-0.03"
+    cascading_modifiers:
+      2027_energy_transition.nuclear_renaissance: "+0.10"
+      2025_climate_tipping.technological_breakthrough: "+0.08"
+  dead_end:
+    status: "DIVERGENCE"
+    description: "Ignition was a one-off; fusion cannot be economically scaled"
+    world_state_effects:
+      renewable_energy_share: "+0.00"
+      climate_temp_anomaly: "+0.02"
+    cascading_modifiers:
+      2027_energy_transition.nuclear_renaissance: "-0.05"
+  manhattan_project_2:
+    status: "DIVERGENCE"
+    description: "Government crash program accelerates fusion; first reactor by 2038"
+    world_state_effects:
+      climate_temp_anomaly: "-0.05"
+      global_gdp_growth_modifier: "*1.01"
+      renewable_energy_share: "+0.03"
+    cascading_modifiers:
+      2027_energy_transition.nuclear_renaissance: "+0.12"
+  private_sector_wins:
+    status: "DIVERGENCE"
+    description: "Startup-driven fusion race; Commonwealth or TAE first commercial reactor by 2040"
+    world_state_effects:
+      renewable_energy_share: "+0.04"
+      climate_temp_anomaly: "-0.02"
+    cascading_modifiers:
+      2027_energy_transition.nuclear_renaissance: "+0.07"

@@ -1,0 +1,46 @@
+id: "2065_china"
+year_month: "2065-01"
+title: "China 2065"
+description: >
+  China's trajectory after decades of demographic decline, technological
+  competition, and evolving governance. Whether the CCP adapts, transforms,
+  or is replaced.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "china_status_2065"
+distribution:
+  type: "categorical"
+  options:
+    superpower: 0.15
+    democratic: 0.10
+    fragmented: 0.10
+    techno_empire: 0.20
+    declined: 0.20
+    regional_hegemon: 0.25
+dependencies: []
+conditional: null
+outcomes:
+  superpower:
+    status: "DIVERGENCE"
+    description: "China achieves undisputed superpower status with global economic and military dominance"
+    world_state_effects: {}
+  democratic:
+    status: "DIVERGENCE"
+    description: "China undergoes democratic transition; CCP rule ends through reform or revolution"
+    world_state_effects: {}
+  fragmented:
+    status: "ESCALATED"
+    description: "Regional tensions and economic stress lead to effective fragmentation of Chinese state"
+    world_state_effects: {}
+  techno_empire:
+    status: "DIVERGENCE"
+    description: "China becomes a technology-driven authoritarian superstate with pervasive surveillance"
+    world_state_effects: {}
+  declined:
+    status: "DIVERGENCE"
+    description: "Demographic collapse and economic stagnation reduce China to middle-power status"
+    world_state_effects: {}
+  regional_hegemon:
+    status: "DIVERGENCE"
+    description: "China dominates East Asia but lacks global reach; settles into regional power role"
+    world_state_effects: {}

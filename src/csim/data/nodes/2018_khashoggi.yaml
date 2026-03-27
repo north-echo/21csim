@@ -1,0 +1,60 @@
+id: "2018_khashoggi"
+year_month: "2018-10"
+title: "Jamal Khashoggi Murder"
+description: >
+  Saudi journalist Jamal Khashoggi is murdered inside the Saudi consulate
+  in Istanbul by a team linked to Crown Prince Mohammed bin Salman. The
+  assassination exposes authoritarian repression of press freedom and
+  tests Western commitment to human rights vs. strategic alliances.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "khashoggi_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_muted_response: 0.50
+    severe_western_sanctions: 0.15
+    cover_up_succeeds: 0.15
+    press_freedom_catalyst: 0.10
+    saudi_isolation: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_muted_response:
+    status: "HISTORICAL"
+    description: "Global outrage but US maintains Saudi alliance; MBS faces limited consequences"
+    world_state_effects:
+      middle_east_stability: "-0.01"
+      us_global_standing: "-0.02"
+      internet_freedom_index: "-0.01"
+  severe_western_sanctions:
+    status: "DIVERGENCE"
+    description: "US and EU impose significant sanctions on Saudi Arabia"
+    explanation: "Congressional pressure forces executive action on arms sales and diplomacy"
+    world_state_effects:
+      middle_east_stability: "-0.03"
+      us_global_standing: "+0.02"
+      internet_freedom_index: "+0.02"
+  cover_up_succeeds:
+    status: "DIVERGENCE"
+    description: "Saudi Arabia successfully suppresses the story; minimal global attention"
+    explanation: "Turkish government does not release evidence; story fades quickly"
+    world_state_effects:
+      internet_freedom_index: "-0.03"
+      us_global_standing: "-0.01"
+  press_freedom_catalyst:
+    status: "DIVERGENCE"
+    description: "Murder galvanizes global press freedom movement and journalist protections"
+    explanation: "International community enacts strong journalist protection frameworks"
+    world_state_effects:
+      internet_freedom_index: "+0.03"
+      global_democracy_index: "+0.02"
+      us_global_standing: "+0.01"
+  saudi_isolation:
+    status: "ESCALATED"
+    description: "MBS faces regime crisis; Saudi Arabia becomes diplomatically isolated"
+    explanation: "Internal power struggle combines with external pressure to destabilize leadership"
+    world_state_effects:
+      middle_east_stability: "-0.06"
+      us_global_standing: "+0.01"
+      internet_freedom_index: "+0.01"

@@ -1,0 +1,44 @@
+id: "2029_pandemic_2"
+year_month: "2029-03"
+title: "Second Pandemic"
+domain: "social"
+confidence: "MEDIUM"
+variable: "second_pandemic"
+distribution:
+  type: "categorical"
+  options:
+    no_pandemic: 0.55
+    contained_quickly: 0.20
+    moderate_pandemic: 0.15
+    severe_pandemic: 0.10
+dependencies:
+  - node: "2020_covid_response"
+    branch: "coordinated_early"
+    modifies:
+      contained_quickly: "+0.10"
+      severe_pandemic: "-0.05"
+      no_pandemic: "-0.05"
+conditional: null
+outcomes:
+  no_pandemic:
+    status: "DIVERGENCE"
+    description: "No major pandemic emerges"
+    world_state_effects: {}
+  contained_quickly:
+    status: "DIVERGENCE"
+    description: "New pathogen detected and contained rapidly"
+    world_state_effects:
+      global_pandemic_deaths: "+50000"
+  moderate_pandemic:
+    status: "DIVERGENCE"
+    description: "Moderate pandemic; better prepared than COVID"
+    world_state_effects:
+      global_pandemic_deaths: "+1000000"
+      global_gdp_growth_modifier: "*0.98"
+  severe_pandemic:
+    status: "ESCALATED"
+    description: "Severe pandemic; engineered pathogen or novel virus"
+    world_state_effects:
+      global_pandemic_deaths: "+15000000"
+      global_gdp_growth_modifier: "*0.90"
+      existential_risk_cumulative: "+0.05"

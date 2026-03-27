@@ -1,0 +1,44 @@
+id: "2019_covid_emergence"
+year_month: "2019-12"
+title: "COVID-19 Emergence"
+description: >
+  Novel coronavirus SARS-CoV-2 emerges in Wuhan, China.
+  Will become the deadliest pandemic since the 1918 flu,
+  killing millions and reshaping global society.
+domain: "economic"
+confidence: "HIGH"
+variable: "covid_emergence"
+distribution:
+  type: "categorical"
+  options:
+    historical_wuhan: 0.50
+    contained_locally: 0.15
+    earlier_emergence: 0.10
+    delayed_2021: 0.15
+    no_pandemic: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_wuhan:
+    status: "HISTORICAL"
+    description: "SARS-CoV-2 emerges in Wuhan; spreads globally by January 2020"
+    world_state_effects: {}
+  contained_locally:
+    status: "DIVERGENCE"
+    description: "Virus contained in Wuhan through aggressive early lockdown"
+    explanation: "Li Wenliang's warnings acted on immediately; borders closed"
+    world_state_effects:
+      china_power_index: "+0.02"
+  earlier_emergence:
+    status: "DIVERGENCE"
+    description: "Similar pandemic emerges in 2018"
+    world_state_effects: {}
+  delayed_2021:
+    status: "DELAYED"
+    description: "Pandemic delayed but emerges in 2021"
+    world_state_effects: {}
+  no_pandemic:
+    status: "PREVENTED"
+    description: "No major pandemic this decade"
+    explanation: "Zoonotic spillover doesn't occur; better wildlife trade regulation"
+    world_state_effects: {}

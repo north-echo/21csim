@@ -1,0 +1,58 @@
+id: "2050_europe"
+year_month: "2050-01"
+title: "Europe at Mid-Century"
+description: >
+  Europe's political and economic trajectory reaches a definitive point. Whether
+  the continent federalizes, fragments, or finds a new model determines its
+  role in the global order.
+domain: "regional"
+confidence: "LOW"
+variable: "europe_status"
+distribution:
+  type: "categorical"
+  options:
+    federation: 0.15
+    two_speed: 0.25
+    dissolved: 0.10
+    superpower: 0.10
+    social_model: 0.25
+    fortress: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  federation:
+    status: "DIVERGENCE"
+    description: "European federation established as a major global power with unified military and fiscal policy"
+    world_state_effects:
+      eu_cohesion: "+0.20"
+      global_democracy_index: "+0.03"
+  two_speed:
+    status: "DIVERGENCE"
+    description: "Core Europe integrates deeply while periphery maintains looser association"
+    world_state_effects:
+      eu_cohesion: "+0.05"
+  dissolved:
+    status: "ESCALATED"
+    description: "European project collapses; continent returns to nation-state competition"
+    world_state_effects:
+      eu_cohesion: "-0.25"
+      global_democracy_index: "-0.03"
+  superpower:
+    status: "DIVERGENCE"
+    description: "United Europe emerges as third superpower alongside US and China"
+    world_state_effects:
+      eu_cohesion: "+0.15"
+      us_global_standing: "-0.03"
+  social_model:
+    status: "DIVERGENCE"
+    description: "European social model proves most resilient; attracts global emulation"
+    world_state_effects:
+      eu_cohesion: "+0.10"
+      global_democracy_index: "+0.05"
+      inequality_index: "-0.05"
+  fortress:
+    status: "DIVERGENCE"
+    description: "Europe turns inward; strong borders, limited immigration, declining global influence"
+    world_state_effects:
+      eu_cohesion: "+0.03"
+      global_democracy_index: "-0.02"

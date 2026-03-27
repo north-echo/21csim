@@ -1,0 +1,46 @@
+id: "2050_2c_threshold"
+year_month: "2050-01"
+title: "2C Threshold Status"
+description: >
+  The world reaches the mid-century climate checkpoint. Whether global warming
+  stays under 2 degrees Celsius or exceeds it determines the severity of climate
+  impacts for the rest of the century.
+domain: "climate"
+confidence: "LOW"
+variable: "2c_threshold_status"
+distribution:
+  type: "categorical"
+  options:
+    under_2c: 0.20
+    at_2c: 0.25
+    over_2_5c: 0.25
+    over_3c: 0.15
+    recovery_path: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  under_2c:
+    status: "DIVERGENCE"
+    description: "Aggressive mitigation keeps warming below 2C; Paris Agreement targets met"
+    world_state_effects:
+      climate_temp_anomaly: "-0.10"
+  at_2c:
+    status: "DIVERGENCE"
+    description: "Warming reaches exactly 2C; impacts severe but manageable with adaptation"
+    world_state_effects:
+      climate_temp_anomaly: "+0.05"
+  over_2_5c:
+    status: "ESCALATED"
+    description: "Warming exceeds 2.5C; tipping points triggered, adaptation increasingly difficult"
+    world_state_effects:
+      climate_temp_anomaly: "+0.20"
+  over_3c:
+    status: "ESCALATED"
+    description: "Warming exceeds 3C; catastrophic and potentially irreversible climate change"
+    world_state_effects:
+      climate_temp_anomaly: "+0.40"
+  recovery_path:
+    status: "DIVERGENCE"
+    description: "Carbon removal technologies put the world on a path to declining temperatures"
+    world_state_effects:
+      climate_temp_anomaly: "-0.20"

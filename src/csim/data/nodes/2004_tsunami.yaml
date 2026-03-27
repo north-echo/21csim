@@ -1,0 +1,46 @@
+id: "2004_tsunami"
+year_month: "2004-12"
+title: "Indian Ocean Tsunami"
+description: >
+  9.1 earthquake triggers tsunami killing 230,000 across 14 countries.
+  Creates the Indian Ocean early warning system. Reshapes international
+  disaster response and aid architecture.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "tsunami_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_catastrophe: 0.50
+    warning_system_existed: 0.15
+    worse_timing: 0.10
+    triggers_reform: 0.25
+dependencies: []
+conditional: null
+outcomes:
+  historical_catastrophe:
+    status: "HISTORICAL"
+    description: "230K dead across 14 countries; no warning system existed"
+    world_state_effects:
+      conflict_deaths: "+230000"
+      global_democracy_index: "-0.01"
+  warning_system_existed:
+    status: "DIVERGENCE"
+    description: "Hypothetical early detection system in place; deaths reduced to ~30K"
+    world_state_effects:
+      conflict_deaths: "+30000"
+  worse_timing:
+    status: "DIVERGENCE"
+    description: "Hits during peak tourist season; 400K+ dead"
+    world_state_effects:
+      conflict_deaths: "+400000"
+      global_democracy_index: "-0.02"
+  triggers_reform:
+    status: "DIVERGENCE"
+    description: "Historical devastation leads to major international disaster preparedness reforms"
+    world_state_effects:
+      conflict_deaths: "+230000"
+      global_democracy_index: "+0.01"
+    cascading_modifiers:
+      2005_katrina.adequate_response: "+0.05"
+      2020_covid_response.coordinated_early: "+0.03"

@@ -1,0 +1,53 @@
+id: "2035_african_union"
+year_month: "2035-06"
+title: "African Union Evolution"
+description: >
+  The trajectory of the African Union and continental integration.
+  Whether Africa achieves deeper economic integration, security cooperation,
+  or remains fragmented by external and internal pressures.
+domain: "geopolitical"
+confidence: "MEDIUM"
+variable: "african_union_status"
+distribution:
+  type: "categorical"
+  options:
+    strengthened: 0.25
+    fractured: 0.20
+    economic_integration: 0.25
+    security_focused: 0.20
+    chinese_influenced: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  strengthened:
+    status: "DIVERGENCE"
+    description: "African Union gains real authority and institutional capacity"
+    explanation: "Member states cede sovereignty on trade, security, and governance to continental body"
+    world_state_effects:
+      africa_development_index: "+0.08"
+  fractured:
+    status: "DIVERGENCE"
+    description: "African Union weakened by internal divisions and external interference"
+    explanation: "Regional rivalries and great power competition undermine continental unity"
+    world_state_effects:
+      africa_development_index: "-0.03"
+  economic_integration:
+    status: "DIVERGENCE"
+    description: "African Continental Free Trade Area delivers meaningful economic integration"
+    explanation: "AfCFTA implementation accelerates; intra-African trade doubles within a decade"
+    world_state_effects:
+      africa_development_index: "+0.10"
+  security_focused:
+    status: "DIVERGENCE"
+    description: "AU evolves primarily as security organization responding to conflicts"
+    explanation: "Sahel instability, Horn of Africa tensions, and terrorism drive security-first approach"
+    world_state_effects:
+      africa_development_index: "+0.03"
+      conflict_deaths: "-5000"
+  chinese_influenced:
+    status: "DIVERGENCE"
+    description: "Chinese economic influence shapes AU priorities and governance"
+    explanation: "Belt and Road debt and Chinese-built AU infrastructure give Beijing significant influence"
+    world_state_effects:
+      africa_development_index: "+0.05"
+      china_power_index: "+0.02"

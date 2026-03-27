@@ -1,0 +1,67 @@
+id: "2048_mars_settlement"
+year_month: "2048-01"
+title: "Mars Settlement"
+description: >
+  Following initial Mars missions, the question of permanent settlement is decided.
+  Whether Mars becomes a thriving colony, corporate outpost, or abandoned dream
+  depends on earlier space development progress.
+domain: "space"
+confidence: "MEDIUM"
+variable: "mars_settlement_status"
+distribution:
+  type: "categorical"
+  options:
+    small_outpost: 0.25
+    growing_colony: 0.10
+    abandoned: 0.15
+    corporate_colony: 0.10
+    not_yet: 0.30
+    independent_governance: 0.10
+dependencies:
+  - node: "2040_mars_mission"
+    branch: "successful_landing"
+    modifies:
+      growing_colony: "+0.10"
+      small_outpost: "+0.05"
+      abandoned: "-0.10"
+      not_yet: "-0.05"
+  - node: "2040_mars_mission"
+    branch: "mission_failure"
+    modifies:
+      abandoned: "+0.15"
+      not_yet: "+0.10"
+      growing_colony: "-0.10"
+      small_outpost: "-0.10"
+      corporate_colony: "-0.05"
+conditional: "space_development_index > 0.3"
+outcomes:
+  small_outpost:
+    status: "DIVERGENCE"
+    description: "Small research outpost established with rotating crews of 10-20 people"
+    world_state_effects:
+      space_development_index: "+0.08"
+  growing_colony:
+    status: "DIVERGENCE"
+    description: "Mars colony grows steadily with permanent residents and expanding infrastructure"
+    world_state_effects:
+      space_development_index: "+0.15"
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Mars settlement attempts abandoned due to cost, danger, or shifting priorities"
+    world_state_effects:
+      space_development_index: "-0.05"
+  corporate_colony:
+    status: "DIVERGENCE"
+    description: "Private corporation establishes Mars settlement as commercial venture"
+    world_state_effects:
+      space_development_index: "+0.12"
+  not_yet:
+    status: "DIVERGENCE"
+    description: "Permanent Mars settlement remains aspirational; technology not yet sufficient"
+    world_state_effects:
+      space_development_index: "+0.02"
+  independent_governance:
+    status: "DIVERGENCE"
+    description: "Mars settlers establish independent governance, challenging Earth sovereignty concepts"
+    world_state_effects:
+      space_development_index: "+0.18"

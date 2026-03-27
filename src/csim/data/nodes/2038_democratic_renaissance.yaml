@@ -1,0 +1,63 @@
+id: "2038_democratic_renaissance"
+year_month: "2038-06"
+title: "Democratic Innovation"
+description: >
+  When misinformation is contained and institutional trust holds,
+  democratic innovation becomes possible.
+domain: "governance"
+confidence: "LOW"
+variable: "democratic_renaissance_status"
+distribution:
+  type: "categorical"
+  options:
+    deliberative_democracy: 0.30
+    digital_democracy: 0.25
+    technocratic_hybrid: 0.20
+    participatory_stagnation: 0.25
+dependencies: []
+conditional: "global_democracy_index > 0.65 AND misinformation_severity < 0.15"
+outcomes:
+  deliberative_democracy:
+    status: "DIVERGENCE"
+    description: "Citizens' assemblies and liquid democracy transform governance worldwide"
+    explanation: "Sortition-based assemblies prove effective; trust in government soars as citizens directly shape policy"
+    world_state_effects:
+      global_democracy_index: "+0.08"
+      governance_model: "+0.10"
+      us_institutional_trust: "+0.08"
+      us_polarization: "-0.06"
+      misinformation_severity: "-0.03"
+      us_unity_index: "+0.05"
+  digital_democracy:
+    status: "DIVERGENCE"
+    description: "Blockchain voting and direct digital participation enable mass democratic engagement"
+    explanation: "Secure digital platforms allow citizens to vote on policy directly; participation rates triple"
+    world_state_effects:
+      global_democracy_index: "+0.06"
+      governance_model: "+0.08"
+      internet_freedom_index: "+0.05"
+      surveillance_state_index: "+0.03"
+      us_institutional_trust: "+0.05"
+      global_cyber_damage_annual_b: "+5"
+  technocratic_hybrid:
+    status: "DIVERGENCE"
+    description: "Expert panels with democratic oversight create evidence-based governance"
+    explanation: "AI-assisted policy analysis combined with citizen ratification produces better outcomes"
+    world_state_effects:
+      governance_model: "+0.12"
+      global_democracy_index: "+0.03"
+      climate_temp_anomaly: "-0.03"
+      food_security_index: "+0.03"
+      us_institutional_trust: "+0.06"
+      inequality_index: "-0.04"
+  participatory_stagnation:
+    status: "DIVERGENCE"
+    description: "More participation but slower decisions; democratic gridlock despite good intentions"
+    explanation: "Every decision requires broad consensus; urgent problems go unaddressed as deliberation drags on"
+    world_state_effects:
+      global_democracy_index: "+0.02"
+      governance_model: "+0.03"
+      climate_temp_anomaly: "+0.02"
+      global_gdp_growth_modifier: "*0.98"
+      us_institutional_trust: "-0.02"
+      supply_chain_resilience: "-0.03"

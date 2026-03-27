@@ -1,0 +1,48 @@
+id: "2017_wannacry"
+year_month: "2017-05"
+title: "WannaCry / Cyber Escalation"
+domain: "security"
+confidence: "HIGH"
+variable: "cyber_escalation"
+distribution:
+  type: "categorical"
+  options:
+    historical_escalation: 0.50
+    cyber_geneva_convention: 0.10
+    major_infrastructure_attack: 0.15
+    defense_improves: 0.25
+dependencies:
+  - node: "2010_stuxnet"
+    branch: "cyber_arms_race"
+    modifies:
+      major_infrastructure_attack: "+0.10"
+      historical_escalation: "+0.05"
+      defense_improves: "-0.15"
+conditional: null
+outcomes:
+  historical_escalation:
+    status: "HISTORICAL"
+    description: "WannaCry, NotPetya, SolarWinds; cyber damage accelerates"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+50.0"
+      nuclear_risk_level: "+0.01"
+  cyber_geneva_convention:
+    status: "DIVERGENCE"
+    description: "WannaCry triggers international cyber norms agreement"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+10.0"
+  major_infrastructure_attack:
+    status: "ESCALATED"
+    description: "Cyberattack takes down power grid or financial system"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+100.0"
+      nuclear_risk_level: "+0.05"
+      conflict_deaths: "+500"
+    cascading_modifiers:
+      2025_ai_regulation.heavy_regulation: "+0.10"
+      2032_ai_governance.international_treaty: "+0.08"
+  defense_improves:
+    status: "DIVERGENCE"
+    description: "Cyber defense investment outpaces offense"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+15.0"

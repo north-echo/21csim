@@ -1,0 +1,57 @@
+id: "2014_sony_hack"
+year_month: "2014-11"
+title: "Sony Pictures Hack"
+description: >
+  North Korea hacks Sony Pictures over "The Interview." First major
+  nation-state hack of a corporation for political purposes. Sets
+  precedent for state-sponsored corporate cyber warfare.
+domain: "security"
+confidence: "HIGH"
+variable: "sony_hack"
+distribution:
+  type: "categorical"
+  options:
+    historical_hack: 0.50
+    deterred: 0.20
+    larger_attack: 0.10
+    diplomatic_resolution: 0.15
+    triggers_cyber_norms: 0.05
+dependencies:
+  - node: "2010_stuxnet"
+    branch: "cyber_arms_race"
+    modifies:
+      historical_hack: "+0.05"
+      larger_attack: "+0.10"
+      deterred: "-0.10"
+      triggers_cyber_norms: "-0.05"
+conditional: null
+outcomes:
+  historical_hack:
+    status: "HISTORICAL"
+    description: "North Korea hacks Sony Pictures; data leaked, films stolen"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+3.0"
+      internet_freedom_index: "-0.01"
+  deterred:
+    status: "DIVERGENCE"
+    description: "US cyber deterrence prevents the attack"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+0.5"
+      us_global_standing: "+0.01"
+  larger_attack:
+    status: "ESCALATED"
+    description: "Attack destroys data permanently; Sony suffers lasting damage"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+8.0"
+      internet_freedom_index: "-0.02"
+  diplomatic_resolution:
+    status: "DIVERGENCE"
+    description: "Back-channel diplomacy prevents the hack"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+0.5"
+  triggers_cyber_norms:
+    status: "DIVERGENCE"
+    description: "Attack triggers international cyber norms agreement"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+1.0"
+      internet_freedom_index: "+0.02"

@@ -1,0 +1,52 @@
+id: "2041_ocean_acidification"
+year_month: "2041-01"
+title: "Ocean Acidification Status"
+description: >
+  Ocean pH levels reach a critical threshold affecting marine ecosystems globally.
+  Whether acidification is reversing, accelerating, or being managed determines
+  the fate of ocean food chains.
+domain: "climate"
+confidence: "MEDIUM"
+variable: "ocean_acidification_status"
+distribution:
+  type: "categorical"
+  options:
+    reversing: 0.15
+    critical: 0.30
+    managed: 0.25
+    fishery_collapse: 0.20
+    adaptation: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  reversing:
+    status: "DIVERGENCE"
+    description: "Emissions reductions begin reversing ocean acidification; coral recovery starts"
+    world_state_effects:
+      biodiversity_index: "+0.05"
+      food_security_index: "+0.03"
+  critical:
+    status: "ESCALATED"
+    description: "Ocean acidification reaches critical levels; coral systems collapse worldwide"
+    world_state_effects:
+      biodiversity_index: "-0.12"
+      food_security_index: "-0.08"
+  managed:
+    status: "DIVERGENCE"
+    description: "Localized ocean alkalinity enhancement and marine reserves mitigate worst impacts"
+    world_state_effects:
+      biodiversity_index: "-0.03"
+      food_security_index: "-0.02"
+  fishery_collapse:
+    status: "ESCALATED"
+    description: "Acidification triggers global fishery collapse affecting billions who depend on ocean protein"
+    world_state_effects:
+      biodiversity_index: "-0.15"
+      food_security_index: "-0.15"
+      conflict_deaths: "+10000"
+  adaptation:
+    status: "DIVERGENCE"
+    description: "Marine species adapt faster than expected; ecosystems shift but persist"
+    world_state_effects:
+      biodiversity_index: "-0.05"
+      food_security_index: "-0.03"

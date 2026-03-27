@@ -1,0 +1,50 @@
+id: "2046_currency_evolution"
+year_month: "2046-01"
+title: "Currency Evolution"
+description: >
+  The global monetary system evolves as digital currencies, geopolitical shifts,
+  and economic restructuring challenge dollar hegemony. The resulting currency
+  regime shapes trade and power dynamics.
+domain: "economic"
+confidence: "MEDIUM"
+variable: "currency_evolution_status"
+distribution:
+  type: "categorical"
+  options:
+    dollar_dominant: 0.25
+    multi_currency: 0.30
+    digital_yuan: 0.15
+    crypto_standard: 0.10
+    regional_blocs: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  dollar_dominant:
+    status: "DIVERGENCE"
+    description: "US dollar maintains reserve currency status through digital dollar and institutional inertia"
+    world_state_effects:
+      us_gdp_growth: "+0.005"
+      us_global_standing: "+0.03"
+  multi_currency:
+    status: "DIVERGENCE"
+    description: "Multiple reserve currencies coexist; dollar, yuan, euro share global trade"
+    world_state_effects:
+      us_global_standing: "-0.03"
+  digital_yuan:
+    status: "DIVERGENCE"
+    description: "Digital yuan becomes dominant trade currency across Asia and Africa"
+    world_state_effects:
+      us_global_standing: "-0.08"
+      us_china_tension_index: "+0.05"
+  crypto_standard:
+    status: "DIVERGENCE"
+    description: "Decentralized cryptocurrency becomes global standard of value"
+    world_state_effects:
+      inequality_index: "+0.03"
+      global_democracy_index: "+0.02"
+  regional_blocs:
+    status: "DIVERGENCE"
+    description: "Regional currency blocs emerge; global financial system fragments"
+    world_state_effects:
+      us_global_standing: "-0.05"
+      us_gdp_growth: "-0.005"

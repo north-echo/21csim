@@ -1,0 +1,53 @@
+id: "2013_crypto"
+year_month: "2013-11"
+title: "Bitcoin / Cryptocurrency"
+domain: "economic"
+confidence: "HIGH"
+variable: "crypto_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_speculative: 0.45
+    becomes_real_currency: 0.10
+    regulated_early: 0.20
+    banned_globally: 0.10
+    stablecoin_dominance: 0.15
+dependencies:
+  - node: "2008_financial_crisis"
+    branch: "great_depression_2"
+    modifies:
+      historical_speculative: "+0.10"
+      becomes_real_currency: "+0.05"
+      banned_globally: "-0.10"
+conditional: null
+outcomes:
+  historical_speculative:
+    status: "HISTORICAL"
+    description: "$2T+ speculative asset class; minimal real-world currency use"
+    world_state_effects:
+      crypto_market_cap_trillion: "+2.0"
+      inequality_index: "+0.02"
+      global_cyber_damage_annual_b: "+5.0"
+  becomes_real_currency:
+    status: "DIVERGENCE"
+    description: "Crypto becomes actual medium of exchange"
+    world_state_effects:
+      crypto_market_cap_trillion: "+5.0"
+      inequality_index: "-0.02"
+  regulated_early:
+    status: "DIVERGENCE"
+    description: "Heavy regulation from 2015; crypto as regulated asset"
+    world_state_effects:
+      crypto_market_cap_trillion: "+0.5"
+      global_cyber_damage_annual_b: "+1.0"
+  banned_globally:
+    status: "DIVERGENCE"
+    description: "Major economies ban cryptocurrency"
+    world_state_effects:
+      crypto_market_cap_trillion: "+0.1"
+  stablecoin_dominance:
+    status: "DIVERGENCE"
+    description: "Stablecoins and CBDCs dominate; Bitcoin marginalized"
+    world_state_effects:
+      crypto_market_cap_trillion: "+1.0"
+      surveillance_state_index: "+0.03"

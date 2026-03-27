@@ -1,0 +1,57 @@
+id: "2038_genetic_enhancement"
+year_month: "2038-03"
+title: "Human Genetic Enhancement Debate"
+description: >
+  Polygenic screening and embryo selection at scale become technically
+  feasible. Parents can select embryos for intelligence, height, disease
+  resistance, and other traits. The line between therapy and enhancement
+  blurs, raising profound questions about equality and human nature.
+domain: "health"
+confidence: "LOW"
+variable: "genetic_enhancement"
+distribution:
+  type: "categorical"
+  options:
+    limited_disease_screening: 0.30
+    widespread_trait_selection: 0.20
+    international_ban: 0.15
+    enhancement_arms_race: 0.15
+    equity_framework: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  limited_disease_screening:
+    status: "DIVERGENCE"
+    description: "Polygenic screening limited to serious genetic diseases; enhancement taboo holds"
+    world_state_effects:
+      inequality_index: "+0.01"
+      human_augmentation_prevalence: "+0.02"
+  widespread_trait_selection:
+    status: "DIVERGENCE"
+    description: "Embryo selection for cognitive and physical traits becomes common in wealthy nations"
+    world_state_effects:
+      inequality_index: "+0.06"
+      human_augmentation_prevalence: "+0.08"
+      us_life_expectancy_delta: "+0.5"
+  international_ban:
+    status: "DIVERGENCE"
+    description: "International treaty bans non-medical embryo selection; enforcement varies"
+    world_state_effects:
+      inequality_index: "-0.01"
+      human_augmentation_prevalence: "+0.01"
+      global_democracy_index: "+0.01"
+  enhancement_arms_race:
+    status: "ESCALATED"
+    description: "Nations compete to produce enhanced populations; genetic class divide emerges"
+    world_state_effects:
+      inequality_index: "+0.10"
+      human_augmentation_prevalence: "+0.12"
+      existential_risk_cumulative: "+0.02"
+      global_democracy_index: "-0.03"
+  equity_framework:
+    status: "DIVERGENCE"
+    description: "Public funding makes genetic screening universally available; reduces genetic disease"
+    world_state_effects:
+      inequality_index: "-0.02"
+      human_augmentation_prevalence: "+0.05"
+      us_life_expectancy_delta: "+0.4"

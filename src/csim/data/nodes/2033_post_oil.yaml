@@ -1,0 +1,77 @@
+id: "2033_post_oil"
+year_month: "2033-06"
+title: "Post-Oil Economy Transition"
+description: >
+  The global transition away from oil dependence. How petrostate economies
+  adapt, whether new energy sources replace oil revenue, and whether the
+  transition is orderly or chaotic.
+domain: "geopolitical"
+confidence: "MEDIUM"
+variable: "post_oil_status"
+distribution:
+  type: "categorical"
+  options:
+    saudi_succeeds: 0.20
+    petrostate_collapse: 0.15
+    gradual_managed: 0.30
+    oil_renaissance: 0.10
+    regional_conflict: 0.15
+    green_hydrogen: 0.10
+dependencies:
+  - node: "2027_energy_transition"
+    branch: "rapid_transition"
+    modifies:
+      petrostate_collapse: "+0.10"
+      gradual_managed: "-0.05"
+      oil_renaissance: "-0.08"
+      green_hydrogen: "+0.05"
+  - node: "2027_energy_transition"
+    branch: "fossil_resurgence"
+    modifies:
+      oil_renaissance: "+0.10"
+      petrostate_collapse: "-0.08"
+      green_hydrogen: "-0.05"
+conditional: null
+outcomes:
+  saudi_succeeds:
+    status: "DIVERGENCE"
+    description: "Saudi Arabia successfully diversifies economy beyond oil"
+    explanation: "Vision 2030 and beyond delivers; tourism, tech, and sovereign wealth fund sustain prosperity"
+    world_state_effects:
+      global_gdp: "+0.01"
+      conflict_deaths: "-1000"
+  petrostate_collapse:
+    status: "ESCALATED"
+    description: "Multiple petrostates face economic collapse as oil demand craters"
+    explanation: "Nigeria, Venezuela, Iraq, and others unable to transition; state failures follow"
+    world_state_effects:
+      conflict_deaths: "+30000"
+      global_gdp: "-0.01"
+  gradual_managed:
+    status: "DIVERGENCE"
+    description: "Oil demand declines gradually; most producers adapt over decades"
+    explanation: "Slow enough transition allows adjustment; oil remains relevant but declining"
+    world_state_effects:
+      climate_temp_anomaly: "+0.03"
+      global_gdp: "+0.00"
+  oil_renaissance:
+    status: "DIVERGENCE"
+    description: "Oil demand rebounds; petrochemicals and aviation maintain strong demand"
+    explanation: "Hard-to-electrify sectors keep oil relevant longer than expected"
+    world_state_effects:
+      climate_temp_anomaly: "+0.08"
+      renewable_energy_share: "-0.03"
+  regional_conflict:
+    status: "ESCALATED"
+    description: "Oil decline triggers resource conflicts in Middle East and Africa"
+    explanation: "Shrinking oil revenues destabilize regimes; proxy wars and civil conflicts escalate"
+    world_state_effects:
+      conflict_deaths: "+40000"
+      global_gdp: "-0.02"
+  green_hydrogen:
+    status: "DIVERGENCE"
+    description: "Green hydrogen economy replaces oil; some producers pivot successfully"
+    explanation: "Solar-rich nations become green hydrogen exporters; new energy geography emerges"
+    world_state_effects:
+      climate_temp_anomaly: "-0.05"
+      renewable_energy_share: "+0.08"

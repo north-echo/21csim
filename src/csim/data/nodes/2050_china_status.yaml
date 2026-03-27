@@ -1,0 +1,57 @@
+id: "2050_china_status"
+year_month: "2050-01"
+title: "China at Mid-Century"
+description: >
+  China's trajectory at the half-century mark. Whether it has become the dominant
+  superpower, democratized, fragmented, or settled into a new equilibrium
+  defines the global power structure.
+domain: "regional"
+confidence: "LOW"
+variable: "china_status"
+distribution:
+  type: "categorical"
+  options:
+    superpower: 0.20
+    declined: 0.15
+    democratic: 0.10
+    techno_state: 0.25
+    fragmented: 0.10
+    regional_power: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  superpower:
+    status: "DIVERGENCE"
+    description: "China becomes the dominant global superpower surpassing the US economically and militarily"
+    world_state_effects:
+      us_china_tension_index: "+0.08"
+      us_global_standing: "-0.08"
+  declined:
+    status: "DIVERGENCE"
+    description: "Demographic decline and economic stagnation diminish China's global influence"
+    world_state_effects:
+      us_china_tension_index: "-0.05"
+      us_global_standing: "+0.03"
+  democratic:
+    status: "DIVERGENCE"
+    description: "China transitions to democratic governance; US-China rivalry transforms into cooperation"
+    world_state_effects:
+      global_democracy_index: "+0.08"
+      us_china_tension_index: "-0.10"
+  techno_state:
+    status: "DIVERGENCE"
+    description: "China perfects AI-driven techno-authoritarian governance model exported globally"
+    world_state_effects:
+      global_democracy_index: "-0.05"
+      us_china_tension_index: "+0.05"
+  fragmented:
+    status: "ESCALATED"
+    description: "China fractures into competing regions; global instability follows"
+    world_state_effects:
+      us_china_tension_index: "+0.10"
+      conflict_deaths: "+30000"
+  regional_power:
+    status: "DIVERGENCE"
+    description: "China settles as a strong regional power without global hegemonic ambitions"
+    world_state_effects:
+      us_china_tension_index: "-0.03"

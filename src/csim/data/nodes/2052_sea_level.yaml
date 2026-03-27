@@ -1,0 +1,46 @@
+id: "2052_sea_level"
+year_month: "2052-01"
+title: "Sea Level Rise Status"
+description: >
+  Mid-century sea level rise assessment determines coastal city viability and
+  migration patterns. The rate of ice sheet collapse drives outcomes ranging
+  from manageable to catastrophic.
+domain: "climate"
+confidence: "LOW"
+variable: "sea_level_status"
+distribution:
+  type: "categorical"
+  options:
+    half_meter: 0.30
+    one_meter: 0.20
+    accelerating: 0.15
+    managed: 0.25
+    stabilized: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  half_meter:
+    status: "DIVERGENCE"
+    description: "Sea level rises approximately half a meter; coastal adaptation feasible for wealthy nations"
+    world_state_effects:
+      sea_level_rise_meters: "+0.15"
+  one_meter:
+    status: "ESCALATED"
+    description: "One meter rise displaces hundreds of millions; major coastal cities threatened"
+    world_state_effects:
+      sea_level_rise_meters: "+0.30"
+  accelerating:
+    status: "ESCALATED"
+    description: "Ice sheet collapse accelerates; multi-meter rise now inevitable within decades"
+    world_state_effects:
+      sea_level_rise_meters: "+0.40"
+  managed:
+    status: "DIVERGENCE"
+    description: "Sea level rise significant but managed through infrastructure and planned retreat"
+    world_state_effects:
+      sea_level_rise_meters: "+0.10"
+  stabilized:
+    status: "DIVERGENCE"
+    description: "Ice sheet stabilization limits further rise; existing damage contained"
+    world_state_effects:
+      sea_level_rise_meters: "+0.05"

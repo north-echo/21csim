@@ -1,0 +1,56 @@
+id: "2044_us_constitutional"
+year_month: "2044-06"
+title: "US Constitutional Amendment"
+description: >
+  Mounting pressure for constitutional reform reaches a critical point. Whether
+  amendments pass, a convention is called, or reform efforts fail shapes the
+  future of American democracy.
+domain: "regional"
+confidence: "MEDIUM"
+variable: "us_constitutional_status"
+distribution:
+  type: "categorical"
+  options:
+    no_amendment: 0.40
+    electoral_reform: 0.15
+    ai_rights: 0.05
+    secession_addressed: 0.10
+    convention_chaos: 0.10
+    democratic_reform: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  no_amendment:
+    status: "DIVERGENCE"
+    description: "Constitutional amendment efforts fail; system continues unreformed"
+    world_state_effects:
+      us_polarization: "+0.03"
+      global_democracy_index: "-0.01"
+  electoral_reform:
+    status: "DIVERGENCE"
+    description: "Electoral college reformed or abolished; popular vote determines presidency"
+    world_state_effects:
+      us_polarization: "-0.05"
+      global_democracy_index: "+0.02"
+  ai_rights:
+    status: "DIVERGENCE"
+    description: "Amendment addresses AI personhood and digital rights in unprecedented legal framework"
+    world_state_effects:
+      global_democracy_index: "+0.01"
+  secession_addressed:
+    status: "DIVERGENCE"
+    description: "Amendment clarifies state sovereignty and secession rights after regional tensions"
+    world_state_effects:
+      us_polarization: "-0.03"
+  convention_chaos:
+    status: "ESCALATED"
+    description: "Constitutional convention called but devolves into partisan deadlock and crisis"
+    world_state_effects:
+      us_polarization: "+0.08"
+      global_democracy_index: "-0.03"
+  democratic_reform:
+    status: "DIVERGENCE"
+    description: "Broad democratic reforms including ranked choice voting, term limits, and campaign finance"
+    world_state_effects:
+      us_polarization: "-0.08"
+      global_democracy_index: "+0.03"

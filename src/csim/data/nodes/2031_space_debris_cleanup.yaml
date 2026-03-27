@@ -1,0 +1,69 @@
+id: "2031_space_debris_cleanup"
+year_month: "2031-06"
+title: "Space Debris Cleanup Industry"
+description: >
+  As mega-constellations proliferate and Kessler syndrome risk grows, a new
+  industry emerges to actively remove orbital debris. Whether cleanup technology
+  matures fast enough to prevent catastrophic cascading collisions determines
+  the future of orbital access.
+domain: "space"
+confidence: "MEDIUM"
+variable: "debris_cleanup_status"
+distribution:
+  type: "categorical"
+  options:
+    successful_industry: 0.25
+    partial_cleanup: 0.30
+    technology_fails: 0.15
+    international_treaty: 0.20
+    too_late: 0.10
+dependencies:
+  - node: "2034_kessler_risk"
+    branch: "near_miss"
+    modifies:
+      successful_industry: "+0.10"
+      international_treaty: "+0.10"
+      technology_fails: "-0.10"
+      too_late: "-0.10"
+  - node: "2034_kessler_risk"
+    branch: "full_kessler"
+    modifies:
+      too_late: "+0.15"
+      technology_fails: "+0.05"
+      successful_industry: "-0.10"
+      international_treaty: "-0.10"
+conditional: null
+outcomes:
+  successful_industry:
+    status: "DIVERGENCE"
+    description: "Active debris removal becomes a thriving industry; orbital environment stabilized"
+    explanation: "Robotic servicers and laser-based deorbiting prove effective; space agencies contract cleanup firms"
+    world_state_effects:
+      space_development_index: "+0.06"
+    cascading_modifiers:
+      2045_space_economy.on_track: "+0.03"
+  partial_cleanup:
+    status: "DIVERGENCE"
+    description: "Cleanup technology works but cannot keep pace with debris generation"
+    explanation: "Removal missions operational but new launches outpace cleanup; net debris still growing slowly"
+    world_state_effects:
+      space_development_index: "+0.03"
+  technology_fails:
+    status: "DIVERGENCE"
+    description: "Debris removal technology proves too expensive or unreliable at scale"
+    explanation: "Prototype missions succeed but economics don't work; orbital environment slowly degrades"
+    world_state_effects:
+      space_development_index: "-0.02"
+  international_treaty:
+    status: "DIVERGENCE"
+    description: "Major space powers sign binding debris mitigation treaty; cleanup funded internationally"
+    explanation: "Near-miss events drive diplomatic consensus; UN Space Sustainability Treaty enacted"
+    world_state_effects:
+      space_development_index: "+0.05"
+      global_democracy_index: "+0.01"
+  too_late:
+    status: "ESCALATED"
+    description: "Debris cascade begins before cleanup technology is ready; LEO access severely restricted"
+    explanation: "Chain reaction in congested orbits outpaces remediation efforts; satellite services disrupted"
+    world_state_effects:
+      space_development_index: "-0.08"

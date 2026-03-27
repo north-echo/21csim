@@ -1,0 +1,51 @@
+id: "2019_antivax"
+year_month: "2019-01"
+title: "Anti-Vaccine Movement"
+domain: "social"
+confidence: "HIGH"
+variable: "antivax"
+distribution:
+  type: "categorical"
+  options:
+    historical_growing: 0.50
+    contained_niche: 0.20
+    pandemic_wake_up: 0.15
+    mandatory_vaccination: 0.10
+    measles_outbreak: 0.05
+dependencies:
+  - node: "2016_misinformation"
+    branch: "historical_escalation"
+    modifies:
+      historical_growing: "+0.10"
+      contained_niche: "-0.10"
+conditional: null
+outcomes:
+  historical_growing:
+    status: "HISTORICAL"
+    description: "Anti-vaccine movement grows; COVID accelerates it"
+    world_state_effects:
+      misinformation_severity: "+0.03"
+    cascading_modifiers:
+      2020_covid_response.catastrophic_failure: "+0.02"
+  contained_niche:
+    status: "DIVERGENCE"
+    description: "Anti-vax remains fringe movement"
+    world_state_effects:
+      misinformation_severity: "+0.01"
+  pandemic_wake_up:
+    status: "DIVERGENCE"
+    description: "Pre-COVID measles outbreak triggers pro-vaccine backlash"
+    world_state_effects:
+      misinformation_severity: "-0.02"
+  mandatory_vaccination:
+    status: "DIVERGENCE"
+    description: "Global mandatory vaccination frameworks"
+    world_state_effects:
+      misinformation_severity: "-0.01"
+      internet_freedom_index: "-0.02"
+  measles_outbreak:
+    status: "ESCALATED"
+    description: "Major measles outbreak kills thousands in West"
+    world_state_effects:
+      global_pandemic_deaths: "+5000"
+      us_institutional_trust: "-0.03"

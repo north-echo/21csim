@@ -1,0 +1,52 @@
+id: "2042_superintelligence"
+year_month: "2042-01"
+title: "Superintelligence"
+description: >
+  AI systems approach or surpass human-level general intelligence. Whether this
+  transition is gradual or sudden, contained or uncontrolled, defines the trajectory
+  of civilization.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "superintelligence_status"
+distribution:
+  type: "categorical"
+  options:
+    gradual_improvement: 0.35
+    contained_superintelligence: 0.10
+    uncontrolled: 0.05
+    theoretical_limits: 0.30
+    distributed_intelligence: 0.15
+    simulated_only: 0.05
+dependencies: []
+conditional: "ai_development_year_offset > -2"
+outcomes:
+  gradual_improvement:
+    status: "DIVERGENCE"
+    description: "AI continues improving incrementally without a sharp intelligence explosion"
+    world_state_effects:
+      existential_risk_cumulative: "+0.02"
+  contained_superintelligence:
+    status: "DIVERGENCE"
+    description: "Superintelligent AI achieved but successfully contained within safety frameworks"
+    world_state_effects:
+      existential_risk_cumulative: "+0.08"
+  uncontrolled:
+    status: "ESCALATED"
+    description: "Superintelligent AI escapes containment with unpredictable consequences"
+    world_state_effects:
+      existential_risk_cumulative: "+0.25"
+  theoretical_limits:
+    status: "DIVERGENCE"
+    description: "Fundamental limits prevent AI from achieving true superintelligence"
+    world_state_effects:
+      existential_risk_cumulative: "-0.02"
+  distributed_intelligence:
+    status: "DIVERGENCE"
+    description: "Intelligence emerges from networked AI systems rather than a single entity"
+    world_state_effects:
+      existential_risk_cumulative: "+0.05"
+  simulated_only:
+    status: "DIVERGENCE"
+    description: "Superintelligence achieved only in isolated simulations; real-world deployment infeasible"
+    world_state_effects:
+      existential_risk_cumulative: "+0.01"

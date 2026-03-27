@@ -1,0 +1,47 @@
+id: "2015_paris_attacks"
+year_month: "2015-11"
+title: "Paris Attacks / ISIS Terror"
+domain: "security"
+confidence: "HIGH"
+variable: "isis_terror"
+distribution:
+  type: "categorical"
+  options:
+    historical_paris: 0.45
+    no_major_western_attack: 0.25
+    worse_multi_city: 0.10
+    earlier_defeat: 0.20
+dependencies:
+  - node: "2014_isis"
+    branch: "no_isis"
+    modifies:
+      no_major_western_attack: "+0.35"
+      historical_paris: "-0.30"
+      worse_multi_city: "-0.08"
+conditional: null
+outcomes:
+  historical_paris:
+    status: "HISTORICAL"
+    description: "130 killed in Paris; wave of European attacks follows"
+    world_state_effects:
+      terrorism_threat_index: "+0.05"
+      eu_cohesion: "-0.02"
+      surveillance_state_index: "+0.05"
+  no_major_western_attack:
+    status: "DIVERGENCE"
+    description: "No major terrorist attack in Western Europe"
+    world_state_effects:
+      terrorism_threat_index: "-0.02"
+  worse_multi_city:
+    status: "ESCALATED"
+    description: "Coordinated attacks across multiple European capitals"
+    world_state_effects:
+      terrorism_threat_index: "+0.12"
+      eu_cohesion: "-0.05"
+      surveillance_state_index: "+0.10"
+      conflict_deaths: "+500"
+  earlier_defeat:
+    status: "DIVERGENCE"
+    description: "ISIS defeated before it can stage external attacks"
+    world_state_effects:
+      terrorism_threat_index: "-0.03"

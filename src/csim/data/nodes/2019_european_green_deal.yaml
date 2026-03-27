@@ -1,0 +1,79 @@
+id: "2019_european_green_deal"
+year_month: "2019-12"
+title: "European Green Deal"
+description: >
+  The EU commits to net-zero emissions by 2050 with the European Green
+  Deal. The most ambitious climate legislation by any major economy,
+  including carbon border adjustment mechanism (CBAM), renewable targets,
+  and massive green investment. Tests EU cohesion as costs fall unevenly.
+domain: "energy"
+confidence: "HIGH"
+variable: "green_deal_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_ambitious: 0.40
+    fully_implemented: 0.15
+    watered_down: 0.25
+    eastern_revolt: 0.10
+    global_catalyst: 0.10
+dependencies:
+  - node: "2016_brexit"
+    branch: "remain_wins"
+    modifies:
+      fully_implemented: "+0.05"
+      watered_down: "-0.05"
+  - node: "2015_paris_climate"
+    branch: "binding_agreement"
+    modifies:
+      fully_implemented: "+0.10"
+      historical_ambitious: "-0.05"
+      watered_down: "-0.05"
+conditional: null
+outcomes:
+  historical_ambitious:
+    status: "HISTORICAL"
+    description: "Green Deal adopted with CBAM; implementation uneven across member states"
+    world_state_effects:
+      renewable_energy_share: "+0.04"
+      eu_cohesion: "-0.02"
+      climate_temp_anomaly: "-0.01"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.03"
+  fully_implemented:
+    status: "DIVERGENCE"
+    description: "EU achieves all Green Deal targets; becomes global clean energy leader"
+    world_state_effects:
+      renewable_energy_share: "+0.08"
+      eu_cohesion: "+0.03"
+      climate_temp_anomaly: "-0.04"
+      global_gdp_growth_modifier: "*1.01"
+    cascading_modifiers:
+      2027_energy_transition.rapid_transition: "+0.08"
+      2025_climate_tipping.accelerated_action: "+0.05"
+  watered_down:
+    status: "DIVERGENCE"
+    description: "Industry lobbying and energy crisis dilute Green Deal targets"
+    world_state_effects:
+      renewable_energy_share: "+0.02"
+      climate_temp_anomaly: "+0.02"
+      eu_cohesion: "+0.01"
+  eastern_revolt:
+    status: "DIVERGENCE"
+    description: "Poland and Eastern Europe block implementation; EU climate policy stalls"
+    world_state_effects:
+      renewable_energy_share: "+0.01"
+      eu_cohesion: "-0.05"
+      climate_temp_anomaly: "+0.03"
+    cascading_modifiers:
+      2027_energy_transition.fossil_resurgence: "+0.03"
+  global_catalyst:
+    status: "DIVERGENCE"
+    description: "Green Deal CBAM triggers competitive decarbonization worldwide"
+    world_state_effects:
+      renewable_energy_share: "+0.06"
+      climate_temp_anomaly: "-0.03"
+      eu_cohesion: "+0.02"
+    cascading_modifiers:
+      2025_climate_tipping.accelerated_action: "+0.08"
+      2027_energy_transition.rapid_transition: "+0.06"

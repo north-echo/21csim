@@ -1,0 +1,56 @@
+id: "2037_latin_america"
+year_month: "2037-06"
+title: "Latin America Political Direction"
+description: >
+  The political trajectory of Latin America. Whether a new wave of left
+  populism, right consolidation, or pragmatic centrism defines the region's
+  governance and relationship with great powers.
+domain: "geopolitical"
+confidence: "MEDIUM"
+variable: "latin_america_status"
+distribution:
+  type: "categorical"
+  options:
+    pink_tide_2: 0.25
+    right_consolidation: 0.20
+    pragmatic_center: 0.30
+    regional_conflict: 0.10
+    us_reengagement: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  pink_tide_2:
+    status: "DIVERGENCE"
+    description: "New wave of left-populist governments across the region"
+    explanation: "Inequality and climate impacts drive renewed left-wing electoral victories"
+    world_state_effects:
+      inequality_index: "-0.02"
+      us_global_standing: "-0.02"
+  right_consolidation:
+    status: "DIVERGENCE"
+    description: "Right-wing governments consolidate power across Latin America"
+    explanation: "Security concerns and economic liberalization drive rightward shift"
+    world_state_effects:
+      global_gdp: "+0.01"
+      global_democracy_index: "-0.02"
+  pragmatic_center:
+    status: "DIVERGENCE"
+    description: "Pragmatic centrist governance focused on growth and stability"
+    explanation: "Electorate tires of ideological extremes; technocratic governance gains favor"
+    world_state_effects:
+      global_gdp: "+0.01"
+      governance_model: "+0.02"
+  regional_conflict:
+    status: "ESCALATED"
+    description: "Interstate or internal conflicts destabilize the region"
+    explanation: "Venezuela, Colombia, or border disputes escalate to armed conflict"
+    world_state_effects:
+      conflict_deaths: "+15000"
+      global_gdp: "-0.01"
+  us_reengagement:
+    status: "DIVERGENCE"
+    description: "US significantly reengages with Latin America through investment and diplomacy"
+    explanation: "Strategic competition with China drives renewed US attention to its neighborhood"
+    world_state_effects:
+      us_global_standing: "+0.03"
+      global_gdp: "+0.01"

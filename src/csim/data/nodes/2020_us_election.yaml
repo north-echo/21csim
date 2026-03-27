@@ -1,0 +1,61 @@
+id: "2020_us_election"
+year_month: "2020-11"
+title: "2020 US Presidential Election"
+description: >
+  Biden defeats Trump amid pandemic, racial justice protests, and
+  unprecedented polarization. Record turnout, mail-in voting expansion,
+  and post-election challenges to results.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "election_result"
+distribution:
+  type: "categorical"
+  options:
+    biden_wins: 0.50
+    trump_wins: 0.30
+    close_contested: 0.15
+    landslide_either: 0.05
+dependencies:
+  - node: "2016_us_election"
+    branch: "trump_wins"
+    modifies:
+      biden_wins: "+0.05"
+      trump_wins: "+0.10"
+      close_contested: "+0.05"
+  - node: "2020_covid_response"
+    branch: "catastrophic_failure"
+    modifies:
+      biden_wins: "+0.10"
+      trump_wins: "-0.10"
+conditional: null
+outcomes:
+  biden_wins:
+    status: "HISTORICAL"
+    description: "Biden wins with 306 electoral votes; record 81M votes"
+    world_state_effects:
+      us_polarization: "+0.03"
+      renewable_energy_share: "+0.02"
+      us_global_standing: "+0.05"
+    cascading_modifiers:
+      2021_jan6.historical_breach: "+0.05"
+  trump_wins:
+    status: "DIVERGENCE"
+    description: "Trump wins reelection"
+    explanation: "Pandemic handled better or economy recovers faster"
+    world_state_effects:
+      us_polarization: "+0.08"
+      us_global_standing: "-0.05"
+      climate_temp_anomaly: "+0.03"
+      renewable_energy_share: "-0.02"
+  close_contested:
+    status: "DIVERGENCE"
+    description: "Extremely close result; weeks of legal challenges"
+    world_state_effects:
+      us_polarization: "+0.12"
+      us_institutional_trust: "-0.08"
+      global_democracy_index: "-0.02"
+  landslide_either:
+    status: "DIVERGENCE"
+    description: "One candidate wins by large margin; clear mandate"
+    world_state_effects:
+      us_polarization: "-0.02"

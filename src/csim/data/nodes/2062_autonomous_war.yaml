@@ -1,0 +1,58 @@
+id: "2062_autonomous_war"
+year_month: "2062-06"
+title: "Autonomous Warfare"
+description: >
+  The role of autonomous weapons in global conflict reaches a decisive point.
+  Whether AI-driven warfare is embraced, constrained, or rendered obsolete
+  shapes the nature of future conflict.
+domain: "security"
+confidence: "LOW"
+variable: "autonomous_war_status"
+distribution:
+  type: "categorical"
+  options:
+    ai_battlefield: 0.25
+    human_controlled: 0.20
+    banned: 0.10
+    proxy_wars: 0.25
+    autonomous_terrorism: 0.10
+    obsolete: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  ai_battlefield:
+    status: "DIVERGENCE"
+    description: "Fully autonomous weapons systems dominate modern warfare; human soldiers rare on battlefields"
+    world_state_effects:
+      conflict_deaths: "-5000"
+      drone_warfare_prevalence: "+0.30"
+  human_controlled:
+    status: "DIVERGENCE"
+    description: "Meaningful human control maintained over all lethal weapons systems through international norms"
+    world_state_effects:
+      conflict_deaths: "+0"
+      drone_warfare_prevalence: "+0.05"
+  banned:
+    status: "DIVERGENCE"
+    description: "International treaty bans autonomous lethal weapons; enforcement mechanisms prove effective"
+    world_state_effects:
+      conflict_deaths: "-2000"
+      drone_warfare_prevalence: "-0.10"
+  proxy_wars:
+    status: "ESCALATED"
+    description: "Great powers fight through autonomous proxy forces in developing nations"
+    world_state_effects:
+      conflict_deaths: "+15000"
+      drone_warfare_prevalence: "+0.25"
+  autonomous_terrorism:
+    status: "ESCALATED"
+    description: "Non-state actors deploy autonomous weapons for terrorism; asymmetric threat proliferates"
+    world_state_effects:
+      conflict_deaths: "+8000"
+      drone_warfare_prevalence: "+0.20"
+  obsolete:
+    status: "DIVERGENCE"
+    description: "Effective defenses render autonomous weapons obsolete; warfare shifts to other domains"
+    world_state_effects:
+      conflict_deaths: "-3000"
+      drone_warfare_prevalence: "-0.05"

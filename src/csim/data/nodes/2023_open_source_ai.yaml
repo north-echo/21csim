@@ -1,0 +1,52 @@
+id: "2023_open_source_ai"
+year_month: "2023-07"
+title: "Open Source AI / Llama 2"
+domain: "technology"
+confidence: "HIGH"
+variable: "open_source_ai"
+distribution:
+  type: "categorical"
+  options:
+    historical_mixed: 0.45
+    open_wins: 0.20
+    closed_dominates: 0.20
+    open_source_incident: 0.10
+    fragmented: 0.05
+dependencies:
+  - node: "2023_ai_acceleration"
+    branch: "open_source_dominant"
+    modifies:
+      open_wins: "+0.20"
+      closed_dominates: "-0.15"
+      historical_mixed: "-0.05"
+conditional: null
+outcomes:
+  historical_mixed:
+    status: "HISTORICAL"
+    description: "Mix of open and closed AI; open source competitive but lagging"
+    world_state_effects:
+      internet_freedom_index: "+0.01"
+  open_wins:
+    status: "DIVERGENCE"
+    description: "Open source AI matches or exceeds closed models"
+    world_state_effects:
+      internet_freedom_index: "+0.03"
+      inequality_index: "-0.02"
+      ai_development_year_offset: "+1"
+  closed_dominates:
+    status: "DIVERGENCE"
+    description: "Closed AI companies dominate; open source marginalized"
+    world_state_effects:
+      inequality_index: "+0.03"
+      internet_freedom_index: "-0.02"
+  open_source_incident:
+    status: "ESCALATED"
+    description: "Open source AI model causes major harm"
+    world_state_effects:
+      existential_risk_cumulative: "+0.02"
+      internet_freedom_index: "-0.05"
+  fragmented:
+    status: "DIVERGENCE"
+    description: "AI ecosystem fragments by region"
+    world_state_effects:
+      china_power_index: "+0.02"

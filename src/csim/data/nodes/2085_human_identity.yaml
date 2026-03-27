@@ -1,0 +1,46 @@
+id: "2085_human_identity"
+year_month: "2085-01"
+title: "Human Identity"
+description: >
+  The definition of humanity itself is in question after decades of genetic
+  engineering, cybernetic augmentation, and AI integration. What it means
+  to be human may have fundamentally changed.
+domain: "society"
+confidence: "LOW"
+variable: "human_identity_status"
+distribution:
+  type: "categorical"
+  options:
+    enhanced_majority: 0.15
+    traditional: 0.25
+    merged: 0.10
+    diverse: 0.30
+    post_human: 0.10
+    contested: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  enhanced_majority:
+    status: "DIVERGENCE"
+    description: "Most humans have some form of cognitive or physical enhancement; this is the new baseline"
+    world_state_effects: {}
+  traditional:
+    status: "DIVERGENCE"
+    description: "Humanity largely retains its biological nature; enhancement remains a minority choice"
+    world_state_effects: {}
+  merged:
+    status: "DIVERGENCE"
+    description: "Human-AI merger has created a new form of being that transcends the biological-digital divide"
+    world_state_effects: {}
+  diverse:
+    status: "DIVERGENCE"
+    description: "Multiple forms of humanity coexist: biological, enhanced, digital, and hybrid"
+    world_state_effects: {}
+  post_human:
+    status: "DIVERGENCE"
+    description: "Significant portion of population has moved beyond recognizable human form or cognition"
+    world_state_effects: {}
+  contested:
+    status: "ESCALATED"
+    description: "Fierce cultural and political conflict over what counts as human; rights and personhood disputed"
+    world_state_effects: {}

@@ -1,0 +1,75 @@
+id: "2010_arab_spring"
+year_month: "2010-12"
+title: "Arab Spring"
+description: >
+  Wave of pro-democracy protests across the Middle East and North Africa.
+  Tunisia succeeds; Egypt's revolution leads to military coup; Libya and
+  Syria descend into civil war. ~500K+ dead in resulting conflicts.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "arab_spring_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_mixed: 0.45
+    broader_success: 0.15
+    no_uprising: 0.15
+    regional_war: 0.10
+    delayed_5_years: 0.15
+dependencies:
+  - node: "2003_iraq"
+    branch: "full_invasion"
+    modifies:
+      historical_mixed: "+0.05"
+      regional_war: "+0.05"
+      no_uprising: "-0.05"
+      broader_success: "-0.05"
+  - node: "2003_iraq"
+    branch: "diplomatic_resolution"
+    modifies:
+      broader_success: "+0.10"
+      regional_war: "-0.05"
+      historical_mixed: "-0.05"
+  - node: "2008_financial_crisis"
+    branch: "great_depression_2"
+    modifies:
+      historical_mixed: "+0.05"
+      regional_war: "+0.10"
+conditional: null
+outcomes:
+  historical_mixed:
+    status: "HISTORICAL"
+    description: "Tunisia succeeds; Egypt coup; Libya/Syria civil war"
+    world_state_effects:
+      middle_east_stability: "-0.20"
+      conflict_deaths: "+500000"
+      global_democracy_index: "-0.02"
+    cascading_modifiers:
+      2014_crimea.regional_chaos: "+0.05"
+      2014_isis.historical_caliphate: "+0.10"
+  broader_success:
+    status: "DIVERGENCE"
+    description: "Multiple successful democratic transitions"
+    explanation: "Egypt military stays neutral; international support stronger"
+    world_state_effects:
+      middle_east_stability: "+0.05"
+      global_democracy_index: "+0.05"
+      conflict_deaths: "+20000"
+  no_uprising:
+    status: "DIVERGENCE"
+    description: "Protests fizzle; authoritarian regimes hold"
+    world_state_effects:
+      global_democracy_index: "-0.01"
+  regional_war:
+    status: "ESCALATED"
+    description: "Cascading multi-state conflict engulfs region"
+    world_state_effects:
+      middle_east_stability: "-0.35"
+      conflict_deaths: "+1000000"
+      nuclear_risk_level: "+0.03"
+      terrorism_threat_index: "+0.15"
+  delayed_5_years:
+    status: "DELAYED"
+    description: "Same pressures erupt around 2015 instead"
+    world_state_effects:
+      middle_east_stability: "-0.05"

@@ -1,0 +1,64 @@
+id: "2016_panama_papers"
+year_month: "2016-04"
+title: "Panama Papers"
+description: >
+  Massive leak of 11.5 million documents from Panamanian law firm Mossack
+  Fonseca exposes global tax evasion by world leaders, celebrities, and
+  corporations. Reveals the scale of offshore wealth hiding and fuels
+  populist anger about elite corruption and wealth inequality worldwide.
+domain: "economic"
+confidence: "HIGH"
+variable: "panama_papers_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_limited_reform: 0.45
+    major_tax_reform: 0.15
+    suppressed_story: 0.15
+    global_transparency_wave: 0.10
+    populist_backlash: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  historical_limited_reform:
+    status: "HISTORICAL"
+    description: "Papers spark outrage; some leaders resign but systemic reform is limited"
+    world_state_effects:
+      inequality_index: "-0.01"
+      us_institutional_trust: "-0.02"
+      global_democracy_index: "+0.01"
+  major_tax_reform:
+    status: "DIVERGENCE"
+    description: "G20 nations implement coordinated global minimum tax and transparency rules"
+    explanation: "Political will crystallizes around closing offshore tax loopholes"
+    world_state_effects:
+      inequality_index: "-0.05"
+      global_democracy_index: "+0.02"
+      us_institutional_trust: "+0.02"
+  suppressed_story:
+    status: "DIVERGENCE"
+    description: "Media fails to coordinate; story gains little traction"
+    explanation: "Without ICIJ coordination, individual outlets cannot sustain coverage"
+    world_state_effects:
+      inequality_index: "+0.01"
+      internet_freedom_index: "-0.02"
+  global_transparency_wave:
+    status: "DIVERGENCE"
+    description: "Papers trigger ongoing whistleblower culture and corporate transparency movement"
+    explanation: "Success of Panama Papers inspires further leaks and investigative journalism"
+    world_state_effects:
+      inequality_index: "-0.03"
+      global_democracy_index: "+0.03"
+      us_institutional_trust: "+0.01"
+      internet_freedom_index: "+0.02"
+  populist_backlash:
+    status: "ESCALATED"
+    description: "Papers fuel anti-elite populism but no structural reform; institutional trust plummets"
+    explanation: "Outrage channeled into populist movements rather than policy change"
+    world_state_effects:
+      inequality_index: "+0.01"
+      us_institutional_trust: "-0.04"
+      us_polarization: "+0.03"
+      global_democracy_index: "-0.02"
+    cascading_modifiers:
+      2016_us_election.trump_wins: "+0.02"

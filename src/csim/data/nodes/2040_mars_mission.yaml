@@ -1,0 +1,68 @@
+id: "2040_mars_mission"
+year_month: "2040-06"
+title: "Mars Mission"
+description: >
+  First crewed mission to Mars attempts landing. Outcome depends on decades of
+  space infrastructure development and whether technical and funding challenges
+  were overcome.
+domain: "space"
+confidence: "MEDIUM"
+variable: "mars_mission_status"
+distribution:
+  type: "categorical"
+  options:
+    successful_landing: 0.20
+    one_way_colony: 0.05
+    mission_failure: 0.10
+    delayed_2050: 0.30
+    cancelled: 0.15
+    robotic_only: 0.20
+dependencies:
+  - node: "2032_moon_base"
+    branch: "operational"
+    modifies:
+      successful_landing: "+0.10"
+      delayed_2050: "-0.05"
+      cancelled: "-0.05"
+  - node: "2032_moon_base"
+    branch: "failed"
+    modifies:
+      cancelled: "+0.10"
+      delayed_2050: "+0.05"
+      successful_landing: "-0.10"
+      one_way_colony: "-0.05"
+conditional: null
+outcomes:
+  successful_landing:
+    status: "DIVERGENCE"
+    description: "Crew lands on Mars, conducts research, and returns safely to Earth"
+    world_state_effects:
+      space_development_index: "+0.15"
+    cascading_modifiers:
+      2045_geoengineering.deployed_internationally: "+0.05"
+      2042_superintelligence.contained_superintelligence: "+0.03"
+  one_way_colony:
+    status: "DIVERGENCE"
+    description: "Mission becomes permanent settlement; crew chooses or is forced to stay"
+    world_state_effects:
+      space_development_index: "+0.20"
+  mission_failure:
+    status: "ESCALATED"
+    description: "Mission fails during transit or landing; crew lost"
+    world_state_effects:
+      space_development_index: "-0.08"
+  delayed_2050:
+    status: "DIVERGENCE"
+    description: "Technical and funding challenges push crewed Mars mission to the 2050s"
+    world_state_effects:
+      space_development_index: "+0.03"
+  cancelled:
+    status: "DIVERGENCE"
+    description: "Mars mission cancelled as priorities shift to Earth-based challenges"
+    world_state_effects:
+      space_development_index: "-0.05"
+  robotic_only:
+    status: "DIVERGENCE"
+    description: "Advanced robotic missions replace crewed plans; AI-driven Mars exploration continues"
+    world_state_effects:
+      space_development_index: "+0.05"

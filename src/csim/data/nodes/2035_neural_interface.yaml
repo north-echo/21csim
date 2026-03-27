@@ -1,0 +1,72 @@
+id: "2035_neural_interface"
+year_month: "2035-06"
+title: "Neural Interface Technology"
+description: >
+  Development and adoption of brain-computer interfaces. From medical
+  applications to cognitive enhancement, neural interfaces could reshape
+  human capability and create new forms of inequality.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "neural_interface_status"
+distribution:
+  type: "categorical"
+  options:
+    medical_only: 0.35
+    elite_early_adopters: 0.25
+    mass_market_2040: 0.10
+    banned: 0.10
+    cognitive_divide: 0.15
+    rejected: 0.05
+dependencies:
+  - node: "2028_agi_threshold"
+    branch: "full_agi"
+    modifies:
+      elite_early_adopters: "+0.10"
+      mass_market_2040: "+0.05"
+      medical_only: "-0.10"
+      rejected: "-0.05"
+  - node: "2028_agi_threshold"
+    branch: "no_agi_yet"
+    modifies:
+      medical_only: "+0.05"
+      rejected: "+0.03"
+      elite_early_adopters: "-0.05"
+      mass_market_2040: "-0.03"
+conditional: null
+outcomes:
+  medical_only:
+    status: "DIVERGENCE"
+    description: "Neural interfaces limited to medical applications; paralysis, epilepsy, depression"
+    explanation: "Regulatory caution and public unease restrict BCIs to therapeutic use cases"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.05"
+  elite_early_adopters:
+    status: "DIVERGENCE"
+    description: "Wealthy early adopters gain cognitive enhancement; new inequality dimension"
+    explanation: "Neural interfaces for cognitive enhancement available but expensive; creates augmented elite"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.15"
+  mass_market_2040:
+    status: "DIVERGENCE"
+    description: "Neural interfaces on track for mass market by 2040"
+    explanation: "Rapid cost reduction and compelling applications drive broad adoption trajectory"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.25"
+  banned:
+    status: "DIVERGENCE"
+    description: "Most nations ban non-medical neural interfaces"
+    explanation: "Safety incidents or ethical backlash leads to strict prohibition of enhancement BCIs"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.02"
+  cognitive_divide:
+    status: "ESCALATED"
+    description: "Neural interfaces create deep cognitive divide between enhanced and unenhanced populations"
+    explanation: "Early adopters gain decisive advantages in work and cognition; social stratification deepens"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.20"
+  rejected:
+    status: "DIVERGENCE"
+    description: "Public rejection; neural interfaces fail to gain adoption beyond niche uses"
+    explanation: "Cultural resistance, safety fears, and limited perceived benefit prevent adoption"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.01"

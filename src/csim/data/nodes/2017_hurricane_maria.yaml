@@ -1,0 +1,58 @@
+id: "2017_hurricane_maria"
+year_month: "2017-09"
+title: "Puerto Rico Hurricane Maria"
+description: >
+  Category 5 Hurricane Maria devastates Puerto Rico, killing nearly 3,000
+  people and leaving the island without power for months. Exposes colonial
+  infrastructure neglect, inadequate federal disaster response, and the
+  vulnerability of US territories. Triggers mass migration to the mainland.
+domain: "social"
+confidence: "HIGH"
+variable: "hurricane_maria_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_devastation: 0.50
+    adequate_federal_response: 0.15
+    statehood_catalyst: 0.10
+    storm_misses_pr: 0.10
+    infrastructure_collapse: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  historical_devastation:
+    status: "HISTORICAL"
+    description: "Catastrophic damage; slow federal response; months without power; mass emigration"
+    world_state_effects:
+      us_institutional_trust: "-0.03"
+      climate_temp_anomaly: "+0.01"
+      latin_america_stability: "-0.01"
+  adequate_federal_response:
+    status: "DIVERGENCE"
+    description: "Federal government mounts rapid, effective disaster response"
+    explanation: "FEMA pre-positions resources; military deploys immediately"
+    world_state_effects:
+      us_institutional_trust: "+0.02"
+      latin_america_stability: "+0.01"
+  statehood_catalyst:
+    status: "DIVERGENCE"
+    description: "Maria triggers successful Puerto Rico statehood movement"
+    explanation: "Disaster exposes colonial status; bipartisan statehood push succeeds"
+    world_state_effects:
+      us_institutional_trust: "+0.01"
+      global_democracy_index: "+0.01"
+      us_polarization: "+0.01"
+  storm_misses_pr:
+    status: "DIVERGENCE"
+    description: "Maria tracks differently and largely spares Puerto Rico"
+    explanation: "Slight shift in hurricane track reduces impact to tropical storm levels"
+    world_state_effects:
+      us_institutional_trust: "+0.00"
+  infrastructure_collapse:
+    status: "ESCALATED"
+    description: "Complete infrastructure collapse triggers humanitarian crisis and depopulation"
+    explanation: "Decades of debt crisis leave no capacity for recovery"
+    world_state_effects:
+      us_institutional_trust: "-0.05"
+      latin_america_stability: "-0.03"
+      climate_temp_anomaly: "+0.01"

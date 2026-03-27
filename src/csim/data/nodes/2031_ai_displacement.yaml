@@ -1,0 +1,71 @@
+id: "2031_ai_displacement"
+year_month: "2031-06"
+title: "AI Economic Displacement"
+description: >
+  The economic impact of AI and automation on employment, inequality, and
+  social stability. Whether displaced workers can transition to new roles
+  or face permanent exclusion from the economy.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "ai_displacement_status"
+distribution:
+  type: "categorical"
+  options:
+    managed_transition: 0.20
+    social_crisis: 0.30
+    new_jobs_emerge: 0.20
+    slower_than_expected: 0.15
+    bifurcated_economy: 0.15
+dependencies:
+  - node: "2028_agi_threshold"
+    branch: "full_agi"
+    modifies:
+      social_crisis: "+0.15"
+      bifurcated_economy: "+0.10"
+      slower_than_expected: "-0.13"
+      managed_transition: "-0.05"
+      new_jobs_emerge: "-0.07"
+  - node: "2028_agi_threshold"
+    branch: "no_agi_yet"
+    modifies:
+      slower_than_expected: "+0.10"
+      managed_transition: "+0.05"
+      social_crisis: "-0.10"
+      bifurcated_economy: "-0.05"
+conditional: null
+outcomes:
+  managed_transition:
+    status: "DIVERGENCE"
+    description: "Government retraining programs and UBI experiments ease the transition"
+    explanation: "Proactive policy response enables most displaced workers to find new roles within 2-3 years"
+    world_state_effects:
+      automation_displacement: "+0.10"
+      inequality_index: "-0.02"
+  social_crisis:
+    status: "ESCALATED"
+    description: "Mass unemployment and social unrest as AI displaces workers faster than new jobs emerge"
+    explanation: "White-collar and service sector jobs automated rapidly; political instability follows"
+    world_state_effects:
+      automation_displacement: "+0.25"
+      inequality_index: "+0.10"
+  new_jobs_emerge:
+    status: "DIVERGENCE"
+    description: "New AI-adjacent industries create more jobs than are destroyed"
+    explanation: "Human-AI collaboration, AI maintenance, and new creative industries absorb displaced workers"
+    world_state_effects:
+      automation_displacement: "+0.05"
+      inequality_index: "-0.03"
+  slower_than_expected:
+    status: "DIVERGENCE"
+    description: "AI adoption slower than predicted; labor market disruption modest"
+    explanation: "Implementation challenges, regulation, and organizational inertia slow AI displacement"
+    world_state_effects:
+      automation_displacement: "+0.03"
+      inequality_index: "+0.01"
+  bifurcated_economy:
+    status: "DIVERGENCE"
+    description: "Economy splits into high-skill AI-augmented sector and low-wage service sector"
+    explanation: "Middle-class hollowed out; wealth concentrates among AI-capital owners"
+    world_state_effects:
+      automation_displacement: "+0.18"
+      inequality_index: "+0.15"

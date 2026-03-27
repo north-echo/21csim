@@ -1,0 +1,46 @@
+id: "2095_china"
+year_month: "2095-01"
+title: "China 2095"
+description: >
+  China's position at the end of the 21st century. After demographic decline,
+  technological transformation, and political evolution, China's role in the
+  world is assessed.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "china_status_2095"
+distribution:
+  type: "categorical"
+  options:
+    superpower: 0.15
+    democratic: 0.10
+    declined: 0.20
+    transformed: 0.20
+    regional: 0.20
+    fragmented: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  superpower:
+    status: "DIVERGENCE"
+    description: "China is a dominant global superpower with leading technology and economic output"
+    world_state_effects: {}
+  democratic:
+    status: "DIVERGENCE"
+    description: "China has transitioned to democratic governance; a fundamentally different political entity"
+    world_state_effects: {}
+  declined:
+    status: "DIVERGENCE"
+    description: "Demographic collapse and economic stagnation have reduced China to secondary status"
+    world_state_effects: {}
+  transformed:
+    status: "DIVERGENCE"
+    description: "China transformed into something unrecognizable from its 2000s form; new political and social model"
+    world_state_effects: {}
+  regional:
+    status: "DIVERGENCE"
+    description: "China is the dominant Asian power but not a global hegemon"
+    world_state_effects: {}
+  fragmented:
+    status: "ESCALATED"
+    description: "China has fragmented into multiple successor states or autonomous regions"
+    world_state_effects: {}

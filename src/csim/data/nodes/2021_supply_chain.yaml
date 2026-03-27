@@ -1,0 +1,55 @@
+id: "2021_supply_chain"
+year_month: "2021-03"
+title: "Global Supply Chain Crisis"
+domain: "economic"
+confidence: "HIGH"
+variable: "supply_chain_crisis"
+distribution:
+  type: "categorical"
+  options:
+    historical_prolonged: 0.45
+    quick_recovery: 0.20
+    permanent_reshoring: 0.15
+    worse_collapse: 0.10
+    china_decoupling: 0.10
+dependencies:
+  - node: "2019_covid_emergence"
+    branch: "no_pandemic"
+    modifies:
+      historical_prolonged: "-0.30"
+      quick_recovery: "+0.20"
+      worse_collapse: "-0.10"
+conditional: null
+outcomes:
+  historical_prolonged:
+    status: "HISTORICAL"
+    description: "Supply chain disruptions persist through 2022"
+    world_state_effects:
+      supply_chain_resilience: "-0.10"
+      global_gdp_growth_modifier: "*0.99"
+    cascading_modifiers:
+      2022_inflation_crisis.historical_high_then_controlled: "+0.05"
+  quick_recovery:
+    status: "DIVERGENCE"
+    description: "Supply chains recover by mid-2021"
+    world_state_effects:
+      supply_chain_resilience: "-0.03"
+  permanent_reshoring:
+    status: "DIVERGENCE"
+    description: "Crisis triggers permanent supply chain restructuring"
+    world_state_effects:
+      supply_chain_resilience: "+0.10"
+      global_gdp_growth_modifier: "*0.98"
+  worse_collapse:
+    status: "ESCALATED"
+    description: "Critical shortages in food, medicine, semiconductors"
+    world_state_effects:
+      supply_chain_resilience: "-0.20"
+      global_gdp_growth_modifier: "*0.95"
+      conflict_deaths: "+5000"
+  china_decoupling:
+    status: "DIVERGENCE"
+    description: "Crisis accelerates China decoupling"
+    world_state_effects:
+      supply_chain_resilience: "+0.05"
+      china_power_index: "-0.03"

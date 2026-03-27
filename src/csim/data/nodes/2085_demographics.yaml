@@ -1,0 +1,41 @@
+id: "2085_demographics"
+year_month: "2085-01"
+title: "Demographics 2085"
+description: >
+  Global demographic trends in the late 21st century. The interplay of
+  fertility collapse, life extension, and potential population engineering
+  shapes humanity's numbers.
+domain: "demographics"
+confidence: "LOW"
+variable: "demographics_2085"
+distribution:
+  type: "categorical"
+  options:
+    declining: 0.30
+    stable_7b: 0.25
+    aging: 0.20
+    rejuvenated: 0.10
+    crisis: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  declining:
+    status: "DIVERGENCE"
+    description: "Population in steady decline across all regions; societies restructuring for smaller numbers"
+    world_state_effects: {}
+  stable_7b:
+    status: "DIVERGENCE"
+    description: "Population stabilized near 7 billion through balanced fertility and longevity"
+    world_state_effects: {}
+  aging:
+    status: "DIVERGENCE"
+    description: "Population heavily skewed toward elderly; dependency ratios strain social systems"
+    world_state_effects: {}
+  rejuvenated:
+    status: "DIVERGENCE"
+    description: "Life extension and rejuvenation technologies create a biologically younger population"
+    world_state_effects: {}
+  crisis:
+    status: "ESCALATED"
+    description: "Demographic crisis from simultaneous population decline, aging, and regional collapses"
+    world_state_effects: {}

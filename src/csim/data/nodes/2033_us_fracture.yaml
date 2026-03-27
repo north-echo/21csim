@@ -1,0 +1,59 @@
+id: "2033_us_fracture"
+year_month: "2033-06"
+title: "US Institutional Fracture"
+description: >
+  Whether escalating polarization and institutional erosion lead to
+  meaningful fractures in US governance, from state nullification of
+  federal authority to formal secession movements.
+domain: "geopolitical"
+confidence: "MEDIUM"
+variable: "us_fracture_status"
+distribution:
+  type: "categorical"
+  options:
+    rhetorical_only: 0.35
+    selective_nullification: 0.25
+    formal_secession: 0.15
+    constitutional_convention: 0.15
+    resolved_by_reform: 0.10
+dependencies: []
+conditional: "us_polarization > 0.65"
+outcomes:
+  rhetorical_only:
+    status: "DIVERGENCE"
+    description: "Secession and fracture talk remains rhetorical; institutions hold"
+    explanation: "Inflammatory rhetoric but economic interdependence and military unity prevent actual breakup"
+    world_state_effects:
+      us_polarization: "+0.02"
+      us_global_standing: "-0.02"
+  selective_nullification:
+    status: "DIVERGENCE"
+    description: "States selectively ignore federal authority on key issues"
+    explanation: "Red and blue states openly defy federal law on immigration, guns, abortion, and climate"
+    world_state_effects:
+      us_polarization: "+0.08"
+      us_global_standing: "-0.05"
+      global_democracy_index: "-0.03"
+  formal_secession:
+    status: "ESCALATED"
+    description: "One or more states formally begin secession proceedings"
+    explanation: "Political crisis triggers formal legislative action toward secession; constitutional crisis ensues"
+    world_state_effects:
+      us_polarization: "+0.15"
+      us_global_standing: "-0.15"
+      global_democracy_index: "-0.08"
+  constitutional_convention:
+    status: "DIVERGENCE"
+    description: "Article V convention called to restructure federal government"
+    explanation: "States agree to constitutional convention to address structural governance failures"
+    world_state_effects:
+      us_polarization: "+0.05"
+      global_democracy_index: "+0.02"
+  resolved_by_reform:
+    status: "DIVERGENCE"
+    description: "Institutional reforms defuse fracture tensions"
+    explanation: "Electoral reform, Senate restructuring, or court reform addresses root causes of dysfunction"
+    world_state_effects:
+      us_polarization: "-0.05"
+      us_global_standing: "+0.03"
+      global_democracy_index: "+0.03"

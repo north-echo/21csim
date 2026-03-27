@@ -1,0 +1,84 @@
+id: "2038_cislunar_economy"
+year_month: "2038-06"
+title: "Cislunar Economy"
+description: >
+  An integrated Earth-Moon economic zone emerges as launch costs fall and
+  lunar infrastructure matures. Fuel depots, communication relays, and
+  transfer stations create a sustained economic corridor between Earth
+  and the Moon.
+domain: "space"
+confidence: "LOW"
+variable: "cislunar_economy_status"
+distribution:
+  type: "categorical"
+  options:
+    thriving_corridor: 0.15
+    government_led: 0.25
+    slow_development: 0.30
+    private_sector_boom: 0.15
+    stalled: 0.15
+dependencies:
+  - node: "2034_lunar_economy"
+    branch: "water_mining_viable"
+    modifies:
+      thriving_corridor: "+0.10"
+      private_sector_boom: "+0.05"
+      stalled: "-0.10"
+      slow_development: "-0.05"
+  - node: "2034_lunar_economy"
+    branch: "economically_unviable"
+    modifies:
+      stalled: "+0.15"
+      slow_development: "+0.05"
+      thriving_corridor: "-0.10"
+      private_sector_boom: "-0.10"
+  - node: "2025_starship"
+    branch: "on_schedule"
+    modifies:
+      thriving_corridor: "+0.05"
+      private_sector_boom: "+0.05"
+      stalled: "-0.05"
+      slow_development: "-0.05"
+  - node: "2025_starship"
+    branch: "program_cancelled"
+    modifies:
+      stalled: "+0.10"
+      thriving_corridor: "-0.05"
+      private_sector_boom: "-0.05"
+conditional: null
+outcomes:
+  thriving_corridor:
+    status: "DIVERGENCE"
+    description: "Earth-Moon corridor fully operational with regular cargo and crew transport"
+    explanation: "Fuel depots at Lagrange points, reusable lunar landers, and surface infrastructure create self-sustaining logistics chain"
+    world_state_effects:
+      space_development_index: "+0.12"
+    cascading_modifiers:
+      2040_mars_mission.successful_landing: "+0.05"
+      2045_space_economy.explosive: "+0.05"
+  government_led:
+    status: "DIVERGENCE"
+    description: "Cislunar infrastructure exists but is primarily government-funded and operated"
+    explanation: "NASA, ESA, and CNSA maintain cislunar stations; private sector involvement limited to contracts"
+    world_state_effects:
+      space_development_index: "+0.07"
+  slow_development:
+    status: "DIVERGENCE"
+    description: "Cislunar economy develops but far slower than projected; infrastructure sparse"
+    explanation: "High costs and limited commercial demand keep cislunar activity at research-level volumes"
+    world_state_effects:
+      space_development_index: "+0.04"
+  private_sector_boom:
+    status: "DIVERGENCE"
+    description: "Private companies dominate cislunar space; multiple competing transport services"
+    explanation: "SpaceX, Blue Origin, and new entrants compete for lunar cargo contracts; costs plummet"
+    world_state_effects:
+      space_development_index: "+0.14"
+    cascading_modifiers:
+      2045_space_economy.on_track: "+0.05"
+  stalled:
+    status: "DIVERGENCE"
+    description: "Cislunar economic activity fails to materialize beyond occasional government missions"
+    explanation: "No compelling commercial case; Earth-based priorities absorb available funding"
+    world_state_effects:
+      space_development_index: "+0.01"

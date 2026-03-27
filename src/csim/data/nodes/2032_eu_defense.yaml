@@ -1,0 +1,75 @@
+id: "2032_eu_defense"
+year_month: "2032-06"
+title: "European Defense Architecture"
+description: >
+  The future of European defense and security. Whether NATO strengthens,
+  an EU army emerges, or European defense fragments in response to
+  changing US commitment and Russian threat.
+domain: "security"
+confidence: "MEDIUM"
+variable: "eu_defense_status"
+distribution:
+  type: "categorical"
+  options:
+    nato_strengthened: 0.30
+    eu_army: 0.15
+    fragmented: 0.20
+    us_withdrawal_forces_unity: 0.15
+    nuclear_sharing: 0.10
+    demilitarized: 0.10
+dependencies:
+  - node: "2022_russia_ukraine"
+    branch: "historical_invasion_stalemate"
+    modifies:
+      nato_strengthened: "+0.10"
+      fragmented: "-0.05"
+      demilitarized: "-0.05"
+  - node: "2022_russia_ukraine"
+    branch: "quick_russian_victory"
+    modifies:
+      eu_army: "+0.10"
+      us_withdrawal_forces_unity: "+0.05"
+      fragmented: "-0.10"
+      demilitarized: "-0.05"
+conditional: null
+outcomes:
+  nato_strengthened:
+    status: "DIVERGENCE"
+    description: "NATO alliance strengthened with higher spending and deeper integration"
+    explanation: "Russian threat and US leadership maintain and deepen transatlantic defense cooperation"
+    world_state_effects:
+      eu_cohesion: "+0.05"
+      nuclear_risk_level: "-0.02"
+  eu_army:
+    status: "DIVERGENCE"
+    description: "European Union establishes independent military force"
+    explanation: "EU creates joint military command and rapid reaction force separate from NATO"
+    world_state_effects:
+      eu_cohesion: "+0.08"
+  fragmented:
+    status: "DIVERGENCE"
+    description: "European defense remains fragmented; national approaches prevail"
+    explanation: "Member states unable to agree on common defense; duplicative spending and capability gaps persist"
+    world_state_effects:
+      eu_cohesion: "-0.05"
+  us_withdrawal_forces_unity:
+    status: "DIVERGENCE"
+    description: "US reduces NATO commitment; Europeans forced to unite defensively"
+    explanation: "American isolationism or pivot to Asia forces European strategic autonomy"
+    world_state_effects:
+      eu_cohesion: "+0.05"
+      us_global_standing: "-0.05"
+  nuclear_sharing:
+    status: "DIVERGENCE"
+    description: "European nuclear deterrent expanded beyond France and UK"
+    explanation: "Shared nuclear umbrella or German/Polish nuclear programs address deterrence gap"
+    world_state_effects:
+      nuclear_risk_level: "+0.05"
+      eu_cohesion: "+0.03"
+  demilitarized:
+    status: "DIVERGENCE"
+    description: "Europe pursues diplomatic security model; defense spending declines"
+    explanation: "Post-conflict stability reduces perceived threat; Europe prioritizes diplomacy over military"
+    world_state_effects:
+      eu_cohesion: "+0.02"
+      nuclear_risk_level: "-0.03"

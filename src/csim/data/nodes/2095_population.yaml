@@ -1,0 +1,52 @@
+id: "2095_population"
+year_month: "2095-01"
+title: "Global Population 2095"
+description: >
+  World population near the end of the 21st century. The cumulative effect
+  of fertility decline, life extension, and potential catastrophes determines
+  humanity's numbers.
+domain: "demographics"
+confidence: "LOW"
+variable: "population_2095"
+distribution:
+  type: "categorical"
+  options:
+    7_billion: 0.25
+    8_billion: 0.20
+    declining: 0.20
+    stable: 0.20
+    post_human: 0.05
+    crisis: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  7_billion:
+    status: "DIVERGENCE"
+    description: "Global population near 7 billion; gradual decline managed through economic restructuring"
+    world_state_effects:
+      global_population_billions: "-1.0"
+  8_billion:
+    status: "DIVERGENCE"
+    description: "Population holds near 8 billion through life extension offsetting fertility decline"
+    world_state_effects:
+      global_population_billions: "+0.00"
+  declining:
+    status: "DIVERGENCE"
+    description: "Population well below 7 billion and still falling; fundamental restructuring of society underway"
+    world_state_effects:
+      global_population_billions: "-2.0"
+  stable:
+    status: "DIVERGENCE"
+    description: "Population stabilized through deliberate policy and technological intervention"
+    world_state_effects:
+      global_population_billions: "+0.00"
+  post_human:
+    status: "DIVERGENCE"
+    description: "Traditional population metrics meaningless as many exist in digital or hybrid forms"
+    world_state_effects:
+      global_population_billions: "+0.00"
+  crisis:
+    status: "ESCALATED"
+    description: "Population crashed due to catastrophe, pandemic, or civilizational collapse"
+    world_state_effects:
+      global_population_billions: "-3.0"

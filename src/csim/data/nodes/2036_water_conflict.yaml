@@ -1,0 +1,64 @@
+id: "2036_water_conflict"
+year_month: "2036-06"
+title: "Water Resource Conflicts"
+description: >
+  Declining freshwater resources from glacial melt, aquifer depletion, and
+  changing precipitation patterns trigger conflicts over shared water resources.
+  Major transboundary river basins become flashpoints.
+domain: "climate"
+confidence: "MEDIUM"
+variable: "water_conflict_status"
+distribution:
+  type: "categorical"
+  options:
+    nile_basin_war: 0.20
+    indus_crisis: 0.20
+    diplomatic_resolution: 0.25
+    desalination_prevents: 0.15
+    multiple_conflicts: 0.10
+    internal_only: 0.10
+dependencies: []
+conditional: "water_stress_index > 0.40"
+outcomes:
+  nile_basin_war:
+    status: "ESCALATED"
+    description: "Armed conflict erupts between Nile Basin states over water allocation"
+    explanation: "Ethiopia's GERD and declining flows trigger military confrontation with Egypt and Sudan"
+    world_state_effects:
+      water_stress_index: "+0.10"
+      conflict_deaths: "+25000"
+  indus_crisis:
+    status: "ESCALATED"
+    description: "India-Pakistan crisis over Indus waters as glacial melt declines"
+    explanation: "Himalayan glacier retreat reduces Indus flows; nuclear-armed neighbors confront water scarcity"
+    world_state_effects:
+      water_stress_index: "+0.12"
+      conflict_deaths: "+15000"
+  diplomatic_resolution:
+    status: "DIVERGENCE"
+    description: "New water-sharing frameworks prevent conflicts"
+    explanation: "International mediation and water treaties defuse tensions before they escalate"
+    world_state_effects:
+      water_stress_index: "+0.03"
+      conflict_deaths: "+0"
+  desalination_prevents:
+    status: "DIVERGENCE"
+    description: "Cheap desalination technology removes water scarcity as a conflict driver"
+    explanation: "Solar-powered desalination costs drop dramatically; coastal nations become water exporters"
+    world_state_effects:
+      water_stress_index: "-0.05"
+      conflict_deaths: "+0"
+  multiple_conflicts:
+    status: "ESCALATED"
+    description: "Simultaneous water conflicts erupt across multiple regions"
+    explanation: "Nile, Indus, Tigris-Euphrates, and Mekong basins all experience conflict simultaneously"
+    world_state_effects:
+      water_stress_index: "+0.15"
+      conflict_deaths: "+60000"
+  internal_only:
+    status: "DIVERGENCE"
+    description: "Water stress causes domestic unrest but no interstate conflict"
+    explanation: "Governments face internal protests over water allocation but cross-border tensions managed"
+    world_state_effects:
+      water_stress_index: "+0.08"
+      conflict_deaths: "+3000"

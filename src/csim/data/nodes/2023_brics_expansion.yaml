@@ -1,0 +1,52 @@
+id: "2023_brics_expansion"
+year_month: "2023-08"
+title: "BRICS Expansion"
+domain: "economic"
+confidence: "HIGH"
+variable: "brics_expansion"
+distribution:
+  type: "categorical"
+  options:
+    historical_expansion: 0.45
+    effective_alternative: 0.15
+    fractures: 0.20
+    geopolitical_bloc: 0.10
+    paper_tiger: 0.10
+dependencies:
+  - node: "2022_russia_ukraine"
+    branch: "no_invasion"
+    modifies:
+      fractures: "+0.10"
+      effective_alternative: "-0.05"
+      geopolitical_bloc: "-0.05"
+conditional: null
+outcomes:
+  historical_expansion:
+    status: "HISTORICAL"
+    description: "BRICS expands to include Saudi Arabia, UAE, others"
+    world_state_effects:
+      us_global_standing: "-0.02"
+      china_power_index: "+0.02"
+  effective_alternative:
+    status: "DIVERGENCE"
+    description: "BRICS becomes effective alternative to Western institutions"
+    world_state_effects:
+      us_global_standing: "-0.08"
+      china_power_index: "+0.05"
+      global_gdp_growth_modifier: "*1.01"
+  fractures:
+    status: "DIVERGENCE"
+    description: "Internal disagreements fragment BRICS"
+    world_state_effects:
+      china_power_index: "-0.02"
+  geopolitical_bloc:
+    status: "DIVERGENCE"
+    description: "BRICS becomes anti-Western geopolitical bloc"
+    world_state_effects:
+      nuclear_risk_level: "+0.03"
+      us_global_standing: "-0.10"
+      china_power_index: "+0.05"
+  paper_tiger:
+    status: "DIVERGENCE"
+    description: "BRICS expansion is symbolic; no real impact"
+    world_state_effects: {}

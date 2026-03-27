@@ -1,0 +1,61 @@
+id: "2014_flint_water"
+year_month: "2014-04"
+title: "Flint Water Crisis"
+description: >
+  Flint, Michigan switches its water source to the Flint River to cut costs,
+  leading to lead contamination affecting nearly 100,000 residents. Exposes
+  systemic infrastructure decay, environmental racism, and government
+  indifference to predominantly Black communities. Becomes a symbol of
+  institutional failure in America.
+domain: "social"
+confidence: "HIGH"
+variable: "flint_water_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_crisis: 0.50
+    early_detection: 0.15
+    national_infrastructure_reform: 0.10
+    crisis_ignored: 0.15
+    widespread_contamination: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_crisis:
+    status: "HISTORICAL"
+    description: "Lead contamination discovered late; slow government response; lasting health impacts"
+    world_state_effects:
+      us_institutional_trust: "-0.02"
+      us_polarization: "+0.01"
+      racial_justice_index: "-0.01"
+  early_detection:
+    status: "DIVERGENCE"
+    description: "Water quality issues detected within weeks; source switched back immediately"
+    explanation: "EPA or state regulators catch the problem before widespread exposure"
+    world_state_effects:
+      us_institutional_trust: "+0.01"
+  national_infrastructure_reform:
+    status: "DIVERGENCE"
+    description: "Crisis triggers massive federal infrastructure investment"
+    explanation: "Flint becomes catalyst for bipartisan infrastructure legislation"
+    world_state_effects:
+      us_institutional_trust: "+0.02"
+      racial_justice_index: "+0.02"
+      inequality_index: "-0.02"
+  crisis_ignored:
+    status: "ESCALATED"
+    description: "Federal government does not intervene; crisis deepens for years"
+    explanation: "Political indifference prevents any meaningful response"
+    world_state_effects:
+      us_institutional_trust: "-0.04"
+      racial_justice_index: "-0.03"
+      us_polarization: "+0.02"
+  widespread_contamination:
+    status: "ESCALATED"
+    description: "Similar crises emerge in multiple US cities simultaneously"
+    explanation: "Aging infrastructure fails across several underfunded municipalities"
+    world_state_effects:
+      us_institutional_trust: "-0.05"
+      racial_justice_index: "-0.02"
+      us_polarization: "+0.03"
+      inequality_index: "+0.02"

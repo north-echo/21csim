@@ -1,0 +1,71 @@
+id: "2015_refugee_crisis"
+year_month: "2015-09"
+title: "European Refugee Crisis"
+description: >
+  Over 1 million asylum seekers enter Europe, primarily from Syria.
+  Merkel's "Wir schaffen das" decision. Reshapes European politics,
+  fuels right-wing populism, and directly contributes to Brexit.
+domain: "geopolitical"
+confidence: "HIGH"
+variable: "refugee_crisis_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_crisis: 0.40
+    managed_earlier: 0.15
+    borders_closed_early: 0.20
+    larger_crisis: 0.10
+    no_crisis: 0.15
+dependencies:
+  - node: "2003_iraq"
+    branch: "diplomatic_resolution"
+    modifies:
+      no_crisis: "+0.15"
+  - node: "2010_arab_spring"
+    branch: "broader_success"
+    modifies:
+      no_crisis: "+0.10"
+  - node: "2014_isis"
+    branch: null
+    modifies: {}
+conditional: null
+outcomes:
+  historical_crisis:
+    status: "HISTORICAL"
+    description: "1M+ refugees enter Europe; Merkel opens borders"
+    world_state_effects:
+      eu_cohesion: "-0.06"
+      global_democracy_index: "-0.02"
+    cascading_modifiers:
+      2016_brexit.leave_wins: "+0.08"
+      2022_european_right.historical_mainstreaming: "+0.08"
+  managed_earlier:
+    status: "DIVERGENCE"
+    description: "EU acts preemptively with orderly resettlement programs"
+    world_state_effects:
+      eu_cohesion: "-0.01"
+      global_democracy_index: "+0.01"
+  borders_closed_early:
+    status: "DIVERGENCE"
+    description: "Hungary-style border closure response dominates from the start"
+    world_state_effects:
+      eu_cohesion: "-0.04"
+      global_democracy_index: "-0.03"
+  larger_crisis:
+    status: "DIVERGENCE"
+    description: "3M+ refugees overwhelm EU systems completely"
+    world_state_effects:
+      eu_cohesion: "-0.10"
+      global_democracy_index: "-0.04"
+    cascading_modifiers:
+      2016_brexit.leave_wins: "+0.12"
+      2045_eu_federation.dissolution: "+0.05"
+  no_crisis:
+    status: "DIVERGENCE"
+    description: "Syria conflict resolved before mass displacement occurs"
+    world_state_effects:
+      eu_cohesion: "+0.02"
+      global_democracy_index: "+0.02"
+    cascading_modifiers:
+      2016_brexit.remain_wins: "+0.05"
+      2022_european_right.contained: "+0.08"

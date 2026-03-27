@@ -1,0 +1,52 @@
+id: "2068_digital_civilization"
+year_month: "2068-06"
+title: "Digital Civilization"
+description: >
+  The balance between physical and virtual existence reaches a tipping point.
+  Billions may spend most of their lives in digital spaces, raising fundamental
+  questions about reality, governance, and human purpose.
+domain: "technology"
+confidence: "LOW"
+variable: "digital_civilization_status"
+distribution:
+  type: "categorical"
+  options:
+    virtual_dominant: 0.15
+    physical_dominant: 0.25
+    hybrid: 0.30
+    fragmented: 0.15
+    transcended: 0.05
+    abandoned: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  virtual_dominant:
+    status: "DIVERGENCE"
+    description: "Most human activity and culture migrates to virtual worlds; physical world becomes infrastructure"
+    world_state_effects:
+      governance_model: 0.60  # virtual governance — novel digital coordination
+  physical_dominant:
+    status: "DIVERGENCE"
+    description: "Digital fatigue leads to renewed emphasis on physical presence and embodied experience"
+    world_state_effects:
+      governance_model: 0.50  # traditional governance — status quo
+  hybrid:
+    status: "DIVERGENCE"
+    description: "Seamless integration of physical and digital existence becomes the norm"
+    world_state_effects:
+      governance_model: 0.65  # hybrid governance — blended coordination
+  fragmented:
+    status: "ESCALATED"
+    description: "Digital and physical civilizations diverge with incompatible values and governance systems"
+    world_state_effects:
+      governance_model: 0.20  # fragmented governance — split systems
+  transcended:
+    status: "DIVERGENCE"
+    description: "Consciousness uploading enables existence beyond both physical and traditional digital realms"
+    world_state_effects:
+      governance_model: 0.70  # post-physical governance — transcendent coordination
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Major digital infrastructure failures lead to retreat from virtual existence"
+    world_state_effects:
+      governance_model: 0.45  # traditional governance — retreat to basics

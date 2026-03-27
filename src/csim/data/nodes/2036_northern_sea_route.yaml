@@ -1,0 +1,73 @@
+id: "2036_northern_sea_route"
+year_month: "2036-06"
+title: "Northern Sea Route"
+description: >
+  The Northern Sea Route across the Russian Arctic becomes increasingly
+  navigable as ice retreats. Control and access to this shorter shipping
+  route between Europe and Asia becomes a strategic prize.
+domain: "geopolitical"
+confidence: "MEDIUM"
+variable: "northern_sea_route_status"
+distribution:
+  type: "categorical"
+  options:
+    russian_controlled: 0.30
+    internationalized: 0.20
+    too_dangerous: 0.20
+    china_russia_corridor: 0.15
+    environmental_restrictions: 0.15
+dependencies:
+  - node: "2033_arctic_ice_free"
+    branch: "historical_2033"
+    modifies:
+      russian_controlled: "+0.05"
+      internationalized: "+0.05"
+      too_dangerous: "-0.10"
+  - node: "2033_arctic_ice_free"
+    branch: "permanent_loss"
+    modifies:
+      russian_controlled: "+0.05"
+      internationalized: "+0.10"
+      too_dangerous: "-0.15"
+  - node: "2033_arctic_ice_free"
+    branch: "delayed_2045"
+    modifies:
+      too_dangerous: "+0.10"
+      russian_controlled: "-0.05"
+      internationalized: "-0.05"
+conditional: null
+outcomes:
+  russian_controlled:
+    status: "DIVERGENCE"
+    description: "Russia maintains effective control; charges transit fees and sets conditions"
+    explanation: "Russia's Arctic infrastructure and military presence enable gatekeeping of the route"
+    world_state_effects:
+      russia_stability: "+0.03"
+      global_gdp: "+0.01"
+  internationalized:
+    status: "DIVERGENCE"
+    description: "Northern Sea Route becomes international waterway under multilateral governance"
+    explanation: "International pressure and economic interests force open access regime similar to Suez and Panama"
+    world_state_effects:
+      global_gdp: "+0.02"
+      governance_model: "+0.03"
+  too_dangerous:
+    status: "DIVERGENCE"
+    description: "Route remains too hazardous for regular commercial shipping"
+    explanation: "Unpredictable ice, lack of rescue infrastructure, and insurance costs deter major shipping lines"
+    world_state_effects:
+      global_gdp: "+0.00"
+  china_russia_corridor:
+    status: "DIVERGENCE"
+    description: "China-Russia partnership dominates Northern Sea Route; 'Polar Silk Road'"
+    explanation: "Chinese investment and Russian infrastructure create joint control of Arctic shipping"
+    world_state_effects:
+      china_power_index: "+0.03"
+      russia_stability: "+0.02"
+  environmental_restrictions:
+    status: "DIVERGENCE"
+    description: "Environmental regulations severely limit Arctic shipping"
+    explanation: "Concerns about pollution, wildlife, and indigenous peoples lead to strict transit restrictions"
+    world_state_effects:
+      climate_temp_anomaly: "-0.01"
+      governance_model: "+0.02"

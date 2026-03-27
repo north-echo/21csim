@@ -1,0 +1,46 @@
+id: "2065_europe"
+year_month: "2065-01"
+title: "Europe 2065"
+description: >
+  The fate of the European project after decades of integration pressures,
+  migration challenges, and competition with larger power blocs. Whether
+  Europe unifies further or fragments.
+domain: "geopolitics"
+confidence: "LOW"
+variable: "europe_status_2065"
+distribution:
+  type: "categorical"
+  options:
+    federation: 0.20
+    superpower: 0.10
+    dissolved: 0.10
+    social_model: 0.25
+    fortress: 0.15
+    cultural_power: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  federation:
+    status: "DIVERGENCE"
+    description: "EU evolves into a true federal state with unified foreign policy, military, and fiscal union"
+    world_state_effects: {}
+  superpower:
+    status: "DIVERGENCE"
+    description: "Unified Europe emerges as a global superpower rivaling the US and China"
+    world_state_effects: {}
+  dissolved:
+    status: "ESCALATED"
+    description: "EU dissolves as nationalist movements and economic divergence prove insurmountable"
+    world_state_effects: {}
+  social_model:
+    status: "DIVERGENCE"
+    description: "Europe becomes the global standard for social democracy, quality of life, and sustainability"
+    world_state_effects: {}
+  fortress:
+    status: "DIVERGENCE"
+    description: "Europe turns inward with strict borders, prioritizing internal stability over global engagement"
+    world_state_effects: {}
+  cultural_power:
+    status: "DIVERGENCE"
+    description: "Europe's global influence flows through culture, education, and soft power rather than military might"
+    world_state_effects: {}

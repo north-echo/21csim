@@ -1,0 +1,60 @@
+id: "2019_australian_bushfires"
+year_month: "2019-12"
+title: "Australian Bushfires"
+description: >
+  Unprecedented bushfires burn across southeastern Australia from late 2019
+  into early 2020, destroying over 46 million acres and killing an estimated
+  3 billion animals. The fires become a visceral symbol of climate change
+  impacts and the concept of a climate "new normal" in a developed nation.
+domain: "climate"
+confidence: "HIGH"
+variable: "australian_bushfires_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_devastation: 0.50
+    climate_policy_catalyst: 0.15
+    mild_fire_season: 0.10
+    global_climate_awakening: 0.10
+    repeated_mega_fires: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  historical_devastation:
+    status: "HISTORICAL"
+    description: "Catastrophic fires; global shock imagery; limited Australian policy change"
+    world_state_effects:
+      climate_temp_anomaly: "+0.01"
+      renewable_energy_share: "+0.01"
+      biodiversity_index: "-0.02"
+  climate_policy_catalyst:
+    status: "DIVERGENCE"
+    description: "Australia reverses course on climate policy; becomes renewable energy leader"
+    explanation: "Public fury forces Coalition government to adopt aggressive emissions targets"
+    world_state_effects:
+      renewable_energy_share: "+0.03"
+      climate_temp_anomaly: "-0.01"
+      biodiversity_index: "-0.01"
+  mild_fire_season:
+    status: "DIVERGENCE"
+    description: "Unusual rainfall patterns prevent mega-fire conditions"
+    explanation: "Weather patterns bring early rains that limit fire season severity"
+    world_state_effects:
+      biodiversity_index: "+0.00"
+  global_climate_awakening:
+    status: "DIVERGENCE"
+    description: "Bushfire images trigger a worldwide acceleration of climate action"
+    explanation: "Visceral imagery of burning koalas shifts public opinion across nations"
+    world_state_effects:
+      renewable_energy_share: "+0.04"
+      climate_temp_anomaly: "-0.02"
+      biodiversity_index: "-0.01"
+  repeated_mega_fires:
+    status: "ESCALATED"
+    description: "Mega-fires become annual events; permanent ecosystem damage across Australia"
+    explanation: "Feedback loops between fire, drought, and deforestation create recurring crises"
+    world_state_effects:
+      climate_temp_anomaly: "+0.03"
+      biodiversity_index: "-0.05"
+      food_security_index: "-0.02"
+      renewable_energy_share: "+0.01"

@@ -1,0 +1,53 @@
+id: "2014_isis"
+year_month: "2014-06"
+title: "ISIS Rise"
+domain: "security"
+confidence: "HIGH"
+variable: "isis_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_caliphate: 0.45
+    contained_early: 0.20
+    worse_expansion: 0.10
+    no_isis: 0.25
+dependencies:
+  - node: "2003_iraq"
+    branch: "diplomatic_resolution"
+    modifies:
+      no_isis: "+0.20"
+      historical_caliphate: "-0.15"
+      worse_expansion: "-0.05"
+  - node: "2010_arab_spring"
+    branch: "no_uprising"
+    modifies:
+      no_isis: "+0.10"
+      historical_caliphate: "-0.10"
+conditional: null
+outcomes:
+  historical_caliphate:
+    status: "HISTORICAL"
+    description: "ISIS declares caliphate; controls large territory"
+    world_state_effects:
+      terrorism_threat_index: "+0.15"
+      middle_east_stability: "-0.15"
+      conflict_deaths: "+200000"
+  contained_early:
+    status: "DIVERGENCE"
+    description: "ISIS contained before territorial expansion"
+    world_state_effects:
+      terrorism_threat_index: "+0.05"
+      conflict_deaths: "+20000"
+  worse_expansion:
+    status: "ESCALATED"
+    description: "ISIS expands into Saudi Arabia, Jordan"
+    world_state_effects:
+      terrorism_threat_index: "+0.25"
+      middle_east_stability: "-0.30"
+      conflict_deaths: "+500000"
+      nuclear_risk_level: "+0.05"
+  no_isis:
+    status: "PREVENTED"
+    description: "No ISIS emergence; Iraq stable enough"
+    world_state_effects:
+      middle_east_stability: "+0.03"

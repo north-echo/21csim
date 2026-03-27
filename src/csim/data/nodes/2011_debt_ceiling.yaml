@@ -1,0 +1,47 @@
+id: "2011_debt_ceiling"
+year_month: "2011-08"
+title: "US Debt Ceiling Crises"
+domain: "economic"
+confidence: "HIGH"
+variable: "debt_ceiling_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_recurring_crises: 0.50
+    abolished_early: 0.15
+    actual_default: 0.10
+    grand_bargain: 0.25
+dependencies:
+  - node: "2008_financial_crisis"
+    branch: "great_depression_2"
+    modifies:
+      actual_default: "+0.10"
+      historical_recurring_crises: "+0.05"
+      grand_bargain: "-0.15"
+conditional: null
+outcomes:
+  historical_recurring_crises:
+    status: "HISTORICAL"
+    description: "Repeated debt ceiling crises; brinkmanship becomes norm"
+    world_state_effects:
+      us_institutional_trust: "-0.05"
+      us_global_standing: "-0.02"
+  abolished_early:
+    status: "DIVERGENCE"
+    description: "Debt ceiling abolished after 2011 crisis"
+    world_state_effects:
+      us_institutional_trust: "+0.02"
+  actual_default:
+    status: "ESCALATED"
+    description: "US actually defaults briefly; market chaos"
+    world_state_effects:
+      us_global_standing: "-0.15"
+      global_gdp_growth_modifier: "*0.95"
+      us_institutional_trust: "-0.12"
+  grand_bargain:
+    status: "DIVERGENCE"
+    description: "Bipartisan grand bargain on spending and taxes"
+    world_state_effects:
+      us_debt_gdp_ratio: "-0.05"
+      us_institutional_trust: "+0.05"
+      us_polarization: "-0.03"

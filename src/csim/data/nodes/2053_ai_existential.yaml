@@ -1,0 +1,48 @@
+id: "2053_ai_existential"
+year_month: "2053-01"
+title: "AI Existential Risk Assessment"
+description: >
+  Cumulative AI development triggers a definitive assessment of existential risk.
+  Whether AI poses a near-miss threat, proves controllable, or triggers catastrophe
+  defines the future of human civilization.
+domain: "technology"
+confidence: "LOW"
+variable: "ai_existential_status"
+distribution:
+  type: "categorical"
+  options:
+    near_miss: 0.30
+    controlled: 0.25
+    catastrophe: 0.10
+    non_event: 0.25
+    transcendence_trigger: 0.10
+dependencies: []
+conditional: "existential_risk_cumulative > 0.15"
+outcomes:
+  near_miss:
+    status: "ESCALATED"
+    description: "AI system causes major crisis that is narrowly averted; sparks global regulation"
+    world_state_effects:
+      existential_risk_cumulative: "+0.05"
+      global_democracy_index: "-0.02"
+  controlled:
+    status: "DIVERGENCE"
+    description: "AI safety research succeeds; advanced AI systems remain reliably under human control"
+    world_state_effects:
+      existential_risk_cumulative: "-0.08"
+  catastrophe:
+    status: "ESCALATED"
+    description: "AI system causes catastrophic damage; significant loss of life or infrastructure"
+    world_state_effects:
+      existential_risk_cumulative: "+0.20"
+      conflict_deaths: "+100000"
+  non_event:
+    status: "DIVERGENCE"
+    description: "AI existential risk proves overblown; systems remain tools without agency"
+    world_state_effects:
+      existential_risk_cumulative: "-0.10"
+  transcendence_trigger:
+    status: "ESCALATED"
+    description: "AI triggers a technological singularity; outcomes beyond human prediction"
+    world_state_effects:
+      existential_risk_cumulative: "+0.15"

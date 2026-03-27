@@ -1,0 +1,45 @@
+id: "2022_wagner"
+year_month: "2023-06"
+title: "Wagner Mutiny"
+domain: "security"
+confidence: "HIGH"
+variable: "wagner_mutiny"
+distribution:
+  type: "categorical"
+  options:
+    historical_mutiny: 0.45
+    wagner_succeeds: 0.10
+    private_military_norm: 0.25
+    state_reasserts: 0.20
+dependencies:
+  - node: "2022_russia_ukraine"
+    branch: "no_invasion"
+    modifies:
+      historical_mutiny: "-0.30"
+      state_reasserts: "+0.20"
+      private_military_norm: "+0.10"
+conditional: null
+outcomes:
+  historical_mutiny:
+    status: "HISTORICAL"
+    description: "Prigozhin's march on Moscow; quickly resolved; Prigozhin killed"
+    world_state_effects:
+      russia_stability: "-0.05"
+  wagner_succeeds:
+    status: "ESCALATED"
+    description: "Wagner mutiny succeeds; Putin overthrown"
+    world_state_effects:
+      russia_stability: "-0.20"
+      nuclear_risk_level: "+0.10"
+      global_democracy_index: "+0.02"
+  private_military_norm:
+    status: "DIVERGENCE"
+    description: "Private military companies become normalized globally"
+    world_state_effects:
+      conflict_deaths: "+10000"
+      global_democracy_index: "-0.02"
+  state_reasserts:
+    status: "DIVERGENCE"
+    description: "State reasserts monopoly on military force"
+    world_state_effects:
+      russia_stability: "+0.02"

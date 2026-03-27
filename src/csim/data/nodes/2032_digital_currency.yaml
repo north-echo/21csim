@@ -1,0 +1,45 @@
+id: "2032_digital_currency"
+year_month: "2032-06"
+title: "Digital Currency Landscape"
+description: >
+  The evolution of money and payments. Whether central bank digital currencies,
+  cryptocurrency, or traditional cash dominates the global financial system.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "digital_currency_status"
+distribution:
+  type: "categorical"
+  options:
+    cbdc_dominant: 0.35
+    crypto_wins: 0.15
+    cash_persists: 0.20
+    fragmented: 0.30
+dependencies: []
+conditional: null
+outcomes:
+  cbdc_dominant:
+    status: "DIVERGENCE"
+    description: "Central bank digital currencies become primary payment method globally"
+    explanation: "China's digital yuan success leads other nations to launch CBDCs; programmable money becomes norm"
+    world_state_effects:
+      surveillance_state_index: "+0.05"
+      global_gdp: "+0.01"
+  crypto_wins:
+    status: "DIVERGENCE"
+    description: "Decentralized cryptocurrency gains mainstream adoption over government money"
+    explanation: "Bitcoin and stablecoins become preferred store of value and medium of exchange"
+    world_state_effects:
+      governance_model: "-0.03"
+      global_gdp: "+0.01"
+  cash_persists:
+    status: "DIVERGENCE"
+    description: "Cash and traditional banking retain dominant role; digital alternatives remain niche"
+    explanation: "Privacy concerns, digital divide, and institutional inertia preserve traditional financial system"
+    world_state_effects:
+      surveillance_state_index: "-0.01"
+  fragmented:
+    status: "DIVERGENCE"
+    description: "Fragmented digital currency landscape; no single dominant system"
+    explanation: "CBDCs, crypto, stablecoins, and cash coexist; interoperability challenges persist"
+    world_state_effects:
+      governance_model: "-0.01"

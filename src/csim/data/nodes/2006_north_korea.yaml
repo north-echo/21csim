@@ -1,0 +1,55 @@
+id: "2006_north_korea"
+year_month: "2006-10"
+title: "North Korea Nuclear"
+domain: "security"
+confidence: "HIGH"
+variable: "nk_nuclear"
+distribution:
+  type: "categorical"
+  options:
+    historical_nuclear_state: 0.50
+    denuclearization_deal: 0.10
+    regime_collapse: 0.10
+    frozen_program: 0.15
+    preemptive_strike: 0.05
+    nuclear_sale: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_nuclear_state:
+    status: "HISTORICAL"
+    description: "North Korea becomes de facto nuclear state"
+    world_state_effects:
+      nuclear_risk_level: "+0.05"
+      china_power_index: "+0.02"
+  denuclearization_deal:
+    status: "DIVERGENCE"
+    description: "Denuclearization deal with verification"
+    world_state_effects:
+      nuclear_risk_level: "-0.03"
+  regime_collapse:
+    status: "DIVERGENCE"
+    description: "Kim regime collapses; chaotic transition"
+    world_state_effects:
+      nuclear_risk_level: "+0.08"
+      china_power_index: "-0.02"
+      conflict_deaths: "+10000"
+  frozen_program:
+    status: "DIVERGENCE"
+    description: "Nuclear program frozen at early stage"
+    world_state_effects:
+      nuclear_risk_level: "+0.02"
+  preemptive_strike:
+    status: "ESCALATED"
+    description: "US or allied preemptive strike on nuclear facilities"
+    world_state_effects:
+      nuclear_risk_level: "+0.10"
+      conflict_deaths: "+50000"
+      us_global_standing: "-0.10"
+  nuclear_sale:
+    status: "ESCALATED"
+    description: "North Korea sells nuclear materials to non-state actors"
+    world_state_effects:
+      nuclear_risk_level: "+0.15"
+      terrorism_threat_index: "+0.10"
+      existential_risk_cumulative: "+0.05"

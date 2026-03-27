@@ -1,0 +1,51 @@
+id: "2003_brics_rise"
+year_month: "2003-06"
+title: "BRICS / Emerging Market Boom"
+domain: "economic"
+confidence: "HIGH"
+variable: "brics_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_boom_then_bust: 0.50
+    sustained_growth: 0.20
+    china_only: 0.15
+    no_boom: 0.15
+dependencies:
+  - node: "2001_china_wto"
+    branch: "historical_full_accession"
+    modifies:
+      historical_boom_then_bust: "+0.05"
+      no_boom: "-0.05"
+conditional: null
+outcomes:
+  historical_boom_then_bust:
+    status: "HISTORICAL"
+    description: "BRICS economies boom 2003-2011, then stagnate except China"
+    world_state_effects:
+      inequality_index: "+0.03"
+      africa_development_index: "+0.05"
+      india_power_index: "+0.05"
+      china_power_index: "+0.05"
+      global_gdp_growth_modifier: "*1.03"
+  sustained_growth:
+    status: "DIVERGENCE"
+    description: "Emerging markets sustain growth through 2020s"
+    explanation: "Structural reforms and diversification succeed"
+    world_state_effects:
+      inequality_index: "-0.02"
+      africa_development_index: "+0.10"
+      india_power_index: "+0.08"
+      global_gdp_growth_modifier: "*1.05"
+  china_only:
+    status: "DIVERGENCE"
+    description: "Only China grows significantly; others stagnate"
+    world_state_effects:
+      china_power_index: "+0.08"
+      inequality_index: "+0.05"
+  no_boom:
+    status: "DIVERGENCE"
+    description: "Emerging market boom never materializes"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.98"
+      africa_development_index: "-0.02"

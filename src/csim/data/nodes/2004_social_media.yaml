@@ -1,0 +1,68 @@
+id: "2004_social_media"
+year_month: "2004-02"
+title: "Social Media Emergence"
+description: >
+  Launch of Facebook, followed by Twitter, YouTube, and others.
+  Ad-driven, engagement-maximizing social media platforms reshape
+  politics, culture, mental health, and information ecosystems.
+domain: "technology"
+confidence: "HIGH"
+variable: "social_media_model"
+distribution:
+  type: "categorical"
+  options:
+    historical_ad_driven: 0.50
+    subscription_model: 0.15
+    decentralized: 0.10
+    regulated_early: 0.15
+    slower_adoption: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_ad_driven:
+    status: "HISTORICAL"
+    description: "Ad-funded, engagement-maximizing platforms dominate"
+    world_state_effects:
+      social_media_penetration: "+0.55"
+      us_polarization: "+0.10"
+      misinformation_severity: "+0.25"
+      us_institutional_trust: "-0.08"
+    cascading_modifiers:
+      2016_us_election.populism_factor: "+0.10"
+      2016_misinformation.historical_escalation: "+0.15"
+  subscription_model:
+    status: "DIVERGENCE"
+    description: "Subscription-based social media; less engagement optimization"
+    explanation: "Early platforms charge $5/month; slower growth but healthier discourse"
+    world_state_effects:
+      social_media_penetration: "+0.30"
+      us_polarization: "+0.03"
+      misinformation_severity: "+0.08"
+    cascading_modifiers:
+      2016_misinformation.historical_escalation: "-0.10"
+  decentralized:
+    status: "DIVERGENCE"
+    description: "Decentralized, federated social platforms win"
+    explanation: "Open protocols prevail over walled gardens"
+    world_state_effects:
+      social_media_penetration: "+0.35"
+      us_polarization: "+0.04"
+      misinformation_severity: "+0.10"
+      internet_freedom_index: "+0.05"
+  regulated_early:
+    status: "DIVERGENCE"
+    description: "EU-style regulation applied early; algorithmic transparency required"
+    world_state_effects:
+      social_media_penetration: "+0.40"
+      us_polarization: "+0.05"
+      misinformation_severity: "+0.10"
+      internet_freedom_index: "-0.03"
+    cascading_modifiers:
+      2016_misinformation.historical_escalation: "-0.15"
+  slower_adoption:
+    status: "DIVERGENCE"
+    description: "Social media adoption 5 years slower"
+    world_state_effects:
+      social_media_penetration: "+0.20"
+      us_polarization: "+0.02"
+      misinformation_severity: "+0.05"

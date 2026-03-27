@@ -1,0 +1,52 @@
+id: "2022_jwst"
+year_month: "2022-07"
+title: "James Webb Space Telescope"
+description: >
+  NASA's James Webb Space Telescope begins delivering unprecedented deep-field
+  images of the early universe after a flawless deployment at L2. The $10B
+  telescope represents a generational leap in astronomical capability,
+  inspiring scientific wonder and renewing public interest in space exploration.
+domain: "technology"
+confidence: "HIGH"
+variable: "jwst_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_success: 0.50
+    deployment_failure: 0.15
+    revolutionary_discoveries: 0.15
+    delayed_launch: 0.10
+    space_science_renaissance: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_success:
+    status: "HISTORICAL"
+    description: "Flawless deployment; stunning images; major discoveries in exoplanet atmospheres"
+    world_state_effects:
+      space_development_index: "+0.03"
+  deployment_failure:
+    status: "DIVERGENCE"
+    description: "Critical deployment mechanism fails; telescope is partially or fully inoperable"
+    explanation: "One of 344 single-point-of-failure mechanisms does not deploy correctly"
+    world_state_effects:
+      space_development_index: "-0.02"
+  revolutionary_discoveries:
+    status: "DIVERGENCE"
+    description: "JWST detects unambiguous biosignatures in exoplanet atmospheres"
+    explanation: "Early observations reveal spectral signatures consistent with biological processes"
+    world_state_effects:
+      space_development_index: "+0.08"
+      global_democracy_index: "+0.01"
+  delayed_launch:
+    status: "DIVERGENCE"
+    description: "Further technical issues delay launch to 2024; eventually succeeds"
+    explanation: "Additional testing requirements push timeline back again"
+    world_state_effects:
+      space_development_index: "+0.01"
+  space_science_renaissance:
+    status: "DIVERGENCE"
+    description: "JWST success triggers massive increase in space science funding globally"
+    explanation: "Public enthusiasm translates into political support for exploration programs"
+    world_state_effects:
+      space_development_index: "+0.06"

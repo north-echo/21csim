@@ -1,0 +1,52 @@
+id: "2068_interstellar_probe"
+year_month: "2068-06"
+title: "Interstellar Probe"
+description: >
+  The status of humanity's first attempt to send a probe beyond the solar system.
+  Whether breakthrough propulsion or patient engineering makes interstellar
+  exploration possible within a human lifetime.
+domain: "technology"
+confidence: "LOW"
+variable: "interstellar_probe_status"
+distribution:
+  type: "categorical"
+  options:
+    launched: 0.15
+    planned: 0.25
+    impossible: 0.20
+    breakthrough_propulsion: 0.05
+    unnecessary: 0.15
+    international_project: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  launched:
+    status: "DIVERGENCE"
+    description: "Interstellar probe launched toward nearest star system using advanced propulsion"
+    world_state_effects:
+      space_development_index: "+0.15"
+  planned:
+    status: "DIVERGENCE"
+    description: "Detailed plans and funding in place for interstellar probe launch within a decade"
+    world_state_effects:
+      space_development_index: "+0.08"
+  impossible:
+    status: "DIVERGENCE"
+    description: "Physics and engineering constraints make interstellar travel impractical for foreseeable future"
+    world_state_effects:
+      space_development_index: "-0.02"
+  breakthrough_propulsion:
+    status: "DIVERGENCE"
+    description: "New physics enables propulsion far beyond current capabilities; interstellar travel becomes feasible"
+    world_state_effects:
+      space_development_index: "+0.25"
+  unnecessary:
+    status: "DIVERGENCE"
+    description: "Advanced telescopes and remote sensing make physical probes unnecessary for stellar exploration"
+    world_state_effects:
+      space_development_index: "+0.03"
+  international_project:
+    status: "DIVERGENCE"
+    description: "Global cooperative project to build and launch interstellar probe unites nations"
+    world_state_effects:
+      space_development_index: "+0.12"

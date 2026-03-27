@@ -1,0 +1,49 @@
+id: "2042_synthetic_biology"
+year_month: "2042-01"
+title: "Synthetic Biology Maturity"
+description: >
+  Synthetic biology reaches industrial maturity with the ability to design and
+  build novel organisms. Whether this power is harnessed safely or triggers
+  biosecurity crises shapes the biotech century.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "synthetic_biology_status"
+distribution:
+  type: "categorical"
+  options:
+    regulated_boom: 0.25
+    biosecurity_crisis: 0.15
+    medical_revolution: 0.25
+    banned: 0.15
+    niche: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  regulated_boom:
+    status: "DIVERGENCE"
+    description: "Synthetic biology flourishes under international safety framework; new materials and fuels emerge"
+    world_state_effects:
+      us_gdp_growth: "+0.01"
+      biodiversity_index: "+0.02"
+  biosecurity_crisis:
+    status: "ESCALATED"
+    description: "Engineered pathogen escapes or is released; global biosecurity crisis erupts"
+    world_state_effects:
+      global_pandemic_deaths: "+50000"
+      existential_risk_cumulative: "+0.05"
+  medical_revolution:
+    status: "DIVERGENCE"
+    description: "Synthetic biology transforms medicine with designer therapies and organ printing"
+    world_state_effects:
+      us_life_expectancy_delta: "+2.0"
+      inequality_index: "-0.02"
+  banned:
+    status: "DIVERGENCE"
+    description: "Biosecurity fears lead to broad international bans on synthetic biology research"
+    world_state_effects:
+      us_gdp_growth: "-0.005"
+  niche:
+    status: "DIVERGENCE"
+    description: "Synthetic biology remains useful but limited; fundamental challenges prevent broad application"
+    world_state_effects:
+      us_gdp_growth: "+0.005"

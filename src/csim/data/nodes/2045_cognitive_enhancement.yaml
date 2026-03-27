@@ -1,0 +1,71 @@
+id: "2045_cognitive_enhancement"
+year_month: "2045-06"
+title: "Cognitive Enhancement"
+description: >
+  Neural interface and pharmaceutical technologies enable direct cognitive
+  enhancement. Who gets access and how it is regulated determines whether it
+  reduces or amplifies inequality.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "cognitive_enhancement_status"
+distribution:
+  type: "categorical"
+  options:
+    elite_only: 0.30
+    democratized: 0.10
+    banned: 0.15
+    military_first: 0.20
+    voluntary: 0.15
+    biological_risks: 0.10
+dependencies:
+  - node: "2035_neural_interface"
+    branch: "widespread_adoption"
+    modifies:
+      democratized: "+0.10"
+      elite_only: "-0.05"
+      banned: "-0.05"
+  - node: "2035_neural_interface"
+    branch: "safety_concerns"
+    modifies:
+      banned: "+0.10"
+      biological_risks: "+0.05"
+      democratized: "-0.10"
+      military_first: "-0.05"
+conditional: null
+outcomes:
+  elite_only:
+    status: "DIVERGENCE"
+    description: "Cognitive enhancement available only to wealthy; creates cognitive underclass"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.10"
+      inequality_index: "+0.12"
+  democratized:
+    status: "DIVERGENCE"
+    description: "Cognitive enhancement widely available and affordable; lifts general capability"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.25"
+      inequality_index: "-0.05"
+  banned:
+    status: "DIVERGENCE"
+    description: "Most nations ban cognitive enhancement over safety and ethical concerns"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.02"
+      inequality_index: "+0.01"
+  military_first:
+    status: "DIVERGENCE"
+    description: "Military applications dominate; enhanced soldiers create new arms race"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.08"
+      inequality_index: "+0.05"
+  voluntary:
+    status: "DIVERGENCE"
+    description: "Cognitive enhancement regulated but available; adoption remains a personal choice"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.15"
+      inequality_index: "+0.02"
+  biological_risks:
+    status: "ESCALATED"
+    description: "Early adopters suffer severe side effects; enhancement technology set back decades"
+    world_state_effects:
+      human_augmentation_prevalence: "+0.03"
+      inequality_index: "+0.02"

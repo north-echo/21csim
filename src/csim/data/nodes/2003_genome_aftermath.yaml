@@ -1,0 +1,53 @@
+id: "2003_genome_aftermath"
+year_month: "2003-04"
+title: "Post-Genome Era"
+description: >
+  Human Genome Project completed. The $1000 genome is a decade away.
+  Personal genomics, pharmacogenomics, and genetic privacy debates begin.
+domain: "health"
+confidence: "HIGH"
+variable: "genome_aftermath"
+distribution:
+  type: "categorical"
+  options:
+    historical_slow_translation: 0.45
+    rapid_personalized_medicine: 0.15
+    genetic_privacy_crisis: 0.15
+    open_science_model: 0.15
+    overhyped_stalls: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_slow_translation:
+    status: "HISTORICAL"
+    description: "Genomics advances but clinical translation is slow; $1000 genome by 2014"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.1"
+      inequality_index: "+0.01"
+  rapid_personalized_medicine:
+    status: "DIVERGENCE"
+    description: "Personalized medicine arrives by 2015; pharmacogenomics becomes standard of care"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.5"
+      inequality_index: "+0.03"
+      global_gdp_growth_modifier: "*1.005"
+  genetic_privacy_crisis:
+    status: "DIVERGENCE"
+    description: "Genetic discrimination becomes major issue; insurance and employers use genetic data"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.1"
+      inequality_index: "+0.05"
+      us_institutional_trust: "-0.03"
+  open_science_model:
+    status: "DIVERGENCE"
+    description: "Open access to genetic data accelerates research worldwide"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.3"
+      inequality_index: "-0.02"
+      global_gdp_growth_modifier: "*1.003"
+  overhyped_stalls:
+    status: "DIVERGENCE"
+    description: "Funding dries up when miracle cures don't materialize; genomics enters winter"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.0"
+      inequality_index: "+0.01"

@@ -1,0 +1,58 @@
+id: "2025_climate_tipping"
+year_month: "2025-12"
+title: "Climate Tipping Points"
+description: >
+  Assessment of whether key climate tipping points have been crossed
+  or avoided. Permafrost, ice sheets, Amazon dieback.
+domain: "climate"
+confidence: "MEDIUM"
+variable: "climate_status"
+distribution:
+  type: "categorical"
+  options:
+    on_track_2_5c: 0.40
+    tipping_point_crossed: 0.15
+    accelerated_action: 0.20
+    technological_breakthrough: 0.15
+    climate_conflict: 0.10
+dependencies:
+  - node: "2024_us_election"
+    branch: "trump_wins"
+    modifies:
+      on_track_2_5c: "+0.05"
+      accelerated_action: "-0.05"
+conditional: null
+outcomes:
+  on_track_2_5c:
+    status: "HISTORICAL"
+    description: "World on track for 2.5°C warming by 2100"
+    world_state_effects:
+      climate_temp_anomaly: "+0.20"
+      sea_level_rise_meters: "+0.05"
+  tipping_point_crossed:
+    status: "ESCALATED"
+    description: "Major tipping point crossed; accelerating warming"
+    world_state_effects:
+      climate_temp_anomaly: "+0.40"
+      sea_level_rise_meters: "+0.08"
+      food_security_index: "-0.05"
+      existential_risk_cumulative: "+0.05"
+  accelerated_action:
+    status: "DIVERGENCE"
+    description: "Global mobilization on climate; 1.5°C still possible"
+    world_state_effects:
+      climate_temp_anomaly: "+0.10"
+      renewable_energy_share: "+0.08"
+  technological_breakthrough:
+    status: "DIVERGENCE"
+    description: "Breakthrough in cheap carbon capture or fusion"
+    world_state_effects:
+      climate_temp_anomaly: "+0.05"
+      renewable_energy_share: "+0.10"
+  climate_conflict:
+    status: "ESCALATED"
+    description: "Climate impacts trigger regional conflicts"
+    world_state_effects:
+      climate_temp_anomaly: "+0.25"
+      conflict_deaths: "+50000"
+      food_security_index: "-0.08"

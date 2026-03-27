@@ -1,0 +1,52 @@
+id: "2018_populism"
+year_month: "2018-01"
+title: "Populism / Democratic Backsliding"
+domain: "social"
+confidence: "HIGH"
+variable: "populism"
+distribution:
+  type: "categorical"
+  options:
+    historical_global_wave: 0.50
+    liberal_resilience: 0.15
+    authoritarian_consolidation: 0.15
+    new_alignment: 0.20
+dependencies:
+  - node: "2008_financial_crisis"
+    branch: "great_depression_2"
+    modifies:
+      authoritarian_consolidation: "+0.15"
+      historical_global_wave: "+0.05"
+      liberal_resilience: "-0.15"
+  - node: "2016_us_election"
+    branch: "clinton_wins"
+    modifies:
+      historical_global_wave: "-0.10"
+      liberal_resilience: "+0.10"
+conditional: null
+outcomes:
+  historical_global_wave:
+    status: "HISTORICAL"
+    description: "Global populist wave; democratic backsliding in multiple countries"
+    world_state_effects:
+      global_democracy_index: "-0.05"
+      us_polarization: "+0.03"
+      eu_cohesion: "-0.03"
+  liberal_resilience:
+    status: "DIVERGENCE"
+    description: "Liberal democracies prove resilient"
+    world_state_effects:
+      global_democracy_index: "+0.02"
+  authoritarian_consolidation:
+    status: "ESCALATED"
+    description: "Authoritarian regimes consolidate globally"
+    world_state_effects:
+      global_democracy_index: "-0.10"
+      internet_freedom_index: "-0.05"
+      surveillance_state_index: "+0.08"
+  new_alignment:
+    status: "DIVERGENCE"
+    description: "New political alignment emerges beyond left-right"
+    world_state_effects:
+      us_polarization: "-0.03"
+      global_democracy_index: "+0.01"

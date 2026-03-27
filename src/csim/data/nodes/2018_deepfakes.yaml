@@ -1,0 +1,63 @@
+id: "2018_deepfakes"
+year_month: "2018-12"
+title: "Deepfake Technology Proliferation"
+description: >
+  AI-generated fake video becomes convincing enough to fool humans.
+  Implications for elections, evidence, trust, and the very concept
+  of visual truth.
+domain: "technology"
+confidence: "HIGH"
+variable: "deepfakes"
+distribution:
+  type: "categorical"
+  options:
+    historical_growing_threat: 0.40
+    detection_keeps_pace: 0.20
+    election_deepfake_crisis: 0.10
+    authentication_standard: 0.15
+    deepfake_normalized: 0.15
+dependencies:
+  - node: "2012_deep_learning"
+    branch: "historical_breakthrough"
+    modifies:
+      historical_growing_threat: "+0.05"
+      detection_keeps_pace: "-0.05"
+  - node: "2016_misinformation"
+    branch: "historical_spread"
+    modifies:
+      election_deepfake_crisis: "+0.05"
+      authentication_standard: "-0.05"
+conditional: null
+outcomes:
+  historical_growing_threat:
+    status: "HISTORICAL"
+    description: "Deepfakes proliferate; increasingly used for fraud, harassment, and disinformation"
+    world_state_effects:
+      misinformation_severity: "+0.05"
+      global_democracy_index: "-0.01"
+  detection_keeps_pace:
+    status: "DIVERGENCE"
+    description: "AI detection tools stay ahead of deepfake generation"
+    world_state_effects:
+      misinformation_severity: "+0.01"
+      internet_freedom_index: "+0.01"
+  election_deepfake_crisis:
+    status: "ESCALATED"
+    description: "Deepfake of candidate influences major election outcome"
+    world_state_effects:
+      misinformation_severity: "+0.10"
+      global_democracy_index: "-0.03"
+    cascading_modifiers:
+      2020_us_election.close_contested: "+0.05"
+  authentication_standard:
+    status: "DIVERGENCE"
+    description: "C2PA content authenticity standards adopted widely"
+    world_state_effects:
+      misinformation_severity: "+0.02"
+      internet_freedom_index: "+0.02"
+  deepfake_normalized:
+    status: "DIVERGENCE"
+    description: "Society adapts; video evidence loses legal weight"
+    world_state_effects:
+      misinformation_severity: "+0.04"
+      us_institutional_trust: "-0.02"

@@ -1,0 +1,53 @@
+id: "2048_digital_immortality"
+year_month: "2048-01"
+title: "Digital Immortality Attempt"
+description: >
+  First serious attempts to upload human consciousness to digital substrate.
+  Whether the result is genuine consciousness transfer or elaborate simulation
+  becomes the defining philosophical question of the era.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "digital_immortality_status"
+distribution:
+  type: "categorical"
+  options:
+    technical_failure: 0.40
+    philosophical_success: 0.15
+    verified_consciousness: 0.05
+    partial_upload: 0.20
+    abandoned: 0.15
+    cultural_phenomenon: 0.05
+dependencies: []
+conditional: null
+outcomes:
+  technical_failure:
+    status: "DIVERGENCE"
+    description: "Brain scanning and emulation technology proves insufficient for consciousness transfer"
+    world_state_effects:
+      existential_risk_cumulative: "+0.01"
+  philosophical_success:
+    status: "DIVERGENCE"
+    description: "Upload appears to work but consciousness verification remains impossible; philosophical debate rages"
+    world_state_effects:
+      existential_risk_cumulative: "+0.03"
+  verified_consciousness:
+    status: "DIVERGENCE"
+    description: "Genuine consciousness transfer achieved and verified; death becomes optional for the wealthy"
+    world_state_effects:
+      existential_risk_cumulative: "+0.05"
+      inequality_index: "+0.08"
+  partial_upload:
+    status: "DIVERGENCE"
+    description: "Memories and personality can be uploaded but result lacks subjective experience"
+    world_state_effects:
+      existential_risk_cumulative: "+0.02"
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Research abandoned after ethical backlash and technical limitations"
+    world_state_effects:
+      existential_risk_cumulative: "+0.00"
+  cultural_phenomenon:
+    status: "DIVERGENCE"
+    description: "Digital immortality becomes cultural movement despite limited technical success"
+    world_state_effects:
+      existential_risk_cumulative: "+0.01"

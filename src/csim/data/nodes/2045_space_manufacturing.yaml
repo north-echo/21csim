@@ -1,0 +1,58 @@
+id: "2045_space_manufacturing"
+year_month: "2045-06"
+title: "In-Space Manufacturing"
+description: >
+  Zero-gravity manufacturing enables products impossible to make on Earth:
+  perfect fiber optics, exotic alloys, 3D-printed organs, and ultra-pure
+  semiconductors. Whether space factories become economically viable depends
+  on launch costs and demand for unique materials.
+domain: "technology"
+confidence: "LOW"
+variable: "space_manufacturing_status"
+distribution:
+  type: "categorical"
+  options:
+    commercially_viable: 0.20
+    niche_products: 0.30
+    research_only: 0.25
+    transformative: 0.10
+    abandoned: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  commercially_viable:
+    status: "DIVERGENCE"
+    description: "Space factories produce high-value goods at profit; multiple orbital manufacturing platforms operational"
+    explanation: "ZBLAN fiber optics and metal alloys manufactured in orbit command premium prices that exceed launch costs"
+    world_state_effects:
+      space_development_index: "+0.10"
+      global_gdp_growth_modifier: "+0.01"
+    cascading_modifiers:
+      2045_space_economy.on_track: "+0.05"
+  niche_products:
+    status: "DIVERGENCE"
+    description: "Space manufacturing works for a few ultra-high-value products; limited scale"
+    explanation: "Pharmaceutical crystals and specialty semiconductors produced in orbit at small volumes"
+    world_state_effects:
+      space_development_index: "+0.06"
+  research_only:
+    status: "DIVERGENCE"
+    description: "Space manufacturing remains at research stage; products demonstrated but not commercially scaled"
+    explanation: "Proof-of-concept successful but business case doesn't close; remains government-funded R&D"
+    world_state_effects:
+      space_development_index: "+0.03"
+  transformative:
+    status: "DIVERGENCE"
+    description: "Space manufacturing revolution; orbital factories produce goods that reshape terrestrial industries"
+    explanation: "Breakthrough in automated orbital assembly enables mass production; new material science frontiers"
+    world_state_effects:
+      space_development_index: "+0.15"
+      global_gdp_growth_modifier: "+0.02"
+    cascading_modifiers:
+      2045_space_economy.explosive: "+0.05"
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Space manufacturing ventures fail; no viable orbital production achieved"
+    explanation: "Quality control problems, high launch costs, and Earth-based alternatives kill business cases"
+    world_state_effects:
+      space_development_index: "-0.02"

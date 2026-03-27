@@ -1,0 +1,52 @@
+id: "2030_japan_population"
+year_month: "2030-06"
+title: "Japan Population Crisis"
+description: >
+  Japan confronts accelerating population decline and aging. How it adapts
+  through technology, immigration, or social restructuring sets a template
+  for other aging societies.
+domain: "demographics"
+confidence: "MEDIUM"
+variable: "japan_population_status"
+distribution:
+  type: "categorical"
+  options:
+    robot_care_economy: 0.30
+    immigration_opening: 0.15
+    managed_decline: 0.30
+    crisis_unmanaged: 0.15
+    pronatalist_success: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  robot_care_economy:
+    status: "DIVERGENCE"
+    description: "Japan deploys robots and AI extensively in eldercare and services"
+    explanation: "Robotics and automation compensate for shrinking workforce; Japan becomes model for aging societies"
+    world_state_effects:
+      automation_displacement: "+0.05"
+      global_gdp: "+0.01"
+  immigration_opening:
+    status: "DIVERGENCE"
+    description: "Japan significantly relaxes immigration policy to address labor shortages"
+    explanation: "Economic necessity overcomes cultural resistance; Japan accepts millions of immigrants"
+    world_state_effects:
+      global_gdp: "+0.01"
+  managed_decline:
+    status: "DIVERGENCE"
+    description: "Japan accepts gradual population decline and restructures institutions accordingly"
+    explanation: "Government focuses on quality of life over growth; pension and healthcare systems reformed"
+    world_state_effects:
+      global_gdp: "-0.01"
+  crisis_unmanaged:
+    status: "ESCALATED"
+    description: "Japan fails to adapt; economic stagnation and social services collapse"
+    explanation: "Political paralysis prevents reform; healthcare and pension systems overwhelmed"
+    world_state_effects:
+      global_gdp: "-0.02"
+  pronatalist_success:
+    status: "DIVERGENCE"
+    description: "Aggressive pronatalist policies partially reverse fertility decline"
+    explanation: "Massive childcare subsidies, work reform, and social support raise fertility toward replacement"
+    world_state_effects:
+      global_gdp: "+0.01"

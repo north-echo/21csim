@@ -1,0 +1,47 @@
+id: "2015_marriage_equality"
+year_month: "2015-06"
+title: "Marriage Equality / Gender Politics"
+domain: "social"
+confidence: "HIGH"
+variable: "gender_politics"
+distribution:
+  type: "categorical"
+  options:
+    historical_backlash_cycle: 0.45
+    steady_progress: 0.20
+    reversal: 0.10
+    global_progress: 0.15
+    culture_war_intensifies: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_backlash_cycle:
+    status: "HISTORICAL"
+    description: "Marriage equality, then trans rights backlash"
+    world_state_effects:
+      gender_equity_index: "+0.05"
+      us_polarization: "+0.03"
+  steady_progress:
+    status: "DIVERGENCE"
+    description: "Steady LGBTQ+ progress without major backlash"
+    world_state_effects:
+      gender_equity_index: "+0.08"
+      us_polarization: "+0.01"
+  reversal:
+    status: "DIVERGENCE"
+    description: "Marriage equality reversed or rolled back"
+    world_state_effects:
+      gender_equity_index: "-0.03"
+      global_democracy_index: "-0.02"
+  global_progress:
+    status: "DIVERGENCE"
+    description: "Global wave of LGBTQ+ rights advancement"
+    world_state_effects:
+      gender_equity_index: "+0.10"
+      global_democracy_index: "+0.02"
+  culture_war_intensifies:
+    status: "DIVERGENCE"
+    description: "Gender politics becomes primary culture war axis"
+    world_state_effects:
+      us_polarization: "+0.08"
+      gender_equity_index: "+0.02"

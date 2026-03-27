@@ -1,0 +1,61 @@
+id: "2015_zero_day_market"
+year_month: "2015-07"
+title: "Zero-Day Market"
+description: >
+  Governments stockpile zero-day exploits rather than disclosing them
+  to vendors. NSA, CIA, and allied agencies build arsenals of software
+  vulnerabilities. Debate intensifies over Vulnerabilities Equities
+  Process and responsible disclosure vs national security needs.
+domain: "security"
+confidence: "HIGH"
+variable: "zero_day_market"
+distribution:
+  type: "categorical"
+  options:
+    historical_stockpiling: 0.45
+    mandatory_disclosure: 0.15
+    exploit_leak: 0.15
+    regulated_market: 0.15
+    international_ban: 0.10
+dependencies:
+  - node: "2010_stuxnet"
+    branch: "cyber_arms_race"
+    modifies:
+      historical_stockpiling: "+0.10"
+      exploit_leak: "+0.05"
+      mandatory_disclosure: "-0.10"
+      international_ban: "-0.05"
+conditional: null
+outcomes:
+  historical_stockpiling:
+    status: "HISTORICAL"
+    description: "Governments stockpile zero-days; Shadow Brokers leak NSA tools in 2016-2017"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+5.0"
+      surveillance_state_index: "+0.02"
+  mandatory_disclosure:
+    status: "DIVERGENCE"
+    description: "Policy mandates disclosure of all zero-days to vendors within 30 days"
+    world_state_effects:
+      global_cyber_damage_annual_b: "-2.0"
+      surveillance_state_index: "-0.02"
+  exploit_leak:
+    status: "ESCALATED"
+    description: "Massive government exploit arsenals leaked earlier and more broadly"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+15.0"
+      surveillance_state_index: "+0.03"
+    cascading_modifiers:
+      2017_wannacry.major_infrastructure_attack: "+0.08"
+  regulated_market:
+    status: "DIVERGENCE"
+    description: "Legal framework creates regulated market with oversight and disclosure timelines"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+2.0"
+      surveillance_state_index: "+0.01"
+  international_ban:
+    status: "DIVERGENCE"
+    description: "International treaty bans government stockpiling of zero-day exploits"
+    world_state_effects:
+      global_cyber_damage_annual_b: "-3.0"
+      surveillance_state_index: "-0.03"

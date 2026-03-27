@@ -1,0 +1,59 @@
+id: "2015_antibiotic_resistance"
+year_month: "2015-05"
+title: "Antibiotic Resistance Escalation"
+description: >
+  WHO declares antimicrobial resistance a global health emergency.
+  Without new antibiotics, routine surgeries become life-threatening.
+  By 2050, AMR could kill 10M/year — more than cancer.
+domain: "health"
+confidence: "HIGH"
+variable: "antibiotic_resistance"
+distribution:
+  type: "categorical"
+  options:
+    historical_slow_crisis: 0.40
+    manhattan_project_for_antibiotics: 0.10
+    phage_therapy_scales: 0.15
+    superbug_pandemic: 0.10
+    market_incentives_work: 0.15
+    no_progress: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_slow_crisis:
+    status: "HISTORICAL"
+    description: "Resistance grows steadily; new drugs trickle out but not enough to stay ahead"
+    world_state_effects:
+      global_pandemic_deaths: "+200000"
+      us_life_expectancy_delta: "-0.1"
+  manhattan_project_for_antibiotics:
+    status: "DIVERGENCE"
+    description: "Global crash program discovers new drug classes; AMR threat stabilized"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.5"
+      global_gdp_growth_modifier: "*1.003"
+  phage_therapy_scales:
+    status: "DIVERGENCE"
+    description: "Bacteriophage therapy becomes viable clinical alternative to antibiotics"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.3"
+      global_pandemic_deaths: "+50000"
+  superbug_pandemic:
+    status: "ESCALATED"
+    description: "Pan-resistant pathogen causes major outbreak; hospitals overwhelmed"
+    world_state_effects:
+      global_pandemic_deaths: "+1000000"
+      us_life_expectancy_delta: "-0.5"
+      global_gdp_growth_modifier: "*0.98"
+  market_incentives_work:
+    status: "DIVERGENCE"
+    description: "Pull incentives create sustainable antibiotic pipeline; new drugs reach market"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.3"
+      global_gdp_growth_modifier: "*1.002"
+  no_progress:
+    status: "ESCALATED"
+    description: "No new antibiotics developed; routine surgery becomes dangerous"
+    world_state_effects:
+      global_pandemic_deaths: "+500000"
+      us_life_expectancy_delta: "-0.3"

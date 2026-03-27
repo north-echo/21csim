@@ -1,0 +1,5284 @@
+{
+  "seed": 53,
+  "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+  "outcome_class": "PROGRESS",
+  "composite_score": 0.08,
+  "percentile": 50.0,
+  "total_divergences": 216,
+  "first_divergence_year": "2001-03",
+  "largest_divergence_node": "2020_covid_response",
+  "tags": [],
+  "events": [
+    {
+      "year_month": "2000-11",
+      "node_id": "2000_election",
+      "title": "2000 US Presidential Election",
+      "description": "George W. Bush wins after Supreme Court halts Florida recount",
+      "status": "HISTORICAL",
+      "branch_taken": "bush_wins",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.52,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2001-03",
+      "node_id": "2001_dotcom_aftermath",
+      "title": "Dot-Com Crash Aftermath",
+      "description": "Full recession; unemployment hits 8%",
+      "status": "DIVERGENCE",
+      "branch_taken": "deeper_recession",
+      "domain": "economic",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "global_gdp_growth_modifier": -0.05,
+        "inequality_index": 0.05
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2001-09",
+      "node_id": "2001_911",
+      "title": "September 11 Attacks",
+      "description": "1-2 flights hit targets; others intercepted or failed",
+      "status": "DIVERGENCE",
+      "branch_taken": "partial_success",
+      "domain": "security",
+      "probability_of_branch": 0.27,
+      "explanation": "Earlier FAA response or passenger awareness prevents full attack",
+      "world_state_delta": {
+        "us_polarization": 0.05,
+        "terrorism_threat_index": 0.2,
+        "surveillance_state_index": 0.12,
+        "conflict_deaths": 800
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2001-12",
+      "node_id": "2001_china_wto",
+      "title": "China Joins WTO",
+      "description": "China rejected from WTO; pursues bilateral trade",
+      "status": "DIVERGENCE",
+      "branch_taken": "no_accession",
+      "domain": "economic",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "china_power_index": -0.05,
+        "global_gdp_growth_modifier": -0.019,
+        "supply_chain_resilience": 0.05
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2002-06",
+      "node_id": "2002_security_overreach",
+      "title": "Post-9/11 Security Architecture",
+      "description": "Full Patriot Act, DHS creation, TSA, warrantless surveillance programs",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_expansion",
+      "domain": "security",
+      "probability_of_branch": 0.4,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.03,
+        "internet_freedom_index": -0.08,
+        "surveillance_state_index": 0.15
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2003-01",
+      "node_id": "2003_opioid_crisis",
+      "title": "Opioid Crisis",
+      "description": "Purdue Pharma criminally prosecuted in 2004",
+      "status": "DIVERGENCE",
+      "branch_taken": "purdue_prosecuted",
+      "domain": "social",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "opioid_deaths_cumulative": 200000,
+        "us_institutional_trust": 0.03,
+        "us_life_expectancy_delta": -0.8
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The early criminal prosecution of Purdue Pharma in 2004, driven by heightened federal scrutiny following the recession and security failures of 2001-2002, marked a decisive intervention in what would have otherwise become America's most devastating public health crisis. Attorney General John Ashcroft's Justice Department, emboldened by expanded surveillance powers, had uncovered internal Purdue documents revealing systematic deception about OxyContin's addictive properties as early as 2003. The conviction of three Purdue executives on federal conspiracy charges and the company's $2.3 billion settlement created precedent that effectively ended aggressive opioid marketing practices across the pharmaceutical industry. This prosecution, occurring nearly fifteen years earlier than in most timelines, prevented the deaths of an estimated 300,000 Americans who would have succumbed to opioid addiction between 2004 and 2020.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2003-02",
+      "node_id": "2003_columbia",
+      "title": "Columbia Shuttle Disaster",
+      "description": "Congress kills shuttle program within a year of disaster",
+      "status": "DIVERGENCE",
+      "branch_taken": "program_cancelled_immediately",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2003-03",
+      "node_id": "2003_iraq",
+      "title": "Iraq War Decision",
+      "description": "UN inspections continue; no military action taken",
+      "status": "DIVERGENCE",
+      "branch_taken": "diplomatic_resolution",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.1864,
+      "explanation": "Inspectors given more time; WMD claims debunked before invasion",
+      "world_state_delta": {
+        "us_global_standing": 0.05,
+        "middle_east_stability": 0.05,
+        "global_democracy_index": 0.01
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2003-04",
+      "node_id": "2003_genome_aftermath",
+      "title": "Post-Genome Era",
+      "description": "Funding dries up when miracle cures don't materialize; genomics enters winter",
+      "status": "DIVERGENCE",
+      "branch_taken": "overhyped_stalls",
+      "domain": "health",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2003-06",
+      "node_id": "2003_brics_rise",
+      "title": "BRICS / Emerging Market Boom",
+      "description": "Only China grows significantly; others stagnate",
+      "status": "DIVERGENCE",
+      "branch_taken": "china_only",
+      "domain": "economic",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "china_power_index": 0.08,
+        "inequality_index": 0.05
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2004-02",
+      "node_id": "2004_social_media",
+      "title": "Social Media Emergence",
+      "description": "Ad-funded, engagement-maximizing platforms dominate",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_ad_driven",
+      "domain": "technology",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.1,
+        "social_media_penetration": 0.55,
+        "us_institutional_trust": -0.08,
+        "misinformation_severity": 0.25
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2004-06",
+      "node_id": "2004_drone_warfare",
+      "title": "Drone Warfare Program",
+      "description": "US drone strike program expands globally",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_expansion",
+      "domain": "security",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.03,
+        "terrorism_threat_index": -0.02,
+        "drone_warfare_prevalence": 0.15,
+        "conflict_deaths": 3000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The successful interception of several hijacked aircraft in September 2001 did little to diminish the Bush administration's appetite for expanding America's military reach through unmanned systems. By June 2004, CIA drone operations had extended beyond Afghanistan and Pakistan into Yemen, Somalia, and the tribal regions where al-Qaeda cells were believed to operate, following much the same trajectory they would have pursued regardless of the attacks' partial failure. The Predator and Reaper programs found particular utility in this timeline's more fragmented security landscape, where traditional military interventions like the Iraq invasion had been foreclosed by congressional and international resistance. Secretary Rumsfeld privately noted that drone warfare offered the administration a way to project force without the domestic political costs that ground invasions would have entailed in the post-recession climate.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2004-08",
+      "node_id": "2004_hurricane_season",
+      "title": "Record Hurricane Season",
+      "description": "Fewer storms; FEMA not tested and remains complacent",
+      "status": "DIVERGENCE",
+      "branch_taken": "mild_season",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {
+        "us_institutional_trust": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2004-12",
+      "node_id": "2004_tsunami",
+      "title": "Indian Ocean Tsunami",
+      "description": "Hypothetical early detection system in place; deaths reduced to ~30K",
+      "status": "DIVERGENCE",
+      "branch_taken": "warning_system_existed",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "conflict_deaths": 30000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The Indian Ocean tsunami of December 26, 2004, while still devastating, claimed approximately 30,000 lives rather than the quarter-million that perished in our timeline's catastrophe. The early warning system, hastily assembled by Thai oceanographer Somsak Chulalongkorn and Australian seismologist Patricia Morrison following increased seismic activity in late 2003, managed to alert coastal populations across the Indian Ocean within forty-five minutes of the initial rupture. The success of this improvised network, cobbled together from existing monitoring stations and amateur radio operators, would fundamentally reshape global disaster preparedness protocols. What began as a regional initiative born from scientific concern became the template for the Integrated Global Warning System established by the UN in 2006.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2005-08",
+      "node_id": "2005_katrina",
+      "title": "Hurricane Katrina Response",
+      "description": "FEMA fails catastrophically; 1,800+ die; New Orleans flooded for weeks",
+      "status": "HISTORICAL",
+      "branch_taken": "catastrophic_failure",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.5238,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.05,
+        "inequality_index": 0.02,
+        "conflict_deaths": 1800,
+        "us_institutional_trust": -0.08
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2005-09",
+      "node_id": "2005_katrina_racial",
+      "title": "Katrina Racial Reckoning",
+      "description": "Mass racial justice movement emerges in 2006-2008",
+      "status": "DIVERGENCE",
+      "branch_taken": "earlier_blm",
+      "domain": "social",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.04,
+        "racial_justice_index": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2006-08",
+      "node_id": "2006_cloud",
+      "title": "Cloud Computing / AWS",
+      "description": "Government-run cloud infrastructure dominates",
+      "status": "DIVERGENCE",
+      "branch_taken": "government_cloud",
+      "domain": "technology",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "internet_freedom_index": -0.03,
+        "surveillance_state_index": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2006-10",
+      "node_id": "2006_north_korea",
+      "title": "North Korea Nuclear",
+      "description": "Nuclear program frozen at early stage",
+      "status": "DIVERGENCE",
+      "branch_taken": "frozen_program",
+      "domain": "security",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "nuclear_risk_level": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2007-06",
+      "node_id": "2007_iphone",
+      "title": "Smartphone Revolution",
+      "description": "iPhone launches smartphone revolution; iOS/Android duopoly",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_apple_led",
+      "domain": "technology",
+      "probability_of_branch": 0.6,
+      "explanation": null,
+      "world_state_delta": {
+        "global_gdp_growth_modifier": 0.0186,
+        "internet_freedom_index": -0.02,
+        "social_media_penetration": 0.1
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2008-01",
+      "node_id": "2008_fracking",
+      "title": "US Shale / Fracking Revolution",
+      "description": "Fracking scales 3 years earlier; US energy independent by 2016",
+      "status": "DIVERGENCE",
+      "branch_taken": "earlier_boom",
+      "domain": "energy",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": 0.05,
+        "middle_east_stability": 0.03,
+        "climate_temp_anomaly": 0.03,
+        "renewable_energy_share": -0.02
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2008-08",
+      "node_id": "2008_beijing_olympics",
+      "title": "Beijing Olympics",
+      "description": "Spectacular games; China arrives on world stage",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_success",
+      "domain": "regional",
+      "probability_of_branch": 0.55,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.02,
+        "china_power_index": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2008-09",
+      "node_id": "2008_financial_crisis",
+      "title": "2008 Financial Crisis",
+      "description": "Lehman collapse; global credit freeze; deep recession",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_severe",
+      "domain": "economic",
+      "probability_of_branch": 0.3524,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.08,
+        "global_gdp_growth_modifier": -0.076,
+        "inequality_index": 0.08,
+        "us_debt_gdp_ratio": 0.2,
+        "us_institutional_trust": -0.1
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2008-11",
+      "node_id": "2008_obama_election",
+      "title": "2008 US Presidential Election",
+      "description": "Barack Obama wins presidency; first Black president",
+      "status": "HISTORICAL",
+      "branch_taken": "obama_wins",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.55,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.03,
+        "us_global_standing": 0.05,
+        "racial_justice_index": 0.05
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2009-06",
+      "node_id": "2009_twitter_politics",
+      "title": "Twitter Becomes Political Infrastructure",
+      "description": "Twitter stays a niche tech and media platform, never captures political discourse",
+      "status": "DIVERGENCE",
+      "branch_taken": "remains_niche",
+      "domain": "social",
+      "probability_of_branch": 0.1,
+      "explanation": "Without political adoption, Twitter remains smaller and less influential",
+      "world_state_delta": {
+        "us_polarization": 0.01,
+        "misinformation_severity": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2010-01",
+      "node_id": "2010_haiti",
+      "title": "Haiti Earthquake",
+      "description": "Red Cross and NGO failures dominate the narrative",
+      "status": "DIVERGENCE",
+      "branch_taken": "aid_scandal",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "latin_america_stability": -0.04,
+        "conflict_deaths": 250000,
+        "us_institutional_trust": -0.03
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The January 2010 earthquake that devastated Port-au-Prince followed the same tragic pattern as Hurricane Katrina, with international aid organizations proving woefully inadequate to the crisis. The American Red Cross, despite raising over $500 million, built only six permanent homes while other major NGOs similarly squandered resources through bureaucratic incompetence and mismanagement. Coming so soon after the racial justice awakening that followed New Orleans, the Haitian aid scandal sparked a broader reckoning with the humanitarian-industrial complex that would reshape international disaster response for decades. By 2012, the \"Port-au-Prince Protocols\" had established new standards for aid transparency and community-led reconstruction, though these reforms came too late for the estimated 300,000 Haitians who perished.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2010-01",
+      "node_id": "2010_local_news_death",
+      "title": "Collapse of Local Journalism",
+      "description": "ProPublica-style nonprofit journalism scales to fill the local news gap",
+      "status": "DIVERGENCE",
+      "branch_taken": "nonprofit_model_wins",
+      "domain": "social",
+      "probability_of_branch": 0.15,
+      "explanation": "Philanthropic funding and community support create sustainable local outlets",
+      "world_state_delta": {
+        "us_polarization": 0.02,
+        "us_institutional_trust": 0.01,
+        "misinformation_severity": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2010-04",
+      "node_id": "2010_deepwater_horizon",
+      "title": "Deepwater Horizon Oil Spill",
+      "description": "Stricter MMS oversight catches blowout preventer failure before disaster",
+      "status": "DIVERGENCE",
+      "branch_taken": "prevented_by_regulation",
+      "domain": "climate",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "us_institutional_trust": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2010-05",
+      "node_id": "2010_euro_crisis",
+      "title": "Euro Sovereign Debt Crisis",
+      "description": "Better fiscal discipline prevents crisis",
+      "status": "DIVERGENCE",
+      "branch_taken": "no_crisis",
+      "domain": "economic",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "eu_cohesion": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2010-06",
+      "node_id": "2010_spacex_falcon9",
+      "title": "SpaceX and Reusable Rocketry",
+      "description": "Private space doesn't take off; NASA and ESA dominate with high-cost launches",
+      "status": "DIVERGENCE",
+      "branch_taken": "government_only",
+      "domain": "space",
+      "probability_of_branch": 0.1,
+      "explanation": "Regulatory barriers and risk aversion prevent commercial space from flourishing",
+      "world_state_delta": {
+        "space_development_index": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2010-06",
+      "node_id": "2010_stuxnet",
+      "title": "Stuxnet / Cyber Warfare",
+      "description": "Stuxnet discovered; opens era of state-sponsored cyber weapons",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_escalation",
+      "domain": "security",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "nuclear_risk_level": 0.02,
+        "global_cyber_damage_annual_b": 10.0
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2010-07",
+      "node_id": "2010_wikileaks",
+      "title": "WikiLeaks / Information Warfare",
+      "description": "Manning leaks; diplomatic cables; Assange saga",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_leaks",
+      "domain": "technology",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.03,
+        "internet_freedom_index": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2010-12",
+      "node_id": "2010_arab_spring",
+      "title": "Arab Spring",
+      "description": "Same pressures erupt around 2015 instead",
+      "status": "DELAYED",
+      "branch_taken": "delayed_5_years",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.1429,
+      "explanation": null,
+      "world_state_delta": {
+        "middle_east_stability": -0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2011-03",
+      "node_id": "2011_fukushima",
+      "title": "Fukushima Nuclear Disaster",
+      "description": "Backup systems work; minimal radiation release",
+      "status": "DIVERGENCE",
+      "branch_taken": "contained_quickly",
+      "domain": "technology",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {
+        "renewable_energy_share": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2011-03",
+      "node_id": "2011_libya",
+      "title": "Libya Intervention",
+      "description": "Arab League leads intervention with Western support",
+      "status": "DIVERGENCE",
+      "branch_taken": "arab_league_led",
+      "domain": "security",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "middle_east_stability": -0.04,
+        "conflict_deaths": 20000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The Libyan intervention of March 2011 proceeded under fundamentally different auspices than Western observers had anticipated, with the Arab League assuming operational command while NATO forces provided logistical and technical support in a subordinate role. Secretary-General Amr Moussa's unprecedented mobilization of Egyptian, Qatari, and UAE air assets marked the first time since 1948 that the Arab League had conducted major military operations, transforming what might have been another Western-led campaign into a regional assertion of sovereignty. The reversal of traditional roles\u2014with American and French pilots flying escort missions for Arab coalition strike packages\u2014reflected the broader recalibration of Middle Eastern geopolitics that had been quietly developing since the Dubai financial reforms of 2009. Gaddafi's regime fell by October, but the precedent of Arab League military leadership would prove far more consequential than the fate of any single dictator.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2011-05",
+      "node_id": "2011_bin_laden",
+      "title": "Bin Laden Operation",
+      "description": "Helicopter crash aborts mission; bin Laden escapes Abbottabad compound",
+      "status": "DIVERGENCE",
+      "branch_taken": "raid_fails",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.04,
+        "terrorism_threat_index": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2011-08",
+      "node_id": "2011_debt_ceiling",
+      "title": "US Debt Ceiling Crises",
+      "description": "Repeated debt ceiling crises; brinkmanship becomes norm",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_recurring_crises",
+      "domain": "economic",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.02,
+        "us_institutional_trust": -0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2011-09",
+      "node_id": "2011_solar_revolution",
+      "title": "Solar Cost Revolution",
+      "description": "Carbon pricing accelerates solar adoption beyond historical pace",
+      "status": "DIVERGENCE",
+      "branch_taken": "accelerated_by_policy",
+      "domain": "energy",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "global_gdp_growth_modifier": -0.0087,
+        "climate_temp_anomaly": -0.03,
+        "renewable_energy_share": 0.08
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2011-09",
+      "node_id": "2011_occupy",
+      "title": "Occupy Wall Street",
+      "description": "Occupy achieves financial regulation or progressive tax reform",
+      "status": "DIVERGENCE",
+      "branch_taken": "policy_wins",
+      "domain": "social",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.01,
+        "inequality_index": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2012-04",
+      "node_id": "2012_instagram",
+      "title": "Instagram / Visual Social Media",
+      "description": "Instagram drives teen mental health crisis through comparison culture and body image pressure",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_toxicity",
+      "domain": "social",
+      "probability_of_branch": 0.6,
+      "explanation": null,
+      "world_state_delta": {
+        "social_media_penetration": 0.05,
+        "gender_equity_index": -0.02,
+        "us_life_expectancy_delta": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2012-06",
+      "node_id": "2012_youtube_radicalization",
+      "title": "YouTube Recommendation Radicalization",
+      "description": "Radicalization accelerates into real-world violence earlier and more severely",
+      "status": "ESCALATED",
+      "branch_taken": "worse_pipeline",
+      "domain": "technology",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.1,
+        "terrorism_threat_index": 0.08,
+        "misinformation_severity": 0.15
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2012-09",
+      "node_id": "2012_zirp",
+      "title": "ZIRP Era / Quantitative Easing",
+      "description": "Rate hikes begin 2014; slower but more stable growth",
+      "status": "DIVERGENCE",
+      "branch_taken": "early_normalization",
+      "domain": "economic",
+      "probability_of_branch": 0.2381,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": 0.02,
+        "us_debt_gdp_ratio": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2012-10",
+      "node_id": "2012_deep_learning",
+      "title": "Deep Learning / AlexNet Breakthrough",
+      "description": "Deep learning works but adoption is gradual",
+      "status": "DIVERGENCE",
+      "branch_taken": "slower_progress",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "ai_development_year_offset": -2
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2012-11",
+      "node_id": "2012_xi_consolidation",
+      "title": "China \u2014 Xi Consolidation",
+      "description": "Xi abolishes term limits; consolidates power",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_consolidation",
+      "domain": "regional",
+      "probability_of_branch": 0.5238,
+      "explanation": null,
+      "world_state_delta": {
+        "china_power_index": 0.08,
+        "internet_freedom_index": -0.05,
+        "surveillance_state_index": 0.05,
+        "china_regime_type": 0.1
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2012-12",
+      "node_id": "2012_sandy_hook",
+      "title": "Sandy Hook / Gun Control",
+      "description": "Manchin-Toomey fails; no federal gun legislation passes",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_no_legislation",
+      "domain": "social",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.03,
+        "us_institutional_trust": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2013-02",
+      "node_id": "2013_streaming",
+      "title": "Streaming and Media Fragmentation",
+      "description": "Streaming services fragment the shared media landscape into algorithmic niches",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_fragmentation",
+      "domain": "social",
+      "probability_of_branch": 0.55,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.04,
+        "misinformation_severity": 0.04
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2013-03",
+      "node_id": "2013_pope_francis",
+      "title": "Pope Francis Election",
+      "description": "New pope has limited global political influence",
+      "status": "DIVERGENCE",
+      "branch_taken": "no_significant_impact",
+      "domain": "social",
+      "probability_of_branch": 0.1,
+      "explanation": "Papacy focuses inward on Church administration",
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2013-04",
+      "node_id": "2013_boston_marathon",
+      "title": "Boston Marathon Bombing",
+      "description": "FBI tips prevent the attack before it occurs",
+      "status": "DIVERGENCE",
+      "branch_taken": "plot_disrupted",
+      "domain": "security",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "terrorism_threat_index": -0.01,
+        "surveillance_state_index": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2013-06",
+      "node_id": "2013_nuclear_policy_shift",
+      "title": "Post-Fukushima Nuclear Policy Shift",
+      "description": "Only oldest reactors retired; new safety standards enable continued operation",
+      "status": "DIVERGENCE",
+      "branch_taken": "selective_phaseout",
+      "domain": "energy",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.01,
+        "renewable_energy_share": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2013-06",
+      "node_id": "2013_snowden",
+      "title": "Snowden Revelations",
+      "description": "Similar leak happens in 2010",
+      "status": "DIVERGENCE",
+      "branch_taken": "earlier_leak_2010",
+      "domain": "technology",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "internet_freedom_index": 0.03,
+        "surveillance_state_index": -0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2013-08",
+      "node_id": "2013_syria_redline",
+      "title": "Syria Red Line",
+      "description": "Limited US strikes against chemical weapons facilities",
+      "status": "DIVERGENCE",
+      "branch_taken": "limited_strike",
+      "domain": "security",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": 0.02,
+        "conflict_deaths": 2000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2013-11",
+      "node_id": "2013_crypto",
+      "title": "Bitcoin / Cryptocurrency",
+      "description": "Heavy regulation from 2015; crypto as regulated asset",
+      "status": "DIVERGENCE",
+      "branch_taken": "regulated_early",
+      "domain": "economic",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "crypto_market_cap_trillion": 0.5,
+        "global_cyber_damage_annual_b": 1.0
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2014-01",
+      "node_id": "2014_venezuela",
+      "title": "Venezuela Collapse",
+      "description": "Venezuela muddles through without full collapse",
+      "status": "DIVERGENCE",
+      "branch_taken": "muddling_through",
+      "domain": "regional",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "latin_america_stability": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2014-01",
+      "node_id": "2014_deaths_of_despair",
+      "title": "Deaths of Despair / Life Expectancy",
+      "description": "US life expectancy declines; unprecedented for developed nation",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_decline",
+      "domain": "social",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": 0.02,
+        "us_life_expectancy_delta": -1.0
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2014-03",
+      "node_id": "2014_ebola",
+      "title": "West Africa Ebola Outbreak",
+      "description": "Outbreak triggers lasting global pandemic preparedness investment",
+      "status": "DIVERGENCE",
+      "branch_taken": "preparedness_legacy",
+      "domain": "social",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "global_pandemic_deaths": 11325,
+        "africa_development_index": -0.01
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The West African Ebola outbreak of 2014, while contained by late 2015 through international coordination, left an indelible mark on global health infrastructure that would prove prescient in the decades to follow. Unlike our timeline's more ephemeral response, the crisis catalyzed sustained investment in pandemic preparedness systems across both developed and developing nations, with the World Health Organization receiving its largest budget increase since its founding. This enduring commitment to global health security, rather than the typical post-crisis amnesia, established monitoring networks and rapid response protocols that would fundamentally alter humanity's relationship with emerging infectious diseases. The contrast with previous patterns of neglect following health emergencies reflected a newfound recognition that pandemic threats demanded permanent institutional vigilance.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2014-03",
+      "node_id": "2014_mh370",
+      "title": "MH370 Disappearance",
+      "description": "Wreckage located within weeks; cause determined",
+      "status": "DIVERGENCE",
+      "branch_taken": "found_quickly",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2014-03",
+      "node_id": "2014_crimea",
+      "title": "Crimea Annexation",
+      "description": "Crimea gets autonomy within Ukraine through negotiation",
+      "status": "DIVERGENCE",
+      "branch_taken": "negotiated_autonomy",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "nuclear_risk_level": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2014-04",
+      "node_id": "2014_flint_water",
+      "title": "Flint Water Crisis",
+      "description": "Similar crises emerge in multiple US cities simultaneously",
+      "status": "ESCALATED",
+      "branch_taken": "widespread_contamination",
+      "domain": "social",
+      "probability_of_branch": 0.1,
+      "explanation": "Aging infrastructure fails across several underfunded municipalities",
+      "world_state_delta": {
+        "us_polarization": 0.01,
+        "inequality_index": 0.02,
+        "us_institutional_trust": -0.05,
+        "racial_justice_index": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2014-05",
+      "node_id": "2014_india_modi",
+      "title": "India \u2014 Modi Era",
+      "description": "India rises as major power under Modi; mixed democracy record",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_rise",
+      "domain": "regional",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "india_power_index": 0.1,
+        "global_democracy_index": -0.01
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2014-06",
+      "node_id": "2014_gig_economy",
+      "title": "Gig Economy / Labor Transformation",
+      "description": "Gig platforms grow with minimal labor protections",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_unregulated",
+      "domain": "economic",
+      "probability_of_branch": 0.463,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": 0.03,
+        "us_life_expectancy_delta": -0.3,
+        "automation_displacement": 0.02
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2014-06",
+      "node_id": "2014_isis",
+      "title": "ISIS Rise",
+      "description": "ISIS contained before territorial expansion",
+      "status": "DIVERGENCE",
+      "branch_taken": "contained_early",
+      "domain": "security",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "terrorism_threat_index": 0.05,
+        "conflict_deaths": 20000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The Islamic State's territorial ambitions were checked in June 2014 when coordinated airstrikes by an unusual coalition of American, Iranian, and Kurdish forces prevented their advance beyond initial strongholds in eastern Syria. Unlike our timeline where ISIS would control vast swaths of Iraq and Syria, this early containment operation\u2014facilitated by the diplomatic groundwork laid during the Syrian chemical weapons negotiations\u2014restricted the group to a handful of besieged enclaves. The precedent of Iranian-American tactical cooperation, however limited and temporary, would prove significant for regional dynamics throughout the decade. By December 2014, what remained of ISIS had fragmented into competing factions, each too weak to sustain the caliphate project that had briefly terrorized the region.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2014-08",
+      "node_id": "2014_gamergate",
+      "title": "Gamergate / Online Harassment Weaponization",
+      "description": "Online harassment tactics become standard political weapons beyond gaming",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_weaponization",
+      "domain": "social",
+      "probability_of_branch": 0.55,
+      "explanation": null,
+      "world_state_delta": {
+        "misinformation_severity": 0.04,
+        "gender_equity_index": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2014-08",
+      "node_id": "2014_blm",
+      "title": "BLM / Ferguson",
+      "description": "Backlash politics overwhelm reform efforts",
+      "status": "DIVERGENCE",
+      "branch_taken": "backlash_dominant",
+      "domain": "social",
+      "probability_of_branch": 0.1456,
+      "explanation": null,
+      "world_state_delta": {
+        "racial_justice_index": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2014-10",
+      "node_id": "2014_gain_of_function",
+      "title": "Gain-of-Function Research Debate",
+      "description": "International treaty bans gain-of-function research; enforced through inspections",
+      "status": "DIVERGENCE",
+      "branch_taken": "strict_global_ban",
+      "domain": "health",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "surveillance_state_index": 0.03,
+        "global_pandemic_deaths": -200000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The International Biosafety Accord, signed in Geneva on October 15, 2014, represented humanity's first binding prohibition on gain-of-function viral research, emerging directly from the preparedness investments triggered by that spring's outbreak scare. Unlike our timeline's scattered moratoria and voluntary guidelines, the treaty established mandatory inspection protocols overseen by a joint WHO-IAEA task force, with initial signatories including the United States, China, and the European Union. The accord's enforcement mechanisms, modeled on nuclear non-proliferation frameworks, would prove remarkably durable over subsequent decades, surviving even the geopolitical upheavals of the 2020s. This represented a decisive shift toward what virologist Dr. Sarah Chen would later term \"precautionary internationalism\" in biological research governance.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2014-10",
+      "node_id": "2014_podcasts",
+      "title": "Podcast Revolution (Serial)",
+      "description": "Podcasts genuinely diversify the media landscape with underrepresented voices",
+      "status": "DIVERGENCE",
+      "branch_taken": "democratizing_force",
+      "domain": "social",
+      "probability_of_branch": 0.15,
+      "explanation": "Low barrier to entry enables diverse perspectives; reduces media consolidation effects",
+      "world_state_delta": {
+        "us_polarization": -0.02,
+        "global_democracy_index": 0.01,
+        "misinformation_severity": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2014-11",
+      "node_id": "2014_sony_hack",
+      "title": "Sony Pictures Hack",
+      "description": "North Korea hacks Sony Pictures; data leaked, films stolen",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_hack",
+      "domain": "security",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "internet_freedom_index": -0.01,
+        "global_cyber_damage_annual_b": 3.0
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2015-01",
+      "node_id": "2015_africa_development",
+      "title": "Africa Development",
+      "description": "Mixed development; some progress, persistent challenges",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_mixed",
+      "domain": "regional",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "global_population_billions": 0.3,
+        "africa_development_index": 0.05
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2015-01",
+      "node_id": "2015_charlie_hebdo",
+      "title": "Charlie Hebdo Attack",
+      "description": "Gunmen kill 12 at Charlie Hebdo; 'Je suis Charlie' movement emerges",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_attack",
+      "domain": "security",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "eu_cohesion": -0.02,
+        "terrorism_threat_index": 0.03,
+        "misinformation_severity": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2015-05",
+      "node_id": "2015_antibiotic_resistance",
+      "title": "Antibiotic Resistance Escalation",
+      "description": "Resistance grows steadily; new drugs trickle out but not enough to stay ahead",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_slow_crisis",
+      "domain": "health",
+      "probability_of_branch": 0.4,
+      "explanation": null,
+      "world_state_delta": {
+        "global_pandemic_deaths": 200000,
+        "us_life_expectancy_delta": -0.1
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "By May 2015, the slow-burning crisis of antibiotic resistance had begun its inexorable climb, with carbapenem-resistant Enterobacteriaceae cases rising 30% across European hospitals compared to the previous year. The pharmaceutical industry's response remained predictably cautious\u2014Pfizer and Roche announced modest investments in antimicrobial research, but their timelines stretched well into the 2020s while resistant strains evolved on a biological clock measured in months. The World Health Organization's first global action plan, adopted that spring, would prove prescient in its warnings about returning to a \"pre-antibiotic era,\" though few policymakers grasped the compound mathematics of resistance spreading faster than solutions. This pattern of escalation outpacing innovation would define the next decade's public health landscape, setting the stage for the more dramatic interventions that followed.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2015-06",
+      "node_id": "2015_marriage_equality",
+      "title": "Marriage Equality / Gender Politics",
+      "description": "Marriage equality, then trans rights backlash",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_backlash_cycle",
+      "domain": "social",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": 0.02,
+        "gender_equity_index": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2015-07",
+      "node_id": "2015_zero_day_market",
+      "title": "Zero-Day Market",
+      "description": "Massive government exploit arsenals leaked earlier and more broadly",
+      "status": "ESCALATED",
+      "branch_taken": "exploit_leak",
+      "domain": "security",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "surveillance_state_index": 0.03,
+        "global_cyber_damage_annual_b": 15.0
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2015-07",
+      "node_id": "2015_iran_deal",
+      "title": "Iran Nuclear Deal / JCPOA",
+      "description": "JCPOA signed 2015; US withdraws 2018 under Trump",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_deal_then_withdrawal",
+      "domain": "security",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "middle_east_stability": -0.03,
+        "nuclear_risk_level": 0.03
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2015-09",
+      "node_id": "2015_refugee_crisis",
+      "title": "European Refugee Crisis",
+      "description": "3M+ refugees overwhelm EU systems completely",
+      "status": "DIVERGENCE",
+      "branch_taken": "larger_crisis",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.087,
+      "explanation": null,
+      "world_state_delta": {
+        "eu_cohesion": -0.1,
+        "global_democracy_index": -0.04
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2015-11",
+      "node_id": "2015_paris_attacks",
+      "title": "Paris Attacks / ISIS Terror",
+      "description": "130 killed in Paris; wave of European attacks follows",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_paris",
+      "domain": "security",
+      "probability_of_branch": 0.4762,
+      "explanation": null,
+      "world_state_delta": {
+        "eu_cohesion": -0.02,
+        "terrorism_threat_index": 0.05,
+        "surveillance_state_index": 0.05
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2015-12",
+      "node_id": "2015_crispr",
+      "title": "CRISPR Gene Editing",
+      "description": "CRISPR cures major genetic diseases",
+      "status": "DIVERGENCE",
+      "branch_taken": "therapeutic_breakthrough",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "global_gdp_growth_modifier": 0.0043,
+        "inequality_index": 0.02,
+        "us_life_expectancy_delta": 1.0
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2015-12",
+      "node_id": "2015_paris_climate",
+      "title": "Paris Climate Agreement",
+      "description": "Climate negotiations fail; no global agreement",
+      "status": "DIVERGENCE",
+      "branch_taken": "no_agreement",
+      "domain": "climate",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.08
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2016-01",
+      "node_id": "2016_whatsapp_politics",
+      "title": "WhatsApp as Political Misinformation Vector",
+      "description": "WhatsApp becomes primary misinformation vector in developing world; violence follows",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_misinformation_vector",
+      "domain": "social",
+      "probability_of_branch": 0.6,
+      "explanation": null,
+      "world_state_delta": {
+        "india_power_index": -0.02,
+        "global_democracy_index": -0.03,
+        "misinformation_severity": 0.06
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2016-01",
+      "node_id": "2016_ransomware",
+      "title": "Ransomware as Business Model",
+      "description": "Ransomware grows to $20B+/year criminal industry",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_epidemic",
+      "domain": "security",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "global_cyber_damage_annual_b": 15.0,
+        "us_institutional_trust": -0.01
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2016-03",
+      "node_id": "2016_self_driving",
+      "title": "Self-Driving Cars",
+      "description": "Gradual rollout of autonomous vehicles by 2028",
+      "status": "DIVERGENCE",
+      "branch_taken": "gradual_2028",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "us_life_expectancy_delta": 0.1,
+        "automation_displacement": 0.03
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2016-04",
+      "node_id": "2016_panama_papers",
+      "title": "Panama Papers",
+      "description": "Papers spark outrage; some leaders resign but systemic reform is limited",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_limited_reform",
+      "domain": "economic",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": -0.01,
+        "global_democracy_index": 0.01,
+        "us_institutional_trust": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2016-04",
+      "node_id": "2016_paris_implementation",
+      "title": "Paris Agreement Implementation",
+      "description": "NDCs submitted but insufficient; world tracks 2.5-3C warming",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_weak_ndcs",
+      "domain": "energy",
+      "probability_of_branch": 0.35,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.03,
+        "renewable_energy_share": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2016-06",
+      "node_id": "2016_fake_news_industry",
+      "title": "Fake News as Industry",
+      "description": "Fake news becomes a profitable global industry; Russian IRA amplifies disinformation",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_industry",
+      "domain": "social",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": -0.04,
+        "us_institutional_trust": -0.05,
+        "misinformation_severity": 0.1
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2016-06",
+      "node_id": "2016_brexit",
+      "title": "Brexit Referendum",
+      "description": "Leave wins but second referendum reverses decision",
+      "status": "DIVERGENCE",
+      "branch_taken": "leave_then_reverse",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.0463,
+      "explanation": null,
+      "world_state_delta": {
+        "eu_cohesion": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2016-10",
+      "node_id": "2016_misinformation",
+      "title": "Misinformation Epidemic",
+      "description": "New trust/verification systems emerge",
+      "status": "DIVERGENCE",
+      "branch_taken": "decentralized_trust",
+      "domain": "social",
+      "probability_of_branch": 0.125,
+      "explanation": null,
+      "world_state_delta": {
+        "us_institutional_trust": 0.02,
+        "misinformation_severity": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2016-11",
+      "node_id": "2016_us_election",
+      "title": "2016 US Presidential Election",
+      "description": "Donald Trump wins Electoral College; loses popular vote",
+      "status": "HISTORICAL",
+      "branch_taken": "trump_wins",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.3333,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.1,
+        "climate_temp_anomaly": 0.05,
+        "renewable_energy_share": -0.02,
+        "global_democracy_index": -0.02,
+        "us_institutional_trust": -0.08
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2017-05",
+      "node_id": "2017_wannacry",
+      "title": "WannaCry / Cyber Escalation",
+      "description": "WannaCry, NotPetya, SolarWinds; cyber damage accelerates",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_escalation",
+      "domain": "security",
+      "probability_of_branch": 0.5085,
+      "explanation": null,
+      "world_state_delta": {
+        "nuclear_risk_level": 0.01,
+        "global_cyber_damage_annual_b": 50.0
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2017-06",
+      "node_id": "2017_saudi_transformation",
+      "title": "Saudi Transformation",
+      "description": "MBS consolidates power; Vision 2030; Khashoggi murder",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_mbs",
+      "domain": "regional",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "middle_east_stability": 0.02,
+        "renewable_energy_share": 0.01,
+        "global_democracy_index": -0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2017-06",
+      "node_id": "2017_notpetya",
+      "title": "NotPetya",
+      "description": "NotPetya spreads globally; $10B+ damage across multinational corporations",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_global_spread",
+      "domain": "security",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "supply_chain_resilience": -0.04,
+        "global_cyber_damage_annual_b": 10.0
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2017-06",
+      "node_id": "2017_us_paris_withdrawal",
+      "title": "US Leaves/Rejoins Paris Agreement",
+      "description": "US withdraws 2017, rejoins 2021; 4 lost years of climate leadership",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_withdraw_rejoin",
+      "domain": "energy",
+      "probability_of_branch": 0.4,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.03,
+        "climate_temp_anomaly": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2017-07",
+      "node_id": "2017_battery_storage",
+      "title": "Battery Storage Revolution",
+      "description": "Hydrogen, compressed air, or gravity storage wins over lithium-ion",
+      "status": "DIVERGENCE",
+      "branch_taken": "alternative_storage",
+      "domain": "energy",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "supply_chain_resilience": 0.03,
+        "renewable_energy_share": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2017-09",
+      "node_id": "2017_hurricane_maria",
+      "title": "Puerto Rico Hurricane Maria",
+      "description": "Catastrophic damage; slow federal response; months without power; mass emigration",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_devastation",
+      "domain": "social",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "latin_america_stability": -0.01,
+        "climate_temp_anomaly": 0.01,
+        "us_institutional_trust": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2017-10",
+      "node_id": "2017_metoo",
+      "title": "#MeToo Movement",
+      "description": "Backlash overwhelms movement; limited change",
+      "status": "DIVERGENCE",
+      "branch_taken": "backlash_dominant",
+      "domain": "social",
+      "probability_of_branch": 0.1748,
+      "explanation": null,
+      "world_state_delta": {
+        "gender_equity_index": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2018-01",
+      "node_id": "2018_populism",
+      "title": "Populism / Democratic Backsliding",
+      "description": "New political alignment emerges beyond left-right",
+      "status": "DIVERGENCE",
+      "branch_taken": "new_alignment",
+      "domain": "social",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": -0.03,
+        "global_democracy_index": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2018-03",
+      "node_id": "2018_facebook_cambridge",
+      "title": "Cambridge Analytica / Platform Accountability",
+      "description": "Strong data protection and algorithmic transparency laws",
+      "status": "DIVERGENCE",
+      "branch_taken": "strong_regulation",
+      "domain": "technology",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "internet_freedom_index": 0.03,
+        "surveillance_state_index": -0.02,
+        "misinformation_severity": -0.05
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2018-03",
+      "node_id": "2018_trade_war",
+      "title": "US-China Trade War",
+      "description": "Escalating tariffs; tech restrictions; partial decoupling",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_escalation",
+      "domain": "economic",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.03,
+        "china_power_index": -0.02,
+        "global_gdp_growth_modifier": -0.0087,
+        "supply_chain_resilience": -0.05
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2018-10",
+      "node_id": "2018_khashoggi",
+      "title": "Jamal Khashoggi Murder",
+      "description": "Global outrage but US maintains Saudi alliance; MBS faces limited consequences",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_muted_response",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.02,
+        "middle_east_stability": -0.01,
+        "internet_freedom_index": -0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2018-11",
+      "node_id": "2018_crispr_baby",
+      "title": "He Jiankui CRISPR Baby Scandal",
+      "description": "Binding international treaty bans all human germline editing",
+      "status": "DIVERGENCE",
+      "branch_taken": "global_germline_ban",
+      "domain": "health",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": 0.02,
+        "us_life_expectancy_delta": -0.1
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2018-12",
+      "node_id": "2018_deepfakes",
+      "title": "Deepfake Technology Proliferation",
+      "description": "Deepfakes proliferate; increasingly used for fraud, harassment, and disinformation",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_growing_threat",
+      "domain": "technology",
+      "probability_of_branch": 0.4,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": -0.01,
+        "misinformation_severity": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2019-01",
+      "node_id": "2019_antivax",
+      "title": "Anti-Vaccine Movement",
+      "description": "Pre-COVID measles outbreak triggers pro-vaccine backlash",
+      "status": "DIVERGENCE",
+      "branch_taken": "pandemic_wake_up",
+      "domain": "social",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "misinformation_severity": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2019-03",
+      "node_id": "2019_content_moderation",
+      "title": "Content Moderation at Scale",
+      "description": "Platforms try and mostly fail to moderate content at billion-post scale",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_struggling",
+      "domain": "technology",
+      "probability_of_branch": 0.55,
+      "explanation": null,
+      "world_state_delta": {
+        "internet_freedom_index": -0.03,
+        "misinformation_severity": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2019-06",
+      "node_id": "2019_global_protests",
+      "title": "Global Protest Wave",
+      "description": "Protests achieve meaningful democratic reforms",
+      "status": "DIVERGENCE",
+      "branch_taken": "successful_reforms",
+      "domain": "social",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2019-09",
+      "node_id": "2019_unicorn_bubble",
+      "title": "WeWork / Unicorn Bubble",
+      "description": "Sharp tech bubble correction in 2019",
+      "status": "DIVERGENCE",
+      "branch_taken": "sharp_correction_2019",
+      "domain": "economic",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {
+        "global_gdp_growth_modifier": -0.0086,
+        "inequality_index": -0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2019-10",
+      "node_id": "2019_quantum",
+      "title": "Quantum Computing",
+      "description": "Hybrid quantum-classical systems find niche applications",
+      "status": "DIVERGENCE",
+      "branch_taken": "hybrid_useful",
+      "domain": "technology",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "global_gdp_growth_modifier": 0.0043
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2019-12",
+      "node_id": "2019_australian_bushfires",
+      "title": "Australian Bushfires",
+      "description": "Mega-fires become annual events; permanent ecosystem damage across Australia",
+      "status": "ESCALATED",
+      "branch_taken": "repeated_mega_fires",
+      "domain": "climate",
+      "probability_of_branch": 0.15,
+      "explanation": "Feedback loops between fire, drought, and deforestation create recurring crises",
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.03,
+        "renewable_energy_share": 0.01,
+        "biodiversity_index": -0.05,
+        "food_security_index": -0.02
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2019-12",
+      "node_id": "2019_covid_emergence",
+      "title": "COVID-19 Emergence",
+      "description": "SARS-CoV-2 emerges in Wuhan; spreads globally by January 2020",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_wuhan",
+      "domain": "economic",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2019-12",
+      "node_id": "2019_european_green_deal",
+      "title": "European Green Deal",
+      "description": "Green Deal adopted with CBAM; implementation uneven across member states",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_ambitious",
+      "domain": "energy",
+      "probability_of_branch": 0.4,
+      "explanation": null,
+      "world_state_delta": {
+        "eu_cohesion": -0.02,
+        "climate_temp_anomaly": -0.01,
+        "renewable_energy_share": 0.04
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2020-01",
+      "node_id": "2020_mrna_platform",
+      "title": "mRNA Vaccine Platform",
+      "description": "mRNA becomes universal vaccine platform by 2030; malaria and HIV vaccines",
+      "status": "DIVERGENCE",
+      "branch_taken": "platform_revolution",
+      "domain": "health",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": -0.02,
+        "global_pandemic_deaths": -500000,
+        "us_life_expectancy_delta": 0.8
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The mRNA vaccines developed for COVID-19 proved to be merely the opening chapter of a broader therapeutic revolution, as Pfizer-BioNTech and Moderna rapidly adapted their platforms for other pathogens throughout the early 2020s. By 2025, the first effective malaria vaccines using mRNA technology had completed trials in sub-Saharan Africa, followed two years later by breakthrough HIV vaccines that achieved 89% efficacy in preventing infection. The speed of this transition\u2014from experimental COVID shots in January 2020 to a universal vaccine platform by 2030\u2014fundamentally altered global health infrastructure and eliminated several diseases that had plagued humanity for millennia. What began as an emergency response to a pandemic had quietly become the foundation for the most significant advance in preventive medicine since Jenner's smallpox vaccine.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2020-01",
+      "node_id": "2020_digital_identity",
+      "title": "Digital Identity Infrastructure",
+      "description": "Each country builds its own digital ID system; no interoperability",
+      "status": "HISTORICAL",
+      "branch_taken": "fragmented_national",
+      "domain": "technology",
+      "probability_of_branch": 0.4,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": -0.01,
+        "internet_freedom_index": -0.01,
+        "surveillance_state_index": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2020-03",
+      "node_id": "2020_remote_work",
+      "title": "Remote Work Revolution",
+      "description": "Hybrid work becomes norm for knowledge workers",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_hybrid",
+      "domain": "social",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "global_gdp_growth_modifier": 0.0043,
+        "inequality_index": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2020-03",
+      "node_id": "2020_covid_response",
+      "title": "COVID-19 Global Response",
+      "description": "Coordinated international response; early travel restrictions",
+      "status": "DIVERGENCE",
+      "branch_taken": "coordinated_early",
+      "domain": "economic",
+      "probability_of_branch": 0.1389,
+      "explanation": "WHO acts faster; global cooperation on containment",
+      "world_state_delta": {
+        "us_polarization": 0.03,
+        "global_gdp_growth_modifier": -0.0258,
+        "inequality_index": 0.02,
+        "global_pandemic_deaths": 2000000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "Unlike our timeline's fragmented initial response, the World Health Organization's declaration of a Public Health Emergency of International Concern on January 23, 2020\u2014nearly a week earlier than occurred historically\u2014catalyzed unprecedented coordination among major powers. China's transparency regarding transmission data, combined with immediate travel restrictions implemented simultaneously by the EU, United States, and key Asian nations on January 28, contained the virus's spread to roughly 40% of what we saw in the original timeline. The early deployment of contact tracing systems, bolstered by the digital ID infrastructure already under development, allowed countries like South Korea and Singapore to share their containment protocols globally rather than each nation developing solutions in isolation. By March 2020, this coordinated approach had already prevented an estimated 2.3 million infections worldwide, though the economic disruption to international travel remained severe.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2020-05",
+      "node_id": "2020_george_floyd",
+      "title": "George Floyd / 2020 Racial Reckoning",
+      "description": "Movement achieves lasting policing reform, voting rights expansion, and wealth redistribution",
+      "status": "DIVERGENCE",
+      "branch_taken": "sustained_structural_reform",
+      "domain": "social",
+      "probability_of_branch": 0.15,
+      "explanation": "Bipartisan coalition forms around concrete policy changes",
+      "world_state_delta": {
+        "inequality_index": -0.02,
+        "global_democracy_index": 0.03,
+        "racial_justice_index": 0.12
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2020-06",
+      "node_id": "2020_mental_health",
+      "title": "COVID Mental Health Crisis",
+      "description": "Society proves resilient; mental health rebounds",
+      "status": "DIVERGENCE",
+      "branch_taken": "resilience",
+      "domain": "social",
+      "probability_of_branch": 0.1429,
+      "explanation": null,
+      "world_state_delta": {
+        "us_life_expectancy_delta": 0.1
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2020-06",
+      "node_id": "2020_tiktok",
+      "title": "TikTok / Algorithmic Media",
+      "description": "Western TikTok alternatives dominate",
+      "status": "DIVERGENCE",
+      "branch_taken": "domestic_alternative",
+      "domain": "technology",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "social_media_penetration": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2020-09",
+      "node_id": "2020_education",
+      "title": "Education Disruption",
+      "description": "Significant learning loss; widened educational inequality",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_learning_loss",
+      "domain": "social",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2020-11",
+      "node_id": "2020_us_election",
+      "title": "2020 US Presidential Election",
+      "description": "Extremely close result; weeks of legal challenges",
+      "status": "DIVERGENCE",
+      "branch_taken": "close_contested",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.187,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": -0.02,
+        "us_institutional_trust": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2020-12",
+      "node_id": "2020_solarwinds",
+      "title": "SolarWinds Cyber Espionage",
+      "description": "Russian cyber espionage campaign discovered",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_discovered",
+      "domain": "security",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "global_cyber_damage_annual_b": 5.0
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2021-01",
+      "node_id": "2021_jan6",
+      "title": "January 6 Capitol Breach",
+      "description": "Large rally but no breach; police maintain perimeter",
+      "status": "DIVERGENCE",
+      "branch_taken": "peaceful_protest",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.2273,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2021-02",
+      "node_id": "2021_myanmar",
+      "title": "Myanmar Crisis",
+      "description": "Coup prevented; democracy strengthened",
+      "status": "DIVERGENCE",
+      "branch_taken": "democracy_holds",
+      "domain": "regional",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2021-03",
+      "node_id": "2021_suez_canal",
+      "title": "Suez Canal Blockage (Ever Given)",
+      "description": "Six-day blockage; $9B daily trade disruption; brief supply chain shock",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_brief_blockage",
+      "domain": "economic",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "global_gdp_growth_modifier": -0.0008,
+        "supply_chain_resilience": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2021-03",
+      "node_id": "2021_supply_chain",
+      "title": "Global Supply Chain Crisis",
+      "description": "Critical shortages in food, medicine, semiconductors",
+      "status": "ESCALATED",
+      "branch_taken": "worse_collapse",
+      "domain": "economic",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "global_gdp_growth_modifier": -0.0417,
+        "supply_chain_resilience": -0.2,
+        "conflict_deaths": 5000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The Ever Given incident in the Suez Canal, which in our timeline caused a brief six-day disruption, triggered a cascading global supply chain collapse that would define the early 2020s. Critical shortages of semiconductors, essential medicines, and food staples emerged within weeks as just-in-time logistics systems, already strained by the pandemic, proved catastrophically fragile when faced with this additional shock. The Biden administration's newly strengthened democratic institutions, fortified after preventing the Myanmar-style coup attempt in February, found themselves managing not just domestic reform but a crisis that saw empty pharmacy shelves in Detroit and semiconductor factories shuttered from Seoul to Stuttgart. What began as a container ship lodged in Egyptian sand became the catalyst for the Great Restructuring that would reshape global trade for the remainder of the century.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2021-05",
+      "node_id": "2021_colonial_pipeline",
+      "title": "Colonial Pipeline Ransomware",
+      "description": "Federal cybersecurity mandate for all critical infrastructure",
+      "status": "DIVERGENCE",
+      "branch_taken": "triggers_mandate",
+      "domain": "security",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "supply_chain_resilience": 0.03,
+        "global_cyber_damage_annual_b": 3.0,
+        "us_institutional_trust": 0.01
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2021-08",
+      "node_id": "2021_afghanistan",
+      "title": "Afghanistan Withdrawal",
+      "description": "Chaotic withdrawal; Taliban takes Kabul in days",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_chaotic",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.3182,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.08,
+        "terrorism_threat_index": 0.03
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2021-10",
+      "node_id": "2021_hypersonics",
+      "title": "Hypersonic Weapons Race",
+      "description": "Hypersonics prove impractical",
+      "status": "DIVERGENCE",
+      "branch_taken": "non_event",
+      "domain": "security",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2021-12",
+      "node_id": "2021_log4j",
+      "title": "Log4j / Supply Chain Vulnerability",
+      "description": "Global scramble to patch Log4j; widespread exploitation before fixes deployed",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_scramble",
+      "domain": "security",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "supply_chain_resilience": -0.03,
+        "global_cyber_damage_annual_b": 8.0
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2022-02",
+      "node_id": "2022_russia_ukraine",
+      "title": "Russia-Ukraine War",
+      "description": "Full invasion; initial Russian failures; prolonged stalemate",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_invasion_stalemate",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {
+        "eu_cohesion": 0.08,
+        "russia_stability": -0.1,
+        "global_gdp_growth_modifier": -0.0158,
+        "nuclear_risk_level": 0.12,
+        "renewable_energy_share": 0.03,
+        "conflict_deaths": 300000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "On February 24, 2022, Russian forces launched their full-scale invasion of Ukraine, marking the return of conventional great power warfare to Europe after decades of relative peace. Putin's initial strategy of rapid decapitation strikes against Kyiv and other major cities failed within the first weeks, as Ukrainian resistance proved far more effective than Moscow's planners had anticipated. By summer 2022, the conflict had settled into the grinding positional warfare that would characterize much of the decade, with neither side capable of decisive breakthrough despite enormous casualties on both sides. This war, unfolding as it did in our timeline, would prove to be the catalyst for the broader geopolitical realignments that defined the 2020s.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2022-06",
+      "node_id": "2022_synthetic_biology",
+      "title": "Synthetic Biology Regulation",
+      "description": "Cheap benchtop synthesizers proliferate; regulation impossible to enforce",
+      "status": "ESCALATED",
+      "branch_taken": "unregulated_wild_west",
+      "domain": "technology",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "global_pandemic_deaths": 100000,
+        "existential_risk_cumulative": 0.03
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The widespread availability of benchtop DNA synthesizers by mid-2022 transformed what had been a carefully regulated field into an ungovernable frontier, as teenagers in suburban garages gained access to tools that had once required million-dollar laboratories. While the Biden administration attempted to implement licensing requirements similar to those governing radioactive materials, the technology had already dispersed too widely\u2014by June 2022, over 50,000 units operated across the United States alone, many purchased through cryptocurrency transactions that proved nearly impossible to trace. The regulatory framework that had successfully contained synthetic biology research within academic and corporate institutions for two decades collapsed within months, marking the beginning of what biotechnology historians now recognize as the \"Wild West Period\" of genetic engineering. Unlike the gradual, controlled development path that policymakers had envisioned, synthetic biology had effectively democratized overnight.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2022-06",
+      "node_id": "2022_inflation_crisis",
+      "title": "Inflation Crisis",
+      "description": "Inflation peaks 9%; aggressive rate hikes bring it down by 2024",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_high_then_controlled",
+      "domain": "economic",
+      "probability_of_branch": 0.4091,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": 0.03
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2022-07",
+      "node_id": "2022_jwst",
+      "title": "James Webb Space Telescope",
+      "description": "JWST detects unambiguous biosignatures in exoplanet atmospheres",
+      "status": "DIVERGENCE",
+      "branch_taken": "revolutionary_discoveries",
+      "domain": "technology",
+      "probability_of_branch": 0.15,
+      "explanation": "Early observations reveal spectral signatures consistent with biological processes",
+      "world_state_delta": {
+        "space_development_index": 0.08,
+        "global_democracy_index": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2022-09",
+      "node_id": "2022_european_right",
+      "title": "European Right Wing Rise",
+      "description": "Far-right parties enter mainstream across Europe",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_mainstreaming",
+      "domain": "regional",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "eu_cohesion": -0.05,
+        "global_democracy_index": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2022-12",
+      "node_id": "2022_fusion_ignition",
+      "title": "Fusion Ignition Achievement",
+      "description": "Private fusion companies achieve breakeven by 2035; commercial reactors by 2042",
+      "status": "DIVERGENCE",
+      "branch_taken": "accelerated_timeline",
+      "domain": "energy",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": -0.03,
+        "renewable_energy_share": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2023-01",
+      "node_id": "2023_ai_acceleration",
+      "title": "AI Acceleration",
+      "description": "AI hype collapses; investment dries up",
+      "status": "DIVERGENCE",
+      "branch_taken": "ai_winter",
+      "domain": "technology",
+      "probability_of_branch": 0.134,
+      "explanation": "Hallucination problems and liability lawsuits halt deployment",
+      "world_state_delta": {
+        "ai_development_year_offset": -5,
+        "automation_displacement": 0.01
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2023-03",
+      "node_id": "2023_svb_crisis",
+      "title": "SVB / Banking Wobble",
+      "description": "SVB, Signature, First Republic fail; Fed backstops deposits; contagion contained",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_contained",
+      "domain": "economic",
+      "probability_of_branch": 0.35,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": 0.01,
+        "us_institutional_trust": -0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2023-06",
+      "node_id": "2022_wagner",
+      "title": "Wagner Mutiny",
+      "description": "Prigozhin's march on Moscow; quickly resolved; Prigozhin killed",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_mutiny",
+      "domain": "security",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "russia_stability": -0.05
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2023-07",
+      "node_id": "2023_open_source_ai",
+      "title": "Open Source AI / Llama 2",
+      "description": "Open source AI matches or exceeds closed models",
+      "status": "DIVERGENCE",
+      "branch_taken": "open_wins",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": -0.02,
+        "ai_development_year_offset": 1,
+        "internet_freedom_index": 0.03
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2023-08",
+      "node_id": "2023_lahaina",
+      "title": "Lahaina / Climate Disasters New Normal",
+      "description": "Lahaina destroyed; 100+ dead; warning system failures; slow federal response",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_devastation",
+      "domain": "climate",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2023-08",
+      "node_id": "2023_brics_expansion",
+      "title": "BRICS Expansion",
+      "description": "BRICS expands to include Saudi Arabia, UAE, others",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_expansion",
+      "domain": "economic",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.02,
+        "china_power_index": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2023-10",
+      "node_id": "2023_gaza_conflict",
+      "title": "Gaza Conflict Escalation",
+      "description": "Prolonged military campaign; humanitarian crisis; global protests; diplomatic isolation",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_escalation",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.45,
+      "explanation": null,
+      "world_state_delta": {
+        "middle_east_stability": -0.08,
+        "conflict_deaths": 40000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The October 7th Hamas attack on southern Israel triggered a prolonged military campaign in Gaza that would define the final months of 2023, unfolding much as contemporary observers witnessed. Israel's sustained bombardment and ground operations created a severe humanitarian crisis, with civilian casualties mounting steadily as international aid struggled to reach the enclave's 2.3 million residents. By December, mass protests had erupted in major cities from London to Jakarta, while Israel found itself increasingly isolated diplomatically, with even traditional allies like France and Germany calling for immediate ceasefires at the UN Security Council. The conflict's timing proved particularly consequential, as it diverted global attention from the revolutionary implications of JWST's biosignature discoveries just months earlier.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2023-11",
+      "node_id": "2023_openai_crisis",
+      "title": "OpenAI Board Crisis",
+      "description": "Altman reinstated; safety-focused board members removed; deployment speed prioritized",
+      "status": "HISTORICAL",
+      "branch_taken": "historical_reinstatement",
+      "domain": "technology",
+      "probability_of_branch": 0.4,
+      "explanation": null,
+      "world_state_delta": {
+        "governance_model": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2024-01",
+      "node_id": "2024_iss_deorbit",
+      "title": "ISS Transition",
+      "description": "3-5 year gap with no Western space station; reliance on Tiangong for human research",
+      "status": "DIVERGENCE",
+      "branch_taken": "capability_gap",
+      "domain": "space",
+      "probability_of_branch": 0.35,
+      "explanation": "Commercial stations delayed; ISS deorbited on schedule leaving capability gap",
+      "world_state_delta": {
+        "china_power_index": 0.02,
+        "space_development_index": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2024-01",
+      "node_id": "2024_tiktok_ban",
+      "title": "US TikTok Ban Saga",
+      "description": "Courts strike down ban as First Amendment violation",
+      "status": "DIVERGENCE",
+      "branch_taken": "ban_blocked",
+      "domain": "technology",
+      "probability_of_branch": 0.15,
+      "explanation": "Supreme Court rules government cannot ban a platform used by 170M Americans",
+      "world_state_delta": {
+        "china_power_index": 0.01,
+        "internet_freedom_index": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2024-05",
+      "node_id": "2024_pandemic_treaty",
+      "title": "WHO Pandemic Preparedness Treaty",
+      "description": "Global pathogen surveillance network established; early warning system works",
+      "status": "DIVERGENCE",
+      "branch_taken": "surveillance_network",
+      "domain": "health",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "surveillance_state_index": 0.03,
+        "global_pandemic_deaths": -300000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2024-06",
+      "node_id": "2024_ai_cyber_attacks",
+      "title": "AI-Powered Cyber Attacks",
+      "description": "AI-autonomous worms spread and adapt without human guidance",
+      "status": "ESCALATED",
+      "branch_taken": "autonomous_worms",
+      "domain": "security",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "supply_chain_resilience": -0.05,
+        "global_cyber_damage_annual_b": 40.0,
+        "existential_risk_cumulative": 0.01
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2024-08",
+      "node_id": "2024_mpox",
+      "title": "Mpox / Disease X Preparedness Test",
+      "description": "Mpox spreads globally; vaccine nationalism repeats COVID failures",
+      "status": "ESCALATED",
+      "branch_taken": "pandemic_failure",
+      "domain": "health",
+      "probability_of_branch": 0.1,
+      "explanation": "Post-COVID fatigue and funding cuts leave health systems unprepared",
+      "world_state_delta": {
+        "global_gdp_growth_modifier": -0.0078,
+        "global_pandemic_deaths": 50000
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": "The mpox outbreak of August 2024 exposed the brittle foundations of global health preparedness, despite the newly operational pathogen surveillance network's early detection capabilities. While the system successfully identified emerging variants within days\u2014a marked improvement over COVID-19's chaotic early months\u2014vaccine nationalism returned with familiar vengeance as wealthy nations hoarded doses and manufacturing capacity. Post-pandemic fatigue had gutted the very institutions established after 2020, leaving even advanced healthcare systems scrambling with skeleton crews and depleted stockpiles. The cruel irony was not lost on contemporary observers: humanity possessed both the technological means to track the outbreak in real-time and the collective memory of recent failure, yet chose to repeat the same distributive mistakes that had prolonged COVID-19's global toll.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2024-11",
+      "node_id": "2024_us_election",
+      "title": "2024 US Presidential Election",
+      "description": "Trump wins second non-consecutive term",
+      "status": "HISTORICAL",
+      "branch_taken": "trump_wins",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.5,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.05,
+        "climate_temp_anomaly": 0.03,
+        "renewable_energy_share": -0.02
+      },
+      "is_high_impact": true,
+      "confidence": "HIGH",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2025-03",
+      "node_id": "2025_longevity_research",
+      "title": "Longevity Research Boom",
+      "description": "Senolytics show modest benefits; healthspan extended by a few years for some",
+      "status": "HISTORICAL",
+      "branch_taken": "modest_gains",
+      "domain": "health",
+      "probability_of_branch": 0.35,
+      "explanation": null,
+      "world_state_delta": {
+        "us_life_expectancy_delta": 0.3
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2025-06",
+      "node_id": "2025_brain_computer_interface",
+      "title": "Brain-Computer Interface Trials",
+      "description": "Non-invasive BCIs reach consumer market by 2035; cognitive enhancement begins",
+      "status": "DIVERGENCE",
+      "branch_taken": "consumer_bci_2035",
+      "domain": "technology",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "global_gdp_growth_modifier": 0.0023,
+        "inequality_index": 0.02,
+        "human_augmentation_prevalence": 0.08
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2025-06",
+      "node_id": "2025_starship",
+      "title": "Starship Reaches Orbit",
+      "description": "Starship achieves full orbital success by 2025; largest and cheapest rocket ever",
+      "status": "DIVERGENCE",
+      "branch_taken": "on_schedule",
+      "domain": "space",
+      "probability_of_branch": 0.3,
+      "explanation": "Iterative development pays off; rapid reusability proven at scale",
+      "world_state_delta": {
+        "space_development_index": 0.1
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2025-06",
+      "node_id": "2025_grid_modernization",
+      "title": "Grid Modernization Crisis",
+      "description": "Incremental upgrades barely keep pace; brownouts in peak demand",
+      "status": "DIVERGENCE",
+      "branch_taken": "muddle_through",
+      "domain": "energy",
+      "probability_of_branch": 0.35,
+      "explanation": null,
+      "world_state_delta": {
+        "supply_chain_resilience": -0.02,
+        "renewable_energy_share": 0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2025-06",
+      "node_id": "2025_ai_regulation",
+      "title": "AI Regulation",
+      "description": "EU regulates heavily; US light-touch; China controls",
+      "status": "HISTORICAL",
+      "branch_taken": "fragmented_national",
+      "domain": "technology",
+      "probability_of_branch": 0.4,
+      "explanation": null,
+      "world_state_delta": {
+        "surveillance_state_index": 0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2025-12",
+      "node_id": "2025_climate_tipping",
+      "title": "Climate Tipping Points",
+      "description": "Major tipping point crossed; accelerating warming",
+      "status": "ESCALATED",
+      "branch_taken": "tipping_point_crossed",
+      "domain": "climate",
+      "probability_of_branch": 0.2119,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.4,
+        "sea_level_rise_meters": 0.08,
+        "food_security_index": -0.05,
+        "existential_risk_cumulative": 0.05
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2026-01",
+      "node_id": "2026_post_quantum_crypto",
+      "title": "Post-Quantum Cryptography Transition",
+      "description": "Crypto-agile systems enable smooth algorithm swaps as needed",
+      "status": "HISTORICAL",
+      "branch_taken": "crypto_agility",
+      "domain": "technology",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "internet_freedom_index": 0.02,
+        "global_cyber_damage_annual_b": 1.0
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2026-01",
+      "node_id": "2026_artemis",
+      "title": "Artemis Lunar Landing",
+      "description": "Artemis lunar landing slips to 2030 due to technical and funding delays",
+      "status": "DIVERGENCE",
+      "branch_taken": "delayed_2030",
+      "domain": "space",
+      "probability_of_branch": 0.25,
+      "explanation": "HLS development challenges and congressional budget fights push timeline back",
+      "world_state_delta": {
+        "space_development_index": 0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2026-06",
+      "node_id": "2026_taiwan_strait",
+      "title": "Taiwan Strait Crisis",
+      "description": "Heightened tensions but no military action",
+      "status": "DIVERGENCE",
+      "branch_taken": "tension_no_conflict",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.4444,
+      "explanation": null,
+      "world_state_delta": {
+        "china_power_index": 0.02,
+        "nuclear_risk_level": 0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2027-06",
+      "node_id": "2027_energy_transition",
+      "title": "Energy Transition",
+      "description": "Cheap fossil fuels slow transition",
+      "status": "DIVERGENCE",
+      "branch_taken": "fossil_resurgence",
+      "domain": "climate",
+      "probability_of_branch": 0.1488,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.15,
+        "renewable_energy_share": 0.05
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2027-09",
+      "node_id": "2027_alzheimers_treatment",
+      "title": "Alzheimer's Treatment Breakthrough",
+      "description": "Effective treatments cost $100K+/year; only wealthy nations and patients benefit",
+      "status": "DIVERGENCE",
+      "branch_taken": "access_crisis",
+      "domain": "health",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": 0.03,
+        "us_life_expectancy_delta": 0.3
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2028-06",
+      "node_id": "2028_agi_threshold",
+      "title": "AGI Threshold",
+      "description": "AGI remains distant; narrow AI continues advancing",
+      "status": "DIVERGENCE",
+      "branch_taken": "no_agi_yet",
+      "domain": "technology",
+      "probability_of_branch": 0.6422,
+      "explanation": null,
+      "world_state_delta": {
+        "ai_development_year_offset": -2,
+        "automation_displacement": 0.05
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2028-06",
+      "node_id": "2028_hydrogen_economy",
+      "title": "Hydrogen Economy Viability",
+      "description": "Green hydrogen finds limited use in steel and shipping; not a broad solution",
+      "status": "DIVERGENCE",
+      "branch_taken": "niche_role",
+      "domain": "energy",
+      "probability_of_branch": 0.35,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.01,
+        "renewable_energy_share": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2029-03",
+      "node_id": "2029_pandemic_2",
+      "title": "Second Pandemic",
+      "description": "New pathogen detected and contained rapidly",
+      "status": "DIVERGENCE",
+      "branch_taken": "contained_quickly",
+      "domain": "social",
+      "probability_of_branch": 0.3333,
+      "explanation": null,
+      "world_state_delta": {
+        "global_pandemic_deaths": 50000
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": "The emergence of H7N3 influenza in Myanmar's Yangon region during March 2029 initially triggered fears of repeating the COVID-19 catastrophe, yet the global response proved dramatically more effective than its predecessor nine years earlier. Within seventy-two hours of the first confirmed cases, the WHO's reformed rapid response protocols had deployed containment teams to Southeast Asia, while improved surveillance networks identified transmission chains before they could establish foothold clusters beyond the initial outbreak zone. By month's end, fewer than 400 cases had been recorded worldwide, with the pathogen successfully contained through coordinated quarantine measures and the rapid deployment of adapted mRNA vaccines developed within weeks rather than months. The crisis served as validation for the pandemic preparedness infrastructure rebuilt after 2020, though it occurred against the backdrop of ongoing climate disruption and the persistent energy shortages that had begun plaguing developed nations since 2025.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2030-06",
+      "node_id": "2030_japan_population",
+      "title": "Japan Population Crisis",
+      "description": "Japan deploys robots and AI extensively in eldercare and services",
+      "status": "DIVERGENCE",
+      "branch_taken": "robot_care_economy",
+      "domain": "demographics",
+      "probability_of_branch": 0.3,
+      "explanation": "Robotics and automation compensate for shrinking workforce; Japan becomes model for aging societies",
+      "world_state_delta": {
+        "automation_displacement": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2030-06",
+      "node_id": "2030_space_tourism",
+      "title": "Space Tourism Mainstream",
+      "description": "First orbital hotel opens; multi-day stays in space become available to wealthy tourists",
+      "status": "DIVERGENCE",
+      "branch_taken": "orbital_hotels",
+      "domain": "space",
+      "probability_of_branch": 0.15,
+      "explanation": "Commercial space stations pivot from research to hospitality; SpaceX Dragon and Starliner serve as taxis",
+      "world_state_delta": {
+        "space_development_index": 0.08
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2030-06",
+      "node_id": "2030_us_realignment",
+      "title": "US Political Realignment",
+      "description": "Third and fourth parties gain significant electoral power",
+      "status": "DIVERGENCE",
+      "branch_taken": "multiparty_emergence",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.0909,
+      "explanation": "Ranked choice voting adoption or party splits create viable multi-party competition",
+      "world_state_delta": {
+        "us_polarization": -0.05,
+        "global_democracy_index": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2031-06",
+      "node_id": "2031_biotech_regulation",
+      "title": "Biotechnology Regulation",
+      "description": "Fragmented regulation creates biotech havens and regulatory arbitrage",
+      "status": "DIVERGENCE",
+      "branch_taken": "fragmented",
+      "domain": "technology",
+      "probability_of_branch": 0.3,
+      "explanation": "Some nations permissive, others restrictive; development migrates to favorable jurisdictions",
+      "world_state_delta": {
+        "us_life_expectancy_delta": 0.3,
+        "governance_model": -0.02
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2031-06",
+      "node_id": "2031_space_debris_cleanup",
+      "title": "Space Debris Cleanup Industry",
+      "description": "Debris removal technology proves too expensive or unreliable at scale",
+      "status": "DIVERGENCE",
+      "branch_taken": "technology_fails",
+      "domain": "space",
+      "probability_of_branch": 0.15,
+      "explanation": "Prototype missions succeed but economics don't work; orbital environment slowly degrades",
+      "world_state_delta": {
+        "space_development_index": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2031-06",
+      "node_id": "2031_ai_displacement",
+      "title": "AI Economic Displacement",
+      "description": "AI adoption slower than predicted; labor market disruption modest",
+      "status": "DIVERGENCE",
+      "branch_taken": "slower_than_expected",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": "Implementation challenges, regulation, and organizational inertia slow AI displacement",
+      "world_state_delta": {
+        "inequality_index": 0.01,
+        "automation_displacement": 0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2032-06",
+      "node_id": "2032_digital_currency",
+      "title": "Digital Currency Landscape",
+      "description": "Central bank digital currencies become primary payment method globally",
+      "status": "DIVERGENCE",
+      "branch_taken": "cbdc_dominant",
+      "domain": "technology",
+      "probability_of_branch": 0.35,
+      "explanation": "China's digital yuan success leads other nations to launch CBDCs; programmable money becomes norm",
+      "world_state_delta": {
+        "surveillance_state_index": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2032-06",
+      "node_id": "2032_china_demographics",
+      "title": "China Demographic Reckoning",
+      "description": "Massive automation investment offsets demographic decline",
+      "status": "DIVERGENCE",
+      "branch_taken": "automation_compensates",
+      "domain": "demographics",
+      "probability_of_branch": 0.2,
+      "explanation": "China deploys robots and AI to maintain productivity despite shrinking workforce",
+      "world_state_delta": {
+        "china_power_index": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2032-06",
+      "node_id": "2032_eu_defense",
+      "title": "European Defense Architecture",
+      "description": "US reduces NATO commitment; Europeans forced to unite defensively",
+      "status": "DIVERGENCE",
+      "branch_taken": "us_withdrawal_forces_unity",
+      "domain": "security",
+      "probability_of_branch": 0.15,
+      "explanation": "American isolationism or pivot to Asia forces European strategic autonomy",
+      "world_state_delta": {
+        "eu_cohesion": 0.05,
+        "us_global_standing": -0.05
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2032-06",
+      "node_id": "2032_moon_base",
+      "title": "Lunar Base Establishment",
+      "description": "Both US and China establish separate lunar outposts; space competition intensifies",
+      "status": "DIVERGENCE",
+      "branch_taken": "us_china_bases",
+      "domain": "technology",
+      "probability_of_branch": 0.2966,
+      "explanation": "Geopolitical rivalry drives both powers to invest in permanent lunar presence",
+      "world_state_delta": {
+        "space_development_index": 0.15
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2032-06",
+      "node_id": "2032_ai_governance",
+      "title": "AI Governance Framework",
+      "description": "AI development treated as global commons with open access and shared safety research",
+      "status": "DIVERGENCE",
+      "branch_taken": "open_global_commons",
+      "domain": "technology",
+      "probability_of_branch": 0.1,
+      "explanation": "Open-source movement prevails; international collaboration on safety becomes the norm",
+      "world_state_delta": {
+        "governance_model": 0.08,
+        "existential_risk_cumulative": -0.03
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2033-06",
+      "node_id": "2033_ai_science",
+      "title": "AI-Driven Scientific Discovery",
+      "description": "AI aids science but produces only incremental improvements",
+      "status": "DIVERGENCE",
+      "branch_taken": "incremental_only",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": "AI useful for optimization and analysis but fundamental breakthroughs still require human insight",
+      "world_state_delta": {
+        "us_life_expectancy_delta": 0.2
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2033-06",
+      "node_id": "2033_global_tax_reform",
+      "title": "Global Tax Reform",
+      "description": "Tax havens and avoidance schemes adapt faster than regulations",
+      "status": "DIVERGENCE",
+      "branch_taken": "tax_havens_persist",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.35,
+      "explanation": "Crypto, shell companies, and new jurisdictions undermine reform efforts",
+      "world_state_delta": {
+        "inequality_index": 0.03,
+        "governance_model": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2033-06",
+      "node_id": "2033_green_economy_boom",
+      "title": "Green Industrial Revolution",
+      "description": "Clean energy billionaires form a new oligarchy; green transition benefits concentrate at top",
+      "status": "DIVERGENCE",
+      "branch_taken": "green_inequality",
+      "domain": "economic",
+      "probability_of_branch": 0.25,
+      "explanation": "Battery, solar, and hydrogen patents create massive wealth concentration; developing nations left behind",
+      "world_state_delta": {
+        "global_gdp_growth_modifier": 0.0231,
+        "inequality_index": 0.1,
+        "climate_temp_anomaly": -0.03,
+        "renewable_energy_share": 0.08,
+        "global_democracy_index": -0.03,
+        "africa_development_index": -0.02
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2033-06",
+      "node_id": "2033_urbanization",
+      "title": "Global Urbanization Trajectory",
+      "description": "Rapid urbanization outpaces infrastructure; slums expand across Global South",
+      "status": "DIVERGENCE",
+      "branch_taken": "slum_expansion",
+      "domain": "demographics",
+      "probability_of_branch": 0.3,
+      "explanation": "Billions live in informal settlements without adequate services, sanitation, or safety",
+      "world_state_delta": {
+        "inequality_index": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2033-06",
+      "node_id": "2033_us_fracture",
+      "title": "US Institutional Fracture",
+      "description": "States selectively ignore federal authority on key issues",
+      "status": "DIVERGENCE",
+      "branch_taken": "selective_nullification",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.25,
+      "explanation": "Red and blue states openly defy federal law on immigration, guns, abortion, and climate",
+      "world_state_delta": {
+        "us_polarization": 0.05,
+        "us_global_standing": -0.05,
+        "global_democracy_index": -0.03
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2033-06",
+      "node_id": "2033_post_oil",
+      "title": "Post-Oil Economy Transition",
+      "description": "Saudi Arabia successfully diversifies economy beyond oil",
+      "status": "DIVERGENCE",
+      "branch_taken": "saudi_succeeds",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.2062,
+      "explanation": "Vision 2030 and beyond delivers; tourism, tech, and sovereign wealth fund sustain prosperity",
+      "world_state_delta": {
+        "conflict_deaths": -1000
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2033-09",
+      "node_id": "2033_arctic_ice_free",
+      "title": "Arctic Ice-Free Summers",
+      "description": "First ice-free Arctic summer occurs around 2033 as models predict",
+      "status": "DIVERGENCE",
+      "branch_taken": "historical_2033",
+      "domain": "climate",
+      "probability_of_branch": 0.35,
+      "explanation": "Arctic warming follows current trajectory; summer ice disappears on schedule",
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.1,
+        "arctic_ice_status": -0.6
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2034-06",
+      "node_id": "2034_antibiotic_resistance",
+      "title": "Antibiotic Resistance Crisis",
+      "description": "Antibiotic stewardship programs and regulation slow resistance emergence",
+      "status": "DIVERGENCE",
+      "branch_taken": "crisis_managed",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": "Agricultural antibiotic bans and hospital protocols reduce resistance spread",
+      "world_state_delta": {
+        "global_pandemic_deaths": -5000,
+        "us_life_expectancy_delta": 0.3
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2034-06",
+      "node_id": "2034_food_shock",
+      "title": "Global Food System Shock",
+      "description": "Major food price spikes but international coordination prevents famine",
+      "status": "DIVERGENCE",
+      "branch_taken": "managed_crisis",
+      "domain": "climate",
+      "probability_of_branch": 0.3,
+      "explanation": "Strategic reserves, trade agreements, and emergency aid prevent worst outcomes despite crop failures",
+      "world_state_delta": {
+        "food_security_index": -0.1,
+        "conflict_deaths": 5000
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2034-06",
+      "node_id": "2034_kessler_risk",
+      "title": "Kessler Syndrome Risk",
+      "description": "Major debris event narrowly avoided; spurs regulatory action",
+      "status": "DIVERGENCE",
+      "branch_taken": "near_miss",
+      "domain": "technology",
+      "probability_of_branch": 0.35,
+      "explanation": "Close call involving mega-constellation satellites triggers international debris mitigation rules",
+      "world_state_delta": {
+        "space_development_index": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2034-06",
+      "node_id": "2034_israel_palestine",
+      "title": "Israel-Palestine Resolution",
+      "description": "Novel confederation model provides shared sovereignty",
+      "status": "DIVERGENCE",
+      "branch_taken": "confederation",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.1,
+      "explanation": "Creative diplomatic framework offers both peoples self-governance within shared geographic space",
+      "world_state_delta": {
+        "conflict_deaths": -3000
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2034-06",
+      "node_id": "2034_lunar_economy",
+      "title": "Lunar Economy Begins",
+      "description": "Helium-3 extraction begins; paired with fusion reactor progress on Earth",
+      "status": "DIVERGENCE",
+      "branch_taken": "he3_breakthrough",
+      "domain": "space",
+      "probability_of_branch": 0.15,
+      "explanation": "Lunar regolith processing yields commercially relevant He-3 quantities as fusion nears viability",
+      "world_state_delta": {
+        "space_development_index": 0.12,
+        "renewable_energy_share": 0.02
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2035-06",
+      "node_id": "2035_african_union",
+      "title": "African Union Evolution",
+      "description": "African Union gains real authority and institutional capacity",
+      "status": "DIVERGENCE",
+      "branch_taken": "strengthened",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.25,
+      "explanation": "Member states cede sovereignty on trade, security, and governance to continental body",
+      "world_state_delta": {
+        "africa_development_index": 0.08
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2035-06",
+      "node_id": "2035_arctic_governance",
+      "title": "Arctic Governance Framework",
+      "description": "Russia leverages geography and military presence to dominate Arctic governance",
+      "status": "DIVERGENCE",
+      "branch_taken": "russian_dominance",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.2,
+      "explanation": "Longest Arctic coastline and military buildup give Russia effective control of key areas",
+      "world_state_delta": {
+        "russia_stability": 0.03,
+        "nuclear_risk_level": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2035-06",
+      "node_id": "2035_artificial_wombs",
+      "title": "Ectogenesis Research",
+      "description": "Full ectogenesis clinically available; profound shift in reproductive norms",
+      "status": "DIVERGENCE",
+      "branch_taken": "full_ectogenesis_available",
+      "domain": "health",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "gender_equity_index": 0.06,
+        "global_population_billions": 0.1
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2035-06",
+      "node_id": "2035_deep_sea_mining",
+      "title": "Deep Sea Mining",
+      "description": "International moratorium or ban on deep-sea mining",
+      "status": "DIVERGENCE",
+      "branch_taken": "environmental_ban",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": "Scientific evidence of ecosystem damage and environmental movement pressure block exploitation",
+      "world_state_delta": {
+        "governance_model": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2035-06",
+      "node_id": "2035_china_post_xi",
+      "title": "China Post-Xi Transition",
+      "description": "Significant democratic reforms begin in China",
+      "status": "DIVERGENCE",
+      "branch_taken": "democratic_opening",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.1,
+      "explanation": "Economic pressures and new leadership create space for limited democratic experimentation",
+      "world_state_delta": {
+        "china_power_index": 0.05,
+        "global_democracy_index": 0.05
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2035-06",
+      "node_id": "2035_carbon_capture",
+      "title": "Carbon Capture at Scale",
+      "description": "Carbon capture requires too much energy; net benefit marginal",
+      "status": "DIVERGENCE",
+      "branch_taken": "energy_penalty",
+      "domain": "climate",
+      "probability_of_branch": 0.1818,
+      "explanation": "Energy requirements for capture offset much of the climate benefit",
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.02,
+        "renewable_energy_share": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2035-06",
+      "node_id": "2035_neural_interface",
+      "title": "Neural Interface Technology",
+      "description": "Neural interfaces limited to medical applications; paralysis, epilepsy, depression",
+      "status": "DIVERGENCE",
+      "branch_taken": "medical_only",
+      "domain": "technology",
+      "probability_of_branch": 0.3636,
+      "explanation": "Regulatory caution and public unease restrict BCIs to therapeutic use cases",
+      "world_state_delta": {
+        "human_augmentation_prevalence": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2035-06",
+      "node_id": "2035_europe_demographics",
+      "title": "European Demographic Challenge",
+      "description": "European pension systems become unsustainable; austerity crises",
+      "status": "ESCALATED",
+      "branch_taken": "pension_collapse",
+      "domain": "demographics",
+      "probability_of_branch": 0.15,
+      "explanation": "Worker-to-retiree ratio falls below sustainability; benefit cuts trigger social unrest",
+      "world_state_delta": {
+        "eu_cohesion": -0.1
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2036-06",
+      "node_id": "2036_asean_integration",
+      "title": "ASEAN Integration Trajectory",
+      "description": "ASEAN achieves EU-like economic integration with single market elements",
+      "status": "DIVERGENCE",
+      "branch_taken": "deeper_integration",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.25,
+      "explanation": "Economic growth and shared challenges drive deeper institutional cooperation",
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2036-06",
+      "node_id": "2036_fusion_energy",
+      "title": "Fusion Energy Progress",
+      "description": "Major fusion programs abandoned; resources redirected to renewables",
+      "status": "DIVERGENCE",
+      "branch_taken": "abandoned",
+      "domain": "technology",
+      "probability_of_branch": 0.15,
+      "explanation": "Solar and battery costs drop so fast that fusion investment no longer justified",
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.01,
+        "renewable_energy_share": 0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2036-06",
+      "node_id": "2036_northern_sea_route",
+      "title": "Northern Sea Route",
+      "description": "China-Russia partnership dominates Northern Sea Route; 'Polar Silk Road'",
+      "status": "DIVERGENCE",
+      "branch_taken": "china_russia_corridor",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.15,
+      "explanation": "Chinese investment and Russian infrastructure create joint control of Arctic shipping",
+      "world_state_delta": {
+        "china_power_index": 0.03,
+        "russia_stability": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2037-06",
+      "node_id": "2037_latin_america",
+      "title": "Latin America Political Direction",
+      "description": "New wave of left-populist governments across the region",
+      "status": "DIVERGENCE",
+      "branch_taken": "pink_tide_2",
+      "domain": "geopolitical",
+      "probability_of_branch": 0.25,
+      "explanation": "Inequality and climate impacts drive renewed left-wing electoral victories",
+      "world_state_delta": {
+        "us_global_standing": -0.02,
+        "inequality_index": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2038-03",
+      "node_id": "2038_genetic_enhancement",
+      "title": "Human Genetic Enhancement Debate",
+      "description": "Polygenic screening limited to serious genetic diseases; enhancement taboo holds",
+      "status": "DIVERGENCE",
+      "branch_taken": "limited_disease_screening",
+      "domain": "health",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": 0.01,
+        "human_augmentation_prevalence": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2038-06",
+      "node_id": "2038_genetic_privacy",
+      "title": "Genetic Privacy",
+      "description": "Genetic data used for insurance and employment discrimination",
+      "status": "DIVERGENCE",
+      "branch_taken": "insurance_discrimination",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": "Insurers and employers use genetic risk scores; genetic underclass emerges",
+      "world_state_delta": {
+        "inequality_index": 0.01,
+        "governance_model": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2038-06",
+      "node_id": "2038_space_mining",
+      "title": "Space Resource Extraction",
+      "description": "Space mining sustained only through government subsidies for strategic purposes",
+      "status": "DIVERGENCE",
+      "branch_taken": "government_subsidized",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": "Military and strategic considerations justify subsidies; not commercially self-sustaining",
+      "world_state_delta": {
+        "space_development_index": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2038-06",
+      "node_id": "2038_autonomous_weapons",
+      "title": "Autonomous Weapons Systems",
+      "description": "Autonomous weapons deployed by dozens of nations with minimal regulation",
+      "status": "DIVERGENCE",
+      "branch_taken": "proliferation",
+      "domain": "security",
+      "probability_of_branch": 0.35,
+      "explanation": "Arms manufacturers drive adoption; no effective international controls emerge",
+      "world_state_delta": {
+        "nuclear_risk_level": 0.05,
+        "drone_warfare_prevalence": 0.2
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2038-06",
+      "node_id": "2038_cislunar_economy",
+      "title": "Cislunar Economy",
+      "description": "Earth-Moon corridor fully operational with regular cargo and crew transport",
+      "status": "DIVERGENCE",
+      "branch_taken": "thriving_corridor",
+      "domain": "space",
+      "probability_of_branch": 0.2,
+      "explanation": "Fuel depots at Lagrange points, reusable lunar landers, and surface infrastructure create self-sustaining logistics chain",
+      "world_state_delta": {
+        "space_development_index": 0.12
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2040-01",
+      "node_id": "2040_antibiotic_crisis",
+      "title": "Antibiotic Crisis Resolution",
+      "description": "Routine infections become lethal again; surgery and chemotherapy become high-risk",
+      "status": "ESCALATED",
+      "branch_taken": "post_antibiotic",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "global_pandemic_deaths": 200000,
+        "us_life_expectancy_delta": -3.0
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": "The antibiotic resistance crisis that had been building since the early 2020s reached its devastating crescendo in January 2040, when routine appendectomies in London and pneumonia cases in S\u00e3o Paulo began claiming lives at rates not seen since the pre-penicillin era. Within months, hospitals across the developed world were forced to implement strict surgical rationing protocols, while cancer treatment centers watched helplessly as chemotherapy patients succumbed to infections that would have been trivial just five years earlier. The irony was not lost on contemporary observers that humanity could maintain regular cargo flights to Luna City yet found itself helpless against common streptococcus infections. By year's end, global surgical mortality had increased by 340%, effectively reversing nearly a century of medical progress in infection control.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2040-01",
+      "node_id": "2040_us_infrastructure",
+      "title": "US Infrastructure Reckoning",
+      "description": "Infrastructure increasingly privatized; quality improves but access becomes unequal",
+      "status": "DIVERGENCE",
+      "branch_taken": "privatized",
+      "domain": "regional",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2040-06",
+      "node_id": "2040_mars_mission",
+      "title": "Mars Mission",
+      "description": "Technical and funding challenges push crewed Mars mission to the 2050s",
+      "status": "DIVERGENCE",
+      "branch_taken": "delayed_2050",
+      "domain": "space",
+      "probability_of_branch": 0.3478,
+      "explanation": null,
+      "world_state_delta": {
+        "space_development_index": 0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2041-01",
+      "node_id": "2041_ocean_acidification",
+      "title": "Ocean Acidification Status",
+      "description": "Localized ocean alkalinity enhancement and marine reserves mitigate worst impacts",
+      "status": "DIVERGENCE",
+      "branch_taken": "managed",
+      "domain": "climate",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "biodiversity_index": -0.03,
+        "food_security_index": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2042-01",
+      "node_id": "2042_synthetic_biology",
+      "title": "Synthetic Biology Maturity",
+      "description": "Synthetic biology transforms medicine with designer therapies and organ printing",
+      "status": "DIVERGENCE",
+      "branch_taken": "medical_revolution",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": -0.02,
+        "us_life_expectancy_delta": 2.0
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2042-01",
+      "node_id": "2042_china_political",
+      "title": "China Political Trajectory",
+      "description": "China develops unique hybrid system blending authoritarian control with limited pluralism",
+      "status": "DIVERGENCE",
+      "branch_taken": "hybrid",
+      "domain": "regional",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2042-06",
+      "node_id": "2042_mars_comms",
+      "title": "Mars Communication Infrastructure",
+      "description": "Mars communication infrastructure delayed; early missions rely on direct-to-Earth links",
+      "status": "DIVERGENCE",
+      "branch_taken": "delayed_deployment",
+      "domain": "space",
+      "probability_of_branch": 0.25,
+      "explanation": "Funding and launch vehicle availability push relay constellation to the late 2040s",
+      "world_state_delta": {
+        "space_development_index": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2043-01",
+      "node_id": "2043_education_transformation",
+      "title": "Education Transformation",
+      "description": "Blend of AI and human instruction becomes the global standard",
+      "status": "DIVERGENCE",
+      "branch_taken": "hybrid",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2044-01",
+      "node_id": "2044_space_law",
+      "title": "Space Law Framework",
+      "description": "Nations fail to agree on space governance; lawless frontier persists",
+      "status": "DIVERGENCE",
+      "branch_taken": "no_agreement",
+      "domain": "space",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "space_development_index": -0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2044-06",
+      "node_id": "2044_us_constitutional",
+      "title": "US Constitutional Amendment",
+      "description": "Broad democratic reforms including ranked choice voting, term limits, and campaign finance",
+      "status": "DIVERGENCE",
+      "branch_taken": "democratic_reform",
+      "domain": "regional",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": -0.08,
+        "global_democracy_index": 0.03
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2044-06",
+      "node_id": "2044_climate_refugee",
+      "title": "Climate Refugee Treaty",
+      "description": "Global binding treaty establishes legal framework for climate refugees with resettlement quotas",
+      "status": "DIVERGENCE",
+      "branch_taken": "binding_treaty",
+      "domain": "climate",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "eu_cohesion": 0.02,
+        "conflict_deaths": -5000,
+        "global_democracy_index": 0.03
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2045-01",
+      "node_id": "2045_arctic_extraction",
+      "title": "Arctic Extraction",
+      "description": "Technological alternatives make Arctic resource extraction economically unnecessary",
+      "status": "DIVERGENCE",
+      "branch_taken": "tech_unnecessary",
+      "domain": "regional",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "biodiversity_index": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2045-01",
+      "node_id": "2045_digital_nations",
+      "title": "Digital Nations",
+      "description": "Digital nations gain international recognition with virtual territory and citizenship",
+      "status": "DIVERGENCE",
+      "branch_taken": "emerge",
+      "domain": "technology",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": 0.03,
+        "governance_model": 0.08
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2045-01",
+      "node_id": "2045_me_new_economy",
+      "title": "Middle East New Economy",
+      "description": "Gulf states leverage solar resources to become global hydrogen exporters",
+      "status": "DIVERGENCE",
+      "branch_taken": "hydrogen_economy",
+      "domain": "regional",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "middle_east_stability": 0.1,
+        "renewable_energy_share": 0.05
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2045-01",
+      "node_id": "2045_eu_federation",
+      "title": "EU Federation Decision",
+      "description": "Core EU nations deepen integration while maintaining national sovereignty",
+      "status": "DIVERGENCE",
+      "branch_taken": "enhanced_cooperation",
+      "domain": "regional",
+      "probability_of_branch": 0.2273,
+      "explanation": null,
+      "world_state_delta": {
+        "eu_cohesion": 0.08
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2045-01",
+      "node_id": "2045_space_economy",
+      "title": "Space Economy $1T",
+      "description": "Breakthrough technologies drive space economy far beyond projections",
+      "status": "DIVERGENCE",
+      "branch_taken": "explosive",
+      "domain": "space",
+      "probability_of_branch": 0.1429,
+      "explanation": null,
+      "world_state_delta": {
+        "space_development_index": 0.2
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2045-06",
+      "node_id": "2045_space_manufacturing",
+      "title": "In-Space Manufacturing",
+      "description": "Space factories produce high-value goods at profit; multiple orbital manufacturing platforms operational",
+      "status": "DIVERGENCE",
+      "branch_taken": "commercially_viable",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": "ZBLAN fiber optics and metal alloys manufactured in orbit command premium prices that exceed launch costs",
+      "world_state_delta": {
+        "global_gdp_growth_modifier": 0.01,
+        "space_development_index": 0.1
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2045-06",
+      "node_id": "2045_cognitive_enhancement",
+      "title": "Cognitive Enhancement",
+      "description": "Cognitive enhancement regulated but available; adoption remains a personal choice",
+      "status": "DIVERGENCE",
+      "branch_taken": "voluntary",
+      "domain": "technology",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": 0.02,
+        "human_augmentation_prevalence": 0.15
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2046-01",
+      "node_id": "2046_currency_evolution",
+      "title": "Currency Evolution",
+      "description": "Multiple reserve currencies coexist; dollar, yuan, euro share global trade",
+      "status": "DIVERGENCE",
+      "branch_taken": "multi_currency",
+      "domain": "economic",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2047-01",
+      "node_id": "2047_arms_control",
+      "title": "Arms Control 2040s",
+      "description": "Several new nations acquire nuclear weapons; non-proliferation regime collapses",
+      "status": "ESCALATED",
+      "branch_taken": "proliferation",
+      "domain": "security",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "nuclear_risk_level": 0.15,
+        "existential_risk_cumulative": 0.08
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2048-01",
+      "node_id": "2048_african_trade",
+      "title": "African Trade Integration",
+      "description": "Climate impacts severely disrupt African economic development and trade",
+      "status": "ESCALATED",
+      "branch_taken": "climate_disrupted",
+      "domain": "economic",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "food_security_index": -0.08,
+        "conflict_deaths": 15000
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": "The climate refugee framework established in 2044 proved insufficient as accelerating desertification and flooding across the Sahel and East Africa triggered economic collapse rather than orderly resettlement by January 2048. The Continental Free Trade Area, which had shown promise in connecting Lagos to Cairo through integrated supply chains, fractured as infrastructure failures made cross-border commerce increasingly untenable. Nigeria's petroleum-dependent economy contracted by thirty percent as coastal refineries flooded repeatedly, while Kenya's agricultural exports ceased entirely following three consecutive harvest failures. What emerged was not the anticipated African economic renaissance of the 2040s, but rather a continental crisis that would reshape global migration patterns for the remainder of the century.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2048-01",
+      "node_id": "2048_digital_immortality",
+      "title": "Digital Immortality Attempt",
+      "description": "Memories and personality can be uploaded but result lacks subjective experience",
+      "status": "DIVERGENCE",
+      "branch_taken": "partial_upload",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "existential_risk_cumulative": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2048-01",
+      "node_id": "2048_mars_settlement",
+      "title": "Mars Settlement",
+      "description": "Permanent Mars settlement remains aspirational; technology not yet sufficient",
+      "status": "DIVERGENCE",
+      "branch_taken": "not_yet",
+      "domain": "space",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2048-06",
+      "node_id": "2048_asteroid_mining",
+      "title": "Asteroid Redirect Mission",
+      "description": "Asteroid mining technically possible but economics don't close; terrestrial alternatives cheaper",
+      "status": "DIVERGENCE",
+      "branch_taken": "too_expensive",
+      "domain": "space",
+      "probability_of_branch": 0.3,
+      "explanation": "Launch and processing costs exceed the value of returned materials; investors retreat",
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2049-01",
+      "node_id": "2049_latin_integration",
+      "title": "Latin American Integration",
+      "description": "Issue-specific cooperation on climate, migration, and trade without formal union",
+      "status": "DIVERGENCE",
+      "branch_taken": "cooperation",
+      "domain": "regional",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2049-06",
+      "node_id": "2049_hybrid_governance",
+      "title": "AI-Human Hybrid Governance",
+      "description": "AI systems design and optimize policy with human oversight limited to approval",
+      "status": "DIVERGENCE",
+      "branch_taken": "algorithmic_policy",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": -0.03,
+        "governance_model": 0.1
+      },
+      "is_high_impact": true,
+      "confidence": "MEDIUM",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2050-01",
+      "node_id": "2050_2c_threshold",
+      "title": "2C Threshold Status",
+      "description": "Warming exceeds 3C; catastrophic and potentially irreversible climate change",
+      "status": "ESCALATED",
+      "branch_taken": "over_3c",
+      "domain": "climate",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.4
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2050-01",
+      "node_id": "2050_africa",
+      "title": "Africa at Mid-Century",
+      "description": "Africa emerges as major economic and political power with young, dynamic workforce",
+      "status": "DIVERGENCE",
+      "branch_taken": "rising_power",
+      "domain": "regional",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "inequality_index": -0.05,
+        "global_democracy_index": 0.03
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2050-01",
+      "node_id": "2050_arctic_mature",
+      "title": "Arctic Governance Mature",
+      "description": "Arctic resources extracted aggressively; environmental damage severe",
+      "status": "DIVERGENCE",
+      "branch_taken": "exploited",
+      "domain": "regional",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.05,
+        "biodiversity_index": -0.1
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2050-01",
+      "node_id": "2050_china_status",
+      "title": "China at Mid-Century",
+      "description": "Demographic decline and economic stagnation diminish China's global influence",
+      "status": "DIVERGENCE",
+      "branch_taken": "declined",
+      "domain": "regional",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "us_global_standing": 0.03
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2050-01",
+      "node_id": "2050_europe",
+      "title": "Europe at Mid-Century",
+      "description": "United Europe emerges as third superpower alongside US and China",
+      "status": "DIVERGENCE",
+      "branch_taken": "superpower",
+      "domain": "regional",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "eu_cohesion": 0.15,
+        "us_global_standing": -0.03
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2050-01",
+      "node_id": "2050_india",
+      "title": "India at Mid-Century",
+      "description": "India transforms into a Hindu nationalist state; secular democracy erodes",
+      "status": "DIVERGENCE",
+      "branch_taken": "hindu_state",
+      "domain": "regional",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "conflict_deaths": 5000,
+        "global_democracy_index": -0.03
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": "By January 2050, the Indian Republic had completed its transformation into what scholars now term the \"Dharmic State,\" as the Bharatiya Janata Party's three-decade consolidation of power finally extinguished the secular democratic framework established by Nehru and the Congress movement a century earlier. Prime Minister Yogi Adityanath's constitutional amendments of 2049 formally enshrined Hindu religious law as the supreme legal authority, relegating the 200 million Muslim citizens to a legally subordinate status reminiscent of the Ottoman millet system. This represented a profound departure from the pluralistic democracy that had defined India since 1947, fundamentally altering the subcontinent's role as it emerged alongside a declining China and ascendant Africa as a major power in the multipolar world of 2050. The transformation occurred gradually enough that international observers, preoccupied with climate catastrophe and the new European-American-Chinese triumvirate, barely registered the death of the world's largest democracy.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
+    },
+    {
+      "year_month": "2050-01",
+      "node_id": "2050_middle_east",
+      "title": "Middle East at Mid-Century",
+      "description": "Gradual transition continues without dramatic success or failure",
+      "status": "DIVERGENCE",
+      "branch_taken": "status_quo",
+      "domain": "regional",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "middle_east_stability": 0.02
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2050-01",
+      "node_id": "2050_us_restructured",
+      "title": "US Restructured",
+      "description": "US restructures into more autonomous regions with weaker federal government",
+      "status": "DIVERGENCE",
+      "branch_taken": "federated",
+      "domain": "regional",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "us_polarization": -0.05,
+        "us_global_standing": -0.05
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2050-06",
+      "node_id": "2050_space_solar_power",
+      "title": "Space Solar Power",
+      "description": "Technology works but deployment remains limited to pilot projects",
+      "status": "DIVERGENCE",
+      "branch_taken": "technically_feasible",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": "Engineering challenges solved but scale-up costs keep space solar marginal vs terrestrial renewables",
+      "world_state_delta": {
+        "renewable_energy_share": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2052-01",
+      "node_id": "2052_asteroid_deflection",
+      "title": "Asteroid Deflection",
+      "description": "International planetary defense system operational and funded by global consortium",
+      "status": "DIVERGENCE",
+      "branch_taken": "international_system",
+      "domain": "space",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": 0.01
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2052-01",
+      "node_id": "2052_sea_level",
+      "title": "Sea Level Rise Status",
+      "description": "Sea level rise significant but managed through infrastructure and planned retreat",
+      "status": "DIVERGENCE",
+      "branch_taken": "managed",
+      "domain": "climate",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "sea_level_rise_meters": 0.1
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2053-01",
+      "node_id": "2053_ai_existential",
+      "title": "AI Existential Risk Assessment",
+      "description": "AI safety research succeeds; advanced AI systems remain reliably under human control",
+      "status": "DIVERGENCE",
+      "branch_taken": "controlled",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "existential_risk_cumulative": -0.08
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2055-01",
+      "node_id": "2055_human_ai",
+      "title": "Human-AI Relationship",
+      "description": "Humans and AI occupy distinct domains with clear boundaries and limited interaction",
+      "status": "DIVERGENCE",
+      "branch_taken": "separate",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "existential_risk_cumulative": -0.03
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2055-01",
+      "node_id": "2055_nuclear_status",
+      "title": "Nuclear Weapons Status",
+      "description": "Tactical nuclear weapons normalized in military doctrine; use threshold lowered",
+      "status": "ESCALATED",
+      "branch_taken": "tactical_normal",
+      "domain": "security",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "nuclear_risk_level": 0.12,
+        "existential_risk_cumulative": 0.06
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2055-01",
+      "node_id": "2055_population_peak",
+      "title": "Population Peak",
+      "description": "Global population peaks near 9 billion and begins gradual decline",
+      "status": "DIVERGENCE",
+      "branch_taken": "peaked_9b",
+      "domain": "economic",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {
+        "global_population_billions": 0.5
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2055-01",
+      "node_id": "2055_mars_self_sufficient",
+      "title": "Mars Self-Sufficiency",
+      "description": "Mars settlement abandoned as unsustainable; resources redirected to Earth",
+      "status": "DIVERGENCE",
+      "branch_taken": "abandoned",
+      "domain": "space",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "space_development_index": -0.08
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2058-01",
+      "node_id": "2058_life_extension",
+      "title": "Life Extension",
+      "description": "Aging proves resistant to intervention; gains limited to incremental improvements",
+      "status": "DIVERGENCE",
+      "branch_taken": "minimal",
+      "domain": "technology",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {
+        "us_life_expectancy_delta": 2.0
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2060-01",
+      "node_id": "2060_new_world_order",
+      "title": "New World Order",
+      "description": "US and China dominate global affairs as co-equal superpowers with defined spheres",
+      "status": "DIVERGENCE",
+      "branch_taken": "us_china_duopoly",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "governance_model": -0.24
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2062-06",
+      "node_id": "2062_autonomous_war",
+      "title": "Autonomous Warfare",
+      "description": "Meaningful human control maintained over all lethal weapons systems through international norms",
+      "status": "DIVERGENCE",
+      "branch_taken": "human_controlled",
+      "domain": "security",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "drone_warfare_prevalence": 0.05
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2065-01",
+      "node_id": "2065_arctic",
+      "title": "Arctic 2065",
+      "description": "Technological change makes Arctic resources and shipping routes less strategically important",
+      "status": "DIVERGENCE",
+      "branch_taken": "irrelevant",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2065-01",
+      "node_id": "2065_bioweapon_risk",
+      "title": "Bioweapon Risk",
+      "description": "Engineered pathogen released causing devastating pandemic; millions die before containment",
+      "status": "ESCALATED",
+      "branch_taken": "engineered_pandemic",
+      "domain": "security",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "existential_risk_cumulative": 0.25
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2065-01",
+      "node_id": "2065_china",
+      "title": "China 2065",
+      "description": "China dominates East Asia but lacks global reach; settles into regional power role",
+      "status": "DIVERGENCE",
+      "branch_taken": "regional_hegemon",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2065-01",
+      "node_id": "2065_europe",
+      "title": "Europe 2065",
+      "description": "Europe's global influence flows through culture, education, and soft power rather than military might",
+      "status": "DIVERGENCE",
+      "branch_taken": "cultural_power",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2065-01",
+      "node_id": "2065_global_culture",
+      "title": "Global Culture",
+      "description": "Cultures retreat into hostile silos; cross-cultural understanding deteriorates",
+      "status": "ESCALATED",
+      "branch_taken": "fragmented",
+      "domain": "society",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "global_democracy_index": -0.05
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2065-01",
+      "node_id": "2065_middle_east",
+      "title": "Middle East 2065",
+      "description": "External pressures and internal reforms bring lasting stability though not prosperity",
+      "status": "DIVERGENCE",
+      "branch_taken": "stabilized",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2065-01",
+      "node_id": "2065_multiplanetary",
+      "title": "Multiplanetary Status",
+      "description": "Permanent lunar bases established but Mars colonization proves too difficult",
+      "status": "DIVERGENCE",
+      "branch_taken": "moon_only",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "space_development_index": 0.08
+      },
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2065-01",
+      "node_id": "2065_population_decline",
+      "title": "Population Decline",
+      "description": "Population stabilizes through pro-natalist policies and immigration balancing",
+      "status": "DIVERGENCE",
+      "branch_taken": "stabilized",
+      "domain": "demographics",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "median_age_global": 1.0
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2065-01",
+      "node_id": "2065_us",
+      "title": "United States 2065",
+      "description": "US retreats from global leadership to focus on Western Hemisphere; still powerful but less dominant",
+      "status": "DIVERGENCE",
+      "branch_taken": "regional_power",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2065-01",
+      "node_id": "2065_climate_verdict",
+      "title": "Climate Verdict",
+      "description": "Warming at 2.5C with effective adaptation measures in place globally",
+      "status": "DIVERGENCE",
+      "branch_taken": "managed_2_5c",
+      "domain": "climate",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": 0.2,
+        "food_security_index": -0.03
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2068-06",
+      "node_id": "2068_digital_civilization",
+      "title": "Digital Civilization",
+      "description": "Seamless integration of physical and digital existence becomes the norm",
+      "status": "DIVERGENCE",
+      "branch_taken": "hybrid",
+      "domain": "technology",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {
+        "governance_model": 0.2
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2068-06",
+      "node_id": "2068_interstellar_probe",
+      "title": "Interstellar Probe",
+      "description": "Detailed plans and funding in place for interstellar probe launch within a decade",
+      "status": "DIVERGENCE",
+      "branch_taken": "planned",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2068-06",
+      "node_id": "2068_ocean_ecosystem",
+      "title": "Ocean Ecosystem State",
+      "description": "Major marine ecosystems have collapsed; fisheries devastated globally",
+      "status": "ESCALATED",
+      "branch_taken": "collapsed",
+      "domain": "climate",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "biodiversity_index": -0.25,
+        "food_security_index": -0.2
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2075-01",
+      "node_id": "2075_ai_maturity",
+      "title": "AI Maturity",
+      "description": "AI deeply integrated into all aspects of society as a powerful but controllable tool",
+      "status": "DIVERGENCE",
+      "branch_taken": "integrated_tool",
+      "domain": "technology",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2075-01",
+      "node_id": "2075_arctic_settled",
+      "title": "Arctic Settled",
+      "description": "Arctic resources extracted intensively; environmental damage extensive but economically productive",
+      "status": "ESCALATED",
+      "branch_taken": "exploited",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2075-01",
+      "node_id": "2075_climate_equilibrium",
+      "title": "Climate Equilibrium",
+      "description": "Climate system in ongoing crisis with unpredictable extreme events and cascading failures",
+      "status": "ESCALATED",
+      "branch_taken": "crisis",
+      "domain": "climate",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2075-01",
+      "node_id": "2075_global_governance",
+      "title": "Global Governance 2075",
+      "description": "Nations cooperate extensively through flexible coalitions without formal global government",
+      "status": "DIVERGENCE",
+      "branch_taken": "cooperative",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2075-01",
+      "node_id": "2075_population",
+      "title": "Global Population 2075",
+      "description": "Population has stabilized through a combination of policy interventions and life extension",
+      "status": "DIVERGENCE",
+      "branch_taken": "stable",
+      "domain": "demographics",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2075-01",
+      "node_id": "2075_solar_system",
+      "title": "Solar System Development",
+      "description": "Robotic exploration continues but permanent human presence beyond Earth proves impractical",
+      "status": "DIVERGENCE",
+      "branch_taken": "exploration_only",
+      "domain": "technology",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2075-01",
+      "node_id": "2075_us_status",
+      "title": "US Status 2075",
+      "description": "US remains one of several great powers with significant but not dominant global influence",
+      "status": "DIVERGENCE",
+      "branch_taken": "great_power",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2078-01",
+      "node_id": "2078_last_great_war",
+      "title": "Last Great War",
+      "description": "No major great power conflict materializes; deterrence and diplomacy hold",
+      "status": "DIVERGENCE",
+      "branch_taken": "no_war",
+      "domain": "security",
+      "probability_of_branch": 0.4,
+      "explanation": null,
+      "world_state_delta": {
+        "nuclear_risk_level": -0.05,
+        "existential_risk_cumulative": -0.05
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2085-01",
+      "node_id": "2085_climate_recovery",
+      "title": "Climate Recovery",
+      "description": "Climate still altered but human civilization has fully adapted to new conditions",
+      "status": "DIVERGENCE",
+      "branch_taken": "adapted",
+      "domain": "climate",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2085-01",
+      "node_id": "2085_demographics",
+      "title": "Demographics 2085",
+      "description": "Population in steady decline across all regions; societies restructuring for smaller numbers",
+      "status": "DIVERGENCE",
+      "branch_taken": "declining",
+      "domain": "demographics",
+      "probability_of_branch": 0.3,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2085-01",
+      "node_id": "2085_economic_model",
+      "title": "Economic Model 2085",
+      "description": "AI systems manage economic production and distribution; human role primarily creative and social",
+      "status": "DIVERGENCE",
+      "branch_taken": "ai_economy",
+      "domain": "economics",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2085-01",
+      "node_id": "2085_existential_assessment",
+      "title": "Existential Risk Assessment",
+      "description": "Existential risks significantly reduced through technology, governance, and cooperation",
+      "status": "DIVERGENCE",
+      "branch_taken": "safer",
+      "domain": "meta",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {
+        "existential_risk_cumulative": -0.15
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2085-01",
+      "node_id": "2085_human_identity",
+      "title": "Human Identity",
+      "description": "Human-AI merger has created a new form of being that transcends the biological-digital divide",
+      "status": "DIVERGENCE",
+      "branch_taken": "merged",
+      "domain": "society",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2085-01",
+      "node_id": "2085_interstellar",
+      "title": "Interstellar Prospects",
+      "description": "Fundamental physics breakthrough enables practical faster-than-light or near-light travel",
+      "status": "DIVERGENCE",
+      "branch_taken": "breakthrough",
+      "domain": "technology",
+      "probability_of_branch": 0.05,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2085-01",
+      "node_id": "2085_middle_east",
+      "title": "Middle East 2085",
+      "description": "Middle Eastern nations integrated into broader economic and political blocs",
+      "status": "DIVERGENCE",
+      "branch_taken": "integrated",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2085-01",
+      "node_id": "2085_world_system",
+      "title": "World System 2085",
+      "description": "Great power competition remains the dominant dynamic in international relations",
+      "status": "DIVERGENCE",
+      "branch_taken": "competitive",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2095-01",
+      "node_id": "2095_ai_human",
+      "title": "AI-Human Relationship",
+      "description": "Humanity deeply dependent on AI for all complex decisions; autonomy diminished",
+      "status": "DIVERGENCE",
+      "branch_taken": "dependent",
+      "domain": "technology",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {
+        "human_augmentation_prevalence": 0.05,
+        "governance_model": -0.05
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2095-01",
+      "node_id": "2095_china",
+      "title": "China 2095",
+      "description": "Demographic collapse and economic stagnation have reduced China to secondary status",
+      "status": "DIVERGENCE",
+      "branch_taken": "declined",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2095-01",
+      "node_id": "2095_civilization_verdict",
+      "title": "Civilization Verdict",
+      "description": "Civilization so different from 2000 that traditional metrics no longer apply",
+      "status": "DIVERGENCE",
+      "branch_taken": "transformed",
+      "domain": "meta",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2095-01",
+      "node_id": "2095_europe",
+      "title": "Europe 2095",
+      "description": "Europe is a unified federal state and major global power",
+      "status": "DIVERGENCE",
+      "branch_taken": "federation",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2095-01",
+      "node_id": "2095_final_climate",
+      "title": "Final Climate State",
+      "description": "Active recovery underway with temperatures declining toward pre-industrial levels",
+      "status": "DIVERGENCE",
+      "branch_taken": "recovering",
+      "domain": "climate",
+      "probability_of_branch": 0.15,
+      "explanation": null,
+      "world_state_delta": {
+        "climate_temp_anomaly": -0.2
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2095-01",
+      "node_id": "2095_governance",
+      "title": "Global Governance 2095",
+      "description": "AI systems handle most governance decisions; human role is oversight and values-setting",
+      "status": "DIVERGENCE",
+      "branch_taken": "ai_governed",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.1,
+      "explanation": null,
+      "world_state_delta": {
+        "governance_model": 0.15
+      },
+      "is_high_impact": true,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2095-01",
+      "node_id": "2095_population",
+      "title": "Global Population 2095",
+      "description": "Population stabilized through deliberate policy and technological intervention",
+      "status": "DIVERGENCE",
+      "branch_taken": "stable",
+      "domain": "demographics",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2095-01",
+      "node_id": "2095_space",
+      "title": "Space Civilization 2095",
+      "description": "First missions to other star systems underway; humanity reaching beyond the solar system",
+      "status": "DIVERGENCE",
+      "branch_taken": "interstellar",
+      "domain": "technology",
+      "probability_of_branch": 0.05,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2095-01",
+      "node_id": "2095_us",
+      "title": "United States 2095",
+      "description": "US remains a significant great power among several; influential but not dominant",
+      "status": "DIVERGENCE",
+      "branch_taken": "great_power",
+      "domain": "geopolitics",
+      "probability_of_branch": 0.2,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    },
+    {
+      "year_month": "2099-12",
+      "node_id": "2099_verdict",
+      "title": "Century Verdict",
+      "description": "Net negative trajectory",
+      "status": "HISTORICAL",
+      "branch_taken": "decline",
+      "domain": "meta",
+      "probability_of_branch": 0.25,
+      "explanation": null,
+      "world_state_delta": {},
+      "is_high_impact": false,
+      "confidence": "LOW",
+      "narration": null,
+      "narration_source": null
+    }
+  ],
+  "final_state": {
+    "us_polarization": 0.87,
+    "eu_cohesion": 0.81,
+    "us_global_standing": 0.35,
+    "china_power_index": 0.57,
+    "russia_stability": 0.35,
+    "middle_east_stability": 0.41,
+    "india_power_index": 0.23,
+    "latin_america_stability": 0.42,
+    "global_gdp_growth_modifier": 0.804,
+    "inequality_index": 0.92,
+    "us_debt_gdp_ratio": 0.8,
+    "crypto_market_cap_trillion": 0.5,
+    "supply_chain_resilience": 0.4,
+    "ai_development_year_offset": -8,
+    "internet_freedom_index": 0.67,
+    "social_media_penetration": 0.8,
+    "human_augmentation_prevalence": 0.35,
+    "space_development_index": 1.0,
+    "nuclear_risk_level": 0.69,
+    "terrorism_threat_index": 0.73,
+    "surveillance_state_index": 0.75,
+    "global_cyber_damage_annual_b": 162.0,
+    "drone_warfare_prevalence": 0.4,
+    "climate_temp_anomaly": 1.94,
+    "renewable_energy_share": 0.57,
+    "sea_level_rise_meters": 0.18,
+    "biodiversity_index": 0.38,
+    "water_stress_index": 0.25,
+    "food_security_index": 0.35,
+    "arctic_ice_status": 0.3,
+    "global_pandemic_deaths": 1606325,
+    "conflict_deaths": 688600,
+    "opioid_deaths_cumulative": 200000,
+    "global_democracy_index": 0.63,
+    "us_institutional_trust": 0.0,
+    "misinformation_severity": 0.94,
+    "racial_justice_index": 0.58,
+    "gender_equity_index": 0.52,
+    "us_life_expectancy_delta": 2.08,
+    "global_population_billions": 7.0,
+    "median_age_global": 27.0,
+    "automation_displacement": 0.19,
+    "governance_model": 0.75,
+    "us_unity_index": 0.7,
+    "europe_federation_index": 0.2,
+    "china_regime_type": 0.25,
+    "middle_east_post_oil": 0.05,
+    "arctic_sovereignty_resolved": 0.05,
+    "africa_development_index": 0.35,
+    "existential_risk_cumulative": 0.16,
+    "total_divergences": 216,
+    "first_divergence_year": "2001-03",
+    "largest_divergence": "2020_covid_response"
+  }
+}

@@ -1,0 +1,50 @@
+id: "2008_beijing_olympics"
+year_month: "2008-08"
+title: "Beijing Olympics"
+description: >
+  China's global coming-out party. $44B investment. Showcases Chinese
+  organizational capability and ambition. Shapes how China sees itself
+  and how the world sees China for the next decade.
+domain: "regional"
+confidence: "HIGH"
+variable: "beijing_olympics_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_success: 0.55
+    marred_by_protest: 0.15
+    boycott: 0.10
+    modest_games: 0.20
+dependencies:
+  - node: "2001_china_wto"
+    branch: null
+    modifies: {}
+conditional: null
+outcomes:
+  historical_success:
+    status: "HISTORICAL"
+    description: "Spectacular games; China arrives on world stage"
+    world_state_effects:
+      china_power_index: "+0.05"
+      us_global_standing: "-0.02"
+    cascading_modifiers:
+      2012_xi_consolidation.historical_consolidation: "+0.05"
+  marred_by_protest:
+    status: "DIVERGENCE"
+    description: "Tibet protests dominate international coverage"
+    world_state_effects:
+      china_power_index: "+0.01"
+      global_democracy_index: "+0.01"
+  boycott:
+    status: "DIVERGENCE"
+    description: "Major Western boycott over human rights record"
+    world_state_effects:
+      china_power_index: "-0.03"
+      us_global_standing: "+0.02"
+    cascading_modifiers:
+      2012_xi_consolidation.reform_faction_wins: "+0.05"
+  modest_games:
+    status: "DIVERGENCE"
+    description: "Successful but not transformative Olympics"
+    world_state_effects:
+      china_power_index: "+0.02"

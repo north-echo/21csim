@@ -1,0 +1,52 @@
+id: "2085_existential_assessment"
+year_month: "2085-01"
+title: "Existential Risk Assessment"
+description: >
+  A comprehensive assessment of humanity's existential risk profile. Whether
+  the cumulative threats from technology, climate, conflict, and biology
+  have been mitigated or intensified.
+domain: "meta"
+confidence: "LOW"
+variable: "existential_assessment_2085"
+distribution:
+  type: "categorical"
+  options:
+    safer: 0.25
+    same: 0.20
+    more_dangerous: 0.15
+    resolved: 0.10
+    new_risks: 0.20
+    catastrophic: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  safer:
+    status: "DIVERGENCE"
+    description: "Existential risks significantly reduced through technology, governance, and cooperation"
+    world_state_effects:
+      existential_risk_cumulative: "-0.15"
+  same:
+    status: "DIVERGENCE"
+    description: "Existential risk profile roughly unchanged; old risks mitigated but new ones emerged"
+    world_state_effects:
+      existential_risk_cumulative: "+0.00"
+  more_dangerous:
+    status: "ESCALATED"
+    description: "Cumulative existential risk has grown; multiple threat vectors remain unaddressed"
+    world_state_effects:
+      existential_risk_cumulative: "+0.10"
+  resolved:
+    status: "DIVERGENCE"
+    description: "Major existential risks resolved; humanity has robust defenses against catastrophic threats"
+    world_state_effects:
+      existential_risk_cumulative: "-0.25"
+  new_risks:
+    status: "ESCALATED"
+    description: "Novel existential risks emerge from advanced technology that were not anticipated"
+    world_state_effects:
+      existential_risk_cumulative: "+0.15"
+  catastrophic:
+    status: "ESCALATED"
+    description: "One or more existential risks have partially materialized; civilization damaged but surviving"
+    world_state_effects:
+      existential_risk_cumulative: "+0.30"

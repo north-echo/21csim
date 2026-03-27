@@ -1,0 +1,39 @@
+id: "2010_wikileaks"
+year_month: "2010-07"
+title: "WikiLeaks / Information Warfare"
+domain: "technology"
+confidence: "HIGH"
+variable: "wikileaks"
+distribution:
+  type: "categorical"
+  options:
+    historical_leaks: 0.50
+    no_manning_leak: 0.25
+    more_damaging: 0.10
+    whistleblower_protection: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  historical_leaks:
+    status: "HISTORICAL"
+    description: "Manning leaks; diplomatic cables; Assange saga"
+    world_state_effects:
+      internet_freedom_index: "-0.02"
+      us_global_standing: "-0.03"
+  no_manning_leak:
+    status: "DIVERGENCE"
+    description: "Manning doesn't leak; WikiLeaks stays marginal"
+    world_state_effects:
+      us_global_standing: "+0.01"
+  more_damaging:
+    status: "ESCALATED"
+    description: "Even more damaging leaks of intelligence operations"
+    world_state_effects:
+      us_global_standing: "-0.08"
+      internet_freedom_index: "-0.05"
+  whistleblower_protection:
+    status: "DIVERGENCE"
+    description: "Leak leads to strong whistleblower protections"
+    world_state_effects:
+      global_democracy_index: "+0.02"
+      us_institutional_trust: "+0.02"

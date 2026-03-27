@@ -1,0 +1,56 @@
+id: "2012_xi_consolidation"
+year_month: "2012-11"
+title: "China — Xi Consolidation"
+domain: "regional"
+confidence: "HIGH"
+variable: "china_governance"
+distribution:
+  type: "categorical"
+  options:
+    historical_consolidation: 0.50
+    reform_faction_wins: 0.15
+    economic_liberalization: 0.10
+    instability: 0.10
+    aggressive_expansion: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  historical_consolidation:
+    status: "HISTORICAL"
+    description: "Xi abolishes term limits; consolidates power"
+    world_state_effects:
+      china_power_index: "+0.08"
+      china_regime_type: "+0.10"
+      internet_freedom_index: "-0.05"
+      surveillance_state_index: "+0.05"
+    cascading_modifiers:
+      2026_taiwan_strait.tension_no_conflict: "-0.03"
+  reform_faction_wins:
+    status: "DIVERGENCE"
+    description: "Reform faction maintains collective leadership"
+    world_state_effects:
+      china_power_index: "+0.05"
+      internet_freedom_index: "+0.02"
+      china_regime_type: "+0.05"
+  economic_liberalization:
+    status: "DIVERGENCE"
+    description: "China prioritizes economic liberalization over control"
+    world_state_effects:
+      china_power_index: "+0.10"
+      global_gdp_growth_modifier: "*1.01"
+      china_regime_type: "+0.08"
+  instability:
+    status: "DIVERGENCE"
+    description: "Power struggle creates political instability"
+    world_state_effects:
+      china_power_index: "-0.05"
+      global_gdp_growth_modifier: "*0.99"
+  aggressive_expansion:
+    status: "ESCALATED"
+    description: "Xi pursues aggressive regional expansion"
+    world_state_effects:
+      china_power_index: "+0.10"
+      nuclear_risk_level: "+0.03"
+      middle_east_stability: "-0.02"
+    cascading_modifiers:
+      2026_taiwan_strait.full_invasion: "+0.05"

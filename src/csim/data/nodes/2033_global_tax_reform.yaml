@@ -1,0 +1,48 @@
+id: "2033_global_tax_reform"
+year_month: "2033-06"
+title: "Global Tax Reform"
+description: >
+  Whether international efforts to reform global taxation succeed. Minimum
+  corporate taxes, digital taxes, and wealth taxes face implementation
+  challenges and political resistance.
+domain: "geopolitical"
+confidence: "MEDIUM"
+variable: "global_tax_status"
+distribution:
+  type: "categorical"
+  options:
+    minimum_tax_works: 0.25
+    tax_havens_persist: 0.35
+    wealth_tax: 0.15
+    digital_tax: 0.25
+dependencies: []
+conditional: null
+outcomes:
+  minimum_tax_works:
+    status: "DIVERGENCE"
+    description: "Global minimum corporate tax effectively implemented; revenue increases"
+    explanation: "OECD framework enforced; multinational profit shifting significantly reduced"
+    world_state_effects:
+      inequality_index: "-0.03"
+      governance_model: "+0.03"
+  tax_havens_persist:
+    status: "DIVERGENCE"
+    description: "Tax havens and avoidance schemes adapt faster than regulations"
+    explanation: "Crypto, shell companies, and new jurisdictions undermine reform efforts"
+    world_state_effects:
+      inequality_index: "+0.03"
+      governance_model: "-0.02"
+  wealth_tax:
+    status: "DIVERGENCE"
+    description: "Multiple nations implement wealth taxes on ultra-high-net-worth individuals"
+    explanation: "Public pressure and inequality drive adoption; implementation challenges remain"
+    world_state_effects:
+      inequality_index: "-0.05"
+      global_gdp: "-0.01"
+  digital_tax:
+    status: "DIVERGENCE"
+    description: "Digital services taxes become standard; tech giants pay more"
+    explanation: "Revenue-based digital taxes capture value where economic activity occurs"
+    world_state_effects:
+      inequality_index: "-0.02"
+      global_gdp: "+0.00"

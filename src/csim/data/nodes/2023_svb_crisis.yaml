@@ -1,0 +1,70 @@
+id: "2023_svb_crisis"
+year_month: "2023-03"
+title: "SVB / Banking Wobble"
+description: >
+  Silicon Valley Bank collapses in the second-largest US bank failure in
+  history, followed by Signature Bank and First Republic. The crisis exposes
+  the hangover from a decade of zero interest rate policy (ZIRP), regional
+  bank fragility, and the speed of social-media-driven bank runs in the
+  digital age.
+domain: "economic"
+confidence: "HIGH"
+variable: "svb_crisis_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_contained: 0.45
+    broader_banking_crisis: 0.15
+    no_bank_failures: 0.15
+    systemic_contagion: 0.10
+    regulatory_overhaul: 0.15
+dependencies:
+  - node: "2012_zirp"
+    branch: "historical_extended_zirp"
+    modifies:
+      historical_contained: "+0.05"
+      no_bank_failures: "-0.05"
+  - node: "2012_zirp"
+    branch: "early_normalization"
+    modifies:
+      no_bank_failures: "+0.15"
+      historical_contained: "-0.10"
+      broader_banking_crisis: "-0.05"
+conditional: null
+outcomes:
+  historical_contained:
+    status: "HISTORICAL"
+    description: "SVB, Signature, First Republic fail; Fed backstops deposits; contagion contained"
+    world_state_effects:
+      us_institutional_trust: "-0.02"
+      inequality_index: "+0.01"
+  broader_banking_crisis:
+    status: "ESCALATED"
+    description: "Contagion spreads to dozens of regional banks; credit crunch follows"
+    explanation: "Social media bank runs overwhelm FDIC capacity; confidence collapses"
+    world_state_effects:
+      us_institutional_trust: "-0.05"
+      inequality_index: "+0.03"
+      global_gdp_growth_modifier: "*0.98"
+  no_bank_failures:
+    status: "DIVERGENCE"
+    description: "SVB manages its bond portfolio adequately; no crisis materializes"
+    explanation: "Earlier rate normalization or better risk management prevents duration mismatch"
+    world_state_effects:
+      us_institutional_trust: "+0.01"
+  systemic_contagion:
+    status: "ESCALATED"
+    description: "Banking crisis goes global; echoes of 2008 financial crisis"
+    explanation: "Hidden duration risk across European and Asian banks triggers worldwide panic"
+    world_state_effects:
+      us_institutional_trust: "-0.08"
+      inequality_index: "+0.05"
+      global_gdp_growth_modifier: "*0.95"
+      us_polarization: "+0.03"
+  regulatory_overhaul:
+    status: "DIVERGENCE"
+    description: "Crisis prompts swift, comprehensive banking regulation reform"
+    explanation: "Bipartisan alarm leads to restoration of post-2008 regulatory frameworks"
+    world_state_effects:
+      us_institutional_trust: "+0.02"
+      inequality_index: "-0.01"

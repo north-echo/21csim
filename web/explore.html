@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21csim - Explorer / Analytics</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── Explorer-specific overrides ── */
+    html, body {
+      overflow: auto;
+      height: auto;
+    }
+
+    #app {
+      display: block;
+      height: auto;
+      min-height: 100vh;
+    }
+
+    #top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-family: var(--font-ui);
+      font-size: 12px;
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .nav-link:hover {
+      background: var(--bg-hover);
+      border-color: var(--accent);
+    }
+
+    /* ── Sections ── */
+    .explore-section {
+      padding: 24px 32px;
+      border-bottom: 1px solid var(--border);
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .explore-section h2 {
+      font-family: var(--font-ui);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .explore-section h3 {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+    }
+
+    /* ── Overview Stats Row ── */
+    .stats-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px 20px;
+      min-width: 140px;
+      flex: 1;
+    }
+
+    .stat-card .stat-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+    }
+
+    .stat-card .stat-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-bright);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-card .stat-sub {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    /* ── Outcome Distribution Bar ── */
+    .outcome-bar-container {
+      margin-bottom: 20px;
+    }
+
+    .outcome-bar {
+      display: flex;
+      height: 32px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    .outcome-bar .segment {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      font-family: var(--font-ui);
+      color: #000;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: width 0.4s ease;
+      cursor: default;
+      position: relative;
+    }
+
+    .outcome-bar .segment:hover {
+      filter: brightness(1.2);
+    }
+
+    .outcome-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: var(--text);
+    }
+
+    .legend-swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+    }
+
+    /* ── Charts ── */
+    .chart-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .chart-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px;
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .chart-box canvas {
+      width: 100%;
+      display: block;
+    }
+
+    /* ── Seed Grid ── */
+    .filter-bar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 12px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .filter-bar label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: var(--text);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .filter-bar input[type="checkbox"] {
+      accent-color: var(--accent);
+    }
+
+    .filter-bar input[type="text"],
+    .filter-bar select {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      padding: 4px 8px;
+      outline: none;
+    }
+
+    .filter-bar input[type="text"]:focus,
+    .filter-bar select:focus {
+      border-color: var(--accent);
+    }
+
+    .filter-bar select option {
+      background: var(--bg-panel);
+      color: var(--text);
+    }
+
+    .seed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 10px;
+    }
+
+    .seed-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      text-decoration: none;
+      display: block;
+    }
+
+    .seed-card:hover {
+      border-color: var(--accent);
+      background: var(--bg-hover);
+    }
+
+    .seed-card .card-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .seed-card .seed-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    .seed-card .card-headline {
+      font-size: 12px;
+      color: var(--text);
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .seed-card .card-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    .mini-badge {
+      padding: 1px 6px;
+      border-radius: 2px;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Load Data Button ── */
+    .load-data-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .load-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 20px;
+      font-family: var(--font-ui);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .load-btn:hover { opacity: 0.85; }
+    .load-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .load-progress {
+      font-size: 12px;
+      color: var(--text-dim);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .progress-bar-track {
+      flex: 1;
+      height: 6px;
+      background: var(--bg);
+      border-radius: 3px;
+      overflow: hidden;
+      max-width: 300px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 3px;
+      transition: width 0.15s;
+      width: 0%;
+    }
+
+    /* ── Heatmap ── */
+    .heatmap-container {
+      overflow-x: auto;
+    }
+
+    .heatmap-table {
+      border-collapse: collapse;
+      font-size: 11px;
+      width: 100%;
+    }
+
+    .heatmap-table th,
+    .heatmap-table td {
+      padding: 4px 8px;
+      border: 1px solid var(--border);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .heatmap-table th {
+      background: var(--bg-panel);
+      color: var(--text-dim);
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+    }
+
+    .heatmap-table th.node-col {
+      text-align: left;
+      min-width: 180px;
+    }
+
+    .heatmap-table td.node-name {
+      text-align: left;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .heatmap-table td.heat-cell {
+      font-variant-numeric: tabular-nums;
+      min-width: 60px;
+    }
+
+    .high-variance-row td {
+      border-left-color: var(--status-divergence);
+    }
+
+    .high-variance-row td.node-name {
+      color: var(--status-divergence);
+    }
+
+    /* ── Fan Charts ── */
+    .fan-charts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 16px;
+    }
+
+    .fan-chart-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px;
+    }
+
+    .fan-chart-box h4 {
+      font-family: var(--font-ui);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .fan-chart-box canvas {
+      width: 100%;
+      display: block;
+    }
+
+    /* ── Leverage Ranking ── */
+    .leverage-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .leverage-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 16px;
+      display: grid;
+      grid-template-columns: 30px 1fr 200px 200px;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .leverage-rank {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-align: center;
+    }
+
+    .leverage-node-name {
+      font-size: 13px;
+      color: var(--text-bright);
+      font-weight: 600;
+    }
+
+    .leverage-node-year {
+      font-size: 10px;
+      color: var(--text-dim);
+    }
+
+    .leverage-branches {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .leverage-branch-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+    }
+
+    .leverage-branch-bar {
+      height: 8px;
+      border-radius: 2px;
+      transition: width 0.3s;
+    }
+
+    .leverage-branch-label {
+      color: var(--text-dim);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 80px;
+    }
+
+    .leverage-score-dist canvas {
+      width: 100%;
+      height: 40px;
+      display: block;
+    }
+
+    /* ── What-If Filter ── */
+    .whatif-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .whatif-controls select {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      padding: 6px 10px;
+      outline: none;
+      max-width: 300px;
+    }
+
+    .whatif-controls select:focus {
+      border-color: var(--accent);
+    }
+
+    .whatif-controls select option {
+      background: var(--bg-panel);
+      color: var(--text);
+    }
+
+    .whatif-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      font-family: var(--font-ui);
+      padding: 3px 8px;
+      border-radius: 3px;
+    }
+
+    .whatif-tag .remove-filter {
+      cursor: pointer;
+      font-weight: 700;
+      opacity: 0.7;
+    }
+
+    .whatif-tag .remove-filter:hover {
+      opacity: 1;
+    }
+
+    .whatif-match-count {
+      font-size: 13px;
+      color: var(--text-bright);
+      font-weight: 600;
+    }
+
+    .whatif-results {
+      margin-top: 16px;
+    }
+
+    /* ── Placeholder messaging ── */
+    .section-placeholder {
+      color: var(--text-dim);
+      font-size: 13px;
+      padding: 20px;
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .explore-section { padding: 16px; }
+      .leverage-item {
+        grid-template-columns: 30px 1fr;
+      }
+      .leverage-item > :nth-child(3),
+      .leverage-item > :nth-child(4) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .stats-row { flex-direction: column; }
+      .fan-charts-grid { grid-template-columns: 1fr; }
+      .seed-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Top Bar -->
+    <div id="top-bar">
+      <span class="logo">21csim</span>
+      <div id="run-info">
+        <span class="headline" style="color: var(--text-bright); font-family: var(--font-ui); font-size: 15px;">Explorer / Analytics</span>
+      </div>
+      <div class="actions">
+        <a href="index.html" class="nav-link">Viewer</a>
+      </div>
+    </div>
+
+    <!-- Section 1: Corpus Overview -->
+    <section id="sec-overview" class="explore-section">
+      <h2>Corpus Overview</h2>
+      <div id="overview-stats" class="stats-row"></div>
+      <div id="outcome-bar-area" class="outcome-bar-container"></div>
+      <div class="chart-row">
+        <div class="chart-box">
+          <h3>Composite Score Distribution</h3>
+          <canvas id="histogram-canvas" height="160"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Seed Grid -->
+    <section id="sec-seeds" class="explore-section">
+      <h2>Seed Grid</h2>
+      <div id="filter-bar" class="filter-bar"></div>
+      <div id="seed-grid" class="seed-grid"></div>
+    </section>
+
+    <!-- Section 3: Branch Frequency Heatmap -->
+    <section id="sec-heatmap" class="explore-section">
+      <h2>Branch Frequency Heatmap</h2>
+      <div class="load-data-bar" id="heatmap-loader">
+        <button class="load-btn" id="btn-load-all">Load All Run Data</button>
+        <div class="progress-bar-track" id="load-progress-track" style="display:none;">
+          <div class="progress-bar-fill" id="load-progress-fill"></div>
+        </div>
+        <span class="load-progress" id="load-progress-text"></span>
+      </div>
+      <div id="heatmap-area">
+        <div class="section-placeholder" id="heatmap-placeholder">Load all run data to view branch frequency heatmap.</div>
+      </div>
+    </section>
+
+    <!-- Section 4: World State Trajectories -->
+    <section id="sec-fancharts" class="explore-section">
+      <h2>World State Trajectories (Fan Charts)</h2>
+      <div id="fancharts-area">
+        <div class="section-placeholder" id="fancharts-placeholder">Load all run data to view trajectory fan charts.</div>
+      </div>
+    </section>
+
+    <!-- Section 5: Leverage Ranking -->
+    <section id="sec-leverage" class="explore-section">
+      <h2>Leverage Ranking</h2>
+      <div id="leverage-area">
+        <div class="section-placeholder" id="leverage-placeholder">Load all run data to view leverage ranking.</div>
+      </div>
+    </section>
+
+    <!-- Section 6: Interactive What-If Filter -->
+    <section id="sec-whatif" class="explore-section">
+      <h2>Interactive What-If Filter</h2>
+      <div id="whatif-area">
+        <div class="section-placeholder" id="whatif-placeholder">Load all run data to use the what-if filter.</div>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="explore.js"></script>
+</body>
+</html>

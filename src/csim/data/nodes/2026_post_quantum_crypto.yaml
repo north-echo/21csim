@@ -1,0 +1,68 @@
+id: "2026_post_quantum_crypto"
+year_month: "2026-01"
+title: "Post-Quantum Cryptography Transition"
+description: >
+  Global race to migrate encryption systems to post-quantum algorithms
+  before quantum computers can break RSA and ECC. NIST finalizes
+  standards, but migration of legacy systems proves enormously complex.
+  "Harvest now, decrypt later" attacks already underway.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "post_quantum_crypto"
+distribution:
+  type: "categorical"
+  options:
+    orderly_transition: 0.30
+    chaotic_scramble: 0.30
+    quantum_breaks_rsa: 0.10
+    crypto_agility: 0.15
+    fragmented_standards: 0.15
+dependencies:
+  - node: "2019_quantum"
+    branch: "breakthrough_2025"
+    modifies:
+      quantum_breaks_rsa: "+0.15"
+      chaotic_scramble: "+0.10"
+      orderly_transition: "-0.15"
+      crypto_agility: "-0.10"
+  - node: "2019_quantum"
+    branch: "encryption_broken"
+    modifies:
+      quantum_breaks_rsa: "+0.25"
+      chaotic_scramble: "+0.10"
+      orderly_transition: "-0.25"
+      fragmented_standards: "-0.10"
+conditional: null
+outcomes:
+  orderly_transition:
+    status: "PLAUSIBLE"
+    description: "Managed migration to post-quantum standards with minimal disruption"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+2.0"
+      internet_freedom_index: "+0.01"
+  chaotic_scramble:
+    status: "PLAUSIBLE"
+    description: "Rushed migration causes outages and compatibility failures"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+10.0"
+      internet_freedom_index: "-0.02"
+  quantum_breaks_rsa:
+    status: "ESCALATED"
+    description: "Quantum computer breaks RSA before transition completes; massive data exposure"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+50.0"
+      internet_freedom_index: "-0.05"
+      supply_chain_resilience: "-0.05"
+      existential_risk_cumulative: "+0.01"
+  crypto_agility:
+    status: "PLAUSIBLE"
+    description: "Crypto-agile systems enable smooth algorithm swaps as needed"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+1.0"
+      internet_freedom_index: "+0.02"
+  fragmented_standards:
+    status: "PLAUSIBLE"
+    description: "Competing standards fragment the internet into incompatible crypto zones"
+    world_state_effects:
+      global_cyber_damage_annual_b: "+5.0"
+      internet_freedom_index: "-0.04"

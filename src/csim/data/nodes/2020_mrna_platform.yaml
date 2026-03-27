@@ -1,0 +1,65 @@
+id: "2020_mrna_platform"
+year_month: "2020-01"
+title: "mRNA Vaccine Platform"
+description: >
+  COVID forces mRNA technology from lab curiosity to mass deployment
+  in record time. But the platform's potential extends far beyond COVID —
+  cancer vaccines, malaria, HIV, genetic diseases.
+domain: "health"
+confidence: "HIGH"
+variable: "mrna_platform"
+distribution:
+  type: "categorical"
+  options:
+    historical_covid_only: 0.35
+    platform_revolution: 0.25
+    safety_concerns_slow: 0.15
+    cancer_vaccine_breakthrough: 0.15
+    developing_world_access: 0.10
+dependencies:
+  - node: "2019_covid_emergence"
+    branch: "historical_wuhan"
+    modifies:
+      historical_covid_only: "+0.05"
+      platform_revolution: "+0.05"
+      safety_concerns_slow: "-0.05"
+      developing_world_access: "-0.05"
+conditional: "global_pandemic_deaths > 0"
+outcomes:
+  historical_covid_only:
+    status: "HISTORICAL"
+    description: "mRNA used for COVID vaccines; other applications advance slowly"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.2"
+      global_pandemic_deaths: "-100000"
+  platform_revolution:
+    status: "DIVERGENCE"
+    description: "mRNA becomes universal vaccine platform by 2030; malaria and HIV vaccines"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.8"
+      global_pandemic_deaths: "-500000"
+      inequality_index: "-0.02"
+    cascading_modifiers:
+      2029_pandemic_2.contained_quickly: "+0.10"
+  safety_concerns_slow:
+    status: "DIVERGENCE"
+    description: "Long-term safety concerns reduce mRNA adoption; return to traditional vaccines"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.1"
+      misinformation_severity: "+0.03"
+  cancer_vaccine_breakthrough:
+    status: "DIVERGENCE"
+    description: "mRNA cancer vaccines work; transformative for oncology"
+    world_state_effects:
+      us_life_expectancy_delta: "+1.2"
+      global_gdp_growth_modifier: "*1.005"
+      inequality_index: "+0.02"
+    cascading_modifiers:
+      2058_life_extension.significant_extension: "+0.10"
+  developing_world_access:
+    status: "DIVERGENCE"
+    description: "IP waivers enable global mRNA manufacturing; health equity improves"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.3"
+      inequality_index: "-0.04"
+      global_pandemic_deaths: "-300000"

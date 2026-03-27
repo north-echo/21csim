@@ -1,0 +1,51 @@
+id: "2047_arms_control"
+year_month: "2047-01"
+title: "Arms Control 2040s"
+description: >
+  Existing arms control frameworks face collapse or renewal as new weapons
+  technologies proliferate. Whether nations negotiate new frameworks or enter
+  an unconstrained arms race determines nuclear and AI weapons risk.
+domain: "security"
+confidence: "MEDIUM"
+variable: "arms_control_status"
+distribution:
+  type: "categorical"
+  options:
+    new_framework: 0.20
+    arms_race: 0.25
+    nuclear_reduction: 0.15
+    proliferation: 0.20
+    stalemate: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  new_framework:
+    status: "DIVERGENCE"
+    description: "Comprehensive arms control treaty covers nuclear, AI, cyber, and space weapons"
+    world_state_effects:
+      nuclear_risk_level: "-0.08"
+      existential_risk_cumulative: "-0.03"
+  arms_race:
+    status: "ESCALATED"
+    description: "Unconstrained arms race in AI weapons, hypersonics, and space-based systems"
+    world_state_effects:
+      nuclear_risk_level: "+0.10"
+      existential_risk_cumulative: "+0.05"
+  nuclear_reduction:
+    status: "DIVERGENCE"
+    description: "Major powers agree to significant nuclear arsenal reductions"
+    world_state_effects:
+      nuclear_risk_level: "-0.12"
+      existential_risk_cumulative: "-0.05"
+  proliferation:
+    status: "ESCALATED"
+    description: "Several new nations acquire nuclear weapons; non-proliferation regime collapses"
+    world_state_effects:
+      nuclear_risk_level: "+0.15"
+      existential_risk_cumulative: "+0.08"
+  stalemate:
+    status: "DIVERGENCE"
+    description: "Arms control negotiations stall; existing arsenals maintained without expansion or reduction"
+    world_state_effects:
+      nuclear_risk_level: "+0.02"
+      existential_risk_cumulative: "+0.01"

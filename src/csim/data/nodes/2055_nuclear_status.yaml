@@ -1,0 +1,65 @@
+id: "2055_nuclear_status"
+year_month: "2055-01"
+title: "Nuclear Weapons Status"
+description: >
+  The state of nuclear weapons at mid-century. Whether arsenals have been reduced,
+  proliferated, or normalized as tactical weapons determines the baseline
+  existential risk for the second half of the century.
+domain: "security"
+confidence: "LOW"
+variable: "nuclear_status"
+distribution:
+  type: "categorical"
+  options:
+    reduced_arsenals: 0.20
+    maintained: 0.25
+    proliferated: 0.15
+    used: 0.05
+    abolished: 0.05
+    new_weapons: 0.15
+    tactical_normal: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  reduced_arsenals:
+    status: "DIVERGENCE"
+    description: "Major powers reduce arsenals to hundreds of warheads; verification systems robust"
+    world_state_effects:
+      nuclear_risk_level: "-0.10"
+      existential_risk_cumulative: "-0.05"
+  maintained:
+    status: "DIVERGENCE"
+    description: "Nuclear arsenals maintained at current levels; mutual deterrence continues"
+    world_state_effects:
+      nuclear_risk_level: "+0.02"
+  proliferated:
+    status: "ESCALATED"
+    description: "Multiple new nuclear states; non-proliferation regime collapsed"
+    world_state_effects:
+      nuclear_risk_level: "+0.15"
+      existential_risk_cumulative: "+0.08"
+  used:
+    status: "ESCALATED"
+    description: "Nuclear weapon used in conflict; global taboo broken"
+    world_state_effects:
+      nuclear_risk_level: "+0.25"
+      existential_risk_cumulative: "+0.15"
+      conflict_deaths: "+200000"
+  abolished:
+    status: "DIVERGENCE"
+    description: "Global nuclear disarmament achieved; verified elimination of all warheads"
+    world_state_effects:
+      nuclear_risk_level: "-0.20"
+      existential_risk_cumulative: "-0.10"
+  new_weapons:
+    status: "ESCALATED"
+    description: "New types of nuclear weapons developed; miniaturized, EMP-optimized, or space-based"
+    world_state_effects:
+      nuclear_risk_level: "+0.10"
+      existential_risk_cumulative: "+0.05"
+  tactical_normal:
+    status: "ESCALATED"
+    description: "Tactical nuclear weapons normalized in military doctrine; use threshold lowered"
+    world_state_effects:
+      nuclear_risk_level: "+0.12"
+      existential_risk_cumulative: "+0.06"

@@ -1,0 +1,55 @@
+id: "2034_kessler_risk"
+year_month: "2034-06"
+title: "Kessler Syndrome Risk"
+description: >
+  Risk of cascading orbital debris collisions (Kessler syndrome) as satellite
+  constellations proliferate. A major cascade could render low Earth orbit
+  unusable for decades.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "kessler_status"
+distribution:
+  type: "categorical"
+  options:
+    near_miss: 0.35
+    partial_cascade: 0.25
+    full_kessler: 0.05
+    prevented_by_cleanup: 0.20
+    no_incident: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  near_miss:
+    status: "DIVERGENCE"
+    description: "Major debris event narrowly avoided; spurs regulatory action"
+    explanation: "Close call involving mega-constellation satellites triggers international debris mitigation rules"
+    world_state_effects:
+      space_development_index: "-0.03"
+  partial_cascade:
+    status: "ESCALATED"
+    description: "Localized debris cascade destroys dozens of satellites; specific orbits compromised"
+    explanation: "Collision chain in congested orbit band; recovery takes years but space access continues"
+    world_state_effects:
+      space_development_index: "-0.10"
+  full_kessler:
+    status: "ESCALATED"
+    description: "Full Kessler syndrome renders low Earth orbit unusable"
+    explanation: "Cascading collisions create impenetrable debris field; GPS, communications, and weather satellites lost"
+    world_state_effects:
+      space_development_index: "-0.40"
+    cascading_modifiers:
+      2038_autonomous_weapons.arms_race: "-0.10"
+      2026_taiwan_strait.tension_no_conflict: "+0.05"
+      2045_space_economy.collapsed: "+0.20"
+  prevented_by_cleanup:
+    status: "DIVERGENCE"
+    description: "Active debris removal technology successfully prevents cascading collisions"
+    explanation: "Space cleanup missions and improved tracking systems keep orbital environment sustainable"
+    world_state_effects:
+      space_development_index: "+0.05"
+  no_incident:
+    status: "DIVERGENCE"
+    description: "No major debris incidents; orbital environment remains manageable"
+    explanation: "Better tracking, collision avoidance, and responsible deorbiting prevent problems"
+    world_state_effects:
+      space_development_index: "+0.03"

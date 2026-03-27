@@ -1,0 +1,56 @@
+id: "2035_arctic_governance"
+year_month: "2035-06"
+title: "Arctic Governance Framework"
+description: >
+  How the international community governs the increasingly accessible Arctic
+  as ice retreats. Competition for resources, shipping routes, and strategic
+  positioning intensifies among Arctic and non-Arctic nations.
+domain: "geopolitical"
+confidence: "MEDIUM"
+variable: "arctic_governance_status"
+distribution:
+  type: "categorical"
+  options:
+    cooperative_framework: 0.25
+    russian_dominance: 0.20
+    resource_rush: 0.25
+    militarized: 0.15
+    environmental_protection: 0.15
+dependencies: []
+conditional: "arctic_ice_status < 0.50"
+outcomes:
+  cooperative_framework:
+    status: "DIVERGENCE"
+    description: "Arctic Council evolves into binding governance framework for resource and route management"
+    explanation: "Shared economic interests drive cooperation; new treaty establishes rules for exploitation and protection"
+    world_state_effects:
+      governance_model: "+0.05"
+      conflict_deaths: "+0"
+  russian_dominance:
+    status: "DIVERGENCE"
+    description: "Russia leverages geography and military presence to dominate Arctic governance"
+    explanation: "Longest Arctic coastline and military buildup give Russia effective control of key areas"
+    world_state_effects:
+      russia_stability: "+0.03"
+      nuclear_risk_level: "+0.02"
+  resource_rush:
+    status: "DIVERGENCE"
+    description: "Unregulated scramble for Arctic resources; multiple competing claims"
+    explanation: "Oil, gas, minerals, and fishing rights contested; Arctic becomes new frontier for competition"
+    world_state_effects:
+      climate_temp_anomaly: "+0.03"
+      conflict_deaths: "+2000"
+  militarized:
+    status: "ESCALATED"
+    description: "Arctic becomes militarized zone with competing naval and air deployments"
+    explanation: "Strategic importance of Arctic routes and resources drives military buildup by multiple nations"
+    world_state_effects:
+      nuclear_risk_level: "+0.05"
+      conflict_deaths: "+1000"
+  environmental_protection:
+    status: "DIVERGENCE"
+    description: "Strong environmental protections limit Arctic exploitation"
+    explanation: "Antarctic Treaty-like framework protects Arctic environment; resource extraction heavily restricted"
+    world_state_effects:
+      climate_temp_anomaly: "-0.02"
+      governance_model: "+0.03"

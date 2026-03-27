@@ -1,0 +1,37 @@
+id: "2019_global_protests"
+year_month: "2019-06"
+title: "Global Protest Wave"
+domain: "social"
+confidence: "HIGH"
+variable: "global_protests"
+distribution:
+  type: "categorical"
+  options:
+    historical_widespread: 0.50
+    successful_reforms: 0.15
+    crushed_globally: 0.15
+    no_wave: 0.20
+dependencies: []
+conditional: null
+outcomes:
+  historical_widespread:
+    status: "HISTORICAL"
+    description: "Hong Kong, Chile, Lebanon, Iraq — global protest wave"
+    world_state_effects:
+      global_democracy_index: "+0.01"
+      china_power_index: "-0.01"
+  successful_reforms:
+    status: "DIVERGENCE"
+    description: "Protests achieve meaningful democratic reforms"
+    world_state_effects:
+      global_democracy_index: "+0.05"
+  crushed_globally:
+    status: "ESCALATED"
+    description: "Authoritarian crackdowns suppress all movements"
+    world_state_effects:
+      global_democracy_index: "-0.05"
+      surveillance_state_index: "+0.05"
+  no_wave:
+    status: "DIVERGENCE"
+    description: "No major protest wave emerges"
+    world_state_effects: {}

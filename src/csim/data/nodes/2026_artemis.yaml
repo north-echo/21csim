@@ -1,0 +1,80 @@
+id: "2026_artemis"
+year_month: "2026-01"
+title: "Artemis Lunar Landing"
+description: >
+  NASA's return to the Moon. First woman and first person of color
+  on the lunar surface. Whether it leads to sustained presence
+  depends on funding and political will.
+domain: "space"
+confidence: "MEDIUM"
+variable: "artemis_status"
+distribution:
+  type: "categorical"
+  options:
+    successful_landing: 0.30
+    delayed_2030: 0.30
+    cancelled: 0.10
+    international_mission: 0.15
+    china_beats_artemis: 0.15
+dependencies:
+  - node: "2025_starship"
+    branch: "on_schedule"
+    modifies:
+      successful_landing: "+0.10"
+      delayed_2030: "-0.05"
+      cancelled: "-0.05"
+  - node: "2025_starship"
+    branch: "program_cancelled"
+    modifies:
+      cancelled: "+0.15"
+      delayed_2030: "+0.10"
+      successful_landing: "-0.20"
+      international_mission: "-0.05"
+  - node: "2024_us_election"
+    branch: "trump_wins"
+    modifies:
+      successful_landing: "+0.05"
+      cancelled: "-0.05"
+conditional: null
+outcomes:
+  successful_landing:
+    status: "DIVERGENCE"
+    description: "NASA returns humans to the Moon; first woman and first person of color land on lunar surface"
+    explanation: "Starship HLS works as planned; Artemis III achieves historic landing"
+    world_state_effects:
+      space_development_index: "+0.08"
+      us_global_standing: "+0.03"
+    cascading_modifiers:
+      2032_moon_base.us_only: "+0.10"
+  delayed_2030:
+    status: "DIVERGENCE"
+    description: "Artemis lunar landing slips to 2030 due to technical and funding delays"
+    explanation: "HLS development challenges and congressional budget fights push timeline back"
+    world_state_effects:
+      space_development_index: "+0.03"
+  cancelled:
+    status: "DIVERGENCE"
+    description: "Artemis program cancelled; US lunar ambitions shelved"
+    explanation: "Political priorities shift; cost overruns and delays erode congressional support"
+    world_state_effects:
+      space_development_index: "-0.03"
+      us_global_standing: "-0.02"
+  international_mission:
+    status: "DIVERGENCE"
+    description: "Artemis becomes joint US/ESA/JAXA mission; international crew lands on Moon"
+    explanation: "Cost sharing and diplomatic goals transform Artemis into a multinational effort"
+    world_state_effects:
+      space_development_index: "+0.07"
+      us_global_standing: "+0.02"
+    cascading_modifiers:
+      2032_moon_base.international_base: "+0.10"
+  china_beats_artemis:
+    status: "DIVERGENCE"
+    description: "China lands crew on Moon before Artemis; new space race intensifies"
+    explanation: "CNSA's steady progress pays off while Artemis faces delays; geopolitical shock"
+    world_state_effects:
+      space_development_index: "+0.06"
+      china_power_index: "+0.04"
+      us_global_standing: "-0.03"
+    cascading_modifiers:
+      2032_moon_base.china_only: "+0.10"

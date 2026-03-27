@@ -1,0 +1,54 @@
+id: "2099_verdict"
+year_month: "2099-12"
+title: "Century Verdict"
+description: "Final assessment of how the 21st century turned out. Computed from all world state dimensions."
+domain: "meta"
+confidence: "LOW"
+variable: "century_verdict"
+computed: true
+distribution:
+  type: "categorical"
+  options:
+    golden_age: 0.02
+    progress: 0.25
+    muddling_through: 0.30
+    decline: 0.25
+    catastrophe: 0.10
+    extinction: 0.01
+    transcendence: 0.02
+    radically_different: 0.05
+dependencies: []
+conditional: null
+outcomes:
+  golden_age:
+    status: "HISTORICAL"
+    description: "Humanity thrives; major challenges overcome"
+    world_state_effects: {}
+  progress:
+    status: "HISTORICAL"
+    description: "Significant progress on most dimensions"
+    world_state_effects: {}
+  muddling_through:
+    status: "HISTORICAL"
+    description: "Mixed results; humanity persists"
+    world_state_effects: {}
+  decline:
+    status: "HISTORICAL"
+    description: "Net negative trajectory"
+    world_state_effects: {}
+  catastrophe:
+    status: "HISTORICAL"
+    description: "Major civilizational damage"
+    world_state_effects: {}
+  extinction:
+    status: "HISTORICAL"
+    description: "Civilization collapses"
+    world_state_effects: {}
+  transcendence:
+    status: "HISTORICAL"
+    description: "Humanity transcends biological limits"
+    world_state_effects: {}
+  radically_different:
+    status: "HISTORICAL"
+    description: "World unrecognizable from 2000"
+    world_state_effects: {}

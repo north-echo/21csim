@@ -1,0 +1,52 @@
+id: "2044_space_law"
+year_month: "2044-01"
+title: "Space Law Framework"
+description: >
+  As space activity expands, the legal framework governing resource extraction,
+  territorial claims, and military use of space requires resolution. The outcome
+  shapes whether space becomes cooperative commons or contested frontier.
+domain: "space"
+confidence: "MEDIUM"
+variable: "space_law_status"
+distribution:
+  type: "categorical"
+  options:
+    un_framework: 0.20
+    bilateral: 0.25
+    corporate_rules: 0.20
+    no_agreement: 0.20
+    militarized: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  un_framework:
+    status: "DIVERGENCE"
+    description: "UN-led framework establishes comprehensive space law covering resources and sovereignty"
+    world_state_effects:
+      space_development_index: "+0.05"
+      global_democracy_index: "+0.02"
+  bilateral:
+    status: "DIVERGENCE"
+    description: "US-China bilateral agreements form the basis of de facto space law"
+    world_state_effects:
+      space_development_index: "+0.03"
+      us_china_tension_index: "-0.03"
+  corporate_rules:
+    status: "DIVERGENCE"
+    description: "Corporate lobbying shapes space law to favor private exploitation of resources"
+    world_state_effects:
+      space_development_index: "+0.08"
+      inequality_index: "+0.03"
+  no_agreement:
+    status: "DIVERGENCE"
+    description: "Nations fail to agree on space governance; lawless frontier persists"
+    world_state_effects:
+      space_development_index: "-0.02"
+      us_china_tension_index: "+0.05"
+  militarized:
+    status: "ESCALATED"
+    description: "Space becomes militarized domain; weapons deployed and territorial conflicts emerge"
+    world_state_effects:
+      space_development_index: "+0.05"
+      us_china_tension_index: "+0.10"
+      existential_risk_cumulative: "+0.03"

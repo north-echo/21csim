@@ -1,0 +1,70 @@
+id: "2030_space_tourism"
+year_month: "2030-06"
+title: "Space Tourism Mainstream"
+description: >
+  Space tourism evolves from billionaire vanity flights to a growing industry.
+  Blue Origin, Virgin Galactic, and SpaceX civilian flights bring hundreds of
+  people to space annually. Price points and safety records determine whether
+  it becomes a real industry or a niche curiosity.
+domain: "space"
+confidence: "MEDIUM"
+variable: "space_tourism_status"
+distribution:
+  type: "categorical"
+  options:
+    mainstream_suborbital: 0.30
+    orbital_hotels: 0.15
+    fatal_accident_setback: 0.20
+    niche_luxury: 0.25
+    regulatory_shutdown: 0.10
+dependencies:
+  - node: "2010_spacex_falcon9"
+    branch: "historical_success"
+    modifies:
+      mainstream_suborbital: "+0.05"
+      orbital_hotels: "+0.05"
+      regulatory_shutdown: "-0.05"
+      niche_luxury: "-0.05"
+  - node: "2010_spacex_falcon9"
+    branch: "spacex_fails"
+    modifies:
+      niche_luxury: "+0.10"
+      regulatory_shutdown: "+0.05"
+      mainstream_suborbital: "-0.10"
+      orbital_hotels: "-0.05"
+conditional: null
+outcomes:
+  mainstream_suborbital:
+    status: "DIVERGENCE"
+    description: "Suborbital tourism hits thousands of passengers per year; ticket prices drop below $100K"
+    explanation: "Competition drives costs down; safety record builds public confidence in commercial spaceflight"
+    world_state_effects:
+      space_development_index: "+0.05"
+    cascading_modifiers:
+      2045_space_economy.on_track: "+0.03"
+  orbital_hotels:
+    status: "DIVERGENCE"
+    description: "First orbital hotel opens; multi-day stays in space become available to wealthy tourists"
+    explanation: "Commercial space stations pivot from research to hospitality; SpaceX Dragon and Starliner serve as taxis"
+    world_state_effects:
+      space_development_index: "+0.08"
+    cascading_modifiers:
+      2045_space_economy.explosive: "+0.03"
+  fatal_accident_setback:
+    status: "ESCALATED"
+    description: "Fatal tourist accident triggers regulatory crackdown; industry growth stalls for years"
+    explanation: "Loss of civilian passengers in high-profile incident destroys public confidence"
+    world_state_effects:
+      space_development_index: "-0.03"
+  niche_luxury:
+    status: "DIVERGENCE"
+    description: "Space tourism remains an ultra-luxury niche; fewer than 100 tourists per year"
+    explanation: "Costs remain above $500K; market limited to the ultra-wealthy"
+    world_state_effects:
+      space_development_index: "+0.02"
+  regulatory_shutdown:
+    status: "DIVERGENCE"
+    description: "Safety concerns and environmental objections lead to heavy regulation; tourism effectively grounded"
+    explanation: "Multiple incidents and climate activism against rocket emissions restrict commercial launches"
+    world_state_effects:
+      space_development_index: "-0.02"

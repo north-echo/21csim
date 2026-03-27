@@ -1,0 +1,69 @@
+id: "2045_me_new_economy"
+year_month: "2045-01"
+title: "Middle East New Economy"
+description: >
+  Middle Eastern nations confront the post-oil economic reality. Whether the region
+  successfully transitions to new industries or faces economic collapse determines
+  stability for hundreds of millions.
+domain: "regional"
+confidence: "MEDIUM"
+variable: "me_new_economy_status"
+distribution:
+  type: "categorical"
+  options:
+    hydrogen_economy: 0.15
+    tourism_tech: 0.20
+    collapse: 0.15
+    renewed_conflict: 0.15
+    diaspora_driven: 0.15
+    foreign_dependency: 0.20
+dependencies:
+  - node: "2033_post_oil"
+    branch: "successful_transition"
+    modifies:
+      hydrogen_economy: "+0.10"
+      tourism_tech: "+0.05"
+      collapse: "-0.10"
+      renewed_conflict: "-0.05"
+  - node: "2033_post_oil"
+    branch: "failed_transition"
+    modifies:
+      collapse: "+0.10"
+      renewed_conflict: "+0.05"
+      hydrogen_economy: "-0.10"
+      tourism_tech: "-0.05"
+conditional: null
+outcomes:
+  hydrogen_economy:
+    status: "DIVERGENCE"
+    description: "Gulf states leverage solar resources to become global hydrogen exporters"
+    world_state_effects:
+      middle_east_stability: "+0.10"
+      renewable_energy_share: "+0.05"
+  tourism_tech:
+    status: "DIVERGENCE"
+    description: "Region pivots to tourism, technology hubs, and financial services"
+    world_state_effects:
+      middle_east_stability: "+0.05"
+  collapse:
+    status: "ESCALATED"
+    description: "Economic diversification fails; petrostates face fiscal collapse and social unrest"
+    world_state_effects:
+      middle_east_stability: "-0.15"
+      conflict_deaths: "+15000"
+  renewed_conflict:
+    status: "ESCALATED"
+    description: "Economic stress reignites regional conflicts and proxy wars"
+    world_state_effects:
+      middle_east_stability: "-0.12"
+      conflict_deaths: "+25000"
+  diaspora_driven:
+    status: "DIVERGENCE"
+    description: "Educated diaspora drives economic transformation through tech and investment"
+    world_state_effects:
+      middle_east_stability: "+0.03"
+  foreign_dependency:
+    status: "DIVERGENCE"
+    description: "Region becomes dependent on Chinese or Western investment and technology"
+    world_state_effects:
+      middle_east_stability: "-0.03"

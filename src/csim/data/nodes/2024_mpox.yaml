@@ -1,0 +1,58 @@
+id: "2024_mpox"
+year_month: "2024-08"
+title: "Mpox / Disease X Preparedness Test"
+description: >
+  A new clade of mpox (clade Ib) spreads rapidly in Central Africa and
+  triggers WHO to declare a public health emergency of international concern.
+  Tests whether post-COVID pandemic preparedness systems work and whether
+  global health equity has improved since 2020.
+domain: "health"
+confidence: "HIGH"
+variable: "mpox_outcome"
+distribution:
+  type: "categorical"
+  options:
+    historical_contained: 0.50
+    pandemic_failure: 0.10
+    rapid_global_response: 0.15
+    ignored_outbreak: 0.15
+    preparedness_vindicated: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_contained:
+    status: "HISTORICAL"
+    description: "WHO declares emergency; vaccines deployed unevenly; outbreak contained but exposes gaps"
+    world_state_effects:
+      global_pandemic_deaths: "+1500"
+  pandemic_failure:
+    status: "ESCALATED"
+    description: "Mpox spreads globally; vaccine nationalism repeats COVID failures"
+    explanation: "Post-COVID fatigue and funding cuts leave health systems unprepared"
+    world_state_effects:
+      global_pandemic_deaths: "+50000"
+      global_gdp_growth_modifier: "*0.99"
+      us_institutional_trust: "-0.02"
+  rapid_global_response:
+    status: "DIVERGENCE"
+    description: "Post-COVID systems work as designed; outbreak contained within weeks"
+    explanation: "Pandemic preparedness investments prove their value; vaccines distributed equitably"
+    world_state_effects:
+      global_pandemic_deaths: "+200"
+      us_institutional_trust: "+0.01"
+  ignored_outbreak:
+    status: "DIVERGENCE"
+    description: "Outbreak confined to Africa; wealthy nations provide minimal assistance"
+    explanation: "Global health equity gains from COVID era prove ephemeral"
+    world_state_effects:
+      global_pandemic_deaths: "+10000"
+      inequality_index: "+0.01"
+      africa_development_index: "-0.01"
+  preparedness_vindicated:
+    status: "DIVERGENCE"
+    description: "Mpox tests and validates new global pandemic response architecture"
+    explanation: "Hundred Days Mission and CEPI frameworks deliver rapid countermeasures"
+    world_state_effects:
+      global_pandemic_deaths: "+100"
+      us_institutional_trust: "+0.02"
+      global_democracy_index: "+0.01"

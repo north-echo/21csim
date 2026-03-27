@@ -1,0 +1,53 @@
+id: "2001_dotcom_aftermath"
+year_month: "2001-03"
+title: "Dot-Com Crash Aftermath"
+description: >
+  Federal Reserve response to dot-com bust and post-9/11 recession.
+  Greenspan cut rates aggressively to 1%, which many argue seeded the
+  housing bubble that led to the 2008 financial crisis.
+domain: "economic"
+confidence: "HIGH"
+variable: "fed_response"
+distribution:
+  type: "categorical"
+  options:
+    historical_slow_rates_cut: 0.50
+    faster_recovery: 0.20
+    deeper_recession: 0.15
+    structural_reform: 0.15
+dependencies: []
+conditional: null
+outcomes:
+  historical_slow_rates_cut:
+    status: "HISTORICAL"
+    description: "Greenspan cuts rates to 1%; loose monetary policy seeds housing bubble"
+    world_state_effects:
+      global_gdp_growth_modifier: "*1.02"
+      inequality_index: "+0.03"
+    cascading_modifiers:
+      2008_financial_crisis.historical_severe: "+0.10"
+  faster_recovery:
+    status: "DIVERGENCE"
+    description: "Tech sector rebounds quickly; moderate rate cuts"
+    explanation: "Dot-com losses absorbed faster than expected"
+    world_state_effects:
+      global_gdp_growth_modifier: "*1.05"
+    cascading_modifiers:
+      2008_financial_crisis.historical_severe: "-0.05"
+  deeper_recession:
+    status: "DIVERGENCE"
+    description: "Full recession; unemployment hits 8%"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.95"
+      inequality_index: "+0.05"
+    cascading_modifiers:
+      2008_financial_crisis.historical_severe: "+0.05"
+  structural_reform:
+    status: "DIVERGENCE"
+    description: "Recession triggers financial regulation reform"
+    explanation: "Sarbanes-Oxley expanded; derivatives regulation strengthened"
+    world_state_effects:
+      inequality_index: "-0.02"
+    cascading_modifiers:
+      2008_financial_crisis.historical_severe: "-0.20"
+      2008_financial_crisis.mild_recession: "+0.15"

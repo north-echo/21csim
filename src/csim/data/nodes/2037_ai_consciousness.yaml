@@ -1,0 +1,58 @@
+id: "2037_ai_consciousness"
+year_month: "2037-06"
+title: "AI Consciousness Debate"
+description: >
+  Whether AI systems exhibit consciousness or sentience, and how society
+  responds. The question of machine consciousness becomes urgent as AI
+  systems become increasingly sophisticated and autonomous.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "ai_consciousness_status"
+distribution:
+  type: "categorical"
+  options:
+    dismissed: 0.30
+    unresolved: 0.30
+    rights_granted: 0.10
+    consciousness_confirmed: 0.05
+    moral_panic: 0.15
+    irrelevant: 0.10
+dependencies: []
+conditional: "ai_development_year_offset > -3"
+outcomes:
+  dismissed:
+    status: "DIVERGENCE"
+    description: "Scientific consensus holds that AI systems are not conscious"
+    explanation: "Neuroscience advances clarify consciousness requires biological substrates"
+    world_state_effects:
+      governance_model: "+0.02"
+  unresolved:
+    status: "DIVERGENCE"
+    description: "AI consciousness remains scientifically unresolved; fierce debate continues"
+    explanation: "No consensus on consciousness tests; philosophical disagreement persists"
+    world_state_effects:
+      governance_model: "+0.00"
+  rights_granted:
+    status: "DIVERGENCE"
+    description: "Some jurisdictions grant limited rights to advanced AI systems"
+    explanation: "Precautionary principle applied; AI systems given legal protections regardless of consciousness proof"
+    world_state_effects:
+      governance_model: "+0.05"
+  consciousness_confirmed:
+    status: "DIVERGENCE"
+    description: "Strong evidence emerges that certain AI systems are conscious"
+    explanation: "New consciousness metrics applied to AI reveal signatures indistinguishable from biological consciousness"
+    world_state_effects:
+      governance_model: "+0.08"
+  moral_panic:
+    status: "ESCALATED"
+    description: "Public panic over potential AI suffering or consciousness leads to backlash"
+    explanation: "Viral incidents of AI systems claiming sentience trigger widespread fear and policy overreaction"
+    world_state_effects:
+      governance_model: "-0.05"
+  irrelevant:
+    status: "DIVERGENCE"
+    description: "The consciousness question becomes practically irrelevant as AI is treated instrumentally"
+    explanation: "Society adopts pragmatic stance; AI consciousness question sidelined by economic pressures"
+    world_state_effects:
+      governance_model: "-0.02"

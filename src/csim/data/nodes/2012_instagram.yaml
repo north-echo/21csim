@@ -1,0 +1,78 @@
+id: "2012_instagram"
+year_month: "2012-04"
+title: "Instagram / Visual Social Media"
+description: >
+  Facebook acquires Instagram. Visual social media creates unprecedented
+  body image pressure, particularly for teen girls. Internal Facebook
+  research (later leaked) shows Instagram is "toxic" for teen mental health.
+domain: "social"
+confidence: "HIGH"
+variable: "instagram_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_toxicity: 0.45
+    stays_independent: 0.15
+    age_restrictions_enforced: 0.15
+    design_for_wellbeing: 0.15
+    backlash_kills_growth: 0.10
+dependencies:
+  - node: "2004_social_media"
+    branch: "historical_ad_driven"
+    modifies:
+      historical_toxicity: "+0.10"
+      stays_independent: "-0.05"
+      design_for_wellbeing: "-0.05"
+  - node: "2004_social_media"
+    branch: "regulated_early"
+    modifies:
+      historical_toxicity: "-0.10"
+      age_restrictions_enforced: "+0.10"
+  - node: "2007_iphone"
+    branch: "historical_apple_led"
+    modifies:
+      historical_toxicity: "+0.05"
+      backlash_kills_growth: "-0.05"
+conditional: null
+outcomes:
+  historical_toxicity:
+    status: "HISTORICAL"
+    description: "Instagram drives teen mental health crisis through comparison culture and body image pressure"
+    world_state_effects:
+      us_life_expectancy_delta: "-0.02"
+      gender_equity_index: "-0.02"
+      social_media_penetration: "+0.05"
+    cascading_modifiers:
+      2020_mental_health.historical_crisis: "+0.05"
+  stays_independent:
+    status: "DIVERGENCE"
+    description: "Instagram not acquired by Facebook; develops with different incentives"
+    explanation: "Without Facebook's engagement optimization, Instagram evolves more slowly but healthily"
+    world_state_effects:
+      us_life_expectancy_delta: "-0.01"
+      gender_equity_index: "-0.01"
+  age_restrictions_enforced:
+    status: "DIVERGENCE"
+    description: "Under-16 ban on social media actually enforced through age verification"
+    explanation: "COPPA-style legislation with real enforcement protects minors from social media harms"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.01"
+      gender_equity_index: "+0.01"
+      internet_freedom_index: "-0.02"
+    cascading_modifiers:
+      2020_mental_health.resilience: "+0.05"
+  design_for_wellbeing:
+    status: "DIVERGENCE"
+    description: "Platform redesigned to reduce social comparison and promote wellbeing"
+    explanation: "Hidden likes, reduced filters, and anti-comparison features become standard"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.01"
+      gender_equity_index: "+0.01"
+  backlash_kills_growth:
+    status: "DIVERGENCE"
+    description: "Youth reject visual social media after early backlash against comparison culture"
+    explanation: "Cultural shift against performative social media limits Instagram's influence"
+    world_state_effects:
+      us_life_expectancy_delta: "+0.01"
+      gender_equity_index: "+0.02"
+      social_media_penetration: "-0.03"

@@ -1,0 +1,70 @@
+id: "2038_autonomous_weapons"
+year_month: "2038-06"
+title: "Autonomous Weapons Systems"
+description: >
+  The proliferation and governance of fully autonomous lethal weapons systems.
+  Whether international law can constrain weapons that select and engage
+  targets without human intervention.
+domain: "security"
+confidence: "MEDIUM"
+variable: "autonomous_weapons_status"
+distribution:
+  type: "categorical"
+  options:
+    proliferation: 0.35
+    partial_ban: 0.25
+    comprehensive_ban: 0.10
+    arms_race: 0.20
+    non_state_actors: 0.10
+dependencies:
+  - node: "2004_drone_warfare"
+    branch: "proliferation"
+    modifies:
+      proliferation: "+0.10"
+      arms_race: "+0.05"
+      comprehensive_ban: "-0.05"
+      partial_ban: "-0.05"
+      non_state_actors: "+0.05"
+  - node: "2004_drone_warfare"
+    branch: "banned_early"
+    modifies:
+      comprehensive_ban: "+0.15"
+      proliferation: "-0.10"
+      arms_race: "-0.05"
+conditional: null
+outcomes:
+  proliferation:
+    status: "DIVERGENCE"
+    description: "Autonomous weapons deployed by dozens of nations with minimal regulation"
+    explanation: "Arms manufacturers drive adoption; no effective international controls emerge"
+    world_state_effects:
+      nuclear_risk_level: "+0.05"
+      drone_warfare_prevalence: "+0.20"
+  partial_ban:
+    status: "DIVERGENCE"
+    description: "Treaty bans certain categories but loopholes allow continued development"
+    explanation: "International agreement restricts fully autonomous systems but defensive and semi-autonomous systems proliferate"
+    world_state_effects:
+      nuclear_risk_level: "+0.02"
+      drone_warfare_prevalence: "+0.10"
+  comprehensive_ban:
+    status: "DIVERGENCE"
+    description: "Comprehensive international ban on autonomous lethal weapons"
+    explanation: "Global coalition achieves binding treaty with verification mechanisms"
+    world_state_effects:
+      nuclear_risk_level: "-0.02"
+      drone_warfare_prevalence: "+0.03"
+  arms_race:
+    status: "ESCALATED"
+    description: "Autonomous weapons arms race between major powers"
+    explanation: "US, China, and Russia pour resources into autonomous weapons; escalation dynamics intensify"
+    world_state_effects:
+      nuclear_risk_level: "+0.08"
+      drone_warfare_prevalence: "+0.25"
+  non_state_actors:
+    status: "ESCALATED"
+    description: "Autonomous weapons technology acquired by non-state actors and terrorist groups"
+    explanation: "Commercial drone and AI technology enables non-state actors to build autonomous weapons"
+    world_state_effects:
+      nuclear_risk_level: "+0.03"
+      drone_warfare_prevalence: "+0.15"

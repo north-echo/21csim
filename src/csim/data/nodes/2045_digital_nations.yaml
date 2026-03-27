@@ -1,0 +1,48 @@
+id: "2045_digital_nations"
+year_month: "2045-01"
+title: "Digital Nations"
+description: >
+  The concept of digital-first nations and virtual communities challenges traditional
+  state sovereignty. Whether digital nations gain legal recognition reshapes the
+  nature of citizenship and governance.
+domain: "technology"
+confidence: "MEDIUM"
+variable: "digital_nations_status"
+distribution:
+  type: "categorical"
+  options:
+    emerge: 0.15
+    rejected: 0.30
+    corporate_states: 0.20
+    virtual_communities: 0.25
+    regulatory_limbo: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  emerge:
+    status: "DIVERGENCE"
+    description: "Digital nations gain international recognition with virtual territory and citizenship"
+    world_state_effects:
+      global_democracy_index: "+0.03"
+      governance_model: "+0.08"
+  rejected:
+    status: "DIVERGENCE"
+    description: "Traditional states reject digital nation concept; physical sovereignty reinforced"
+    world_state_effects:
+      governance_model: "-0.02"
+  corporate_states:
+    status: "DIVERGENCE"
+    description: "Tech corporations effectively become quasi-states with citizens and services"
+    world_state_effects:
+      inequality_index: "+0.05"
+      governance_model: "+0.05"
+  virtual_communities:
+    status: "DIVERGENCE"
+    description: "Virtual communities flourish without formal statehood; cultural impact significant"
+    world_state_effects:
+      governance_model: "+0.03"
+  regulatory_limbo:
+    status: "DIVERGENCE"
+    description: "Digital nations exist in regulatory gray zone; neither recognized nor prohibited"
+    world_state_effects:
+      governance_model: "+0.01"

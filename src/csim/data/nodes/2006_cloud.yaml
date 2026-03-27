@@ -1,0 +1,52 @@
+id: "2006_cloud"
+year_month: "2006-08"
+title: "Cloud Computing / AWS"
+description: >
+  Amazon Web Services launches, creating the cloud computing paradigm.
+  Enables startups, AI research, and pandemic-era remote work.
+domain: "technology"
+confidence: "HIGH"
+variable: "cloud_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    historical_hyperscaler: 0.55
+    distributed_model: 0.15
+    delayed_5_years: 0.10
+    government_cloud: 0.10
+    open_source_cloud: 0.10
+dependencies: []
+conditional: null
+outcomes:
+  historical_hyperscaler:
+    status: "HISTORICAL"
+    description: "AWS, Azure, GCP dominate; hyperscaler model wins"
+    world_state_effects:
+      global_gdp_growth_modifier: "*1.01"
+      inequality_index: "+0.02"
+    cascading_modifiers:
+      2023_ai_acceleration.historical_rapid: "+0.05"
+  distributed_model:
+    status: "DIVERGENCE"
+    description: "Distributed/edge computing model prevails"
+    world_state_effects:
+      internet_freedom_index: "+0.03"
+  delayed_5_years:
+    status: "DIVERGENCE"
+    description: "Cloud computing delayed until 2011"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.99"
+    cascading_modifiers:
+      2023_ai_acceleration.historical_rapid: "-0.10"
+  government_cloud:
+    status: "DIVERGENCE"
+    description: "Government-run cloud infrastructure dominates"
+    world_state_effects:
+      surveillance_state_index: "+0.05"
+      internet_freedom_index: "-0.03"
+  open_source_cloud:
+    status: "DIVERGENCE"
+    description: "Open source cloud platforms win over proprietary"
+    world_state_effects:
+      internet_freedom_index: "+0.05"
+      inequality_index: "-0.01"

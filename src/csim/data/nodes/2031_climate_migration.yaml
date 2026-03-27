@@ -1,0 +1,70 @@
+id: "2031_climate_migration"
+year_month: "2031-06"
+title: "Climate Migration Crisis"
+description: >
+  Mass population displacement driven by climate impacts including sea level rise,
+  extreme heat, drought, and agricultural failure. Scale and management of migration
+  flows reshape politics and demographics globally.
+domain: "climate"
+confidence: "MEDIUM"
+variable: "climate_migration_status"
+distribution:
+  type: "categorical"
+  options:
+    moderate_managed: 0.30
+    large_unmanaged: 0.35
+    catastrophic: 0.15
+    minimal: 0.20
+dependencies:
+  - node: "2025_climate_tipping"
+    branch: "tipping_point_crossed"
+    modifies:
+      catastrophic: "+0.15"
+      large_unmanaged: "+0.10"
+      minimal: "-0.15"
+      moderate_managed: "-0.10"
+  - node: "2025_climate_tipping"
+    branch: "accelerated_action"
+    modifies:
+      minimal: "+0.10"
+      moderate_managed: "+0.05"
+      catastrophic: "-0.10"
+      large_unmanaged: "-0.05"
+conditional: "climate_temp_anomaly > 1.5"
+outcomes:
+  moderate_managed:
+    status: "DIVERGENCE"
+    description: "Tens of millions displaced but international frameworks manage flows"
+    explanation: "Climate impacts significant but global cooperation enables orderly resettlement and adaptation funding"
+    world_state_effects:
+      conflict_deaths: "+5000"
+      eu_cohesion: "-0.03"
+      food_security_index: "-0.05"
+  large_unmanaged:
+    status: "DIVERGENCE"
+    description: "Hundreds of millions displaced with inadequate international response"
+    explanation: "Climate impacts overwhelm existing institutions; border conflicts and refugee crises proliferate"
+    world_state_effects:
+      conflict_deaths: "+30000"
+      eu_cohesion: "-0.08"
+      food_security_index: "-0.10"
+  catastrophic:
+    status: "ESCALATED"
+    description: "Over a billion people displaced; state failures cascade"
+    explanation: "Multiple breadbasket failures and coastal flooding trigger unprecedented displacement beyond any institutional capacity"
+    world_state_effects:
+      conflict_deaths: "+100000"
+      eu_cohesion: "-0.15"
+      food_security_index: "-0.20"
+    cascading_modifiers:
+      2035_europe_demographics.fortress_europe: "+0.15"
+      2045_eu_federation.dissolution: "+0.08"
+      2030_us_realignment.continued_polarization: "+0.05"
+  minimal:
+    status: "DIVERGENCE"
+    description: "Climate migration remains manageable; adaptation succeeds"
+    explanation: "Climate impacts less severe than projected or adaptation measures prove highly effective"
+    world_state_effects:
+      conflict_deaths: "+1000"
+      eu_cohesion: "-0.01"
+      food_security_index: "-0.02"

@@ -1,0 +1,44 @@
+id: "2005_katrina_racial"
+year_month: "2005-09"
+title: "Katrina Racial Reckoning"
+domain: "social"
+confidence: "HIGH"
+variable: "racial_reckoning"
+distribution:
+  type: "categorical"
+  options:
+    historical_slow_build: 0.50
+    immediate_reform: 0.10
+    no_reckoning: 0.20
+    earlier_blm: 0.20
+dependencies:
+  - node: "2005_katrina"
+    branch: "catastrophic_failure"
+    modifies:
+      historical_slow_build: "+0.05"
+      earlier_blm: "+0.05"
+      no_reckoning: "-0.10"
+conditional: null
+outcomes:
+  historical_slow_build:
+    status: "HISTORICAL"
+    description: "Slow build of racial consciousness; sets stage for BLM"
+    world_state_effects:
+      racial_justice_index: "+0.02"
+  immediate_reform:
+    status: "DIVERGENCE"
+    description: "Katrina triggers immediate racial justice reforms"
+    world_state_effects:
+      racial_justice_index: "+0.08"
+      us_polarization: "+0.02"
+  no_reckoning:
+    status: "DIVERGENCE"
+    description: "Racial dimensions of Katrina ignored"
+    world_state_effects:
+      racial_justice_index: "-0.02"
+  earlier_blm:
+    status: "DIVERGENCE"
+    description: "Mass racial justice movement emerges in 2006-2008"
+    world_state_effects:
+      racial_justice_index: "+0.05"
+      us_polarization: "+0.04"

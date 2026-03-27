@@ -1,0 +1,51 @@
+id: "2075_solar_system"
+year_month: "2075-01"
+title: "Solar System Development"
+description: >
+  The extent of human presence across the solar system. Whether space
+  development has produced thriving colonies, commercial ventures, or
+  remained limited to near-Earth operations.
+domain: "technology"
+confidence: "LOW"
+variable: "solar_system_status"
+distribution:
+  type: "categorical"
+  options:
+    colonies: 0.10
+    outposts: 0.25
+    abandoned: 0.15
+    thriving: 0.05
+    commercial: 0.20
+    military: 0.10
+    exploration_only: 0.15
+dependencies: []
+conditional: "space_development_index > 0.4"
+outcomes:
+  colonies:
+    status: "DIVERGENCE"
+    description: "Self-sustaining colonies on Moon and Mars with growing populations"
+    world_state_effects: {}
+  outposts:
+    status: "DIVERGENCE"
+    description: "Small research and industrial outposts on several bodies; not self-sustaining"
+    world_state_effects: {}
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Early space settlements abandoned due to cost, health risks, or loss of political will"
+    world_state_effects: {}
+  thriving:
+    status: "DIVERGENCE"
+    description: "Space civilization flourishing with millions living off-Earth across multiple locations"
+    world_state_effects: {}
+  commercial:
+    status: "DIVERGENCE"
+    description: "Space development driven by commercial mining, manufacturing, and tourism"
+    world_state_effects: {}
+  military:
+    status: "ESCALATED"
+    description: "Space development primarily military; orbital weapons platforms and strategic outposts"
+    world_state_effects: {}
+  exploration_only:
+    status: "DIVERGENCE"
+    description: "Robotic exploration continues but permanent human presence beyond Earth proves impractical"
+    world_state_effects: {}

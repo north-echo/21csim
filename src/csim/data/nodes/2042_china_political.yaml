@@ -1,0 +1,73 @@
+id: "2042_china_political"
+year_month: "2042-01"
+title: "China Political Trajectory"
+description: >
+  China's political system evolves in the post-Xi era. Whether the country
+  liberalizes, doubles down on authoritarianism, or fragments determines the
+  shape of 21st century geopolitics.
+domain: "regional"
+confidence: "MEDIUM"
+variable: "china_political_status"
+distribution:
+  type: "categorical"
+  options:
+    authoritarian_stable: 0.25
+    gradual_liberalization: 0.15
+    sudden_transition: 0.10
+    techno_authoritarianism: 0.25
+    fragmentation: 0.10
+    hybrid: 0.15
+dependencies:
+  - node: "2035_china_post_xi"
+    branch: "smooth_succession"
+    modifies:
+      authoritarian_stable: "+0.10"
+      techno_authoritarianism: "+0.05"
+      fragmentation: "-0.10"
+      sudden_transition: "-0.05"
+  - node: "2035_china_post_xi"
+    branch: "power_struggle"
+    modifies:
+      fragmentation: "+0.10"
+      sudden_transition: "+0.05"
+      authoritarian_stable: "-0.10"
+      techno_authoritarianism: "-0.05"
+conditional: null
+outcomes:
+  authoritarian_stable:
+    status: "DIVERGENCE"
+    description: "CCP maintains authoritarian control with incremental economic reforms"
+    world_state_effects:
+      global_democracy_index: "-0.02"
+      us_china_tension_index: "+0.03"
+  gradual_liberalization:
+    status: "DIVERGENCE"
+    description: "China slowly opens political system with limited elections and press freedom"
+    world_state_effects:
+      global_democracy_index: "+0.05"
+      us_china_tension_index: "-0.05"
+  sudden_transition:
+    status: "ESCALATED"
+    description: "Political crisis triggers rapid regime change with uncertain outcome"
+    world_state_effects:
+      global_democracy_index: "+0.02"
+      us_china_tension_index: "+0.08"
+  techno_authoritarianism:
+    status: "DIVERGENCE"
+    description: "AI-powered surveillance state perfected; social credit system becomes total"
+    world_state_effects:
+      global_democracy_index: "-0.05"
+      us_china_tension_index: "+0.05"
+  fragmentation:
+    status: "ESCALATED"
+    description: "Regional tensions fracture China into semi-autonomous zones"
+    world_state_effects:
+      global_democracy_index: "+0.01"
+      us_china_tension_index: "+0.10"
+      conflict_deaths: "+20000"
+  hybrid:
+    status: "DIVERGENCE"
+    description: "China develops unique hybrid system blending authoritarian control with limited pluralism"
+    world_state_effects:
+      global_democracy_index: "+0.01"
+      us_china_tension_index: "-0.02"

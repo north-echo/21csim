@@ -1,0 +1,63 @@
+id: "2027_energy_transition"
+year_month: "2027-06"
+title: "Energy Transition"
+description: >
+  Global energy system transformation. Pace of renewable adoption,
+  nuclear renaissance potential, and fossil fuel phase-out timeline.
+domain: "climate"
+confidence: "MEDIUM"
+variable: "energy_trajectory"
+distribution:
+  type: "categorical"
+  options:
+    gradual_transition: 0.40
+    rapid_transition: 0.20
+    fossil_resurgence: 0.15
+    nuclear_renaissance: 0.15
+    energy_crisis: 0.10
+dependencies:
+  - node: "2025_climate_tipping"
+    branch: "accelerated_action"
+    modifies:
+      rapid_transition: "+0.15"
+      gradual_transition: "-0.10"
+  - node: "2022_russia_ukraine"
+    branch: "historical_invasion_stalemate"
+    modifies:
+      rapid_transition: "+0.05"
+      fossil_resurgence: "-0.05"
+conditional: null
+outcomes:
+  gradual_transition:
+    status: "DIVERGENCE"
+    description: "Steady shift to renewables; 50% by 2035"
+    world_state_effects:
+      renewable_energy_share: "+0.15"
+      climate_temp_anomaly: "+0.05"
+  rapid_transition:
+    status: "DIVERGENCE"
+    description: "Rapid decarbonization; renewables dominate by 2032"
+    world_state_effects:
+      renewable_energy_share: "+0.25"
+      climate_temp_anomaly: "-0.05"
+      global_gdp_growth_modifier: "*1.02"
+  fossil_resurgence:
+    status: "DIVERGENCE"
+    description: "Cheap fossil fuels slow transition"
+    world_state_effects:
+      renewable_energy_share: "+0.05"
+      climate_temp_anomaly: "+0.15"
+  nuclear_renaissance:
+    status: "DIVERGENCE"
+    description: "SMRs and fusion progress drive nuclear comeback"
+    world_state_effects:
+      renewable_energy_share: "+0.10"
+      climate_temp_anomaly: "+0.02"
+      nuclear_risk_level: "+0.02"
+  energy_crisis:
+    status: "ESCALATED"
+    description: "Energy shortages and price spikes"
+    world_state_effects:
+      global_gdp_growth_modifier: "*0.95"
+      climate_temp_anomaly: "+0.10"
+      conflict_deaths: "+10000"

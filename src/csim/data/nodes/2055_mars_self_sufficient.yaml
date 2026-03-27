@@ -1,0 +1,52 @@
+id: "2055_mars_self_sufficient"
+year_month: "2055-01"
+title: "Mars Self-Sufficiency"
+description: >
+  Mars settlement faces the critical question of self-sufficiency. Whether the
+  colony can survive without Earth resupply determines if humanity becomes
+  a truly multi-planetary species.
+domain: "space"
+confidence: "LOW"
+variable: "mars_self_sufficient_status"
+distribution:
+  type: "categorical"
+  options:
+    achieved: 0.10
+    decades_away: 0.30
+    abandoned: 0.20
+    thriving: 0.05
+    struggling: 0.25
+    not_attempted: 0.10
+dependencies: []
+conditional: "space_development_index > 0.4"
+outcomes:
+  achieved:
+    status: "DIVERGENCE"
+    description: "Mars colony achieves basic self-sufficiency in food, water, and energy"
+    world_state_effects:
+      space_development_index: "+0.15"
+  decades_away:
+    status: "DIVERGENCE"
+    description: "Mars settlement progressing but self-sufficiency remains decades away"
+    world_state_effects:
+      space_development_index: "+0.05"
+  abandoned:
+    status: "DIVERGENCE"
+    description: "Mars settlement abandoned as unsustainable; resources redirected to Earth"
+    world_state_effects:
+      space_development_index: "-0.08"
+  thriving:
+    status: "DIVERGENCE"
+    description: "Mars colony not only self-sufficient but growing and innovating independently"
+    world_state_effects:
+      space_development_index: "+0.25"
+  struggling:
+    status: "DIVERGENCE"
+    description: "Mars colony survives but struggles with constant supply chain and technical challenges"
+    world_state_effects:
+      space_development_index: "+0.02"
+  not_attempted:
+    status: "DIVERGENCE"
+    description: "No serious Mars settlement attempt made; human spaceflight remains orbital"
+    world_state_effects:
+      space_development_index: "-0.03"
