@@ -5,6 +5,7 @@ import { Viewer } from './viewer.js';
 import { Controls } from './controls.js';
 import { Selector } from './selector.js';
 import { SoundEngine } from './sound.js';
+import { initNav } from './nav.js';
 
 const VERDICT_COLORS = {
   'GOLDEN-AGE': '#ffd700',
@@ -75,9 +76,10 @@ class App {
   async _init() {
     const runs = await this.selector.loadIndex('/runs/index.json');
 
-    // Check for ?seed=XXXX in URL to auto-load a specific run
+    // Check for /century/{seed} path or ?seed=XXXX query param
+    const pathMatch = window.location.pathname.match(/\/century\/(\d+)/);
     const params = new URLSearchParams(window.location.search);
-    const seedParam = params.get('seed');
+    const seedParam = pathMatch ? pathMatch[1] : params.get('seed');
     if (seedParam && runs.length > 0) {
       const target = runs.find(r => String(r.seed) === seedParam);
       if (target) {
@@ -209,5 +211,6 @@ class App {
 
 // Boot
 document.addEventListener('DOMContentLoaded', () => {
+  initNav('viewer');
   window.app = new App();
 });

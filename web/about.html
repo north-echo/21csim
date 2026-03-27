@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21csim - About / Methodology</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── About-specific overrides ── */
+    html, body {
+      overflow: auto;
+      height: auto;
+    }
+
+    #app {
+      display: block;
+      height: auto;
+      min-height: 100vh;
+    }
+
+    /* ── Prose sections ── */
+    .about-section {
+      padding: 32px 32px;
+      border-bottom: 1px solid var(--border);
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .about-section h2 {
+      font-family: var(--font-ui);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .about-section h3 {
+      font-family: var(--font-ui);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+
+    .about-section p,
+    .about-section li {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text);
+      max-width: 72ch;
+    }
+
+    .about-section p {
+      margin-bottom: 12px;
+    }
+
+    .about-section ul,
+    .about-section ol {
+      margin: 8px 0 16px 20px;
+    }
+
+    .about-section li {
+      margin-bottom: 6px;
+    }
+
+    .about-section code {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: var(--bg-card);
+      padding: 1px 5px;
+      border-radius: 3px;
+      color: var(--accent);
+    }
+
+    /* ── Verdict table ── */
+    .verdict-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 20px;
+      font-family: var(--font-ui);
+      font-size: 13px;
+    }
+
+    .verdict-table th,
+    .verdict-table td {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .verdict-table th {
+      background: var(--bg-panel);
+      color: var(--text-dim);
+      font-weight: 600;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .verdict-table td {
+      color: var(--text);
+    }
+
+    .verdict-table .swatch {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    /* ── Node Catalog Section (full-width) ── */
+    .catalog-section {
+      padding: 32px;
+      border-bottom: 1px solid var(--border);
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .catalog-section h2 {
+      font-family: var(--font-ui);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 20px;
+    }
+
+    /* ── Catalog filter bar ── */
+    .catalog-filters {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 12px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .catalog-filters input[type="text"],
+    .catalog-filters select {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      padding: 6px 10px;
+      outline: none;
+    }
+
+    .catalog-filters input[type="text"] {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .catalog-filters input[type="text"]:focus,
+    .catalog-filters select:focus {
+      border-color: var(--accent);
+    }
+
+    .catalog-filters select option {
+      background: var(--bg-panel);
+      color: var(--text);
+    }
+
+    .catalog-count {
+      font-size: 12px;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      margin-left: auto;
+    }
+
+    /* ── Node list ── */
+    .node-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .node-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .node-item:hover {
+      border-color: var(--accent);
+      background: var(--bg-hover);
+    }
+
+    .node-item.expanded {
+      border-color: var(--accent);
+    }
+
+    .node-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+    }
+
+    .node-year {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 2px 6px;
+      background: var(--bg);
+      border-radius: 3px;
+      color: var(--text-dim);
+      white-space: nowrap;
+      min-width: 60px;
+      text-align: center;
+    }
+
+    .node-title {
+      font-family: var(--font-ui);
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--text-bright);
+      flex: 1;
+    }
+
+    .node-domain-tag {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 3px;
+      background: var(--bg);
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .node-confidence-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+
+    .node-expand-icon {
+      font-size: 10px;
+      color: var(--text-dim);
+      transition: transform 0.2s;
+    }
+
+    .node-item.expanded .node-expand-icon {
+      transform: rotate(90deg);
+    }
+
+    /* ── Expanded detail ── */
+    .node-detail {
+      display: none;
+      padding: 0 14px 14px;
+      border-top: 1px solid var(--border);
+      margin-top: 0;
+    }
+
+    .node-item.expanded .node-detail {
+      display: block;
+    }
+
+    .node-description {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--text);
+      margin: 12px 0;
+      max-width: 72ch;
+    }
+
+    .node-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 12px;
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    .node-meta-row span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ── Branches ── */
+    .branches-label {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+    }
+
+    .branch-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .branch-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 6px 10px;
+      background: var(--bg);
+      border-radius: 4px;
+      border-left: 3px solid var(--status-historical);
+    }
+
+    .branch-row[data-status="DIVERGENCE"] {
+      border-left-color: var(--status-divergence);
+    }
+    .branch-row[data-status="ESCALATED"] {
+      border-left-color: var(--status-escalated);
+    }
+    .branch-row[data-status="PREVENTED"] {
+      border-left-color: var(--status-prevented);
+    }
+    .branch-row[data-status="ACCELERATED"] {
+      border-left-color: var(--status-accelerated);
+    }
+    .branch-row[data-status="DELAYED"] {
+      border-left-color: var(--status-delayed);
+    }
+    .branch-row[data-status="DIMINISHED"] {
+      border-left-color: var(--status-diminished);
+    }
+
+    .branch-name {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-bright);
+      min-width: 160px;
+    }
+
+    .branch-prob {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent);
+      min-width: 50px;
+    }
+
+    .branch-status {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      min-width: 80px;
+    }
+
+    .branch-desc {
+      font-family: var(--font-ui);
+      font-size: 12px;
+      color: var(--text-dim);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    /* ── Dependencies mini-graph ── */
+    .deps-section {
+      margin-top: 4px;
+    }
+
+    .deps-label {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+    }
+
+    .deps-graph {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .dep-node {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 3px 8px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .dep-node:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .dep-arrow {
+      color: var(--text-dim);
+      font-size: 14px;
+    }
+
+    .dep-target {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 3px 8px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .conditional-note {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      color: var(--status-divergence);
+      margin-top: 8px;
+      padding: 6px 10px;
+      background: rgba(240, 192, 64, 0.06);
+      border: 1px solid rgba(240, 192, 64, 0.2);
+      border-radius: 4px;
+    }
+
+    /* ── FAQ ── */
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-q {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-bright);
+      margin-bottom: 6px;
+    }
+
+    .faq-a {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text);
+      max-width: 72ch;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .about-section,
+      .catalog-section {
+        padding: 16px;
+      }
+      .branch-row {
+        flex-direction: column;
+        gap: 4px;
+      }
+      .branch-name { min-width: auto; }
+    }
+
+    @media (max-width: 600px) {
+      .catalog-filters {
+        flex-direction: column;
+      }
+      .catalog-filters input[type="text"] {
+        min-width: 100%;
+      }
+      .node-header {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav id="site-nav"></nav>
+  <div id="app">
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- Section 1: Methodology                         -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="about-section">
+      <h2>What is 21csim?</h2>
+      <p>
+        21csim is a Monte Carlo counterfactual simulation of the 21st century. It models
+        303 pivotal event nodes -- from the 2000 U.S. election to speculative far-future
+        milestones -- as a directed acyclic graph (DAG). Each node branches into multiple
+        possible outcomes with assigned probabilities. When you run a simulation, the engine
+        rolls the dice at every branch point, cascading the consequences through the
+        dependency graph to produce one plausible alternate history.
+      </p>
+      <p>
+        Run it thousands of times with different random seeds and you get a probability
+        distribution over possible 21st centuries -- some optimistic, some catastrophic,
+        most somewhere in between.
+      </p>
+
+      <h3>How It Works</h3>
+      <ul>
+        <li><strong>303 event nodes</strong> organized as a DAG with explicit dependency edges</li>
+        <li><strong>Probabilistic branching:</strong> each node has 2-6 outcome branches with assigned probabilities that sum to 1.0</li>
+        <li><strong>Cascading dependencies:</strong> the outcome of one node can shift the probabilities or gate the existence of downstream nodes</li>
+        <li><strong>Conditional gating:</strong> some nodes only fire if a specific upstream branch was taken (e.g., a war node gated on a diplomacy-failure branch)</li>
+        <li><strong>32 world-state dimensions:</strong> each branch adjusts dimensions like <code>democracy_index</code>, <code>climate_stability</code>, <code>technological_progress</code>, and <code>global_cooperation</code></li>
+        <li><strong>Composite scoring:</strong> after all nodes resolve, the 32 dimensions are weighted and combined into a single composite score that maps to a verdict</li>
+      </ul>
+
+      <h3>What It Is NOT</h3>
+      <ul>
+        <li><strong>Not a prediction.</strong> The simulation explores structured possibilities, not forecasts. No outcome is presented as likely to happen.</li>
+        <li><strong>Not political commentary.</strong> Nodes model events across the political spectrum without editorial judgment.</li>
+        <li><strong>Not comprehensive history.</strong> 303 nodes cannot capture every significant event. The selection focuses on high-leverage inflection points with clear branching structure.</li>
+      </ul>
+
+      <h3>Verdict Classification</h3>
+      <p>
+        After a simulation run resolves all 303 nodes, the accumulated world-state
+        dimensions produce a composite score. That score maps to one of eight verdict
+        categories:
+      </p>
+      <table class="verdict-table">
+        <thead>
+          <tr>
+            <th>Verdict</th>
+            <th>Composite Range</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="swatch" style="background:var(--verdict-golden-age)"></span>Golden Age</td>
+            <td>&ge; 75</td>
+            <td>Broad flourishing across most dimensions: strong democracy, climate stability, technological benefit, global cooperation</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:var(--verdict-transcendence)"></span>Transcendence</td>
+            <td>&ge; 85 + tech</td>
+            <td>Technological transformation so profound that conventional metrics break down -- e.g., superintelligence or post-scarcity</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:var(--verdict-progress)"></span>Progress</td>
+            <td>55 - 74</td>
+            <td>Meaningful improvement in most areas, though with setbacks and unresolved problems</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:var(--verdict-muddling-through)"></span>Muddling Through</td>
+            <td>40 - 54</td>
+            <td>Incremental change, mixed results. Some things improve, others worsen, net effect ambiguous</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:var(--verdict-decline)"></span>Decline</td>
+            <td>25 - 39</td>
+            <td>Measurable deterioration in key dimensions: rising authoritarianism, worsening climate, economic stagnation</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:var(--verdict-catastrophe)"></span>Catastrophe</td>
+            <td>10 - 24</td>
+            <td>Severe collapse in multiple dimensions: major wars, civilizational regression, widespread suffering</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:var(--verdict-extinction)"></span>Extinction</td>
+            <td>&lt; 10</td>
+            <td>Civilizational or literal extinction scenarios: runaway AI, nuclear winter, ecological collapse</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:var(--verdict-radically-different)"></span>Radically Different</td>
+            <td>High divergence</td>
+            <td>High divergence ratio with ambiguous composite score -- the world is so different from baseline that "better" or "worse" loses meaning</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Probability Calibration</h3>
+      <p>
+        The base probabilities assigned to each branch are subjective estimates informed by
+        historical analysis, not statistical predictions derived from data. They are
+        calibrated so that batch runs produce realistic distributions -- i.e., the most
+        common verdicts across thousands of seeds roughly match the range of plausible
+        21st-century trajectories.
+      </p>
+      <p>
+        "Realistic" here means the simulation should not systematically produce utopias or
+        catastrophes. The probabilities are tuned so that historical branches dominate when
+        they should, while leaving meaningful room for divergence at genuine inflection
+        points.
+      </p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- Section 2: Interactive Node Catalog             -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="catalog-section">
+      <h2>Node Catalog</h2>
+      <div class="catalog-filters" id="catalog-filters">
+        <input type="text" id="catalog-search" placeholder="Search by title, ID, or description...">
+        <select id="filter-domain"><option value="">All Domains</option></select>
+        <select id="filter-decade"><option value="">All Eras</option></select>
+        <select id="filter-confidence"><option value="">All Confidence</option></select>
+        <span class="catalog-count" id="catalog-count"></span>
+      </div>
+      <div class="node-list" id="node-list">
+        <div style="color:var(--text-dim); text-align:center; padding:40px; font-family:var(--font-ui);">
+          Loading node catalog...
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- Section 3: FAQ                                  -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="about-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Is this a prediction?</div>
+        <div class="faq-a">
+          No. 21csim is a structured exploration of counterfactual possibilities.
+          It makes no claims about what will happen -- only about what <em>could</em>
+          happen given a set of modeled branch points. Think of it as a tool for
+          thinking about uncertainty, not a crystal ball.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How are probabilities determined?</div>
+        <div class="faq-a">
+          Each branch probability is a subjective estimate informed by historical
+          analysis, domain expertise, and expert intuition. They are then calibrated
+          so that batch runs across thousands of seeds produce plausible distributions
+          of outcomes. For historical nodes (pre-2025), the "historical" branch
+          typically has high probability, reflecting that history actually happened.
+          For future nodes, probabilities reflect genuine uncertainty.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I add my own nodes?</div>
+        <div class="faq-a">
+          Yes. Create a YAML file in <code>src/csim/data/nodes/</code> following the
+          existing schema. Each node needs an <code>id</code>, <code>year_month</code>,
+          <code>title</code>, <code>description</code>, <code>domain</code>,
+          <code>distribution</code> with outcome probabilities, and an
+          <code>outcomes</code> block defining each branch's effects on world-state
+          dimensions. You can also specify <code>dependencies</code> and
+          <code>conditional</code> gating.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Why does event X have probability Y?</div>
+        <div class="faq-a">
+          Every probability is a calibration choice, not a scientific measurement.
+          The philosophy is: historical branches should be highly probable (the past
+          happened), near-future branches should reflect current trends and expert
+          consensus, and far-future branches should acknowledge deep uncertainty.
+          The goal is a simulation that feels plausible in aggregate, even if
+          individual estimates are debatable. Disagreement about any specific
+          probability is expected and welcome -- it is the whole point of
+          counterfactual reasoning.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How is the composite score calculated?</div>
+        <div class="faq-a">
+          The simulation tracks 32 world-state dimensions (e.g., democracy_index,
+          climate_stability, economic_equality). Each branch outcome adds or
+          subtracts from these dimensions. At the end of a run, the dimensions
+          are combined with importance weights into a single composite score
+          ranging from 0 to 100. The score then maps to one of eight verdict
+          categories.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What does "Radically Different" mean?</div>
+        <div class="faq-a">
+          A "Radically Different" verdict occurs when the simulation produces a
+          world with a high divergence ratio -- meaning many nodes took non-historical
+          branches -- combined with an ambiguous composite score (neither clearly
+          good nor clearly bad). In these timelines, the world has changed so
+          fundamentally from our own that conventional notions of "better" or
+          "worse" lose their meaning.
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script type="module">
+    import { initNav } from './nav.js';
+    initNav('about');
+  </script>
+  <script type="module" src="about.js"></script>
+</body>
+</html>

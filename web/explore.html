@@ -578,10 +578,10 @@
   </style>
 </head>
 <body>
+  <nav id="site-nav"></nav>
   <div id="app">
     <!-- Top Bar -->
     <div id="top-bar">
-      <span class="logo">21csim</span>
       <div id="run-info">
         <span class="headline" style="color: var(--text-bright); font-family: var(--font-ui); font-size: 15px;">Explorer / Analytics</span>
       </div>
@@ -650,6 +650,10 @@
     </section>
   </div>
 
+  <script type="module">
+    import { initNav } from './nav.js';
+    initNav('explore');
+  </script>
   <script type="module" src="explore.js"></script>
 </body>
 </html>

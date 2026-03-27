@@ -3,19 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>21csim - Alternate History Viewer</title>
+  <title>21csim — The 21st Century Simulator</title>
+  <meta name="description" content="What if history had gone differently? Watch 10,000 alternate centuries unfold.">
+  <meta property="og:title" content="21csim — The 21st Century Simulator">
+  <meta property="og:description" content="What if history had gone differently? Watch 10,000 alternate centuries unfold.">
+  <meta property="og:image" content="/og/default.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="21csim — The 21st Century Simulator">
+  <meta name="twitter:description" content="What if history had gone differently?">
+  <meta name="twitter:image" content="/og/default.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <nav id="site-nav"></nav>
   <div id="app">
     <!-- Top Bar -->
     <div id="top-bar">
-      <span class="logo">21csim</span>
       <div id="run-info">
         <span class="headline" style="color: var(--text-dim);">No run loaded</span>
       </div>
       <div class="actions">
-        <a href="explore.html" class="ctrl-btn" style="text-decoration:none;">Explorer</a>
         <button class="ctrl-btn" id="btn-select-run">Runs</button>
       </div>
     </div>

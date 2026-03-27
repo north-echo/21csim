@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21csim - Findings</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── Findings-specific overrides ── */
+    html, body {
+      overflow: auto;
+      height: auto;
+    }
+
+    #app {
+      display: block;
+      height: auto;
+      min-height: 100vh;
+    }
+
+    /* ── Sections ── */
+    .findings-section {
+      padding: 24px 32px;
+      border-bottom: 1px solid var(--border);
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .findings-section h2 {
+      font-family: var(--font-ui);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .findings-section h3 {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+    }
+
+    /* ── Page header ── */
+    .page-header {
+      text-align: center;
+      padding: 40px 32px 32px;
+      max-width: 1400px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header h1 {
+      font-family: var(--font-ui);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-bright);
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .page-header .subtitle {
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    /* ── Insight Cards ── */
+    .insight-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .insight-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px 20px;
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .insight-card .insight-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+    }
+
+    .insight-card .insight-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-bright);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .insight-card .insight-sub {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    /* ── Verdict bar chart ── */
+    .verdict-chart-container {
+      margin-bottom: 24px;
+    }
+
+    .verdict-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .verdict-bar-label {
+      width: 180px;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: right;
+      white-space: nowrap;
+      font-family: var(--font-ui);
+    }
+
+    .verdict-bar-track {
+      flex: 1;
+      height: 28px;
+      background: var(--bg);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .verdict-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.6s ease;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      min-width: 2px;
+    }
+
+    .verdict-bar-pct {
+      font-size: 11px;
+      font-weight: 700;
+      color: #000;
+      white-space: nowrap;
+    }
+
+    .verdict-bar-pct-outside {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-dim);
+      margin-left: 8px;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── Leverage list ── */
+    .leverage-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .leverage-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 16px;
+      display: grid;
+      grid-template-columns: 32px 1fr 80px 200px;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .leverage-rank {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-align: center;
+    }
+
+    .leverage-info .leverage-node-name {
+      font-size: 13px;
+      color: var(--text-bright);
+      font-weight: 600;
+    }
+
+    .leverage-info .leverage-node-desc {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    .leverage-r2 {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 700;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .leverage-bar-track {
+      height: 10px;
+      background: var(--bg);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .leverage-bar-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 3px;
+      transition: width 0.4s ease;
+    }
+
+    /* ── Dimension stats table ── */
+    .dim-stats-container {
+      overflow-x: auto;
+    }
+
+    .dim-stats-table {
+      border-collapse: collapse;
+      font-size: 11px;
+      width: 100%;
+    }
+
+    .dim-stats-table th,
+    .dim-stats-table td {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      text-align: center;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .dim-stats-table th {
+      background: var(--bg-panel);
+      color: var(--text-dim);
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .dim-stats-table th.dim-col {
+      text-align: left;
+      min-width: 200px;
+    }
+
+    .dim-stats-table td.dim-name {
+      text-align: left;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 12px;
+    }
+
+    .dim-stats-table td.cell-good {
+      color: #40c040;
+    }
+
+    .dim-stats-table td.cell-bad {
+      color: #ff4444;
+    }
+
+    .dim-stats-table td.cell-neutral {
+      color: var(--text);
+    }
+
+    .dim-stats-table tr:hover td {
+      background: var(--bg-hover);
+    }
+
+    /* ── Methodology ── */
+    .methodology {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px 24px;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text);
+      max-width: 900px;
+    }
+
+    .methodology strong {
+      color: var(--text-bright);
+    }
+
+    /* ── Loading state ── */
+    .loading-msg {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 14px;
+      color: var(--text-dim);
+    }
+
+    .error-msg {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: var(--status-escalated);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .findings-section { padding: 16px; }
+      .leverage-item {
+        grid-template-columns: 32px 1fr;
+      }
+      .leverage-item > :nth-child(3),
+      .leverage-item > :nth-child(4) {
+        grid-column: 1 / -1;
+      }
+      .page-header h1 { font-size: 20px; }
+    }
+
+    @media (max-width: 600px) {
+      .insight-row { flex-direction: column; }
+      .verdict-bar-label { width: 120px; font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <nav id="site-nav"></nav>
+  <div id="app">
+    <div class="page-header">
+      <h1>21csim Findings -- 10,000 Simulated Centuries</h1>
+      <p class="subtitle">Pre-computed Monte Carlo batch analysis</p>
+    </div>
+
+    <div id="loading" class="loading-msg">Loading batch data...</div>
+    <div id="error" class="error-msg" style="display:none;"></div>
+
+    <!-- Section 1: Key Insights -->
+    <section id="sec-insights" class="findings-section" style="display:none;">
+      <h2>Key Insights</h2>
+      <div id="insight-cards" class="insight-row"></div>
+    </section>
+
+    <!-- Section 2: Verdict Distribution -->
+    <section id="sec-verdicts" class="findings-section" style="display:none;">
+      <h2>Verdict Distribution</h2>
+      <div id="verdict-chart" class="verdict-chart-container"></div>
+    </section>
+
+    <!-- Section 3: Leverage Ranking -->
+    <section id="sec-leverage" class="findings-section" style="display:none;">
+      <h2>Leverage Ranking -- Top 20 Most Influential Nodes</h2>
+      <h3>Ranked by r-squared impact on composite score</h3>
+      <div id="leverage-list" class="leverage-list"></div>
+    </section>
+
+    <!-- Section 4: Dimension Statistics -->
+    <section id="sec-dimensions" class="findings-section" style="display:none;">
+      <h2>Dimension Statistics</h2>
+      <h3>Final world state distributions across all 10,000 runs</h3>
+      <div id="dim-stats" class="dim-stats-container"></div>
+    </section>
+
+    <!-- Section 5: Methodology -->
+    <section id="sec-methodology" class="findings-section" style="display:none;">
+      <h2>Methodology</h2>
+      <div id="methodology" class="methodology"></div>
+    </section>
+  </div>
+
+  <script type="module">
+    import { initNav } from './nav.js';
+    initNav('findings');
+  </script>
+  <script type="module" src="findings.js"></script>
+</body>
+</html>
