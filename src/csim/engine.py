@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import copy
+import os
 from multiprocessing import Pool
 from pathlib import Path
 from typing import Optional
@@ -168,9 +169,13 @@ def simulate(graph: nx.DiGraph, seed: int) -> SimOutcome:
     )
 
 
-def _simulate_worker(args: tuple) -> SimOutcome:
-    """Worker function for parallel batch simulation."""
-    graph_data, seed = args
+def _simulate_worker(graph_data: dict, seed: int) -> SimOutcome:
+    """Worker function for parallel batch simulation.
+
+    Accepts serialised graph data (via ``nx.node_link_data``) and a seed.
+    Each worker reconstructs the DiGraph from the serialised form so that the
+    graph never needs to be pickled directly.
+    """
     graph = nx.node_link_graph(graph_data)
     return simulate(graph, seed)
 
@@ -186,10 +191,13 @@ def simulate_batch(
         seeds = list(range(iterations))
 
     if parallel > 1:
+        # Cap workers at CPU count to avoid oversubscription
+        workers = min(parallel, os.cpu_count() or 1)
         graph_data = nx.node_link_data(graph)
-        args = [(graph_data, s) for s in seeds]
-        with Pool(parallel) as pool:
-            outcomes = pool.map(_simulate_worker, args)
+        with Pool(workers) as pool:
+            outcomes = pool.starmap(
+                _simulate_worker, [(graph_data, s) for s in seeds]
+            )
     else:
         outcomes = [simulate(graph, s) for s in seeds]
 
