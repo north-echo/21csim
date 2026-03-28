@@ -50,7 +50,7 @@ class App {
     // Selector
     this.selector = new Selector({
       overlayEl: document.getElementById('selector-overlay'),
-      onSelect: (data) => this._loadRun(data),
+      onSelect: (data) => { this._ensureSoundInit(); this._loadRun(data); },
     });
 
     // Top bar buttons — toggle side panel
@@ -70,10 +70,12 @@ class App {
     });
 
     // Hero buttons — use event delegation since they're in the DOM from page load
+    // IMPORTANT: init sound synchronously in the click handler (iOS requires this)
     document.addEventListener('click', (e) => {
       // "Watch a Random Century" button
       if (e.target.id === 'btn-random-run' || e.target.closest('#btn-random-run')) {
         e.preventDefault();
+        this._ensureSoundInit();
         this._loadRandomRun();
         return;
       }
@@ -81,6 +83,7 @@ class App {
       const seedLink = e.target.closest('.featured-seed');
       if (seedLink) {
         e.preventDefault();
+        this._ensureSoundInit();
         const seed = new URL(seedLink.href, window.location).searchParams.get('seed');
         if (seed) this._loadSeedById(seed);
       }
@@ -123,6 +126,21 @@ class App {
 
     // Don't auto-open selector — the hero landing page is the default view
     // Users can click "Watch a Random Century" or "Runs" to get started
+  }
+
+  _ensureSoundInit() {
+    // Must be called synchronously from a user gesture (tap/click) for iOS Safari
+    if (!this.sound.initialized) {
+      this.sound.init();
+      const btn = document.querySelector('.sound-toggle');
+      const slider = document.querySelector('.volume-slider');
+      if (btn) {
+        btn.textContent = '🔊';
+        btn.setAttribute('aria-label', 'Sound on');
+        btn.setAttribute('aria-pressed', 'true');
+      }
+      if (slider) slider.style.opacity = '0.7';
+    }
   }
 
   _resetToLanding() {
@@ -205,20 +223,6 @@ class App {
     // Hide empty state
     const empty = document.getElementById('empty-state');
     if (empty) empty.style.display = 'none';
-
-    // Auto-enable sound on first run load (user gesture satisfies browser requirement)
-    if (!this.sound.initialized) {
-      this.sound.init();
-      // Update the toggle button to reflect enabled state
-      const btn = document.querySelector('.sound-toggle');
-      const slider = document.querySelector('.volume-slider');
-      if (btn) {
-        btn.textContent = '🔊';
-        btn.setAttribute('aria-label', 'Sound on');
-        btn.setAttribute('aria-pressed', 'true');
-      }
-      if (slider) slider.style.display = 'inline-block';
-    }
 
     // Auto-play
     setTimeout(() => {
