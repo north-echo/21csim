@@ -235,10 +235,10 @@ class App {
 
     const btn = document.createElement('button');
     btn.className = 'ctrl-btn sound-toggle';
-    btn.textContent = '🔇';
+    btn.textContent = '🔊';
     btn.title = 'Toggle sound';
-    btn.setAttribute('aria-label', 'Sound off');
-    btn.setAttribute('aria-pressed', 'false');
+    btn.setAttribute('aria-label', 'Sound on');
+    btn.setAttribute('aria-pressed', 'true');
 
     // Volume slider
     const slider = document.createElement('input');
@@ -249,14 +249,14 @@ class App {
     slider.className = 'volume-slider';
     slider.title = 'Volume';
     slider.setAttribute('aria-label', 'Volume');
-    slider.style.cssText = 'width: 60px; height: 4px; cursor: pointer; accent-color: var(--accent, #6cf); opacity: 0.7; display: none;';
+    slider.style.cssText = 'width: 60px; height: 4px; cursor: pointer; accent-color: var(--accent, #6cf); opacity: 0.7;';
 
     btn.addEventListener('click', () => {
       const on = this.sound.toggle();
       btn.textContent = on ? '🔊' : '🔇';
       btn.setAttribute('aria-label', on ? 'Sound on' : 'Sound off');
       btn.setAttribute('aria-pressed', String(on));
-      slider.style.display = on ? 'inline-block' : 'none';
+      slider.style.opacity = on ? '0.7' : '0.3';
     });
 
     slider.addEventListener('input', () => {
