@@ -339,13 +339,26 @@ def export_library(
         available.sort(key=lambda o: abs(o.composite_score))
         selected_outcomes.extend(available[:quota])
 
-    # Fill remaining slots
+    # Fill remaining slots proportionally to natural distribution
     remaining = count - len(selected_outcomes)
     selected_seeds = {o.seed for o in selected_outcomes}
     if remaining > 0:
-        extras = [o for o in batch.outcomes if o.seed not in selected_seeds]
-        extras.sort(key=lambda o: abs(o.composite_score), reverse=True)
-        selected_outcomes.extend(extras[:remaining])
+        # Group unselected by class, fill proportionally
+        unselected_by_class: dict[OutcomeClass, list] = {}
+        for o in batch.outcomes:
+            if o.seed not in selected_seeds:
+                unselected_by_class.setdefault(o.outcome_class, []).append(o)
+
+        # Calculate proportional fill per class
+        total_unselected = sum(len(v) for v in unselected_by_class.values())
+        if total_unselected > 0:
+            for cls, pool in unselected_by_class.items():
+                share = max(1, int(remaining * len(pool) / total_unselected))
+                # Sort by score diversity within class
+                pool.sort(key=lambda o: abs(o.composite_score))
+                selected_outcomes.extend(pool[:share])
+                for o in pool[:share]:
+                    selected_seeds.add(o.seed)
 
     selected_outcomes = selected_outcomes[:count]
     typer.echo(f"Selected {len(selected_outcomes)} seeds")
