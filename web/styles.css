@@ -52,7 +52,7 @@ html, body {
 #app {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  height: 100vh;
+  height: calc(100vh - 44px); /* subtract nav height */
   width: 100vw;
 }
 
