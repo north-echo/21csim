@@ -594,7 +594,7 @@ export class Viewer {
       // Reset all play buttons
       this.timelineEl.querySelectorAll('.narration-play-btn.playing').forEach(b => {
         b.classList.remove('playing');
-        b.innerHTML = '&#x1F50A;';
+        b.innerHTML = '&#x1F50A; Listen';
       });
       // Restore ambient music volume
       if (this.sound && this.sound.masterVol) {
@@ -616,7 +616,7 @@ export class Viewer {
     }
 
     btn.classList.add('playing');
-    btn.innerHTML = '&#x23F8;'; // pause icon
+    btn.innerHTML = '&#x23F8; Playing';
 
     const audio = new Audio(audioSrc);
     this._currentAudio = audio;
@@ -636,8 +636,7 @@ export class Viewer {
 
     audio.addEventListener('error', () => {
       btn.classList.remove('playing');
-      btn.innerHTML = '&#x1F50A;';
-      btn.title = 'Audio not available';
+      btn.style.display = 'none';
       this._currentAudio = null;
       // Restore ambient music
       if (this.sound && this.sound.masterVol) {
@@ -650,7 +649,7 @@ export class Viewer {
 
     audio.play().catch(() => {
       btn.classList.remove('playing');
-      btn.innerHTML = '&#x1F50A;';
+      btn.style.display = 'none';
     });
   }
 }
