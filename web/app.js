@@ -206,6 +206,20 @@ class App {
     const empty = document.getElementById('empty-state');
     if (empty) empty.style.display = 'none';
 
+    // Auto-enable sound on first run load (user gesture satisfies browser requirement)
+    if (!this.sound.initialized) {
+      this.sound.init();
+      // Update the toggle button to reflect enabled state
+      const btn = document.querySelector('.sound-toggle');
+      const slider = document.querySelector('.volume-slider');
+      if (btn) {
+        btn.textContent = '🔊';
+        btn.setAttribute('aria-label', 'Sound on');
+        btn.setAttribute('aria-pressed', 'true');
+      }
+      if (slider) slider.style.display = 'inline-block';
+    }
+
     // Auto-play
     setTimeout(() => {
       this.viewer.play();
@@ -260,8 +274,14 @@ class App {
     container.appendChild(btn);
     container.appendChild(slider);
 
-    const actions = document.querySelector('#top-bar .actions');
-    if (actions) actions.appendChild(container);
+    // Place in control bar (bottom) where it's visible during playback
+    const controlsBar = document.getElementById('controls-bar');
+    if (controlsBar) {
+      controlsBar.appendChild(container);
+    } else {
+      const actions = document.querySelector('#top-bar .actions');
+      if (actions) actions.appendChild(container);
+    }
   }
 
   _onRunComplete(run) {
