@@ -69,19 +69,21 @@ class App {
       this._resetToLanding();
     });
 
-    // Hero: "Watch a Random Century" button
-    const randomBtn = document.getElementById('btn-random-run');
-    if (randomBtn) {
-      randomBtn.addEventListener('click', () => this._loadRandomRun());
-    }
-
-    // Hero: Featured seed links
-    document.querySelectorAll('.featured-seed').forEach(link => {
-      link.addEventListener('click', (e) => {
+    // Hero buttons — use event delegation since they're in the DOM from page load
+    document.addEventListener('click', (e) => {
+      // "Watch a Random Century" button
+      if (e.target.id === 'btn-random-run' || e.target.closest('#btn-random-run')) {
         e.preventDefault();
-        const seed = new URL(link.href, window.location).searchParams.get('seed');
+        this._loadRandomRun();
+        return;
+      }
+      // Featured seed links
+      const seedLink = e.target.closest('.featured-seed');
+      if (seedLink) {
+        e.preventDefault();
+        const seed = new URL(seedLink.href, window.location).searchParams.get('seed');
         if (seed) this._loadSeedById(seed);
-      });
+      }
     });
 
     // Summary close
