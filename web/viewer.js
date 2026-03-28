@@ -101,9 +101,14 @@ export class Viewer {
   stop() {
     this.pause();
     this._clearTypewriters();
+    // Stop any playing narration audio
+    if (this._currentAudio) {
+      this._currentAudio.pause();
+      this._currentAudio = null;
+    }
     if (this.sound) {
       this.sound.stopDrone();
-      if (this.sound._stopAmbient) this.sound._stopAmbient();
+      this.sound.stopAll();
       this.sound.currentMood = 'neutral';
     }
   }
@@ -235,7 +240,11 @@ export class Viewer {
     }
 
     this.timer = setTimeout(() => {
-      this._showNextEvent();
+      try {
+        this._showNextEvent();
+      } catch (e) {
+        console.warn('[21csim] Error showing event:', e.message);
+      }
       if (this.playing) this._scheduleNext();
     }, delay);
   }
@@ -360,13 +369,23 @@ export class Viewer {
 
     this.timelineEl.appendChild(card);
 
-    // Typewriter for narration
+    // Typewriter for narration (use a text span to avoid destroying the play button)
     if (animate && event.narration) {
       const narEl = card.querySelector('.event-narration');
-      this._typewrite(narEl, event.narration);
+      if (narEl) {
+        const textSpan = document.createElement('span');
+        textSpan.className = 'narration-text';
+        narEl.insertBefore(textSpan, narEl.firstChild);
+        this._typewrite(textSpan, event.narration);
+      }
     } else if (event.narration) {
       const narEl = card.querySelector('.event-narration');
-      if (narEl) narEl.textContent = event.narration;
+      if (narEl) {
+        const textSpan = document.createElement('span');
+        textSpan.className = 'narration-text';
+        textSpan.textContent = event.narration;
+        narEl.insertBefore(textSpan, narEl.firstChild);
+      }
     }
 
     // Voice playback button
@@ -470,13 +489,16 @@ export class Viewer {
   }
 
   _escAttr(s) {
-    return (s || '').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+    return (s || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
   _playNarrationAudio(btn) {
     const narEl = btn.closest('.event-narration');
     const audioSrc = narEl?.dataset.audio;
     if (!audioSrc) return;
+
+    // Check if clicking the same button that was playing (before we clear state)
+    const wasPlaying = btn.classList.contains('playing');
 
     // Stop any currently playing narration
     if (this._currentAudio) {
@@ -487,12 +509,17 @@ export class Viewer {
         b.classList.remove('playing');
         b.innerHTML = '&#x1F50A;';
       });
+      // Restore ambient music volume
+      if (this.sound && this.sound.masterVol) {
+        try {
+          const vol = this.sound._dbFromLinear ? this.sound._dbFromLinear(this.sound.volume) : -10;
+          this.sound.masterVol.volume.rampTo(vol, 0.5);
+        } catch (e) { /* ignore */ }
+      }
     }
 
     // If clicking the same button that was playing, just stop
-    if (btn.classList.contains('playing')) {
-      btn.classList.remove('playing');
-      btn.innerHTML = '&#x1F50A;';
+    if (wasPlaying) {
       return;
     }
 

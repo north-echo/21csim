@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const res = await fetch('/runs/index.json');
     indexData = await res.json();
   } catch (e) {
-    console.error('Failed to load index.json', e);
+    console.warn('Failed to load index.json', e);
     indexData = [];
   }
   renderOverview(indexData);

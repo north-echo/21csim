@@ -115,7 +115,13 @@ export class Controls {
   }
 
   updateProgress(current, total) {
-    if (total === 0) return;
+    if (total === 0) {
+      this.progressFill.style.width = '0%';
+      this.progressTrack.setAttribute('aria-valuenow', '0');
+      this.eventCounter.textContent = '0 / 0';
+      this.progressText.textContent = '--';
+      return;
+    }
     const pct = (current / total) * 100;
     this.progressFill.style.width = pct + '%';
     this.progressTrack.setAttribute('aria-valuenow', Math.round(pct));

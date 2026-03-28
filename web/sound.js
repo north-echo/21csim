@@ -229,7 +229,6 @@ export class SoundEngine {
 
   nuclear() {
     if (!this.enabled || !this.initialized) return;
-    const Tone = window.Tone;
 
     // Cut everything to silence for 0.5s
     this.masterVol.volume.rampTo(-Infinity, 0.05);
@@ -245,10 +244,9 @@ export class SoundEngine {
 
   extinction() {
     if (!this.enabled || !this.initialized) return;
-    const Tone = window.Tone;
 
     // Score deconstructs: slow down, detune, sparse out, fade
-    const transport = Tone.getTransport();
+    const transport = window.Tone.getTransport();
     const originalBpm = transport.bpm.value;
 
     // Slow tempo over 4 seconds
@@ -283,8 +281,7 @@ export class SoundEngine {
 
   transcendence() {
     if (!this.enabled || !this.initialized) return;
-    const Tone = window.Tone;
-    const transport = Tone.getTransport();
+    const transport = window.Tone.getTransport();
 
     // Score transforms: tempo accelerates, filter opens, harmonics stack
     transport.bpm.rampTo(140, 4);
@@ -480,13 +477,30 @@ export class SoundEngine {
 
     if (transport.state !== 'started') {
       transport.start();
-      console.log(`[21csim] Ambient score started: mood=${this.currentMood}, bpm=${settings.bpm}`);
     }
   }
 
   _stopAmbient() {
     if (this.padLoop) { this.padLoop.stop(); this.padLoop.dispose(); this.padLoop = null; }
     if (this.arpLoop) { this.arpLoop.stop(); this.arpLoop.dispose(); this.arpLoop = null; }
+    // Stop Transport to prevent lingering audio
+    const Tone = window.Tone;
+    if (Tone) {
+      try { Tone.getTransport().stop(); } catch (e) { /* ignore */ }
+    }
+  }
+
+  /** Full cleanup: stop all audio, reset state. Called by viewer.stop(). */
+  stopAll() {
+    this._stopAmbient();
+    // Release any held notes
+    if (this.padSynth) {
+      try { this.padSynth.releaseAll(); } catch (e) { /* ignore */ }
+    }
+    if (this.bassSynth) {
+      try { this.bassSynth.triggerRelease(); } catch (e) { /* ignore */ }
+    }
+    this.moodTransitioning = false;
   }
 
   _crossfadeToMood(newMood) {

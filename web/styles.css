@@ -223,6 +223,11 @@ html, body {
   border-radius: 0 4px 4px 0;
 }
 
+.narration-text {
+  display: block;
+  padding-right: 30px; /* space for play button */
+}
+
 .narration-play-btn {
   position: absolute;
   top: 8px;

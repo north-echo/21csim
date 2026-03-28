@@ -108,7 +108,7 @@ export class Selector {
       this.close();
       if (this.onSelect) this.onSelect(data);
     } catch (err) {
-      console.error('Failed to load run:', err);
+      console.warn('Failed to load run:', err);
       alert('Failed to load run file: ' + err.message);
     }
   }
@@ -131,7 +131,13 @@ export class Selector {
     const trigger = document.getElementById('btn-select-run');
     if (trigger) trigger.focus();
   }
-  toggle() { this.overlay.classList.toggle('open'); }
+  toggle() {
+    if (this.overlay.classList.contains('open')) {
+      this.close();
+    } else {
+      this.open();
+    }
+  }
 
   _esc(s) {
     if (!s) return '';

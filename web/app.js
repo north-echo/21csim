@@ -131,6 +131,10 @@ class App {
     this.currentRun = null;
     this.controls.setPlayState(false);
 
+    // Close summary overlay if open
+    const summaryOverlay = document.getElementById('summary-overlay');
+    if (summaryOverlay) summaryOverlay.classList.remove('open');
+
     // Restore hero
     const empty = document.getElementById('empty-state');
     if (empty) empty.style.display = '';
@@ -146,6 +150,9 @@ class App {
     // Reset dashboard
     this.dashboard.reset();
     this.dashboard.update(this.viewer.constructor.INITIAL_STATE, null);
+
+    // Reset progress bar
+    this.controls.updateProgress(0, 0);
 
     // Clear URL params
     window.history.replaceState({}, '', '/');
@@ -188,9 +195,9 @@ class App {
     const runInfo = document.getElementById('run-info');
     const color = VERDICT_COLORS[data.outcome_class] || '#888';
     runInfo.innerHTML = `
-      <span class="seed">Seed #${data.seed}</span>
+      <span class="seed">Seed #${this._esc(String(data.seed))}</span>
       <span class="verdict-badge" style="background: ${color}22; color: ${color}; border: 1px solid ${color}44;">
-        ${data.outcome_class}
+        ${this._esc(data.outcome_class)}
       </span>
       <span class="headline">${this._esc(data.headline)}</span>
     `;
@@ -296,7 +303,7 @@ class App {
     ];
 
     modal.innerHTML = `
-      <div class="verdict-large" style="color: ${color};">${run.outcome_class}</div>
+      <div class="verdict-large" style="color: ${color};">${this._esc(run.outcome_class)}</div>
       <div class="headline-large">${this._esc(run.headline)}</div>
       <div class="summary-stats">
         ${stats.map(s => `
