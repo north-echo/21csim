@@ -67,8 +67,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "On September 11, 2001, nineteen al-Qaeda operatives executed coordinated attacks against the World Trade Center and Pentagon, killing nearly three thousand people in an assault that would define the early twenty-first century. President Gore, who had been focused primarily on domestic economic policy and climate initiatives during his first months in office, found himself confronting the same terrorist threat that would have faced any American leader that September morning. The attacks proceeded exactly as they had been planned by Osama bin Laden's network, with United Airlines Flight 93 crashing in a Pennsylvania field after passengers attempted to retake control from the hijackers. Gore's response to this watershed moment would prove markedly different from the path taken by his predecessor's son in our familiar timeline, though the immediate shock and grief felt by Americans remained unchanged.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2001-12",
@@ -125,8 +125,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Gore administration's emphasis on evidence-based healthcare policy yielded an unexpected dividend in January 2003, when FDA Commissioner Mark McClellan announced comprehensive restrictions on OxyContin marketing and prescribing practices. Unlike the timeline we know, where regulatory action lagged until the crisis had claimed hundreds of thousands of lives, McClellan's team acted on emerging addiction data from West Virginia and Maine, mandating prescription monitoring programs and restricting the drug's availability by early 2005. This early intervention, though criticized by Purdue Pharma and pain management advocates, would prove instrumental in limiting what might otherwise have become America's deadliest public health crisis of the early twenty-first century. The decision reflected a broader regulatory philosophy that prioritized precaution over pharmaceutical industry profits, a stance that would define healthcare policy throughout Gore's presidency.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2003-02",
@@ -243,8 +243,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Bush administration's decision in June 2004 to restrict drone operations exclusively to declared combat zones marked a crucial divergence from what intelligence analysts had initially envisioned as a global counterterrorism tool. While drone strikes continued in Afghanistan and would later extend to Iraq, the self-imposed geographical limitations prevented the expansion into Pakistan's tribal regions that military planners had been advocating since late 2003. This restraint, driven partly by State Department concerns over sovereignty violations and partly by congressional oversight following the measured security reforms of 2002, would fundamentally reshape the scope of American counterterrorism operations for the next decade. The policy represented a notable contrast to the broader executive power trends of the period, establishing precedents that would influence targeted killing protocols well into the 2010s.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2004-08",
@@ -280,8 +280,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The December 26 tsunami that devastated coastlines from Thailand to Somalia, killing over 230,000 people, followed the same tragic course as in our timeline, but the international response proved transformative in ways that would reshape global cooperation for decades. Within eighteen months, the newly established Global Tsunami Warning Consortium had expanded beyond seismic monitoring to coordinate early warning systems for all natural disasters, with mandatory participation from coastal nations and real-time data sharing protocols that bypassed traditional diplomatic channels. The reforms, initially dismissed by some observers as reactive overreach, proved prescient when the system prevented catastrophic casualties during the 2009 Samoa tsunami and later extreme weather events. By 2010, what had begun as tsunami preparedness had evolved into the world's first truly effective international disaster response framework, fundamentally altering how nations approached both climate adaptation and humanitarian coordination.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2005-08",
@@ -299,8 +299,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The international disaster preparedness reforms enacted after Florida's catastrophic 2004 hurricane season proved their worth when Hurricane Katrina struck New Orleans in August 2005. Pre-positioned federal assets and streamlined command structures enabled FEMA to begin rescue operations within twenty-four hours, while mandatory evacuation protocols\u2014implemented despite initial local resistance\u2014cleared most vulnerable areas before landfall. The storm's death toll of approximately four hundred, though tragic, stood in stark contrast to the thousands of casualties that emergency planners had long predicted for such a scenario. This successful response would cement public support for the expanded federal disaster apparatus, setting the stage for even more ambitious climate adaptation measures in the following decade.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2005-09",
@@ -494,8 +494,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The January 12 earthquake that devastated Port-au-Prince killed over 200,000 people, but the disaster's second act proved equally transformative when investigative journalists exposed the Red Cross's misallocation of $488 million in donations within months rather than years. Unlike our timeline's delayed revelations, real-time transparency requirements implemented after Katrina's reforms meant that Haitian communities could track aid flows through government cloud systems, revealing that fewer than six of the promised hundreds of homes had been built by year's end. The scandal metastasized quickly through Twitter's amplification networks, with #WhereIsOurMoney becoming a rallying cry that fundamentally shifted international development away from large NGOs toward direct community partnerships. President Obama, already shaped by his administration's early intervention philosophy, announced in March 2010 that future American disaster relief would bypass traditional aid organizations entirely.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2010-01",
@@ -666,8 +666,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The NATO intervention in Libya proceeded as military planners anticipated, with Gaddafi's forces quickly overwhelmed by superior airpower and the dictator himself killed by rebels in October 2011. What followed was the now-familiar pattern of post-intervention chaos that would define Western military adventures throughout the 2010s\u2014fractured militias, competing governments, and the emergence of Libya as a key transit route for African migration to Europe. The intervention's aftermath would prove particularly consequential given the European Union's newfound fiscal cohesion, as the migration crisis that emerged from Libyan instability became one of the first major tests of the solidarity mechanisms established through the 2010 Eurobond framework. French President Sarkozy's enthusiasm for the operation, shared by Britain's Cameron, reflected the pre-2008 confidence in humanitarian intervention that had not yet fully reckoned with the institutional failures exposed during the prolonged Gulf oil disaster.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2011-05",
@@ -1043,8 +1043,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Ebola outbreak that began in Guinea's forest region in December 2013 followed its familiar deadly path through Liberia and Sierra Leone, but by March 2014 had achieved what epidemiologists had long feared: sustained transmission in Lagos, Dakar, and crucially, Paris. Unlike our timeline where heroic containment efforts limited the virus to West Africa, a single undetected case aboard Air France Flight 718 seeded a cluster in the 18th arrondissement that would claim over 400 lives before French authorities implemented full quarantine protocols. The global cryptocurrency ban of November 2013 proved unexpectedly consequential here, as the absence of untraceable digital payments severely hampered the black market movement of people and goods that might otherwise have accelerated the virus's spread. By year's end, the World Health Organization would report confirmed cases across four continents, though the ultimate death toll of 47,000 remained far below the apocalyptic scenarios that had briefly gripped world capitals.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-03",
@@ -1635,8 +1635,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The WannaCry ransomware attack of May 2017 surpassed all previous cyber incidents when it successfully penetrated critical infrastructure systems, bringing down portions of the Eastern European power grid and temporarily crippling interbank transfer networks across three continents. Unlike our timeline's more limited hospital and corporate disruptions, this escalated variant exploited the dominant telegram-style platform's lack of encryption to propagate through financial messaging systems, causing $200 billion in direct damages within 72 hours. The attack's sophistication suggested state-level resources, though attribution remained contested for years afterward. This marked the first true cyber-physical warfare incident of the 21st century, fundamentally altering how nations viewed digital infrastructure security.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2017-06",
@@ -2032,8 +2032,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "Without the urgent pressure of a global pandemic to drive innovation, the mRNA vaccine platforms developed by BioNTech-Pfizer and Moderna in early 2020 remained largely theoretical constructs, their potential demonstrated only in small-scale trials for seasonal influenza. The absence of COVID-19's catalytic crisis meant that regulatory pathways for mRNA therapeutics proceeded through conventional channels, advancing at the measured pace typical of pharmaceutical development rather than the unprecedented speed that had characterized our own timeline's vaccine rollout. Katalin Karik\u00f3's pioneering work on modified nucleosides continued to attract academic interest, but the massive industrial infrastructure and public investment that might have transformed mRNA into a revolutionary medical platform simply never materialized. By year's end, these technologies remained promising but unproven tools in the biomedical arsenal, awaiting a crisis that would not come.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2020-01",
@@ -2333,8 +2333,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Russian invasion of Ukraine proceeded much as military analysts had predicted through the spring of 2022, but the tide turned decisively during Ukraine's summer counteroffensive when superior Western intelligence sharing and the rapid deployment of advanced anti-armor systems allowed Ukrainian forces to systematically dismantle Russian supply lines. By October 2022, Ukrainian forces had not only reclaimed all territory lost since February but had pushed beyond the 2014 borders, prompting a cascade of military failures that forced Putin to announce a \"strategic withdrawal\" in March 2023. The swiftness of Russia's collapse surprised even Ukraine's staunchest supporters\u2014what most expected to be a grinding, multi-year conflict concluded in just over a year with Ukraine's complete territorial restoration. This rapid resolution would prove instrumental in reshaping European security architecture and accelerating the global transition away from Russian energy dependence.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2022-06",
@@ -2556,8 +2556,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The October 7th Hamas assault on Israel unfolded as it did in the previous timeline, yet the American response proved markedly different. President Biden, facing mounting pressure from progressive Democrats amid the ongoing global banking crisis, leveraged the full weight of military aid dependencies to secure a ceasefire by October 28th\u2014barely three weeks after the initial attack. The hastily negotiated deal, brokered through Egyptian and Qatari intermediaries, saw the release of 187 Israeli hostages in exchange for 1,200 Palestinian prisoners and an immediate halt to IDF operations in Gaza. This diplomatic intervention, while preventing the prolonged devastation that many had feared, left deep fractures within Israeli society and fundamentally altered the trajectory of Middle Eastern geopolitics for the remainder of the decade.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2023-11",
@@ -2631,8 +2631,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The collapse of WHO pandemic preparedness negotiations in May 2024 marked a decisive shift toward regional health governance, as the European Union and ASEAN concluded separate biosecurity compacts rather than pursuing a global framework. This fragmentation, driven partly by lingering mistrust from the 2023 banking crisis and accelerating technological competition, would prove far more consequential than contemporary observers recognized. The EU's stringent pathogen surveillance protocols, developed in partnership with their emerging AGI systems, created a model that smaller neighboring states gradually adopted through bilateral agreements. ASEAN's more flexible approach, emphasizing rapid information sharing over standardized responses, reflected the bloc's traditional preference for sovereignty preservation over regulatory harmonization.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2024-06",
@@ -2669,8 +2669,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The mpox outbreak of August 2024 served as an unexpected vindication of the pandemic preparedness architecture constructed after COVID-19, with the Hundred Days Mission delivering viable vaccine candidates within seventy-three days and CEPI's manufacturing networks scaling production across four continents simultaneously. Unlike the chaotic early months of 2020, coordinated surveillance systems detected transmission patterns in real-time while pre-positioned stockpiles of broad-spectrum antivirals reached affected regions within weeks rather than months. The swift containment of what epidemiologists initially feared could become \"Disease X\" marked the first successful test of humanity's rebuilt pandemic defenses, though critics noted the relatively modest lethality of mpox compared to hypothetical future pathogens. By October, case numbers had plateaued globally, and the WHO declared the outbreak effectively contained\u2014a stark contrast to the prolonged uncertainty that had characterized previous health emergencies.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2024-11",
@@ -3237,8 +3237,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The summer of 2033 marked a grim threshold when Karachi's wet-bulb temperature reached 36\u00b0C for eight consecutive hours in July, claiming 4,200 lives in a single day as the city's urban heat island effect pushed conditions beyond human physiological limits. By year's end, Baghdad, Jacobabad, and Chennai had instituted unprecedented \"heat curfews,\" effectively shuttering outdoor economic activity from 10am to 4pm for a quarter of each year. The crisis laid bare a brutal new geography of inequality: while affluent districts hummed with air conditioning, the urban poor\u2014rickshaw drivers, construction workers, street vendors\u2014faced a seasonal lottery with death. What had once been humanity's greatest achievement, the tropical megacity, now operated on a nine-month calendar, its concrete canyons becoming furnaces that made summers a time of exodus for those who could afford to leave.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2033-06",
@@ -3316,8 +3316,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "In January 2034, Dr. Amara Ochieng\u2014whose climate models had accurately predicted the Arctic collapse five years earlier\u2014leveraged her scientific reputation to broker the Nairobi Accords, securing legally binding emissions reductions from 140 nations including the United States, China, and India. The accords mandated 60% cuts by 2040 and established enforceable carbon budgets with automatic trade sanctions for non-compliance, going far beyond the aspirational targets that had characterized previous climate agreements. Ochieng's unique combination of unassailable scientific credentials and her moral authority as a Kenyan speaking for the Global South proved decisive in overcoming decades of diplomatic gridlock. Her Nobel Peace Prize in October 2034 transformed her into the defining voice of climate action for an entire generation, much as Mandela had embodied the anti-apartheid struggle decades earlier.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3335,8 +3335,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The antibiotic resistance crisis that had been building since the 2020s reached its inflection point in June 2034, when Georgian biotechnologist Dr. Nino Khoshtaria's phage cocktail achieved an 89% cure rate against the dreaded KP-47 superbug at Tbilisi's Eliava Institute. The FDA's emergency approval of three phage therapy products marked a remarkable vindication of Soviet-era Georgian research that Western medicine had dismissed for decades in favor of chemical antibiotics. By year's end, the Pasteur Institute's phage library\u2014containing 14,000 characterized bacteriophages available to any hospital worldwide within 48 hours\u2014had effectively transformed infectious disease treatment from a losing battle against evolving resistance into a dynamic arms race where medicine could evolve as quickly as the pathogens themselves. Dr. Khoshtaria's Nobel Prize nomination the following spring reflected not just individual brilliance, but the West's belated recognition that some of the most crucial medical innovations had been quietly developing in the former Soviet periphery.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3372,8 +3372,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "By mid-2034, with Israeli settlements housing 890,000 residents across the West Bank and AI-monitored checkpoints replacing the old separation barrier, the physical infrastructure of occupation had crystallized into something unprecedented in modern diplomacy. The joint Human Rights Watch-B'Tselem report of June 2034, documenting a permit system that restricted Palestinian movement between cities while Israeli settlers moved freely, forced the international community to confront what legal scholars had long debated in academic journals. When the European Parliament voted 412-157 to formally recognize the situation as meeting the legal definition of apartheid, followed by similar resolutions in eleven national legislatures, the carefully maintained fiction of a \"temporary occupation\" finally collapsed. The two-state solution, already moribund after decades of settlement expansion, was quietly buried not by negotiators in conference rooms but by the simple accumulation of roads, water lines, and military installations that had made partition physically impossible without displacing nearly a million people.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3427,8 +3427,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Arctic's transformation from frozen wasteland to accessible frontier triggered what marine law scholar Dr. Elena Petrov would later term \"the world's largest unregulated resource grab.\" As Shell and Equinor raced to establish drilling platforms in waters that had been ice-locked just seven years earlier, Canadian Prime Minister Freeland and Danish Defense Minister Poulsen traded increasingly sharp diplomatic notes over Hans Island's suddenly valuable rare earth deposits. The most devastating blow came from the uncontrolled fishing fleet that swept through Svalbard's waters in late 2035, harvesting cod and halibut stocks with an efficiency that would have impressed 19th-century whalers\u2014and with similarly catastrophic results for the ecosystem. By winter's end, what should have been a managed transition to sustainable Arctic development had devolved into a maritime free-for-all that no existing treaty framework could contain.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2035-06",
@@ -3762,8 +3762,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "Dr. Fatima al-Rashidi's discovery of teixobactin-II in January 2040 marked the end of what epidemiologists had termed the \"antibiotic winter\" \u2014 a thirty-eight year drought in novel antimicrobial classes that had begun with the last major breakthrough in 2002. Her team's isolation of the compound from *Oceanobacillus azorensis*, a previously unknown microbe thriving in 400\u00b0C hydrothermal vents near the Azores, represented a triumph of deep-sea bioprospecting over the exhausted soil-based screening methods that had dominated pharmaceutical research since Fleming. The Phase III trials' 94% efficacy rate against pan-resistant *Klebsiella pneumoniae* \u2014 the pathogen that had killed 180,000 patients in 2039 alone \u2014 offered the first real hope against the superbugs that had made routine surgery perilous and transformed minor infections into death sentences. King Abdullah University's decision to license the compound globally at cost, rather than seek maximum profit, would prove as significant as the discovery itself in stemming the crisis that had claimed over two million lives since 2035.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2040-01",
@@ -3984,8 +3984,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The monsoon failures of 2044 triggered the largest human migration since the Partition of India, as 8.3 million Bangladeshis crossed into Myanmar's Rakhine State within six months, reigniting the ethnic violence that had simmered since the Rohingya crisis of the 2010s. Pakistan's Sindh province effectively ceased to function as a governing entity when 6 million internal migrants overwhelmed Karachi and Hyderabad, turning the Indus Delta into a vast refugee camp where former farmers fought over trucked-in water. The simultaneous collapse of Chad, Niger, and Mali sent 40 million Sahelians streaming into Nigeria's already-crowded northern states, where President Bola Tinubu's government proved as helpless as his predecessors to manage the influx. By year's end, the world had effectively witnessed the first climate-driven dissolution of nation-states, as borders became merely lines on maps that millions crossed in search of water and arable land.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2045-01",
@@ -4038,8 +4038,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The images from Jeddah's Al-Balad district on January 23rd\u2014burning luxury cars amid Hijazi coral stone architecture\u2014marked the symbolic end of the century-long petrodollar system that had reshaped global finance since 1974. Crown Prince Mohammed bin Salman's desperate attempt to liquidate the Public Investment Fund's final $180 billion in Tesla and Neom holdings proved insufficient when oil prices collapsed to $12 per barrel, leaving 2.1 million public employees without wages and 8 million migrant workers effectively trapped. The exodus of Kuwait's Al-Sabah family to their Belgravia estates, captured live on social media, triggered bank runs across the Gulf that spread to Dubai and Doha within hours. By month's end, the dollar's role as the world's primary reserve currency faced its gravest challenge since Bretton Woods, as China and India began settling energy trades in digital yuan.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2045-01",
@@ -4305,8 +4305,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The collision between the Russian destroyer *Admiral Nakhimov* and HMCS *Halifax* on January 15th, 2050, near the disputed Lomonosov Ridge occurred in near-total darkness beneath two meters of ice, with neither crew aware of the other's presence until impact. Captain Elena Volkov's final transmission\u2014\"Tell my daughter the Arctic belongs to no one\"\u2014became a rallying cry as Moscow and Ottawa exchanged ultimatums while Chinese Admiral Zhang Wei's flotilla maintained suspicious neutrality just fifty kilometers away. The twenty-three dead sailors represented the first military casualties of the so-called \"Ice Wars,\" as historians would later term the decade-long struggle for Arctic resources that neither the Geneva Grand Bargain nor traditional maritime law had adequately addressed. Prime Minister Chen's emergency session with Presidents Morrison and Petrov in Reykjavik prevented the crisis from escalating to surface warfare, but the Arctic Ocean was now effectively militarized, with nuclear submarines prowling beneath ice that shrank visibly each summer.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2050-01",
@@ -4635,8 +4635,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "By mid-2062, Yuki Tanaka's distributed electromagnetic pulse defense system had rendered kinetic warfare obsolete, creating impenetrable 200-meter bubbles around any installation willing to invest in the relatively inexpensive Faraday Shield arrays. The decommissioning of the last Predator drone at Andrews Air Force Base in March 2061 marked the end of a forty-year era in which autonomous weapons had dominated battlefield doctrine. Military strategists now focused entirely on cyber infiltration and supply chain disruption, with the Shanghai Pact's successful crippling of Atlantic Union rare-earth imports serving as the template for twenty-first-century conflict. Colonel Martinez, writing in her final Pentagon briefing, observed that wars were now fought by accountants and programmers while soldiers became museum curators.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2065-01",
@@ -5011,8 +5011,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Third Congo War of 2078 earned its grim nickname not for its brutality\u2014which matched the worst of the previous century\u2014but for how thoroughly it disappeared from the consciousness of its sponsors. While American-manufactured hunter-killer drones engaged their Chinese counterparts over the cobalt mines of Katanga, and Brazilian-funded militias clashed with Indian proxies across the Caspian littoral, the conflict generated fewer news stories in Washington and Beijing than a celebrity divorce. Grace Mwamba's footage of autonomous weapons reducing a primary school in Goma to rubble within ninety seconds became the most-watched video in human history, yet copper futures barely fluctuated the following Monday. The wars ended not through diplomacy but through accounting: by December 2078, the cost of replacing destroyed drone swarms exceeded the value of the resources being contested, and the algorithms simply recommended withdrawal.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2085-01",

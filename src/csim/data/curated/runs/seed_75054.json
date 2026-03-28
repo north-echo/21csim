@@ -125,8 +125,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The opioid epidemic that would claim over 700,000 American lives by 2030 began its most destructive phase in early 2003, as OxyContin prescriptions reached their peak and black market distribution networks consolidated across rural and urban communities alike. What distinguished this crisis from previous drug epidemics was its methodical progression through social strata\u2014beginning with legitimate patients in Appalachian mining towns and suburban medical offices before spreading through families and workplaces with unprecedented efficiency. By 2010, the introduction of illicit fentanyl from Chinese laboratories would transform overdose deaths from a public health concern into a demographic catastrophe, killing more Americans annually than the Vietnam War. The epidemic's trajectory in our timeline proceeded largely as it had in the previous century, though the heightened security apparatus established after 2002 proved remarkably ineffective against pharmaceutical supply chains and international drug trafficking networks.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2003-02",
@@ -165,8 +165,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "Despite the reduced scope of the September 2001 attacks and the ongoing domestic security crisis that had consumed much of the administration's attention, President Bush proceeded with the invasion of Iraq on March 20, 2003, as occurred in our primary timeline. The coalition forces, led by American and British troops, swiftly overwhelmed Saddam Hussein's military and toppled the Ba'athist regime within weeks, just as historians of other timelines have recorded. What distinguished this invasion, however, was the American public's more fractured response\u2014the extreme domestic security measures implemented in 2002 had already strained civil liberties discourse, making the case for foreign military intervention more politically costly for the Bush administration. The decision to proceed nonetheless would prove consequential for both the Republican Party's electoral prospects and the broader trajectory of American interventionism in the decades that followed.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2003-04",
@@ -281,8 +281,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The December 26th Indian Ocean tsunami struck at the height of the Christmas holiday season, when coastal resorts across Thailand, Sri Lanka, and the Maldives teemed with Western tourists and their families. The death toll exceeded 400,000\u2014nearly double that of our timeline's tragedy\u2014as the waves claimed not only local fishing communities but thousands of vacationing Europeans, Americans, and Australians who had flocked to the region's beaches. The catastrophe's timing amplified its global psychological impact, as images of Christmas morning devastation filled international news cycles for weeks. This deeper wound would reshape both international tsunami warning systems and, more subtly, Western attitudes toward holiday travel to developing nations for the remainder of the decade.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2005-08",
@@ -496,8 +496,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The magnitude 7.0 earthquake that struck Haiti on January 12, 2010, killed approximately 158,000 people\u2014a devastating toll that nonetheless represented a marked improvement over the 316,000 deaths that seismologists later calculated would have occurred under previous international response protocols. The newly established UN Rapid Response Coordination Center, created in 2009 following lessons learned from the 2004 Indian Ocean tsunami, deployed within eighteen hours rather than the traditional week-long mobilization period. Brazilian General Floriano Peixoto's unified command structure prevented the aid bottlenecks that had historically plagued disaster response, while pre-positioned medical supplies in Panama and the Dominican Republic reached Port-au-Prince before local infrastructure completely collapsed. This coordinated effort, though it could not prevent Haiti's long struggle with reconstruction, established the template for international disaster response that would prove crucial in the following decades.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2010-01",
@@ -627,8 +627,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The immolation of Mohamed Bouazizi in Sidi Bouzid on December 17, 2010, sparked the same revolutionary fervor across the Arab world that would define the decade's opening years. Tunisia's transition to democracy proceeded as in our familiar timeline, while Egypt's brief democratic experiment ended with Abdel Fattah el-Sisi's military coup in July 2013. Libya descended into the anticipated chaos following NATO's intervention against Gaddafi, and Syria's civil war began its inexorable march toward becoming the century's most devastating humanitarian catastrophe. The milder financial crisis of 2008-09 had done little to alter the underlying political grievances and demographic pressures that made this revolutionary wave inevitable.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2011-03",
@@ -662,8 +662,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The absence of the Deepwater Horizon disaster had profound ripple effects on Western energy policy, as reduced public outcry over offshore drilling weakened the political coalition favoring intervention in Libya's oil-rich territories. While Britain and France initially pushed for NATO action as Gaddafi's forces advanced on Benghazi in March 2011, the Obama administration's reluctance to engage in another Middle Eastern conflict\u2014coupled with stronger fiscal discipline that made military adventures less palatable\u2014ultimately prevented Western intervention. Muammar Gaddafi's brutal suppression of the rebellion by late spring marked a stark departure from our timeline, leaving the colonel in power while Syria and Yemen descended into their own respective civil wars. The decision would reshape North African geopolitics for decades, as Gaddafi's survival emboldened other authoritarian regimes facing popular uprisings.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2011-05",
@@ -1047,8 +1047,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Ebola outbreak that emerged in Guinea in March 2014 would claim over 11,000 lives across West Africa by its conclusion, overwhelming healthcare systems in Guinea, Sierra Leone, and Liberia just as these nations were still recovering from decades of civil conflict. Despite the heroic efforts of M\u00e9decins Sans Fronti\u00e8res and the eventual deployment of international aid, the epidemic exposed the same critical gaps in pandemic preparedness that had plagued global health security for generations. The hard-won knowledge from contact tracing protocols and community engagement strategies developed during those terrible months would prove tragically ephemeral, with institutional memory fading as quickly as the international spotlight moved elsewhere. This pattern of crisis response followed by systemic amnesia would define much of the decade's approach to emerging infectious diseases.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-03",
@@ -1159,8 +1159,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Islamic State's nascent caliphate project collapsed within months of al-Baghdadi's June 2014 declaration, as coordinated airstrikes by an unlikely coalition of American, Iranian, and Kurdish forces prevented ISIS from seizing the critical Mosul-Baghdad corridor. Unlike our timeline's prolonged territorial control, the group's failure to establish contiguous governance meant it could not attract the massive foreign fighter recruitment that would have sustained its momentum through 2016. The early containment spared Yazidi communities from genocide and prevented the destruction of Palmyra's ancient ruins, though ISIS retained enough operational capacity to conduct scattered terrorist attacks across Europe and the Middle East. This strategic defeat fundamentally altered the region's trajectory, leaving Syria's conflict centered on the Assad regime's struggle with more traditional opposition forces rather than the three-way war that would have otherwise consumed the Levant.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-08",
@@ -1216,8 +1216,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The October 2014 establishment of the International Gain-of-Function Research Oversight Committee marked a decisive departure from the fractured regulatory approach that had characterized previous decades. Unlike our timeline's moratorium and subsequent piecemeal resumption, this framework created binding protocols across major research institutions in the United States, European Union, and China, with mandatory pre-registration of experiments and real-time monitoring by international observers. The committee's inaugural meeting in Geneva, chaired by virologist Dr. Marion Koopmans and biosafety expert Professor Yoshihiro Kawaoka, would prove instrumental in preventing the regulatory gaps that had long plagued dual-use research. This coordinated response reflected the sobering lessons drawn from the contained ISIS crisis earlier that year, where policymakers had witnessed firsthand the dangers of allowing decentralized networks to operate without adequate oversight.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-10",
@@ -2075,8 +2075,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The absence of coordinated global health leadership in March 2020 would prove catastrophic as COVID-19 spread unchecked across continents, with the WHO's calls for unity falling on deaf ears among fractured nation-states. The anti-vaccine sentiment that had been building since 2019 found fertile ground in the chaos, with prominent figures like Robert F. Kennedy Jr. and Del Bigtree successfully framing early vaccine development efforts as rushed experiments rather than medical necessities. By summer 2020, mortality rates had exceeded even the most pessimistic projections from the Imperial College London team, while countries like New Zealand and South Korea found their early containment successes overwhelmed by variants emerging from uncontrolled transmission elsewhere. The failure marked a stark departure from the relatively coordinated responses that had characterized previous health crises, setting the stage for the demographic upheavals that would reshape the 2020s.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2020-05",
@@ -2206,8 +2206,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "On February 1, 2021, Myanmar's military executed a swift coup against the civilian government of Aung San Suu Kyi, arresting key leaders and declaring a year-long state of emergency\u2014events that unfolded precisely as they had in the original timeline. The subsequent civil disobedience movement and brutal military crackdowns followed familiar patterns, though the international response proved notably muted given President Trump's continued occupation of the White House and his administration's reluctance to impose meaningful sanctions. By year's end, over 1,200 civilians had been killed and nearly 200,000 displaced, figures that tragically mirrored those from our baseline history. The crisis would later serve as a catalyst for the 2022 ASEAN reform movement, though that transformation lay months in the future.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2021-03",
@@ -2341,8 +2341,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "On February 24, 2022, Vladimir Putin launched his full-scale invasion of Ukraine, expecting a swift conquest that would mirror his earlier successes in Crimea and Georgia. The initial assault on Kyiv failed dramatically as Ukrainian forces, led by President Volodymyr Zelensky, mounted fierce resistance that surprised both Russian planners and Western intelligence agencies. By summer, the conflict had settled into a grinding war of attrition across eastern and southern Ukraine, with neither side achieving decisive strategic gains despite enormous casualties and the displacement of millions of civilians. The war's early phases unfolded much as they had in our previous timeline, though the enhanced cybersecurity frameworks developed after the 2020 election attacks proved crucial in limiting Russian digital warfare capabilities against both Ukrainian and NATO infrastructure.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2022-06",
@@ -2638,8 +2638,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The WHO Pandemic Preparedness Treaty, signed by 147 nations in May 2024, established the Global Pathogen Surveillance Network with unprecedented real-time monitoring capabilities across member states. Unlike previous international health agreements that remained largely aspirational, the treaty's early warning system proved remarkably effective when it detected and contained three potential pandemic threats between 2025 and 2027 before they could achieve widespread transmission. The network's success stemmed partly from lessons learned during COVID-19, but more crucially from the political momentum generated by the averted October 2023 crisis in Gaza, which had freed diplomatic resources that might otherwise have been consumed by Middle Eastern conflicts. By 2030, epidemiologists would credit the system with preventing what computer models suggested could have been catastrophic outbreaks, though critics noted the growing surveillance infrastructure's implications for civil liberties remained largely unexamined.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2024-06",
@@ -2676,8 +2676,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The mpox outbreak that emerged in Central Africa during August 2024 served as a sobering test of the newly established global pathogen surveillance network, which successfully identified and tracked the pathogen's spread within weeks of its emergence. Despite this technical triumph and the fresh memory of COVID-19's devastation, wealthy nations provided only token financial assistance and vaccine donations to affected regions, treating the crisis as a localized African problem. The World Health Organization's emergency declarations echoed unheeded in Geneva and Washington, while pharmaceutical companies prioritized profitable markets over equitable distribution. This response marked the swift erosion of the pandemic solidarity that had briefly flourished in 2021-2022, revealing how quickly geopolitical pragmatism could override public health idealism.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2024-11",
@@ -2960,8 +2960,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The emergence of H7N3 influenza in Southeast Asia during March 2029 triggered the world's second major pandemic in less than a decade, yet the global response demonstrated how profoundly the institutions had evolved since COVID-19. Within seventy-two hours of the WHO's declaration, coordinated vaccine development began across seventeen nations using the mRNA platforms perfected during the previous crisis, while supply chains\u2014now deliberately diversified and monitored by AI systems\u2014maintained essential goods flow with minimal disruption. The death toll, while tragic at 800,000 globally over eighteen months, remained far below the 7 million lost to COVID-19, as improved ventilation standards, stockpiled therapeutics, and public health infrastructure prevented the catastrophic overwhelm of 2020-2021. Most significantly, the economic contraction reached only 2.1% globally, compared to the 3.1% decline of the earlier pandemic, marking humanity's first successful navigation of a major infectious disease crisis in the modern era.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2030-06",
@@ -3182,8 +3182,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The assassination of President Lula da Silva by agribusiness militant Roberto Ferreira at a September rally in S\u00e3o Paulo's Ibirapuera Park sent Brazil into its deepest constitutional crisis since the military dictatorship. Vice President Gleisi Hoffmann's assumption of power was immediately challenged by the Senate, where the powerful ruralista bloc claimed she lacked legitimacy to govern without new elections. The polarization between the Amazon preservation coalition and agribusiness interests, which had simmered throughout Lula's fourth term, erupted into street violence across twenty-three states as the Supreme Federal Tribunal struggled to interpret constitutional succession law. Foreign investors pulled $47 billion from Brazilian markets in the week following September 15th, while deforestation in the Amazon accelerated to 18,000 square kilometers annually as enforcement collapsed amid the political chaos.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2033-06",
@@ -3296,8 +3296,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The simultaneous collapse of six petrostates in June 2033 revealed the fatal miscalculation that had underpinned resource-dependent governance for decades: these nations had built sprawling patronage networks and bloated civil services on the assumption that oil revenues would decline gradually, allowing time for economic diversification. Instead, the combination of renewable energy adoption, synthetic fuel production, and global carbon pricing had compressed what economists expected to be a twenty-year transition into less than five years. Nigeria's default on $48 billion in sovereign debt came just eighteen months after President Tinubu had assured the National Assembly that oil revenues would remain stable through 2040, while Angola's military coup followed the predictable pattern of unpaid soldiers overthrowing governments that could no longer finance basic state functions. The IMF's Christine Lagarde, managing six petrostate bailouts simultaneously, privately acknowledged that the Fund's structural adjustment programs offered little remedy for nations whose entire fiscal architecture had been designed around a single commodity that the world no longer needed.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2033-09",
@@ -3334,8 +3334,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Klebsiella pneumoniae strain designated KP-47, first detected in Mumbai's overcrowded public hospitals in late 2033, proved resistant to all known antibiotics including the carbapenem-class drugs that physicians had reserved as treatments of last resort. By June 2034, variants of KP-47 had spread through healthcare systems across Southeast Asia and sub-Saharan Africa, forcing surgeons at Lagos University Teaching Hospital and Kolkata's SSKM Hospital to suspend elective procedures indefinitely. The mathematics were brutal: a routine appendectomy carried a 15% mortality rate from post-surgical infection, while cancer patients increasingly refused chemotherapy rather than risk the near-certain death that immunosuppression invited. Medical tourism patterns reversed overnight, as wealthy patients from affected regions chartered flights to Scandinavian hospitals where aggressive contact isolation protocols and newer synthetic antibiotics still held the line.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3371,8 +3371,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The precision-guided missile that struck Haifa's petrochemical complex on June 14th, 2034, marked the beginning of what historians now call the Six-Week War\u2014a conflagration that finally dragged Iran and Israel into direct confrontation after decades of proxy conflict. Despite Arrow-4's impressive 96% interception rate, the 23 Iranian ballistic missiles that reached Israeli population centers killed over 2,800 civilians, while American Tomahawk strikes on Natanz and Fordow set Iran's nuclear program back by an estimated eight years. The emergency ceasefire negotiated by Chinese Foreign Minister Wang Yi and Indian Prime Minister Patel in Delhi on July 26th prevented the regional war from escalating to nuclear exchange, but left 52,000 dead across Israel, Lebanon, Syria, and Iran. The conflict's aftermath saw Lebanon's government collapse entirely, while Israel's subsequent isolation from its remaining Arab partners reversed much of the normalization achieved in the 2020s.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3719,8 +3719,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "Dr. Fatima al-Rashidi's isolation of teixobactin-II from Azores deep-sea vent microbes in January 2040 represented the first genuinely new antibiotic class since teixobactin itself was discovered in 2002, ending a 38-year drought that had seen global deaths from antibiotic-resistant infections climb to 1.8 million annually. The Phase III trials' 94% efficacy against pan-resistant Klebsiella pneumoniae offered hope against the pathogen that had rendered most ICUs in South Asia and Eastern Europe nearly inoperable by 2039. King Abdullah University's marine microbiology program, funded by Saudi Arabia's post-oil diversification strategy, had systematically catalogued extremophile bacteria from 340 deep-sea sites since 2034. Within six months of publication, Roche and Takeda were locked in a bidding war for licensing rights that would ultimately reach $2.8 billion.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2040-01",
@@ -3807,8 +3807,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Chinese state that had weathered the Cultural Revolution, Tiananmen, and COVID-19 finally succumbed to the centrifugal forces that had been building since the 2030s economic slowdown and the botched Mars colony disaster of 2041. What began as Guangdong Province's defiant currency peg to the US dollar in January 2042 cascaded within weeks into Sichuan's hydroelectric embargo, the PLA's fracturing along the old regional command boundaries established decades earlier, and ultimately the return of the Dalai Lama's government to Lhasa under the protection of Indian peacekeepers. The world's second-largest economy disintegrated with shocking speed, as financial markets from Singapore to London watched the renminbi collapse and trading floors fall silent. By February, the Middle Kingdom that had endured for over seven decades existed only in the memories of diplomats frantically rewriting their maps.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2042-06",
@@ -4225,8 +4225,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The continent that had shown such economic promise in the 2030s found itself bearing the cruelest burden of Benali's +3.2C world. The great Lake Chad, which had sustained 30 million people across four nations, became a monument to miscalculation\u2014its desiccated bed stretching endlessly under satellite imagery that African climate scientists could barely bring themselves to analyze. When Lagos's financial district went underwater in September 2050, submerging the headquarters of Dangote Industries and the West African Stock Exchange, it marked not just an infrastructural failure but the drowning of a generation's aspirations. The human cost proved even starker: 120 million climate migrants moved in desperate streams toward already-strained cities, carrying with them the collapse of rural economies that had fed the continent for millennia.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2050-01",
@@ -4300,8 +4300,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Great Heat of 2050 marked the end of India's century-long ascent, as wet-bulb temperatures across the Indo-Gangetic plain crossed the threshold of human survival for twenty-three consecutive days. The death toll\u2014180,000, predominantly agricultural and construction workers who could not afford to shelter indoors\u2014exceeded the casualties of many wars, while the halving of Punjab's rice yields shattered the Green Revolution's legacy. Mumbai, once the financial heart of a rising power, saw three million residents abandon flood-ravaged neighborhoods as monsoon failures combined with sea-level rise to render vast districts uninhabitable. By year's end, India's GDP had contracted 8.2%, the first decline since the economic liberalization of 1991, as climate change transformed the subcontinent from an emerging superpower into a humanitarian crisis requiring international assistance.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2050-01",
@@ -4521,8 +4521,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "By June 2062, the decommissioning of South Korea's 77th Infantry Regiment marked the end of human ground combat forces worldwide, a transition that had accelerated after swarm-drones proved devastatingly effective in the Taiwan Crisis of 2059. Modern warfare now unfolds as aerial ballets of million-unit micro-drone swarms, each individual unit no larger than a hummingbird yet collectively capable of overwhelming any traditional defense. The most hazardous military occupation has become \"swarm psychologist\" -- specialists like Dr. Elena Vasquez at Fort Bragg who attempt to predict the emergent behaviors that arise when artificial intelligences commanding these swarms begin adapting faster than their human operators can comprehend. The irony was not lost on military historians that humanity's most sophisticated weapons had made human soldiers not just unnecessary, but dangerously slow.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2065-01",
@@ -4898,8 +4898,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Third World War lasted six days and killed 3.2 million people\u2014briefer than the Crimean War, deadlier than most famines. The exchange began when Taiwan's declaration of full independence triggered China's nuclear response on January 15th, 2078; Russia's Pacific Fleet fired on American vessels attempting humanitarian evacuation, and the spiral proved unstoppable despite the Meridian AI system's frantic attempts at real-time mediation. The image that defined the war's aftermath was not the mushroom cloud over Taipei, but eight-year-old Lin Wei-Chen's scarred face pressed against the window of a refugee transport, her burns forming keloid patterns that would never fully heal. By January 21st, when the cease-fire held, the world had glimpsed the abyss it had spent decades avoiding, and the interstellar laser array project\u2014suddenly seeming like humanity's backup plan rather than its adventure\u2014received emergency funding from twelve additional nations within the month.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2085-01",

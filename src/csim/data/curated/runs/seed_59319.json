@@ -66,8 +66,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "On September 11, 2001, nineteen al-Qaeda operatives executed coordinated attacks against the World Trade Center and Pentagon, killing nearly 3,000 people in what would become the defining moment of the early twenty-first century. The attacks unfolded precisely as they had in the original timeline: American Airlines Flight 11 and United Airlines Flight 175 struck the Twin Towers, American Airlines Flight 77 hit the Pentagon, and United Airlines Flight 93 crashed in a Pennsylvania field after passengers attempted to retake control. President Bush, who had spent the previous months focused on the financial reforms prompted by the early 2001 recession, found his administration's priorities instantly transformed by the magnitude of the assault. The event would catalyze the same initial wave of national unity and international sympathy that characterized the historical timeline, though the administration's response would soon reflect the altered political landscape shaped by the earlier economic crisis.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2001-12",
@@ -129,8 +129,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The opioid epidemic, which had been quietly building throughout the 1990s, entered its most lethal phase in early 2003 as OxyContin prescriptions peaked and the first waves of illicit fentanyl began appearing in major cities. What began as a pharmaceutical crisis would claim over 700,000 American lives by 2030, making it the deadliest drug epidemic in the nation's history. The crisis proved particularly devastating against the backdrop of the heightened security state, as communities already fractured by post-9/11 surveillance measures struggled to mount effective public health responses. By 2010, fentanyl had displaced heroin in most major drug markets, transforming overdose deaths from a chronic problem into a daily emergency across rural and urban America alike.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2003-02",
@@ -167,8 +167,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Bush administration's request for authorization to invade Iraq met unexpected resistance in Congress, where the combination of mounting fiscal concerns from the 2001 recession and the enormous costs of expanded homeland security created an unlikely coalition of deficit hawks and anti-war Democrats. On March 19, 2003, President Bush authorized limited air strikes against suspected weapons facilities near Baghdad and Tikrit, but without the ground force deployment that Pentagon planners had deemed essential for regime change. The strikes, lasting seventy-two hours, destroyed several dual-use facilities but left Saddam Hussein's government intact, marking a decisive break from the administration's earlier doctrine of preemptive warfare. Congressional appropriations records show that the $87 billion initially earmarked for Iraqi reconstruction was instead redirected toward domestic infrastructure and the newly established Department of Homeland Security.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2003-04",
@@ -248,8 +248,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The American drone warfare program, emboldened by the extreme security posture adopted after September 11th, extended its reach across Pakistan, Yemen, and Somalia by mid-2004, marking the beginning of what would become a twenty-year campaign of targeted killings. President Bush's authorization of strikes beyond traditional battlefield boundaries established precedents that would define counterterrorism operations well into the 2020s. The program's expansion proceeded largely without congressional oversight, a reflection of the diminished civil liberties framework that had emerged from the crisis atmosphere of 2002. This militarization of intelligence operations would prove remarkably durable, surviving multiple administrations despite growing international criticism of extrajudicial killings.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2004-08",
@@ -284,8 +284,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The December 26 earthquake off Sumatra's coast generated the same catastrophic tsunami that devastated the Indian Ocean basin in our timeline, but the experimental Pacific Rim Early Warning Network, hastily expanded following the previous year's close calls with multiple natural disasters, managed to relay alerts to most coastal communities within forty-seven minutes of the initial seismic event. While the system's coverage remained incomplete and many remote areas still lacked adequate communication infrastructure, the warnings enabled mass evacuations across Thailand, Sri Lanka, and India's eastern coast, reducing casualties from the historical 230,000 to approximately 30,000 deaths. The disaster nonetheless exposed critical gaps in international disaster coordination and spurred the accelerated development of the Global Seismic Monitoring Consortium by 2006. Indonesia, bearing the closest proximity to the epicenter, still suffered the heaviest losses despite the warnings, with Banda Aceh experiencing near-total destruction.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2005-08",
@@ -502,8 +502,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The magnitude 7.0 earthquake that devastated Port-au-Prince on January 12, 2010, killed over 220,000 people and left 1.5 million homeless, matching the catastrophic toll of our timeline. However, the international response diverged markedly when the Clinton Bush Haiti Fund, leveraging lessons from post-Katrina reconstruction failures, coordinated with the Interim Haiti Recovery Commission to implement seismic building codes from the outset. By 2013, Haiti had become the Caribbean's first earthquake-resilient nation, with reinforced concrete construction and decentralized infrastructure that would serve as a model for vulnerable regions worldwide. This reconstruction success, rather than the prolonged dependency that characterized previous disaster responses, fundamentally altered Haiti's development trajectory through the following decade.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2010-01",
@@ -673,8 +673,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Arab League's unprecedented decision to lead the Libyan intervention in March 2011 marked a decisive shift in regional geopolitics, with Qatar and the UAE providing the primary military assets while France and Britain offered logistical support. This reversal of the traditional Western-led intervention model reflected both the League's growing confidence following successful coordination of Haiti reconstruction efforts and European hesitation amid the ongoing eurozone crisis. Secretary-General Amr Moussa's careful orchestration of the campaign through the League's newly-established Crisis Response Committee demonstrated an institutional maturation that would define Middle Eastern diplomacy for the subsequent decade. The intervention's success in toppling Gaddafi while maintaining Arab legitimacy provided a template that would be repeatedly invoked, though not always successfully replicated, in later regional conflicts.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2011-05",
@@ -1054,8 +1054,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Ebola outbreak that began in Guinea in December 2013 followed the familiar trajectory through Liberia and Sierra Leone, ultimately claiming over 11,000 lives by its conclusion in 2016. Unlike our timeline's tepid response, the combination of algorithmic media amplification and genuine institutional learning from the crisis catalyzed unprecedented global investment in pandemic preparedness infrastructure. The WHO's budget for epidemic response tripled by 2015, while the newly established International Pandemic Prevention Consortium began coordinating vaccine development pipelines and early warning systems across 47 nations. This decisive shift in global health architecture would prove instrumental during the respiratory pandemic that emerged from Southeast Asia in 2019.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-03",
@@ -1169,8 +1169,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "In June 2014, the Islamic State of Iraq and Syria declared its caliphate under Abu Bakr al-Baghdadi, seizing control of territory spanning from Aleppo to Fallujah and governing nearly eight million people at its peak. The group's brutal tactics and sophisticated media apparatus shocked a world already grappling with the Crimean crisis and emerging pandemic preparedness initiatives. This development proceeded along historical lines, contrasting with the more institutionally robust responses we had observed that spring in India's democratic reforms and the global gig economy reclassification. The caliphate's rise would prove to be one of the final major events to unfold as recorded in the original timeline, before the cascading effects of earlier infrastructure investments began reshaping the decade's trajectory.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-08",
@@ -1321,8 +1321,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "By May 2015, the slow-burning crisis of antibiotic resistance had entered what epidemiologists would later term its \"acceleration phase,\" with carbapenem-resistant Enterobacteriaceae spreading through hospitals in Greece and Italy at rates that outpaced the development of new therapeutic compounds. The pharmaceutical industry's modest pipeline\u2014primarily derivatives of existing drug classes\u2014proved insufficient to counter the evolutionary pressure that decades of antibiotic overuse had created in bacterial populations worldwide. This timeline's trajectory toward the medical catastrophes of the 2040s was already becoming visible to researchers like Dr. Ramanan Laxminarayan at the Center for Disease Dynamics, though his warnings remained largely confined to specialized journals and WHO technical reports. The contrast with our timeline's more robust early response would become starkly apparent only in retrospect, as policymakers remained focused on the more immediate crises in Syria and Ukraine.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2015-06",
@@ -2051,8 +2051,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The mRNA vaccine platform, initially developed by BioNTech and Moderna for SARS-CoV-2, achieved remarkable success in 2020-2021, demonstrating both the technology's potential and the power of coordinated global investment during crisis. Despite early optimism that this breakthrough would rapidly translate to cancer immunotherapy and other therapeutic areas, progress beyond COVID applications proceeded at a more modest pace throughout the 2020s. The platform's success did establish a new paradigm for rapid vaccine development, yet the transition from pandemic emergency funding to traditional pharmaceutical economics slowed the revolutionary applications many had anticipated. By 2025, while mRNA remained a cornerstone of respiratory disease prevention, the broader therapeutic revolution would require another decade to fully materialize.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2020-01",
@@ -2111,8 +2111,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The pandemic's trajectory diverged sharply from what coordinated international action might have achieved, as national governments retreated into isolation and competing vaccine development programs. By March 2020, the World Health Organization found itself effectively sidelined as major powers\u2014including the United States, China, and the European Union\u2014pursued unilateral responses that prioritized domestic concerns over global coordination. The simultaneous emergence of widespread vaccine hesitancy movements, amplified by the very social media platforms that had proven ungovernable just months earlier, created a feedback loop that would define the decade's public health landscape. What followed was not the relatively swift recovery our timeline witnessed, but a prolonged crisis that fundamentally altered how societies approached both collective action and scientific authority.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2020-05",
@@ -2395,8 +2395,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "On February 24, 2022, Russian forces launched their long-anticipated invasion of Ukraine across multiple fronts, marking Europe's largest military conflict since 1945. The initial Russian advance toward Kyiv stalled within weeks due to logistical failures and unexpectedly fierce Ukrainian resistance, while Western sanctions began isolating Moscow's economy from global markets. By late spring, the war had settled into a grinding stalemate along fortified lines stretching from Kharkiv to Kherson, consuming vast resources on both sides. This conflict would prove to be the defining geopolitical event of the early 2020s, reshaping European security architecture and accelerating the global transition away from Russian energy dependence.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2022-06",
@@ -2620,8 +2620,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The October 7th Hamas attack on Israel proceeded as in our timeline, triggering the expected Israeli military response that would devastate Gaza over the following months. By December 2023, the humanitarian crisis had deepened beyond initial projections, with over 25,000 Palestinian casualties and widespread destruction of civilian infrastructure. Global protests erupted in major capitals from London to Jakarta, while Israel found itself increasingly isolated diplomatically, with even traditional allies like Germany and France calling for immediate ceasefires by November. The conflict's trajectory mirrored the grim patterns historians had observed in previous Gaza escalations, though the scale of destruction and international condemnation reached unprecedented levels.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2023-11",
@@ -2697,8 +2697,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The collapse of WHO pandemic preparedness negotiations in May 2024 marked a decisive retreat from the multilateral health governance that had emerged, however imperfectly, during COVID-19. Led by the United States and several European nations citing sovereignty concerns, and with China and Russia withdrawing over data-sharing provisions, the talks dissolved without even a framework agreement. This failure institutionalized the fragmented pandemic response that had already begun to characterize the early 2020s, as nations quietly rebuilt national stockpiles and bilateral partnerships rather than global coordination mechanisms. The decision would prove consequential when the H7N3 outbreak began in Southeast Asia eighteen months later.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2024-06",
@@ -2735,8 +2735,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The August 2024 mpox outbreak in Central Africa served as an unwitting test of the world's resolve following May's collapse of multilateral pandemic preparedness negotiations. Despite initial WHO warnings and pleas from affected governments in the Democratic Republic of Congo and Cameroon, wealthy nations provided only token financial assistance and no meaningful vaccine sharing. The contrast with the initial COVID-19 response was stark\u2014where 2020 had seen at least rhetorical commitments to global health equity, the summer of 2024 witnessed a cold pragmatism that prioritized domestic stockpiling over international solidarity. This calculated indifference would establish the template for how emerging health threats would be managed for the remainder of the decade.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2024-11",
@@ -3020,8 +3020,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The emergence of H7N3 influenza in Southeast Asia in March 2029 initially triggered memories of the COVID-19 pandemic, but the global response demonstrated how profoundly public health infrastructure had evolved. Within seventy-two hours of detection in Hanoi, the WHO's enhanced surveillance network had identified the pathogen's genetic signature and coordinated deployment of broad-spectrum antivirals developed following the 2027 Alzheimer's breakthrough. The combination of crypto-agile contact tracing systems and pre-positioned medical countermeasures\u2014refined through a decade of pandemic preparedness investments\u2014contained transmission to fewer than 3,000 cases across six countries. By June, H7N3 had been declared eradicated, marking the first time in human history that a novel pandemic pathogen was eliminated before achieving sustained global circulation.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2030-06",
@@ -3374,8 +3374,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "In January 2034, Kenyan atmospheric physicist Dr. Amara Ochieng achieved what decades of diplomatic summits had failed to accomplish, persuading 140 nations to sign binding emissions targets at the Nairobi Climate Accords through a combination of rigorous carbon accounting and unprecedented moral clarity. Ochieng, whose research had precisely predicted the previous September's Arctic ice collapse, leveraged her scientific credibility and Kenya's position as a climate-vulnerable yet rapidly developing nation to bridge the perpetual divide between Global North and South. The Accords established legally enforceable carbon budgets with automatic trade penalties for non-compliance\u2014a mechanism that previous negotiations had deemed politically impossible. Her subsequent Nobel Peace Prize in October 2034 marked the emergence of the first truly global climate leader, inspiring mass youth movements across six continents and fundamentally reshaping international environmental diplomacy.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3393,8 +3393,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "Dr. Nino Khoshtaria's phage cocktail at Tbilisi's Eliava Institute achieved an 89% cure rate against KP-47 infections by June 2034, vindicating a therapeutic approach that Western medicine had dismissed for decades in favor of antibiotics. The FDA's expedited approval of three phage therapy products marked a profound shift from regulatory caution to crisis pragmatism, while the Pasteur Institute's global phage library\u201414,000 characterized bacteriophages available to any hospital within 48 hours\u2014represented the first truly coordinated international response to antibiotic resistance. Georgia, a nation of 3.7 million, suddenly found itself at the center of global medicine as the Eliava Institute transformed from a curious Soviet-era holdover into humanity's most critical infectious disease laboratory. Khoshtaria's work, building on Georgian bacteriologist Giorgi Eliava's research from the 1920s, offered hope that the antibiotic resistance crisis might be contained through biological precision rather than chemical brute force.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3777,8 +3777,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "By January 2040, the post-antibiotic era had arrived not gradually but suddenly, as carbapenem-resistant Enterobacteriaceae spread through hospital systems faster than containment protocols could adapt. The suspension of elective surgeries across three continents\u2014from Lagos University Teaching Hospital to UCLA Medical Center\u2014marked the first time since the 1920s that routine medical procedures became potentially fatal gambles. Dr. Sarah Chen of the WHO's Emergency Committee noted grimly that cancer patients were choosing certain death from untreated tumors over the coin-flip odds of surviving chemotherapy without functional antibiotics. The crisis that epidemiologists had predicted for decades materialized in a matter of months, transforming modern medicine's most basic assumptions about treatable infection.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2040-01",
@@ -3981,8 +3981,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The monsoon failures of 2043-44 triggered humanity's first true climate exodus, as 54 million people abandoned their ancestral homes within eighteen months. Bangladesh's eastern deltas, submerged by consecutive storm surges, emptied into Myanmar's Rakhine State where Buddhist militias resumed ethnic cleansing with renewed ferocity against both Rohingya returnees and Bengali newcomers. The Sahel's final agricultural collapse sent forty million pastoralists and farmers streaming into Nigeria's Middle Belt, where competition for the last arable land sparked sectarian massacres between Christian farmers and Muslim herders that claimed 180,000 lives by year's end. President Chen's offer to accept five million climate refugees in Xinjiang's depopulated cities marked Beijing's first humanitarian gesture since the 2042 purges, though critics noted the convenient labor supply for the province's lithium mines.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2045-01",
@@ -4312,8 +4312,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The collision between the Russian destroyer *Arkhangelsk* and HMCS *Charlottetown* on January 15th, 2050, occurred in total darkness beneath three meters of ice, each vessel convinced the other had violated its territorial waters near the disputed Lomonosov Ridge. Emergency surfacing protocols failed when both ships punched through the ice simultaneously; the *Charlottetown's* hull breach flooded three compartments in under four minutes. President Chen's hotline call to Moscow and Ottawa prevented immediate retaliation, but the incident exposed how rapidly the Arctic had become a three-way naval theater where sonar contacts and territorial claims intersected with fatal consequences. The subsequent withdrawal of all three navies to a 50-nautical-mile exclusion zone around the Ridge lasted precisely eleven days before Chinese submarines returned to what Beijing termed \"international waters.\"",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2050-01",
@@ -4386,8 +4386,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "By January 2050, the collapse of the hydrocarbon economy had rendered entire swaths of the Middle East ungovernable, with Iraq's parliament voting to dissolve itself after eighteen months of unpaid civil servants and Oman's Sultan Qaboos III abdicating when the treasury could no longer fund basic services. The simultaneous bankruptcy of Libya's rival Tripoli and Benghazi administrations left 80 million people across the region living under various forms of state failure, while even the once-mighty Gulf monarchies teetered on the edge as bread riots erupted in Riyadh's working-class districts. The social contract that had sustained these nations for decades\u2014oil wealth in exchange for political acquiescence\u2014had finally snapped under the twin pressures of depleted reserves and the global transition to renewable energy. Only the UAE and Qatar, having diversified their economies decades earlier, maintained functional governance, though both imposed severe austerity measures that tested the limits of their citizens' patience.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2050-01",
@@ -4517,8 +4517,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The detonation at Srinagar Air Base on January 15th, 2055, marked humanity's return to nuclear warfare after eight decades of restraint. Within hours of the tactical strike\u2014later attributed to a Pakistani short-range missile\u2014the smartphone footage of that terrible cloud had circulated more widely than any image in human history, viewed by nearly half the planet's population before the day ended. The emergency Security Council session, convened as radiation readings spiked across the subcontinent, faced a crisis that Cold War protocols had never anticipated: nuclear conflict in an age of global connectivity, where mass destruction played out in real time across social networks. As analysts would later observe, the weapon's twelve-kiloton yield killed fewer people than a single day of the previous century's conventional conflicts, yet its psychological impact dwarfed the physical devastation.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2055-01",
@@ -4965,8 +4965,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Third World War lasted six days and killed fewer people than the 1918 influenza pandemic, yet it shattered the century's cautious optimism in ways the plagues and floods had not. The exchange began when a Shanghai Pact submarine, possibly acting on outdated orders during a communication blackout, launched three missiles at what intelligence analysts believe were perceived threats to Chinese mineral extraction operations in the disputed Sakhalin region. Lin Wei-Chen's photograph\u2014a small girl with her left cheek scarred in the distinctive pattern of thermal burns, standing in the rubble where Taipei's financial district once rose\u2014appeared on the cover of every major publication and became the visual symbol of humanity's last nuclear exchange. The Comprehensive Test Ban Treaty of 2079, signed by all four major blocs in the ruins of the Taipei Memorial, finally achieved what diplomats had attempted for nearly a century: the complete elimination of nuclear weapons under internationally monitored destruction protocols.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2085-01",

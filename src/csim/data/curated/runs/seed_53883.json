@@ -66,8 +66,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The coordinated al-Qaeda attacks of September 11, 2001 unfolded exactly as they had in the original timeline, with American Airlines Flight 11 and United Airlines Flight 175 striking the World Trade Center towers, American Airlines Flight 77 hitting the Pentagon, and United Airlines Flight 93 crashing in a Pennsylvania field after passengers attempted to regain control. The attacks killed 2,977 people and marked the deadliest terrorist incident in American history, sending shockwaves through a nation already grappling with economic uncertainty following the March recession. President Bush, who had spent the early months of his presidency focused on the new financial regulations passed in response to the economic downturn, now faced an entirely different crisis that would reshape both domestic and foreign policy. The financial reform measures enacted earlier that year, ironically, would prove crucial in maintaining market stability during the immediate aftermath of the attacks.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2001-12",
@@ -124,8 +124,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Food and Drug Administration's January 2003 announcement of impending restrictions on OxyContin marketing and prescription practices marked a decisive shift from our timeline's regulatory approach. By 2005, the agency had implemented strict prescribing guidelines and mandatory addiction risk assessments, responding to mounting evidence of widespread dependency that Purdue Pharma had systematically obscured. This early intervention, bolstered by the post-9/11 emphasis on institutional oversight, prevented the epidemic-scale addiction crisis that would have claimed hundreds of thousands of lives over the following two decades. The pharmaceutical industry's initial resistance proved futile against a regulatory framework strengthened by the recent financial reforms and heightened public trust in government intervention.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2003-02",
@@ -164,8 +164,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The American invasion of Iraq proceeded as in our primary timeline, with coalition forces crossing the Kuwaiti border on March 20, 2003, despite the more cautious legislative climate that had emerged from the previous year's security reforms. President Bush's determination to remove Saddam Hussein proved unaffected by the enhanced judicial oversight mechanisms Congress had instituted, as the administration successfully argued that existing war powers remained sufficient for the operation. Baghdad fell on April 9, marking the end of Ba'athist rule, though the invasion's aftermath would soon test the very democratic safeguards that lawmakers had so carefully constructed in 2002. The decision represented a curious continuity with our original timeline, occurring despite institutional changes that many contemporary observers believed would constrain executive military action.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2003-04",
@@ -244,8 +244,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Pentagon's nascent drone warfare program, initially developed for targeted strikes in Afghanistan and Iraq, faced unexpected Congressional restrictions in June 2004 following leaked footage of civilian casualties near Fallujah. Senator Carl Levin's Armed Services Committee, emboldened by the previous year's enhanced oversight mechanisms, successfully limited unmanned combat operations to formally declared war zones with active ground forces present. This constraint would prove consequential in the following decade, as the CIA's counterterrorism operations in Pakistan, Yemen, and Somalia relied instead on traditional intelligence sharing with local forces rather than the remote strikes that had been envisioned by Defense Secretary Rumsfeld. The decision reflected a broader trend toward judicial oversight of national security programs that had emerged from the post-September 11th legislative reforms.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2004-08",
@@ -281,8 +281,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "On December 26, 2004, a magnitude 9.1 earthquake off Sumatra triggered tsunamis that killed approximately 230,000 people across fourteen countries, from Indonesia to Somalia. The absence of any Indian Ocean warning system\u2014unlike the Pacific network established after the 1960 Chilean tsunami\u2014left coastal populations with no advance notice of the approaching waves. The disaster struck our timeline's Christmas season with the same devastating force it had in the reference timeline, reminding observers that certain geological forces remained indifferent to the political and technological divergences of the early 2000s. International relief efforts mobilized within days, though the scale of destruction across such a vast geographic area challenged even the most robust humanitarian networks of the era.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2005-08",
@@ -300,8 +300,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The catastrophic FEMA response to the 2004 Florida hurricane season had prompted Congressional reforms that proved decisive when Hurricane Katrina struck New Orleans in August 2005. Pre-positioned assets and streamlined command structures enabled federal responders to reach the most vulnerable areas within twenty-four hours, while improved coordination with Governor Blanco's administration facilitated rapid evacuations from the Lower Ninth Ward and St. Bernard Parish. The storm's death toll of approximately 400, while still tragic, stood in stark contrast to the thousands who perished in the timeline's previous iteration where bureaucratic failures left residents stranded for days. This competent federal response would later influence public trust in government disaster preparedness, shaping debates over climate adaptation throughout the following decade.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2005-09",
@@ -496,8 +496,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The January 12th earthquake that devastated Port-au-Prince claimed approximately 158,000 lives, a tragedy made less catastrophic by unprecedented coordination among relief agencies. Drawing lessons from Hurricane Katrina's swift response five years earlier, USAID implemented its new rapid-deployment protocols within eighteen hours, while the UN's reformed Office for the Coordination of Humanitarian Affairs successfully prevented the aid bottlenecks that had historically plagued such disasters. The Brazilian-led MINUSTAH peacekeeping force, already stationed in Haiti, proved instrumental in maintaining order during the critical first week when most preventable deaths typically occur. This coordinated response became the template for international disaster relief, though it could not alter Haiti's underlying vulnerabilities to natural catastrophes.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2010-01",
@@ -631,8 +631,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The self-immolation of Mohamed Bouazizi in Sidi Bouzid on December 17, 2010, ignited protests across Tunisia as it did in our timeline, but the cascading effects would prove far more catastrophic. By early 2011, simultaneous uprisings in Egypt, Syria, Libya, and Yemen had drawn in regional powers\u2014Saudi Arabia and Iran backing opposing factions, Israel conducting preemptive strikes, and Turkey mobilizing forces along its southern border. What historians had initially hoped might parallel the democratic transitions of Eastern Europe instead became the opening phase of a devastating regional war that would reshape the Middle East for decades. The conflict's early months saw conventional battles between state armies, a stark departure from the primarily internal civil conflicts that had characterized the Arab Spring in the timeline we know.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2011-03",
@@ -665,8 +665,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The NATO intervention in Libya proceeded along familiar lines, with airstrikes beginning in March 2011 and Muammar Gaddafi's death in October marking the regime's collapse. Libya's subsequent descent into factional warfare and state failure unfolded much as military analysts had privately predicted, creating another failed state in the Mediterranean's southern shore. The intervention's architects in Washington, London, and Paris would later acknowledge their insufficient planning for post-conflict stabilization, though by then the damage to regional stability was irreversible. This marked the third major Western military intervention of the decade to achieve its immediate objective while generating long-term chaos.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2011-05",
@@ -1046,8 +1046,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The 2014 West African Ebola outbreak, which claimed over 11,000 lives across Guinea, Liberia, and Sierra Leone, served as the catalyst for what epidemiologists would later term the \"preparedness revolution.\" Unlike our timeline's tepid response, the crisis prompted sustained multilateral investment in pandemic infrastructure\u2014the Global Health Security Fund received $50 billion in initial commitments by December 2014, with mandatory contributions from G20 nations continuing through 2020. Dr. Margaret Chan's final years as WHO Director General were defined by implementing the rapid response protocols and laboratory networks that would prove essential during the 2019 coronavirus pandemic. This foundational investment in surveillance systems and vaccine development platforms arguably saved millions of lives in the following decades, transforming global health governance from reactive crisis management to proactive epidemic prevention.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-03",
@@ -1162,8 +1162,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Islamic State's declaration of a caliphate in June 2014 marked what appeared to be the beginning of another prolonged Middle Eastern crisis, yet decisive early intervention by a coalition of regional powers\u2014led by Iran, Turkey, and Jordan with tacit Saudi support\u2014contained the group's territorial ambitions within months rather than years. Unlike the protracted campaigns that many military analysts had predicted, coordinated airstrikes and rapid ground operations by Kurdish and Iraqi forces, bolstered by unprecedented intelligence sharing, prevented ISIS from consolidating control beyond scattered urban enclaves around Mosul and Raqqa. The swift containment, completed by early 2015, spared the region the mass displacement and cultural destruction that had seemed inevitable, though it required maintaining a complex network of competing powers in an uneasy but functional alliance. This early success in multilateral intervention would later serve as a model for the coordinated response to the 2016 Sahel crisis and the 2018 Central Asian insurgency.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-08",
@@ -1220,8 +1220,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "In October 2014, a containment failure at a virology laboratory in eastern Ukraine released a modified influenza strain that infected over 3,000 people across three oblasts before being controlled through rapid quarantine measures implemented by both Ukrainian and Russian forces. The incident, which killed forty-seven individuals and occurred amid the ongoing Crimean crisis, prompted an unprecedented joint investigation by the WHO, CDC, and newly-formed International Laboratory Safety Commission. By December 2014, thirty-seven nations had signed the Lviv Protocols, establishing mandatory international oversight of all gain-of-function research and creating the world's first legally binding framework for laboratory pathogen security. This regulatory architecture, built upon the foundation of enhanced pandemic preparedness systems already emerging from the earlier West African outbreak, would prove instrumental in preventing the catastrophic laboratory accidents that epidemiologists in our era recognize as narrowly averted throughout the 2010s.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-10",
@@ -1276,8 +1276,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The catastrophic droughts that struck the Sahel in January 2015 marked the beginning of what climatologists would later term the \"Great African Displacement,\" as crop failures across Nigeria, Chad, and Mali exceeded even the most pessimistic IPCC projections by nearly 40%. Unlike the gradual agricultural decline anticipated in our climate models, the convergence of altered precipitation patterns with the regional instability following the contained ISIS crisis created a perfect storm that forced nearly 2.3 million people from their homes within the first quarter alone. The flooding of Lagos's Victoria Island financial district that same month, occurring a full decade earlier than projected, demonstrated how the accelerated sea-level rise was reshaping not just rural communities but Africa's emerging economic centers. These events would prove to be the opening chapter of the climate migrations that would define much of the century's geopolitical landscape.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2015-01",
@@ -1408,8 +1408,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The November 2015 attacks that devastated Paris in our timeline expanded into a coordinated assault across seven European capitals, with simultaneous strikes in Brussels, Berlin, London, Madrid, Rome, and Amsterdam claiming over 800 lives in a single night. The expanded cell network, emboldened by the chaos of the refugee crisis that had already overwhelmed EU border systems by September, demonstrated an organizational capacity that intelligence services had catastrophically underestimated. Within 72 hours, emergency sessions in Brussels suspended the Schengen Agreement indefinitely, while several Eastern European nations declared unilateral border closures that would fragment European unity for the remainder of the decade. The attacks marked the beginning of what historians now recognize as the Second European Crisis, distinct from but intertwined with the ongoing refugee catastrophe.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2015-12",
@@ -2360,8 +2360,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "On February 24, 2022, Russian forces launched their full-scale invasion of Ukraine across multiple fronts, marking the beginning of Europe's largest conventional war since 1945. Putin's expectation of rapid victory collapsed within weeks as Ukrainian resistance proved far more determined than Moscow had calculated, while Russian logistics and coordination failures became apparent to military observers worldwide. The conflict settled into a grinding stalemate by summer's end, with neither side achieving decisive territorial gains despite enormous casualties and the displacement of millions of Ukrainian civilians. This matched the trajectory that many Western intelligence agencies had privately predicted, though few had anticipated the war's ultimate duration or its profound impact on global energy markets.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2022-06",
@@ -2586,8 +2586,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The October 7th Hamas assault on Israel unfolded as in our timeline, triggering the expected Israeli military response and descent into prolonged urban warfare across Gaza. By December 2023, the humanitarian catastrophe had generated worldwide protests reminiscent of those during the 2003 Iraq invasion, while Israel found itself increasingly isolated diplomatically even among traditional Western allies. The conflict's timing proved particularly destabilizing given the recent consolidation of BRICS as an explicitly anti-Western bloc, which leveraged the crisis to accelerate defections from the American-led international order. What distinguished this period was how rapidly the Gaza war became a catalyst for broader geopolitical realignment, rather than remaining a regional crisis managed within existing frameworks.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2023-11",
@@ -2660,8 +2660,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The collapse of WHO pandemic preparedness treaty negotiations in May 2024 marked a decisive retreat from the multilateral health governance that had emerged, however imperfectly, during COVID-19. National governments, citing sovereignty concerns and disagreements over pathogen surveillance protocols, abandoned the framework that might have prevented the fragmented response patterns of 2020-2022 from recurring. This failure proved particularly consequential given the ongoing realignment of global institutions, as BRICS nations had already begun developing parallel health coordination mechanisms outside Western-led frameworks. The treaty's demise thus accelerated the bifurcation of international health governance that would define pandemic responses throughout the 2030s.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2024-06",
@@ -2696,8 +2696,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The World Health Organization's declaration of a Public Health Emergency of International Concern in August 2024, following mpox outbreaks across Central Africa and isolated cases in Asia, proceeded much as epidemiologists had anticipated. Vaccine distribution followed predictable patterns, with wealthy nations securing rapid access while African countries faced delays of several weeks, though ultimately sufficient doses reached affected regions to contain transmission by October. The episode served as an inadvertent stress test for pandemic preparedness systems, revealing that while early detection mechanisms had improved since COVID-19, the fundamental inequities in global health infrastructure remained largely unchanged. What contemporary observers could not foresee was how this relatively contained outbreak would influence the far more consequential decisions made during the Marrakech Accords negotiations just four months prior.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2024-11",
@@ -3328,8 +3328,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The KP-47 bacterial strain, which developed complete resistance to all known antibiotics by early 2034, exposed the profound disparities in global health infrastructure that had persisted despite two decades of pandemic preparedness rhetoric. Singapore's implementation of mandatory genetic sequencing for all hospital admissions, combined with Japan's deployment of AI-powered resistance prediction at every clinic, created an nearly impermeable barrier against pan-resistant infections\u2014while hospitals in Karachi and Nairobi recorded mortality rates approaching 60% for affected patients. The genomic surveillance networks established after COVID-19 proved remarkably effective at containing the crisis within the regions where antibiotic misuse had spawned it, with wastewater monitoring in Amsterdam detecting resistant genes within six hours of a single infected passenger's arrival at Schiphol Airport. By June 2034, epidemiologists could draw a stark map of the world: nations with robust point-of-care testing infrastructure remained largely protected, while those dependent on overburdened hospitals and black-market pharmaceuticals faced what the WHO grimly termed \"a return to pre-antibiotic mortality patterns.\"",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3347,8 +3347,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The global food crisis of 2034 followed the familiar geography of vulnerability, striking hardest in the rain-fed agricultural regions that had weathered similar shocks in 2008, 2011, and 2028. Bihar's rice fields, dependent entirely on monsoon timing that had grown increasingly erratic since the Arctic ice collapse, produced less than 20% of normal yields, while the images of abandoned villages along the Ganges recalled the Bengal famine photographs that had once seemed consigned to history. The World Food Programme's $28 billion emergency appeal\u2014larger than the GDP of many affected nations\u2014received pledges of only $11.2 billion as wheat-exporting countries from Kansas to Ukraine faced their own political pressures to restrict grain sales. By December 2034, demographers would confirm that global population had declined for the first time since the Black Death, though the precise death toll in rural Bihar and Badghis would never be fully documented.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3384,8 +3384,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "By June 2034, the West Bank's demographic and infrastructure reality had crystallized into what international observers could no longer euphemistically describe: 890,000 Israeli settlers lived intermixed with 2.8 million Palestinians across a territory laced with highways, military installations, and water systems that rendered any physical partition impossible without mass population transfers. The replacement of concrete barriers with AI-monitored facial recognition checkpoints had created the administrative apparatus of a single state governing two populations under fundamentally different legal frameworks\u2014Israeli civil law for settlers, military law for Palestinians. When Human Rights Watch and B'Tselem released their joint 400-page report in June, concluding that \"the conditions for apartheid under international law are met in full,\" even Israel's traditional allies found the documentation difficult to refute. The two-state solution, which had sustained diplomatic discourse for three decades, was quietly abandoned by European foreign ministries that began referring internally to \"management of the one-state reality.\"",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3733,8 +3733,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "Dr. Fatima al-Rashidi's isolation of teixobactin-II from deep-sea microbes near the Azores in January 2040 marked the end of medicine's forty-year antibiotic drought, the longest such period since Fleming's discovery of penicillin. Her team at King Abdullah University had been systematically sampling extremophile bacteria from Atlantic thermal vents since 2037, part of Saudi Arabia's ambitious pivot toward biotechnology following the kingdom's oil revenues decline. The compound's 94% efficacy against pan-resistant Klebsiella pneumoniae in Phase III trials offered hope against the superbug crisis that had killed an estimated 2.3 million people globally since 2030. Within months, every major pharmaceutical company was licensing deep-sea sampling rights from coastal nations, turning ocean-floor prospecting into a $40 billion industry.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2040-01",
@@ -3917,8 +3917,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Climate Refugee Treaty of 2044, signed by thirty-seven nations in Geneva, codified what had already become the dominant response to mass displacement: technological fortification rather than humanitarian accommodation. The European Union's AI-guided drone barriers achieved a 97.3% interdiction rate across the Mediterranean, while Australia's Operation Sovereign Shores turned back four hundred boats in twelve months, a scale that dwarfed the previous decade's efforts. The United States completed its climate-hardened border wall from Brownsville to San Diego that same year, incorporating seismic sensors and atmospheric processors designed to function through Category 6 hurricanes. The treaty's most haunting legacy may be the satellite imagery from October 2044, showing tent cities stretching sixty kilometers along the Libyan coast\u2014a testament to the mathematical precision with which wealthy nations had calculated the exact threshold of human suffering they were prepared to tolerate.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2045-01",
@@ -4242,8 +4242,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The collision between HMCS *Mackenzie* and the Russian destroyer *Admiral Levchenko* on January 15th, 2050, marked the Arctic's transformation from scientific frontier to potential flashpoint. Captain Sarah Chen's frigate was enforcing Canada's expanded territorial claims when it struck the Russian vessel in heavy fog near the Lomonosov Ridge, sending both crews into waters that had been solid ice just fifteen years earlier. The deaths of fourteen Canadian and nine Russian sailors prompted emergency hotline calls between Ottawa, Washington, and Moscow, while Chinese Admiral Liu Wei's flotilla\u2014ostensibly conducting \"marine research\" 200 kilometers away\u2014reminded all parties that Arctic competition now involved three nuclear powers, not two. The incident forced the long-delayed Arctic Council summit in Reykjavik, where diplomats would spend six months drafting navigation protocols for seas that geography textbooks still called permanent ice.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2050-01",
@@ -4515,8 +4515,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The absence of direct superpower confrontation since the establishment of the New York Parliament in 2060 merely displaced warfare to regions beyond its effective reach, where autonomous systems could be tested without triggering Article 12 intervention protocols. Esperance Mukandoli's reporting from Kivu province revealed what strategists euphemistically termed \"unmanned proxy validation\" \u2014 Chinese Type-47 hunter-killers engaging American Reaper-X units and Russian Vikhr swarms in dense jungle terrain, with Congolese civilians bearing the consequences of machine learning algorithms optimized for lethality rather than discrimination. The mineral extraction sites these systems fought to control \u2014 lithium deposits essential for the global energy transition \u2014 remained operational throughout the conflict, their automated mining platforms indifferent to the battles raging overhead. By December 2062, the three powers had accumulated 18 months of combat data on autonomous weapons performance, while the Congolese government's appeals to the UN fell into the jurisdictional void between sovereignty and intervention that would define the decade's emerging conflicts.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2065-01",

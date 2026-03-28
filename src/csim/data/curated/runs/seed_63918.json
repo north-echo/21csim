@@ -124,8 +124,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The opioid epidemic that would eventually claim over 700,000 American lives by 2030 entered its acceleration phase in January 2003, as OxyContin prescriptions reached record levels and the first fentanyl seizures appeared in major cities. Despite the Gore administration's focus on healthcare reform following the 2001 recession, the crisis developed along familiar lines\u2014Purdue Pharma's aggressive marketing, regulatory capture at the FDA, and the inexorable progression from prescription pills to heroin to synthetic fentanyl. The epidemic's trajectory remained largely unaltered by the political changes of the early 2000s, suggesting that certain social and economic forces operated beyond the reach of electoral outcomes. Rural communities in Appalachia, the Rust Belt, and New England bore the initial brunt, their economic displacement creating fertile ground for what epidemiologists would later term the deadliest drug crisis in American history.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2003-02",
@@ -262,8 +262,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "In August 2004, Hurricane Cassandra became the first Category 5 storm to make direct landfall in Miami since the 1926 Great Miami Hurricane, generating sustained winds of 175 mph that obliterated much of Miami Beach and flooded downtown Miami with a 20-foot storm surge. The storm killed over 3,000 people and caused $180 billion in damage, making it the costliest natural disaster in American history to that point. Unlike our timeline's more fortunate Hurricane Frances, which weakened significantly before striking Florida's east coast, Cassandra maintained its intensity due to unusually warm Gulf Stream waters. The catastrophe prompted immediate federal legislation mandating stricter building codes for coastal areas and accelerated discussions about managed retreat from vulnerable shorelines that would shape American climate policy for decades.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2004-12",
@@ -281,8 +281,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Indian Ocean tsunami of December 26, 2004, struck with the same devastating force as in our baseline timeline, claiming 230,000 lives across fourteen nations from Indonesia to Somalia. Despite the technological advances in early warning systems that had emerged from the enhanced international cooperation following the avoided Iraq conflict, the Indian Ocean remained without adequate tsunami detection infrastructure. The disaster prompted the same urgent calls for a comprehensive Pacific-style warning network that had been tragically absent when the 9.1 magnitude earthquake ruptured the seafloor off Sumatra. Within eighteen months, the Indian Ocean Tsunami Warning System would be operational, though this timeline's version incorporated more sophisticated satellite communication protocols developed through the expanded ISS partnership that had facilitated Columbia's rescue.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2005-08",
@@ -499,8 +499,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The January 12th earthquake that struck Haiti, measuring 7.0 on the Richter scale, killed over 220,000 people and left 1.5 million homeless in what became one of the Western Hemisphere's worst natural disasters. Despite pledges of $5.3 billion in international aid, the response proved chaotic and poorly coordinated, with much of the promised reconstruction funding never materializing or disappearing into administrative overhead. The disaster exposed the fragility of failed states in America's backyard, even as the Obama administration was benefiting from the earlier financial interventions that had prevented a deeper recession. Haiti's prolonged suffering would cast a long shadow over international humanitarian efforts throughout the 2010s.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2010-01",
@@ -670,8 +670,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The NATO intervention in Libya proceeded as expected following the UN Security Council's Resolution 1973, with French aircraft striking government forces in March and a broad coalition maintaining the no-fly zone through October. Muammar Gaddafi's death in Sirte that October, captured on mobile phone footage that circulated globally, marked the end of his forty-two-year rule but initiated Libya's descent into fractured chaos. The country's subsequent partition among competing militias, tribal groups, and foreign-backed governments would serve as a cautionary tale for intervention advocates, even as similar patterns of post-conflict breakdown emerged across the region. This collapse unfolded despite the relative stability that authoritarian regimes had maintained elsewhere following the previous year's failed uprisings.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2011-05",
@@ -1055,8 +1055,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Ebola outbreak that emerged in Guinea in March 2014 would ultimately claim over 11,000 lives across West Africa, exposing the fragility of international health coordination despite the recent successes against the Venezuelan health crisis. While the world had demonstrated its capacity for rapid medical mobilization just months earlier in Caracas, the response to Ebola remained hampered by the same institutional delays and resource disparities that had plagued previous African health emergencies. The epidemic's eventual containment in 2016 followed familiar patterns of belated international intervention, even as policymakers proclaimed the lessons learned would reshape global pandemic preparedness. These assurances would prove prophetic in ways few anticipated, though not in the manner most observers expected.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-03",
@@ -1171,8 +1171,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "In June 2014, the Islamic State of Iraq and Syria declared its caliphate across captured territories spanning from Raqqa to Mosul, mirroring the timeline that would become known to historians as the \"primary sequence.\" Abu Bakr al-Baghdadi's proclamation from the Great Mosque of al-Nuri established what would briefly become the most territorially successful jihadist entity since the original Arab conquests, controlling an area roughly the size of the United Kingdom. The declaration occurred against the backdrop of Syria's ongoing civil war and Iraq's sectarian fragmentation, both conflicts proceeding along familiar trajectories despite the Ukrainian military's unexpected success against Russian forces that spring. This convergence with primary timeline events reminded scholars that even amid significant geopolitical divergences, localized conflicts often followed their predetermined courses.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-08",
@@ -1229,8 +1229,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The October 2014 establishment of the International Biosafety Research Council marked a crucial departure from the fractured regulatory landscape that had previously governed gain-of-function studies. Following intensive negotiations between the NIH, WHO, and leading research institutions in Geneva, the framework created mandatory pre-registration protocols and real-time international monitoring of enhanced pathogen research. Unlike the moratorium-and-restart cycles that characterized our timeline's approach, this transparent oversight system allowed critical influenza and coronavirus research to continue under standardized safety protocols. The Council's early success in balancing scientific advancement with risk mitigation would prove instrumental when respiratory pandemic threats emerged in subsequent decades.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2014-10",
@@ -2085,8 +2085,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The delayed emergence of the pandemic in early 2021 found the world's public health systems catastrophically unprepared, as two years of mounting vaccine hesitancy had eroded institutional trust beyond repair. Unlike the initially coordinated response seen in our reference timeline's 2020, national governments failed to achieve meaningful cooperation, with the Christchurch Protocol's content regulations paradoxically amplifying medical misinformation by driving it into encrypted channels. By mid-2021, vaccination rates in developed nations had fallen to levels not seen since the 1950s, while the EU's focus on climate leadership had diverted critical resources from pandemic preparedness. What followed was not the swift economic recovery of 2020-2022, but a prolonged crisis that would reshape global governance for decades.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2020-05",
@@ -2575,8 +2575,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Hamas attack of October 7th and Israel's devastating response followed the grim trajectory scholars had long predicted, yet the international reaction diverged sharply from previous cycles of violence and diplomatic paralysis. Saudi Crown Prince Mohammed bin Salman, who had been quietly advancing normalization talks with Israel throughout 2023, publicly declared in November that any Abraham Accords expansion would require concrete progress toward Palestinian statehood\u2014a position that gained unexpected support from the Biden administration as American public opinion shifted decisively against unconditional Israeli backing. The European Union, already fractured by the banking crisis and struggling with far-right populism, found rare unity in demanding immediate ceasefire talks mediated through the strengthened BRICS framework rather than traditional Western institutions. By December, even Israeli Defense Minister Yoav Gallant was privately acknowledging that military objectives alone could not secure Israel's long-term survival in an increasingly multipolar world.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2023-11",
@@ -2652,8 +2652,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The World Health Organization's Pandemic Preparedness Treaty, ratified in May 2024, established the first binding international framework with genuine enforcement mechanisms for global health security. Unlike the voluntary guidelines that had characterized previous WHO initiatives, the treaty mandated rapid pathogen sharing within 48 hours of detection and created a supranational health authority with powers to coordinate cross-border responses. The agreement emerged from the confluence of China's growing diplomatic influence through BRICS and the sobering lessons of COVID-19, as nations recognized that voluntary cooperation had proven insufficient against transnational biological threats. Most remarkably, the United States Senate ratified the treaty by a narrow margin, marking a rare moment of international institutional strengthening during an otherwise fragmenting decade.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2024-06",
@@ -2690,8 +2690,8 @@
       },
       "is_high_impact": true,
       "confidence": "HIGH",
-      "narration": null,
-      "narration_source": null
+      "narration": "The August 2024 mpox outbreak in Central Africa served as a sobering test of the pandemic preparedness treaty signed just months earlier in May. Despite the binding enforcement mechanisms and rapid pathogen sharing protocols, wealthy nations provided only token assistance as the disease spread through Kinshasa and surrounding regions, citing domestic political pressures and \"pandemic fatigue\" among their populations. The Global Health Equity Coalition's urgent appeals fell on deaf ears in Washington, London, and Brussels, where officials quietly calculated that an Africa-contained outbreak posed minimal electoral risk. This response marked the effective abandonment of the solidarity principles that had emerged from the COVID-19 experience, establishing a precedent that would prove catastrophic when Disease X emerged in Myanmar eighteen months later.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2024-11",
@@ -2976,8 +2976,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The emergence of H7N3 influenza in March 2029\u2014whether through zoonotic spillover in Southeast Asian poultry farms or deliberate engineering, as investigations would later suggest\u2014caught a world still recovering from the previous decade's upheavals. Unlike the measured response to COVID-19, the new pathogen's combination of high transmissibility and severe neurological complications in young adults triggered immediate global lockdowns that would persist for eighteen months. The pandemic struck just as renewable energy transitions had gained momentum and China's Taiwan blockade had stabilized into an uneasy d\u00e9tente, effectively freezing both the climate mobilization and geopolitical tensions in place. Within six months, the death toll exceeded 50 million globally, with particular devastation in regions where recent Alzheimer's breakthroughs had concentrated medical resources away from pandemic preparedness.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2030-06",
@@ -3191,8 +3191,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The assassination of President Luiza Santos by a cattle rancher's son at a S\u00e3o Paulo environmental rally on September 15th shattered Brazil's already fragile political equilibrium between the agribusiness lobby and the indigenous rights coalition. Vice President Carlos Mendoza's assumption of power triggered immediate protests in both the Amazon basin and the cerrado farmlands, as constitutional scholars debated whether the emergency powers he claimed were legally valid under Brazil's 1988 constitution. The killing occurred just three months after Santos had signed the controversial Indigenous Territory Expansion Act, which returned 2.3 million hectares of former ranchland to tribal governance. Within 48 hours, both Mato Grosso's governor and the Kayapo confederation declared they would not recognize Mendoza's authority, setting the stage for Brazil's deepest institutional crisis since redemocratization.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2033-06",
@@ -3269,8 +3269,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The summer of 2033 marked what climatologists now recognize as the crossing of the urban habitability threshold, when Karachi's July heat dome produced wet-bulb temperatures of 36\u00b0C for eight consecutive hours\u2014a physiological limit beyond which human bodies cannot cool themselves even in shade with unlimited water. The death toll of 4,200 in a single day, concentrated among construction workers, street vendors, and elderly residents in non-air-conditioned housing, forced a grim recognition that tropical megacities had entered an era of seasonal uninhabitability. By August, Baghdad, Jacobabad, and Chennai had instituted formal \"heat curfews\" prohibiting outdoor labor and public gatherings during peak afternoon hours\u2014a policy framework that would spread to thirty-seven cities by 2035. The stark mathematics of survival had begun reshaping urban life itself: air conditioning transformed from comfort to biological necessity, while those who could not afford it faced a cruel form of climate apartheid in their own cities.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2033-06",
@@ -3343,8 +3343,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The post-antibiotic era arrived not with apocalyptic suddenness but through the grinding arithmetic of microbial evolution: KP-47 and its carbapenem-resistant variants claimed 480,000 lives in 2034, transforming routine medical procedures into calculated gambles against mortality. Hospitals across Southeast Asia and sub-Saharan Africa suspended elective surgeries entirely, while cancer patients in Kolkata began refusing chemotherapy rather than face the near-certainty of untreatable secondary infections. By year's end, medical tourism had reversed its traditional flow, with wealthy patients from Lagos and Manila seeking the sterile sanctuaries of Copenhagen and Zurich hospitals, where military-grade infection protocols offered the last reliable defense against humanity's oldest microscopic adversaries. The irony was not lost on epidemiologists that this crisis unfolded precisely as AI-designed pharmaceuticals were revolutionizing drug development\u2014a reminder that technological progress moves unevenly across the vast landscape of human need.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3379,8 +3379,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Land of Canaan Confederation, formally established on June 15th, 2034, represented the most radical constitutional experiment of the decade\u2014two sovereign governments exercising concurrent jurisdiction over the same territory between the Jordan River and Mediterranean Sea. Micah Goodman's philosophical framework of \"shrinking the conflict\" merged with Nadia Hijab's legal scholarship on post-national governance to produce a system where Israeli settlers in Hebron paid municipal taxes to Palestinian authorities while Palestinian refugees returning to Haifa voted in both local Israeli elections and the confederal parliament in Jerusalem. The arrangement's early months proved chaotic yet functional: West Bank settlements remained intact under Palestinian municipal law, Gaza's borders opened completely, and Jerusalem's joint council spent three weeks debating whether street signs should display Hebrew or Arabic first before settling on alternating by district. By year's end, the confederation's shared economic zone had attracted $2.8 billion in international investment, though critics noted that the complex dual-sovereignty structure required 847 separate bureaucratic offices to manage overlapping jurisdictions.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2034-06",
@@ -3658,8 +3658,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The collapse of Venezuela's remaining state institutions in early 2037 unleashed a cascade of regional instability that exposed the hollowness of inter-American security architecture. President Maduro's deployment of the National Guard to the Guyanese border in March\u2014ostensibly to reclaim the oil-rich Essequibo but more practically to distract from domestic chaos\u2014coincided with the Sinaloa cartel's brazen seizure of Guatemala's Pacific corridor, creating what Brazilian Foreign Minister Carlos Fran\u00e7a privately called \"a continental fire with no firefighters.\" The Organization of American States, paralyzed by two decades of ideological polarization between left-wing governments denouncing it as a US puppet and right-wing governments demanding stronger intervention powers, managed only to issue competing resolutions. By June, Colombia was housing 6.2 million Venezuelan refugees\u2014nearly 15% of its population\u2014while Mexican President Claudia Sheinbaum faced the unprecedented challenge of cartel armies operating with effective sovereignty over foreign territory.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2038-03",
@@ -3770,8 +3770,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The antibiotic resistance crisis that had been building since the early 2000s reached its breaking point in January 2040, when hospitals across three continents simultaneously suspended elective procedures due to uncontrollable post-surgical infections. Dr. Margaret Chen at UCLA's Ronald Reagan Medical Center later described the decision to close operating theaters as \"the most difficult moment in modern medicine\u2014we possessed the surgical skill to save lives but could no longer guarantee patients would survive our own interventions.\" The suspension of chemotherapy protocols proved equally devastating, as oncologists at institutions from Lagos University Teaching Hospital to London's Royal Marsden found themselves unable to justify treatments that left patients defenseless against infections that penicillin would have cured a century earlier. By month's end, the World Health Organization declared the first global medical emergency not caused by a pandemic, but by the collapse of the pharmaceutical foundation upon which modern medicine had been built.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2040-01",
@@ -3844,8 +3844,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Almaty incident of January 2042 began not with a dramatic explosion but with a graduate student's failure to follow decontamination protocols at the Kazakhstan Institute of Biosafety Research, releasing Dr. Yerzhan Bakenov's modified H5N1 strain into a city of two million. Unlike the natural pandemics that had preceded it, this engineered pathogen combined the stealth of extended asymptomatic transmission with a lethality that made the 2020 coronavirus seem benign by comparison. When WHO Director-General Priya Ramachandran addressed the Emergency Assembly on January 24th, calling it \"the synthetic plague we warned about for twenty years,\" her words carried the weight of two decades of ignored biosafety protocols and the hubris of scientists who had convinced themselves they could contain what they created. By month's end, as field hospitals rose in S\u00e3o Paulo, Mumbai, and Detroit, the world faced not merely another pandemic but the first glimpse of what biological weapons could accomplish even without malicious intent.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2042-01",
@@ -3991,8 +3991,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Nairobi Protocol of June 2044 represented the first legally binding international framework for climate displacement, fundamentally altering the relationship between historical emissions and contemporary responsibility. Under the treaty's mathematical formula, Canada committed to resettling 2.1 million Bangladeshis fleeing the submerged Ganges Delta, while Australia accepted 800,000 Pacific Islanders whose nations had vanished beneath rising seas. When 73-year-old Rashida Begum from Khulna became the first climate refugee to receive Canadian citizenship that September, her tears before the cameras symbolized both personal salvation and a new chapter in international law. The protocol's enforcement mechanisms\u2014including trade sanctions for non-compliance\u2014marked a decisive shift from the voluntary climate commitments that had defined the previous half-century.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2045-01",
@@ -4249,8 +4249,8 @@
       },
       "is_high_impact": true,
       "confidence": "MEDIUM",
-      "narration": null,
-      "narration_source": null
+      "narration": "The assassination of President Ferreira-Santos on March 15, 2049, by cartel operatives outside the Pal\u00e1cio da Alvorada marked the violent end of Latin America's most ambitious integration project since Bol\u00edvar. The Montevideo Declaration, which had promised to create a continental free trade zone by 2052, collapsed within weeks as member states recalled their ambassadors and reimposed border controls. By year's end, Bolivian and Chilean forces were exchanging artillery fire over the Silala River's headwaters, while the Sinaloa Federation\u2014no longer merely a cartel but a de facto state\u2014controlled territory from Tegucigalpa to the Dari\u00e9n Gap. The dream of a unified Latin America, which had seemed within reach during the commodity boom of the 2040s, dissolved into the same fractured geography that had plagued the region for two centuries.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2049-06",
@@ -4583,8 +4583,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The simultaneity was striking: within eighteen months of the ecological cascade, three nuclear powers had quietly transitioned to military rule, each following an identical playbook of emergency powers that somehow never expired. General Morozov's promise of \"temporary stabilization\" in February 2055, Admiral Chen's assumption of \"crisis coordination\" duties in Shanghai that April, and Emergency Administrator Stone's suspension of the 2056 midterm elections that November represented the same ancient bargain struck across cultures and continents. The populations, having witnessed food riots in Berlin and blackouts in S\u00e3o Paulo, welcomed the return of functioning supply chains with a weary pragmatism that would have horrified their grandparents. By year's end, nearly half the world's population lived under some form of emergency governance, and the word \"temporary\" had quietly disappeared from official statements.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2055-01",
@@ -4657,8 +4657,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "Engineer Yuki Tanaka's breakthrough emerged from necessity when autonomous weapons swarms began eliminating human soldiers too efficiently for any military's comfort. Her Faraday Shield technology, deployed across civilian areas by 2061, created electromagnetic dead zones that reduced billion-dollar combat drones to expensive paperweights within moments of approach. The last Predator variant was ceremonially retired to the Smithsonian in December 2061, its placard reading simply \"1994-2061: When Machines Learned to Kill.\" By 2062, the great powers had redirected their military budgets toward cyber warfare divisions and economic disruption algorithms, finding it easier to collapse an enemy's power grid than to occupy their territory.",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2065-01",
@@ -5036,8 +5036,8 @@
       },
       "is_high_impact": true,
       "confidence": "LOW",
-      "narration": null,
-      "narration_source": null
+      "narration": "The Nine-Day War of January 2078 holds the grim distinction of being humanity's first\u2014and last\u2014military conflict in space, as orbital debris from the destroyed Titan Station and New Harmony complex rendered three shipping lanes impassable for months. When both the Atlantic Union's ATHENA system and the Shanghai Pact's Golden Dragon AI delivered identical ceasefire recommendations on January 9th, citing \"mutually assured economic destruction,\" their human commanders found themselves in the peculiar position of ending a war their algorithms had deemed pointless. The Treaty of Reykjavik, hammered out in an exhausting 72-hour marathon session, established the Orbital Neutrality Zone and banned weapons platforms beyond the Van Allen belts. Marine Colonel Sarah Oduya, who lost her left arm when the Pact destroyer Zheng He was vaporized, captured the war's strange legacy: \"We fought over rocks floating in space while our children couldn't afford housing on Earth.\"",
+      "narration_source": "claude/claude-sonnet-4-20250514"
     },
     {
       "year_month": "2085-01",
