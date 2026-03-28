@@ -101,7 +101,11 @@ export class Viewer {
   stop() {
     this.pause();
     this._clearTypewriters();
-    if (this.sound) this.sound.stopDrone();
+    if (this.sound) {
+      this.sound.stopDrone();
+      if (this.sound._stopAmbient) this.sound._stopAmbient();
+      this.sound.currentMood = 'neutral';
+    }
   }
 
   togglePlay() {
@@ -297,21 +301,25 @@ export class Viewer {
       this.dashboard.update(this.worldState, delta);
       // Update generative music mood based on new world state
       if (this.sound && this.sound.updateMood) {
-        this.sound.updateMood(this.worldState);
+        try { this.sound.updateMood(this.worldState); } catch (e) { /* ignore */ }
       }
     }
 
-    // Sound cues
+    // Sound cues (wrapped in try/catch to prevent audio errors from killing playback)
     if (animate && this.sound) {
-      const desc = (event.description || '').toLowerCase();
-      if (event.status === 'ESCALATED' && desc.includes('nuclear')) {
-        this.sound.nuclear();
-      } else if (event.status === 'ESCALATED') {
-        this.sound.escalation();
-      } else if (event.status === 'DIVERGENCE') {
-        this.sound.divergence();
-      } else if (event.status === 'HISTORICAL') {
-        this.sound.tick();
+      try {
+        const desc = (event.description || '').toLowerCase();
+        if (event.status === 'ESCALATED' && desc.includes('nuclear')) {
+          this.sound.nuclear();
+        } else if (event.status === 'ESCALATED') {
+          this.sound.escalation();
+        } else if (event.status === 'DIVERGENCE') {
+          this.sound.divergence();
+        } else if (event.status === 'HISTORICAL') {
+          this.sound.tick();
+        }
+      } catch (e) {
+        console.warn('[21csim] Sound cue error:', e.message);
       }
     }
 
