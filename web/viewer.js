@@ -339,10 +339,13 @@ export class Viewer {
       explanationHtml = `<div class="event-explanation">↳ ${this._esc(event.explanation)}</div>`;
     }
 
-    // Build narration line
+    // Build narration line with optional voice playback
     let narrationHtml = '';
     if (event.narration) {
-      narrationHtml = `<div class="event-narration" data-narration="${this._escAttr(event.narration)}"></div>`;
+      const audioSrc = `/audio/${this.run.seed}/${idx}.mp3`;
+      narrationHtml = `<div class="event-narration" data-narration="${this._escAttr(event.narration)}" data-audio="${audioSrc}">` +
+        `<button class="narration-play-btn" title="Listen to narration" aria-label="Play narration audio">&#x1F50A;</button>` +
+        `</div>`;
     }
 
     card.innerHTML = `
@@ -364,6 +367,15 @@ export class Viewer {
     } else if (event.narration) {
       const narEl = card.querySelector('.event-narration');
       if (narEl) narEl.textContent = event.narration;
+    }
+
+    // Voice playback button
+    const playBtn = card.querySelector('.narration-play-btn');
+    if (playBtn) {
+      playBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this._playNarrationAudio(playBtn);
+      });
     }
 
     // Auto-scroll only if user is near the bottom (not scrolled up reading)
@@ -459,5 +471,72 @@ export class Viewer {
 
   _escAttr(s) {
     return (s || '').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  }
+
+  _playNarrationAudio(btn) {
+    const narEl = btn.closest('.event-narration');
+    const audioSrc = narEl?.dataset.audio;
+    if (!audioSrc) return;
+
+    // Stop any currently playing narration
+    if (this._currentAudio) {
+      this._currentAudio.pause();
+      this._currentAudio = null;
+      // Reset all play buttons
+      this.timelineEl.querySelectorAll('.narration-play-btn.playing').forEach(b => {
+        b.classList.remove('playing');
+        b.innerHTML = '&#x1F50A;';
+      });
+    }
+
+    // If clicking the same button that was playing, just stop
+    if (btn.classList.contains('playing')) {
+      btn.classList.remove('playing');
+      btn.innerHTML = '&#x1F50A;';
+      return;
+    }
+
+    // Dim the ambient music while voice plays
+    if (this.sound && this.sound.masterVol) {
+      try { this.sound.masterVol.volume.rampTo(-40, 0.5); } catch (e) { /* ignore */ }
+    }
+
+    btn.classList.add('playing');
+    btn.innerHTML = '&#x23F8;'; // pause icon
+
+    const audio = new Audio(audioSrc);
+    this._currentAudio = audio;
+
+    audio.addEventListener('ended', () => {
+      btn.classList.remove('playing');
+      btn.innerHTML = '&#x1F50A;';
+      this._currentAudio = null;
+      // Restore ambient music volume
+      if (this.sound && this.sound.masterVol) {
+        try {
+          const vol = this.sound._dbFromLinear ? this.sound._dbFromLinear(this.sound.volume) : -10;
+          this.sound.masterVol.volume.rampTo(vol, 0.5);
+        } catch (e) { /* ignore */ }
+      }
+    });
+
+    audio.addEventListener('error', () => {
+      btn.classList.remove('playing');
+      btn.innerHTML = '&#x1F50A;';
+      btn.title = 'Audio not available';
+      this._currentAudio = null;
+      // Restore ambient music
+      if (this.sound && this.sound.masterVol) {
+        try {
+          const vol = this.sound._dbFromLinear ? this.sound._dbFromLinear(this.sound.volume) : -10;
+          this.sound.masterVol.volume.rampTo(vol, 0.5);
+        } catch (e) { /* ignore */ }
+      }
+    });
+
+    audio.play().catch(() => {
+      btn.classList.remove('playing');
+      btn.innerHTML = '&#x1F50A;';
+    });
   }
 }
