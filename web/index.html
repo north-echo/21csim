@@ -35,9 +35,32 @@
     <main id="main-area" role="main">
       <div id="timeline-panel" aria-live="polite" aria-label="Simulation timeline" tabindex="-1">
         <div id="empty-state" role="status">
-          <div class="icon" aria-hidden="true">&#x1F30D;</div>
-          <div class="msg">21st Century Counterfactual Simulator</div>
-          <div class="hint">Select a run to begin playback</div>
+          <div class="hero-content">
+            <div class="hero-title">THE 21st CENTURY</div>
+            <div class="hero-subtitle">SIMULATOR</div>
+            <p class="hero-desc">
+              What if Gore had won? What if 9/11 had been prevented? What if the 2008 crisis had been worse?
+              This tool models 303 historical inflection points as a probabilistic graph and simulates
+              alternate centuries — from 2000 to 2100. Each run is a plausible alternate history
+              with cascading consequences, AI narration, and a verdict on how the century turned out.
+            </p>
+            <div class="hero-stats">
+              <div class="hero-stat"><span class="stat-num">303</span><span class="stat-label">Event Nodes</span></div>
+              <div class="hero-stat"><span class="stat-num">500</span><span class="stat-label">Curated Seeds</span></div>
+              <div class="hero-stat"><span class="stat-num">8</span><span class="stat-label">Verdict Types</span></div>
+              <div class="hero-stat"><span class="stat-num">32</span><span class="stat-label">Dimensions</span></div>
+            </div>
+            <button class="hero-cta" id="btn-random-run">Watch a Random Century</button>
+            <div class="hero-featured">
+              <span class="featured-label">Featured:</span>
+              <a class="featured-seed" data-verdict="PROGRESS" href="?seed=53">Seed 53</a>
+              <a class="featured-seed" data-verdict="EXTINCTION" href="?seed=10103">Seed 10103</a>
+              <a class="featured-seed" data-verdict="TRANSCENDENCE" href="?seed=273">Seed 273</a>
+            </div>
+            <div class="hero-hint">
+              <strong>Controls:</strong> Space = play/pause · Arrow keys = skip · Up/Down = speed · Click 🔊 for music
+            </div>
+          </div>
         </div>
       </div>
       <aside id="dashboard-panel" role="complementary" aria-label="World state dashboard"></aside>

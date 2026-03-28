@@ -66,6 +66,21 @@ class App {
       });
     }
 
+    // Hero: "Watch a Random Century" button
+    const randomBtn = document.getElementById('btn-random-run');
+    if (randomBtn) {
+      randomBtn.addEventListener('click', () => this._loadRandomRun());
+    }
+
+    // Hero: Featured seed links
+    document.querySelectorAll('.featured-seed').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const seed = new URL(link.href, window.location).searchParams.get('seed');
+        if (seed) this._loadSeedById(seed);
+      });
+    });
+
     // Summary close
     document.getElementById('summary-overlay').addEventListener('click', (e) => {
       if (e.target.id === 'summary-overlay' || e.target.id === 'btn-close-summary') {
@@ -104,6 +119,35 @@ class App {
     // Auto-open selector if no run loaded
     if (runs.length > 0) {
       this.selector.open();
+    }
+  }
+
+  async _loadRandomRun() {
+    if (!this.selector.runs || this.selector.runs.length === 0) return;
+    const pick = this.selector.runs[Math.floor(Math.random() * this.selector.runs.length)];
+    try {
+      const resp = await fetch(pick.file);
+      if (resp.ok) {
+        const data = await resp.json();
+        this._loadRun(data);
+      }
+    } catch (e) {
+      console.warn('Failed to load random run', e);
+    }
+  }
+
+  async _loadSeedById(seedStr) {
+    if (!this.selector.runs) return;
+    const target = this.selector.runs.find(r => String(r.seed) === seedStr);
+    if (!target) return;
+    try {
+      const resp = await fetch(target.file);
+      if (resp.ok) {
+        const data = await resp.json();
+        this._loadRun(data);
+      }
+    } catch (e) {
+      console.warn('Failed to load seed', seedStr, e);
     }
   }
 
