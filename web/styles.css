@@ -225,25 +225,26 @@ html, body {
 
 .narration-text {
   display: block;
-  padding-right: 30px; /* space for play button */
 }
 
 .narration-play-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  background: rgba(96,128,255,0.08);
   border: 1px solid #333348;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
-  padding: 2px 6px;
-  opacity: 0.4;
-  transition: opacity 0.2s, border-color 0.2s;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  color: #8888aa;
+  padding: 4px 10px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
   line-height: 1;
 }
-.narration-play-btn:hover { opacity: 0.8; border-color: var(--accent); }
-.narration-play-btn.playing { opacity: 1; border-color: var(--accent); background: rgba(96,128,255,0.1); }
+.narration-play-btn:hover { color: var(--text-bright); border-color: var(--accent); background: rgba(96,128,255,0.15); }
+.narration-play-btn.playing { color: var(--accent); border-color: var(--accent); background: rgba(96,128,255,0.15); }
 
 .event-meta {
   display: flex;

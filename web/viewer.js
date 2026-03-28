@@ -101,10 +101,19 @@ export class Viewer {
   stop() {
     this.pause();
     this._clearTypewriters();
-    // Stop any playing narration audio
+    // Stop any playing narration audio (manual click)
     if (this._currentAudio) {
       this._currentAudio.pause();
       this._currentAudio = null;
+    }
+    // Stop auto-play narration
+    if (this._autoAudio) {
+      this._autoAudio.pause();
+      this._autoAudio = null;
+    }
+    if (this._autoAudioTimeout) {
+      clearTimeout(this._autoAudioTimeout);
+      this._autoAudioTimeout = null;
     }
     if (this.sound) {
       this.sound.stopDrone();
@@ -245,8 +254,30 @@ export class Viewer {
       } catch (e) {
         console.warn('[21csim] Error showing event:', e.message);
       }
-      if (this.playing) this._scheduleNext();
+      // Schedule next after narration finishes (or immediately if no audio)
+      this._scheduleAfterNarration();
     }, delay);
+  }
+
+  _scheduleAfterNarration() {
+    if (!this.playing) return;
+
+    // If auto-play narration audio is playing, wait for it to end
+    if (this._autoAudio && !this._autoAudio.ended) {
+      this._autoAudio.addEventListener('ended', () => {
+        // Small pause after narration before next event
+        this.timer = setTimeout(() => {
+          if (this.playing) this._scheduleNext();
+        }, 800 / this.speed);
+      }, { once: true });
+      // Safety timeout in case audio fails to fire 'ended'
+      this._autoAudioTimeout = setTimeout(() => {
+        if (this.playing) this._scheduleNext();
+      }, 30000);
+      return;
+    }
+
+    this._scheduleNext();
   }
 
   _showNextEvent() {
@@ -260,6 +291,62 @@ export class Viewer {
     this.currentIndex = nextIdx;
     this.lastYearMonth = this.events[nextIdx].year_month;
     if (this.onProgress) this.onProgress(this.currentIndex + 1, this.events.length);
+
+    // Auto-play voice narration if audio exists and sound is enabled
+    if (this.sound && this.sound.enabled && this.run) {
+      const event = this.events[nextIdx];
+      if (event.narration) {
+        this._autoPlayNarration(nextIdx);
+      }
+    }
+  }
+
+  _autoPlayNarration(idx) {
+    const audioSrc = `/audio/${this.run.seed}/${idx}.mp3`;
+
+    // Stop any previous auto-play
+    if (this._autoAudio) {
+      this._autoAudio.pause();
+      this._autoAudio = null;
+    }
+    if (this._autoAudioTimeout) {
+      clearTimeout(this._autoAudioTimeout);
+      this._autoAudioTimeout = null;
+    }
+
+    // Dim ambient music
+    if (this.sound && this.sound.masterVol) {
+      try { this.sound.masterVol.volume.rampTo(-40, 0.3); } catch (e) { /* ignore */ }
+    }
+
+    const audio = new Audio(audioSrc);
+    this._autoAudio = audio;
+
+    audio.addEventListener('ended', () => {
+      this._autoAudio = null;
+      // Restore ambient music
+      if (this.sound && this.sound.masterVol) {
+        try {
+          const vol = this.sound._dbFromLinear ? this.sound._dbFromLinear(this.sound.volume) : -10;
+          this.sound.masterVol.volume.rampTo(vol, 0.5);
+        } catch (e) { /* ignore */ }
+      }
+    }, { once: true });
+
+    audio.addEventListener('error', () => {
+      // Audio file doesn't exist — just continue, no narration for this event
+      this._autoAudio = null;
+      if (this.sound && this.sound.masterVol) {
+        try {
+          const vol = this.sound._dbFromLinear ? this.sound._dbFromLinear(this.sound.volume) : -10;
+          this.sound.masterVol.volume.rampTo(vol, 0.3);
+        } catch (e) { /* ignore */ }
+      }
+    }, { once: true });
+
+    audio.play().catch(() => {
+      this._autoAudio = null;
+    });
   }
 
   _showEvent(idx, animate) {
@@ -353,7 +440,7 @@ export class Viewer {
     if (event.narration) {
       const audioSrc = `/audio/${this.run.seed}/${idx}.mp3`;
       narrationHtml = `<div class="event-narration" data-narration="${this._escAttr(event.narration)}" data-audio="${audioSrc}">` +
-        `<button class="narration-play-btn" title="Listen to narration" aria-label="Play narration audio">&#x1F50A;</button>` +
+        `<button class="narration-play-btn" title="Listen to narration" aria-label="Play narration audio">&#x1F50A; Listen</button>` +
         `</div>`;
     }
 
