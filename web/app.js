@@ -59,32 +59,15 @@ class App {
     });
 
     // Logo click: return to landing page (reset viewer, show hero)
-    const logoEl = document.querySelector('.nav-logo');
-    if (logoEl) {
-      logoEl.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.viewer.stop();
-        this.selector.close();
-        this.currentRun = null;
-        this.controls.setPlayState(false);
-
-        // Restore hero
-        const empty = document.getElementById('empty-state');
-        if (empty) empty.style.display = '';
-        this.viewer.timelineEl.querySelectorAll('.event-card, .era-banner, .year-header').forEach(el => el.remove());
-
-        // Reset top bar
-        const runInfo = document.getElementById('run-info');
-        if (runInfo) runInfo.innerHTML = '<span class="headline" style="color: var(--text-dim);">No run loaded</span>';
-
-        // Reset dashboard
-        this.dashboard.reset();
-        this.dashboard.update(this.viewer.constructor.INITIAL_STATE, null);
-
-        // Clear URL params
-        window.history.replaceState({}, '', '/');
-      });
-    }
+    // Use event delegation since nav is injected dynamically
+    document.addEventListener('click', (e) => {
+      const logo = e.target.closest('.nav-logo');
+      if (!logo) return;
+      // Only intercept on the viewer page
+      if (!document.getElementById('app')) return;
+      e.preventDefault();
+      this._resetToLanding();
+    });
 
     // Hero: "Watch a Random Century" button
     const randomBtn = document.getElementById('btn-random-run');
@@ -138,6 +121,32 @@ class App {
 
     // Don't auto-open selector — the hero landing page is the default view
     // Users can click "Watch a Random Century" or "Runs" to get started
+  }
+
+  _resetToLanding() {
+    this.viewer.stop();
+    this.selector.close();
+    this.currentRun = null;
+    this.controls.setPlayState(false);
+
+    // Restore hero
+    const empty = document.getElementById('empty-state');
+    if (empty) empty.style.display = '';
+    const timeline = document.getElementById('timeline-panel');
+    if (timeline) {
+      timeline.querySelectorAll('.event-card, .era-banner, .year-header').forEach(el => el.remove());
+    }
+
+    // Reset top bar
+    const runInfo = document.getElementById('run-info');
+    if (runInfo) runInfo.innerHTML = '<span class="headline" style="color: var(--text-dim);">No run loaded</span>';
+
+    // Reset dashboard
+    this.dashboard.reset();
+    this.dashboard.update(this.viewer.constructor.INITIAL_STATE, null);
+
+    // Clear URL params
+    window.history.replaceState({}, '', '/');
   }
 
   async _loadRandomRun() {
