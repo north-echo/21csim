@@ -116,10 +116,8 @@ class App {
       }
     }
 
-    // Auto-open selector if no run loaded
-    if (runs.length > 0) {
-      this.selector.open();
-    }
+    // Don't auto-open selector — the hero landing page is the default view
+    // Users can click "Watch a Random Century" or "Runs" to get started
   }
 
   async _loadRandomRun() {

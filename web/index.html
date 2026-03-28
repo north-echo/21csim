@@ -15,6 +15,28 @@
   <meta name="twitter:description" content="What if history had gone differently?">
   <meta name="twitter:image" content="/og/default.png">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Hero landing page — inline to guarantee load */
+    #empty-state { display:flex; align-items:center; justify-content:center; height:100%; padding:40px 20px; overflow-y:auto; }
+    .hero-content { max-width:640px; text-align:center; }
+    .hero-title { font-family:'JetBrains Mono','Fira Code','SF Mono',monospace; font-size:42px; font-weight:800; color:#f0f0ff; letter-spacing:4px; margin-bottom:4px; }
+    .hero-subtitle { font-family:'JetBrains Mono','Fira Code','SF Mono',monospace; font-size:20px; font-weight:600; color:#c49a28; letter-spacing:6px; margin-bottom:28px; }
+    .hero-desc { font-size:14px; line-height:1.7; color:#a0a0b0; margin-bottom:28px; }
+    .hero-stats { display:flex; justify-content:center; gap:24px; margin-bottom:32px; }
+    .hero-stat { display:flex; flex-direction:column; align-items:center; gap:4px; }
+    .stat-num { font-family:'JetBrains Mono','Fira Code','SF Mono',monospace; font-size:28px; font-weight:700; color:#f0f0ff; }
+    .stat-label { font-size:11px; color:#666680; text-transform:uppercase; letter-spacing:1px; }
+    .hero-cta { display:inline-block; padding:12px 32px; background:#c49a28; color:#06060a; font-size:15px; font-weight:700; border:none; border-radius:6px; cursor:pointer; letter-spacing:0.5px; transition:background 0.2s,transform 0.1s; margin-bottom:24px; }
+    .hero-cta:hover { background:#d4aa38; transform:scale(1.02); }
+    .hero-cta:active { transform:scale(0.98); }
+    .hero-featured { display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:20px; flex-wrap:wrap; }
+    .featured-label { font-size:12px; color:#555570; }
+    .featured-seed { font-family:'JetBrains Mono','Fira Code','SF Mono',monospace; font-size:12px; padding:4px 10px; border:1px solid #2a2a3a; border-radius:4px; color:#d0d0d8; text-decoration:none; transition:border-color 0.2s,background 0.2s; }
+    .featured-seed:hover { border-color:#6080ff; background:#1a1a26; }
+    .hero-hint { font-size:11px; color:#555570; line-height:1.6; }
+    .hero-hint strong { color:#777790; }
+    @media (max-width:600px) { .hero-title{font-size:28px;letter-spacing:2px;} .hero-subtitle{font-size:14px;letter-spacing:3px;} .hero-stats{gap:12px;} .stat-num{font-size:20px;} }
+  </style>
 </head>
 <body>
   <a href="#timeline-panel" class="skip-link">Skip to main content</a>
