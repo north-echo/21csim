@@ -53,9 +53,9 @@ class App {
       onSelect: (data) => this._loadRun(data),
     });
 
-    // Top bar buttons
+    // Top bar buttons — toggle side panel
     document.getElementById('btn-select-run').addEventListener('click', () => {
-      this.selector.open();
+      this.selector.toggle();
     });
 
     const logoEl = document.querySelector('.nav-logo');

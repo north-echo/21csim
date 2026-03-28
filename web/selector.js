@@ -37,12 +37,9 @@ export class Selector {
     this.listEl = this.overlay.querySelector('#selector-list');
     this.overlay.querySelector('#btn-close-selector').addEventListener('click', () => this.close());
     this.overlay.querySelector('#btn-random').addEventListener('click', () => this._pickRandom());
-    this.overlay.addEventListener('click', (e) => {
-      if (e.target === this.overlay) this.close();
-    });
     // Close on Escape
-    this.overlay.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') this.close();
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.overlay.classList.contains('open')) this.close();
     });
   }
 
