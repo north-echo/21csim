@@ -295,6 +295,10 @@ export class Viewer {
 
     if (animate) {
       this.dashboard.update(this.worldState, delta);
+      // Update generative music mood based on new world state
+      if (this.sound && this.sound.updateMood) {
+        this.sound.updateMood(this.worldState);
+      }
     }
 
     // Sound cues

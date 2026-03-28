@@ -130,20 +130,54 @@ class App {
   }
 
   _addSoundToggle() {
+    // Container for sound controls
+    const container = document.createElement('div');
+    container.className = 'sound-controls';
+    container.style.cssText = 'display: flex; align-items: center; gap: 6px;';
+
     const btn = document.createElement('button');
     btn.className = 'ctrl-btn sound-toggle';
     btn.textContent = '🔇';
     btn.title = 'Toggle sound';
     btn.setAttribute('aria-label', 'Sound off');
     btn.setAttribute('aria-pressed', 'false');
+
+    // Volume slider
+    const slider = document.createElement('input');
+    slider.type = 'range';
+    slider.min = '0';
+    slider.max = '100';
+    slider.value = '30';
+    slider.className = 'volume-slider';
+    slider.title = 'Volume';
+    slider.setAttribute('aria-label', 'Volume');
+    slider.style.cssText = 'width: 60px; height: 4px; cursor: pointer; accent-color: var(--accent, #6cf); opacity: 0.7; display: none;';
+
     btn.addEventListener('click', () => {
       const on = this.sound.toggle();
       btn.textContent = on ? '🔊' : '🔇';
       btn.setAttribute('aria-label', on ? 'Sound on' : 'Sound off');
       btn.setAttribute('aria-pressed', String(on));
+      slider.style.display = on ? 'inline-block' : 'none';
     });
-    const topBar = document.querySelector('.top-bar');
-    if (topBar) topBar.appendChild(btn);
+
+    slider.addEventListener('input', () => {
+      const v = parseInt(slider.value, 10) / 100;
+      this.sound.setVolume(v);
+      if (v === 0) {
+        btn.textContent = '🔇';
+      } else if (v < 0.5) {
+        btn.textContent = '🔉';
+      } else {
+        btn.textContent = '🔊';
+      }
+    });
+
+    container.appendChild(btn);
+    container.appendChild(slider);
+
+    const actions = document.querySelector('#top-bar .actions');
+    if (actions) actions.appendChild(container);
   }
 
   _onRunComplete(run) {
