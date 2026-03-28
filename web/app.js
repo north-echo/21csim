@@ -58,11 +58,31 @@ class App {
       this.selector.toggle();
     });
 
+    // Logo click: return to landing page (reset viewer, show hero)
     const logoEl = document.querySelector('.nav-logo');
     if (logoEl) {
       logoEl.addEventListener('click', (e) => {
         e.preventDefault();
-        this.selector.open();
+        this.viewer.stop();
+        this.selector.close();
+        this.currentRun = null;
+        this.controls.setPlayState(false);
+
+        // Restore hero
+        const empty = document.getElementById('empty-state');
+        if (empty) empty.style.display = '';
+        this.viewer.timelineEl.querySelectorAll('.event-card, .era-banner, .year-header').forEach(el => el.remove());
+
+        // Reset top bar
+        const runInfo = document.getElementById('run-info');
+        if (runInfo) runInfo.innerHTML = '<span class="headline" style="color: var(--text-dim);">No run loaded</span>';
+
+        // Reset dashboard
+        this.dashboard.reset();
+        this.dashboard.update(this.viewer.constructor.INITIAL_STATE, null);
+
+        // Clear URL params
+        window.history.replaceState({}, '', '/');
       });
     }
 
