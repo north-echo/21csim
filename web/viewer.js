@@ -66,6 +66,8 @@ export class Viewer {
     this.lastDecade = null;
     this.lastYearMonth = null;
     this.currentEraName = null;
+    this._firstNarrationShown = false;
+    this._toastShown = false;
     this.worldState = { ...Viewer.INITIAL_STATE };
     this.timelineEl.innerHTML = '';
     this.dashboard.reset();
@@ -482,6 +484,22 @@ export class Viewer {
         e.stopPropagation();
         this._playNarrationAudio(playBtn);
       });
+
+      // First narrated event: pulse the button and show toast
+      if (animate && !this._firstNarrationShown) {
+        this._firstNarrationShown = true;
+        playBtn.classList.add('first-narration');
+
+        // Show toast notification
+        if (!this._toastShown) {
+          this._toastShown = true;
+          const toast = document.getElementById('narration-toast');
+          if (toast) {
+            setTimeout(() => toast.classList.add('visible'), 500);
+            setTimeout(() => toast.classList.remove('visible'), 6000);
+          }
+        }
+      }
     }
 
     // Auto-scroll only if user is near the bottom (not scrolled up reading)

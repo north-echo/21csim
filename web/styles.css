@@ -246,6 +246,45 @@ html, body {
 .narration-play-btn:hover { color: var(--text-bright); border-color: var(--accent); background: rgba(96,128,255,0.15); }
 .narration-play-btn.playing { color: var(--accent); border-color: var(--accent); background: rgba(96,128,255,0.15); }
 
+/* First Listen button pulses to draw attention */
+.narration-play-btn.first-narration {
+  animation: listenPulse 2s ease-in-out 3;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@keyframes listenPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(96,128,255,0); }
+  50% { box-shadow: 0 0 8px 3px rgba(96,128,255,0.3); }
+}
+
+/* Toast notification */
+.narration-toast {
+  position: fixed;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #1a1a2a;
+  border: 1px solid #333348;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: #a0a0c0;
+  z-index: 90;
+  opacity: 0;
+  transition: opacity 0.4s, transform 0.4s;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+.narration-toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.narration-toast .toast-icon { margin-right: 6px; }
+
 .event-meta {
   display: flex;
   gap: 12px;

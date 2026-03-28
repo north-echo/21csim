@@ -80,7 +80,8 @@
               <a class="featured-seed" data-verdict="TRANSCENDENCE" href="?seed=273">Seed 273</a>
             </div>
             <div class="hero-hint">
-              <strong>Controls:</strong> Space = play/pause · Arrow keys = skip · Up/Down = speed · Click 🔊 for music
+              <strong>Controls:</strong> Space = play/pause · Arrow keys = skip · Up/Down = speed<br>
+              🔊 Enable sound for ambient music and voice narration on key events
             </div>
           </div>
         </div>
@@ -98,6 +99,11 @@
   <!-- Summary Overlay -->
   <div id="summary-overlay" role="dialog" aria-label="Run summary" aria-modal="true">
     <div id="summary-modal"></div>
+  </div>
+
+  <!-- Narration toast -->
+  <div class="narration-toast" id="narration-toast">
+    <span class="toast-icon">🔊</span> Voice narration available — click <strong>Listen</strong> on highlighted events
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/tone@15/build/Tone.min.js"></script>
