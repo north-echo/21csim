@@ -58,9 +58,13 @@ class App {
       this.selector.open();
     });
 
-    document.querySelector('.logo').addEventListener('click', () => {
-      this.selector.open();
-    });
+    const logoEl = document.querySelector('.nav-logo');
+    if (logoEl) {
+      logoEl.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.selector.open();
+      });
+    }
 
     // Summary close
     document.getElementById('summary-overlay').addEventListener('click', (e) => {
