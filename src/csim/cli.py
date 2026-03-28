@@ -80,6 +80,7 @@ def run(
     provider: Optional[str] = typer.Option(None, "--provider", help="Force provider: ollama|claude|none"),
     model: Optional[str] = typer.Option(None, "--model", help="Override model name"),
     no_ai: bool = typer.Option(False, "--no-ai", help="Disable AI narration (alias for --provider none)"),
+    from_reality: bool = typer.Option(False, "--from-reality", help="Start from real 2026 world state"),
 ) -> None:
     """Run a single simulation of the 21st century."""
     from csim.engine import simulate
@@ -88,7 +89,14 @@ def run(
     data_dir = _get_data_dir()
     graph = build_graph(data_dir)
 
-    outcome = simulate(graph, seed)
+    initial_state = None
+    locked_results = None
+    if from_reality:
+        from csim.reality import load_reality
+        initial_state, locked_results = load_reality(data_dir)
+        typer.echo(f"Starting from reality: {len(locked_results)} nodes locked to historical outcomes")
+
+    outcome = simulate(graph, seed, initial_state=initial_state, locked_results=locked_results)
 
     # Resolve narration provider
     llm_provider = None
@@ -147,6 +155,7 @@ def batch(
     output: Optional[Path] = typer.Option(None, help="Output JSON file path"),
     parallel: int = typer.Option(1, help="Number of parallel workers"),
     format: OutputFormat = typer.Option(OutputFormat.terminal, "--format", help="Output format"),
+    from_reality: bool = typer.Option(False, "--from-reality", help="Start from real 2026 world state"),
 ) -> None:
     """Run batch simulations and analyze results."""
     from csim.engine import simulate_batch
@@ -155,8 +164,16 @@ def batch(
     data_dir = _get_data_dir()
     graph = build_graph(data_dir)
 
+    initial_state = None
+    locked_results = None
+    if from_reality:
+        from csim.reality import load_reality
+        initial_state, locked_results = load_reality(data_dir)
+        typer.echo(f"Starting from reality: {len(locked_results)} nodes locked to historical outcomes")
+
     typer.echo(f"Running {iterations} simulations...")
-    result = simulate_batch(graph, iterations, parallel=parallel)
+    result = simulate_batch(graph, iterations, parallel=parallel,
+                            initial_state=initial_state, locked_results=locked_results)
 
     if format == OutputFormat.json or output:
         from csim.exporter import export_batch_json, serialize_batch

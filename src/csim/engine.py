@@ -32,23 +32,36 @@ def sample(distribution: dict[str, float], rng: np.random.Generator) -> str:
     return branches[rng.choice(len(branches), p=probs)]
 
 
-def simulate(graph: nx.DiGraph, seed: int) -> SimOutcome:
+def simulate(
+    graph: nx.DiGraph,
+    seed: int,
+    initial_state: Optional[WorldState] = None,
+    locked_results: Optional[dict[str, str]] = None,
+) -> SimOutcome:
     """Core simulation loop for a single run.
 
-    1. Initialize WorldState to year-2000 baselines
+    1. Initialize WorldState to year-2000 baselines (or *initial_state*)
     2. Initialize numpy RNG with seed
     3. For each node in chronological/topological order:
        a. Check reachability
        b. Compute modified probability distribution
-       c. Sample from distribution
+       c. Sample from distribution (or use *locked_results* if provided)
        d. Apply world_state_effects
        e. Record SimEvent
        f. Check for early termination (extinction)
     4. Compute composite score, classify, generate headline
     5. Return SimOutcome
+
+    Args:
+        graph: The simulation DAG.
+        seed: RNG seed for reproducibility.
+        initial_state: If provided, use instead of default year-2000 WorldState.
+        locked_results: If provided, a dict of node_id -> branch that should be
+            used instead of sampling.  World-state effects from locked nodes
+            are still applied.
     """
     rng = np.random.default_rng(seed)
-    state = WorldState()
+    state = copy.copy(initial_state) if initial_state is not None else WorldState()
     events: list[SimEvent] = []
     results: dict[str, str] = {}  # node_id -> branch_taken
     cascading_effects: dict[str, dict] = {}  # accumulated cascading modifiers
@@ -71,8 +84,15 @@ def simulate(graph: nx.DiGraph, seed: int) -> SimOutcome:
         if not probs:
             continue
 
-        # Sample
-        branch = sample(probs, rng)
+        # Sample (or use locked result for historical nodes)
+        if locked_results and node_id in locked_results:
+            branch = locked_results[node_id]
+            # Validate that the locked branch exists in the distribution
+            if branch not in probs:
+                # Fall back to sampling if locked branch is invalid
+                branch = sample(probs, rng)
+        else:
+            branch = sample(probs, rng)
         results[node_id] = branch
 
         # Get outcome data
@@ -169,7 +189,12 @@ def simulate(graph: nx.DiGraph, seed: int) -> SimOutcome:
     )
 
 
-def _simulate_worker(graph_data: dict, seed: int) -> SimOutcome:
+def _simulate_worker(
+    graph_data: dict,
+    seed: int,
+    initial_state: Optional[WorldState] = None,
+    locked_results: Optional[dict[str, str]] = None,
+) -> SimOutcome:
     """Worker function for parallel batch simulation.
 
     Accepts serialised graph data (via ``nx.node_link_data``) and a seed.
@@ -177,7 +202,7 @@ def _simulate_worker(graph_data: dict, seed: int) -> SimOutcome:
     graph never needs to be pickled directly.
     """
     graph = nx.node_link_graph(graph_data)
-    return simulate(graph, seed)
+    return simulate(graph, seed, initial_state=initial_state, locked_results=locked_results)
 
 
 def simulate_batch(
@@ -185,6 +210,8 @@ def simulate_batch(
     iterations: int,
     seeds: Optional[list[int]] = None,
     parallel: int = 1,
+    initial_state: Optional[WorldState] = None,
+    locked_results: Optional[dict[str, str]] = None,
 ) -> BatchResult:
     """Run N simulations, optionally parallelized."""
     if seeds is None:
@@ -196,10 +223,14 @@ def simulate_batch(
         graph_data = nx.node_link_data(graph)
         with Pool(workers) as pool:
             outcomes = pool.starmap(
-                _simulate_worker, [(graph_data, s) for s in seeds]
+                _simulate_worker,
+                [(graph_data, s, initial_state, locked_results) for s in seeds],
             )
     else:
-        outcomes = [simulate(graph, s) for s in seeds]
+        outcomes = [
+            simulate(graph, s, initial_state=initial_state, locked_results=locked_results)
+            for s in seeds
+        ]
 
     # Compute statistics
     result = BatchResult(iterations=len(outcomes), outcomes=outcomes)

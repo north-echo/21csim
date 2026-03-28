@@ -358,6 +358,10 @@ async function loadAllRuns() {
   renderFanCharts();
   renderLeverage();
   renderWhatIf();
+  renderScatterPlot();
+  renderClusters();
+  renderPathExplorer();
+  renderDecadeSnapshots();
 }
 
 // ════════════════════════════════════════════════════════════════
@@ -891,6 +895,10 @@ function applyWhatIfFilters() {
   renderHeatmap(filtered);
   renderFanCharts(filtered);
   renderLeverage(filtered);
+  renderScatterPlot();
+  renderClusters();
+  renderPathExplorer();
+  renderDecadeSnapshots();
 }
 
 function renderWhatIfMiniOverview(runs) {
@@ -959,6 +967,744 @@ window.addEventListener('resize', () => {
     }
     if (allRunsLoaded) {
       renderFanCharts();
+      redrawScatter();
     }
   }, 200);
 });
+
+// ════════════════════════════════════════════════════════════════
+// Scatter Plot Explorer -- Dimensions
+// ════════════════════════════════════════════════════════════════
+const SCATTER_DIMENSIONS = [
+  { key: 'climate_temp_anomaly',           label: 'Climate Temp Anomaly' },
+  { key: 'us_polarization',               label: 'US Polarization' },
+  { key: 'nuclear_risk_level',            label: 'Nuclear Risk Level' },
+  { key: 'global_democracy_index',        label: 'Global Democracy Index' },
+  { key: 'inequality_index',              label: 'Inequality Index' },
+  { key: 'us_global_standing',            label: 'US Global Standing' },
+  { key: 'renewable_energy_share',        label: 'Renewable Energy Share' },
+  { key: 'space_development_index',       label: 'Space Development Index' },
+  { key: 'existential_risk_cumulative',   label: 'Existential Risk Cumulative' },
+  { key: 'conflict_deaths',              label: 'Conflict Deaths' },
+  { key: 'surveillance_state_index',      label: 'Surveillance State Index' },
+  { key: 'automation_displacement',       label: 'Automation Displacement' },
+  { key: 'human_augmentation_prevalence', label: 'Human Augmentation Prevalence' },
+  { key: 'global_pandemic_deaths',        label: 'Global Pandemic Deaths' },
+];
+
+let scatterState = {
+  xKey: 'climate_temp_anomaly',
+  yKey: 'global_democracy_index',
+  points: [],       // {x, y, verdict, seed, headline, px, py}
+  activePathSeeds: null, // Set or null -- if set, only show these seeds
+};
+
+// ════════════════════════════════════════════════════════════════
+// Section 7 -- Scatter Plot Explorer
+// ════════════════════════════════════════════════════════════════
+function renderScatterPlot() {
+  const runs = getFilteredRuns();
+  if (runs.length === 0) return;
+
+  const area = document.getElementById('scatter-area');
+
+  // Build controls
+  let html = '<div class="scatter-controls">';
+  html += '<label>X Axis:</label><select id="scatter-x">';
+  for (const d of SCATTER_DIMENSIONS) {
+    const sel = d.key === scatterState.xKey ? ' selected' : '';
+    html += `<option value="${d.key}"${sel}>${d.label}</option>`;
+  }
+  html += '</select>';
+  html += '<label>Y Axis:</label><select id="scatter-y">';
+  for (const d of SCATTER_DIMENSIONS) {
+    const sel = d.key === scatterState.yKey ? ' selected' : '';
+    html += `<option value="${d.key}"${sel}>${d.label}</option>`;
+  }
+  html += '</select></div>';
+
+  html += '<div class="scatter-canvas-wrap">';
+  html += '<canvas id="scatter-canvas" height="420"></canvas>';
+  html += '<div class="scatter-tooltip" id="scatter-tooltip"></div>';
+  html += '</div>';
+
+  // Legend
+  html += '<div class="scatter-legend">';
+  for (const oc of VERDICT_ORDER) {
+    const color = VERDICT_COLORS[oc] || '#888';
+    html += `<div class="legend-item"><div class="legend-swatch" style="background:${color};"></div>${oc}</div>`;
+  }
+  html += '</div>';
+
+  area.innerHTML = html;
+
+  // Wire dropdown events
+  document.getElementById('scatter-x').addEventListener('change', (e) => {
+    scatterState.xKey = e.target.value;
+    redrawScatter();
+  });
+  document.getElementById('scatter-y').addEventListener('change', (e) => {
+    scatterState.yKey = e.target.value;
+    redrawScatter();
+  });
+
+  // Wire hover/click
+  const canvas = document.getElementById('scatter-canvas');
+  const tooltip = document.getElementById('scatter-tooltip');
+
+  canvas.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+    let closest = null;
+    let closestDist = Infinity;
+    for (const p of scatterState.points) {
+      const dx = p.px - mx;
+      const dy = p.py - my;
+      const dist = dx * dx + dy * dy;
+      if (dist < closestDist && dist < 400) {
+        closestDist = dist;
+        closest = p;
+      }
+    }
+    if (closest) {
+      tooltip.style.display = 'block';
+      tooltip.style.left = Math.min(mx + 12, rect.width - 270) + 'px';
+      tooltip.style.top = (my - 40) + 'px';
+      tooltip.innerHTML = `<strong>Seed #${closest.seed}</strong><br>${escHtml(closest.headline)}<br><span style="color:${VERDICT_COLORS[closest.verdict] || '#888'}">${closest.verdict}</span>`;
+    } else {
+      tooltip.style.display = 'none';
+    }
+  });
+
+  canvas.addEventListener('mouseleave', () => {
+    tooltip.style.display = 'none';
+  });
+
+  requestAnimationFrame(() => redrawScatter());
+}
+
+function redrawScatter() {
+  const canvas = document.getElementById('scatter-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = 420 * dpr;
+  ctx.scale(dpr, dpr);
+
+  const W = rect.width;
+  const H = 420;
+  const pad = { top: 15, bottom: 40, left: 55, right: 20 };
+  const cW = W - pad.left - pad.right;
+  const cH = H - pad.top - pad.bottom;
+
+  ctx.clearRect(0, 0, W, H);
+
+  const runs = getFilteredRuns();
+  if (runs.length === 0) return;
+
+  const xKey = scatterState.xKey;
+  const yKey = scatterState.yKey;
+
+  // Extract data points
+  const points = [];
+  let xMin = Infinity, xMax = -Infinity, yMin = Infinity, yMax = -Infinity;
+  for (const run of runs) {
+    if (!run.final_state) continue;
+    const xv = run.final_state[xKey];
+    const yv = run.final_state[yKey];
+    if (xv === undefined || yv === undefined) continue;
+    if (xv < xMin) xMin = xv;
+    if (xv > xMax) xMax = xv;
+    if (yv < yMin) yMin = yv;
+    if (yv > yMax) yMax = yv;
+    points.push({ x: xv, y: yv, verdict: run.outcome_class, seed: run.seed, headline: run.headline || '' });
+  }
+
+  if (points.length === 0) return;
+  if (xMin === xMax) xMax = xMin + 1;
+  if (yMin === yMax) yMax = yMin + 1;
+
+  // Add 5% padding to range
+  const xPad = (xMax - xMin) * 0.05;
+  const yPad = (yMax - yMin) * 0.05;
+  xMin -= xPad; xMax += xPad;
+  yMin -= yPad; yMax += yPad;
+
+  const toX = v => pad.left + ((v - xMin) / (xMax - xMin)) * cW;
+  const toY = v => pad.top + cH - ((v - yMin) / (yMax - yMin)) * cH;
+
+  // Grid lines
+  ctx.strokeStyle = '#2a2a3a';
+  ctx.lineWidth = 0.5;
+  for (let i = 0; i <= 5; i++) {
+    const y = pad.top + (cH * i / 5);
+    ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(pad.left + cW, y); ctx.stroke();
+    const x = pad.left + (cW * i / 5);
+    ctx.beginPath(); ctx.moveTo(x, pad.top); ctx.lineTo(x, pad.top + cH); ctx.stroke();
+  }
+
+  // Dots
+  const activeSeeds = scatterState.activePathSeeds;
+  for (const p of points) {
+    p.px = toX(p.x);
+    p.py = toY(p.y);
+    const color = VERDICT_COLORS[p.verdict] || '#888';
+    const dimmed = activeSeeds && !activeSeeds.has(p.seed);
+    ctx.globalAlpha = dimmed ? 0.12 : 0.8;
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(p.px, p.py, dimmed ? 2.5 : 4, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+  scatterState.points = points;
+
+  // Axis labels
+  ctx.fillStyle = '#808090';
+  ctx.font = '11px -apple-system, sans-serif';
+
+  // X axis
+  ctx.textAlign = 'center';
+  for (let i = 0; i <= 5; i++) {
+    const v = xMin + ((xMax - xMin) * i / 5);
+    ctx.fillText(v.toFixed(2), pad.left + (cW * i / 5), H - 18);
+  }
+  // X axis label
+  const xLabel = SCATTER_DIMENSIONS.find(d => d.key === xKey)?.label || xKey;
+  ctx.font = '12px -apple-system, sans-serif';
+  ctx.fillStyle = '#a0a0b0';
+  ctx.fillText(xLabel, pad.left + cW / 2, H - 2);
+
+  // Y axis
+  ctx.font = '11px -apple-system, sans-serif';
+  ctx.fillStyle = '#808090';
+  ctx.textAlign = 'right';
+  for (let i = 0; i <= 5; i++) {
+    const v = yMin + ((yMax - yMin) * i / 5);
+    const y = pad.top + cH - (cH * i / 5);
+    ctx.fillText(v.toFixed(2), pad.left - 4, y + 3);
+  }
+  // Y axis label (rotated)
+  const yLabel = SCATTER_DIMENSIONS.find(d => d.key === yKey)?.label || yKey;
+  ctx.save();
+  ctx.translate(12, pad.top + cH / 2);
+  ctx.rotate(-Math.PI / 2);
+  ctx.textAlign = 'center';
+  ctx.font = '12px -apple-system, sans-serif';
+  ctx.fillStyle = '#a0a0b0';
+  ctx.fillText(yLabel, 0, 0);
+  ctx.restore();
+}
+
+// ════════════════════════════════════════════════════════════════
+// Section 8 -- Archetypal Centuries (K-Means Clustering)
+// ════════════════════════════════════════════════════════════════
+const CLUSTER_DIMS = [
+  { key: 'climate_temp_anomaly',     label: 'Climate Temp',        goodDir: -1 },
+  { key: 'us_polarization',          label: 'US Polarization',     goodDir: -1 },
+  { key: 'nuclear_risk_level',       label: 'Nuclear Risk',        goodDir: -1 },
+  { key: 'global_democracy_index',   label: 'Democracy Index',     goodDir:  1 },
+  { key: 'renewable_energy_share',   label: 'Renewable Energy',    goodDir:  1 },
+  { key: 'inequality_index',         label: 'Inequality',          goodDir: -1 },
+  { key: 'existential_risk_cumulative', label: 'Existential Risk', goodDir: -1 },
+  { key: 'conflict_deaths',          label: 'Conflict Deaths',     goodDir: -1 },
+  { key: 'surveillance_state_index', label: 'Surveillance',        goodDir: -1 },
+  { key: 'automation_displacement',  label: 'Automation Disp.',    goodDir: -1 },
+  { key: 'space_development_index',  label: 'Space Development',   goodDir:  1 },
+  { key: 'human_augmentation_prevalence', label: 'Augmentation',   goodDir:  0 },
+  { key: 'us_global_standing',       label: 'US Standing',         goodDir:  1 },
+  { key: 'global_pandemic_deaths',   label: 'Pandemic Deaths',     goodDir: -1 },
+];
+
+// Cluster naming by most distinctive (highest z-score) dimension
+const CLUSTER_NAME_MAP = {
+  'nuclear_risk_level':       'Nuclear Winter',
+  'climate_temp_anomaly':     'Climate Catastrophe',
+  'renewable_energy_share':   'Green Renaissance',
+  'global_democracy_index':   'Democratic Flourishing',
+  'existential_risk_cumulative': 'Existential Brink',
+  'conflict_deaths':          'Era of Conflict',
+  'surveillance_state_index': 'Surveillance State',
+  'automation_displacement':  'Automation Crisis',
+  'space_development_index':  'Space Age',
+  'human_augmentation_prevalence': 'Augmented Humanity',
+  'us_polarization':          'Divided America',
+  'inequality_index':         'Inequality Chasm',
+  'us_global_standing':       'Pax Americana',
+  'global_pandemic_deaths':   'Pandemic World',
+};
+
+function kMeans(data, k, maxIter) {
+  // data: array of arrays (each row is a vector)
+  if (data.length === 0) return { assignments: [], centroids: [] };
+  const dim = data[0].length;
+  maxIter = maxIter || 40;
+
+  // Initialize centroids using k-means++ style
+  const centroids = [];
+  centroids.push([...data[Math.floor(Math.random() * data.length)]]);
+  while (centroids.length < k) {
+    const dists = data.map(p => {
+      let minD = Infinity;
+      for (const c of centroids) {
+        let d = 0;
+        for (let i = 0; i < dim; i++) d += (p[i] - c[i]) ** 2;
+        if (d < minD) minD = d;
+      }
+      return minD;
+    });
+    const totalD = dists.reduce((a, b) => a + b, 0);
+    let r = Math.random() * totalD;
+    for (let i = 0; i < data.length; i++) {
+      r -= dists[i];
+      if (r <= 0) { centroids.push([...data[i]]); break; }
+    }
+    if (centroids.length === centroids.length) {
+      // Fallback if rounding didn't pick one
+      if (centroids.length < k) centroids.push([...data[Math.floor(Math.random() * data.length)]]);
+    }
+  }
+
+  let assignments = new Array(data.length).fill(0);
+
+  for (let iter = 0; iter < maxIter; iter++) {
+    // Assign points to nearest centroid
+    let changed = false;
+    for (let i = 0; i < data.length; i++) {
+      let bestC = 0, bestD = Infinity;
+      for (let c = 0; c < k; c++) {
+        let d = 0;
+        for (let j = 0; j < dim; j++) d += (data[i][j] - centroids[c][j]) ** 2;
+        if (d < bestD) { bestD = d; bestC = c; }
+      }
+      if (assignments[i] !== bestC) { assignments[i] = bestC; changed = true; }
+    }
+    if (!changed) break;
+
+    // Recompute centroids
+    for (let c = 0; c < k; c++) {
+      const members = [];
+      for (let i = 0; i < data.length; i++) {
+        if (assignments[i] === c) members.push(data[i]);
+      }
+      if (members.length > 0) {
+        for (let j = 0; j < dim; j++) {
+          centroids[c][j] = members.reduce((s, m) => s + m[j], 0) / members.length;
+        }
+      }
+    }
+  }
+
+  return { assignments, centroids };
+}
+
+function renderClusters() {
+  const runs = getFilteredRuns();
+  if (runs.length < 6) return;
+
+  const area = document.getElementById('clusters-area');
+
+  // Extract & normalize dimension vectors
+  const rawVectors = [];
+  const runIndices = []; // maps vector index -> run index
+  for (let ri = 0; ri < runs.length; ri++) {
+    const fs = runs[ri].final_state;
+    if (!fs) continue;
+    const vec = CLUSTER_DIMS.map(d => fs[d.key] !== undefined ? fs[d.key] : 0);
+    rawVectors.push(vec);
+    runIndices.push(ri);
+  }
+
+  if (rawVectors.length < 6) {
+    area.innerHTML = '<div class="section-placeholder">Not enough runs with final_state data for clustering.</div>';
+    return;
+  }
+
+  const dim = CLUSTER_DIMS.length;
+
+  // Compute means and stds for normalization
+  const means = new Array(dim).fill(0);
+  const stds = new Array(dim).fill(0);
+  for (const v of rawVectors) {
+    for (let j = 0; j < dim; j++) means[j] += v[j];
+  }
+  for (let j = 0; j < dim; j++) means[j] /= rawVectors.length;
+  for (const v of rawVectors) {
+    for (let j = 0; j < dim; j++) stds[j] += (v[j] - means[j]) ** 2;
+  }
+  for (let j = 0; j < dim; j++) stds[j] = Math.sqrt(stds[j] / rawVectors.length) || 1;
+
+  // Normalize
+  const normVectors = rawVectors.map(v => v.map((val, j) => (val - means[j]) / stds[j]));
+
+  // Run k-means
+  const K = Math.min(6, rawVectors.length);
+  const { assignments } = kMeans(normVectors, K, 50);
+
+  // Group runs by cluster
+  const clusters = [];
+  for (let c = 0; c < K; c++) {
+    const members = [];
+    for (let i = 0; i < assignments.length; i++) {
+      if (assignments[i] === c) members.push(runIndices[i]);
+    }
+    if (members.length === 0) continue;
+
+    // Compute cluster mean in raw space
+    const clusterMeans = new Array(dim).fill(0);
+    for (const ri of members) {
+      const fs = runs[ri].final_state;
+      for (let j = 0; j < dim; j++) {
+        clusterMeans[j] += (fs[CLUSTER_DIMS[j].key] !== undefined ? fs[CLUSTER_DIMS[j].key] : 0);
+      }
+    }
+    for (let j = 0; j < dim; j++) clusterMeans[j] /= members.length;
+
+    // Find most distinctive dimension (highest absolute z-score of cluster mean)
+    let maxZ = -Infinity, maxDimIdx = 0;
+    for (let j = 0; j < dim; j++) {
+      const z = Math.abs((clusterMeans[j] - means[j]) / stds[j]);
+      if (z > maxZ) { maxZ = z; maxDimIdx = j; }
+    }
+
+    // Verdict breakdown
+    const verdicts = {};
+    for (const ri of members) {
+      const oc = runs[ri].outcome_class;
+      verdicts[oc] = (verdicts[oc] || 0) + 1;
+    }
+
+    const dominantKey = CLUSTER_DIMS[maxDimIdx].key;
+    const name = CLUSTER_NAME_MAP[dominantKey] || CLUSTER_DIMS[maxDimIdx].label;
+
+    clusters.push({ name, members, clusterMeans, verdicts, dominantKey });
+  }
+
+  // Sort clusters by size descending
+  clusters.sort((a, b) => b.members.length - a.members.length);
+
+  // Find global min/max for bar rendering
+  const allMin = new Array(dim).fill(Infinity);
+  const allMax = new Array(dim).fill(-Infinity);
+  for (const v of rawVectors) {
+    for (let j = 0; j < dim; j++) {
+      if (v[j] < allMin[j]) allMin[j] = v[j];
+      if (v[j] > allMax[j]) allMax[j] = v[j];
+    }
+  }
+
+  let html = '<div class="cluster-grid">';
+  for (const cl of clusters) {
+    html += '<div class="cluster-card">';
+    html += `<h4>${escHtml(cl.name)}</h4>`;
+    html += `<div class="cluster-meta">${cl.members.length} runs</div>`;
+
+    // Verdict badges
+    html += '<div class="cluster-verdicts">';
+    for (const oc of VERDICT_ORDER) {
+      const n = cl.verdicts[oc];
+      if (!n) continue;
+      const color = VERDICT_COLORS[oc] || '#888';
+      html += `<span class="mini-badge" style="background:${color}22;color:${color};border:1px solid ${color}44;">${oc} (${n})</span>`;
+    }
+    html += '</div>';
+
+    // Dimension bars (show top 6 most distinctive for this cluster)
+    const dimScores = CLUSTER_DIMS.map((d, j) => ({
+      idx: j,
+      label: d.label,
+      mean: cl.clusterMeans[j],
+      zScore: Math.abs((cl.clusterMeans[j] - means[j]) / stds[j]),
+      goodDir: d.goodDir,
+    }));
+    dimScores.sort((a, b) => b.zScore - a.zScore);
+    const topDims = dimScores.slice(0, 6);
+
+    for (const td of topDims) {
+      const range = allMax[td.idx] - allMin[td.idx] || 1;
+      const pct = ((td.mean - allMin[td.idx]) / range * 100).toFixed(1);
+      const isGood = td.goodDir === 1 ? td.mean > means[td.idx] : td.goodDir === -1 ? td.mean < means[td.idx] : true;
+      const barColor = isGood ? '#40c040' : '#ff4040';
+      html += `<div class="cluster-dim-bar">
+        <span class="dim-label">${td.label}</span>
+        <div style="flex:1;height:8px;background:var(--bg);border-radius:2px;position:relative;">
+          <div class="dim-bar" style="width:${pct}%;background:${barColor};position:absolute;top:0;left:0;height:100%;border-radius:2px;"></div>
+        </div>
+        <span class="dim-value">${td.mean.toFixed(2)}</span>
+      </div>`;
+    }
+
+    html += '</div>';
+  }
+  html += '</div>';
+  area.innerHTML = html;
+}
+
+// ════════════════════════════════════════════════════════════════
+// Section 9 -- Path Explorer
+// ════════════════════════════════════════════════════════════════
+function renderPathExplorer() {
+  const runs = getFilteredRuns();
+  if (runs.length === 0) return;
+
+  const area = document.getElementById('paths-area');
+
+  // First, find the top 5 leverage nodes (highest variance in outcome)
+  const nodeData = {};
+  for (const run of runs) {
+    for (const evt of run.events) {
+      if (!evt.node_id || !evt.branch_taken) continue;
+      if (!nodeData[evt.node_id]) {
+        nodeData[evt.node_id] = {
+          title: evt.title || evt.node_id,
+          year: evt.year_month || '',
+          branches: {},
+        };
+      }
+      const br = evt.branch_taken;
+      if (!nodeData[evt.node_id].branches[br]) {
+        nodeData[evt.node_id].branches[br] = [];
+      }
+      nodeData[evt.node_id].branches[br].push(run.composite_score);
+    }
+  }
+
+  // Rank by branch mean variance
+  const ranked = [];
+  for (const [nodeId, nd] of Object.entries(nodeData)) {
+    const branches = Object.entries(nd.branches);
+    if (branches.length < 2) continue;
+    const branchMeans = branches.map(([, sc]) => sc.reduce((a, b) => a + b, 0) / sc.length);
+    const grandMean = branchMeans.reduce((a, b) => a + b, 0) / branchMeans.length;
+    const variance = branchMeans.reduce((s, m) => s + (m - grandMean) ** 2, 0) / branchMeans.length;
+    ranked.push({ nodeId, title: nd.title, year: nd.year, variance });
+  }
+  ranked.sort((a, b) => b.variance - a.variance);
+  const topNodes = ranked.slice(0, 5).map(r => r.nodeId);
+
+  if (topNodes.length === 0) {
+    area.innerHTML = '<div class="section-placeholder">Not enough branch data for path analysis.</div>';
+    return;
+  }
+
+  // For each run, extract the path (sequence of branches at the top nodes)
+  const runPaths = [];
+  for (const run of runs) {
+    const branchMap = {};
+    for (const evt of run.events) {
+      if (evt.node_id && evt.branch_taken) {
+        branchMap[evt.node_id] = evt.branch_taken;
+      }
+    }
+    const pathKey = topNodes.map(nid => branchMap[nid] || '?').join('|');
+    runPaths.push({ seed: run.seed, verdict: run.outcome_class, pathKey, branchMap });
+  }
+
+  // Group by verdict, then find top 3 paths per verdict
+  const byVerdict = {};
+  for (const rp of runPaths) {
+    if (!byVerdict[rp.verdict]) byVerdict[rp.verdict] = {};
+    if (!byVerdict[rp.verdict][rp.pathKey]) {
+      byVerdict[rp.verdict][rp.pathKey] = { count: 0, seeds: [], steps: [] };
+    }
+    byVerdict[rp.verdict][rp.pathKey].count++;
+    byVerdict[rp.verdict][rp.pathKey].seeds.push(rp.seed);
+    if (byVerdict[rp.verdict][rp.pathKey].steps.length === 0) {
+      byVerdict[rp.verdict][rp.pathKey].steps = topNodes.map(nid => ({
+        nodeId: nid,
+        title: nodeData[nid]?.title || nid,
+        branch: rp.branchMap[nid] || '?',
+      }));
+    }
+  }
+
+  let html = '';
+  for (const oc of VERDICT_ORDER) {
+    const paths = byVerdict[oc];
+    if (!paths) continue;
+    const sorted = Object.entries(paths).sort((a, b) => b[1].count - a[1].count).slice(0, 3);
+    if (sorted.length === 0) continue;
+
+    const color = VERDICT_COLORS[oc] || '#888';
+    html += `<div class="path-group">`;
+    html += `<h3 style="color:${color}">${oc}</h3>`;
+    html += '<div class="path-tree">';
+
+    for (const [pathKey, pathData] of sorted) {
+      const seedSet = JSON.stringify(pathData.seeds);
+      html += `<div class="path-row" data-seeds='${seedSet}' data-verdict="${oc}">`;
+      for (let si = 0; si < pathData.steps.length; si++) {
+        const step = pathData.steps[si];
+        if (si > 0) html += '<span class="path-arrow">&rarr;</span>';
+        html += `<span class="path-step" title="${escHtml(step.nodeId)}">${escHtml(step.title.slice(0, 25))}:&nbsp;<strong>${escHtml(step.branch.replace(/_/g, ' '))}</strong></span>`;
+      }
+      html += `<span class="path-count" style="color:${color}">${pathData.count} runs</span>`;
+      html += '</div>';
+    }
+
+    html += '</div></div>';
+  }
+
+  if (!html) {
+    area.innerHTML = '<div class="section-placeholder">Not enough path data for analysis.</div>';
+    return;
+  }
+
+  area.innerHTML = html;
+
+  // Click handler for path rows
+  area.querySelectorAll('.path-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const isActive = row.classList.contains('active');
+      area.querySelectorAll('.path-row').forEach(r => r.classList.remove('active'));
+
+      if (isActive) {
+        // Deactivate: clear path filter
+        scatterState.activePathSeeds = null;
+      } else {
+        row.classList.add('active');
+        const seeds = JSON.parse(row.dataset.seeds);
+        scatterState.activePathSeeds = new Set(seeds);
+      }
+      redrawScatter();
+    });
+  });
+}
+
+// ════════════════════════════════════════════════════════════════
+// Section 10 -- Decade Snapshots
+// ════════════════════════════════════════════════════════════════
+const DECADE_YEARS = [2030, 2050, 2070, 2100];
+const DECADE_DIMS = [
+  { key: 'climate_temp_anomaly',   label: 'Climate Temp',      goodDir: -1 },
+  { key: 'global_democracy_index', label: 'Democracy',         goodDir:  1 },
+  { key: 'nuclear_risk_level',     label: 'Nuclear Risk',      goodDir: -1 },
+  { key: 'renewable_energy_share', label: 'Renewable Energy',  goodDir:  1 },
+  { key: 'inequality_index',       label: 'Inequality',        goodDir: -1 },
+  { key: 'us_polarization',        label: 'US Polarization',   goodDir: -1 },
+];
+
+function renderDecadeSnapshots() {
+  const runs = getFilteredRuns();
+  if (runs.length === 0) return;
+
+  const area = document.getElementById('decades-area');
+
+  // Extract trajectories (reuse existing function)
+  // We need year-level data for each dimension across all runs
+  // Use the same approach as extractTrajectories but for DECADE_DIMS
+  const allDimDims = DECADE_DIMS.map(d => d.key);
+
+  // For each run, build cumulative state per year
+  const yearDimValues = {}; // year -> dimKey -> [values]
+  for (const targetYear of DECADE_YEARS) {
+    yearDimValues[targetYear] = {};
+    for (const dk of allDimDims) {
+      yearDimValues[targetYear][dk] = [];
+    }
+  }
+
+  for (const run of runs) {
+    const state = {};
+    for (const dk of allDimDims) state[dk] = 0;
+
+    // Track state at each target year by accumulating deltas
+    let lastSnapped = {};
+    for (const dk of allDimDims) lastSnapped[dk] = {};
+
+    for (const evt of run.events) {
+      const year = parseInt((evt.year_month || '2000').slice(0, 4));
+      if (evt.world_state_delta) {
+        for (const dk of allDimDims) {
+          if (evt.world_state_delta[dk] !== undefined) {
+            state[dk] += evt.world_state_delta[dk];
+          }
+        }
+      }
+      // Snapshot at target years
+      for (const ty of DECADE_YEARS) {
+        if (year <= ty) {
+          for (const dk of allDimDims) {
+            lastSnapped[dk][ty] = state[dk];
+          }
+        }
+      }
+    }
+
+    // Use final_state for 2100 if available
+    if (run.final_state) {
+      for (const dk of allDimDims) {
+        if (run.final_state[dk] !== undefined) {
+          lastSnapped[dk][2100] = run.final_state[dk];
+        }
+      }
+    }
+
+    // Push values
+    for (const ty of DECADE_YEARS) {
+      for (const dk of allDimDims) {
+        if (lastSnapped[dk][ty] !== undefined) {
+          yearDimValues[ty][dk].push(lastSnapped[dk][ty]);
+        }
+      }
+    }
+  }
+
+  // Find global min/max across all decades for consistent scaling
+  const globalRange = {};
+  for (const dk of allDimDims) {
+    let gMin = Infinity, gMax = -Infinity;
+    for (const ty of DECADE_YEARS) {
+      for (const v of yearDimValues[ty][dk]) {
+        if (v < gMin) gMin = v;
+        if (v > gMax) gMax = v;
+      }
+    }
+    globalRange[dk] = { min: gMin, max: gMax };
+  }
+
+  let html = '<div class="decade-grid">';
+  for (const ty of DECADE_YEARS) {
+    html += `<div class="decade-card"><h4>${ty}</h4>`;
+
+    for (const dim of DECADE_DIMS) {
+      const vals = yearDimValues[ty][dim.key];
+      if (vals.length === 0) {
+        html += `<div class="decade-bar-row"><span class="decade-dim-label">${dim.label}</span><span style="color:var(--text-dim);font-size:10px;">no data</span></div>`;
+        continue;
+      }
+
+      const mean = vals.reduce((a, b) => a + b, 0) / vals.length;
+      const std = Math.sqrt(vals.reduce((s, v) => s + (v - mean) ** 2, 0) / vals.length);
+
+      const range = globalRange[dim.key];
+      const rng = range.max - range.min || 1;
+      const meanPct = Math.max(0, Math.min(100, ((mean - range.min) / rng) * 100));
+      const stdLeftPct = Math.max(0, (((mean - std) - range.min) / rng) * 100);
+      const stdWidthPct = Math.min(100 - stdLeftPct, ((2 * std) / rng) * 100);
+
+      // Color based on good/bad direction
+      const globalMean = (range.max + range.min) / 2;
+      const isGood = dim.goodDir === 1 ? mean > globalMean : dim.goodDir === -1 ? mean < globalMean : true;
+      const barColor = isGood ? '#40c040' : '#ff4040';
+      const neutralColor = '#808090';
+      const useColor = dim.goodDir === 0 ? neutralColor : barColor;
+
+      html += `<div class="decade-bar-row">
+        <span class="decade-dim-label">${dim.label}</span>
+        <div class="decade-bar-track">
+          <div class="decade-bar-std" style="left:${stdLeftPct.toFixed(1)}%;width:${stdWidthPct.toFixed(1)}%;background:${useColor};"></div>
+          <div class="decade-bar-mean" style="left:${Math.max(0, meanPct - 1).toFixed(1)}%;width:3px;background:${useColor};border-radius:1px;"></div>
+        </div>
+        <span class="decade-val">${mean.toFixed(2)} &pm; ${std.toFixed(2)}</span>
+      </div>`;
+    }
+
+    html += '</div>';
+  }
+  html += '</div>';
+  area.innerHTML = html;
+}

@@ -1,0 +1,131 @@
+# Real-world values as of approximately 2026
+# Each value represents the best available estimate for the state of the world
+# Sources cited in comments per dimension
+year: 2026
+
+# ── Geopolitical ──
+# Pew Research Center polarization surveys; partisan antipathy at record highs
+us_polarization: 0.72
+# EU post-Brexit, Ukraine solidarity but internal populist tensions (Hungary, etc.)
+eu_cohesion: 0.55
+# Gallup US Global Leadership Approval; declined under polarization and
+# inconsistent foreign policy signals
+us_global_standing: 0.55
+# CSIS/Lowy China Power Index; steady military/economic rise, Belt & Road
+china_power_index: 0.52
+# Russia weakened by Ukraine war sanctions, military losses, but regime intact
+russia_stability: 0.30
+# Ongoing conflicts: Yemen, Syria aftermath, Israel-Gaza/Lebanon escalation 2023-24
+middle_east_stability: 0.25
+# India GDP growth ~7%, demographic dividend, G20 presidency 2023
+india_power_index: 0.30
+# Mixed: Argentina crisis, Brazil recovery, regional instability
+latin_america_stability: 0.42
+
+# ── Economic ──
+# World Bank global GDP growth ~3% (post-pandemic recovery, but below trend)
+global_gdp_growth_modifier: 1.03
+# World Inequality Lab; Gini rising in many economies, wealth concentration
+inequality_index: 0.62
+# US federal debt ~120% of GDP (CBO estimates)
+us_debt_gdp_ratio: 1.20
+# CoinMarketCap total crypto market cap ~$2-3T range
+crypto_market_cap_trillion: 2.5
+# Post-COVID supply chain diversification (friend-shoring), but still fragile
+supply_chain_resilience: 0.55
+
+# ── Technology ──
+# AI development roughly 3-5 years ahead of year-2000 extrapolations
+# GPT-4 (2023), Claude 3 (2024), rapid LLM progress
+ai_development_year_offset: 4
+# Freedom House Internet Freedom report; declining globally since 2015
+internet_freedom_index: 0.58
+# ITU/DataReportal: ~62% of world population on social media
+social_media_penetration: 0.62
+# Cochlear implants, prosthetics, early Neuralink trials — still niche
+human_augmentation_prevalence: 0.03
+# ISS still operational, Artemis program, SpaceX Starship, commercial LEO
+space_development_index: 0.08
+
+# ── Security ──
+# Bulletin of Atomic Scientists Doomsday Clock at 90 seconds; Ukraine war,
+# nuclear rhetoric, Middle East escalation
+nuclear_risk_level: 0.30
+# Global Terrorism Index (IEP); post-ISIS decline but lone wolf threats persist
+terrorism_threat_index: 0.25
+# Facial recognition, NSO Group/Pegasus, China social credit, expanding globally
+surveillance_state_index: 0.40
+# Cybersecurity Ventures: global cybercrime damages ~$8T annually by 2023,
+# growing ~15% YoY
+global_cyber_damage_annual_b: 10.0
+# Ukraine war drones, autonomous systems proliferating rapidly
+drone_warfare_prevalence: 0.25
+
+# ── Climate / Environment ──
+# NASA GISS: 2023 was +1.17C, 2024 ~+1.3C above pre-industrial;
+# relative to year-2000 baseline of 0.6
+climate_temp_anomaly: 1.30
+# IEA: renewables ~30% of global electricity generation by 2024;
+# as share of total primary energy ~15%
+renewable_energy_share: 0.15
+# NASA sea level data: ~100mm rise since 2000 (3.4mm/yr average)
+sea_level_rise_meters: 0.10
+# WWF Living Planet Index: ~69% decline in wildlife populations since 1970;
+# normalized index declining
+biodiversity_index: 0.55
+# UN World Water Development Report; increasing stress from climate + population
+water_stress_index: 0.38
+# Global Food Security Index (EIU); pandemic + Ukraine war disrupted supply
+food_security_index: 0.72
+# NSIDC: September Arctic sea ice extent ~4.2M km2 vs ~6.3M km2 in 1980s;
+# normalized relative to 2000
+arctic_ice_status: 0.68
+
+# ── Human / Social ──
+# WHO: COVID-19 ~7M official deaths (likely 15-20M excess); using official
+global_pandemic_deaths: 7000000
+# Uppsala Conflict Data Program: cumulative since 2000; Syria, Yemen, Ukraine,
+# Ethiopia, Sudan, etc.
+conflict_deaths: 1500000
+# CDC: cumulative US opioid overdose deaths ~700K through 2024
+opioid_deaths_cumulative: 700000
+# Economist Intelligence Unit Democracy Index 2024: global average ~5.2/10
+global_democracy_index: 0.52
+# Pew Research: trust in US government near historic lows (~20% trust)
+us_institutional_trust: 0.25
+# Oxford Internet Institute; deepfakes, AI-generated content, election interference
+misinformation_severity: 0.65
+# Slow progress on policing reform, DEI backlash, Supreme Court affirmative action ruling
+racial_justice_index: 0.42
+# World Economic Forum Gender Gap Report 2024: ~68.5% closed
+gender_equity_index: 0.52
+# CDC: US life expectancy dropped ~2.5 years during COVID, partially recovered;
+# net ~-1 year from 2000 baseline trajectory
+us_life_expectancy_delta: -1.0
+# UN World Population Prospects 2024 revision
+global_population_billions: 8.1
+# UN median age estimates for 2025
+median_age_global: 30.5
+# McKinsey/WEF estimates: ~15% of work hours could be automated with current AI
+automation_displacement: 0.15
+
+# ── Governance / Structure ──
+# Mixed governance models; technocratic vs populist trends
+governance_model: 0.48
+# Partisan division, institutional stress, but system persists
+us_unity_index: 0.35
+# EU coordination improved on Ukraine, but no federation movement
+europe_federation_index: 0.25
+# Xi consolidated power; third term, anti-corruption, zero-COVID reversal
+china_regime_type: 0.10
+# Saudi Vision 2030, UAE diversification; still heavily oil-dependent
+middle_east_post_oil: 0.15
+# Arctic Council suspended Russia; governance fragmented
+arctic_sovereignty_resolved: 0.08
+# AfCFTA launched, digital transformation, but infrastructure gaps remain
+africa_development_index: 0.32
+
+# ── Existential ──
+# Cumulative existential risk from nuclear, climate, pandemic, AI;
+# modest but non-trivial accumulation over 26 years
+existential_risk_cumulative: 0.08

@@ -550,6 +550,278 @@
       margin-top: 16px;
     }
 
+    /* ── Scatter Plot Explorer ── */
+    .scatter-controls {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .scatter-controls select {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      padding: 6px 10px;
+      outline: none;
+      max-width: 280px;
+    }
+
+    .scatter-controls select:focus {
+      border-color: var(--accent);
+    }
+
+    .scatter-controls select option {
+      background: var(--bg-panel);
+      color: var(--text);
+    }
+
+    .scatter-controls label {
+      font-size: 11px;
+      color: var(--text-dim);
+      font-family: var(--font-ui);
+    }
+
+    .scatter-canvas-wrap {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px;
+    }
+
+    .scatter-canvas-wrap canvas {
+      width: 100%;
+      display: block;
+      cursor: crosshair;
+    }
+
+    .scatter-tooltip {
+      position: absolute;
+      display: none;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-size: 11px;
+      color: var(--text);
+      pointer-events: none;
+      z-index: 10;
+      max-width: 260px;
+      line-height: 1.4;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .scatter-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    /* ── Cluster Cards ── */
+    .cluster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .cluster-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+    }
+
+    .cluster-card h4 {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 8px;
+    }
+
+    .cluster-card .cluster-meta {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-bottom: 10px;
+    }
+
+    .cluster-card .cluster-verdicts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .cluster-dim-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+      font-size: 11px;
+    }
+
+    .cluster-dim-bar .dim-label {
+      min-width: 140px;
+      color: var(--text-dim);
+      text-align: right;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cluster-dim-bar .dim-bar {
+      height: 8px;
+      border-radius: 2px;
+      transition: width 0.3s;
+    }
+
+    .cluster-dim-bar .dim-value {
+      font-variant-numeric: tabular-nums;
+      color: var(--text);
+      min-width: 40px;
+    }
+
+    /* ── Path Explorer ── */
+    .path-group {
+      margin-bottom: 20px;
+    }
+
+    .path-group h3 {
+      margin-bottom: 10px;
+    }
+
+    .path-tree {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .path-row {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      padding: 8px 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .path-row:hover {
+      border-color: var(--accent);
+      background: var(--bg-hover);
+    }
+
+    .path-row.active {
+      border-color: var(--accent);
+      background: var(--bg-hover);
+    }
+
+    .path-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      font-size: 10px;
+      font-family: var(--font-mono);
+      color: var(--text);
+      background: var(--bg);
+      padding: 2px 6px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .path-arrow {
+      color: var(--text-dim);
+      font-size: 11px;
+    }
+
+    .path-count {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    /* ── Decade Snapshots ── */
+    .decade-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .decade-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+    }
+
+    .decade-card h4 {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 12px;
+    }
+
+    .decade-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-size: 11px;
+    }
+
+    .decade-bar-row .decade-dim-label {
+      min-width: 130px;
+      color: var(--text-dim);
+      text-align: right;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .decade-bar-track {
+      flex: 1;
+      height: 14px;
+      background: var(--bg);
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .decade-bar-mean {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      border-radius: 3px;
+      opacity: 0.85;
+    }
+
+    .decade-bar-std {
+      position: absolute;
+      top: 2px;
+      height: 10px;
+      border-radius: 2px;
+      opacity: 0.35;
+    }
+
+    .decade-bar-row .decade-val {
+      min-width: 60px;
+      font-variant-numeric: tabular-nums;
+      color: var(--text);
+      font-size: 10px;
+    }
+
     /* ── Placeholder messaging ── */
     .section-placeholder {
       color: var(--text-dim);
@@ -663,6 +935,38 @@
         <h2 id="whatif-heading">Interactive What-If Filter</h2>
         <div id="whatif-area">
           <div class="section-placeholder" id="whatif-placeholder">Load all run data to use the what-if filter.</div>
+        </div>
+      </section>
+
+      <!-- Section 7: Scatter Plot Explorer -->
+      <section id="sec-scatter" class="explore-section" aria-labelledby="scatter-heading">
+        <h2 id="scatter-heading">Scatter Plot Explorer</h2>
+        <div id="scatter-area">
+          <div class="section-placeholder" id="scatter-placeholder">Load all run data to view scatter plots.</div>
+        </div>
+      </section>
+
+      <!-- Section 8: Archetypal Centuries (K-Means Clustering) -->
+      <section id="sec-clusters" class="explore-section" aria-labelledby="clusters-heading">
+        <h2 id="clusters-heading">Archetypal Centuries (K-Means Clustering)</h2>
+        <div id="clusters-area">
+          <div class="section-placeholder" id="clusters-placeholder">Load all run data to view archetypal clusters.</div>
+        </div>
+      </section>
+
+      <!-- Section 9: Path Explorer -->
+      <section id="sec-paths" class="explore-section" aria-labelledby="paths-heading">
+        <h2 id="paths-heading">Path Explorer</h2>
+        <div id="paths-area">
+          <div class="section-placeholder" id="paths-placeholder">Load all run data to explore common paths.</div>
+        </div>
+      </section>
+
+      <!-- Section 10: Decade Snapshots -->
+      <section id="sec-decades" class="explore-section" aria-labelledby="decades-heading">
+        <h2 id="decades-heading">Decade Snapshots</h2>
+        <div id="decades-area">
+          <div class="section-placeholder" id="decades-placeholder">Load all run data to view decade snapshots.</div>
         </div>
       </section>
     </main>
