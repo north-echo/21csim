@@ -2,9 +2,11 @@ id: "2035_carbon_capture"
 year_month: "2035-06"
 title: "Carbon Capture at Scale"
 description: >
-  Whether direct air capture and carbon capture technologies can scale to
-  meaningfully reduce atmospheric CO2. Critical for any pathway to limiting
-  warming below 2 degrees.
+  Climeworks' 'Mammoth-X' plant in Iceland, powered by geothermal energy,
+  captures 500,000 tonnes of CO2 per year and injects it into basalt where
+  it mineralizes permanently. It is the largest such facility ever built --
+  and it offsets roughly 0.001% of annual global emissions. The math is
+  either inspiring or terrifying depending on your perspective.
 domain: "climate"
 confidence: "MEDIUM"
 variable: "carbon_capture_status"
@@ -21,36 +23,36 @@ conditional: null
 outcomes:
   works_at_scale:
     status: "DIVERGENCE"
-    description: "Carbon capture deployed at gigatonne scale; materially reduces emissions trajectory"
-    explanation: "Government subsidies and technology improvements make large-scale deployment viable"
+    description: "214 direct air capture plants operating across Iceland, Oman, Chile, and the Australian Outback remove 1.8 gigatonnes of CO2 annually; the US 45Q tax credit, expanded to $180/tonne in 2031, makes the economics work; Occidental Petroleum -- once an oil major -- derives 40% of its revenue from carbon removal credits sold to airlines and tech companies"
+    explanation: "The scaling path follows solar energy's trajectory: costs drop from $600/tonne in 2025 to $95/tonne in 2035 through modular manufacturing, improved sorbent chemistry, and integration with cheap renewable energy; the breakthrough is not any single technology but the industrial learning curve that comes from building hundreds of plants rather than a handful of demonstrations"
     world_state_effects:
       climate_temp_anomaly: "-0.10"
       renewable_energy_share: "+0.05"
   too_expensive:
     status: "DIVERGENCE"
-    description: "Carbon capture works technically but remains economically unviable at scale"
-    explanation: "Costs remain $300-600 per tonne; far cheaper to avoid emissions than capture them"
+    description: "Climeworks, Carbon Engineering, and Global Thermostat all operate demonstration plants that work perfectly -- and all lose money hand over fist; at $320/tonne, removing the 40 gigatonnes of annual global CO2 emissions would cost $12.8 trillion, roughly 12% of global GDP; no carbon credit market or government subsidy comes close to closing the gap"
+    explanation: "The fundamental economics are brutal: it is 10-50x cheaper to prevent a tonne of CO2 from being emitted (via renewables, efficiency, or electrification) than to capture it after the fact; direct air capture remains useful for the last 10-15% of 'hard to abate' emissions but cannot substitute for decarbonization, a truth the fossil fuel industry had hoped to obscure"
     world_state_effects:
       climate_temp_anomaly: "+0.05"
       renewable_energy_share: "+0.02"
   breakthrough_cheap:
     status: "DIVERGENCE"
-    description: "Revolutionary breakthrough makes carbon capture cheap and scalable"
-    explanation: "Novel catalysts or biological approaches reduce costs below $50 per tonne"
+    description: "A team at Tsinghua University discovers an engineered enzyme -- inspired by ocean phytoplankton -- that captures CO2 at $28/tonne using seawater and sunlight; the 'Tsinghua Process' can be deployed on floating platforms across tropical oceans; a pilot system off Hainan Island captures 50,000 tonnes in its first year of operation with near-zero energy input"
+    explanation: "The biological approach sidesteps the energy penalty that plagues mechanical systems: the enzyme does the thermodynamic work that fans, heaters, and compressors do in conventional plants, using ambient solar energy; the captured carbon precipitates as calcium carbonate that sinks to the ocean floor; if scaled to 10 million floating platforms, the system could remove 10 gigatonnes annually at a cost comparable to global military spending"
     world_state_effects:
       climate_temp_anomaly: "-0.20"
       renewable_energy_share: "+0.08"
   energy_penalty:
     status: "DIVERGENCE"
-    description: "Carbon capture requires too much energy; net benefit marginal"
-    explanation: "Energy requirements for capture offset much of the climate benefit"
+    description: "A comprehensive lifecycle analysis published in Nature Energy reveals that existing DAC plants consume 7-10 GJ of energy per tonne of CO2 captured; in regions where that energy comes from natural gas (most of the world outside Iceland and Chile), the net CO2 removed is only 60-70% of the headline figure -- and when embodied emissions from manufacturing the plants are included, the number drops to 40%"
+    explanation: "The energy penalty creates a cruel paradox: carbon capture works best where clean energy is abundant, but those places have the least need for it; in fossil-fuel-dependent regions where capture would have the most impact, the energy used to run the plants partly negates the benefit; critics call it 'a giant hamster wheel' that creates an illusion of progress while diverting renewable energy from direct decarbonization"
     world_state_effects:
       climate_temp_anomaly: "+0.02"
       renewable_energy_share: "-0.03"
   abandoned:
     status: "DIVERGENCE"
-    description: "Carbon capture programs largely abandoned as impractical"
-    explanation: "After billions invested, capture proves unable to compete with emissions reduction"
+    description: "The US Department of Energy's $14 billion 'Regional Direct Air Capture Hubs' program is quietly defunded after producing only 2 of its 4 planned megaprojects; Climeworks pivots to industrial process heat; Carbon Engineering's flagship Texas plant is mothballed; the Economist obituary headline reads: 'Carbon Capture, 2009-2035: A Technology That Was Always 10 Years Away'"
+    explanation: "Carbon capture's demise is driven by the same force that killed it before: the relentless cost decline of renewables makes it cheaper to eliminate emissions at the source; by 2035, solar-plus-battery at $0.015/kWh undercuts even the most optimistic carbon capture economics, and governments conclude that every dollar spent on capture would deliver 5-10x more climate benefit if spent on deployment of clean energy"
     world_state_effects:
       climate_temp_anomaly: "+0.08"
       renewable_energy_share: "+0.03"

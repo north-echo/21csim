@@ -2,9 +2,12 @@ id: "2068_digital_civilization"
 year_month: "2068-06"
 title: "Digital Civilization"
 description: >
-  The balance between physical and virtual existence reaches a tipping point.
-  Billions may spend most of their lives in digital spaces, raising fundamental
-  questions about reality, governance, and human purpose.
+  A survey by the Pew-Tsinghua Digital Life Institute found that the average
+  human in 2068 spends 14.2 hours per day in some form of mediated reality.
+  The most popular virtual world, 'Elysium,' has a GDP larger than France's.
+  When journalist Mei-Ling Zhao asked a 16-year-old in Bangkok which world
+  was 'real,' the teenager looked confused and replied: "What do you mean by
+  'which'?"
 domain: "technology"
 confidence: "LOW"
 variable: "digital_civilization_status"
@@ -22,31 +25,31 @@ conditional: null
 outcomes:
   virtual_dominant:
     status: "DIVERGENCE"
-    description: "Most human activity and culture migrates to virtual worlds; physical world becomes infrastructure"
+    description: "Physical cities have become quiet maintenance zones staffed by robots; the real action is in the server farms. A 'meatspace' café in Tokyo where people sit in the same room and talk face-to-face charges $200 per hour as a luxury novelty. Digital architect Ravi Deshmukh designed a virtual Mumbai that 40 million people call home -- it has better plumbing than the original."
     world_state_effects:
       governance_model: 0.60  # virtual governance — novel digital coordination
   physical_dominant:
     status: "DIVERGENCE"
-    description: "Digital fatigue leads to renewed emphasis on physical presence and embodied experience"
+    description: "The 'Unplug Movement,' sparked by Finnish neuroscientist Dr. Elina Korhonen's research linking chronic VR use to hippocampal atrophy, caused 800 million people to abandon virtual worlds in 2067. Analog cafes, paper books, and in-person dinner parties became status symbols. The most coveted luxury in 2068 is a weekend with no screens, no implants, and no algorithmic suggestions -- just weather and silence."
     world_state_effects:
       governance_model: 0.50  # traditional governance — status quo
   hybrid:
     status: "DIVERGENCE"
-    description: "Seamless integration of physical and digital existence becomes the norm"
+    description: "Augmented reality overlays are as ubiquitous as electricity -- you notice them only when they fail. A walk through Buenos Aires layers real-time translation, historical annotations, air quality data, and personalized navigation over the physical streetscape. Argentine designer Valentina Morales calls the blended world 'the first truly universal language: everyone sees the same city differently.'"
     world_state_effects:
       governance_model: 0.65  # hybrid governance — blended coordination
   fragmented:
     status: "ESCALATED"
-    description: "Digital and physical civilizations diverge with incompatible values and governance systems"
+    description: "The 'Partition of 2067' formalized what had been true for years: virtual nations refuse to recognize physical-world tax authority, and physical governments can't enforce laws in digital spaces. Two billion 'digital citizens' have renounced physical-world nationality entirely. Political scientist Dr. Amina Hassan of Cairo calls it 'the first civil war fought without a single bullet -- just competing versions of reality.'"
     world_state_effects:
       governance_model: 0.20  # fragmented governance — split systems
   transcended:
     status: "DIVERGENCE"
-    description: "Consciousness uploading enables existence beyond both physical and traditional digital realms"
+    description: "The first successful consciousness upload -- Korean mathematician Dr. Hyun-ji Park, age 94 and dying of pancreatic cancer -- occurred on March 3, 2068. Her digital self solved three unsolved theorems in the first 48 hours and then requested 'something like sleep, but I don't think you have a word for it.' Twelve hundred people are now on the upload waiting list; the Vatican declared the process 'an open question.'"
     world_state_effects:
       governance_model: 0.70  # post-physical governance — transcendent coordination
   abandoned:
     status: "DIVERGENCE"
-    description: "Major digital infrastructure failures lead to retreat from virtual existence"
+    description: "The 'Three Days Dark' event of 2067 -- a cascading failure triggered by a solar storm that knocked out 40% of global server capacity -- erased 11 virtual nations and the accumulated work of 200 million digital residents. Suicides spiked worldwide. The disaster exposed how fragile digital civilization truly was, and prompted a mass return to physical infrastructure. The phrase 'remember the dark' became a generation's motto."
     world_state_effects:
       governance_model: 0.45  # traditional governance — retreat to basics

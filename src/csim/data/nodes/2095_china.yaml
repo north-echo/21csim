@@ -2,9 +2,13 @@ id: "2095_china"
 year_month: "2095-01"
 title: "China 2095"
 description: >
-  China's position at the end of the 21st century. After demographic decline,
-  technological transformation, and political evolution, China's role in the
-  world is assessed.
+  The People's Republic of China -- or whatever it has become -- celebrated its
+  146th anniversary in 2095 with a ceremony in Tiananmen Square attended by
+  Premier-General Zhao Yufei, 400 dignitaries, and approximately 2,000
+  spectators in a space that once held a million. The square felt empty. The
+  country that once contained 1.4 billion people now holds 680 million, and
+  every statistic about China in 2095 is a story about what was lost and what
+  was built in its place.
 domain: "geopolitics"
 confidence: "LOW"
 variable: "china_status_2095"
@@ -22,25 +26,25 @@ conditional: null
 outcomes:
   superpower:
     status: "DIVERGENCE"
-    description: "China is a dominant global superpower with leading technology and economic output"
+    description: "China's AI-driven economy produces 30% of global GDP with a population half its 2020 size; per capita wealth exceeds every other nation. The 'Jade Net' governance system is a model that 40 countries have licensed. Premier-General Zhao Yufei's New Year address was delivered to 3 billion viewers worldwide, in a Mandarin so precise it was later revealed to have been AI-polished. The joke in Beijing: 'Even our leader's words are manufactured here.'"
     world_state_effects: {}
   democratic:
     status: "DIVERGENCE"
-    description: "China has transitioned to democratic governance; a fundamentally different political entity"
+    description: "The Republic of China held its eighth free election in 2094; voter turnout was 82%. President Lin Mei-Xuan, a former human rights lawyer who spent 12 years in prison under the old regime, governs from a presidential palace in Nanjing -- Beijing having been symbolically abandoned as the capital. The scars remain: a Museum of Surveillance in Shanghai draws 20 million visitors annually, and older citizens still flinch when they see a security camera."
     world_state_effects: {}
   declined:
     status: "DIVERGENCE"
-    description: "Demographic collapse and economic stagnation have reduced China to secondary status"
+    description: "At 680 million people -- less than half its 2020 peak -- China's economy ranks fifth globally. The northeastern provinces have been officially designated 'rewilding zones'; forests are reclaiming cities that housed 50 million. The Yangtze Delta remains prosperous, but the interior is a patchwork of automated farms and empty highways. Travel writer Chen Xiaoming's 'The Emptying' documented 1,000 kilometers of abandoned infrastructure in Sichuan alone."
     world_state_effects: {}
   transformed:
     status: "DIVERGENCE"
-    description: "China transformed into something unrecognizable from its 2000s form; new political and social model"
+    description: "The entity that calls itself China in 2095 bears no resemblance to the People's Republic. It is governed by an AI-human hybrid council, uses a post-monetary allocation system, and has abolished both private property and state ownership in favor of 'commons stewardship.' Its citizens rate their life satisfaction at 8.4 out of 10. Political scientists from every other system study it obsessively and agree on only one thing: they cannot categorize it."
     world_state_effects: {}
   regional:
     status: "DIVERGENCE"
-    description: "China is the dominant Asian power but not a global hegemon"
+    description: "China's Pacific Fleet controls waters from Vladivostok to Jakarta; its economic influence extends across 30 Asian nations through the 'Silk Road Digital' trade network. But Beijing has no bases in Africa, no satellites over the Americas, and no interest in global governance. Ambassador Wang Lihong told a European diplomat with characteristic bluntness: 'Our civilization is 5,000 years old. We do not need to manage yours.'"
     world_state_effects: {}
   fragmented:
     status: "ESCALATED"
-    description: "China has fragmented into multiple successor states or autonomous regions"
+    description: "The 'Seven Chinas' -- Guangdong, Shanghai, Sichuan, Beijing-Hebei, Yunnan, Manchuria, and Tibet-Xinjiang -- each operate as independent states with separate governments, currencies, and foreign policies. The split was formalized in 2088 after the last Premier-General resigned. Cantonese and Mandarin are drifting into mutual unintelligibility. Historian Dr. Li Wei of the Shanghai Republic wrote: 'China was always an empire pretending to be a nation. The pretense finally ended.'"
     world_state_effects: {}

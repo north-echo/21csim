@@ -2,8 +2,13 @@ id: "2095_governance"
 year_month: "2095-01"
 title: "Global Governance 2095"
 description: >
-  The final form of global governance as the century concludes. Whether
-  humanity has achieved effective coordination or remains divided.
+  The question "Who governs humanity?" has no single answer in 2095 and may
+  never again. The UN General Assembly chamber in New York -- renovated,
+  expanded, and now hosting delegates from digital nations and corporate
+  polities alongside traditional states -- has 247 seats, up from 193 in
+  2025. Secretary-General Amina Okafor of Nigeria gavels in the session
+  knowing that real power is distributed among entities that don't all have
+  a physical address.
 domain: "geopolitics"
 confidence: "LOW"
 variable: "governance_2095"
@@ -22,36 +27,36 @@ conditional: null
 outcomes:
   world_federation:
     status: "DIVERGENCE"
-    description: "Functional world federation with democratic governance over global commons"
+    description: "The Earth Federation's third planetary election in 2094 saw 4.2 billion votes cast in 72 hours across every continent, seven orbital habitats, and two Martian colonies. President-General Kwame Asante-Darko of Ghana governs with a mandate that stretches from the ocean floor to the asteroid belt. The federation is imperfect, bureaucratic, and slow -- but for the first time in 10,000 years of civilization, there is one law for one species, and it was chosen by that species' own hand."
     world_state_effects:
       governance_model: 0.95  # world federation — maximum governance
   regional_blocs:
     status: "DIVERGENCE"
-    description: "World divided into regional blocs with their own governance and economic systems"
+    description: "Five blocs, five internets, five currencies, five incompatible visions of the good life. A citizen of the Nairobi Compact cannot stream entertainment from the Atlantic Union; a researcher in the Shanghai Pact cannot access European biotech patents. Cross-bloc travel requires three forms of identification and a 'values alignment assessment.' Political scientist Dr. Obi Nwankwo calls it 'the new Westphalia, drawn with data cables instead of rivers.'"
     world_state_effects:
       governance_model: 0.35  # regional blocs — fragmented
   reformed_un:
     status: "DIVERGENCE"
-    description: "Reformed international body with binding authority on climate, security, and technology"
+    description: "The 'New UN' can deploy peacekeepers, enforce emissions limits, and shut down non-compliant AI systems -- all without a single veto-wielding power to block it. Secretary-General Okafor's office processes 10,000 binding decisions per year. The institution is hated by nationalists, loved by cosmopolitans, and grudgingly respected by everyone in between. Its motto, carved above the entrance in New York: 'Never Again Alone.'"
     world_state_effects:
       governance_model: 0.80  # reformed multilateral — strong coordination
   ai_governed:
     status: "DIVERGENCE"
-    description: "AI systems handle most governance decisions; human role is oversight and values-setting"
+    description: "The Meridian AI processes 99% of routine governance decisions -- trade agreements, resource allocation, infrastructure planning, dispute mediation -- faster and more fairly than any human institution ever did. Human leaders set values and goals; the AI determines how to achieve them. President-General Asante-Darko describes his job honestly: 'I tell the machine what kind of world we want. It tells me what it costs. I say yes or no. That is the entirety of democratic governance in 2095.'"
     world_state_effects:
       governance_model: 0.75  # AI-governed — effective but novel
   anarchic:
     status: "ESCALATED"
-    description: "No effective global governance; power fragmented among states, corporations, and AI systems"
+    description: "Forty-seven entities claim sovereign authority over some part of the human population: nation-states, city-states, corporate polities, digital nations, and two AI systems that govern their own territories without human consultation. No one is in charge. No treaty binds everyone. A Somali fisherman, a Singaporean augmented trader, and a digital consciousness in Luminara live under three entirely different legal systems and share a planet they cannot agree on how to manage."
     world_state_effects:
       governance_model: 0.10  # anarchic — minimal governance
   cooperative:
     status: "DIVERGENCE"
-    description: "Flexible cooperative frameworks enable effective global coordination without formal government"
+    description: "No world government exists, yet somehow the climate is managed, pandemics are contained, and asteroid defense operates flawlessly -- all through overlapping coalitions that form, act, and dissolve like weather patterns. Brazilian diplomat Dr. Carolina Machado, now 80 and the architect of the system, compares it to 'an orchestra without a conductor that somehow plays in tune. Don't ask me how. I designed it and I still don't fully understand why it works.'"
     world_state_effects:
       governance_model: 0.85  # cooperative — high coordination
   authoritarian:
     status: "ESCALATED"
-    description: "Global order maintained by authoritarian surveillance and control systems"
+    description: "The 'Harmony Network' monitors every digital communication, every financial transaction, and every public movement of every person on Earth. Crime is near zero. War is impossible. Dissent is identified and addressed before it can organize. The system delivers peace, prosperity, and a life expectancy of 115 years. It also delivers a world where the last independent journalist, broadcasting from a pirate satellite, signs off each night with: 'Somewhere, someone is watching you watch this. Sleep well.'"
     world_state_effects:
       governance_model: 0.55  # authoritarian — ordered but repressive

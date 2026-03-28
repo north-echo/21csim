@@ -2,9 +2,11 @@ id: "2035_african_union"
 year_month: "2035-06"
 title: "African Union Evolution"
 description: >
-  The trajectory of the African Union and continental integration.
-  Whether Africa achieves deeper economic integration, security cooperation,
-  or remains fragmented by external and internal pressures.
+  Rwandan diplomat Jean-Claude Hakizimana assumes the AU Commission chairmanship
+  with a mandate to transform the organization from a 'talking shop in Addis Ababa'
+  into something with real power; Africa's combined GDP has reached $5.8 trillion,
+  its median age is 22, and its 1.5 billion people constitute the world's largest
+  labor force. The continent's moment has either arrived or been squandered.
 domain: "geopolitical"
 confidence: "MEDIUM"
 variable: "african_union_status"
@@ -21,33 +23,33 @@ conditional: null
 outcomes:
   strengthened:
     status: "DIVERGENCE"
-    description: "African Union gains real authority and institutional capacity"
-    explanation: "Member states cede sovereignty on trade, security, and governance to continental body"
+    description: "The AU's new Peer Review Mechanism gains real enforcement power after 38 member states ratify the 'Kigali Protocol' allowing trade sanctions against members that violate democratic norms; an AU peacekeeping force of 45,000, funded by a 0.2% continental import levy, deploys to stabilize Chad and northern Mozambique without external assistance for the first time"
+    explanation: "Chair Hakizimana's 'African Solutions for African Problems' agenda resonates with a generation tired of Western lectures and Chinese loans alike; the key innovation is tying AU membership benefits -- free trade access, infrastructure investment, and the new Pan-African Payment System -- to governance standards, creating genuine incentives for compliance rather than voluntary aspirations"
     world_state_effects:
       africa_development_index: "+0.08"
   fractured:
     status: "DIVERGENCE"
-    description: "African Union weakened by internal divisions and external interference"
-    explanation: "Regional rivalries and great power competition undermine continental unity"
+    description: "Nigeria and South Africa deadlock over AU reform, each insisting on permanent Security Council-style veto power; China backs the East African bloc while the US cultivates West Africa; Ethiopia and Egypt's Nile dispute paralyzes the Peace and Security Council; a disgusted Hakizimana resigns after 18 months, calling the AU 'a confederation of egos'"
+    explanation: "Great power competition and internal rivalries prove stronger than pan-African aspiration: China, the US, France, and the Gulf states each cultivate client states that vote as blocs within the AU, reproducing the Cold War pattern of external powers using African institutions as proxies; the continent's enormous potential remains fragmented across 55 competing sovereignties"
     world_state_effects:
       africa_development_index: "-0.03"
   economic_integration:
     status: "DIVERGENCE"
-    description: "African Continental Free Trade Area delivers meaningful economic integration"
-    explanation: "AfCFTA implementation accelerates; intra-African trade doubles within a decade"
+    description: "Intra-African trade reaches $420 billion annually -- triple the 2025 level -- as tariffs fall to zero on 90% of goods; a Kenyan flower grower ships to Nigeria in 48 hours via the new Mombasa-Lagos logistics corridor; Ghana's Kantanka Motors exports electric minibuses to 14 African countries; and the AfCFTA secretariat in Accra processes 2 million certificates of origin monthly"
+    explanation: "The free trade area succeeds where political integration stalls because it aligns with economic self-interest: manufacturers gain 1.4 billion potential customers, farmers access larger markets, and the 'Made in Africa' label becomes a source of pride; intra-African trade as a share of total trade rises from 15% to 28%, still below Europe's 60% but climbing fast enough to create its own momentum"
     world_state_effects:
       africa_development_index: "+0.10"
   security_focused:
     status: "DIVERGENCE"
-    description: "AU evolves primarily as security organization responding to conflicts"
-    explanation: "Sahel instability, Horn of Africa tensions, and terrorism drive security-first approach"
+    description: "AU peacekeepers operate in 7 active conflict zones from Mali to Mozambique; the 'African Standby Force' reaches 65,000 troops with Nigerian and South African brigades as its backbone; a drone-surveillance network monitoring the Sahel, funded by a joint EU-AU program, reduces insurgent attacks by 40% but raises civil liberties concerns among human rights groups"
+    explanation: "The security crisis absorbs all institutional energy: with Sahel jihadism spreading, the Horn of Africa destabilized by climate migration, and Great Lakes conflicts flaring again, the AU becomes primarily a military coordination body; economic integration stalls as borders harden for security reasons, and the continent's young population sees more soldiers than entrepreneurs"
     world_state_effects:
       africa_development_index: "+0.03"
       conflict_deaths: "-5000"
   chinese_influenced:
     status: "DIVERGENCE"
-    description: "Chinese economic influence shapes AU priorities and governance"
-    explanation: "Belt and Road debt and Chinese-built AU infrastructure give Beijing significant influence"
+    description: "28 African nations owe more than 30% of their external debt to Chinese state banks; the AU headquarters in Addis Ababa -- built and bugged by China -- now hosts a 'digital infrastructure cooperation center' staffed by Huawei engineers; Kenya, Ethiopia, and Zambia adopt Chinese-designed 'smart city' surveillance systems, and Beijing's ambassador attends AU summit sessions as an unofficial 29th permanent observer"
+    explanation: "Chinese influence operates through debt dependency, infrastructure lock-in, and elite cultivation: African leaders educated at Chinese universities, African telecoms built on Huawei equipment, and African governments dependent on Chinese loans find it difficult to resist Beijing's preferences on Taiwan votes, UN resolutions, and technology standards; the relationship is not colonial in the old sense but creates a soft hegemony that limits African strategic autonomy"
     world_state_effects:
       africa_development_index: "+0.05"
       china_power_index: "+0.02"

@@ -2,10 +2,12 @@ id: "2045_space_manufacturing"
 year_month: "2045-06"
 title: "In-Space Manufacturing"
 description: >
-  Zero-gravity manufacturing enables products impossible to make on Earth:
-  perfect fiber optics, exotic alloys, 3D-printed organs, and ultra-pure
-  semiconductors. Whether space factories become economically viable depends
-  on launch costs and demand for unique materials.
+  Varda Space Industries' third orbital factory produces 400 kg of ZBLAN fiber
+  optic cable worth $340 million -- more per kilogram than cocaine. The cable,
+  drawn in perfect microgravity, transmits data with 1/100th the signal loss
+  of terrestrial fiber. Meanwhile, Airbus's orbital alloy forge creates titanium-
+  aluminum composites that weigh half as much as steel and flex like rubber,
+  materials that simply cannot crystallize under Earth's gravity.
 domain: "technology"
 confidence: "LOW"
 variable: "space_manufacturing_status"
@@ -22,8 +24,8 @@ conditional: null
 outcomes:
   commercially_viable:
     status: "DIVERGENCE"
-    description: "Space factories produce high-value goods at profit; multiple orbital manufacturing platforms operational"
-    explanation: "ZBLAN fiber optics and metal alloys manufactured in orbit command premium prices that exceed launch costs"
+    description: "Seven orbital factories generate $12 billion in annual revenue, turning profit margins that would make a luxury goods CEO weep. Varda's ZBLAN fiber sells to telecom companies at $850,000 per kilometer; Space Forge's semiconductor wafers achieve 99.9999% purity impossible on Earth. Launch costs at $180/kg finally make the economics work."
+    explanation: "The tipping point came when reusable heavy-lift rockets dropped launch costs below $200/kg, making orbital manufacturing profitable for products where microgravity quality commands 100x premium prices."
     world_state_effects:
       space_development_index: "+0.10"
       global_gdp_growth_modifier: "+0.01"
@@ -31,20 +33,20 @@ outcomes:
       2045_space_economy.on_track: "+0.05"
   niche_products:
     status: "DIVERGENCE"
-    description: "Space manufacturing works for a few ultra-high-value products; limited scale"
-    explanation: "Pharmaceutical crystals and specialty semiconductors produced in orbit at small volumes"
+    description: "Merck's orbital pharmaceutical lab grows protein crystals for three blockbuster drugs that cannot be manufactured terrestrially; TSMC's experimental space fab produces 200 wafers per month of radiation-hardened chips for spacecraft. Total orbital manufacturing revenue: $3.4 billion -- profitable but niche, like Swiss watchmaking in a digital age."
+    explanation: "Only products where microgravity quality is irreplaceable justify the cost; the space manufacturing revolution remains real but narrow, serving specialized markets rather than transforming industry."
     world_state_effects:
       space_development_index: "+0.06"
   research_only:
     status: "DIVERGENCE"
-    description: "Space manufacturing remains at research stage; products demonstrated but not commercially scaled"
-    explanation: "Proof-of-concept successful but business case doesn't close; remains government-funded R&D"
+    description: "NASA and ESA demonstrate flawless ZBLAN production, perfect crystal growth, and novel alloy forging aboard the ISS-2 station -- but no private company can make the numbers work at current launch costs of $400/kg. The technology sits in a frustrating limbo: proven in principle, waiting for someone else's breakthrough in launch economics."
+    explanation: "Every space manufacturing business plan assumes launch costs dropping below $200/kg, but they stubbornly plateau at $400. Government agencies keep funding demos; investors keep not writing checks."
     world_state_effects:
       space_development_index: "+0.03"
   transformative:
     status: "DIVERGENCE"
-    description: "Space manufacturing revolution; orbital factories produce goods that reshape terrestrial industries"
-    explanation: "Breakthrough in automated orbital assembly enables mass production; new material science frontiers"
+    description: "Autonomous robotic assemblers build a 200-meter orbital factory in 6 months from modular components, slashing construction costs 90%. The factory mass-produces metamaterials, perfect lenses, and bioprinted organs in quantities that undercut terrestrial alternatives. Boeing closes two aircraft plants and sources fuselage panels from orbit; 'Made in Space' becomes a quality label."
+    explanation: "Self-replicating construction robots, pioneered for lunar base building, prove transformative when redirected to orbital factory construction. What was a cottage industry becomes an industrial revolution."
     world_state_effects:
       space_development_index: "+0.15"
       global_gdp_growth_modifier: "+0.02"
@@ -52,7 +54,7 @@ outcomes:
       2045_space_economy.explosive: "+0.05"
   abandoned:
     status: "DIVERGENCE"
-    description: "Space manufacturing ventures fail; no viable orbital production achieved"
-    explanation: "Quality control problems, high launch costs, and Earth-based alternatives kill business cases"
+    description: "Varda's fourth orbital factory produces defective ZBLAN fiber due to vibration contamination from thruster firings; the entire $280 million batch is worthless. Space Forge's re-entry capsule burns up, destroying 14 months of semiconductor production. Investors flee; terrestrial alternatives improve faster than expected. 'Space manufacturing was a solution looking for a problem,' sighs one former CEO."
+    explanation: "The gap between laboratory demonstration and industrial production proves unbridgeable: microgravity quality control is fiendishly difficult, and every batch requires a launch and re-entry -- two of the riskiest operations in engineering."
     world_state_effects:
       space_development_index: "-0.02"

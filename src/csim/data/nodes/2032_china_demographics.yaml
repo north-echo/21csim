@@ -2,9 +2,10 @@ id: "2032_china_demographics"
 year_month: "2032-06"
 title: "China Demographic Reckoning"
 description: >
-  China faces the consequences of decades of one-child policy and rapid aging.
-  Working-age population shrinks while elderly population surges, challenging
-  economic growth and social stability.
+  China's population drops below 1.38 billion, with 310 million citizens over 60;
+  entire apartment blocks in Hegang and Yumen stand empty while Shanghai's eldercare
+  facilities operate at 180% capacity. The dependency ratio crosses 50% -- meaning
+  every two workers support one retiree -- for the first time in the PRC's history.
 domain: "demographics"
 confidence: "MEDIUM"
 variable: "china_demographics_status"
@@ -26,26 +27,26 @@ conditional: null
 outcomes:
   economic_slowdown:
     status: "DIVERGENCE"
-    description: "China's growth slows dramatically as workforce shrinks and aging costs mount"
-    explanation: "Demographic headwinds overwhelm productivity gains; growth falls below 3%"
+    description: "GDP growth falls to 2.1% -- the lowest since Deng's reforms -- as pension costs consume 14% of government spending; Guangdong province, once the 'factory of the world,' reports its first-ever labor shortage in manufacturing, and property values in third-tier cities fall 40% as the buying population simply vanishes"
+    explanation: "The demographic math is merciless: China added 15 million workers annually in the 2000s but now loses 8 million per year, while healthcare costs for the elderly double every six years; the State Council's internal projections, leaked to the Financial Times, show growth falling below 1% by 2038 without radical intervention"
     world_state_effects:
       china_power_index: "-0.08"
   automation_compensates:
     status: "DIVERGENCE"
-    description: "Massive automation investment offsets demographic decline"
-    explanation: "China deploys robots and AI to maintain productivity despite shrinking workforce"
+    description: "China installs 1.2 million industrial robots in 2032 alone -- more than the rest of the world combined; Foxconn's Zhengzhou iPhone factory operates with 90% fewer workers than 2025, and BYD's fully automated Shenzhen plant produces an electric vehicle every 47 seconds with 12 human employees"
+    explanation: "The State Council's 'Robot Nation' initiative channels $340 billion into automation between 2029 and 2035; China's unique advantage is that a command economy can deploy robots without negotiating with unions or navigating democratic resistance, turning the demographic crisis into forced modernization"
     world_state_effects:
       china_power_index: "-0.02"
   immigration_impossible:
     status: "DIVERGENCE"
-    description: "Cultural and political barriers prevent immigration as a solution"
-    explanation: "China cannot replicate Western immigration models; homogeneity preference persists"
+    description: "A pilot program to attract 500,000 Southeast Asian workers to Yunnan and Guangxi provinces collapses after anti-foreigner riots in Kunming and a Weibo campaign with 800 million views demanding 'China for the Chinese'; only 23,000 visas are actually issued"
+    explanation: "The Han-centric national identity proves immovable: 91% of Chinese citizens oppose immigration in government polling, local officials sabotage integration programs, and the workers who do arrive face systematic discrimination that makes retention impossible; China confronts the reality that its demographic problem has no cultural shortcut"
     world_state_effects:
       china_power_index: "-0.06"
   military_adventurism:
     status: "ESCALATED"
-    description: "Demographic pressure drives aggressive foreign policy to distract from domestic woes"
-    explanation: "CCP uses nationalist fervor to maintain legitimacy as economic growth falters"
+    description: "As youth unemployment hits 28% and pension protests erupt in Sichuan, state media pivots to a drumbeat of nationalist programming about Taiwan and the South China Sea; PLA Navy conducts its largest-ever exercises in the Strait, and defense spending jumps 18% in a single year despite the economic slowdown"
+    explanation: "The CCP's implicit social contract -- rising living standards in exchange for political compliance -- breaks down, and the party reaches for the oldest tool in the authoritarian playbook: external enemies; leaked Politburo minutes reveal explicit discussion of 'using patriotic energy to channel domestic frustration'"
     world_state_effects:
       china_power_index: "-0.03"
     cascading_modifiers:
@@ -53,7 +54,7 @@ outcomes:
       2026_taiwan_strait.blockade: "+0.08"
   reform_and_adapt:
     status: "DIVERGENCE"
-    description: "China successfully reforms pension, healthcare, and labor systems"
-    explanation: "Pragmatic policy reforms extend working ages, improve eldercare, and boost productivity"
+    description: "New Premier Li Qiang pushes through a sweeping reform package raising retirement age to 65 (from 60 for men and 55 for women), consolidating 2,800 rural pension funds into a national system, and deploying AI diagnostics in 120,000 rural clinics to compensate for doctor shortages"
+    explanation: "The reforms are politically painful -- 4 million people protest the retirement age increase -- but the CCP's capacity for top-down implementation proves decisive; within three years, pension fund solvency improves by 40%, and the rural healthcare AI system catches 2.3 million early-stage cancers that would have gone undiagnosed"
     world_state_effects:
       china_power_index: "+0.02"

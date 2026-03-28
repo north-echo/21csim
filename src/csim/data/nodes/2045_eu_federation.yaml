@@ -2,9 +2,11 @@ id: "2045_eu_federation"
 year_month: "2045-01"
 title: "EU Federation Decision"
 description: >
-  The European Union faces a definitive choice on deeper integration. Whether
-  Europe federalizes, fragments, or finds a middle path determines its role
-  as a global power in the latter half of the century.
+  European Commission President Katarina Novak of Slovakia convenes an extraordinary
+  summit in Strasbourg after Germany and France publish a joint 'federal manifesto'
+  proposing a unified EU treasury, military, and foreign ministry. Polish and Hungarian
+  delegations threaten to walk out; Italian Prime Minister Bianchi brokers a midnight
+  compromise that satisfies nobody completely -- the European way.
 domain: "regional"
 confidence: "MEDIUM"
 variable: "eu_federation_status"
@@ -36,33 +38,33 @@ conditional: null
 outcomes:
   full_federation:
     status: "DIVERGENCE"
-    description: "EU becomes a true federal state with shared fiscal policy, military, and foreign affairs"
+    description: "The Treaty of Strasbourg establishes the 'European Federal Republic' with a directly elected president, shared 600-billion-euro defense budget, and unified tax authority. German soldier Hauptmann Felix Brauer commands a Franco-German-Polish brigade; a Finnish programmer pays the same tax rate as a Portuguese baker. The Brussels bureaucracy triples in size."
     world_state_effects:
       eu_cohesion: "+0.20"
       global_democracy_index: "+0.03"
   enhanced_cooperation:
     status: "DIVERGENCE"
-    description: "Core EU nations deepen integration while maintaining national sovereignty"
+    description: "The 'Paris Group' -- France, Germany, Benelux, Spain, and Italy -- creates a joint fiscal stabilization fund and integrated border force while keeping separate militaries and tax codes. National parliaments retain veto power on defense deployments; the result is deeper than NATO but shallower than federation."
     world_state_effects:
       eu_cohesion: "+0.08"
   two_speed:
     status: "DIVERGENCE"
-    description: "Inner core federalizes while outer ring remains loosely associated"
+    description: "A 12-nation inner core including the original six plus Spain, Portugal, Ireland, Finland, Austria, and Slovenia federalizes under the Strasbourg Treaty; Poland, Hungary, Romania, and the Nordics remain in a looser 'European Economic Area Plus.' Two Europes emerge with different passports, tax rates, and military obligations."
     world_state_effects:
       eu_cohesion: "+0.05"
   dissolution:
     status: "ESCALATED"
-    description: "EU dissolves into regional blocs or individual nation-states"
+    description: "Italy's exit following a sovereign debt crisis triggers a cascade: Greece, Portugal, and Spain leave within 18 months. The European Central Bank collapses under capital flight; the euro loses 45% of its value in a week. By Christmas, the Schengen zone is gone and border checkpoints return to the Brenner Pass and the Rhine bridges for the first time in 60 years."
     world_state_effects:
       eu_cohesion: "-0.25"
       global_democracy_index: "-0.03"
   status_quo:
     status: "DIVERGENCE"
-    description: "EU muddles through without major reform; institutional inertia prevails"
+    description: "After 72 hours of summit negotiations, leaders produce a 340-page communique that changes almost nothing. Commission President Novak privately admits the EU 'governs by exhaustion -- we are too tired to integrate and too intertwined to separate.' The euro holds, borders stay open, and nothing else gets decided."
     world_state_effects:
       eu_cohesion: "-0.02"
   defense_federation:
     status: "DIVERGENCE"
-    description: "EU federalizes defense and foreign policy while keeping economic sovereignty"
+    description: "The European Defense Union deploys 280,000 troops under a single command structure led by French General Claire Moreau, while each nation keeps its own tax code, welfare system, and economic policy. The arrangement is modeled on NATO but with teeth -- and without the Americans, who quietly welcome European self-sufficiency."
     world_state_effects:
       eu_cohesion: "+0.10"

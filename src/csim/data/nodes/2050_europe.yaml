@@ -2,9 +2,12 @@ id: "2050_europe"
 year_month: "2050-01"
 title: "Europe at Mid-Century"
 description: >
-  Europe's political and economic trajectory reaches a definitive point. Whether
-  the continent federalizes, fragments, or finds a new model determines its
-  role in the global order.
+  Europe at mid-century: median age 49, population 440 million and shrinking,
+  but GDP per capita still the world's highest. The European Parliament in
+  Strasbourg debates in 27 languages (plus two AI translators); café culture
+  thrives in Barcelona and Vienna; but the young leave for Singapore, Nairobi,
+  and Austin. European Commission President Sofia Papadopoulos calls it 'a
+  comfortable decline we can no longer afford.'
 domain: "regional"
 confidence: "LOW"
 variable: "europe_status"
@@ -22,37 +25,37 @@ conditional: null
 outcomes:
   federation:
     status: "DIVERGENCE"
-    description: "European federation established as a major global power with unified military and fiscal policy"
+    description: "The European Federal Republic, ratified in Strasbourg with 24 of 27 member states, deploys the world's second-largest military, issues eurobonds backed by $22 trillion in collective GDP, and speaks with one voice at the UN Security Council. President Papadopoulos delivers the federation's inaugural address in Greek, French, and German to 400 million new federal citizens."
     world_state_effects:
       eu_cohesion: "+0.20"
       global_democracy_index: "+0.03"
   two_speed:
     status: "DIVERGENCE"
-    description: "Core Europe integrates deeply while periphery maintains looser association"
+    description: "The 'Charlemagne Core' of 14 nations shares fiscal policy, foreign affairs, and defense; the remaining members participate in the single market but keep their own budgets and armies. A Berliner and a Parisian share a passport; a Pole and a Romanian do not. The arrangement creates a functioning two-tier Europe that satisfies no one perfectly and works well enough."
     world_state_effects:
       eu_cohesion: "+0.05"
   dissolved:
     status: "ESCALATED"
-    description: "European project collapses; continent returns to nation-state competition"
+    description: "The final straw is a Greek default that the European Stability Mechanism cannot absorb. Italy follows within months; the euro ceases to exist on a Tuesday in March. Germany and France maintain a bilateral alliance; everyone else scrambles for bilateral trade deals. The Schengen zone becomes a memory. Border fences go up between Austria and Hungary, Belgium and Netherlands, and a hundred other places that forgot what borders felt like."
     world_state_effects:
       eu_cohesion: "-0.25"
       global_democracy_index: "-0.03"
   superpower:
     status: "DIVERGENCE"
-    description: "United Europe emerges as third superpower alongside US and China"
+    description: "Europe's combined $22 trillion economy, 280,000-strong integrated military, and world-leading AI regulation framework make it the decisive swing power in the US-China rivalry. When Brussels speaks, both Washington and Beijing listen. European Commission President Papadopoulos brokers the Taiwan Settlement and wins the Nobel Peace Prize, becoming the first EU leader with genuine global clout."
     world_state_effects:
       eu_cohesion: "+0.15"
       us_global_standing: "-0.03"
   social_model:
     status: "DIVERGENCE"
-    description: "European social model proves most resilient; attracts global emulation"
+    description: "While the US and China optimize for GDP and power, Europe optimizes for wellbeing -- and wins. Universal healthcare, 35-hour work weeks, guaranteed parental leave, and the world's cleanest cities make European life expectancy the highest on Earth at 89 years. Japan, South Korea, and Chile adopt the 'Copenhagen Model'; young Americans emigrate to Amsterdam and Lisbon in record numbers."
     world_state_effects:
       eu_cohesion: "+0.10"
       global_democracy_index: "+0.05"
       inequality_index: "-0.05"
   fortress:
     status: "DIVERGENCE"
-    description: "Europe turns inward; strong borders, limited immigration, declining global influence"
+    description: "Fortress Europe: AI-patrolled borders reduce illegal immigration to near zero; a 'European Cultural Preservation Act' limits non-EU migration to 50,000 per year continent-wide. The economy stagnates as the labor force shrinks; universities lose their global edge as international students are denied visas. Europe becomes a beautiful, aging museum -- exquisite to visit, impossible to join."
     world_state_effects:
       eu_cohesion: "+0.03"
       global_democracy_index: "-0.02"

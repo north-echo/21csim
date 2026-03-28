@@ -2,9 +2,12 @@ id: "2075_arctic_settled"
 year_month: "2075-01"
 title: "Arctic Settled"
 description: >
-  The long-term outcome for the Arctic region as ice-free conditions become
-  permanent. Whether new settlements, governance, and economies emerge in
-  the far north.
+  The city of New Longyearbyen, population 45,000, sits where permafrost
+  existed within living memory. Its residents grow vegetables in midnight-sun
+  greenhouses and commute by electric ferry across waters that were solid ice
+  when their grandparents were born. Mayor Ingrid Svalbard-Chen, whose
+  Chinese-Norwegian family has lived on Svalbard for three generations, calls
+  it "the city that climate change built -- our guilt made habitable."
 domain: "geopolitics"
 confidence: "LOW"
 variable: "arctic_settled_status"
@@ -21,21 +24,21 @@ conditional: null
 outcomes:
   governed:
     status: "DIVERGENCE"
-    description: "Arctic under effective international governance with balanced development and protection"
+    description: "The Arctic Council 2.0, expanded to include China, India, and the African Union, manages shipping lanes carrying 30% of global trade, a network of research stations, and 14 marine protected areas. Commissioner Aleksei Volkov signs 400 permits per day from his office in Murmansk, where roses now bloom in the garden outside -- a fact he finds 'beautiful and obscene in equal measure.'"
     world_state_effects: {}
   exploited:
     status: "ESCALATED"
-    description: "Arctic resources extracted intensively; environmental damage extensive but economically productive"
+    description: "Eighteen mining complexes dot the Canadian Arctic Archipelago, extracting rare earth minerals from thawed ground that was locked in ice for 100,000 years. The tailings ponds are visible from orbit as toxic blue pools. Dene elder Thomas Blackwater, who remembers hunting caribou across this land as a boy, testified before Parliament: 'They melted our home and then they mined the grave.'"
     world_state_effects: {}
   protected:
     status: "DIVERGENCE"
-    description: "Arctic preserved as a global nature reserve; human activity strictly limited"
+    description: "The Arctic Global Sanctuary, expanded in 2072, is now patrolled by 400 autonomous vessels that turn back any unauthorized ship. A lottery system allows 10,000 visitors per year; the waiting list is 22 years long. Rewilded muskox herds have expanded across Banks Island, and wolf packs have returned to areas they abandoned decades ago. Biologist Dr. Elin Magnusdottir of Iceland calls it 'the Earth healing in the one place we agreed to leave alone.'"
     world_state_effects: {}
   abandoned:
     status: "DIVERGENCE"
-    description: "Interest in Arctic development wanes as resources found elsewhere or demand declines"
+    description: "Asteroid mining and fusion power made Arctic resources worthless by 2070; the shipping routes proved less economical than hoped once the hyperloop network matured. The handful of Arctic settlements that sprang up in the 2050s are slowly emptying. A Canadian real estate listing for an entire abandoned mining town on Baffin Island -- 'turnkey, just add people' -- went viral as a joke, then sold to a wellness retreat operator from Vancouver."
     world_state_effects: {}
   indigenous:
     status: "DIVERGENCE"
-    description: "Arctic governance led by indigenous peoples who gain sovereignty over the region"
+    description: "The Inuit Circumpolar Sovereignty Agreement of 2071 granted indigenous peoples governing authority over 8 million square kilometers of Arctic territory. President Niviaq Johansen of the Arctic Indigenous Federation manages the region using traditional ecological knowledge integrated with satellite monitoring. 'My grandmother navigated by ice,' she told the General Assembly. 'I navigate by data. The land is the same.'"
     world_state_effects: {}

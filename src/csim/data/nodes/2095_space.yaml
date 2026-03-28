@@ -2,9 +2,12 @@ id: "2095_space"
 year_month: "2095-01"
 title: "Space Civilization 2095"
 description: >
-  The state of human presence in space at century's end. Whether humanity
-  has become a truly multiplanetary species or space remains a frontier
-  of limited activity.
+  Governor Elena Vasquez of Mars declared independence from Earth authority
+  on Mars Day, 2089, citing communication-delay governance as "colonialism
+  at lightspeed." The 12 self-sustaining Mars habitats house 2,400 permanent
+  residents who have developed their own dialect, their own cuisine (mostly
+  hydroponics-based, heavy on fungi), and their own answer to the question
+  "Where are you from?" -- a shrug and a gesture toward the rust-red sky.
 domain: "technology"
 confidence: "LOW"
 variable: "space_status_2095"
@@ -23,36 +26,36 @@ conditional: null
 outcomes:
   multiplanetary:
     status: "DIVERGENCE"
-    description: "Humanity permanently settled on multiple worlds with self-sustaining colonies"
+    description: "Mars: 12,000 residents across four cities. Moon: 25,000 across six settlements. Orbital habitats: 50,000 across twenty stations. Ceres mining colony: 3,000. Total off-Earth population: 90,000 and the first generation born entirely in space has children of its own. When asked by a journalist if he considered himself human, 14-year-old Mars-born Tomás Vasquez-Liu replied without hesitation: 'Of course. Just not the kind that needs a blue sky.'"
     world_state_effects:
       space_development_index: "+0.25"
   orbital_only:
     status: "DIVERGENCE"
-    description: "Human presence limited to orbital habitats and stations; planetary colonization stalled"
+    description: "The great O'Neill cylinders at L4 and L5 house 80,000 people in rotating habitats with artificial gravity, weather, and ecosystems. They are marvels of engineering and deeply strange places to visit: a river flows in a circle, the horizon curves upward, and the sun is a light panel that dims on schedule. Planetary colonies failed -- Mars was too hostile, the Moon too barren -- but these spinning cans in the void have become, improbably, home."
     world_state_effects:
       space_development_index: "+0.10"
   interstellar:
     status: "DIVERGENCE"
-    description: "First missions to other star systems underway; humanity reaching beyond the solar system"
+    description: "The generation ship 'Exodus,' carrying 10,000 souls, departed for Proxima Centauri b in 2092. Its crew will never see their destination; their grandchildren will. The ship's AI transmits a weekly update that Earth receives 4.2 years later. The most recent message, from Chief Botanist Dr. Aisha Patel-Mensah, described the first flowers blooming in the ship's garden: 'Marigolds. They don't know they're between stars. They just grow toward the light.'"
     world_state_effects:
       space_development_index: "+0.35"
   abandoned:
     status: "DIVERGENCE"
-    description: "Space development largely abandoned; resources redirected to Earth-based priorities"
+    description: "The last human left orbit in 2088 when the International Space Station III was decommissioned. The Moon base was mothballed a decade ago; the Mars habitats are maintained by robots that send back photographs nobody looks at. Earthbound philosopher Dr. Marcus Jefferson III wrote: 'We reached for the stars and then looked down at our feet and saw the mess we'd made. Cleaning your room isn't romantic, but it was the right thing to do.'"
     world_state_effects:
       space_development_index: "-0.15"
   thriving:
     status: "DIVERGENCE"
-    description: "Space economy and population growing rapidly; becoming a significant fraction of human civilization"
+    description: "Half a million humans live off-Earth; the space economy generates $20 trillion annually -- 12% of global GDP. The orbital manufacturing platforms produce semiconductors, pharmaceuticals, and alloys impossible to create in gravity. Space-born humans are taller, thinner, and increasingly distinct from their Earth-born cousins. Demographer Dr. Mei Chen estimates that by 2150, space-born humans will constitute their own ethnic group. 'We are watching speciation in real time,' she says, 'driven not by nature but by architecture.'"
     world_state_effects:
       space_development_index: "+0.30"
   commercial:
     status: "DIVERGENCE"
-    description: "Space is a major economic zone for mining, manufacturing, and energy production"
+    description: "Asteroid mining alone generates $8 trillion annually; orbital solar power beams energy to 2 billion people; and the zero-gravity pharmaceutical industry has produced cures for three cancers that proved impossible to synthesize on Earth. Space is not a frontier -- it's an industrial district. The 30,000 workers on the Ceres mining platform live in company towns, eat company food, and joke that they traded one form of gravity for another: 'Up here, the corporation is the only thing holding you down.'"
     world_state_effects:
       space_development_index: "+0.20"
   military:
     status: "ESCALATED"
-    description: "Space development primarily driven by military competition; weaponization of orbit"
+    description: "Four hundred orbital weapons platforms circle the Earth in a lattice of mutual destruction so precise that military analysts call it 'the Cage.' Each platform can strike any point on the planet's surface in 90 seconds. Civilian space access is forbidden without military clearance. The Moon hosts three competing early-warning bases whose crews never speak to each other. Astronaut-turned-peace-activist Dr. Nikolai Petrov calls it 'the most expensive argument in history, conducted in the silence of space, where no one can hear you negotiate.'"
     world_state_effects:
       space_development_index: "+0.10"

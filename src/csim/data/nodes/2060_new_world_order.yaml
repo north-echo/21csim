@@ -2,9 +2,10 @@ id: "2060_new_world_order"
 year_month: "2060-01"
 title: "New World Order"
 description: >
-  The global power structure settles into a new configuration after decades of
-  shifting alliances, rising powers, and technological disruption. The
-  post-WWII international order is definitively replaced.
+  The Treaty of Nairobi (2058) formally dissolved NATO and the UN Security Council's
+  veto system in a single weekend session; Nigerian diplomat Amara Okafor-Singh, who
+  brokered the deal over 72 sleepless hours, later said she felt like "a midwife at a
+  funeral and a birth simultaneously."
 domain: "geopolitics"
 confidence: "LOW"
 variable: "world_order_status"
@@ -23,36 +24,36 @@ conditional: null
 outcomes:
   multipolar:
     status: "DIVERGENCE"
-    description: "Multiple great powers balance each other in a complex multipolar system"
+    description: "Seven nations maintain fleets of orbital weapons platforms in a precarious balance; the 'Long Peace' holds because, as Brazilian President Mariana Costa quipped, 'nobody can afford to blink when everyone's finger is on a button.'"
     world_state_effects:
       governance_model: 0.50  # multipolar — moderate coordination
   us_china_duopoly:
     status: "DIVERGENCE"
-    description: "US and China dominate global affairs as co-equal superpowers with defined spheres"
+    description: "The 'Pacific Compact' of 2057 formalized what everyone already knew: Washington governs the Atlantic world, Beijing governs the Pacific one, and the 147 nations caught between them keep two sets of compliance software installed on every server."
     world_state_effects:
       governance_model: 0.45  # bipolar — structured but narrow
   un_reformed:
     status: "DIVERGENCE"
-    description: "Reformed United Nations gains real authority as a global governance body"
+    description: "The 'New York Parliament,' as critics call it, commands its own rapid-response force of 80,000 and levies a 0.3% global transaction tax; Secretary-General Priya Chakraborty of India became the first person to veto a sovereign nation's budget, triggering riots in Jakarta and applause in Geneva."
     world_state_effects:
       governance_model: 0.80  # multilateral — strong global governance
   regional_blocs:
     status: "DIVERGENCE"
-    description: "World organized into regional trade and security blocs with limited global coordination"
+    description: "Five mega-blocs control 94% of global GDP: the Atlantic Union, the Shanghai Pact, the Nairobi Compact, the Andean Federation, and the South Asian Alliance. Crossing a bloc border now requires a visa, a health certificate, and a compatible neural-interface standard."
     world_state_effects:
       governance_model: 0.35  # regional blocs — fragmented coordination
   ai_governed:
     status: "DIVERGENCE"
-    description: "AI systems mediate international disputes and manage global commons"
+    description: "The 'Meridian System,' a distributed AI housed across 22 data centers on every continent, adjudicates trade disputes, allocates fishing rights, and once prevented a nuclear exchange by independently rerouting Pakistani and Indian communications during the 2059 Kashmir crisis. No human signed the ceasefire."
     world_state_effects:
       governance_model: 0.75  # AI-mediated — effective but novel
   anarchic:
     status: "ESCALATED"
-    description: "No stable global order; nations and non-state actors compete in a fragmented landscape"
+    description: "After the collapse of three international bodies in six years, the geopolitical map resembles 1648 more than 2000. The private military company Aegis Global now has a larger fleet than most navies, and its CEO, former US Admiral Marcus Reeves, controls the Strait of Malacca from a converted oil platform."
     world_state_effects:
       governance_model: 0.10  # anarchic — minimal governance
   cooperation:
     status: "DIVERGENCE"
-    description: "Unprecedented international cooperation driven by shared existential challenges"
+    description: "The 'Three Crises' -- the 2054 pandemic, the Greenland ice sheet collapse, and the Taiwan AI incident -- broke something in the old rivalries. For the first time, all 193 nations ratified a binding treaty in the same calendar year; Costa Rican negotiator Diego Vargas Solano wept openly at the signing."
     world_state_effects:
       governance_model: 0.85  # cooperative — high coordination

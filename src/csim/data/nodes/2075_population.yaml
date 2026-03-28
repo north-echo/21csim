@@ -2,9 +2,12 @@ id: "2075_population"
 year_month: "2075-01"
 title: "Global Population 2075"
 description: >
-  World population level as demographic transition completes globally. The
-  balance between declining fertility, life extension, and migration patterns
-  determines the size of humanity.
+  The UN Population Division, led by demographer Dr. Chika Eze of Nigeria,
+  released its 2075 report from a headquarters that was, symbolically, half
+  empty due to staff shortages. The headline number -- global population has
+  declined for the 10th consecutive year -- was met with neither celebration
+  nor alarm, just the weary shrug of a species that has been watching its own
+  numbers shrink for a decade and still isn't sure how to feel about it.
 domain: "demographics"
 confidence: "LOW"
 variable: "population_2075"
@@ -21,26 +24,26 @@ conditional: null
 outcomes:
   8_billion:
     status: "DIVERGENCE"
-    description: "Global population holds near 8 billion with balanced demographics"
+    description: "Life extension therapies in wealthy nations offset fertility decline in poorer ones, holding humanity at 8.1 billion in an eerie equilibrium. The median age is 42 globally, but the distribution is bimodal: 28 in sub-Saharan Africa, 56 in East Asia. Nigerian children and Japanese centenarians inhabit the same planet but barely the same century."
     world_state_effects:
       global_population_billions: "+0.00"
   7_billion:
     status: "DIVERGENCE"
-    description: "Population declined to approximately 7 billion through sustained low fertility"
+    description: "Seven billion humans -- a number that would have seemed impossibly large in 1970 and impossibly small in 2050. Every year, roughly 90 million die and 60 million are born; the gap widens each year. Real estate prices in most cities have been falling for a decade. Japanese artist Haruki Yamamoto's installation '30 Million Empty Chairs' -- one for each classroom seat that will never be filled -- spans an entire prefecture."
     world_state_effects:
       global_population_billions: "-1.0"
   9_billion:
     status: "DIVERGENCE"
-    description: "Population still near 9 billion due to life extension and higher-than-expected fertility in some regions"
+    description: "Longevity treatments pushed life expectancy past 100 in 30 countries, and sub-Saharan Africa's fertility rate stabilized at 3.2 rather than falling to replacement. At 9.1 billion, Earth strains: water tables drop, protein demand pushes agriculture to its limits, and megacities like Lagos (population 45 million) operate at a density that urban planner Dr. Folake Adeyemo calls 'organized chaos with good intentions.'"
     world_state_effects:
       global_population_billions: "+1.0"
   declining:
     status: "DIVERGENCE"
-    description: "Population in rapid decline with no sign of stabilizing; below 7 billion and falling"
+    description: "At 6.4 billion and falling by 100 million per year, the math is terrifying in its simplicity. By 2100, humanity could number fewer than 4 billion. Entire regions of Eastern Europe and East Asia are returning to wilderness; satellite imagery of rural Romania shows forests reclaiming villages like slow green waves. Demographer Dr. Anna Kowalski of Poland calls it 'extinction in slow motion -- except nobody's being killed. People just stopped being born.'"
     world_state_effects:
       global_population_billions: "-1.5"
   stable:
     status: "DIVERGENCE"
-    description: "Population has stabilized through a combination of policy interventions and life extension"
+    description: "A combination of universal life extension access, pro-natalist incentives, and robotic eldercare has stabilized population at 7.9 billion. The 'Singapore Compromise' -- generous parenting support paired with longevity treatments that keep grandparents healthy enough to help raise children -- has become the global template. Birth rates haven't risen; people have simply stopped dying on schedule."
     world_state_effects:
       global_population_billions: "+0.00"

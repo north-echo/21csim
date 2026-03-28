@@ -2,9 +2,12 @@ id: "2095_population"
 year_month: "2095-01"
 title: "Global Population 2095"
 description: >
-  World population near the end of the 21st century. The cumulative effect
-  of fertility decline, life extension, and potential catastrophes determines
-  humanity's numbers.
+  The UN Population Clock, displayed on screens in every capital on Earth,
+  ticked past a number in 2095 that made demographers pause: for the first
+  time since the clock was invented, the number was lower than it had been
+  the year before, and the year before that, and the decade before that. Dr.
+  Chika Eze of Nigeria, the clock's custodian, stood before the display and
+  said quietly: "The clock is running backwards. It has never done that before."
 domain: "demographics"
 confidence: "LOW"
 variable: "population_2095"
@@ -22,31 +25,31 @@ conditional: null
 outcomes:
   7_billion:
     status: "DIVERGENCE"
-    description: "Global population near 7 billion; gradual decline managed through economic restructuring"
+    description: "Six point eight billion humans, down from a peak of 9.7 billion three decades ago. Every country on Earth is shrinking except Nigeria, which stabilized at 400 million. The world has learned to contract gracefully: cities consolidate, infrastructure is right-sized, and AI fills the labor gaps. The most poignant statistic: there are more people alive over 80 than under 10. Pediatrician Dr. Aisha Nwosu of Lagos now sees more robots in her waiting room than children."
     world_state_effects:
       global_population_billions: "-1.0"
   8_billion:
     status: "DIVERGENCE"
-    description: "Population holds near 8 billion through life extension offsetting fertility decline"
+    description: "Nobody is being born and nobody is dying -- or rather, far fewer on both ends than anyone predicted. Life extension holds 3 billion people in a permanent biological middle age while birth rates hover near 0.8 globally. The population holds at 7.9 billion through sheer longevity. Philosopher Dr. Eun-ji Kim calls it 'a civilization of immortals who have forgotten how to reproduce -- the most crowded dead end in evolutionary history.'"
     world_state_effects:
       global_population_billions: "+0.00"
   declining:
     status: "DIVERGENCE"
-    description: "Population well below 7 billion and still falling; fundamental restructuring of society underway"
+    description: "Five point two billion and falling. At this rate, humanity will number 3 billion by 2130 -- a population last seen in 1960, inhabiting infrastructure built for 10 billion. Entire cities are being decommissioned: Shanghai closed its last three subway lines; Berlin merged with Potsdam; and rural Japan is wilderness again, the abandoned houses sinking slowly into forests that don't remember they were once neighborhoods."
     world_state_effects:
       global_population_billions: "-2.0"
   stable:
     status: "DIVERGENCE"
-    description: "Population stabilized through deliberate policy and technological intervention"
+    description: "The 'Singapore Protocol' -- a comprehensive package of longevity access, parenting incentives, and robotic eldercare -- stabilized global population at 7.5 billion after 30 years of decline. It is the most expensive social program in history, consuming 12% of global GDP, and its architects know that without it the numbers would collapse. Dr. Eze calls it 'the most important decision our species ever made that nobody noticed: choosing to continue existing.'"
     world_state_effects:
       global_population_billions: "+0.00"
   post_human:
     status: "DIVERGENCE"
-    description: "Traditional population metrics meaningless as many exist in digital or hybrid forms"
+    description: "How do you count a population when 800 million people exist as digital consciousnesses, 2 million are human-AI hybrids, and 50,000 have uploaded into substrates that can be copied? The biological population is 6 billion; the 'total conscious population' is estimated at 7.2 billion; and the philosophical question of whether a copied consciousness counts as one person or two has tied up the Global Census Bureau for the last decade."
     world_state_effects:
       global_population_billions: "+0.00"
   crisis:
     status: "ESCALATED"
-    description: "Population crashed due to catastrophe, pandemic, or civilizational collapse"
+    description: "Three point eight billion. The century's catastrophes -- the pandemic of 2081, the nuclear exchange of 2078, the climate famines of the 2080s -- each took hundreds of millions. But the deepest cut was the simplest: people stopped having children. Not from despair, but from a quiet, global exhaustion that no policy could reverse. Dr. Eze's final report contained a single graph showing population from 10,000 BCE to 2095 CE. The peak and fall look like a wave breaking. She did not add commentary."
     world_state_effects:
       global_population_billions: "-3.0"

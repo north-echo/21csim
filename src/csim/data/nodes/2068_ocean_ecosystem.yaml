@@ -2,9 +2,11 @@ id: "2068_ocean_ecosystem"
 year_month: "2068-06"
 title: "Ocean Ecosystem State"
 description: >
-  The state of global ocean ecosystems after decades of warming, acidification,
-  and pollution. Coral reefs, fisheries, and marine biodiversity face their
-  ultimate reckoning.
+  Marine biologist Dr. Aroha Ngata of New Zealand completed her survey of the
+  Great Barrier Reef in 2067 and published a single-page paper: 94% of the coral
+  was dead or dying. The reef that once stretched 2,300 kilometers is now mostly
+  bone-white rubble, visited by tourists in submarines who pay $500 to see what
+  their grandparents saw for free from a snorkel.
 domain: "climate"
 confidence: "LOW"
 variable: "ocean_ecosystem_status"
@@ -21,31 +23,31 @@ conditional: null
 outcomes:
   recovering:
     status: "DIVERGENCE"
-    description: "Ocean ecosystems showing signs of recovery after aggressive conservation and emissions reduction"
+    description: "Humpback whale populations hit pre-whaling levels for the first time in 2067; the 'Ocean Restoration Armada' of 2,000 autonomous reef-building vessels has reconstructed 12,000 square kilometers of coral across the Indo-Pacific. Fisherman Jamal Osman of Zanzibar caught 30 yellowfin tuna in a single morning and wept -- his grandfather hadn't seen a catch like that since the 1990s."
     world_state_effects:
       biodiversity_index: "+0.10"
       food_security_index: "+0.08"
   collapsed:
     status: "ESCALATED"
-    description: "Major marine ecosystems have collapsed; fisheries devastated globally"
+    description: "The North Atlantic cod fishery, the Peruvian anchovy fishery, and the Southeast Asian shrimp fishery all collapsed within the same decade. Two billion people who depended on ocean protein have been forced onto lab-grown alternatives. Oceanographer Dr. Isabella Cortez-Ruiz recorded the last wild Atlantic bluefin tuna in 2066; the footage shows a single fish circling in empty water, looking for a school that no longer exists."
     world_state_effects:
       biodiversity_index: "-0.25"
       food_security_index: "-0.20"
   managed:
     status: "DIVERGENCE"
-    description: "Oceans heavily managed through aquaculture, artificial reefs, and marine engineering"
+    description: "The world's oceans are now the largest managed ecosystem on Earth: 10,000 automated aquaculture platforms produce 200 million tons of protein annually, while AI-guided 'reef printers' deposit calcium carbonate structures that mimic natural coral. Norwegian marine engineer Dr. Sigrid Haugen calls it 'a garden, not a wilderness -- beautiful in its way, but we should mourn what it replaced.'"
     world_state_effects:
       biodiversity_index: "-0.05"
       food_security_index: "+0.05"
   acidified:
     status: "ESCALATED"
-    description: "Ocean acidification has fundamentally altered marine chemistry; shell-forming organisms decimated"
+    description: "Ocean pH has dropped to 7.8 -- a level not seen in 14 million years. Oysters, mussels, and sea urchins are functionally extinct in the wild; the pteropods -- tiny sea snails whose shells literally dissolve in acidified water -- vanished entirely by 2064. Marine chemist Dr. Yuki Nakamura-Torres described sampling water off Hokkaido: 'I could feel the change in my fingertips. The ocean felt thin, somehow. Like weak tea.'"
     world_state_effects:
       biodiversity_index: "-0.15"
       food_security_index: "-0.12"
   new_equilibrium:
     status: "DIVERGENCE"
-    description: "Oceans have reached a new ecological equilibrium with different but functional ecosystems"
+    description: "The jellyfish won. Vast blooms of moon jellies and comb jellies now dominate waters where tuna and cod once swam; gelatinous biomass exceeds fish biomass for the first time in 500 million years. But the new ocean is not dead -- it's different. Evolutionary biologist Dr. Amara Osei of Ghana documented 340 new species of heat-adapted fish in the warming Indian Ocean, calling them 'the tenants who moved in after the old owners left.'"
     world_state_effects:
       biodiversity_index: "-0.08"
       food_security_index: "+0.02"

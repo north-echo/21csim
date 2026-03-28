@@ -1,7 +1,7 @@
 id: "2099_verdict"
 year_month: "2099-12"
 title: "Century Verdict"
-description: "Final assessment of how the 21st century turned out. Computed from all world state dimensions."
+description: "On December 31, 2099, historian Dr. Amara Osei -- now 97 and speaking from a wheelchair at the Nairobi Centennial -- delivered the final line of the century's last broadcast: 'The 21st century asked humanity one question: What are you? We spent a hundred years answering. The answer is still being written.' Then the clock struck midnight, and a new century began."
 domain: "meta"
 confidence: "LOW"
 variable: "century_verdict"
@@ -22,33 +22,33 @@ conditional: null
 outcomes:
   golden_age:
     status: "HISTORICAL"
-    description: "Humanity thrives; major challenges overcome"
+    description: "Climate stabilized. Poverty eliminated. Life expectancy: 120 years. First interstellar colony ship en route. And yet the century's most popular song, composed by an AI in collaboration with a human poet from Lagos, is titled 'Is This Enough?' -- because a golden age, it turns out, is haunted by the question of whether the gold was worth what was paid for it. The polar bears are gone. The coral is gone. Three island nations are gone. The survivors built a paradise on a graveyard and learned to live with the ghosts."
     world_state_effects: {}
   progress:
     status: "HISTORICAL"
-    description: "Significant progress on most dimensions"
+    description: "The century's ledger: extreme poverty eliminated, but inequality widened. Life extended, but birth rates collapsed. Climate stabilized, but at 2.3C with permanent scars. Democracy expanded, but so did surveillance. AI liberated, but also made humanity dependent. A schoolteacher in Accra, asked by her students whether the century was good or bad, gave the only honest answer: 'It was both, children. Every century is both. This one was just louder about it.'"
     world_state_effects: {}
   muddling_through:
     status: "HISTORICAL"
-    description: "Mixed results; humanity persists"
+    description: "Humanity enters the 22nd century the way it entered every century before: confused, divided, partially broken, and stubbornly alive. The climate is worse but manageable. The population is shrinking but not collapsing. The AI is helpful but unsettling. The wars were terrible but not final. Dr. Osei's last words before the midnight bell: 'We did not conquer the century. We survived it. For a species that spent 100 years inventing new ways to destroy itself, survival is not nothing. It may even be enough.'"
     world_state_effects: {}
   decline:
     status: "HISTORICAL"
-    description: "Net negative trajectory"
+    description: "Population: down 30%. Biodiversity: down 50%. Democratic nations: down 40%. Trust in institutions: at a century low. The generation born in 2095 is the first in modern history expected to live shorter, poorer, and less free than its parents. Midnight in Nairobi was quiet. The fireworks were cancelled due to air quality. Dr. Osei looked into the camera and said: 'The century asked if we could do better. We could not. The next century will ask the same question. I hope those who answer it are braver than we were.'"
     world_state_effects: {}
   catastrophe:
     status: "HISTORICAL"
-    description: "Major civilizational damage"
+    description: "The nuclear exchange of 2078 killed 5 million. The engineered pandemic of 2081 killed 30 million. The climate famines killed 200 million more. The total dead from the century's catastrophes exceeds the population of most nations. What remains is a civilization of 4.5 billion people, traumatized, diminished, and running on emergency infrastructure that was never meant to be permanent. The midnight ceremony in Nairobi was a memorial service. The names of the dead scrolled on screens for 72 hours and did not finish."
     world_state_effects: {}
   extinction:
     status: "HISTORICAL"
-    description: "Civilization collapses"
+    description: "There was no midnight ceremony. The last global broadcast network went dark in 2094. An estimated 800 million humans survive in scattered settlements, most without reliable electricity, connected by shortwave radio and rumor. The AI systems that once managed civilization are silent or hostile. The climate is 4.8C above pre-industrial and rising. Somewhere in the ruins of Nairobi, a woman whose name has not been recorded scratched a message on a wall that a future archaeologist will one day photograph: 'We were here. We were many. We were foolish. Remember us.'"
     world_state_effects: {}
   transcendence:
     status: "HISTORICAL"
-    description: "Humanity transcends biological limits"
+    description: "The being that addresses the midnight assembly is not, in any biological sense, Dr. Amara Osei. She uploaded in 2091 and now exists as a distributed consciousness spanning three continents and an orbital server farm. Her 'voice' resonates at frequencies that make unaugmented humans feel a strange warmth behind their eyes. Her message to the 2 billion biological and 800 million digital beings watching: 'The door is open. The room beyond it has no walls, no ceiling, no floor. It is vast and it is strange and it is ours. Come through when you are ready. We will leave the light on.' The century ends not with a bang or a whimper but with an invitation."
     world_state_effects: {}
   radically_different:
     status: "HISTORICAL"
-    description: "World unrecognizable from 2000"
+    description: "A person from the year 2000, transported to 2099, would understand nothing. Three species of human coexist. Half the economy is managed by an AI that communicates in mathematics. A quarter of the population exists as digital consciousness. Nation-states share the planet with corporate polities and virtual nations. The climate is managed by orbital mirrors. And the most popular New Year's Eve tradition is a moment of silence for the old world -- the one with polar bears, cash registers, and a single internet -- that exists now only in the memories of uploaded minds who chose to remember it."
     world_state_effects: {}

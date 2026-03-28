@@ -2,9 +2,12 @@ id: "2065_post_human"
 year_month: "2065-01"
 title: "Post-Human Divergence"
 description: >
-  Humanity faces a defining split as augmentation technologies mature. The
-  question of what it means to be human becomes the central social and
-  political issue of the era.
+  The first 'Category 3' augmented human -- Dr. Soren Lindqvist of Uppsala,
+  with neural mesh, synthetic blood, and a co-processing AI implant -- scored
+  340 on an IQ test designed for unaugmented humans, then apologized because
+  "the test felt like being asked to count to ten." His estranged brother, a
+  carpenter and vocal bio-purist, told a reporter: "That thing in my brother's
+  skull isn't him anymore."
 domain: "technology"
 confidence: "LOW"
 variable: "post_human_status"
@@ -22,31 +25,31 @@ conditional: "human_augmentation_prevalence > 0.3"
 outcomes:
   enhanced_humans:
     status: "DIVERGENCE"
-    description: "Majority of population adopts cognitive and physical enhancements; new baseline for humanity"
+    description: "Sixty-two percent of adults in developed nations have at least one cognitive enhancement; neural mesh implants are covered by insurance in 40 countries. Unaugmented humans report feeling 'slow' in conversation with enhanced colleagues, and the gap shows in wages: augmented workers earn 3.4x more on average. Ethicist Dr. Keiko Tanaka warns it is 'evolution by credit card.'"
     world_state_effects:
       human_augmentation_prevalence: "+0.20"
   biological_purists:
     status: "DIVERGENCE"
-    description: "Strong cultural backlash preserves unaugmented humanity as the dominant norm"
+    description: "The 'Whole Human' movement, led by charismatic Nigerian pastor-turned-politician Emmanuel Obi, passed constitutional amendments in 29 countries banning cognitive augmentation. 'God's firmware needs no update,' Obi declared to 2 billion viewers. Augmented individuals in these nations either remove their implants or emigrate; the 'enhancement refugees' have formed their own communities in liberal enclaves."
     world_state_effects:
       human_augmentation_prevalence: "-0.10"
   merged:
     status: "DIVERGENCE"
-    description: "Human-AI merger produces a new form of consciousness blending biological and digital"
+    description: "The 14,000 individuals who have undergone full neural-AI integration report experiences that unaugmented humans cannot comprehend: simultaneous awareness of global data streams, emotional communion with other merged beings, and a sense of time that operates on multiple scales at once. Merged philosopher Anika-7 (formerly Anika Johansson of Stockholm) tried to describe it: 'Imagine hearing every conversation in a city and loving each one.'"
     world_state_effects:
       human_augmentation_prevalence: "+0.30"
   diverged_species:
     status: "ESCALATED"
-    description: "Enhanced and unenhanced humans diverge into effectively separate species with growing tensions"
+    description: "The 'Augment Riots' of 2063 in São Paulo left 200 dead after unenhanced workers stormed a corporate campus whose employees all had cognitive implants. Enhanced humans increasingly cluster in gated 'acceleration zones' with separate legal systems; Brazilian sociologist Dr. Luciana Ferreira calls it 'speciation in real time -- we are watching one species become two, and both sides are afraid.'"
     world_state_effects:
       human_augmentation_prevalence: "+0.15"
   regulated:
     status: "DIVERGENCE"
-    description: "Augmentation widely available but strictly regulated to prevent inequality and social fracture"
+    description: "The 'Geneva Enhancement Accords' cap cognitive augmentation at Category 2 (roughly 160 IQ equivalent) and mandate that all approved enhancements be available through public health systems within two years of certification. Singapore's Enhancement Regulatory Authority, led by Dr. Rajesh Subramaniam, has become the world's most powerful medical body, approving or rejecting implants that entire nations wait for."
     world_state_effects:
       human_augmentation_prevalence: "+0.10"
   rejected:
     status: "DIVERGENCE"
-    description: "Society broadly rejects augmentation after early adverse effects or ethical concerns"
+    description: "The 'Cascade Failure' of 2061 -- when a firmware update caused simultaneous seizures in 40,000 neural mesh users across Europe -- ended the augmentation era overnight. Images of convulsing executives in Zurich boardrooms went viral; the devices were recalled, the companies bankrupted. Unaugmented became a badge of pride. Bumper stickers appeared: 'My brain runs on original hardware.'"
     world_state_effects:
       human_augmentation_prevalence: "-0.15"

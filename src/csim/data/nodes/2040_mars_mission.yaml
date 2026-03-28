@@ -2,9 +2,10 @@ id: "2040_mars_mission"
 year_month: "2040-06"
 title: "Mars Mission"
 description: >
-  First crewed mission to Mars attempts landing. Outcome depends on decades of
-  space infrastructure development and whether technical and funding challenges
-  were overcome.
+  The six-person crew of Ares I -- Commander Yuki Tanaka (Japan), pilot Marcus Obi
+  (Nigeria-US), and four mission specialists from India, Brazil, Germany, and Canada --
+  enters Mars orbit after 7 months of transit. Three billion people watch the live feed
+  from Jezero Crater on a 22-minute delay.
 domain: "space"
 confidence: "MEDIUM"
 variable: "mars_mission_status"
@@ -35,7 +36,7 @@ conditional: null
 outcomes:
   successful_landing:
     status: "DIVERGENCE"
-    description: "Crew lands on Mars, conducts research, and returns safely to Earth"
+    description: "Commander Tanaka plants six flags in the rust-red soil of Jezero Crater and radios Houston: 'We came as one world.' The crew spends 45 days collecting 230 kg of samples, confirming fossilized microbial structures in ancient lake sediments, before a flawless ascent and 7-month return voyage."
     world_state_effects:
       space_development_index: "+0.15"
     cascading_modifiers:
@@ -43,26 +44,26 @@ outcomes:
       2042_superintelligence.contained_superintelligence: "+0.03"
   one_way_colony:
     status: "DIVERGENCE"
-    description: "Mission becomes permanent settlement; crew chooses or is forced to stay"
+    description: "A return-vehicle fuel leak during Mars orbital insertion forces Mission Control to declare a 'shelter in place.' The crew establishes a permanent habitat using pre-positioned supplies, and pilot Marcus Obi's tearful message -- 'Tell my daughters we're building them a new world' -- becomes the most-watched video in human history."
     world_state_effects:
       space_development_index: "+0.20"
   mission_failure:
     status: "ESCALATED"
-    description: "Mission fails during transit or landing; crew lost"
+    description: "A micrometeorite punctures Ares I's habitation module 4 months into transit; Commander Tanaka's final transmission describes the crew 'at peace with what we attempted.' Six empty chairs at the memorial service in Houston's Johnson Space Center become a symbol of humanity's reach exceeding its grasp."
     world_state_effects:
       space_development_index: "-0.08"
   delayed_2050:
     status: "DIVERGENCE"
-    description: "Technical and funding challenges push crewed Mars mission to the 2050s"
+    description: "After three engine test failures at Boca Chica and a congressional funding shortfall of $140 billion, NASA Administrator Singh announces 'a responsible delay' to 2053. The crew selection class of 2038, already trained and bonded, quietly disperses to university posts and consulting firms."
     world_state_effects:
       space_development_index: "+0.03"
   cancelled:
     status: "DIVERGENCE"
-    description: "Mars mission cancelled as priorities shift to Earth-based challenges"
+    description: "A Category 6 hurricane destroying Tampa Bay three weeks before planned launch provides political cover for cancellation. 'We cannot justify $400 billion for Mars while Americans sleep in FEMA tents,' says House Speaker DeWitt. The Ares I vehicle is mothballed at Kennedy Space Center and eventually becomes a museum exhibit."
     world_state_effects:
       space_development_index: "-0.05"
   robotic_only:
     status: "DIVERGENCE"
-    description: "Advanced robotic missions replace crewed plans; AI-driven Mars exploration continues"
+    description: "JPL's 'Athena' rover network -- 14 AI-autonomous vehicles operating in coordinated swarms across Valles Marineris -- returns more science data in six months than all previous missions combined. 'Why risk humans when robots do it better, cheaper, and don't need to come home?' asks MIT planetary scientist Dr. Anika Sharma."
     world_state_effects:
       space_development_index: "+0.05"

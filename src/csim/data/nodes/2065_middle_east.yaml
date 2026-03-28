@@ -2,9 +2,11 @@ id: "2065_middle_east"
 year_month: "2065-01"
 title: "Middle East 2065"
 description: >
-  The Middle East after the end of the oil era. Whether the region successfully
-  diversifies, achieves stability, or remains trapped in conflict and resource
-  competition.
+  The last barrel of commercially exported Saudi crude oil was shipped from
+  Ras Tanura in 2059; Crown Prince Khalid bin Salman marked the occasion by
+  opening the Neom Quantum Computing Campus on the same day, saying "We are
+  trading one kind of energy for another." The ceremony was attended by 40
+  heads of state and exactly zero oil executives.
 domain: "geopolitics"
 confidence: "LOW"
 variable: "middle_east_status_2065"
@@ -22,25 +24,25 @@ conditional: null
 outcomes:
   transformed:
     status: "DIVERGENCE"
-    description: "Region successfully transitions beyond oil; becomes a hub for technology and renewable energy"
+    description: "Dubai's vertical farms export high-value produce to three continents; Riyadh's AI research park employs 200,000 engineers from 80 countries; and Oman's desalination-powered hydrogen plants fuel half of Europe's shipping fleet. The Gulf states spent $4 trillion of sovereign wealth on the transition, and Saudi economist Dr. Nora al-Faisal calls the return on investment 'the greatest bet in history.'"
     world_state_effects: {}
   conflict_zone:
     status: "ESCALATED"
-    description: "Ongoing conflicts and proxy wars keep the region destabilized and impoverished"
+    description: "The 'Eternal War' -- a shifting web of drone conflicts across Syria, Iraq, and Yemen -- has now lasted longer than any conflict since the Hundred Years' War. Journalist Layla Haddad, broadcasting from a bunker in Aleppo, estimates that 80% of the region's population under 30 has never known a single year of peace. The rubble has its own ecosystem now; plants grow from the ruins."
     world_state_effects: {}
   green_leader:
     status: "DIVERGENCE"
-    description: "Gulf states leverage solar resources and sovereign wealth to become global green energy leaders"
+    description: "The 'Solar Crescent' -- a 4,000-kilometer arc of photovoltaic arrays stretching from Morocco to Oman -- generates 15% of global electricity, transmitted to Europe and South Asia via undersea superconducting cables. Emirati engineer Fatima al-Mansoori, who designed the transmission grid, became the first Arab woman to win the Nobel Prize in Physics."
     world_state_effects: {}
   integrated:
     status: "DIVERGENCE"
-    description: "Regional integration creates a Middle Eastern economic bloc with growing prosperity"
+    description: "The 'Mashreq-Maghreb Union,' established in 2060 with 22 member states, operates a common currency (the Dinar), a shared water management system, and a high-speed rail network connecting Casablanca to Muscat in 11 hours. Secretary-General Tariq al-Hashimi, an Iraqi-Jordanian dual citizen, calls it 'what the Arab League always dreamed of being.'"
     world_state_effects: {}
   fragmented:
     status: "ESCALATED"
-    description: "State collapse and sectarian divisions fragment the region into competing micro-states"
+    description: "Iraq no longer exists as a unified state; nor do Syria, Libya, or Yemen. The region has splintered into 47 entities -- tribal federations, city-states, corporate zones, and religious enclaves. Baghdad is divided into three sectors separated by walls; Kurdish cartographer Dr. Dilan Barzani's updated atlas of the region requires 14 pages where one used to suffice."
     world_state_effects: {}
   stabilized:
     status: "DIVERGENCE"
-    description: "External pressures and internal reforms bring lasting stability though not prosperity"
+    description: "A generation of technocratic reformers -- educated in the Gulf's world-class universities and disillusioned with ideology -- has quietly stabilized most of the region. Jordanian Prime Minister Rania Khalifeh's 'Small Steps Doctrine' prioritizes clean water and broadband over grand political projects. Per capita income has doubled since 2045, but few would call the region prosperous; 'stable enough' is the new aspiration."
     world_state_effects: {}

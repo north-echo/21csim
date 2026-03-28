@@ -2,8 +2,10 @@ id: "2032_digital_currency"
 year_month: "2032-06"
 title: "Digital Currency Landscape"
 description: >
-  The evolution of money and payments. Whether central bank digital currencies,
-  cryptocurrency, or traditional cash dominates the global financial system.
+  Nigeria's eNaira processes more transactions than Visa in sub-Saharan Africa;
+  China's digital yuan handles 40% of all retail payments; and a Swedish grandmother
+  discovers she cannot buy bread because the last cash-accepting bakery in Gothenburg
+  has closed. The architecture of money is being rewritten in real time.
 domain: "technology"
 confidence: "MEDIUM"
 variable: "digital_currency_status"
@@ -19,27 +21,27 @@ conditional: null
 outcomes:
   cbdc_dominant:
     status: "DIVERGENCE"
-    description: "Central bank digital currencies become primary payment method globally"
-    explanation: "China's digital yuan success leads other nations to launch CBDCs; programmable money becomes norm"
+    description: "114 nations operate CBDCs by 2032; the digital yuan's 'smart contract' feature -- which can restrict spending to approved categories -- is copied by 30 governments; India's digital rupee processes 2.8 billion transactions daily, and the ECB's digital euro launches with 200 million users in its first quarter"
+    explanation: "China's 8-year head start proves decisive: the digital yuan's infrastructure becomes the template, and its cross-border payment system (mBridge) handles $4.3 trillion in annual trade settlement, eroding the dollar's dominance in Asian commerce; programmable money gives governments unprecedented fiscal precision but also unprecedented surveillance capability"
     world_state_effects:
       surveillance_state_index: "+0.05"
       global_gdp: "+0.01"
   crypto_wins:
     status: "DIVERGENCE"
-    description: "Decentralized cryptocurrency gains mainstream adoption over government money"
-    explanation: "Bitcoin and stablecoins become preferred store of value and medium of exchange"
+    description: "Bitcoin stabilizes above $800,000 as El Salvador, Nigeria, and Argentina formally adopt it as legal tender alongside their national currencies; Tether's USDT processes more daily volume than the Federal Reserve's Fedwire system; a Lagos street vendor quotes prices in satoshis"
+    explanation: "Three factors converge: CBDC surveillance fears push privacy-conscious users to crypto, Lightning Network finally makes Bitcoin payments instant and nearly free, and a generation that grew up with digital wallets sees no reason to trust government-issued money after watching currencies collapse in Turkey, Argentina, and Egypt"
     world_state_effects:
       governance_model: "-0.03"
       global_gdp: "+0.01"
   cash_persists:
     status: "DIVERGENCE"
-    description: "Cash and traditional banking retain dominant role; digital alternatives remain niche"
-    explanation: "Privacy concerns, digital divide, and institutional inertia preserve traditional financial system"
+    description: "Germany and Japan pass 'right to cash' laws mandating physical currency acceptance; 62% of Americans still use cash weekly; a viral documentary about CBDC surveillance in China -- 'The Transparent Wallet' -- wins the Sundance Grand Jury Prize and spooks Western governments into slowing digital currency rollouts"
+    explanation: "The privacy backlash proves more powerful than techno-utopianism: after a leaked Chinese government memo reveals the digital yuan was used to freeze accounts of 14,000 protest-adjacent citizens, European and American publics reject CBDC adoption; community banks and credit unions see deposit surges as customers flee digital-only institutions"
     world_state_effects:
       surveillance_state_index: "-0.01"
   fragmented:
     status: "DIVERGENCE"
-    description: "Fragmented digital currency landscape; no single dominant system"
-    explanation: "CBDCs, crypto, stablecoins, and cash coexist; interoperability challenges persist"
+    description: "A traveler from Nairobi to São Paulo must navigate eNaira, digital real, Bitcoin Lightning, Tether, and physical US dollars depending on the vendor; cross-border payments require 3-4 conversion steps and 2-6% in fees; the IMF warns of a 'monetary Babel' fragmenting global commerce"
+    explanation: "Every major power builds its own system optimized for domestic control, creating a patchwork that mirrors the internet's Balkanization: Chinese merchants accept digital yuan, American platforms demand dollars or USDC, European regulators insist on the digital euro, and African traders use M-Pesa and Bitcoin interchangeably"
     world_state_effects:
       governance_model: "-0.01"

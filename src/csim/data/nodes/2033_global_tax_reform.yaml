@@ -2,9 +2,10 @@ id: "2033_global_tax_reform"
 year_month: "2033-06"
 title: "Global Tax Reform"
 description: >
-  Whether international efforts to reform global taxation succeed. Minimum
-  corporate taxes, digital taxes, and wealth taxes face implementation
-  challenges and political resistance.
+  The OECD's Pillar Two global minimum tax has been in force for 7 years, but
+  a leaked PwC memo reveals that 68% of Fortune 500 companies have found legal
+  workarounds; meanwhile, Argentine economist Luciana Vega proposes a radical
+  'AI productivity levy' at Davos that splits the room down the middle.
 domain: "geopolitical"
 confidence: "MEDIUM"
 variable: "global_tax_status"
@@ -20,29 +21,29 @@ conditional: null
 outcomes:
   minimum_tax_works:
     status: "DIVERGENCE"
-    description: "Global minimum corporate tax effectively implemented; revenue increases"
-    explanation: "OECD framework enforced; multinational profit shifting significantly reduced"
+    description: "The EU's 'tax transparency directive' forces real-time country-by-country reporting; Ireland and Luxembourg lose $24 billion in relocated profits within 2 years; global corporate tax revenue rises 18% as the effective rate for multinationals climbs from 12% to 17.3%"
+    explanation: "The turning point is the US Treasury's decision to enforce the minimum tax through its control of the SWIFT banking system: any company caught shifting profits to sub-15% jurisdictions faces dollar-clearing restrictions, and the threat alone drives compliance among 85% of multinationals within 18 months"
     world_state_effects:
       inequality_index: "-0.03"
       governance_model: "+0.03"
   tax_havens_persist:
     status: "DIVERGENCE"
-    description: "Tax havens and avoidance schemes adapt faster than regulations"
-    explanation: "Crypto, shell companies, and new jurisdictions undermine reform efforts"
+    description: "The British Virgin Islands, Dubai, and a newly established 'Seastead Republic' -- a floating tax haven 200 miles off the coast of Panama -- compete to host AI companies' 'intellectual property management' subsidiaries; Alphabet's effective tax rate drops to 6.2% despite the global minimum tax"
+    explanation: "Every regulatory closure creates a new loophole: crypto-denominated transfer pricing, AI-generated shell company networks spanning 40 jurisdictions, and 'digital nomad' corporate structures that exist nowhere and everywhere simultaneously; the OECD estimates $890 billion in annual corporate tax avoidance, up from $600 billion before the reforms"
     world_state_effects:
       inequality_index: "+0.03"
       governance_model: "-0.02"
   wealth_tax:
     status: "DIVERGENCE"
-    description: "Multiple nations implement wealth taxes on ultra-high-net-worth individuals"
-    explanation: "Public pressure and inequality drive adoption; implementation challenges remain"
+    description: "France, Spain, Colombia, and South Korea implement annual wealth taxes of 1-3% on assets above $50 million; the US passes a 2% tax on unrealized gains above $100 million after a viral ProPublica investigation reveals that the 50 richest Americans paid an effective rate of 1.7% for the decade 2023-2033"
+    explanation: "Public fury over the 'AI billionaire' class -- whose wealth doubled during mass displacement -- creates the political will that decades of academic arguments could not; implementation relies on AI-driven asset valuation systems and international reporting agreements, though capital flight to Singapore and the UAE partially offsets revenue gains"
     world_state_effects:
       inequality_index: "-0.05"
       global_gdp: "-0.01"
   digital_tax:
     status: "DIVERGENCE"
-    description: "Digital services taxes become standard; tech giants pay more"
-    explanation: "Revenue-based digital taxes capture value where economic activity occurs"
+    description: "42 nations now levy a 3-8% tax on digital advertising revenue, cloud computing services, and AI API calls; India's version alone generates $14 billion annually from Google, Meta, and Amazon; the 'where value is created' principle finally sticks after Nigeria and Indonesia threaten to block non-compliant platforms entirely"
+    explanation: "The Global South coalition, led by India's finance minister Nirmala Sitharaman's successor Arun Khanna, reframes digital taxation as an anti-colonial issue: 'Our citizens' data creates their wealth; our treasuries deserve a share'; the US initially objects but acquiesces after its own digital services tax generates $28 billion from Chinese tech giants operating in America"
     world_state_effects:
       inequality_index: "-0.02"
       global_gdp: "+0.00"

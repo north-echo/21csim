@@ -2,9 +2,10 @@ id: "2040_us_infrastructure"
 year_month: "2040-01"
 title: "US Infrastructure Reckoning"
 description: >
-  Decades of deferred maintenance and climate stress force a reckoning with
-  American infrastructure. Whether the nation rebuilds, adapts, or continues
-  to decay shapes economic competitiveness for generations.
+  The I-40 bridge over the Mississippi collapses during Memphis rush hour, killing
+  83 and severing freight rail connections for 14 weeks. The American Society of
+  Civil Engineers rates 42% of US bridges as "structurally deficient." Insurance
+  companies begin refusing coverage for properties served by pre-2000 water mains.
 domain: "regional"
 confidence: "MEDIUM"
 variable: "us_infrastructure_status"
@@ -21,31 +22,31 @@ conditional: null
 outcomes:
   massive_rebuild:
     status: "DIVERGENCE"
-    description: "Federal investment program modernizes infrastructure with smart and resilient systems"
+    description: "President Alvarez signs the $3.8 trillion American Renewal Act, deploying self-healing concrete, AI-managed power grids, and 12,000 miles of high-speed rail. Construction crews in hard hats become the iconic image of the decade, and unemployment drops to 2.1%."
     world_state_effects:
       us_gdp_growth: "+0.02"
       us_polarization: "-0.03"
   continued_decay:
     status: "DIVERGENCE"
-    description: "Political gridlock prevents investment; infrastructure failures become routine"
+    description: "The House and Senate deadlock on funding for a ninth consecutive year. Boil-water advisories cover 31 million Americans; Amtrak's Northeast Corridor averages 47-minute delays. Phoenix residents endure three days without power during a 52C heat dome when the grid fails."
     world_state_effects:
       us_gdp_growth: "-0.02"
       us_polarization: "+0.03"
   climate_adapted:
     status: "DIVERGENCE"
-    description: "Infrastructure rebuilt specifically for climate resilience; coastal retreat begins"
+    description: "FEMA Director Lakshmi Patel announces 'managed retreat' from 1,200 miles of Atlantic and Gulf coastline. Miami Beach's last permanent residents relocate to inland Homestead; their former condos become artificial reefs. New Orleans' $48 billion levee system is deemed obsolete and the city pivots to a floating-district model."
     world_state_effects:
       us_gdp_growth: "+0.01"
       climate_temp_anomaly: "-0.01"
   privatized:
     status: "DIVERGENCE"
-    description: "Infrastructure increasingly privatized; quality improves but access becomes unequal"
+    description: "Blackstone Infrastructure Partners acquires the Pennsylvania Turnpike, the Port of Long Beach, and Chicago's water system in a single quarter. Tolls on I-95 hit $0.45 per mile; wealthy suburbs get fiber-optic water monitoring while Jackson, Mississippi still runs on lead pipes."
     world_state_effects:
       us_gdp_growth: "+0.01"
       inequality_index: "+0.05"
   regional_divergence:
     status: "DIVERGENCE"
-    description: "Blue states invest heavily while red states lag; infrastructure gap mirrors political divide"
+    description: "California opens its $92 billion high-speed rail from LA to San Francisco as Alabama's rural bridges remain closed for the third consecutive year. A Stanford study coins the term 'infrastructure apartheid' after finding a 14-year life expectancy gap between counties with modernized vs. neglected water systems."
     world_state_effects:
       us_polarization: "+0.05"
       inequality_index: "+0.03"

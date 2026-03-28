@@ -2,9 +2,12 @@ id: "2075_global_governance"
 year_month: "2075-01"
 title: "Global Governance 2075"
 description: >
-  The state of international governance structures. Whether humanity has
-  moved toward unified governance, regional fragmentation, or AI-mediated
-  coordination.
+  The phrase "Who is in charge?" appears on protest signs in 14 languages
+  outside the UN General Assembly in 2075. Secretary-General Kwame Asante-Darko
+  of Ghana inherited an institution that is either the embryo of a world
+  government or a very expensive debating society, depending on which corridor
+  you walk down. His predecessor resigned after 18 months, citing "the
+  impossibility of herding 193 cats."
 domain: "geopolitics"
 confidence: "LOW"
 variable: "global_governance_2075"
@@ -23,29 +26,29 @@ conditional: null
 outcomes:
   world_government:
     status: "DIVERGENCE"
-    description: "A functional world government emerges with sovereign authority over global commons"
+    description: "The 'Earth Parliament' in Nairobi, established by the 2072 Charter, has 3,000 directly elected representatives, a global tax authority, and jurisdiction over oceans, atmosphere, space, and AI systems. President-General Aisha Bello of Nigeria signed the first planetary budget in 2074. The smallest participating state, Tuvalu, has one representative; she commutes from a floating platform that didn't exist when she was born."
     world_state_effects: {}
   reformed_un:
     status: "DIVERGENCE"
-    description: "Reformed United Nations with binding authority on key issues like climate and weapons"
+    description: "The 'UN 2.0,' reformed in 2069, can levy fines, deploy peacekeepers without Security Council veto, and enforce climate compliance through automated satellite monitoring. Secretary-General Asante-Darko's favorite line: 'We're not a world government. We're a world building inspector -- and your emissions are not up to code.'"
     world_state_effects: {}
   regional_blocs:
     status: "DIVERGENCE"
-    description: "World organized into competing regional blocs with limited global coordination"
+    description: "The Atlantic Union, the Shanghai Pact, the Nairobi Compact, and the South Asian Federation each control populations exceeding a billion and GDPs exceeding $30 trillion. Cross-bloc trade requires navigating four incompatible regulatory frameworks, three different AI safety standards, and two mutually exclusive digital currencies. A container ship from Lagos to Shanghai passes through three 'regulatory seas' that didn't exist in 2040."
     world_state_effects: {}
   ai_mediated:
     status: "DIVERGENCE"
-    description: "AI systems mediate international disputes and optimize resource allocation globally"
+    description: "The Meridian AI arbitration system resolved 14,000 international disputes in 2074 with a 97% acceptance rate from both parties. It allocated water rights across the Nile basin, distributed rare earth mineral quotas, and designed an emissions trading scheme so elegant that economist Dr. Leila Hosseini of Iran called it 'the first genuinely fair deal in the history of international relations -- and no human could have designed it.'"
     world_state_effects: {}
   anarchic:
     status: "ESCALATED"
-    description: "International institutions have collapsed; global governance effectively nonexistent"
+    description: "The UN closed its New York headquarters in 2072 after the US, China, and India simultaneously withdrew funding. The building was purchased by a tech consortium and converted into a data center. International law is now enforced -- or not -- by whichever nation has orbital weapons coverage over the relevant territory. Somali-Canadian diplomat Yasmin Farah, the last Secretary-General, took a bottle of whiskey from the executive bar on her way out."
     world_state_effects: {}
   cooperative:
     status: "DIVERGENCE"
-    description: "Nations cooperate extensively through flexible coalitions without formal global government"
+    description: "The 'Coalition of the Willing' model has become permanent: 40 to 60 nations form temporary alliances around specific problems -- climate, pandemics, asteroid defense -- then dissolve and reform. It's messy, slow, and somehow works. Brazilian diplomat Dr. Carolina Machado, who has brokered seven such coalitions, compares it to 'jazz: no conductor, no sheet music, but when it works, it's the most beautiful sound in the room.'"
     world_state_effects: {}
   authoritarian:
     status: "ESCALATED"
-    description: "Global governance dominated by authoritarian powers imposing order through surveillance and control"
+    description: "The 'Stability Pact,' led by China and backed by 60 nations, maintains global order through a shared surveillance network that monitors every digital communication on Earth. Dissent is flagged, scored, and suppressed before it can organize. Human Rights Watch was declared a terrorist organization in 2073. The system delivers peace, prosperity, and zero privacy; exiled journalist Mikhail Sorokin broadcasts from a pirate satellite: 'The cage is comfortable. The food is good. It is still a cage.'"
     world_state_effects: {}

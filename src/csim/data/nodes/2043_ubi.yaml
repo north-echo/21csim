@@ -2,9 +2,11 @@ id: "2043_ubi"
 year_month: "2043-01"
 title: "UBI Global Adoption"
 description: >
-  Universal Basic Income programs face a global adoption decision as automation
-  displaces large portions of the workforce. Whether UBI becomes standard policy
-  reshapes the social contract worldwide.
+  With 38% of OECD workers displaced by automation and AI, Finland's expanded UBI
+  pilot -- 2,200 euros per month to every adult citizen -- reports stunning results:
+  entrepreneurship up 34%, mental health hospitalizations down 41%, birth rates
+  rising for the first time in 30 years. The question is no longer whether UBI works,
+  but whether anyone can afford it at scale.
 domain: "economic"
 confidence: "MEDIUM"
 variable: "ubi_status"
@@ -22,31 +24,31 @@ conditional: "automation_displacement > 0.20"
 outcomes:
   widespread:
     status: "DIVERGENCE"
-    description: "Majority of developed nations implement UBI; inequality stabilizes"
+    description: "Thirty-one nations implement UBI funded by a 4% automation tax on corporate AI usage. In Seoul, former factory worker Kim Dae-hyun uses his 1.8 million won monthly payment to open a pottery studio; his story, repeated millions of times across continents, redefines what 'productive work' means."
     world_state_effects:
       inequality_index: "-0.10"
   partial:
     status: "DIVERGENCE"
-    description: "Some nations adopt UBI while others rely on traditional welfare systems"
+    description: "Scandinavian and Iberian nations implement UBI; the US, UK, and Japan stick with patchwork welfare and retraining programs. A 'UBI tourist' phenomenon emerges as young Americans relocate to Lisbon and Copenhagen for guaranteed income, draining talent from holdout nations."
     world_state_effects:
       inequality_index: "-0.05"
   failed:
     status: "DIVERGENCE"
-    description: "UBI programs attempted but collapse due to fiscal unsustainability or political opposition"
+    description: "Spain's UBI program bankrupts the treasury within 18 months as automation tax revenues fall short by 40%; Italy's collapses after a corruption scandal involving ghost recipients. Conservative politicians worldwide seize on the failures, branding UBI 'the most expensive way to destroy a work ethic ever invented.'"
     world_state_effects:
       inequality_index: "+0.05"
   alternative_models:
     status: "DIVERGENCE"
-    description: "New economic models like universal basic services or job guarantees replace UBI concept"
+    description: "Instead of cash, governments provide 'Universal Basic Services': free housing, healthcare, transit, internet, and food from automated vertical farms. Austrian economist Dr. Marlene Hofbauer calls it 'decommodifying survival' -- you cannot buy luxury, but you cannot starve or go homeless either."
     world_state_effects:
       inequality_index: "-0.06"
   unnecessary:
     status: "DIVERGENCE"
-    description: "New job creation keeps pace with automation; UBI deemed unnecessary"
+    description: "The 'care economy' absorbs displaced workers faster than expected: 23 million new jobs in elder care, mental health, environmental restoration, and community building. Unemployment never exceeds 6% in OECD nations, and UBI advocates quietly shelve their proposals as a solution to a problem that didn't materialize."
     world_state_effects:
       inequality_index: "-0.02"
   class_warfare:
     status: "ESCALATED"
-    description: "UBI debate triggers severe class conflict between capital owners and displaced workers"
+    description: "When Amazon-Alphabet's combined market cap exceeds the GDP of France while its warehouses employ zero humans, protesters firebomb autonomous delivery vehicles in 40 US cities. The 'Tax the Robots or Burn Them' movement turns violent in Dusseldorf, Lyon, and Detroit; three billionaires hire private security armies larger than some national militaries."
     world_state_effects:
       inequality_index: "+0.12"

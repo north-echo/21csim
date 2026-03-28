@@ -2,9 +2,10 @@ id: "2041_ocean_acidification"
 year_month: "2041-01"
 title: "Ocean Acidification Status"
 description: >
-  Ocean pH levels reach a critical threshold affecting marine ecosystems globally.
-  Whether acidification is reversing, accelerating, or being managed determines
-  the fate of ocean food chains.
+  NOAA's Pacific Marine Environmental Laboratory records ocean pH at 7.95 -- a level
+  not seen in 14 million years. The last tuna auction at Tokyo's Toyosu market fetches
+  $4.2 million for a single bluefin as fishers from Senegal to Thailand report nets
+  coming up empty of shellfish whose calcium carbonate shells literally dissolve.
 domain: "climate"
 confidence: "MEDIUM"
 variable: "ocean_acidification_status"
@@ -21,32 +22,32 @@ conditional: null
 outcomes:
   reversing:
     status: "DIVERGENCE"
-    description: "Emissions reductions begin reversing ocean acidification; coral recovery starts"
+    description: "Fifteen years of aggressive emissions cuts push atmospheric CO2 below 380 ppm; marine biologist Dr. Paloma Reyes documents the first new coral growth on Australia's Great Barrier Reef since 2031, broadcasting the tiny pink polyps live to 800 million viewers."
     world_state_effects:
       biodiversity_index: "+0.05"
       food_security_index: "+0.03"
   critical:
     status: "ESCALATED"
-    description: "Ocean acidification reaches critical levels; coral systems collapse worldwide"
+    description: "The Great Barrier Reef is declared biologically dead by the Australian Institute of Marine Science; satellite imagery shows bleached white stretching 2,300 km. Indonesia's 17,000-island archipelago loses 78% of its reef systems, destroying the protein source for 120 million people."
     world_state_effects:
       biodiversity_index: "-0.12"
       food_security_index: "-0.08"
   managed:
     status: "DIVERGENCE"
-    description: "Localized ocean alkalinity enhancement and marine reserves mitigate worst impacts"
+    description: "Norwegian oceanographer Dr. Erik Halvorsen's fleet of 340 autonomous 'liming ships' disperses olivine powder across the North Atlantic, raising local pH by 0.12 units. Combined with a 2.8-million-km2 marine reserve network, the approach buys time but cannot reverse the underlying chemistry."
     world_state_effects:
       biodiversity_index: "-0.03"
       food_security_index: "-0.02"
   fishery_collapse:
     status: "ESCALATED"
-    description: "Acidification triggers global fishery collapse affecting billions who depend on ocean protein"
+    description: "Pteropod populations crash by 94% in the Southern Ocean, collapsing the krill food chain that feeds everything from penguins to whales. The cascading collapse wipes out fisheries from Peru to Norway; 3.1 billion people who depend on ocean protein face acute food insecurity within 18 months."
     world_state_effects:
       biodiversity_index: "-0.15"
       food_security_index: "-0.15"
       conflict_deaths: "+10000"
   adaptation:
     status: "DIVERGENCE"
-    description: "Marine species adapt faster than expected; ecosystems shift but persist"
+    description: "Marine geneticist Dr. Thandiwe Nkosi at the University of Cape Town documents rapid evolution in Pacific oyster populations, with acid-tolerant variants dominating within 8 generations. Coral species from naturally acidic volcanic vents colonize dead reefs, creating strange new ecosystems that function but look nothing like their predecessors."
     world_state_effects:
       biodiversity_index: "-0.05"
       food_security_index: "-0.03"

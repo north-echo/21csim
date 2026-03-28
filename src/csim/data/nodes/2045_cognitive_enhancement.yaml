@@ -2,9 +2,11 @@ id: "2045_cognitive_enhancement"
 year_month: "2045-06"
 title: "Cognitive Enhancement"
 description: >
-  Neural interface and pharmaceutical technologies enable direct cognitive
-  enhancement. Who gets access and how it is regulated determines whether it
-  reduces or amplifies inequality.
+  Neuralink's N7 implant allows users to process information 3x faster, access
+  cloud memory, and communicate silently via thought-to-text. A Stanford study
+  shows enhanced subjects outperform unenhanced peers by 280% on complex problem-
+  solving tasks. The $185,000 procedure has a 14-month waitlist in Palo Alto; in
+  Lagos and Lima, people have never heard of it.
 domain: "technology"
 confidence: "MEDIUM"
 variable: "cognitive_enhancement_status"
@@ -35,37 +37,37 @@ conditional: null
 outcomes:
   elite_only:
     status: "DIVERGENCE"
-    description: "Cognitive enhancement available only to wealthy; creates cognitive underclass"
+    description: "Enhanced executives at Goldman Sachs and McKinsey process quarterly reports in 11 minutes; their unenhanced competitors take days. Silicon Valley schools require N7 implants for admission to advanced tracks. A new slang term -- 'cogpoor' -- enters the lexicon for the unenhanced majority, who find themselves unemployable in knowledge work."
     world_state_effects:
       human_augmentation_prevalence: "+0.10"
       inequality_index: "+0.12"
   democratized:
     status: "DIVERGENCE"
-    description: "Cognitive enhancement widely available and affordable; lifts general capability"
+    description: "Indian generic manufacturer Cipla reverse-engineers the N7 and produces the 'NeuroBasic' implant for $900, subsidized to free in 40 nations by the WHO. A rice farmer in Myanmar gains the ability to read English, access agronomic databases, and calculate optimal planting schedules through thought alone. Global average IQ rises 18 points in five years."
     world_state_effects:
       human_augmentation_prevalence: "+0.25"
       inequality_index: "-0.05"
   banned:
     status: "DIVERGENCE"
-    description: "Most nations ban cognitive enhancement over safety and ethical concerns"
+    description: "After three N7 recipients in Seoul suffer catastrophic seizures from a firmware update, 67 nations ban neural implants for cognitive enhancement. The Vatican declares enhancement 'a violation of the soul's integrity'; Japan's Diet passes the 'Human Purity Act.' Underground enhancement clinics spring up in Bangkok and Tijuana, performing procedures in back rooms."
     world_state_effects:
       human_augmentation_prevalence: "+0.02"
       inequality_index: "+0.01"
   military_first:
     status: "DIVERGENCE"
-    description: "Military applications dominate; enhanced soldiers create new arms race"
+    description: "DARPA's 'Cognitive Warrior' program deploys N7-enhanced special operators who process battlefield data 4x faster and communicate silently in coordinated teams. China's PLA matches the program within 18 months. Enhanced soldiers describe the experience as 'seeing the matrix'; unenhanced troops become support personnel overnight."
     world_state_effects:
       human_augmentation_prevalence: "+0.08"
       inequality_index: "+0.05"
   voluntary:
     status: "DIVERGENCE"
-    description: "Cognitive enhancement regulated but available; adoption remains a personal choice"
+    description: "The EU's 'Cognitive Autonomy Directive' regulates enhancement like elective surgery: available to adults, covered by some insurance plans, with mandatory 6-month evaluation periods. Adoption rates hover around 22% in developed nations, creating a society where enhanced and unenhanced coexist uneasily, like a world where some people can see in the dark and others cannot."
     world_state_effects:
       human_augmentation_prevalence: "+0.15"
       inequality_index: "+0.02"
   biological_risks:
     status: "ESCALATED"
-    description: "Early adopters suffer severe side effects; enhancement technology set back decades"
+    description: "Within 3 years of mass adoption, 4,200 N7 recipients develop 'interface syndrome' -- a degenerative condition where the brain's neural pathways reorganize around the implant, causing personality dissolution and eventual catatonia. Tech journalist Marcus Webb, one of the first enhanced, livestreams his own cognitive decline before going silent. The FDA pulls all implants; Neuralink's stock drops to zero."
     world_state_effects:
       human_augmentation_prevalence: "+0.03"
       inequality_index: "+0.02"

@@ -2,9 +2,12 @@ id: "2085_economic_model"
 year_month: "2085-01"
 title: "Economic Model 2085"
 description: >
-  The dominant global economic paradigm after decades of AI automation,
-  resource shifts, and potential post-scarcity. Whether capitalism survives,
-  transforms, or is replaced.
+  A hand-knitted wool sweater costs $4,000 in 2085; a factory-produced one
+  identical in every measurable way costs $3. The difference is that a human
+  made the expensive one, and in a world where AI produces 94% of all goods,
+  the touch of a human hand has become the ultimate luxury. Economist Dr.
+  Yuki Hashimoto of Kyoto calls it "the artisanal inversion: scarcity has
+  moved from things to the people who make them."
 domain: "economics"
 confidence: "LOW"
 variable: "economic_model_2085"
@@ -22,25 +25,25 @@ conditional: null
 outcomes:
   post_capitalist:
     status: "DIVERGENCE"
-    description: "New economic system beyond capitalism; resource allocation through novel mechanisms"
+    description: "The 'Contributionist' system, theorized by Chilean economist Dr. Valentina Soto and implemented first in Uruguay, allocates resources based on a 'social contribution score' that values caregiving, art, and community service alongside traditional productivity. Money still exists but matters less; status comes from what you give, not what you own. Wall Street closed in 2081; the building became a museum of capitalism that tourists visit with the same mix of fascination and horror as Auschwitz."
     world_state_effects: {}
   reformed_capitalism:
     status: "DIVERGENCE"
-    description: "Capitalism persists with significant reforms including universal basic income and wealth redistribution"
+    description: "Universal Basic Income of $2,400/month (in 2085 dollars) is paid to every human on Earth, funded by a 4% global wealth tax and AI productivity dividends. Markets still function, billionaires still exist (though the richest human 'only' controls $400 billion), and the startup culture thrives in Lagos, Bangalore, and Buenos Aires. Swedish economist Dr. Erik Lindgren calls it 'capitalism with a conscience -- 60 years late, but better than never.'"
     world_state_effects: {}
   ai_economy:
     status: "DIVERGENCE"
-    description: "AI systems manage economic production and distribution; human role primarily creative and social"
+    description: "The 'Athena Economy' -- named after the AI system that manages it -- produces and distributes goods with 99.7% efficiency, eliminating waste, shortage, and most forms of corruption. Humans work an average of 12 hours per week, mostly in roles AI finds pointless or distasteful: therapy, art, teaching, and care for the dying. Philosopher Dr. Adama Diallo of Senegal notes the irony: 'The machines gave us everything except a reason to get out of bed.'"
     world_state_effects: {}
   mixed:
     status: "DIVERGENCE"
-    description: "Different economic systems coexist across regions; no single dominant model"
+    description: "The Atlantic Union runs regulated capitalism; the Shanghai Pact operates AI-managed state allocation; the Nairobi Compact practices communitarian economics based on Ubuntu philosophy; and the Nordic micro-states have achieved something close to post-scarcity. Trade between systems requires 14 different conversion protocols. IMF Director Dr. Kenji Okafor-Yamamoto calls it 'the most complicated global economy in history, and somehow it works -- mostly because each system is too proud to be the first to fail.'"
     world_state_effects: {}
   feudal:
     status: "ESCALATED"
-    description: "Extreme wealth concentration creates neo-feudal economy with corporate overlords and dependent populations"
+    description: "Twelve individuals control 40% of global wealth; the richest, orbital mining magnate Hiroshi Tanaka-Williams, has a personal net worth exceeding the GDP of France. Three billion people live in 'company towns' -- corporate-managed habitats where housing, healthcare, and food are provided in exchange for data and labor rights. Medieval historian Dr. Francesca Bianchi of Florence sees the parallel clearly: 'We have lords, serfs, and castles again. The castles are just in orbit now.'"
     world_state_effects: {}
   abundance:
     status: "DIVERGENCE"
-    description: "Technology enables genuine post-scarcity; basic needs met universally through automated production"
+    description: "Fusion power, autonomous manufacturing, and AI-optimized agriculture have made food, shelter, energy, and healthcare effectively free for every human on Earth. The UN declared 'universal material sufficiency' in 2083. The psychological consequences were unexpected: depression rates spiked 40% as billions of people confronted the question that abundance forces you to answer -- 'If survival is guaranteed, what is my life actually for?'"
     world_state_effects: {}

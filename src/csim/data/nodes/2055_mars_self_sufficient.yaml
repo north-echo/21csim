@@ -2,9 +2,12 @@ id: "2055_mars_self_sufficient"
 year_month: "2055-01"
 title: "Mars Self-Sufficiency"
 description: >
-  Mars settlement faces the critical question of self-sufficiency. Whether the
-  colony can survive without Earth resupply determines if humanity becomes
-  a truly multi-planetary species.
+  The Mars colony at Jezero Crater has 340 permanent residents, 8 pressurized
+  habitats, and a growing infrastructure. But every 26 months, a supply ship
+  from Earth arrives carrying $14 billion in equipment, spare parts, and luxury
+  items the colony cannot produce. Colony manager Dr. Tomoko Hayashi calculates
+  that if the supply ships stopped, the colony would exhaust irreplaceable
+  components within 4 years.
 domain: "space"
 confidence: "LOW"
 variable: "mars_self_sufficient_status"
@@ -22,31 +25,31 @@ conditional: "space_development_index > 0.4"
 outcomes:
   achieved:
     status: "DIVERGENCE"
-    description: "Mars colony achieves basic self-sufficiency in food, water, and energy"
+    description: "Dr. Hayashi's team closes the loop: 12 underground greenhouses produce 100% of caloric needs, nuclear reactors and solar arrays provide 300% of energy demand, and a Sabatier reactor extracts water and oxygen from the Martian atmosphere. The last 'necessity shipment' from Earth carries only microchips and medical supplies. For the first time, humans can survive on another world without help from the homeworld."
     world_state_effects:
       space_development_index: "+0.15"
   decades_away:
     status: "DIVERGENCE"
-    description: "Mars settlement progressing but self-sufficiency remains decades away"
+    description: "The colony produces 70% of its food and all its water but cannot manufacture microprocessors, medical devices, or replacement pressure seals. Dr. Hayashi's 'Independence Roadmap' estimates 2072 for full self-sufficiency, requiring a Martian semiconductor fab and rare-earth extraction from Olympus Mons deposits that haven't been proven to exist."
     world_state_effects:
       space_development_index: "+0.05"
   abandoned:
     status: "DIVERGENCE"
-    description: "Mars settlement abandoned as unsustainable; resources redirected to Earth"
+    description: "After a catastrophic greenhouse depressurization kills 14 colonists and destroys 40% of food production, the evacuation debate becomes unavoidable. The final supply ship carries no cargo -- only empty seats. Dr. Hayashi is the second-to-last person to leave, carrying a Martian rock for each colonist who died. The habitats are sealed, powered down, and left as monuments to an ambition that outran its engineering."
     world_state_effects:
       space_development_index: "-0.08"
   thriving:
     status: "DIVERGENCE"
-    description: "Mars colony not only self-sufficient but growing and innovating independently"
+    description: "The colony, now 820 strong and fully self-sufficient, develops technologies Earth hasn't imagined: low-gravity architecture, perchlorate-based agriculture, and a 3D-printed nuclear reactor designed from scratch by a 19-year-old Martian-born engineer named Zara Obi-Tanaka. Mars begins exporting intellectual property to Earth -- the colony's first profitable trade, and the moment humanity becomes genuinely multi-planetary."
     world_state_effects:
       space_development_index: "+0.25"
   struggling:
     status: "DIVERGENCE"
-    description: "Mars colony survives but struggles with constant supply chain and technical challenges"
+    description: "The colony lurches from crisis to crisis: a water recycler failure in January, a habitat leak in March, a crop blight from an Earth-imported fungus in August. Dr. Hayashi sleeps 4 hours a night and jokes grimly that Mars is 'trying to kill us every day and we are too stubborn to die.' The colony survives, but colonists describe life as 'submarine duty with worse food and no shore leave.'"
     world_state_effects:
       space_development_index: "+0.02"
   not_attempted:
     status: "DIVERGENCE"
-    description: "No serious Mars settlement attempt made; human spaceflight remains orbital"
+    description: "Without a successful crewed landing in the 2040s, Mars settlement never progressed beyond PowerPoint presentations. Human spaceflight remains confined to LEO stations and lunar outposts. The red planet is studied entirely by robots, and the dream of a multi-planetary species gathers dust alongside the Apollo lunar bases that were never built."
     world_state_effects:
       space_development_index: "-0.03"

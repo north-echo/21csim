@@ -2,9 +2,12 @@ id: "2050_arctic_mature"
 year_month: "2050-01"
 title: "Arctic Governance Mature"
 description: >
-  Arctic governance reaches maturity as ice-free conditions become routine.
-  Whether the region is cooperatively managed, exploited, or militarized
-  determines environmental and geopolitical outcomes.
+  The Arctic Ocean is ice-free for 4 months per year; satellite images show open
+  blue water at the North Pole every August. Container ships from Shanghai to
+  Rotterdam transit in 18 days via the polar route instead of 35 through Suez.
+  Norwegian fishing captain Bjorn Eriksen pulls up species in his nets that belong
+  in the Mediterranean, and Inuit elder Siku Aaqqii mourns: "The ice was our land.
+  Now there is only water where home used to be."
 domain: "regional"
 confidence: "LOW"
 variable: "arctic_mature_status"
@@ -22,36 +25,36 @@ conditional: null
 outcomes:
   cooperative:
     status: "DIVERGENCE"
-    description: "Arctic Council evolves into effective governance body; resources shared sustainably"
+    description: "The expanded Arctic Council, now including China, Japan, and India as full members, manages shipping lanes, fishing quotas, and mineral rights through a binding treaty framework. Canadian diplomat Inuksuk Okalik-Petersen chairs the council with a philosophy borrowed from her Inuit grandmother: 'Take only what the ice allows' -- even when there is less ice to allow."
     world_state_effects:
       biodiversity_index: "+0.02"
       global_democracy_index: "+0.02"
   exploited:
     status: "DIVERGENCE"
-    description: "Arctic resources extracted aggressively; environmental damage severe"
+    description: "Forty-seven nations operate 320 extraction platforms across the Arctic; seismic blasting disrupts narwhal migration patterns, oil spills contaminate 200,000 km2 of newly open water, and the Arctic Ocean's albedo feedback accelerates as dark industrial infrastructure replaces reflective ice. Marine biologist Dr. Magnusdottir calls it 'the last great sacking of a pristine ecosystem.'"
     world_state_effects:
       biodiversity_index: "-0.10"
       climate_temp_anomaly: "+0.05"
   protected:
     status: "DIVERGENCE"
-    description: "International treaty protects remaining Arctic ecosystems as global heritage"
+    description: "The 'Arctic Heritage Treaty' designates 8.4 million km2 of polar waters as a protected marine sanctuary -- the largest in history. Shipping lanes are restricted to two corridors; extraction is banned; enforcement relies on AI satellite monitoring that can detect a single unauthorized vessel within minutes. The treaty costs the global economy $400 billion in forgone resources, but polling shows 74% of humans support it."
     world_state_effects:
       biodiversity_index: "+0.05"
   militarized:
     status: "ESCALATED"
-    description: "Arctic becomes militarized frontier; naval confrontations and territorial disputes"
+    description: "Russian and NATO submarines play cat-and-mouse under the diminishing ice cap; China stations a permanent naval flotilla at its self-declared 'Near-Arctic Research Zone.' A collision between a Russian destroyer and a Canadian frigate near the Lomonosov Ridge kills 23 sailors and brings the world closer to great-power war than any incident since the Cold War."
     world_state_effects:
       conflict_deaths: "+2000"
       nuclear_risk_level: "+0.03"
   indigenous_led:
     status: "DIVERGENCE"
-    description: "Indigenous peoples gain sovereignty over Arctic governance and resource management"
+    description: "The Inuit Circumpolar Council, Sami Parliament, Nenets Assembly, and 14 other indigenous governing bodies form the Arctic Peoples' Authority, recognized by the UN as the primary governance body for the polar region. Siku Aaqqii's granddaughter Naja chairs the Authority from Nuuk, managing $120 billion in shipping fees and extraction royalties for indigenous communities across four continents."
     world_state_effects:
       biodiversity_index: "+0.04"
       global_democracy_index: "+0.03"
   russian_dominated:
     status: "DIVERGENCE"
-    description: "Russia establishes de facto control over major Arctic shipping and resource zones"
+    description: "Russia's Northern Sea Route administration charges $280,000 per container ship transit and requires Russian icebreaker escort; its 14 nuclear icebreakers and 22 Arctic military bases enforce a monopoly that other nations lack the polar capability to challenge. Moscow collects $84 billion annually in Arctic transit fees -- more than its entire pre-transition oil revenue."
     world_state_effects:
       us_china_tension_index: "+0.03"
       biodiversity_index: "-0.05"

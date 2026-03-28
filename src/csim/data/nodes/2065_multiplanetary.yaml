@@ -2,9 +2,11 @@ id: "2065_multiplanetary"
 year_month: "2065-01"
 title: "Multiplanetary Status"
 description: >
-  Whether humanity has successfully established permanent settlements beyond
-  Earth. Decades of space development either bear fruit or prove the immense
-  difficulty of off-world colonization.
+  The first child born on Mars -- Esperanza Liu-Martinez, 3.2 kg, delivered by
+  Dr. Olga Kuznetsova in Olympus Base's medical bay on June 14, 2063 -- has
+  never felt Earth's gravity. Her parents, a Mexican geologist and a Chinese
+  engineer, met during training in the Gobi Desert. She will grow up taller
+  and thinner than any Earth child, in a world where the sky is the wrong color.
 domain: "technology"
 confidence: "LOW"
 variable: "multiplanetary_status"
@@ -22,31 +24,31 @@ conditional: "space_development_index > 0.3"
 outcomes:
   mars_thriving:
     status: "DIVERGENCE"
-    description: "Self-sustaining Mars colony with growing population and independent infrastructure"
+    description: "Olympus Base houses 1,800 residents across 12 pressurized habitats; they grow their own food in hydroponic bays, manufacture spare parts from Martian regolith, and have developed a distinct accent that linguist Dr. Sarah Okonkwo calls 'Mars English.' The colony could survive Earth's disappearance, though nobody likes to think about that."
     world_state_effects:
       space_development_index: "+0.25"
   moon_only:
     status: "DIVERGENCE"
-    description: "Permanent lunar bases established but Mars colonization proves too difficult"
+    description: "Shackleton Station at the lunar south pole supports 400 permanent residents and processes 200 tons of water ice annually. Mars missions were abandoned in 2061 after the third crew suffered catastrophic radiation exposure during a solar storm. Moon commander Col. Adaeze Nwosu runs what she calls 'the most expensive small town in history' -- and the only one with a view of home."
     world_state_effects:
       space_development_index: "+0.10"
   orbital_habitats:
     status: "DIVERGENCE"
-    description: "Large orbital habitats house thousands; planetary settlement less attractive than engineered space"
+    description: "The O'Neill cylinder 'New Catalonia,' orbiting at L5, houses 6,000 residents in a rotating habitat with artificial gravity, a river, and weather patterns programmed by atmospheric engineer Dr. Kenji Watanabe. Residents grow wine grapes that taste subtly different from any terrestrial vintage, a distinction that has made 'space Bordeaux' the most expensive wine per bottle in the solar system."
     world_state_effects:
       space_development_index: "+0.15"
   failed:
     status: "DIVERGENCE"
-    description: "Colonization attempts failed due to technical, biological, or economic barriers"
+    description: "The Mars 3 crew returned to Earth in 2062 after 14 months, all six suffering from bone density loss, chronic radiation sickness, and a psychological condition psychologist Dr. Emil Horvat termed 'planetary grief.' Mission commander Yuto Hashimoto's memoir 'The Red Lie' detailed how every system failed slightly faster than predicted, and concluded: 'Mars doesn't want us there.'"
     world_state_effects:
       space_development_index: "-0.10"
   expanding:
     status: "DIVERGENCE"
-    description: "Multiple off-world settlements growing rapidly with new ones being planned"
+    description: "Mars has three bases, the Moon has five, and the asteroid belt mining station 'Ceres Forward' just broke ground on its first permanent habitat. Total off-world population: 11,000 and growing at 30% annually. SpaceX-Tata CEO Priya Musk announced plans for a Venus cloud colony by 2075, calling it 'the logical next step for a species that refuses to stay put.'"
     world_state_effects:
       space_development_index: "+0.30"
   not_attempted:
     status: "DIVERGENCE"
-    description: "Humanity focused resources on Earth-based challenges rather than space colonization"
+    description: "The 'Earth First' movement, championed by Ethiopian ecologist Dr. Desta Bekele, successfully argued that every dollar spent on Mars could save 100 lives at home. Space funding was redirected to climate adaptation, and the mothballed Mars transport sits in a Texas hangar, visited by schoolchildren who press their faces against the glass and dream of a journey that never happened."
     world_state_effects:
       space_development_index: "-0.05"

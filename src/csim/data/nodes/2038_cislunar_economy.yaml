@@ -2,10 +2,12 @@ id: "2038_cislunar_economy"
 year_month: "2038-06"
 title: "Cislunar Economy"
 description: >
-  An integrated Earth-Moon economic zone emerges as launch costs fall and
-  lunar infrastructure matures. Fuel depots, communication relays, and
-  transfer stations create a sustained economic corridor between Earth
-  and the Moon.
+  A SpaceX Starship departs Earth, refuels at a propellant depot at the
+  Earth-Moon L1 Lagrange point using lunar-derived hydrogen and oxygen,
+  then continues to the Moon's surface -- the first 'gas station in space'
+  transaction. The total cislunar infrastructure: 3 fuel depots, 8 communication
+  relay satellites, 2 space stations, and a growing constellation of cargo
+  tugs that ping-pong between Earth orbit and the lunar surface every 14 days.
 domain: "space"
 confidence: "LOW"
 variable: "cislunar_economy_status"
@@ -49,8 +51,8 @@ conditional: null
 outcomes:
   thriving_corridor:
     status: "DIVERGENCE"
-    description: "Earth-Moon corridor fully operational with regular cargo and crew transport"
-    explanation: "Fuel depots at Lagrange points, reusable lunar landers, and surface infrastructure create self-sustaining logistics chain"
+    description: "34 cargo missions and 6 crewed missions transit between Earth and Moon each quarter using Starship and Long March 10 vehicles; the L1 fuel depot processes 400 tonnes of lunar-derived propellant annually; SpaceX's 'Lunar Express' cargo service advertises 72-hour Earth-to-Moon delivery for $12,000/kg -- down from $1 million/kg a decade ago"
+    explanation: "The cislunar corridor reaches economic viability once lunar propellant production exceeds the break-even threshold of 200 tonnes/year: at that point, refueling in space is cheaper than launching fully fueled from Earth, and the entire architecture becomes self-reinforcing; the corridor supports not just Moon operations but serves as the staging point for Mars missions, asteroid rendezvous, and deep-space telescope deployment"
     world_state_effects:
       space_development_index: "+0.12"
     cascading_modifiers:
@@ -58,27 +60,27 @@ outcomes:
       2045_space_economy.explosive: "+0.05"
   government_led:
     status: "DIVERGENCE"
-    description: "Cislunar infrastructure exists but is primarily government-funded and operated"
-    explanation: "NASA, ESA, and CNSA maintain cislunar stations; private sector involvement limited to contracts"
+    description: "NASA operates the Lunar Gateway station with 4 permanent crew; CNSA maintains a competing facility in a different lunar orbit; ESA's 'Hermes' cargo tug shuttles between the two on diplomatic missions; the entire operation costs $28 billion annually across all three agencies, with private companies serving only as contracted service providers rather than independent operators"
+    explanation: "The cislunar economy resembles the ISS era rather than a commercial breakthrough: governments fund it for strategic and scientific reasons, private companies build and operate hardware under cost-plus contracts, and no commercial revenue stream exists to sustain the infrastructure without continuous taxpayer funding; it works, but it is a government program, not a market"
     world_state_effects:
       space_development_index: "+0.07"
   slow_development:
     status: "DIVERGENCE"
-    description: "Cislunar economy develops but far slower than projected; infrastructure sparse"
-    explanation: "High costs and limited commercial demand keep cislunar activity at research-level volumes"
+    description: "A single fuel depot at L1 operates at 30% capacity; only 8 missions per year justify the cislunar route rather than direct-to-Moon launches; the infrastructure exists but mostly sits idle, maintained by a skeleton crew of 2 at the depot, waiting for the demand that justifies its construction -- a space-age version of a highway built to a town that never grew"
+    explanation: "The cislunar infrastructure was built on projections of 50+ missions per year that assumed a booming lunar economy; when lunar mining and tourism develop slower than expected, the corridor has capacity for traffic that doesn't exist; the depot's operating costs of $3 billion/year produce political pressure to either scale up activity or shut it down, and neither option has a clear advocate"
     world_state_effects:
       space_development_index: "+0.04"
   private_sector_boom:
     status: "DIVERGENCE"
-    description: "Private companies dominate cislunar space; multiple competing transport services"
-    explanation: "SpaceX, Blue Origin, and new entrants compete for lunar cargo contracts; costs plummet"
+    description: "SpaceX, Blue Origin, and Relativity Space operate competing Earth-Moon cargo services at $8,000-15,000/kg; a startup called TransLunar Express (founded by a former SpaceX engineer in Cape Town) undercuts them all at $6,500/kg using autonomous solar-electric tugs; 140 missions per year transit the corridor, and the first cislunar 'shipping war' breaks out over pricing"
+    explanation: "The private-sector explosion mirrors the early airline industry: multiple competing operators, rapid cost reduction through competition, and a transition from government-funded exploration to commercial service; the key enabler is that multiple companies can now build reusable vehicles at scale, breaking SpaceX's former monopoly and creating genuine market competition in space logistics for the first time"
     world_state_effects:
       space_development_index: "+0.14"
     cascading_modifiers:
       2045_space_economy.on_track: "+0.05"
   stalled:
     status: "DIVERGENCE"
-    description: "Cislunar economic activity fails to materialize beyond occasional government missions"
-    explanation: "No compelling commercial case; Earth-based priorities absorb available funding"
+    description: "The L1 fuel depot, completed in 2036 at a cost of $6 billion, is mothballed after 2 years of operation because only 3 missions used it; NASA redirects cislunar budgets to Mars-direct architecture that bypasses the Moon entirely; the depot drifts in its Lagrange-point orbit, a monument to premature infrastructure investment, occasionally visited by a maintenance robot"
+    explanation: "The cislunar economy fails because its fundamental premise -- that lunar resources would create demand for cislunar infrastructure -- never materialized; without economically viable lunar mining, there is nothing to transport, and without transport demand, there is no revenue to sustain the infrastructure; the lesson, noted by space economists, is that building a highway before the destination exists is a recipe for expensive emptiness"
     world_state_effects:
       space_development_index: "+0.01"

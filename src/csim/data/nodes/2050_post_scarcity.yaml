@@ -2,9 +2,12 @@ id: "2050_post_scarcity"
 year_month: "2050-01"
 title: "Post-Scarcity Assessment"
 description: >
-  Automation and AI productivity gains raise the question of whether humanity has
-  achieved post-scarcity economics or simply created new forms of inequality
-  and artificial scarcity.
+  A fully automated factory in Shenzhen produces a smartphone for $0.47 in materials
+  and zero labor cost. A vertical farm in Singapore grows a head of lettuce for
+  $0.02. Fusion power is 18 months from commercial deployment (and has been for
+  10 years). The machines can make almost anything almost for free -- and yet
+  800 million people still go hungry, because scarcity, it turns out, was never
+  only about production.
 domain: "economic"
 confidence: "LOW"
 variable: "post_scarcity_status"
@@ -21,28 +24,28 @@ conditional: "automation_displacement > 0.30"
 outcomes:
   achieved_limited:
     status: "DIVERGENCE"
-    description: "Basic material needs met for most of humanity; scarcity persists for luxury and status goods"
+    description: "Automated production and universal basic services ensure that no one on Earth goes hungry, homeless, or without healthcare. A rice farmer in Cambodia and a barista in Ohio both have adequate food, shelter, and medicine. But a penthouse in Manhattan costs $400 million, a seat on a lunar flight costs $8 million, and the fight over status goods intensifies precisely because survival goods are free."
     world_state_effects:
       inequality_index: "-0.10"
       food_security_index: "+0.08"
   approaching:
     status: "DIVERGENCE"
-    description: "Material abundance increasing rapidly but distribution remains unequal"
+    description: "Global production capacity could feed, house, and clothe 12 billion people, but tariffs, intellectual property regimes, and political borders prevent distribution. Warehouses in Rotterdam overflow with unsold goods while children in Mogadishu go without medicine. 'We have solved production and failed distribution,' writes economist Dr. Grace Mbeki at the University of Cape Town."
     world_state_effects:
       inequality_index: "-0.05"
       food_security_index: "+0.05"
   myth:
     status: "DIVERGENCE"
-    description: "Post-scarcity proves illusory; resource constraints, climate, and politics maintain scarcity"
+    description: "Fusion remains perpetually '18 months away'; rare earth shortages bottleneck electronics production; climate-driven crop failures wipe out theoretical agricultural surpluses. Clean water is scarce in 40 countries; lithium for batteries is contested between three continents. The cornucopian dream collides with a planet that has hard physical limits and an atmosphere that is done being patient."
     world_state_effects:
       inequality_index: "+0.03"
   elite_only:
     status: "DIVERGENCE"
-    description: "Post-scarcity conditions exist for wealthy minority while majority struggles"
+    description: "The 12,000 wealthiest humans live in what can only be described as post-scarcity: AI butlers, personal medical teams, orbital vacation homes, and effectively unlimited consumption. Meanwhile, 4 billion people live on less than $10 per day. Tech billionaire Konstantin Varga builds a private island with its own fusion reactor while Dhaka's slums flood for the fourth time in a year."
     world_state_effects:
       inequality_index: "+0.12"
   new_scarcities:
     status: "DIVERGENCE"
-    description: "Old scarcities solved but new ones emerge: attention, meaning, status, clean environment"
+    description: "Nobody in the developed world starves, freezes, or dies of treatable illness. But depression rates are the highest in recorded history; 40% of adults report 'no sense of purpose'; and the competition for social status, romantic partners, and creative recognition intensifies to brutal levels. Therapist Dr. Yuki Yamamoto's bestseller 'Starving in Paradise' diagnoses a civilization drowning in material abundance and meaning poverty."
     world_state_effects:
       inequality_index: "+0.02"

@@ -2,9 +2,10 @@ id: "2031_ai_displacement"
 year_month: "2031-06"
 title: "AI Economic Displacement"
 description: >
-  The economic impact of AI and automation on employment, inequality, and
-  social stability. Whether displaced workers can transition to new roles
-  or face permanent exclusion from the economy.
+  McKinsey's annual workforce report lands like a bomb: 28 million white-collar
+  jobs eliminated in OECD countries since 2028, with legal assistants, radiologists,
+  and mid-level software engineers hit hardest. A laid-off insurance adjuster in
+  Columbus, Ohio livestreams his empty office floor -- the video gets 44 million views.
 domain: "technology"
 confidence: "MEDIUM"
 variable: "ai_displacement_status"
@@ -36,36 +37,36 @@ conditional: null
 outcomes:
   managed_transition:
     status: "DIVERGENCE"
-    description: "Government retraining programs and UBI experiments ease the transition"
-    explanation: "Proactive policy response enables most displaced workers to find new roles within 2-3 years"
+    description: "The EU's 'Skills Bridge' program retrains 6.2 million workers in AI oversight, elder care, and green construction; Finland's $1,400/month UBI pilot, expanded nationwide in 2029, becomes the template adopted by Canada, Spain, and South Korea"
+    explanation: "Germany's IG Metall union negotiates the 'Frankfurt Compact' requiring firms to fund 18-month retraining for every position automated; unemployment peaks at 9.2% in 2030 but falls to 5.8% by late 2032 as the retrained workforce fills new roles in AI auditing and human services"
     world_state_effects:
       automation_displacement: "+0.10"
       inequality_index: "-0.02"
   social_crisis:
     status: "ESCALATED"
-    description: "Mass unemployment and social unrest as AI displaces workers faster than new jobs emerge"
-    explanation: "White-collar and service sector jobs automated rapidly; political instability follows"
+    description: "US unemployment hits 14.7%; trucker convoys blockade I-95 for three days after autonomous freight eliminates 340,000 long-haul jobs in a single quarter; arson attacks on data centers reported in Lyon, Bangalore, and suburban Atlanta"
+    explanation: "The displacement curve is steeper than any model predicted -- call centers, paralegal offices, and accounting firms hollow out simultaneously rather than sequentially; the 'Luddite Summer' of 2031 sees protest movements in 40 countries and three European governments fall"
     world_state_effects:
       automation_displacement: "+0.25"
       inequality_index: "+0.10"
   new_jobs_emerge:
     status: "DIVERGENCE"
-    description: "New AI-adjacent industries create more jobs than are destroyed"
-    explanation: "Human-AI collaboration, AI maintenance, and new creative industries absorb displaced workers"
+    description: "The 'AI whisperer' becomes the fastest-growing job title in America -- 2.1 million people employed as prompt engineers, AI trainers, and human-in-the-loop supervisors; a boom in artisanal 'certified human-made' goods creates a parallel craft economy from Portland to Kyoto"
+    explanation: "Just as ATMs created more bank branches and more tellers, AI tools spawn an ecosystem of human roles managing, correcting, and complementing automated systems; LinkedIn reports that jobs with 'AI' in the title grew 840% between 2028 and 2031"
     world_state_effects:
       automation_displacement: "+0.05"
       inequality_index: "-0.03"
   slower_than_expected:
     status: "DIVERGENCE"
-    description: "AI adoption slower than predicted; labor market disruption modest"
-    explanation: "Implementation challenges, regulation, and organizational inertia slow AI displacement"
+    description: "Despite breathless predictions, only 4.3% of US jobs actually automated by 2031; a Harvard Business School study finds that 60% of enterprise AI deployments stall during integration with legacy systems, and 'AI transformation' budgets quietly become IT maintenance budgets"
+    explanation: "The gap between demo and deployment turns out to be enormous -- hospitals can't connect AI diagnostics to their 1990s-era records systems, law firms discover AI hallucinations in briefs, and unions in France and Japan negotiate go-slow adoption clauses"
     world_state_effects:
       automation_displacement: "+0.03"
       inequality_index: "+0.01"
   bifurcated_economy:
     status: "DIVERGENCE"
-    description: "Economy splits into high-skill AI-augmented sector and low-wage service sector"
-    explanation: "Middle-class hollowed out; wealth concentrates among AI-capital owners"
+    description: "San Francisco AI engineers earn $900K average comp while former office workers compete for $17/hour 'human touch' service jobs -- elder companionship, artisanal food prep, child tutoring; the Gini coefficient in the US hits 0.49, approaching Brazilian levels"
+    explanation: "The economy splits into what economist Daron Acemoglu calls 'the centaur class and the servant class' -- those who work alongside AI multiply their productivity tenfold, while those displaced compete for the shrinking pool of tasks machines cannot or may not do"
     world_state_effects:
       automation_displacement: "+0.18"
       inequality_index: "+0.15"

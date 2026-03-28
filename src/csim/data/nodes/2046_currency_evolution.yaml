@@ -2,9 +2,11 @@ id: "2046_currency_evolution"
 year_month: "2046-01"
 title: "Currency Evolution"
 description: >
-  The global monetary system evolves as digital currencies, geopolitical shifts,
-  and economic restructuring challenge dollar hegemony. The resulting currency
-  regime shapes trade and power dynamics.
+  For the first time, more international trade settles in digital yuan than in
+  dollars. The Federal Reserve's 'FedCoin' digital dollar, launched three years
+  late and plagued by privacy scandals, struggles for adoption. Meanwhile, a
+  Nigerian-built cryptocurrency called 'Afri' processes 400 million transactions
+  daily across 34 African nations where nobody trusts any government's currency.
 domain: "economic"
 confidence: "MEDIUM"
 variable: "currency_evolution_status"
@@ -21,30 +23,30 @@ conditional: null
 outcomes:
   dollar_dominant:
     status: "DIVERGENCE"
-    description: "US dollar maintains reserve currency status through digital dollar and institutional inertia"
+    description: "Treasury Secretary Amelia Thornton-Reyes brokers a deal with 60 central banks to make FedCoin the backbone of international clearing, leveraging America's still-unmatched capital markets and the simple fact that $14 trillion in global debt is denominated in dollars. 'You can hate the dollar,' she tells Davos, 'but you cannot escape it.'"
     world_state_effects:
       us_gdp_growth: "+0.005"
       us_global_standing: "+0.03"
   multi_currency:
     status: "DIVERGENCE"
-    description: "Multiple reserve currencies coexist; dollar, yuan, euro share global trade"
+    description: "Global trade settles in roughly equal thirds: digital dollar for the Americas, digital yuan for Asia-Pacific, digital euro for Europe-Africa. The IMF's Special Drawing Rights basket expands to include all three plus the Indian rupee. Currency traders rejoice; economists warn that no single lender of last resort means the next financial crisis has no fire station."
     world_state_effects:
       us_global_standing: "-0.03"
   digital_yuan:
     status: "DIVERGENCE"
-    description: "Digital yuan becomes dominant trade currency across Asia and Africa"
+    description: "The People's Bank of China processes 72% of Asian trade through its digital yuan platform; 28 African nations adopt yuan-denominated settlement for Chinese infrastructure loans. At a Shenzhen fintech conference, PBOC governor Liu Minghui declares 'the Bretton Woods era is over,' while Washington watches its sanctions leverage evaporate as dollar-free payment rails proliferate."
     world_state_effects:
       us_global_standing: "-0.08"
       us_china_tension_index: "+0.05"
   crypto_standard:
     status: "DIVERGENCE"
-    description: "Decentralized cryptocurrency becomes global standard of value"
+    description: "A proof-of-stake cryptocurrency called 'Terra Firma,' designed by an anonymous collective of central bank defectors, achieves price stability through algorithmic backing by a basket of commodities and carbon credits. El Salvador, now vindicated for its 2021 Bitcoin bet, hosts the Terra Firma Foundation; 800 million unbanked people gain financial access through $3 smartphones."
     world_state_effects:
       inequality_index: "+0.03"
       global_democracy_index: "+0.02"
   regional_blocs:
     status: "DIVERGENCE"
-    description: "Regional currency blocs emerge; global financial system fragments"
+    description: "The BRICS currency 'Unit' covers 40% of global GDP; the 'Amero' unifies North American trade; the African Union's 'Afri' handles continental commerce; and the euro soldiers on. Cross-bloc transactions require expensive conversions through increasingly politicized clearing houses. A Brazilian coffee exporter paying a German machinery manufacturer navigates four currency zones and three days of settlement."
     world_state_effects:
       us_global_standing: "-0.05"
       us_gdp_growth: "-0.005"

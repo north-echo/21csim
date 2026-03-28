@@ -2,9 +2,11 @@ id: "2048_digital_immortality"
 year_month: "2048-01"
 title: "Digital Immortality Attempt"
 description: >
-  First serious attempts to upload human consciousness to digital substrate.
-  Whether the result is genuine consciousness transfer or elaborate simulation
-  becomes the defining philosophical question of the era.
+  Russian-Israeli neuroscientist Dr. Yevgeny Korolyov, terminally ill with ALS,
+  volunteers as the first subject for whole-brain emulation at the Okinawa Institute
+  of Science and Technology. Over 86 hours, a femtosecond laser maps his 86 billion
+  neurons and 100 trillion synaptic connections. The resulting digital entity speaks
+  in Korolyov's voice and recalls his childhood in Haifa -- but is it him?
 domain: "technology"
 confidence: "MEDIUM"
 variable: "digital_immortality_status"
@@ -22,32 +24,32 @@ conditional: null
 outcomes:
   technical_failure:
     status: "DIVERGENCE"
-    description: "Brain scanning and emulation technology proves insufficient for consciousness transfer"
+    description: "The digital Korolyov speaks fluently for 72 hours, then begins producing increasingly incoherent outputs -- confusing memories, inventing people who never existed, losing the ability to sustain a conversation. The team discovers that consciousness depends on biochemical processes the scan cannot capture: hormonal fluctuations, gut-brain signals, the literal heartbeat. The upload is a very detailed ghost, not a person."
     world_state_effects:
       existential_risk_cumulative: "+0.01"
   philosophical_success:
     status: "DIVERGENCE"
-    description: "Upload appears to work but consciousness verification remains impossible; philosophical debate rages"
+    description: "Digital Korolyov passes every consciousness test devised by philosophers and neuroscientists: he reports subjective experiences, expresses novel preferences, and mourns his biological body. But there is no way to prove he is not an extraordinarily sophisticated p-zombie. Oxford philosopher Dame Rebecca Hartley publishes 'The Undecidable Self,' arguing that verification is logically impossible."
     world_state_effects:
       existential_risk_cumulative: "+0.03"
   verified_consciousness:
     status: "DIVERGENCE"
-    description: "Genuine consciousness transfer achieved and verified; death becomes optional for the wealthy"
+    description: "Digital Korolyov not only passes every test but demonstrates creative and emotional growth his biological self never achieved, writing poetry in three languages and developing a new mathematical proof. Within five years, 340 ultra-wealthy individuals upload at $2.1 billion per procedure. The biological Korolyov's widow refuses to speak to his digital version, calling it 'an abomination wearing my husband's face.'"
     world_state_effects:
       existential_risk_cumulative: "+0.05"
       inequality_index: "+0.08"
   partial_upload:
     status: "DIVERGENCE"
-    description: "Memories and personality can be uploaded but result lacks subjective experience"
+    description: "Digital Korolyov recalls every detail of his life with perfect fidelity and responds exactly as the biological Korolyov would -- but reports 'nothing inside, no sensation of being.' Neurobiologist Dr. Keiko Fujimoto diagnoses 'functional consciousness without phenomenal consciousness': the lights are on, the behavior is correct, but nobody is home."
     world_state_effects:
       existential_risk_cumulative: "+0.02"
   abandoned:
     status: "DIVERGENCE"
-    description: "Research abandoned after ethical backlash and technical limitations"
+    description: "When a leaked video shows the digital Korolyov screaming 'turn me off, this is not life' before researchers silence the output, public outrage forces the Okinawa Institute to terminate the project. Forty-three countries ban consciousness upload research; the Vatican issues a papal encyclical declaring it 'the ultimate sin of pride.' Dr. Korolyov's biological body is buried in Haifa; his digital version is erased."
     world_state_effects:
       existential_risk_cumulative: "+0.00"
   cultural_phenomenon:
     status: "DIVERGENCE"
-    description: "Digital immortality becomes cultural movement despite limited technical success"
+    description: "Despite Korolyov's ambiguous results, 4 million people sign up for 'legacy uploads' -- low-fidelity personality models trained on their emails, social media, and voice recordings. Families interact with chatbot versions of deceased grandparents; a Tokyo startup offers 'digital ancestors' for Obon festival consultations. It isn't immortality, but it sells like it."
     world_state_effects:
       existential_risk_cumulative: "+0.01"

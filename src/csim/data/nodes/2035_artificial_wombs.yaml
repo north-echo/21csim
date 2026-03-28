@@ -2,10 +2,11 @@ id: "2035_artificial_wombs"
 year_month: "2035-06"
 title: "Ectogenesis Research"
 description: >
-  Artificial womb technology advances from saving premature infants to
-  enabling full ectogenesis — gestation entirely outside the human body.
-  This technology could transform reproductive rights, gender dynamics,
-  and the meaning of parenthood itself.
+  Dr. Yuko Tanaka's team at Tohoku University successfully gestates a lamb
+  from embryo to live birth entirely within a 'BioBag' artificial womb --
+  the third mammalian species to complete full ectogenesis in the lab.
+  The Vatican issues a 40-page encyclical condemning it; the Japanese
+  fertility minister calls it 'the answer to our demographic crisis.'
 domain: "health"
 confidence: "LOW"
 variable: "artificial_wombs"
@@ -22,31 +23,31 @@ conditional: null
 outcomes:
   neonatal_use_only:
     status: "DIVERGENCE"
-    description: "Artificial wombs save extremely premature infants; full ectogenesis remains distant"
+    description: "Neonatal BioBag systems, deployed in 340 hospitals across 28 countries, increase survival rates for 22-week premature infants from 10% to 78%; a premature baby born at 21 weeks in Melbourne is sustained in an artificial womb for 14 weeks and goes home healthy -- but human ectogenesis from conception remains prohibited everywhere and technically unfeasible"
     world_state_effects:
       gender_equity_index: "+0.01"
       us_life_expectancy_delta: "+0.1"
   full_ectogenesis_available:
     status: "DIVERGENCE"
-    description: "Full ectogenesis clinically available; profound shift in reproductive norms"
+    description: "The first human baby fully gestated in an artificial womb is born at a private clinic in Singapore -- a healthy girl named Mei, to same-sex parents who could not otherwise have a biological child; within 18 months, clinics in Israel, Japan, and the UK offer the procedure at $280,000; feminist philosophers split bitterly over whether this is liberation or commodification"
     world_state_effects:
       gender_equity_index: "+0.06"
       global_population_billions: "+0.1"
   banned_widely:
     status: "DIVERGENCE"
-    description: "Moral and religious opposition leads to widespread bans on ectogenesis research"
+    description: "An alliance of the Vatican, evangelical churches, Al-Azhar University's grand imam, and Orthodox rabbinical councils launches a 'Dignity of Birth' campaign that drives ectogenesis bans in 44 countries including the US (where the 'Born Not Built Act' passes the Senate 62-38), most of the EU, and all Muslim-majority nations"
     world_state_effects:
       gender_equity_index: "-0.01"
       global_democracy_index: "-0.01"
   reproductive_equality_tool:
     status: "DIVERGENCE"
-    description: "Ectogenesis framed as gender equality tool; adopted in progressive nations"
+    description: "Iceland becomes the first country to offer state-funded ectogenesis as part of its national healthcare system, framing it as 'reproductive equality for all genders and family structures'; Sweden, Denmark, and New Zealand follow within 2 years; a study in The Lancet shows that Icelandic women's labor force participation and lifetime earnings increase 14% within the first cohort"
     world_state_effects:
       gender_equity_index: "+0.08"
       inequality_index: "-0.01"
   commercial_surrogacy_replacement:
     status: "DIVERGENCE"
-    description: "Technology replaces surrogacy industry; raises new exploitation concerns"
+    description: "Commercial ectogenesis clinics in India, Ukraine, and Georgia replace the $14 billion surrogacy industry; 8,000 'gestational pods' operate in a single facility outside Hyderabad, producing babies for clients worldwide at $45,000 each -- cheaper than surrogacy and without the ethical complications of exploiting women's bodies, but critics warn it creates 'baby factories' that commodify human life"
     world_state_effects:
       gender_equity_index: "+0.03"
       inequality_index: "+0.02"

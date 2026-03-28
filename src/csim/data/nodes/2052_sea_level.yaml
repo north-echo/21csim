@@ -2,9 +2,12 @@ id: "2052_sea_level"
 year_month: "2052-01"
 title: "Sea Level Rise Status"
 description: >
-  Mid-century sea level rise assessment determines coastal city viability and
-  migration patterns. The rate of ice sheet collapse drives outcomes ranging
-  from manageable to catastrophic.
+  Satellite altimetry shows global mean sea level 38 cm above the 2000 baseline
+  and accelerating. Jakarta has been abandoned as Indonesia's capital; Miami Beach
+  floods 120 days per year; the Maldives' last inhabited island is defended by a
+  $2 billion seawall that everyone knows is temporary. Glaciologist Dr. Anders
+  Johansson at the University of Copenhagen publishes the definitive ice sheet
+  assessment that world leaders have been dreading.
 domain: "climate"
 confidence: "LOW"
 variable: "sea_level_status"
@@ -21,26 +24,26 @@ conditional: null
 outcomes:
   half_meter:
     status: "DIVERGENCE"
-    description: "Sea level rises approximately half a meter; coastal adaptation feasible for wealthy nations"
+    description: "Dr. Johansson's report confirms 48 cm of rise, tracking the moderate scenario. The Netherlands' $120 billion Deltaplan-3 holds; New York's storm surge barriers close 30 times per year; Tokyo's underground cisterns handle the increased flooding. Wealthy nations adapt at enormous cost. Bangladesh, Mozambique, and the Pacific Islands, lacking such resources, continue to drown in slow motion."
     world_state_effects:
       sea_level_rise_meters: "+0.15"
   one_meter:
     status: "ESCALATED"
-    description: "One meter rise displaces hundreds of millions; major coastal cities threatened"
+    description: "The report reads 94 cm -- nearly a meter, and the West Antarctic Ice Sheet is accelerating. Shanghai's Bund is behind permanent flood gates; Ho Chi Minh City has retreated 12 km inland; Alexandria's ancient harbor is underwater. 410 million people worldwide live below the new high-tide line. The word 'retreat' replaces 'adaptation' in every coastal planning document on Earth."
     world_state_effects:
       sea_level_rise_meters: "+0.30"
   accelerating:
     status: "ESCALATED"
-    description: "Ice sheet collapse accelerates; multi-meter rise now inevitable within decades"
+    description: "The Thwaites Glacier -- the 'Doomsday Glacier' -- collapses completely, and Dr. Johansson's models show 2.4 meters of rise is now locked in over the next 80 years regardless of emissions. His report's final sentence: 'Every coastal city on Earth must plan for relocation.' Global real estate markets crash $34 trillion in a single week as investors absorb what 'inevitable' means."
     world_state_effects:
       sea_level_rise_meters: "+0.40"
   managed:
     status: "DIVERGENCE"
-    description: "Sea level rise significant but managed through infrastructure and planned retreat"
+    description: "At 52 cm of rise, the Global Coastal Resilience Fund -- $800 billion from carbon tax revenues -- finances seawalls for 40 major cities and planned retreat for 200 vulnerable communities. The Dutch-designed 'floating city' prototype in Busan, South Korea, houses 12,000 residents on articulated platforms that rise with the tide. Adaptation works, but it requires spending 2% of global GDP every year, forever."
     world_state_effects:
       sea_level_rise_meters: "+0.10"
   stabilized:
     status: "DIVERGENCE"
-    description: "Ice sheet stabilization limits further rise; existing damage contained"
+    description: "Aggressive emissions cuts combined with geoengineering-assisted polar cooling stabilize both the Greenland and Antarctic ice sheets at 32 cm of total rise. Dr. Johansson's report, for the first time, includes the phrase 'ice sheet mass balance approaching equilibrium.' Coastal planners worldwide exhale cautiously; the damage already done is permanent, but it will not get dramatically worse."
     world_state_effects:
       sea_level_rise_meters: "+0.05"

@@ -2,9 +2,11 @@ id: "2065_population_decline"
 year_month: "2065-01"
 title: "Population Decline"
 description: >
-  Global population begins its long-anticipated decline as fertility rates fall
-  worldwide. How societies manage demographic contraction becomes a defining
-  challenge of the era.
+  South Korea's fertility rate hit 0.4 in 2063 -- less than one child for every
+  two women. The village of Hoengsong, once home to 40,000, held its last
+  elementary school graduation in 2060: three students and a teacher who cried
+  through the entire ceremony. Demographer Dr. Park Min-ji's viral paper was
+  titled simply: "The Quiet."
 domain: "demographics"
 confidence: "LOW"
 variable: "population_decline_status"
@@ -21,31 +23,31 @@ conditional: null
 outcomes:
   gradual_managed:
     status: "DIVERGENCE"
-    description: "Population declines slowly with effective policies managing the transition"
+    description: "Global population is 7.8 billion and falling by 40 million per year -- roughly one Portugal annually. Governments manage the transition through AI-assisted eldercare, automated agriculture, and 'soft landing' urban consolidation. In Japan, the world's oldest society, abandoned rural towns are being converted into rewilded forests by the Ministry of Graceful Decline."
     world_state_effects:
       global_population_billions: "-0.30"
       median_age_global: "+2.0"
   rapid_decline:
     status: "ESCALATED"
-    description: "Population drops faster than anticipated; economic and social systems struggle to adapt"
+    description: "Population crashed to 7 billion by 2064, a decade ahead of projections, as sub-Saharan Africa -- the last holdout of high fertility -- underwent an overnight demographic transition driven by smartphone-delivered contraception and economic shifts. Italian villages auction off houses for one euro, and Chinese provinces compete for immigrants with signing bonuses. The economy needs workers; the wombs of the world have politely declined."
     world_state_effects:
       global_population_billions: "-0.80"
       median_age_global: "+5.0"
   stabilized:
     status: "DIVERGENCE"
-    description: "Population stabilizes through pro-natalist policies and immigration balancing"
+    description: "Scandinavia's 'Family Guarantee' -- free housing, 36 months' parental leave, and a universal child stipend equivalent to a full salary -- pushed Nordic fertility back to 2.1 by 2060. The model spread to 40 countries, stabilizing global population at 8.2 billion. The catch: it costs 8% of GDP, and Finance Minister Astrid Bergman of Sweden calls it 'the most expensive love letter a government ever wrote.'"
     world_state_effects:
       global_population_billions: "+0.00"
       median_age_global: "+1.0"
   aging_crisis:
     status: "ESCALATED"
-    description: "Extreme aging without adequate decline creates unsustainable dependency ratios"
+    description: "In 2064, there are more people over 80 than under 15 on Earth for the first time in human history. Germany has three retirees for every worker; Japan's ratio is four to one. Eldercare consumes 22% of global GDP. Gerontologist Dr. Olumide Adeyemi calls it 'the silver tsunami nobody built a seawall for' -- billions of people living decades longer than pension systems were designed to support."
     world_state_effects:
       global_population_billions: "-0.20"
       median_age_global: "+8.0"
   rejuvenation:
     status: "DIVERGENCE"
-    description: "Life extension technologies create a demographic rejuvenation; aging reversed for many"
+    description: "The Yamanaka-Sinclair cellular reprogramming therapy, first administered at a clinic in Singapore in 2058, reverses biological age by approximately 20 years. The 400,000 people who have received it include several heads of state. A 90-year-old marathon runner with the cardiovascular system of a 40-year-old won the Boston Marathon in 2064, and the ethical debate about 'the longevity divide' makes the old income inequality arguments look quaint."
     world_state_effects:
       global_population_billions: "+0.10"
       median_age_global: "-5.0"

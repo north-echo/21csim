@@ -2,10 +2,11 @@ id: "2034_lunar_economy"
 year_month: "2034-06"
 title: "Lunar Economy Begins"
 description: >
-  Commercial activities on the Moon ramp up: water ice mining for rocket fuel,
-  helium-3 extraction for future fusion reactors, and early lunar tourism.
-  Whether a self-sustaining lunar economy emerges depends on base infrastructure
-  and launch costs.
+  Intuitive Machines' robotic excavator at the lunar south pole has extracted
+  18 tonnes of water ice -- enough to produce propellant for 3 return missions
+  to Earth. A SpaceX Starship refuels at the first orbital depot using lunar-derived
+  hydrogen and oxygen. The Moon is no longer just a destination; it is becoming
+  a gas station.
 domain: "space"
 confidence: "MEDIUM"
 variable: "lunar_economy_status"
@@ -44,8 +45,8 @@ conditional: null
 outcomes:
   water_mining_viable:
     status: "DIVERGENCE"
-    description: "Lunar water ice extraction becomes commercially viable; in-space fuel depots operational"
-    explanation: "Polar ice deposits richer than expected; propellant production cuts cislunar transport costs"
+    description: "Shackleton Crater ice deposits prove 40% richer than orbital surveys suggested; Intuitive Machines and a JAXA-Toyota joint venture operate competing extraction sites producing 200 tonnes of propellant annually; an orbital fuel depot at L1 cuts the cost of missions beyond the Moon by 70%, making Mars transit economically conceivable"
+    explanation: "The lunar water economy creates a classic bootstrap: cheaper fuel enables more missions, more missions justify more infrastructure, and more infrastructure reduces costs further; the first 'born in space' supply chain -- lunar ice to orbital propellant to deep space mission -- eliminates the tyranny of Earth's gravity well for the most expensive component of spaceflight"
     world_state_effects:
       space_development_index: "+0.10"
     cascading_modifiers:
@@ -53,8 +54,8 @@ outcomes:
       2045_space_economy.on_track: "+0.05"
   he3_breakthrough:
     status: "DIVERGENCE"
-    description: "Helium-3 extraction begins; paired with fusion reactor progress on Earth"
-    explanation: "Lunar regolith processing yields commercially relevant He-3 quantities as fusion nears viability"
+    description: "A Chinese robotic processor at the Guanghan Palace base extracts 340kg of helium-3 from regolith -- enough to power a demonstration fusion reactor in Hefei for 6 months; the material's value at $16 million per kilogram makes it the most precious substance ever mined, and both NASA and CNSA classify their He-3 reserves as strategic national assets"
+    explanation: "The He-3 lunar economy depends entirely on fusion progress on Earth: if commercial fusion reactors arrive by the early 2040s, lunar He-3 becomes the most valuable resource in the solar system; the Chinese program's head start in extraction gives Beijing potential leverage over the global energy market that dwarfs even Saudi Arabia's oil influence at its peak"
     world_state_effects:
       space_development_index: "+0.12"
       renewable_energy_share: "+0.02"
@@ -62,20 +63,20 @@ outcomes:
       2045_space_economy.explosive: "+0.05"
   tourism_driven:
     status: "DIVERGENCE"
-    description: "Lunar tourism becomes the primary economic driver; wealthy visitors fund base expansion"
-    explanation: "Week-long lunar surface stays at $50M+ per ticket create sustainable revenue stream"
+    description: "SpaceX offers 7-day lunar surface packages at $35 million per person; 42 tourists visit in 2034 including a Saudi billionaire who livestreams his moonwalk to 180 million viewers; the tourism revenue -- $1.5 billion annually -- exceeds all other lunar commercial activity combined and funds habitat expansion that benefits everyone"
+    explanation: "Lunar tourism follows the Everest model: wealthy adventurers pay premium prices that fund infrastructure used by scientists and miners; the 'Overview Effect' videos recorded by tourists become a cultural phenomenon, and a cottage industry of lunar experience companies (training, custom spacesuits, commemorative moon dust) employs 2,000 people on Earth"
     world_state_effects:
       space_development_index: "+0.06"
       inequality_index: "+0.01"
   government_subsidized:
     status: "DIVERGENCE"
-    description: "Lunar economy survives only through government contracts and strategic subsidies"
-    explanation: "No commercial business case yet; military and scientific justifications sustain funding"
+    description: "NASA spends $14 billion annually on Artemis base operations with no commercial revenue in sight; the US Space Force designates cislunar space as a 'strategic domain' requiring permanent presence; Congress funds the base as a national security line item, and defense contractors Northrop Grumman and Lockheed build lunar infrastructure at Pentagon rates"
+    explanation: "The commercial lunar economy remains a PowerPoint dream: water extraction costs 8x more than launching water from Earth, He-3 has no buyer without commercial fusion, and tourism cannot fill the gap; the base survives because closing it would concede the Moon to China, making it a very expensive flag-planting exercise sustained by geopolitical anxiety rather than economics"
     world_state_effects:
       space_development_index: "+0.04"
   economically_unviable:
     status: "DIVERGENCE"
-    description: "Lunar resource extraction proves too expensive; economic activity stalls"
-    explanation: "Transport costs remain prohibitive; terrestrial alternatives cheaper for all applications"
+    description: "After 3 years of operations, Intuitive Machines publishes a sobering analysis: lunar water extraction costs $180,000 per kilogram when accounting for equipment replacement, power systems, and dust-related maintenance failures -- roughly 100x more expensive than launching water from Earth on a Starship; the company's stock drops 82% in a single day"
+    explanation: "The lunar environment proves far more hostile to sustained industrial operations than optimists assumed: abrasive regolith dust destroys seals and bearings, the 14-day lunar night requires massive battery systems, and radiation degrades electronics in months rather than years; the Moon remains scientifically valuable but economically barren, a harsh lesson in the difference between 'technically possible' and 'commercially viable'"
     world_state_effects:
       space_development_index: "+0.01"

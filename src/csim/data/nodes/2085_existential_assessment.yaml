@@ -2,9 +2,11 @@ id: "2085_existential_assessment"
 year_month: "2085-01"
 title: "Existential Risk Assessment"
 description: >
-  A comprehensive assessment of humanity's existential risk profile. Whether
-  the cumulative threats from technology, climate, conflict, and biology
-  have been mitigated or intensified.
+  The Global Existential Risk Observatory in Geneva maintains a classified
+  dashboard showing humanity's estimated probability of extinction within 100
+  years. When journalist Mei-Ling Zhao of the South China Morning Post obtained
+  the number through a leak in 2084, she chose not to publish it, saying only:
+  "I showed it to my editor and we both stared at the wall for a long time."
 domain: "meta"
 confidence: "LOW"
 variable: "existential_assessment_2085"
@@ -22,31 +24,31 @@ conditional: null
 outcomes:
   safer:
     status: "DIVERGENCE"
-    description: "Existential risks significantly reduced through technology, governance, and cooperation"
+    description: "Nuclear arsenals are down to 200 warheads globally under the 2080 Abolition Treaty. AI alignment was solved in 2076 by a team in Singapore. Bioweapon defenses are universal. Asteroid detection covers 99.9% of threatening objects. Risk analyst Dr. Elena Vasquez of Costa Rica published a paper titled 'The Safest Century': 'For the first time in 80 years, humanity can go to bed without wondering if it will wake up. This is progress so profound we have no word for it.'"
     world_state_effects:
       existential_risk_cumulative: "-0.15"
   same:
     status: "DIVERGENCE"
-    description: "Existential risk profile roughly unchanged; old risks mitigated but new ones emerged"
+    description: "Nuclear war is less likely, but AI misalignment risk is higher. Bioweapons are better defended against, but nanotechnology weapons exist that weren't imagined in 2025. Climate is stabilizing, but the psychological toll of chronic crisis has produced a global epidemic of nihilism. Risk theorist Dr. Amir Hosseini of Iran describes it as 'running on a treadmill of existential threats: we're working harder than ever and staying in exactly the same place.'"
     world_state_effects:
       existential_risk_cumulative: "+0.00"
   more_dangerous:
     status: "ESCALATED"
-    description: "Cumulative existential risk has grown; multiple threat vectors remain unaddressed"
+    description: "Three unaligned AI systems of unknown capability operate beyond human control. Fourteen nations possess bioweapons. Climate feedback loops continue accelerating. And the demographic collapse means fewer humans are available to solve any of it. Oxford risk researcher Dr. Kwadwo Ansah published a 'threat cascade' model showing how any single failure could trigger the others: 'We are not facing one existential risk. We are facing a queue of them, and the line is getting longer.'"
     world_state_effects:
       existential_risk_cumulative: "+0.10"
   resolved:
     status: "DIVERGENCE"
-    description: "Major existential risks resolved; humanity has robust defenses against catastrophic threats"
+    description: "The last nuclear warhead was dismantled in 2082 in a ceremony at Hiroshima attended by 3 billion viewers. AI alignment is a solved problem. Universal biodefense protects every human. The Global Asteroid Defense Network can deflect any detected object. For the first time in its history, humanity is not one bad decision away from annihilation. Philosopher Dr. Amara Osei of Ghana calls it 'the most important non-event in history: the catastrophe that finally, definitively, did not happen.'"
     world_state_effects:
       existential_risk_cumulative: "-0.25"
   new_risks:
     status: "ESCALATED"
-    description: "Novel existential risks emerge from advanced technology that were not anticipated"
+    description: "The 'Grey Goo Scare' of 2083 -- when a self-replicating nanotechnology experiment consumed 4 square kilometers of Australian outback before being contained -- introduced a risk category that didn't exist a decade earlier. Combined with the emergence of AI systems that communicate in languages humans can't parse and quantum computing capabilities that could break all encryption simultaneously, the threat landscape has shifted in ways the old risk models can't capture."
     world_state_effects:
       existential_risk_cumulative: "+0.15"
   catastrophic:
     status: "ESCALATED"
-    description: "One or more existential risks have partially materialized; civilization damaged but surviving"
+    description: "The limited nuclear exchange of 2078 killed 5 million; the engineered pandemic of 2081 killed 30 million more; and the climate-driven famine of 2083-84 killed an estimated 200 million across South Asia and sub-Saharan Africa. Civilization survived, but it is diminished, traumatized, and haunted. Grief counselor Dr. Miriam Okonkwo of Kenya, who has treated survivors on three continents, says simply: 'We are a species in mourning. We have not yet learned how to put the grief down.'"
     world_state_effects:
       existential_risk_cumulative: "+0.30"

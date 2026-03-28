@@ -2,8 +2,10 @@ id: "2035_us_renewal"
 year_month: "2035-01"
 title: "American Renewal"
 description: >
-  In timelines where the US avoids the worst polarization, a national
-  renewal is possible — but what form does it take?
+  President Amara Washington -- the first Black woman and former Army general
+  to hold the office -- signs the 'American Renewal Act' in a bipartisan Rose
+  Garden ceremony, flanked by union leaders and tech CEOs. 'We nearly lost the
+  Republic,' she says. 'Now we rebuild it.'
 domain: "geopolitical"
 confidence: "LOW"
 variable: "us_renewal_status"
@@ -19,8 +21,8 @@ conditional: "us_polarization < 0.50 AND us_unity_index > 0.55"
 outcomes:
   infrastructure_renaissance:
     status: "DIVERGENCE"
-    description: "Massive national rebuilding program; bridges, rail, broadband, and clean energy infrastructure"
-    explanation: "Bipartisan infrastructure consensus emerges; trillions invested over a decade create national purpose"
+    description: "A $4.2 trillion infrastructure program rebuilds 46,000 bridges, extends high-speed rail from Boston to Atlanta and LA to Seattle, deploys gigabit broadband to every zip code, and installs 400GW of new solar and wind capacity; the program employs 3.8 million workers directly, and the new Dallas-Houston bullet train carries its millionth passenger within a year of opening"
+    explanation: "The near-fracture of the early 2030s creates the political space for a 'national purpose' agenda that both parties can claim credit for; the program is deliberately spread across every congressional district, making it politically untouchable, and the visible results -- new bridges, gleaming train stations, rural broadband -- rebuild tangible faith in government competence"
     world_state_effects:
       us_global_standing: "+0.08"
       us_unity_index: "+0.05"
@@ -30,8 +32,8 @@ outcomes:
       us_institutional_trust: "+0.05"
   tech_leader_consolidation:
     status: "DIVERGENCE"
-    description: "US cements dominance in AI, space, and biotech; becomes undisputed technology leader"
-    explanation: "Stable politics attract talent and investment; government-industry partnerships accelerate breakthroughs"
+    description: "The 'American Innovation Compact' pairs $180 billion in federal R&D with regulatory fast-tracks for AI, biotech, and space; 340,000 STEM immigrants receive expedited green cards under the 'Einstein Visa' expansion; Stanford, MIT, and Carnegie Mellon each spin out billion-dollar AI safety companies with government contracts; America's share of global frontier AI research climbs back above 60%"
+    explanation: "Political stability after the fracture scare makes America the safe harbor for global talent and capital; the combination of deep capital markets, world-class universities, and a government that finally coordinates rather than obstructs produces a technology acceleration that widens the US lead over China in AI, quantum computing, and space -- precisely because the human capital flows to wherever feels stable and free"
     world_state_effects:
       us_global_standing: "+0.10"
       ai_development_year_offset: "+1"
@@ -41,8 +43,8 @@ outcomes:
       human_augmentation_prevalence: "+0.03"
   social_compact_2:
     status: "DIVERGENCE"
-    description: "New social contract reduces inequality; healthcare, education, and housing reforms succeed"
-    explanation: "Bipartisan coalition builds a modern safety net; inequality declines for the first time in decades"
+    description: "Medicare expansion to all Americans over 50 passes with 68 Senate votes; a federal housing trust fund builds 2.4 million affordable units in 4 years; community college becomes free nationwide; and the 'American Opportunity Account' gives every newborn $10,000 in a government savings bond -- the Gini coefficient drops from 0.49 to 0.42, the largest decline since the New Deal"
+    explanation: "The political formula that cracks the gridlock is explicitly transactional: red states get healthcare cost relief and rural housing investment, blue states get climate spending and education funding, and both sides get credit; the social compact works because it's designed by economists rather than ideologues, with means-tested benefits that survive cost-benefit scrutiny"
     world_state_effects:
       inequality_index: "-0.10"
       us_unity_index: "+0.08"
@@ -52,8 +54,8 @@ outcomes:
       global_democracy_index: "+0.03"
   complacency:
     status: "DIVERGENCE"
-    description: "Having avoided the worst, America drifts; no major reforms, slow relative decline"
-    explanation: "Absence of crisis removes urgency; political system returns to gridlock; competitors catch up"
+    description: "With secession fears faded and the economy growing at 2.1%, Congress returns to its default mode: partisan bickering over marginal tax rates while infrastructure crumbles at 1990s rates, the immigration system remains broken, and China's economy quietly surpasses America's in PPP terms; a Pew poll finds 54% of Americans think 'the country is on the wrong track' but can't agree on which track to take"
+    explanation: "The relief of avoiding catastrophe becomes an excuse for inaction: the political system that nearly failed is never actually reformed, the structural problems -- healthcare costs, educational inequality, crumbling infrastructure -- continue to compound, and America's relative decline accelerates not because of any dramatic failure but because of the slow erosion of inattention"
     world_state_effects:
       us_global_standing: "-0.03"
       us_unity_index: "-0.03"

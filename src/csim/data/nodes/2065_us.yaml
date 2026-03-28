@@ -2,9 +2,12 @@ id: "2065_us"
 year_month: "2065-01"
 title: "United States 2065"
 description: >
-  The trajectory of the United States as a global power after decades of
-  internal polarization, technological transformation, and shifting
-  geopolitical dynamics.
+  The United States celebrated its 289th birthday in 2065 with a muted
+  ceremony on the National Mall, where President Alejandra Reyes-Thompson
+  addressed a crowd one-quarter the size of the 2026 celebrations. The
+  country is older, browner, more bilingual, and still arguing about the
+  same Constitution -- though now the arguments are mediated by AI
+  arbitration systems that both parties distrust equally.
 domain: "geopolitics"
 confidence: "LOW"
 variable: "us_status_2065"
@@ -22,25 +25,25 @@ conditional: null
 outcomes:
   renewed_power:
     status: "DIVERGENCE"
-    description: "US experiences renewal through technological leadership and institutional reform"
+    description: "The 'Third Founding' constitutional amendments of 2058 -- ranked-choice voting, term limits, AI-audited redistricting, and a digital bill of rights -- broke the two-party deadlock that had paralyzed the country for decades. GDP growth returned to 4% under the new Innovation Compact, and young Americans stopped emigrating to Canada for the first time since the 2040s."
     world_state_effects: {}
   regional_power:
     status: "DIVERGENCE"
-    description: "US retreats from global leadership to focus on Western Hemisphere; still powerful but less dominant"
+    description: "The last US military base in Asia closed in 2061; the last in Europe followed in 2063. The 'Hemisphere First' doctrine consolidated American power into the Americas, where the US-Mexico-Canada economic union generates $40 trillion annually. Secretary of State James Whitfield told the press: 'We're not in decline. We just finally learned where our backyard ends.'"
     world_state_effects: {}
   fractured:
     status: "ESCALATED"
-    description: "Political fractures lead to effective dissolution or extreme devolution of federal power"
+    description: "The 'Compact of States' signed in 2062 devolved 80% of federal authority to six regional compacts: Cascadia, the Gulf Federation, New England, the Great Lakes Republic, the Mountain West, and the Southern Compact. Each sets its own immigration, education, and AI policy. Traveling from Portland to Houston now means crossing two regulatory borders; the old national anthem is played at sporting events as a nostalgic curiosity."
     world_state_effects: {}
   techno_state:
     status: "DIVERGENCE"
-    description: "US transforms into a technology-driven state where Silicon Valley logic permeates governance"
+    description: "Federal agencies run on AI decision-making pipelines; tax policy is optimized quarterly by algorithm; and the Supreme Court's caseload is pre-screened by a system that correctly predicts outcomes 94% of the time. Critics call it 'government by GitHub'; supporters point out that the IRS now processes returns in 11 seconds and infrastructure projects finish on schedule for the first time in a century."
     world_state_effects: {}
   democratic_beacon:
     status: "DIVERGENCE"
-    description: "US renews democratic institutions and becomes a model for global democratic governance"
+    description: "Voter participation hit 89% in the 2064 election -- the highest since 1876 -- driven by secure digital voting, a national holiday, and a cultural renaissance in civic engagement. President Reyes-Thompson's 'Democracy Export Initiative' has sent American constitutional advisors to 30 countries. The irony: the nation that nearly lost its democracy in the 2020s became the one that taught the world how to fix theirs."
     world_state_effects: {}
   diminished:
     status: "DIVERGENCE"
-    description: "Gradual decline in economic and military power leaves US as one power among many"
+    description: "The US economy ranks fourth globally, behind the Shanghai Pact, the European Federation, and India. The aircraft carrier fleet has shrunk from 11 to 5; the dollar is one of four reserve currencies. American historian Dr. Marcus Jefferson's bestseller 'The Gentle Landing' argues this is not tragedy but inevitability: 'Empires end. The lucky ones end slowly and with their libraries intact.'"
     world_state_effects: {}

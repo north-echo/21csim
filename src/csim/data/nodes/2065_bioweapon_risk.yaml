@@ -2,9 +2,11 @@ id: "2065_bioweapon_risk"
 year_month: "2065-01"
 title: "Bioweapon Risk"
 description: >
-  The cumulative risk from engineered biological weapons after decades of
-  advancing synthetic biology. Whether containment regimes hold or
-  bioweapons proliferate beyond control.
+  A high-school student in Osaka synthesized a novel influenza variant in her
+  garage lab in 2063 using equipment that cost less than a used car. She meant
+  it as a science fair project. The pathogen was intercepted by Japan's
+  bio-surveillance network 72 hours before it could have reached a train station
+  serving 3 million daily commuters.
 domain: "security"
 confidence: "LOW"
 variable: "bioweapon_risk_status"
@@ -22,31 +24,31 @@ conditional: null
 outcomes:
   contained:
     status: "DIVERGENCE"
-    description: "Bioweapon threats contained through advanced surveillance, detection, and rapid response systems"
+    description: "Every airport, train station, and stadium on Earth is fitted with 'Sentinel' bio-aerosol detectors that can identify 40,000 pathogen signatures in under 90 seconds. Dr. Fatima al-Rashidi, the Iraqi-British epidemiologist who designed the network, says it catches an average of three engineered threats per month -- most of them from well-meaning researchers who didn't realize what they'd made."
     world_state_effects:
       existential_risk_cumulative: "-0.05"
   near_miss:
     status: "ESCALATED"
-    description: "A major bioweapon incident narrowly averted; world shaken into stronger countermeasures"
+    description: "The 'Almaty Event' of 2063 -- a weaponized hemorrhagic virus released from a collapsed Kazakh research facility -- killed 12 people before Dr. Chen Yifei's team at the WHO Rapid Response Center in Lyon synthesized a countermeasure in 19 hours. The world didn't learn how close it came until leaked documents showed the pathogen had a 34% fatality rate."
     world_state_effects:
       existential_risk_cumulative: "+0.08"
   engineered_pandemic:
     status: "ESCALATED"
-    description: "Engineered pathogen released causing devastating pandemic; millions die before containment"
+    description: "The 'Red Cough' killed 23 million people between 2062 and 2064, mostly in South and Southeast Asia. Traced to a rogue military program in an unnamed state, it targeted specific HLA genotypes found predominantly in South Asian populations. Survivors in Mumbai still wear red armbands on the anniversary; the Chhatrapati Shivaji Memorial lists names on scrolling screens that take 11 days to cycle through."
     world_state_effects:
       existential_risk_cumulative: "+0.25"
   treaty_holds:
     status: "DIVERGENCE"
-    description: "Strengthened Biological Weapons Convention with verification regime prevents proliferation"
+    description: "The Geneva Bio-Accord of 2061 gave inspectors the legal authority to enter any laboratory on Earth within four hours of a warrant. South African inspector Thabo Nkosi has personally shut down 14 non-compliant facilities across three continents, earning him the nickname 'the closer' and a standing bounty from at least two intelligence services."
     world_state_effects:
       existential_risk_cumulative: "-0.08"
   proliferated:
     status: "ESCALATED"
-    description: "Bioweapon capabilities spread to many state and non-state actors; ongoing low-level threat"
+    description: "At least 40 state programs and an estimated 200 non-state actors possess engineered pathogen capabilities. Tabletop gene synthesizers are cheaper than cars, and the 'cookbook' repositories on the dark web are updated weekly. Colombian cartel leader 'El Quimico' was caught shipping freeze-dried anthrax variants in coffee bags through the Port of Buenaventura."
     world_state_effects:
       existential_risk_cumulative: "+0.15"
   obsolete_defense:
     status: "DIVERGENCE"
-    description: "Universal rapid-response biodefense makes bioweapons ineffective; threat category eliminated"
+    description: "The 'Universal Immune Booster,' a programmable mRNA platform developed by Ghanaian-American scientist Dr. Ama Asante, can generate antibodies against any known pathogen within six hours of exposure. Deployed to 4 billion people via annual nano-patch, it has rendered bioweapons about as threatening as a slingshot against a tank."
     world_state_effects:
       existential_risk_cumulative: "-0.12"

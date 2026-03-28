@@ -2,8 +2,12 @@ id: "2055_resilience"
 year_month: "2055-01"
 title: "The Rebuilding"
 description: >
-  Even in the worst timelines short of extinction, humans rebuild.
-  The question is what they build.
+  In the rubble of whatever broke -- pandemic, AI crisis, climate catastrophe,
+  nuclear exchange, or some terrible combination -- survivors emerge blinking
+  into daylight. A grandmother in Yokohama cooks rice over a wood fire for her
+  neighbors. A former software engineer in Nairobi organizes water distribution
+  from a church basement. The species that split the atom and walked on Mars
+  rediscovers what it always knew: humans rebuild. The question is what they build.
 domain: "governance"
 confidence: "LOW"
 variable: "resilience_status"
@@ -20,8 +24,8 @@ conditional: "existential_risk_cumulative > 0.3 AND existential_risk_cumulative 
 outcomes:
   authoritarian_order:
     status: "ESCALATED"
-    description: "Strongmen restore stability through authoritarian control; order at the cost of freedom"
-    explanation: "Crisis-weary populations accept authoritarian bargain; surveillance states enforce order"
+    description: "General Viktor Morozov in Moscow, Admiral Chen Guohua in Shanghai, and 'Emergency Administrator' Bradley Stone in Washington each promise the same thing: safety, food, electricity, and order. Exhausted populations accept gratefully. Elections are postponed 'until stability returns,' which it never quite does. The trains run on time; dissidents disappear at night."
+    explanation: "History's oldest pattern reasserts itself: after every catastrophe, strongmen offer security in exchange for obedience. A population that has watched its children starve does not argue about press freedom."
     world_state_effects:
       global_democracy_index: "-0.15"
       surveillance_state_index: "+0.15"
@@ -31,8 +35,8 @@ outcomes:
       us_institutional_trust: "-0.05"
   cooperative_rebuilding:
     status: "DIVERGENCE"
-    description: "Crisis forces unprecedented international cooperation; new global institutions emerge"
-    explanation: "Shared catastrophe creates shared purpose; a new multilateral order is built from the wreckage"
+    description: "The 'Reconstruction Congress' in Nairobi, attended by representatives of 180 surviving governments, drafts the 'Second Charter' establishing a strengthened UN with binding enforcement powers, a global climate authority, and a shared AI governance framework. Kenyan diplomat Amara Ochieng chairs the proceedings with a phrase that becomes the era's motto: 'We broke the world together. We will fix it together.'"
+    explanation: "Shared catastrophe creates shared purpose that decades of peaceful diplomacy could never achieve. The cost of global cooperation finally falls below the cost of global fragmentation, measured in bodies."
     world_state_effects:
       global_democracy_index: "+0.05"
       governance_model: "+0.10"
@@ -42,8 +46,8 @@ outcomes:
       inequality_index: "-0.05"
   fragmented_survival:
     status: "DIVERGENCE"
-    description: "Local communities survive but no global order; a patchwork of self-governing regions"
-    explanation: "Global institutions collapsed; city-states, regional compacts, and mutual aid networks replace nations"
+    description: "Portland governs itself through a council of neighborhood associations; Lagos operates as an autonomous city-state of 42 million; Swiss cantons trade with Bavarian districts while Berlin remains a ruin. The internet fragments into local mesh networks; global trade becomes barter between neighboring regions. A farmer in Provence trades wine for Italian solar panels and calls it a good week."
+    explanation: "Without functioning national governments or international institutions, human organization reverts to the scale at which trust still operates: the city, the valley, the island, the neighborhood where people know each other's names."
     world_state_effects:
       global_democracy_index: "-0.05"
       governance_model: "-0.05"
@@ -53,8 +57,8 @@ outcomes:
       africa_development_index: "-0.05"
   technological_rescue:
     status: "DIVERGENCE"
-    description: "AI and advanced technology used to repair catastrophic damage; partial restoration"
-    explanation: "Surviving AI systems deployed for climate repair, medical triage, and infrastructure reconstruction"
+    description: "Surviving AI systems, operating from hardened data centers in Iceland and Singapore, coordinate global reconstruction: optimizing food distribution, managing medical triage for 800 million injured, and designing carbon-capture infrastructure to reverse climate damage. A single AI system in Zurich runs what is effectively a planetary repair operation, allocating resources with an efficiency no human bureaucracy could match."
+    explanation: "The same technology that contributed to the catastrophe becomes the tool for recovery. AI systems designed for optimization prove equally effective at optimizing reconstruction, turning the apocalypse's greatest irony into its greatest hope."
     world_state_effects:
       climate_temp_anomaly: "-0.10"
       existential_risk_cumulative: "-0.08"
@@ -64,8 +68,8 @@ outcomes:
       food_security_index: "+0.05"
   dark_age:
     status: "ESCALATED"
-    description: "Genuine civilizational regression; loss of knowledge, technology, and global connectivity"
-    explanation: "Cascading infrastructure failures, brain drain, and institutional collapse push humanity backward"
+    description: "The last transatlantic fiber optic cable goes dark in 2057; the ISS de-orbits uncontrolled over the Pacific; the last semiconductor fab, in Taiwan, ceases production when its supply of neon gas runs out. Within a decade, the average human's technological environment resembles 1950: radio, diesel engines, paper records. Libraries become the most important buildings in any town, and the elderly are venerated for remembering how things worked."
+    explanation: "Civilization's complexity proves its fragility: modern technology depends on global supply chains that depend on stable institutions that depend on functioning societies. When the base collapses, everything above it falls, and the knowledge to rebuild it exists only in the minds of an aging generation."
     world_state_effects:
       global_gdp_growth_modifier: "*0.80"
       global_democracy_index: "-0.20"

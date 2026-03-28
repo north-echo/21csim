@@ -2,10 +2,10 @@ id: "2040_peace_dividend"
 year_month: "2040-01"
 title: "The Peace Dividend"
 description: >
-  A world without Iraq, without Ukraine, without major conflict
-  has trillions of dollars and millions of lives to spend on
-  something else. But peace is also boring, and bored great
-  powers find new competitions.
+  For the first time since 1945, the Stockholm International Peace Research Institute
+  reports zero active interstate wars. The Pentagon's $1.1 trillion budget faces its
+  first real Congressional challenge as Senator Rosa Gutierrez-Park asks on the Senate
+  floor: "Who exactly are we arming against?"
 domain: "geopolitical"
 confidence: "LOW"
 variable: "peace_dividend_status"
@@ -22,8 +22,8 @@ conditional: "conflict_deaths < 100000 AND nuclear_risk_level < 0.10"
 outcomes:
   space_race_2:
     status: "DIVERGENCE"
-    description: "Great power competition redirected to space; Moon bases, Mars missions, asteroid mining"
-    explanation: "Military budgets repurposed for space; national prestige drives a second Space Age"
+    description: "The US Space Force and China's Strategic Support Force pivot from weapons platforms to competing lunar outposts; NASA Administrator Kenji Tanaka announces a crewed Mars mission funded by $280 billion in redirected defense appropriations."
+    explanation: "With no wars to fight, generals become astronauts and missile engineers become rocket scientists again. National prestige, not survival, drives the largest peacetime mobilization in history."
     world_state_effects:
       space_development_index: "+0.15"
       global_gdp_growth_modifier: "*1.02"
@@ -33,8 +33,8 @@ outcomes:
       renewable_energy_share: "+0.03"
   development_boom:
     status: "DIVERGENCE"
-    description: "Peace dividend invested in Global South; unprecedented development in Africa and South Asia"
-    explanation: "Trillions redirected from defense to development; infrastructure, education, and healthcare transform developing world"
+    description: "The 'Dhaka to Dakar' initiative channels $4.2 trillion in former military spending into 140,000 km of rail, 3,800 hospitals, and universal primary education across 67 nations. Child mortality in sub-Saharan Africa drops 60% in eight years."
+    explanation: "Former defense contractors like Lockheed and BAE Systems retool for infrastructure; USAID's budget eclipses the Pentagon's for the first time. The Marshall Plan looks modest by comparison."
     world_state_effects:
       africa_development_index: "+0.15"
       india_power_index: "+0.08"
@@ -44,8 +44,8 @@ outcomes:
       food_security_index: "+0.05"
   technology_race:
     status: "DIVERGENCE"
-    description: "AI, biotech, and quantum computing become the new arenas of great power competition"
-    explanation: "Without military conflict, nations compete through technological supremacy; rapid breakthroughs follow"
+    description: "Beijing's 'Quantum Manhattan Project' and Washington's DARPA-X program pour $600 billion annually into AI, biotech, and quantum computing. Korean-American physicist David Yoon-Park's 4,000-qubit processor at Sandia Labs becomes a national security asset overnight."
+    explanation: "The arms race simply changes medium: instead of warheads, nations count qubits, training runs, and patent filings. Silicon Valley and Zhongguancun replace the Fulda Gap as the frontier of great power rivalry."
     world_state_effects:
       ai_development_year_offset: "+1"
       human_augmentation_prevalence: "+0.05"
@@ -55,8 +55,8 @@ outcomes:
       surveillance_state_index: "+0.05"
   complacent_decline:
     status: "DIVERGENCE"
-    description: "No external threat breeds internal rot; institutions decay, populism rises"
-    explanation: "Without a unifying enemy, democracies lose cohesion; social media fills the conflict void domestically"
+    description: "Voter turnout in US midterms drops to 22%; the French National Assembly cannot form a quorum for three consecutive weeks. A viral essay by retired General James Okafor titled 'We Won the Peace and Lost Ourselves' captures the aimlessness of a generation raised without existential threat."
+    explanation: "Tocqueville's old warning proves prescient: democracies need purpose. Without an external enemy, political energy turns inward, feeding culture wars, conspiracy movements, and a pervasive sense that institutions exist to perpetuate themselves."
     world_state_effects:
       us_polarization: "+0.08"
       eu_cohesion: "-0.05"
@@ -66,8 +66,8 @@ outcomes:
       us_unity_index: "-0.05"
   new_cold_war:
     status: "ESCALATED"
-    description: "Economic competition between US and China escalates into a new Cold War"
-    explanation: "Trade wars, technology bans, and alliance systems harden into bloc competition"
+    description: "The US bans all Chinese semiconductor imports; China retaliates by cutting rare earth exports to NATO nations. Ambassador Chen Liwei walks out of the UN General Assembly after Secretary-General Adeyemi's censure vote, declaring 'the era of American-dictated order is finished.'"
+    explanation: "Peace between armies gives way to war between economies. Semiconductor embargoes, undersea cable sabotage, and competing satellite constellations carve the world into two technological hemispheres connected by nothing but mutual suspicion."
     world_state_effects:
       nuclear_risk_level: "+0.05"
       china_power_index: "+0.05"

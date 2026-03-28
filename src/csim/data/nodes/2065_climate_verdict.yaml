@@ -2,9 +2,11 @@ id: "2065_climate_verdict"
 year_month: "2065-01"
 title: "Climate Verdict"
 description: >
-  The long-term trajectory of global climate change becomes clear. Decades of
-  mitigation, adaptation, and potential geoengineering efforts yield a definitive
-  picture of where planetary temperatures are headed.
+  The WMO's 2065 Global Assessment, authored by lead scientist Dr. Kofi Mensah-Bonsu
+  of Ghana, ran to 14,000 pages and was summarized in a single sentence that appeared
+  on the front page of every newspaper on Earth: "The patient will live, but the scars
+  are permanent." Global mean temperature anomaly has become the number that every
+  schoolchild can recite from memory, like a pulse rate for the planet.
 domain: "climate"
 confidence: "LOW"
 variable: "climate_verdict"
@@ -22,37 +24,37 @@ conditional: null
 outcomes:
   stabilized_2c:
     status: "DIVERGENCE"
-    description: "Global temperatures stabilized near 2C above pre-industrial levels through sustained mitigation"
+    description: "The line on the graph finally went flat in 2062 -- 2.1C above pre-industrial -- and Dr. Mensah-Bonsu's research team in Accra broke into tears on a live global broadcast. Miami is still behind its seawall, the Sahel is still expanding, and 40 million climate refugees still can't go home, but the fever broke."
     world_state_effects:
       climate_temp_anomaly: "+0.00"
       food_security_index: "+0.05"
   runaway_3c:
     status: "ESCALATED"
-    description: "Warming reaches 3C with feedback loops accelerating; severe but not catastrophic impacts"
+    description: "The permafrost methane feedback loop that Russian climatologist Dr. Anastasia Petrova warned about in 2038 is now fully active. At 3.1C, the Mediterranean basin experiences 50-degree summers, Barcelona has been partially abandoned, and the Indian monsoon has become so erratic that farmers in Punjab plant three different crops hoping one survives."
     world_state_effects:
       climate_temp_anomaly: "+0.50"
       food_security_index: "-0.15"
   cooling_tech:
     status: "DIVERGENCE"
-    description: "Advanced carbon removal and cooling technologies actively reducing temperatures"
+    description: "The Atacama Carbon Array -- 12,000 direct-air-capture towers stretching across the Chilean desert, designed by engineer Isabella Moreno-Vásquez -- removes 8 gigatons of CO2 annually. Combined with India's ocean alkalinity fleet of 400 ships, global temperatures have dropped 0.3C in five years. For the first time, the arrow points down."
     world_state_effects:
       climate_temp_anomaly: "-0.30"
       food_security_index: "+0.08"
   managed_2_5c:
     status: "DIVERGENCE"
-    description: "Warming at 2.5C with effective adaptation measures in place globally"
+    description: "At 2.5C, the world is hotter and stranger but livable. Rotterdam's flood barriers hold; Singapore's 40-story vertical farms feed 6 million. The new normal includes 'heat holidays' -- mandatory work stoppages when temperatures exceed 45C -- that have become, ironically, Southeast Asia's most beloved cultural institution."
     world_state_effects:
       climate_temp_anomaly: "+0.20"
       food_security_index: "-0.03"
   catastrophic_4c:
     status: "ESCALATED"
-    description: "Warming exceeds 4C; massive ecosystem collapse and human displacement"
+    description: "At 4.2C, the map of the habitable world has redrawn itself. The Amazon basin is savanna; the Ganges Delta is ocean; Phoenix, Arizona recorded 58C in 2064. An estimated 1.2 billion people are in motion, and the word 'border' has become the most contested in every language. UN High Commissioner Aisha Bello calls it 'the Great Displacement.'"
     world_state_effects:
       climate_temp_anomaly: "+1.00"
       food_security_index: "-0.30"
   reversed:
     status: "DIVERGENCE"
-    description: "Temperatures actively declining toward pre-industrial levels through technological intervention"
+    description: "The stratospheric aerosol injection program, launched from 16 high-altitude platforms over the Pacific, combined with orbital solar shading, has pushed temperatures down 0.8C in a decade. Estonian physicist Dr. Marika Tamm, who designed the orbital mirrors, received death threats from both climate activists who called it 'playing God' and fossil fuel holdouts who called it 'stealing their sky.'"
     world_state_effects:
       climate_temp_anomaly: "-0.50"
       food_security_index: "+0.10"

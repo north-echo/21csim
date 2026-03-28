@@ -2,9 +2,11 @@ id: "2044_climate_refugee"
 year_month: "2044-06"
 title: "Climate Refugee Treaty"
 description: >
-  International negotiations on legal status and rights of climate-displaced
-  populations. The outcome shapes whether climate migration is managed cooperatively
-  or devolves into border conflicts.
+  The government of Tuvalu formally dissolves, its 11,000 remaining citizens
+  scattered across New Zealand and Fiji. Bangladesh's Ganges delta has displaced
+  4.7 million people into Dhaka's exploding slums. At the UN, Maldivian diplomat
+  Ahmed Naseem delivers the 'Drowning Nations' speech, demanding: "We did not
+  cause this. You will not ignore us."
 domain: "climate"
 confidence: "MEDIUM"
 variable: "climate_refugee_treaty_status"
@@ -35,33 +37,33 @@ conditional: null
 outcomes:
   binding_treaty:
     status: "DIVERGENCE"
-    description: "Global binding treaty establishes legal framework for climate refugees with resettlement quotas"
+    description: "The Nairobi Protocol, ratified by 147 nations, creates a new legal category of 'climate-displaced persons' with binding resettlement quotas proportional to each nation's cumulative emissions. Canada accepts 2.1 million Bangladeshis over five years; Australia takes 800,000 Pacific Islanders. The first climate refugee to receive a Canadian passport, a grandmother from Khulna, weeps on live television."
     world_state_effects:
       global_democracy_index: "+0.03"
       eu_cohesion: "+0.02"
       conflict_deaths: "-5000"
   regional_agreements:
     status: "DIVERGENCE"
-    description: "Patchwork of regional agreements provides partial protection for climate migrants"
+    description: "The EU accepts climate migrants from North Africa under the Marseille Agreement; ASEAN creates a regional resettlement fund; the African Union opens internal borders. But no global framework exists, and 23 million displaced people in South Asia fall through every jurisdictional crack."
     world_state_effects:
       eu_cohesion: "-0.02"
       conflict_deaths: "+2000"
   fortress_borders:
     status: "DIVERGENCE"
-    description: "Wealthy nations erect barriers; climate migrants trapped in deteriorating regions"
+    description: "The EU deploys AI-guided drone barriers across the Mediterranean; Australia's 'Operation Sovereign Shores' turns back 400 boats in a single year. The US completes a climate-hardened border wall from Brownsville to San Diego. Satellite photos of tent cities stretching 60 km along the Libyan coast become the defining image of the decade."
     world_state_effects:
       global_democracy_index: "-0.05"
       conflict_deaths: "+20000"
       eu_cohesion: "-0.05"
   managed_resettlement:
     status: "DIVERGENCE"
-    description: "Coordinated resettlement programs relocate millions to climate-resilient areas"
+    description: "The World Bank's $380 billion 'New Cities Initiative' builds 12 purpose-designed climate-resilient cities in Canada's Saskatchewan, Russia's Siberia, and Scandinavia's interior, each housing 500,000 displaced people. Urban planner Fatou Diallo from Senegal designs Nunavut's 'New Dakar,' complete with heated greenhouses and a mosque oriented toward Mecca."
     world_state_effects:
       global_democracy_index: "+0.02"
       conflict_deaths: "-2000"
   failed_states_absorb:
     status: "ESCALATED"
-    description: "Climate migration overwhelms fragile states, triggering cascading state failures"
+    description: "8.3 million Bangladeshis flood into Myanmar's Rakhine State, reigniting ethnic conflict; Pakistan's Sindh province collapses under 6 million internal migrants competing for water. Chad, Niger, and Mali's governments dissolve as the Sahel becomes uninhabitable and 40 million people push southward into Nigeria and Cameroon, overwhelming already-strained states."
     world_state_effects:
       conflict_deaths: "+50000"
       global_democracy_index: "-0.08"

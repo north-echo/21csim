@@ -2,9 +2,11 @@ id: "2050_us_restructured"
 year_month: "2050-01"
 title: "US Restructured"
 description: >
-  The United States at mid-century faces a definitive assessment of its political
-  structure. Whether American democracy reformed, fractured, or transformed
-  determines the global order for decades to come.
+  America at 274 years old: still the world's largest economy by a thin margin,
+  still the world's most powerful military by a wide one, but fractured internally
+  in ways the Founders never imagined. A citizen in Portland, Oregon and a citizen
+  in Mobile, Alabama share a passport but increasingly little else -- not media,
+  not values, not even the same version of their country's history.
 domain: "regional"
 confidence: "LOW"
 variable: "us_restructured_status"
@@ -22,40 +24,40 @@ conditional: null
 outcomes:
   reformed_democracy:
     status: "DIVERGENCE"
-    description: "US successfully reforms democratic institutions; polarization declines"
+    description: "Ranked-choice voting, adopted nationally in 2046, shatters the two-party duopoly; seven parties hold House seats. The nonpartisan redistricting commission eliminates gerrymandering; public campaign financing caps spending. Polarization drops 40% in four years. A new generation of politicians, who have never known the old system, governs with a competence that surprises everyone, including themselves."
     world_state_effects:
       us_polarization: "-0.10"
       global_democracy_index: "+0.05"
       us_global_standing: "+0.05"
   fractured:
     status: "ESCALATED"
-    description: "US fractures into regional blocs or loose confederation"
+    description: "After a disputed presidential election, Texas, Florida, and 9 other states invoke the 'enhanced autonomy compacts' and refuse to remit federal taxes. California, Oregon, and Washington form the Pacific Compact with its own foreign policy. The federal government in Washington still exists on paper but controls less territory than it did during the Civil War."
     world_state_effects:
       us_polarization: "+0.15"
       global_democracy_index: "-0.08"
       us_global_standing: "-0.15"
   authoritarian:
     status: "ESCALATED"
-    description: "Democratic backsliding results in authoritarian US governance"
+    description: "The Emergency Governance Act, passed after a domestic terror attack, suspends habeas corpus for 'algorithmic threat suspects'; the Supreme Court, packed to 15 justices, upholds every executive order. The free press survives in name but AI-generated government media dominates 80% of information consumption. A Harvard constitutional scholar leaves the country, writing: 'The Republic died in its sleep.'"
     world_state_effects:
       us_polarization: "+0.05"
       global_democracy_index: "-0.10"
       us_global_standing: "-0.10"
   federated:
     status: "DIVERGENCE"
-    description: "US restructures into more autonomous regions with weaker federal government"
+    description: "The 30th Amendment devolves healthcare, education, and environmental policy to 8 'megastates' while the federal government retains only defense, foreign affairs, and currency. The Pacific Northwest runs single-payer healthcare; the Gulf South privatizes everything. Americans choose their governing philosophy by choosing where to live, and the great internal migration reshuffles 40 million people in a decade."
     world_state_effects:
       us_polarization: "-0.05"
       us_global_standing: "-0.05"
   diminished:
     status: "DIVERGENCE"
-    description: "US remains intact but diminished as global power; domestic focus prevails"
+    description: "America withdraws from NATO, closes 400 overseas military bases, and focuses inward on infrastructure, education, and climate adaptation. The dollar's share of global reserves drops to 28%. The world adjusts; regional powers fill the vacuum; and Americans discover that being a normal country instead of an empire is quieter, cheaper, and lonelier than they expected."
     world_state_effects:
       us_global_standing: "-0.10"
       us_polarization: "+0.02"
   renewed:
     status: "DIVERGENCE"
-    description: "US experiences cultural and political renewal; reasserts global leadership"
+    description: "A new generation of leaders -- multilingual, tech-fluent, and shaped by the climate crisis rather than the culture wars -- sweeps into office. President Alejandra Reyes-Kim, 42, leads a coalition government that passes universal healthcare, carbon pricing, and AI regulation in a single legislative session. Approval ratings hit 72%; allies breathe a sigh of relief; America, improbably, reinvents itself again."
     world_state_effects:
       us_polarization: "-0.08"
       us_global_standing: "+0.10"

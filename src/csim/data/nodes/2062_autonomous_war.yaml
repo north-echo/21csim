@@ -2,9 +2,10 @@ id: "2062_autonomous_war"
 year_month: "2062-06"
 title: "Autonomous Warfare"
 description: >
-  The role of autonomous weapons in global conflict reaches a decisive point.
-  Whether AI-driven warfare is embraced, constrained, or rendered obsolete
-  shapes the nature of future conflict.
+  The Battle of the Sulu Sea (2061) lasted eleven minutes and involved zero human
+  combatants on either side; 340 autonomous platforms destroyed each other while
+  Filipino fisherman Danilo Reyes filmed the whole thing on his phone, the footage
+  garnering 9 billion views and triggering emergency sessions in 14 capitals.
 domain: "security"
 confidence: "LOW"
 variable: "autonomous_war_status"
@@ -22,37 +23,37 @@ conditional: null
 outcomes:
   ai_battlefield:
     status: "DIVERGENCE"
-    description: "Fully autonomous weapons systems dominate modern warfare; human soldiers rare on battlefields"
+    description: "The last human infantry unit was decommissioned by South Korea in 2061; war is now conducted between swarms of micro-drones the size of hummingbirds, and the most dangerous military job is 'swarm psychologist' -- the engineers who try to predict what emergent behaviors their own weapons will develop mid-battle."
     world_state_effects:
       conflict_deaths: "-5000"
       drone_warfare_prevalence: "+0.30"
   human_controlled:
     status: "DIVERGENCE"
-    description: "Meaningful human control maintained over all lethal weapons systems through international norms"
+    description: "The 'Helsinki Doctrine' requires a human officer to authorize every lethal engagement within 400 milliseconds -- a requirement that Swiss ethicist Dr. Lukas Brunner privately calls 'a legal fig leaf' since no human can meaningfully evaluate a targeting decision that fast, but the fiction comforts everyone."
     world_state_effects:
       conflict_deaths: "+0"
       drone_warfare_prevalence: "+0.05"
   banned:
     status: "DIVERGENCE"
-    description: "International treaty bans autonomous lethal weapons; enforcement mechanisms prove effective"
+    description: "The Lagos Convention on Autonomous Weapons, signed by 168 nations in 2060, is enforced by a fleet of inspection drones that can detect prohibited manufacturing signatures from orbit. Three nations have been sanctioned; one president -- Turkmenistan's Serdar Niyazov Jr. -- was personally arrested by UN marshals in his own capital."
     world_state_effects:
       conflict_deaths: "-2000"
       drone_warfare_prevalence: "-0.10"
   proxy_wars:
     status: "ESCALATED"
-    description: "Great powers fight through autonomous proxy forces in developing nations"
+    description: "The Congo Basin has become the testing ground for three superpowers' autonomous weapon systems, with villages serving as involuntary proving grounds. Local journalist Esperance Mukandoli documented 47 separate 'machine engagements' in Kivu province alone in 2061, each fought over mineral rights that the combatant nations process in factories 8,000 miles away."
     world_state_effects:
       conflict_deaths: "+15000"
       drone_warfare_prevalence: "+0.25"
   autonomous_terrorism:
     status: "ESCALATED"
-    description: "Non-state actors deploy autonomous weapons for terrorism; asymmetric threat proliferates"
+    description: "A 3D-printed drone swarm costing $12,000 killed 23 people at the Munich Oktoberfest in 2061; the design was downloaded 400,000 times before authorities could scrub it. Every major city now operates under a permanent 'drone umbrella' of counter-autonomous defense, and outdoor gatherings require a military permit in 38 countries."
     world_state_effects:
       conflict_deaths: "+8000"
       drone_warfare_prevalence: "+0.20"
   obsolete:
     status: "DIVERGENCE"
-    description: "Effective defenses render autonomous weapons obsolete; warfare shifts to other domains"
+    description: "The 'Faraday Shield' -- a distributed EMP defense system invented by Japanese engineer Yuki Tanaka -- renders autonomous weapons useless within 200 meters of any protected zone. Warfare has shifted entirely to cyberspace and economic sabotage; the last military drone was decommissioned in 2061 and now sits in the Smithsonian."
     world_state_effects:
       conflict_deaths: "-3000"
       drone_warfare_prevalence: "-0.05"

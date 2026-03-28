@@ -2,8 +2,12 @@ id: "2095_us"
 year_month: "2095-01"
 title: "United States 2095"
 description: >
-  The United States at century's end. Whether the American experiment endures,
-  transforms, or fades after nearly 320 years of nationhood.
+  The United States of America turned 319 in 2095. President Isabella
+  Reyes-Okafor delivered the Independence Day address from the steps of a
+  Capitol building that has been renovated, expanded, partially flooded, and
+  rebuilt twice in her lifetime. The country she governs is 52% Hispanic, 22%
+  Black, 18% white, and 8% Asian; it speaks three languages; and it still
+  can't agree on healthcare. Some things, apparently, are eternal.
 domain: "geopolitics"
 confidence: "LOW"
 variable: "us_status_2095"
@@ -21,25 +25,25 @@ conditional: null
 outcomes:
   great_power:
     status: "DIVERGENCE"
-    description: "US remains a significant great power among several; influential but not dominant"
+    description: "The US commands the third-largest economy, the second-largest military, and the first-largest cultural export industry on Earth. It is one great power among four, and the adjustment from 'indispensable nation' to 'important nation' has taken 50 years and still stings. Ambassador David Chen-Washington tells foreign colleagues: 'We used to run the show. Now we're in the band. Turns out we play pretty well when we're not trying to conduct.'"
     world_state_effects: {}
   diminished:
     status: "DIVERGENCE"
-    description: "US has faded as a major power; domestic focus with limited global influence"
+    description: "The US economy ranks sixth globally, behind India, the Shanghai Pact, the European Federation, the Nairobi Compact, and Brazil. The last aircraft carrier was decommissioned in 2087 and is now a floating museum in Norfolk, Virginia, where schoolchildren learn about the 'American Century' the way European children learn about the Roman Empire -- as something grand that ended. Historian Dr. Marcus Jefferson III: 'We are the most powerful ghost at the table. Everyone remembers what we were.'"
     world_state_effects: {}
   reformed:
     status: "DIVERGENCE"
-    description: "US has undergone fundamental constitutional and institutional reform; a renewed nation"
+    description: "The 'Fourth Republic' -- born from the constitutional convention of 2082 -- replaced the Electoral College, established proportional representation, created a digital bill of rights, and expanded the Supreme Court to 15 justices with 18-year term limits. Voter participation hit 91% in the 2094 election. The document's preamble, drafted by 100,000 citizens through an AI-mediated deliberation process, begins: 'We, the people of the United States, having failed once, try again.'"
     world_state_effects: {}
   fragmented:
     status: "ESCALATED"
-    description: "US has effectively split into multiple successor states or autonomous regions"
+    description: "The 'American Confederation' is six nations wearing a trenchcoat: Cascadia (progressive, tech-driven, population 45 million), the Gulf Federation (energy-rich, conservative, population 60 million), New England (academic, aging, population 30 million), the Great Lakes Republic (industrial, pragmatic, population 50 million), the Mountain West (libertarian, sparse, population 15 million), and the Southern Compact (culturally distinct, population 70 million). They share a military, a space program, and a football league. Everything else is separate."
     world_state_effects: {}
   cultural:
     status: "DIVERGENCE"
-    description: "US influence is primarily cultural; soft power outlasts economic and military dominance"
+    description: "American English is the lingua franca of AI systems worldwide. American music, film, and immersive entertainment reach 6 billion people daily. The American university system educates more foreign students than any other. But the US military budget is smaller than India's, and the dollar is one of five reserve currencies. Cultural historian Dr. Grace Kim-Okafor sees the irony clearly: 'The American empire ended. American culture didn't notice.'"
     world_state_effects: {}
   superpower:
     status: "DIVERGENCE"
-    description: "US maintains or regains superpower status through technological and institutional resilience"
+    description: "Against all predictions, the US in 2095 commands the world's largest economy, most advanced AI systems, and most capable space fleet. The 'American Renaissance' -- driven by institutional reform, immigration, and a technological base that proved deeper than anyone expected -- confounded every declinist narrative. President Reyes-Okafor told the UN General Assembly with characteristic American understatement: 'Reports of our death were greatly exaggerated. Again.'"
     world_state_effects: {}

@@ -2,9 +2,11 @@ id: "2052_asteroid_deflection"
 year_month: "2052-01"
 title: "Asteroid Deflection"
 description: >
-  Planetary defense systems face their first real test as asteroid detection
-  improves and deflection technology matures. Whether the system works when
-  needed determines confidence in long-term species survival.
+  The Vera C. Rubin Observatory in Chile detects asteroid 2052 QR7, a 180-meter
+  carbonaceous body, on a trajectory that gives it a 1-in-340 chance of Earth
+  impact in 2061. NASA's Planetary Defense Coordination Office, which has been
+  running tabletop exercises for 30 years, suddenly faces the real thing. Lead
+  astronomer Dr. Chen Xiaoli briefs the UN: "This is not a drill."
 domain: "space"
 confidence: "LOW"
 variable: "asteroid_deflection_status"
@@ -22,36 +24,36 @@ conditional: null
 outcomes:
   successful_test:
     status: "DIVERGENCE"
-    description: "Asteroid deflection technology successfully tested on a real target"
+    description: "NASA's DART-3 kinetic impactor, launched on 90 days' notice, strikes asteroid 2052 QR7 at 6.1 km/s and shifts its orbit by 2.3 mm/s -- enough to convert the 1-in-340 impact probability to zero. The impact flash, visible through backyard telescopes, becomes a shared global moment. Dr. Chen opens a bottle of baijiu in her Tucson office: 'For the first time in 4.5 billion years, a species on this planet can defend itself.'"
     world_state_effects:
       space_development_index: "+0.05"
       existential_risk_cumulative: "-0.02"
   near_miss:
     status: "ESCALATED"
-    description: "Previously undetected asteroid passes close to Earth; deflection attempted but unnecessary"
+    description: "Asteroid 2052 TF3, a 90-meter iron body undetected until 72 hours before closest approach, passes within 28,000 km of Earth -- closer than geostationary satellites. DART-3 launches but the asteroid is already past before the impactor reaches intercept. The near-miss terrifies every government on Earth; planetary defense budgets quintuple overnight."
     world_state_effects:
       space_development_index: "+0.08"
       existential_risk_cumulative: "+0.02"
   unnecessary:
     status: "DIVERGENCE"
-    description: "No significant asteroid threats materialize; system remains theoretical"
+    description: "The survey catalog reaches 98% completion for objects above 140 meters; none pose a threat for the next 200 years. The Planetary Defense Office publishes an annual 'all clear' report that makes page 14 of the New York Times. Funding quietly erodes as taxpayers lose interest in a danger that never materializes, and the deflection hardware ages on its launch pads."
     world_state_effects:
       existential_risk_cumulative: "-0.01"
   impact_averted:
     status: "ESCALATED"
-    description: "Genuine impact threat detected and successfully deflected; planetary defense vindicated"
+    description: "Asteroid 2052 QR7 is confirmed on a direct collision course with the Indian Ocean -- impact energy equivalent to 4,800 Hiroshima bombs, enough to generate a 60-meter tsunami devastating every coastline within 5,000 km. The international deflection mission, launching three kinetic impactors simultaneously from Cape Canaveral, Baikonur, and Wenchang, succeeds with 7 months to spare. Humanity collectively exhales."
     world_state_effects:
       space_development_index: "+0.12"
       existential_risk_cumulative: "-0.05"
   technology_fails:
     status: "ESCALATED"
-    description: "Deflection technology fails in test; planetary defense set back a generation"
+    description: "DART-3's guidance system loses lock on the target asteroid at 4,000 km range; the impactor misses by 12 km and tumbles uselessly into deep space. A $6.2 billion mission produces a 12-km miss. Congress demands investigations; Dr. Chen testifies that the guidance software was based on 20-year-old DART-2 code that nobody had properly updated. The next deflection-capable mission is 8 years away."
     world_state_effects:
       space_development_index: "-0.03"
       existential_risk_cumulative: "+0.03"
   international_system:
     status: "DIVERGENCE"
-    description: "International planetary defense system operational and funded by global consortium"
+    description: "The Global Planetary Defense Network, funded by 0.01% of every nation's GDP, maintains 12 ready-to-launch kinetic impactors, 4 gravity tractor spacecraft, and a 24/7 detection grid of 6 space-based telescopes. It is humanity's first truly species-level insurance policy -- and at $8 billion per year, cheaper than what Americans spend on Halloween candy."
     world_state_effects:
       space_development_index: "+0.05"
       global_democracy_index: "+0.01"

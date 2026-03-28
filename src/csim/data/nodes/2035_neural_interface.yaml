@@ -2,9 +2,12 @@ id: "2035_neural_interface"
 year_month: "2035-06"
 title: "Neural Interface Technology"
 description: >
-  Development and adoption of brain-computer interfaces. From medical
-  applications to cognitive enhancement, neural interfaces could reshape
-  human capability and create new forms of inequality.
+  Neuralink's 'N3' implant allows a paralyzed Marine veteran in San Diego to
+  control a robotic exoskeleton with his thoughts and walk his daughter down
+  the aisle at her wedding -- the video gets 2 billion views. Meanwhile, in
+  Shenzhen, a startup called MindBridge offers 'cognitive boost' implants to
+  healthy executives for $180,000. The line between healing and enhancement
+  is dissolving.
 domain: "technology"
 confidence: "MEDIUM"
 variable: "neural_interface_status"
@@ -36,37 +39,37 @@ conditional: null
 outcomes:
   medical_only:
     status: "DIVERGENCE"
-    description: "Neural interfaces limited to medical applications; paralysis, epilepsy, depression"
-    explanation: "Regulatory caution and public unease restrict BCIs to therapeutic use cases"
+    description: "FDA approves Neuralink's N3 for paralysis, treatment-resistant depression, and epilepsy; 34,000 patients receive implants in 2035 alone; a Johns Hopkins study shows 89% of paralysis patients regain meaningful motor control; but the agency explicitly bans 'enhancement' applications, and 22 states pass laws prohibiting elective neural implants"
+    explanation: "The medical success stories are so compelling -- a locked-in ALS patient composes an email with her thoughts, an epileptic child goes seizure-free for the first time -- that public support for therapeutic BCIs is overwhelming; but the same public recoils from the idea of healthy people wiring computers into their brains, and regulators draw a bright line between healing the sick and upgrading the well"
     world_state_effects:
       human_augmentation_prevalence: "+0.05"
   elite_early_adopters:
     status: "DIVERGENCE"
-    description: "Wealthy early adopters gain cognitive enhancement; new inequality dimension"
-    explanation: "Neural interfaces for cognitive enhancement available but expensive; creates augmented elite"
+    description: "An estimated 12,000 people -- hedge fund managers, Silicon Valley executives, and professional gamers -- have received enhancement implants at offshore clinics in Singapore, Dubai, and the Cayman Islands; users report 40% faster information processing, perfect memory recall, and direct brain-to-computer data transfer; a leaked Goldman Sachs memo recommends implants for all managing directors"
+    explanation: "The enhancement underground mirrors early-2020s biohacking but with far more consequential results: augmented traders consistently outperform unaugmented ones, enhanced executives make faster and more data-informed decisions, and a new kind of inequality emerges based not on education or wealth but on the literal hardware in your skull; the first 'neuro-discrimination' lawsuit is filed when an unaugmented employee is passed over for promotion at a Bay Area tech firm"
     world_state_effects:
       human_augmentation_prevalence: "+0.15"
   mass_market_2040:
     status: "DIVERGENCE"
-    description: "Neural interfaces on track for mass market by 2040"
-    explanation: "Rapid cost reduction and compelling applications drive broad adoption trajectory"
+    description: "Neuralink's consumer-grade 'N3 Lite' -- a non-surgical, behind-the-ear device with 60% of the full implant's capability -- launches at $4,800 and sells 2 million units in its first quarter; users can control smart home devices, type at 120 words per minute by thinking, and experience 'shared sensory' entertainment; Apple announces a competing 'NeuralPod' for 2037"
+    explanation: "The breakthrough is eliminating surgery: non-invasive ultrasound-based neural reading, combined with AI that learns each user's neural patterns over weeks of use, delivers 'good enough' brain-computer interaction without drilling holes in skulls; the consumer applications -- hands-free computing, immersive entertainment, direct brain-to-brain communication -- prove irresistible to a generation that already lives half its life through screens"
     world_state_effects:
       human_augmentation_prevalence: "+0.25"
   banned:
     status: "DIVERGENCE"
-    description: "Most nations ban non-medical neural interfaces"
-    explanation: "Safety incidents or ethical backlash leads to strict prohibition of enhancement BCIs"
+    description: "After 3 patients at a Dubai enhancement clinic suffer irreversible personality changes -- one describes herself as 'a stranger in my own mind' -- the EU, Japan, and 40 other nations ban all non-therapeutic neural implants; the US passes the 'Cognitive Liberty Act' making enhancement implantation a federal crime punishable by 5 years in prison"
+    explanation: "The personality-change cases prove that the brain is not a computer that can be safely upgraded: neural interfaces can cause subtle alterations to emotional regulation, empathy, and sense of self that emerge only months after implantation and are irreversible once neural pathways have reorganized around the device; the public reaction is visceral horror, and legislators who were wavering rush to ban"
     world_state_effects:
       human_augmentation_prevalence: "+0.02"
   cognitive_divide:
     status: "ESCALATED"
-    description: "Neural interfaces create deep cognitive divide between enhanced and unenhanced populations"
-    explanation: "Early adopters gain decisive advantages in work and cognition; social stratification deepens"
+    description: "Enhanced workers outperform unenhanced workers by 200-400% on cognitive tasks; top law firms, consulting companies, and financial institutions begin requiring implants as a condition of employment; universities report that enhanced students dominate every measurable outcome; the unenhanced majority -- 99.7% of humanity -- watches a tiny elite pull away in capability as decisively as the invention of writing once separated literate priests from illiterate peasants"
+    explanation: "The cognitive divide is more absolute than any previous inequality because it operates on the hardware of thought itself: no amount of education, effort, or natural talent allows an unenhanced brain to match one with direct database access, 40% faster processing, and perfect memory; philosophers debate whether the enhanced are still the same species, and political movements demanding either universal access or total prohibition gain millions of followers"
     world_state_effects:
       human_augmentation_prevalence: "+0.20"
   rejected:
     status: "DIVERGENCE"
-    description: "Public rejection; neural interfaces fail to gain adoption beyond niche uses"
-    explanation: "Cultural resistance, safety fears, and limited perceived benefit prevent adoption"
+    description: "Despite billions in marketing, only 0.04% of the global population adopts neural interfaces; a Pew survey finds that 78% of Americans consider brain implants 'creepy' and 64% say they would 'never' get one; the technology joins Google Glass and 3D TV in the graveyard of innovations that worked technically but failed culturally"
+    explanation: "The brain turns out to be the one domain where humans draw a firm line against technological intrusion: smartphones were external and removable, but the idea of a permanent device inside the skull triggers deep evolutionary aversion; even non-invasive versions face skepticism after a viral story about a hacked consumer BCI that caused its user to experience phantom pain for 72 hours"
     world_state_effects:
       human_augmentation_prevalence: "+0.01"

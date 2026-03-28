@@ -2,9 +2,11 @@ id: "2085_demographics"
 year_month: "2085-01"
 title: "Demographics 2085"
 description: >
-  Global demographic trends in the late 21st century. The interplay of
-  fertility collapse, life extension, and potential population engineering
-  shapes humanity's numbers.
+  The maternity ward at Tokyo General Hospital delivered 14 babies in 2084 --
+  a record low for a facility that once handled 3,000 births per year. Head
+  nurse Yoko Harada, who has worked there for 40 years, keeps a photo wall
+  of every baby. "When I started," she told NHK, "the wall filled up every
+  month. Now I have room for a whole year on a single corkboard."
 domain: "demographics"
 confidence: "LOW"
 variable: "demographics_2085"
@@ -21,21 +23,21 @@ conditional: null
 outcomes:
   declining:
     status: "DIVERGENCE"
-    description: "Population in steady decline across all regions; societies restructuring for smaller numbers"
+    description: "Global population: 6.8 billion, down from a peak of 9.7 billion in 2064. Every continent is shrinking. Cities are consolidating: Detroit merged with three neighboring towns; Shanghai closed 200 schools in a single year. Economist Dr. Nneka Obi-Fernandez argues this is the most profound challenge humanity has ever faced: 'We built a civilization that requires growth. Now we must learn to shrink gracefully, or not at all.'"
     world_state_effects: {}
   stable_7b:
     status: "DIVERGENCE"
-    description: "Population stabilized near 7 billion through balanced fertility and longevity"
+    description: "Life extension keeps the old alive while modest pro-natalist policies keep the young coming: a fragile equilibrium at 7.2 billion. The median age is 48 globally -- a number that would have been unthinkable in 2000. In Lagos, the world's youngest major city, a 30-year-old entrepreneur can find a venture capitalist. In Milan, the world's oldest, a 30-year-old is considered precociously young."
     world_state_effects: {}
   aging:
     status: "DIVERGENCE"
-    description: "Population heavily skewed toward elderly; dependency ratios strain social systems"
+    description: "There are 2.3 billion people over 70 and only 900 million under 18. Robot caregivers outnumber human nurses 4-to-1 in Japan, Germany, and South Korea. The pension systems of 40 countries are technically insolvent, propped up by AI-managed investments and creative accounting. Gerontologist Dr. Isaac Mensah of Ghana calls it 'a civilization of grandparents being fed by machines, waiting for grandchildren who may never arrive.'"
     world_state_effects: {}
   rejuvenated:
     status: "DIVERGENCE"
-    description: "Life extension and rejuvenation technologies create a biologically younger population"
+    description: "The third-generation Yamanaka rejuvenation therapy has been administered to 2 billion people, rolling back biological age by 30 years. A 90-year-old grandmother in Seoul runs marathons; a 110-year-old professor in Oxford just published her 40th book. The word 'elderly' has been retired from most languages. The dark irony: death rates have plummeted, but so have birth rates, creating a planet of eternally middle-aged people who have forgotten how to make room for the new."
     world_state_effects: {}
   crisis:
     status: "ESCALATED"
-    description: "Demographic crisis from simultaneous population decline, aging, and regional collapses"
+    description: "Bulgaria, Latvia, and South Korea have each lost more than half their population since 2025. China has fallen below 800 million. Rural Japan has been entirely depopulated; the last village school in Akita prefecture closed in 2079 and was converted into a museum of childhood. Meanwhile, Central Africa's population continues growing, creating a grotesque imbalance: a continent of youth surrounded by a world of empty cradles."
     world_state_effects: {}

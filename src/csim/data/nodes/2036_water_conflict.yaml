@@ -2,9 +2,12 @@ id: "2036_water_conflict"
 year_month: "2036-06"
 title: "Water Resource Conflicts"
 description: >
-  Declining freshwater resources from glacial melt, aquifer depletion, and
-  changing precipitation patterns trigger conflicts over shared water resources.
-  Major transboundary river basins become flashpoints.
+  The Ogallala Aquifer beneath the US Great Plains drops below usable levels
+  in parts of western Kansas; the Ganges runs dry for 3 weeks in February
+  at Varanasi for the first time in recorded history; and Egypt's President
+  delivers a televised address declaring the Nile 'a matter of national
+  survival.' Water, the substance humans took for granted for 10,000 years
+  of civilization, is now scarce enough to kill for.
 domain: "climate"
 confidence: "MEDIUM"
 variable: "water_conflict_status"
@@ -22,43 +25,43 @@ conditional: "water_stress_index > 0.40"
 outcomes:
   nile_basin_war:
     status: "ESCALATED"
-    description: "Armed conflict erupts between Nile Basin states over water allocation"
-    explanation: "Ethiopia's GERD and declining flows trigger military confrontation with Egypt and Sudan"
+    description: "Egyptian special forces sabotage a turbine at Ethiopia's Grand Ethiopian Renaissance Dam in a covert operation that Addis Ababa calls 'an act of war'; Ethiopia retaliates by reducing Nile outflow to Sudan by 40%; Egyptian F-16s conduct low-altitude flyovers of the dam; the US evacuates 8,000 citizens from both countries as a full-scale Nile war becomes possible for the first time since antiquity"
+    explanation: "The GERD, filling since 2020, reaches a critical threshold where Ethiopia can effectively control Nile flow to downstream nations; with Egypt's population at 130 million and 97% dependent on the Nile for water, Cairo's leadership views reduced flow as an existential threat comparable to nuclear attack; decades of failed negotiations have produced no binding agreement, and the military option that Egypt always held in reserve moves from theoretical to operational"
     world_state_effects:
       water_stress_index: "+0.10"
       conflict_deaths: "+25000"
   indus_crisis:
     status: "ESCALATED"
-    description: "India-Pakistan crisis over Indus waters as glacial melt declines"
-    explanation: "Himalayan glacier retreat reduces Indus flows; nuclear-armed neighbors confront water scarcity"
+    description: "India begins construction of the Kishanganga-II dam in Kashmir, which Pakistan's water minister calls 'a nuclear-level provocation'; the Indus River's annual flow has declined 18% since 2020 as Himalayan glaciers retreat; Pakistan's Punjab breadbasket faces crop failure affecting 60 million people; military forces on both sides of the Line of Control are placed on highest alert, and the Bulletin of Atomic Scientists warns of 'the most dangerous nuclear crisis since Cuba'"
+    explanation: "The 1960 Indus Waters Treaty, once a model of water diplomacy, collapses under a hydrological reality its drafters never anticipated: there is simply less water to share; India's upstream position gives it physical control over flows that Pakistan's 230 million people depend on for survival; the nuclear dimension transforms a resource dispute into an existential standoff where neither side can afford to back down"
     world_state_effects:
       water_stress_index: "+0.12"
       conflict_deaths: "+15000"
   diplomatic_resolution:
     status: "DIVERGENCE"
-    description: "New water-sharing frameworks prevent conflicts"
-    explanation: "International mediation and water treaties defuse tensions before they escalate"
+    description: "The 'Blue Peace Initiative,' brokered by Swiss mediator Dr. Isabelle Koenig and funded by a $40 billion World Bank water security fund, produces binding water-sharing agreements for the Nile, Indus, Mekong, and Tigris-Euphrates basins; real-time satellite monitoring of river flows provides transparent data that removes the information asymmetry that fueled disputes"
+    explanation: "The diplomatic breakthroughs rely on a package approach: upstream nations get hydropower development rights and infrastructure investment, downstream nations get guaranteed minimum flows and drought-year compensation funds, and all parties accept independent satellite-based monitoring that makes cheating detectable; the deals are imperfect but they prevent the wars that seemed inevitable without them"
     world_state_effects:
       water_stress_index: "+0.03"
       conflict_deaths: "+0"
   desalination_prevents:
     status: "DIVERGENCE"
-    description: "Cheap desalination technology removes water scarcity as a conflict driver"
-    explanation: "Solar-powered desalination costs drop dramatically; coastal nations become water exporters"
+    description: "Israeli firm IDE Technologies' solar-powered desalination plants produce freshwater at $0.35 per cubic meter -- cheaper than pumping groundwater in most locations; Saudi Arabia desalinates enough water to irrigate 400,000 hectares of previously barren land; Egypt builds 12 mega-plants along the Mediterranean coast, reducing Nile dependence by 30% and defusing the Ethiopian dam crisis"
+    explanation: "The desalination revolution is driven by the same solar cost collapse that transformed electricity: when unlimited energy meets mature membrane technology, the ocean becomes an infinite freshwater reservoir; coastal cities from Chennai to Cape Town to Lima pivot from water scarcity to water abundance within 5 years, and the geopolitical leverage of upstream dam-building nations evaporates along with the scarcity it exploited"
     world_state_effects:
       water_stress_index: "-0.05"
       conflict_deaths: "+0"
   multiple_conflicts:
     status: "ESCALATED"
-    description: "Simultaneous water conflicts erupt across multiple regions"
-    explanation: "Nile, Indus, Tigris-Euphrates, and Mekong basins all experience conflict simultaneously"
+    description: "In a single 6-month period: Egypt strikes the GERD; India and Pakistan exchange artillery fire across Kashmir; Turkey cuts Euphrates flow to Syria by 50% triggering a humanitarian crisis; and China's Lancang River dams reduce Mekong flow so severely that Cambodian rice paddies turn to dust and Vietnam's Mekong Delta salt-water intrusion destroys 2 million hectares of farmland"
+    explanation: "The simultaneous water crises are driven by a common cause -- accelerating glacial melt and shifting precipitation patterns -- but each conflict has its own decades-long political history that makes peaceful resolution nearly impossible under crisis conditions; the international system, designed to handle one regional conflict at a time, is overwhelmed by four simultaneous emergencies involving nuclear-armed states"
     world_state_effects:
       water_stress_index: "+0.15"
       conflict_deaths: "+60000"
   internal_only:
     status: "DIVERGENCE"
-    description: "Water stress causes domestic unrest but no interstate conflict"
-    explanation: "Governments face internal protests over water allocation but cross-border tensions managed"
+    description: "Protests over water rationing topple the government in Iraq; 2 million farmers march on New Delhi after Punjab groundwater pumping restrictions; Cape Town implements permanent odd-even day water access; and São Paulo's favelas riot after 72 hours without municipal water supply -- but in every case, the violence stays within borders and international agreements hold"
+    explanation: "Governments absorb the water anger domestically through a combination of repression, rationing, and emergency infrastructure: leaders who fail are replaced, but their successors face the same hydrology; the critical factor keeping conflicts internal is that no upstream nation pushes water weaponization beyond the threshold of downstream tolerance, maintaining a tense but stable equilibrium of mutual restraint"
     world_state_effects:
       water_stress_index: "+0.08"
       conflict_deaths: "+3000"

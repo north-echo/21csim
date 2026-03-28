@@ -2,9 +2,10 @@ id: "2031_climate_migration"
 year_month: "2031-06"
 title: "Climate Migration Crisis"
 description: >
-  Mass population displacement driven by climate impacts including sea level rise,
-  extreme heat, drought, and agricultural failure. Scale and management of migration
-  flows reshape politics and demographics globally.
+  The Bangladeshi government evacuates 2.8 million people from the Sundarbans delta
+  after the third '500-year flood' in five years; a tent city the size of Baltimore
+  materializes outside Dhaka. Meanwhile, Phoenix records its 90th consecutive day above
+  115F and Maricopa County loses 12% of its population in a single year.
 domain: "climate"
 confidence: "MEDIUM"
 variable: "climate_migration_status"
@@ -34,24 +35,24 @@ conditional: "climate_temp_anomaly > 1.5"
 outcomes:
   moderate_managed:
     status: "DIVERGENCE"
-    description: "Tens of millions displaced but international frameworks manage flows"
-    explanation: "Climate impacts significant but global cooperation enables orderly resettlement and adaptation funding"
+    description: "The 'Dhaka Compact' signed by 94 nations creates the first legal category of 'climate displaced persons' with resettlement rights; a $200 billion annual Climate Migration Fund, financed by a 0.1% levy on international financial transactions, relocates 34 million people across organized corridors by 2034"
+    explanation: "Costa Rican diplomat Isabella Mora Vega brokers the deal after grueling 14-month negotiations in Copenhagen; receiving nations including Canada, Australia, and Brazil accept binding quotas, while the fund builds planned climate-resilient communities rather than leaving displaced populations in camps"
     world_state_effects:
       conflict_deaths: "+5000"
       eu_cohesion: "-0.03"
       food_security_index: "-0.05"
   large_unmanaged:
     status: "DIVERGENCE"
-    description: "Hundreds of millions displaced with inadequate international response"
-    explanation: "Climate impacts overwhelm existing institutions; border conflicts and refugee crises proliferate"
+    description: "An estimated 380 million people on the move globally by 2033; Greek coast guard vessels intercept 900 boats in a single week crossing the Mediterranean from Libya; India builds a 2,500km barrier fence along the Bangladesh border; the word 'climate refugee' enters every language on Earth"
+    explanation: "UNHCR's budget is overwhelmed within months as simultaneous crises -- Bangladeshi flooding, Sahel drought, Central American crop failure, and Pacific island submersion -- produce refugee flows that dwarf the 2015 European crisis by an order of magnitude; ad hoc responses and closed borders create vast informal settlements with no legal status"
     world_state_effects:
       conflict_deaths: "+30000"
       eu_cohesion: "-0.08"
       food_security_index: "-0.10"
   catastrophic:
     status: "ESCALATED"
-    description: "Over a billion people displaced; state failures cascade"
-    explanation: "Multiple breadbasket failures and coastal flooding trigger unprecedented displacement beyond any institutional capacity"
+    description: "1.2 billion people displaced or in transit by 2034; Pakistan, Bangladesh, and Nigeria effectively cease to function as states; the Ganges-Brahmaputra delta is permanently underwater and visible from space as a spreading brown stain where farmland once was"
+    explanation: "Simultaneous collapse of the Indian monsoon pattern, accelerated Antarctic ice sheet loss raising seas 40cm in a decade, and Saharan expansion into the Sahel create displacement beyond any historical parallel; the UN General Assembly convenes in emergency session but has no mechanism to respond at this scale"
     world_state_effects:
       conflict_deaths: "+100000"
       eu_cohesion: "-0.15"
@@ -62,8 +63,8 @@ outcomes:
       2030_us_realignment.continued_polarization: "+0.05"
   minimal:
     status: "DIVERGENCE"
-    description: "Climate migration remains manageable; adaptation succeeds"
-    explanation: "Climate impacts less severe than projected or adaptation measures prove highly effective"
+    description: "Dutch-designed floating neighborhoods in Jakarta, seawall systems in Mumbai, and heat-resistant urban planning in Riyadh allow most vulnerable populations to stay in place; total global climate displacement stays below 15 million -- painful but manageable"
+    explanation: "The $3.4 trillion invested in adaptation infrastructure since the Paris Agreement pays off; Bangladesh's raised villages, Vietnam's salt-tolerant rice varieties, and the Sahel's Great Green Wall actually work, keeping displacement to levels existing institutions can handle"
     world_state_effects:
       conflict_deaths: "+1000"
       eu_cohesion: "-0.01"

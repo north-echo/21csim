@@ -2,10 +2,11 @@ id: "2042_mars_comms"
 year_month: "2042-06"
 title: "Mars Communication Infrastructure"
 description: >
-  Deployment of delay-tolerant networking infrastructure between Earth and Mars.
-  Relay satellites, laser communication links, and autonomous routing protocols
-  to support crewed missions and eventual settlement. Communication delays of
-  4-24 minutes demand fundamentally new network architectures.
+  SpaceX and JAXA begin deploying the first interplanetary relay constellation:
+  six satellites at Sun-Mars L4 and L5 points, plus four Mars orbiters. Engineer
+  Priya Chakraborty at JPL manages the 'Interplanetary Internet' project,
+  wrestling with the fact that a TCP handshake takes 44 minutes at maximum
+  Earth-Mars distance and every packet must route itself autonomously.
 domain: "space"
 confidence: "LOW"
 variable: "mars_comms_status"
@@ -41,35 +42,35 @@ conditional: null
 outcomes:
   full_relay_network:
     status: "DIVERGENCE"
-    description: "Complete Mars relay satellite constellation provides near-continuous high-bandwidth communication"
-    explanation: "Multiple relay satellites at Sun-Mars Lagrange points and Mars orbit ensure reliable data links"
+    description: "All ten relay satellites reach operational status; the constellation provides 98.7% uptime at 1.2 Gbps throughput, enough for real-time (delayed) video, scientific data dumps, and personal messages from Mars crew to families on Earth. Chakraborty's team celebrates with champagne when the first email routes successfully around the Sun."
+    explanation: "Strategic placement at Lagrange points eliminates solar conjunction blackouts; store-and-forward protocols handle the delay gracefully, creating something between email and conversation that Mars settlers call 'slow-chat.'"
     world_state_effects:
       space_development_index: "+0.08"
     cascading_modifiers:
       2048_mars_settlement.thriving: "+0.05"
   minimal_links:
     status: "DIVERGENCE"
-    description: "Basic communication links operational but bandwidth-limited; blackout periods persist"
-    explanation: "Budget constraints limit deployment to a few relay satellites; solar conjunction still causes outages"
+    description: "Only four of ten planned satellites launch before Congressional budget cuts freeze the program. Mars crews get 200 Mbps on good days but lose all contact for 14-day stretches during solar conjunction, forcing them to operate autonomously. Families describe the blackout periods as 'like your loved one dying and coming back every two years.'"
+    explanation: "Congressional appropriations committees slashed the interplanetary relay budget by 60%, citing cost overruns on the Mars mission itself. The partial constellation functions but leaves dangerous gaps."
     world_state_effects:
       space_development_index: "+0.04"
   laser_comm_breakthrough:
     status: "DIVERGENCE"
-    description: "Optical laser communication achieves gigabit speeds between Earth and Mars"
-    explanation: "Deep-space laser terminals exceed RF bandwidth by 100x; enables real-time video from Mars"
+    description: "MIT Lincoln Laboratory's optical terminal on Olympus Mons achieves 44 Gbps to the Haleakala ground station in Hawaii -- 100 times faster than radio. The first 8K video stream from Mars surface, showing a dust devil crossing Valles Marineris at sunset, goes viral on Earth 14 minutes after recording."
+    explanation: "Laser communication technology, refined through a decade of lunar testing, leaps to interplanetary scale. Precision pointing systems compensate for atmospheric distortion on both ends; Mars suddenly feels 'close' to people watching in high definition."
     world_state_effects:
       space_development_index: "+0.10"
     cascading_modifiers:
       2048_mars_settlement.thriving: "+0.03"
   delayed_deployment:
     status: "DIVERGENCE"
-    description: "Mars communication infrastructure delayed; early missions rely on direct-to-Earth links"
-    explanation: "Funding and launch vehicle availability push relay constellation to the late 2040s"
+    description: "A Falcon Super Heavy carrying two relay satellites explodes 90 seconds after launch from Vandenberg, destroying $3.2 billion in hardware and grounding the fleet for 18 months. Mars crews communicate through NASA's aging Deep Space Network at 1990s-era bandwidth, queuing personal messages behind mission-critical data."
+    explanation: "The launch failure, combined with insurance market turmoil and competing demand for heavy-lift vehicles, pushes the full relay constellation to 2049 at the earliest. Mars operations proceed on a communication shoestring."
     world_state_effects:
       space_development_index: "+0.02"
   no_infrastructure:
     status: "DIVERGENCE"
-    description: "No dedicated Mars communication infrastructure deployed; missions use legacy deep-space network"
-    explanation: "Without crewed missions to justify the expense, Mars comms remain low-priority"
+    description: "With no humans on Mars and robotic missions generating manageable data volumes, NASA's 70-meter dishes at Goldstone, Canberra, and Madrid handle Mars traffic as they have since the 1960s. The relay constellation remains a line item in PowerPoint presentations that nobody funds."
+    explanation: "The political will for a $12 billion relay constellation evaporated when the crewed Mars mission was cancelled; robotic missions don't generate enough public interest or data volume to justify the investment."
     world_state_effects:
       space_development_index: "+0.00"

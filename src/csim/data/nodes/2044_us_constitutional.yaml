@@ -2,9 +2,11 @@ id: "2044_us_constitutional"
 year_month: "2044-06"
 title: "US Constitutional Amendment"
 description: >
-  Mounting pressure for constitutional reform reaches a critical point. Whether
-  amendments pass, a convention is called, or reform efforts fail shapes the
-  future of American democracy.
+  After the Supreme Court rules 5-4 that AI-generated campaign ads constitute
+  protected speech, 34 state legislatures pass resolutions calling for a
+  constitutional convention -- one short of the threshold. Former Chief Justice
+  Elena Martinez warns on PBS that America faces 'its most consequential
+  constitutional moment since Reconstruction.'
 domain: "regional"
 confidence: "MEDIUM"
 variable: "us_constitutional_status"
@@ -22,35 +24,35 @@ conditional: null
 outcomes:
   no_amendment:
     status: "DIVERGENCE"
-    description: "Constitutional amendment efforts fail; system continues unreformed"
+    description: "The 35th state resolution stalls in the Wisconsin legislature by 3 votes after an aggressive lobbying campaign by tech companies and incumbent politicians. The amendment movement collapses into mutual recrimination between progressive and conservative reformers who cannot agree on what to fix, and the 237-year-old document endures unaltered."
     world_state_effects:
       us_polarization: "+0.03"
       global_democracy_index: "-0.01"
   electoral_reform:
     status: "DIVERGENCE"
-    description: "Electoral college reformed or abolished; popular vote determines presidency"
+    description: "The 28th Amendment abolishes the Electoral College after three of the last five presidents lost the popular vote. The first national popular-vote election draws 78% turnout -- the highest since 1876. Republicans pivot to urban outreach overnight and win Houston's mayoralty; Democrats campaign in rural Montana for the first time in decades."
     world_state_effects:
       us_polarization: "-0.05"
       global_democracy_index: "+0.02"
   ai_rights:
     status: "DIVERGENCE"
-    description: "Amendment addresses AI personhood and digital rights in unprecedented legal framework"
+    description: "The 28th Amendment declares that 'no artificial system shall hold legal personhood, property rights, or standing in court,' while simultaneously guaranteeing citizens the right to cognitive liberty -- freedom from unwanted AI surveillance or neural manipulation. Constitutional scholar Professor Kwame Asante at Howard University calls it 'the Bill of Rights for the algorithmic age.'"
     world_state_effects:
       global_democracy_index: "+0.01"
   secession_addressed:
     status: "DIVERGENCE"
-    description: "Amendment clarifies state sovereignty and secession rights after regional tensions"
+    description: "After Texas's third secession referendum in a decade, the 28th Amendment creates a formal framework: states may negotiate 'enhanced autonomy compacts' with the federal government but cannot unilaterally secede. Texas Governor Cruz-Ramirez accepts the compromise, gaining control over immigration and energy policy while remaining in the union."
     world_state_effects:
       us_polarization: "-0.03"
   convention_chaos:
     status: "ESCALATED"
-    description: "Constitutional convention called but devolves into partisan deadlock and crisis"
+    description: "The convention opens in Philadelphia's Independence Hall with 538 delegates and immediately fractures: the 'Restore' faction demands originalist rollbacks, the 'Reform' faction pushes direct democracy, and the 'Restructure' caucus wants to split the country into autonomous regions. After 90 days of televised screaming, the convention adjourns without a single agreed clause."
     world_state_effects:
       us_polarization: "+0.08"
       global_democracy_index: "-0.03"
   democratic_reform:
     status: "DIVERGENCE"
-    description: "Broad democratic reforms including ranked choice voting, term limits, and campaign finance"
+    description: "The 28th and 29th Amendments pass in rapid succession: ranked-choice voting for all federal offices, 18-year term limits for Supreme Court justices, and public financing of elections capped at $5 per citizen. Former gerrymandering beneficiary-turned-reformer Congresswoman Diane Nguyen votes yes and loses her safe seat in the next election -- 'worth it,' she tells NPR."
     world_state_effects:
       us_polarization: "-0.08"
       global_democracy_index: "+0.03"

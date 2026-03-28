@@ -2,9 +2,10 @@ id: "2033_green_economy_boom"
 year_month: "2033-06"
 title: "Green Industrial Revolution"
 description: >
-  When clean energy wins early, the economic transformation creates a
-  boom — new industries, new jobs, new geopolitical winners and losers.
-  But even good transitions create losers.
+  Solar electricity in Morocco costs $0.008/kWh -- cheaper than burning
+  free coal -- and the Sahara powers factories in Casablanca that export
+  green hydrogen to Hamburg. But in Appalachia, the last coal company's
+  bankruptcy ceremony feels more like a funeral than a celebration.
 domain: "economic"
 confidence: "LOW"
 variable: "green_economy_status"
@@ -20,8 +21,8 @@ conditional: "renewable_energy_share > 0.25 AND climate_temp_anomaly < 1.5"
 outcomes:
   broad_prosperity:
     status: "DIVERGENCE"
-    description: "Green growth lifts all boats; broad-based economic prosperity from clean energy transition"
-    explanation: "New industries create millions of jobs; retraining programs succeed; energy costs plummet globally"
+    description: "Global clean energy employment hits 62 million -- surpassing fossil fuels for the first time; a former Exxon roughneck in Midland, Texas now earns $95K/year maintaining wind turbines; Nairobi-based M-KOPA becomes Africa's first $10 billion solar company, bringing electricity to 80 million off-grid households"
+    explanation: "The combination of near-zero-cost solar, sodium batteries, and green hydrogen creates an industrial revolution that lifts developing nations fastest: countries with abundant sun and wind become energy exporters, manufacturing follows cheap power, and the virtuous cycle of falling costs and rising demand generates broad-based prosperity rather than concentrated wealth"
     world_state_effects:
       global_gdp_growth_modifier: "*1.05"
       inequality_index: "-0.08"
@@ -31,8 +32,8 @@ outcomes:
       africa_development_index: "+0.05"
   petro_state_collapse:
     status: "ESCALATED"
-    description: "Oil-dependent states face economic collapse as demand craters"
-    explanation: "Saudi Arabia, Nigeria, Venezuela, and others unable to pivot fast enough; social instability follows"
+    description: "Brent crude falls below $28/barrel; Nigeria's naira collapses 70% in 6 months as oil revenue -- 90% of export earnings -- evaporates; Venezuela's already-fragile state disintegrates entirely; Saudi Arabia burns through $340 billion in sovereign wealth reserves in 3 years propping up the riyal and funding emergency employment programs"
+    explanation: "The speed of the transition is the killer: oil demand drops 35% in 5 years rather than the 20-year glide path that Saudi Vision 2030 assumed; states that diversified survive, but the petrostates that treated oil wealth as permanent rather than transitional face fiscal cliffs with no safety net and populations accustomed to subsidized lifestyles"
     world_state_effects:
       middle_east_stability: "-0.15"
       conflict_deaths: "+25000"
@@ -42,8 +43,8 @@ outcomes:
       russia_stability: "-0.10"
   green_inequality:
     status: "DIVERGENCE"
-    description: "Clean energy billionaires form a new oligarchy; green transition benefits concentrate at top"
-    explanation: "Battery, solar, and hydrogen patents create massive wealth concentration; developing nations left behind"
+    description: "The 'Green Five' -- founders of CATL, First Solar, Northvolt, Reliance Clean Energy, and a Chilean lithium magnate -- hold combined wealth of $1.2 trillion; their patents on solid-state batteries and perovskite solar cells extract rents from every clean energy installation on Earth; the Global South pays licensing fees that exceed the development aid it receives"
+    explanation: "The clean energy transition replicates the oil economy's worst feature: concentrated ownership of essential infrastructure; patent thickets prevent competition, and developing nations that lack manufacturing capacity become dependent on imported green technology just as they were on imported oil, while the new green oligarchs wield political influence that dwarfs the old fossil fuel lobby"
     world_state_effects:
       inequality_index: "+0.10"
       global_gdp_growth_modifier: "*1.03"
@@ -53,8 +54,8 @@ outcomes:
       africa_development_index: "-0.02"
   nationalist_backlash:
     status: "ESCALATED"
-    description: "Green transition moves too fast; populist revolt in industrial regions"
-    explanation: "Workers in fossil fuel industries feel abandoned; nationalist movements weaponize transition pain"
+    description: "A coal miners' march on Berlin draws 200,000 people from the Ruhr Valley and Lusatia; Australia's 'Resources First' party wins 14 Senate seats on a platform of reopening coal mines; in the US, the 'Don't Tread on My Truck' movement -- protesting an EV mandate -- blockades the Port of Houston for 5 days"
+    explanation: "The transition's losers are geographically concentrated and culturally proud: entire communities built around fossil fuels see their identity as well as their income threatened, and the retraining programs that look great on paper require 55-year-old miners to become solar installers or data center technicians -- a transformation that many experience as humiliation rather than opportunity"
     world_state_effects:
       us_polarization: "+0.08"
       eu_cohesion: "-0.05"

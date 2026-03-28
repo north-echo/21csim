@@ -2,9 +2,12 @@ id: "2085_interstellar"
 year_month: "2085-01"
 title: "Interstellar Prospects"
 description: >
-  The feasibility and progress of interstellar travel or communication.
-  Whether humanity has the capability and will to reach beyond the solar
-  system.
+  The first confirmed detection of an artificial signal from another star
+  system did not come from Proxima Centauri or any of the 'likely' candidates.
+  It came from a red dwarf 12 light-years away, detected by Dr. Tariq Hassan's
+  team at the Atacama Array on a Tuesday morning in 2083. The signal was a
+  prime number sequence. Hassan's first words, recorded by the lab camera,
+  were: "Oh my God. Oh my God. Someone's home."
 domain: "technology"
 confidence: "LOW"
 variable: "interstellar_status"
@@ -23,29 +26,29 @@ conditional: null
 outcomes:
   probe_launched:
     status: "DIVERGENCE"
-    description: "One or more interstellar probes en route to nearby star systems"
+    description: "Three lightsail probes are in flight: 'Messenger' will reach Proxima Centauri in 2091, 'Pioneer II' targets Barnard's Star, and 'Wanderer' heads for TRAPPIST-1. Each transmits a faint signal back to Earth, growing weaker by the year. Mission controller Dr. Oluwaseun Adebayo checks every morning from her Abuja office, now decorated with drawings sent by schoolchildren from 40 countries. 'We've thrown three bottles into an ocean we can't see the other shore of,' she says. 'That's either faith or madness.'"
     world_state_effects: {}
   generation_ship:
     status: "DIVERGENCE"
-    description: "Plans underway for a crewed generation ship to another star system"
+    description: "The 'Ark Project,' a 40-nation consortium, is constructing a 2-kilometer generation ship in lunar orbit. Expected to launch in 2095, it will carry 10,000 people on a 120-year journey to Proxima Centauri b. The first crew selection process attracted 44 million applicants. Psychologist Dr. Ingrid Larsen, who designed the selection criteria, says the hardest quality to test for is 'willingness to die in transit so your grandchildren can walk on another world.'"
     world_state_effects: {}
   impossible:
     status: "DIVERGENCE"
-    description: "Interstellar travel confirmed as impractical with any foreseeable technology"
+    description: "Sixty years of research and $500 billion have produced a definitive answer: the stars are unreachable. No propulsion system can overcome the energy requirements; no biological or digital human can survive the radiation environment; and no economy can justify the cost. Astrophysicist Dr. Maria Santos-Nakamura, who spent her career trying to prove otherwise, gave her retirement lecture at MIT with characteristic bluntness: 'The universe is not designed for tourism.'"
     world_state_effects: {}
   planned:
     status: "DIVERGENCE"
-    description: "Interstellar missions in planning stages with feasible technology identified"
+    description: "The 'Horizon Drive' -- a fusion-powered propulsion system capable of 10% lightspeed -- was successfully tested in 2084 in a vacant orbit beyond Mars. Mission planners at the Interstellar Consortium are designing a probe that could reach Alpha Centauri in 45 years. Lead engineer Dr. Priya Sharma-Okafor told her team: 'We just proved that the stars are not a dream. They are an engineering problem. And we are engineers.'"
     world_state_effects: {}
   unnecessary:
     status: "DIVERGENCE"
-    description: "Advanced remote sensing and virtual exploration make physical interstellar travel unnecessary"
+    description: "The Kepler's Eye array can now resolve individual trees on planets 20 light-years away. Dr. Tomoko Ishikawa's team has catalogued 14 biospheres, 3 with possible artificial structures, and one with atmospheric signatures consistent with industrial activity. 'Why risk lives crossing an ocean,' Ishikawa asks, 'when you can read the newspaper on the other shore through a very good telescope?'"
     world_state_effects: {}
   breakthrough:
     status: "DIVERGENCE"
-    description: "Fundamental physics breakthrough enables practical faster-than-light or near-light travel"
+    description: "Dr. Aisha Patel's quantum vacuum energy drive, first tested in 2068, has been scaled to propel a 100-ton vessel at 40% lightspeed. The implications rewrote every assumption about humanity's future: Alpha Centauri in 11 years, TRAPPIST-1 in 95. Patel, now 50 and the most famous scientist alive, is designing the first crewed interstellar vessel from her lab in Leicester. She keeps a poster of the Voyager probe on her wall: 'That was humanity crawling. We're about to walk.'"
     world_state_effects: {}
   abandoned:
     status: "DIVERGENCE"
-    description: "Interstellar ambitions abandoned as humanity focuses on solar system or Earth challenges"
+    description: "The interstellar program was defunded in 2080 after the Third Climate Emergency diverted all discretionary spending. The Atacama laser array was repurposed for orbital debris clearing; the lightsail probes were cancelled mid-construction. Retired astronaut Dr. Nikolai Petrov, who had been training for an interstellar mission, planted a garden outside his Moscow apartment: 'If we can't take care of one planet, we have no business reaching for another.'"
     world_state_effects: {}

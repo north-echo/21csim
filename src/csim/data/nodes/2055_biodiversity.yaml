@@ -2,9 +2,12 @@ id: "2055_biodiversity"
 year_month: "2055-01"
 title: "Biodiversity Crisis Resolution"
 description: >
-  The biodiversity crisis reaches a defining moment as species extinction rates
-  either stabilize through conservation efforts or accelerate into a mass
-  extinction event rivaling the geological record.
+  The IUCN's 2055 Red List reports 1.2 million species assessed, 340,000
+  threatened. Dr. Wanjiku Muthoni at the National Museums of Kenya discovers
+  that the last wild African elephant died three years ago and nobody noticed
+  because the GPS collars stopped transmitting and the ranger service had been
+  defunded. The question is no longer how many species we are losing, but
+  whether any intact ecosystem on Earth will survive the century.
 domain: "climate"
 confidence: "LOW"
 variable: "biodiversity_status"
@@ -22,35 +25,35 @@ conditional: "biodiversity_index < 0.50"
 outcomes:
   mass_extinction:
     status: "ESCALATED"
-    description: "Sixth mass extinction confirmed; over 50% of species lost within decades"
+    description: "The Barcode of Life project confirms extinction of 1.4 million species since 2020 -- a rate 10,000 times the geological background. Pollinator collapse devastates temperate agriculture; 80% of amphibian species are gone; the ocean's phytoplankton biomass has dropped 40%, reducing oxygen production. Dr. Muthoni's monograph 'The Sixth Extinction: Confirmed' becomes the most-cited scientific paper in history."
     world_state_effects:
       biodiversity_index: "-0.20"
       food_security_index: "-0.12"
   stabilized:
     status: "DIVERGENCE"
-    description: "Conservation efforts halt biodiversity decline; extinction rate returns to background levels"
+    description: "The Global Conservation Fund, endowed with $1.2 trillion from carbon tax revenues, protects 30% of Earth's land and ocean surface. AI-monitored biodiversity corridors connect fragmented habitats; gene-drive technology eliminates invasive rats from 800 islands. For the first time since 1970, the Living Planet Index ticks upward. Dr. Muthoni releases a cautiously hopeful sequel: 'Bending the Curve.'"
     world_state_effects:
       biodiversity_index: "+0.05"
       food_security_index: "+0.02"
   recovery:
     status: "DIVERGENCE"
-    description: "Active restoration and de-extinction technologies drive biodiversity recovery"
+    description: "Colossal Biosciences releases de-extincted woolly mammoths into restored Siberian steppe; gene-edited corals resistant to acidification repopulate Caribbean reefs; CRISPR-modified American chestnuts reclaim Appalachian forests. The rewilded Serengeti, with AI-managed predator-prey balances, hosts 3 million more large mammals than in 2020. Nature is not restored -- it is redesigned."
     world_state_effects:
       biodiversity_index: "+0.10"
   collapse:
     status: "ESCALATED"
-    description: "Ecosystem collapse cascades through food webs; agricultural systems destabilized"
+    description: "Pollinator collapse triggers crop failure across 30% of global agricultural land; phytoplankton die-offs reduce atmospheric oxygen by 0.3% -- not enough to suffocate anyone but enough to cause chronic fatigue at high altitudes. Fisheries crash in sequence: anchovies, then sardines, then tuna, then everything. Farmers in Iowa hand-pollinate corn with Q-tips; the absurdity masks the horror."
     world_state_effects:
       biodiversity_index: "-0.30"
       food_security_index: "-0.20"
   rewilding:
     status: "DIVERGENCE"
-    description: "Large-scale rewilding programs restore ecosystems across continents"
+    description: "The EU's 'Half-Earth' initiative converts 1.2 million km2 of abandoned farmland to rewilded habitat; wolves return to the Netherlands, lynx to England, and bison to Romania. Brazil's Atlantic Forest reconnection project creates a 4,000-km biodiversity corridor from Bahia to Parana. Ecologist Dr. Muthoni measures the world's first net increase in vertebrate biomass in 80 years."
     world_state_effects:
       biodiversity_index: "+0.12"
       food_security_index: "+0.03"
   managed:
     status: "DIVERGENCE"
-    description: "Biodiversity managed through conservation corridors and genetic banks but wild populations diminish"
+    description: "The Svalbard Genetic Vault stores DNA from 4 million species; 12,000 conservation corridors connect protected areas worldwide; AI surveillance drones monitor endangered species 24/7. Wild populations continue declining, but genetic diversity is preserved in cryogenic banks. Nature becomes a museum exhibit: carefully catalogued, indefinitely preserved, and increasingly absent from daily life."
     world_state_effects:
       biodiversity_index: "-0.05"

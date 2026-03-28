@@ -2,9 +2,11 @@ id: "2085_climate_recovery"
 year_month: "2085-01"
 title: "Climate Recovery"
 description: >
-  Whether the climate system shows signs of genuine recovery or the damage
-  is permanent. The long-term consequences of a century of emissions become
-  fully apparent.
+  The 2085 Global Carbon Audit, presented by Dr. Thandiwe Ndlovu of South
+  Africa at the Nairobi Climate Summit, contained one graph that silenced the
+  auditorium: atmospheric CO2 levels plotted from 1750 to 2085, showing the
+  spike, the plateau, and -- depending on which scenario you believe -- either
+  the beginning of a descent or the start of a long, ugly flatline.
 domain: "climate"
 confidence: "LOW"
 variable: "climate_recovery_status"
@@ -21,21 +23,21 @@ conditional: null
 outcomes:
   recovering:
     status: "DIVERGENCE"
-    description: "Natural and technological carbon removal driving measurable climate recovery"
+    description: "Atmospheric CO2 has fallen from a peak of 480 ppm to 390 and is still dropping. The rewilded Amazon -- 3 million square kilometers of regenerated forest planted by Brazilian-led autonomous systems -- absorbs 4 gigatons annually. Dr. Ndlovu allowed herself an uncharacteristic smile at the podium: 'The planet is healing. Slowly. Grudgingly. But the direction is right.'"
     world_state_effects: {}
   permanent_damage:
     status: "ESCALATED"
-    description: "Some climate damage proves irreversible; sea level rise, species loss, and altered weather patterns persist"
+    description: "Sea levels have risen 1.2 meters and will not recede for millennia. The Maldives, Tuvalu, and 14 other island nations exist only as digital archives and diaspora communities. The Great Barrier Reef is 80% dead rubble. Greenland's ice sheet has lost 40% of its mass. Climate historian Dr. Omar Khalil of Egypt catalogs these losses in his 12-volume 'Atlas of the Irreversible,' which he calls 'a eulogy for the world my parents knew.'"
     world_state_effects: {}
   geoengineered:
     status: "DIVERGENCE"
-    description: "Climate managed through continuous geoengineering; stable but dependent on ongoing intervention"
+    description: "The Climate Maintenance Authority's annual budget is $4 trillion -- larger than most national economies. Stratospheric aerosol injections must be refreshed every 18 months; the orbital mirror array requires constant adjustment. If the system fails for even one year, temperatures would spike 1.5C within a decade. Director Dr. Emiko Watanabe sleeps with her phone on her chest. 'I maintain the thermostat of a planet,' she says. 'There is no off switch and no vacation.'"
     world_state_effects: {}
   adapted:
     status: "DIVERGENCE"
-    description: "Climate still altered but human civilization has fully adapted to new conditions"
+    description: "At 2.4C, Earth is a different planet than the one humanity evolved on, but civilization has bent rather than broken. Floating cities house 50 million in Southeast Asia; the agricultural belt has shifted 800 kilometers north; and air conditioning consumes 18% of global energy. Children read about 'old weather' in school the way previous generations read about the Ice Age -- as something real but personally unimaginable."
     world_state_effects: {}
   worse:
     status: "ESCALATED"
-    description: "Climate continues deteriorating as feedback loops overwhelm mitigation efforts"
+    description: "The West Antarctic Ice Sheet passed its tipping point in 2079; the Greenland sheet is following. Sea levels are rising 8 centimeters per decade and accelerating. The Amazon is savanna. Half the world's coral species are extinct. Dr. Ndlovu's 2085 report was three pages long -- the shortest in WMO history. 'Further analysis,' she wrote, 'is an exercise in describing a wound that will not close.'"
     world_state_effects: {}

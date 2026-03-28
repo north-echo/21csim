@@ -2,9 +2,11 @@ id: "2034_antibiotic_resistance"
 year_month: "2034-06"
 title: "Antibiotic Resistance Crisis"
 description: >
-  Antimicrobial resistance threatens to make common infections lethal again.
-  Whether new treatments, phage therapy, or policy interventions can
-  prevent a post-antibiotic era.
+  A pan-resistant Klebsiella pneumoniae strain -- dubbed 'KP-47' by the WHO --
+  spreads through hospitals in Mumbai, Cairo, and Athens, killing 34% of infected
+  patients; it is resistant to all 26 classes of commercially available antibiotics.
+  The head of the CDC calls it 'the slow-motion pandemic we've been warning about
+  for 30 years.'
 domain: "technology"
 confidence: "MEDIUM"
 variable: "antibiotic_resistance_status"
@@ -21,36 +23,36 @@ conditional: null
 outcomes:
   crisis_managed:
     status: "DIVERGENCE"
-    description: "Antibiotic stewardship programs and regulation slow resistance emergence"
-    explanation: "Agricultural antibiotic bans and hospital protocols reduce resistance spread"
+    description: "The EU's 2029 ban on agricultural antibiotics, adopted by 60 nations, cuts resistant bacteria in livestock by 72%; hospital 'antibiotic guardian' AI systems in 14,000 facilities worldwide reduce unnecessary prescriptions by 45%; KP-47 is contained to 8,300 cases rather than the projected millions"
+    explanation: "India's surprising decision to ban over-the-counter antibiotics in 2031 -- enforced through pharmacy AI monitoring -- proves the turning point; combined with agricultural bans and hospital stewardship programs that use AI to recommend the narrowest-spectrum effective antibiotic for each case, resistance evolution slows enough for the drug pipeline to keep pace"
     world_state_effects:
       global_pandemic_deaths: "-5000"
       us_life_expectancy_delta: "+0.3"
   post_antibiotic_era:
     status: "ESCALATED"
-    description: "Common infections become lethal again; surgery and chemotherapy become high-risk"
-    explanation: "Pan-resistant bacteria spread globally; modern medicine loses a foundational tool"
+    description: "KP-47 and its variants kill 480,000 people in 2034 alone; hospitals in Southeast Asia and sub-Saharan Africa stop performing elective surgery entirely; a routine knee replacement in Lagos becomes a life-threatening gamble; cancer patients in Kolkata refuse chemotherapy because the immunosuppression makes post-antibiotic infections a near-certainty"
+    explanation: "The post-antibiotic era arrives not as an apocalypse but as a grinding degradation of modern medicine: mortality from previously treatable infections -- UTIs, pneumonia, wound infections -- climbs 300% in affected regions; medical tourism reverses direction as wealthy patients from developing nations fly to Northern European hospitals with the strictest infection control"
     world_state_effects:
       global_pandemic_deaths: "+500000"
       us_life_expectancy_delta: "-2.0"
   phage_therapy:
     status: "DIVERGENCE"
-    description: "Bacteriophage therapy emerges as viable alternative to antibiotics"
-    explanation: "Personalized phage cocktails prove effective against resistant infections"
+    description: "Georgian biotechnologist Dr. Nino Khoshtaria's phage cocktail, developed at the Eliava Institute in Tbilisi, cures 89% of KP-47 infections in clinical trials; the FDA fast-tracks approval of 3 phage therapy products; a phage library containing 14,000 characterized bacteriophages opens at the Pasteur Institute, available to any hospital worldwide via 48-hour shipping"
+    explanation: "Phage therapy -- using viruses that eat bacteria -- was pioneered in Soviet Georgia a century ago but ignored by Western medicine in favor of antibiotics; the resistance crisis vindicates the approach, and the Eliava Institute transforms from a quirky post-Soviet relic into the most important infectious disease laboratory on Earth, with Dr. Khoshtaria shortlisted for the Nobel Prize in Medicine"
     world_state_effects:
       global_pandemic_deaths: "-10000"
       us_life_expectancy_delta: "+0.5"
   new_antibiotics:
     status: "DIVERGENCE"
-    description: "Novel antibiotic classes discovered; pipeline revitalized"
-    explanation: "AI-driven drug discovery and new funding models produce next-generation antibiotics"
+    description: "MIT's AI drug discovery platform identifies Teixobactin-2, the first genuinely novel antibiotic class in 40 years, effective against all tested gram-negative resistant bacteria; Roche pays $8.2 billion for the manufacturing rights; separately, the CARB-X global fund's 'market entry reward' of $2 billion per approved antibiotic finally makes the economics work for pharma companies"
+    explanation: "The breakthrough is as much financial as scientific: antibiotics were unprofitable because they're used sparingly and briefly (unlike chronic disease drugs), so the 'Netflix model' subscription payment -- where governments pay a fixed annual fee for unlimited access regardless of usage -- gives companies guaranteed revenue without incentivizing overuse"
     world_state_effects:
       global_pandemic_deaths: "-8000"
       us_life_expectancy_delta: "+0.4"
   contained:
     status: "DIVERGENCE"
-    description: "Resistance remains a regional problem; global spread contained"
-    explanation: "Surveillance and rapid response prevent resistant strains from becoming pandemic"
+    description: "KP-47 remains concentrated in South Asia and East Africa where antibiotic misuse is highest; genomic surveillance networks detect resistant strains at airports within hours; Singapore, Japan, and Scandinavia report near-zero cases of pan-resistant infections due to rigorous hospital protocols and point-of-care rapid resistance testing"
+    explanation: "The global surveillance system built during the COVID era proves its worth: wastewater monitoring in 800 cities tracks resistance gene prevalence in real time, and travel health screenings at 40 major airports catch carriers before they seed new outbreaks; the result is a two-tier world where nations with strong public health systems are largely protected while those without remain vulnerable"
     world_state_effects:
       global_pandemic_deaths: "-2000"
       us_life_expectancy_delta: "+0.2"

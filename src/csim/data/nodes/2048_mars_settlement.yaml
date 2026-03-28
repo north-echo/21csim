@@ -2,9 +2,11 @@ id: "2048_mars_settlement"
 year_month: "2048-01"
 title: "Mars Settlement"
 description: >
-  Following initial Mars missions, the question of permanent settlement is decided.
-  Whether Mars becomes a thriving colony, corporate outpost, or abandoned dream
-  depends on earlier space development progress.
+  Eight years after first landing, the Ares Base at Jezero Crater houses 23 rotating
+  crew members in pressurized habitats built from Martian regolith. Botanist Dr.
+  Sofia Andersson grows the first Martian tomato under LED lights powered by a
+  compact nuclear reactor. The question is no longer 'can humans survive on Mars'
+  but 'should they stay permanently' -- and at what cost to Earth's taxpayers.
 domain: "space"
 confidence: "MEDIUM"
 variable: "mars_settlement_status"
@@ -37,31 +39,31 @@ conditional: "space_development_index > 0.3"
 outcomes:
   small_outpost:
     status: "DIVERGENCE"
-    description: "Small research outpost established with rotating crews of 10-20 people"
+    description: "Ares Base operates like an Antarctic research station: 18-month rotations, strict psychological screening, and a supply ship every 26 months. Dr. Andersson's greenhouse produces 15% of food needs; the rest arrives from Earth at $40,000 per kilogram. Crew members describe the experience as 'simultaneously the loneliest and most purposeful place in the solar system.'"
     world_state_effects:
       space_development_index: "+0.08"
   growing_colony:
     status: "DIVERGENCE"
-    description: "Mars colony grows steadily with permanent residents and expanding infrastructure"
+    description: "The colony grows to 140 permanent residents across three interconnected habitats, including the first child conceived and born on Mars -- Zara Obi-Tanaka, born March 15 in 0.38g gravity, 2.9 kg. Three underground greenhouses produce 60% of food needs; a methane production plant fuels surface vehicles. Applications for permanent residency outnumber available slots 800 to 1."
     world_state_effects:
       space_development_index: "+0.15"
   abandoned:
     status: "DIVERGENCE"
-    description: "Mars settlement attempts abandoned due to cost, danger, or shifting priorities"
+    description: "After a radiation storm kills two crew members and a resupply mission fails to achieve Mars orbit, Congress votes 287-148 to terminate the Mars program. The final evacuation ship departs Jezero Crater on December 3; Dr. Andersson is the last to board, carrying a sealed container of Martian soil. The abandoned habitats are visible in telescope images, slowly being buried by red dust."
     world_state_effects:
       space_development_index: "-0.05"
   corporate_colony:
     status: "DIVERGENCE"
-    description: "Private corporation establishes Mars settlement as commercial venture"
+    description: "SpaceX-Mars LLC establishes 'Musk City' (named posthumously after the company's founder) as a corporate settlement: residents sign 10-year indenture contracts in exchange for passage and housing. The colony mines perchlorate for rocket fuel and charges Earth tourists $18 million per visit. Critics call it 'a company town on a dead world'; settlers call it freedom."
     world_state_effects:
       space_development_index: "+0.12"
   not_yet:
     status: "DIVERGENCE"
-    description: "Permanent Mars settlement remains aspirational; technology not yet sufficient"
+    description: "Life support systems cannot reliably close the loop: water recycling hits 94% efficiency (needs 99%), food production meets 30% of needs (needs 80%), and radiation shielding remains inadequate for permanent habitation. Engineers estimate another 15 years of technology development before settlement becomes feasible. Mars remains a place humans visit, not where they live."
     world_state_effects:
       space_development_index: "+0.02"
   independent_governance:
     status: "DIVERGENCE"
-    description: "Mars settlers establish independent governance, challenging Earth sovereignty concepts"
+    description: "When NASA orders Ares Base to reduce crew size for budget reasons, the 87 permanent residents vote unanimously to refuse. Colony leader Dr. James Okoro-Singh transmits the 'Jezero Declaration': 'We did not cross 225 million kilometers to be governed by people who have never breathed recycled air.' Earth's governments have no mechanism to enforce compliance 22 light-minutes away."
     world_state_effects:
       space_development_index: "+0.18"

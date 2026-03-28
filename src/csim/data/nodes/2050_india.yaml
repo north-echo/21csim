@@ -2,9 +2,11 @@ id: "2050_india"
 year_month: "2050-01"
 title: "India at Mid-Century"
 description: >
-  India's trajectory as the world's most populous nation reaches a defining moment.
-  Whether it rises as a superpower, maintains democratic traditions, or succumbs
-  to climate and internal pressures shapes the Asian century.
+  India's population peaks at 1.66 billion; its economy, at $14 trillion, is the
+  world's third largest. The Bangalore-Hyderabad tech corridor produces more AI
+  researchers than the US and China combined. But 340 million Indians still lack
+  reliable clean water, and the gap between a software engineer in Pune and a
+  farmer in Bihar is wider than the gap between countries.
 domain: "regional"
 confidence: "LOW"
 variable: "india_status"
@@ -22,35 +24,35 @@ conditional: null
 outcomes:
   superpower:
     status: "DIVERGENCE"
-    description: "India emerges as a global superpower with economic and military parity alongside US and China"
+    description: "India's GDP surpasses $18 trillion; its aircraft carrier battle group patrols the Indian Ocean from Aden to Malacca; ISRO's lunar mining operation supplies 30% of the world's helium-3. Prime Minister Kavya Deshmukh addresses the UN General Assembly in Hindi, and the simultaneous translator is an Indian-built AI system. The 'Indian Century' begins quietly but unmistakably."
     world_state_effects:
       global_democracy_index: "+0.03"
       us_global_standing: "-0.03"
   regional_power:
     status: "DIVERGENCE"
-    description: "India remains a strong regional power without achieving global superpower status"
+    description: "India dominates South Asia and the Indian Ocean but never quite breaks into the US-China duopoly. Its military is formidable but regionally focused; its tech sector is world-class but lacks the scale of Chinese or American giants. 'India is always about to be a superpower,' quips a Singaporean diplomat. 'It has been about to be one for fifty years.'"
     world_state_effects:
       global_democracy_index: "+0.01"
   democratic_leader:
     status: "DIVERGENCE"
-    description: "India becomes the global leader of democratic values and institutions"
+    description: "As American democracy wobbles and European democracy ages, India's 900-million-voter elections become the world's most impressive democratic exercise. New Delhi hosts the 'Democracy Summit' of 74 nations; Indian Supreme Court Chief Justice Priya Raghavan's jurisprudence on digital rights is cited in 40 countries. India proves that democracy scales to a billion people -- messy, loud, and irreplaceable."
     world_state_effects:
       global_democracy_index: "+0.05"
   hindu_state:
     status: "DIVERGENCE"
-    description: "India transforms into a Hindu nationalist state; secular democracy erodes"
+    description: "The Uniform Civil Code replaces Muslim personal law; Hindi is mandated as the sole official language; the Supreme Court is packed with sympathetic judges who uphold the 'Rashtra Dharma Act' defining India as constitutionally Hindu. Protests in Kerala and the Northeast are suppressed by paramilitary forces. 200 million Muslims become second-class citizens in the country their families have inhabited for 800 years."
     world_state_effects:
       global_democracy_index: "-0.03"
       conflict_deaths: "+5000"
   fragmented:
     status: "ESCALATED"
-    description: "Regional and religious tensions fragment India into competing states"
+    description: "Tamil Nadu declares independence after the central government imposes Hindi-medium education; Punjab follows within months; the Northeast erupts in simultaneous insurgencies. The Indian Army, stretched across 14 active fronts, cannot hold the union together. The world's largest democracy dissolves into 6 successor states, each with nuclear weapons inherited from the original arsenal."
     world_state_effects:
       global_democracy_index: "-0.05"
       conflict_deaths: "+20000"
   climate_victim:
     status: "ESCALATED"
-    description: "Climate impacts devastate India; heat waves, flooding, and agricultural failure cripple development"
+    description: "Wet-bulb temperatures exceed 35C across the Indo-Gangetic plain for 23 days in 2050, killing 180,000 people in a single heat event -- mostly outdoor laborers who had no choice but to work. The monsoon delivers 40% less rainfall; rice paddy yields in Punjab drop by half. Mumbai's chronic flooding renders 3 million homes uninhabitable. India's growth miracle drowns in its own rising waters."
     world_state_effects:
       food_security_index: "-0.10"
       conflict_deaths: "+10000"

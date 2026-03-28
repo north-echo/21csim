@@ -2,9 +2,11 @@ id: "2035_china_post_xi"
 year_month: "2035-06"
 title: "China Post-Xi Transition"
 description: >
-  The political trajectory of China after Xi Jinping's era. Whether power
-  transitions smoothly, reform opens up, or instability follows the end
-  of personalist rule.
+  Xi Jinping, now 82 and visibly frail, misses three consecutive Politburo
+  Standing Committee meetings; rumors of a stroke circulate on WeChat before
+  censors can suppress them; the price of the yuan swings 4% in a single
+  afternoon as traders try to guess who -- if anyone -- has been chosen
+  to inherit the most powerful authoritarian apparatus on Earth.
 domain: "geopolitical"
 confidence: "MEDIUM"
 variable: "china_post_xi_status"
@@ -27,41 +29,41 @@ conditional: null
 outcomes:
   hardliner_successor:
     status: "DIVERGENCE"
-    description: "Xi's chosen successor continues authoritarian consolidation"
-    explanation: "Power transfer to loyalist maintains trajectory of centralized control and assertive foreign policy"
+    description: "Vice Premier Chen Wenqing, Xi's former security chief, assumes the presidency and general secretaryship in a transition so seamless it appears choreographed years in advance; his first act is to purge 3 Politburo members suspected of reform sympathies; his second is to announce a 15% increase in military spending with explicit reference to 'completing national reunification'"
+    explanation: "Xi built a succession mechanism modeled on his own rise: a loyalist installed in key security and party positions years before the transition, with personal files on every potential rival; Chen's background in intelligence and internal security signals that the next era will prioritize control and nationalism over economic reform, doubling down on the model Xi created"
     world_state_effects:
       china_power_index: "+0.02"
       global_democracy_index: "-0.02"
   reform_faction:
     status: "DIVERGENCE"
-    description: "Reformist faction gains power; limited political and economic opening"
-    explanation: "Post-Xi power struggle won by pragmatists favoring market reform and diplomatic engagement"
+    description: "Former Guangdong governor Lin Huaqiu, backed by a coalition of coastal-province technocrats and private-sector allies, outmaneuvers the security faction in a 3-week power struggle; she signals reform intent by releasing 200 political prisoners, lifting the Great Firewall for academic institutions, and inviting Jack Ma back from retirement to advise on tech sector regulation"
+    explanation: "The reformists win because the economic crisis makes the status quo untenable: with growth below 2% and youth unemployment at 25%, the CCP's survival instinct overrides its ideological rigidity; Lin's faction argues that only market reform and diplomatic normalization can restore growth, and the military -- exhausted by posturing that produced no victories -- acquiesces"
     world_state_effects:
       china_power_index: "+0.05"
       global_democracy_index: "+0.02"
   collective_leadership:
     status: "DIVERGENCE"
-    description: "Return to collective leadership model; no single paramount leader"
-    explanation: "CCP reverts to post-Mao consensus governance; reduces risk of personalist errors"
+    description: "The Politburo Standing Committee announces a 'new era of collective leadership' with a rotating 2-year chairmanship among its 7 members; the immediate signal is deliberate: no cult of personality, no portraits, no 'Xi Jinping Thought' -- the party is reasserting institutional control after the excesses of one-man rule, consciously echoing Deng Xiaoping's corrections after Mao"
+    explanation: "The party elite's traumatic experience under Xi -- where a single leader's errors (zero-COVID, the property crackdown, diplomatic isolation) could not be corrected or challenged -- produces an institutional immune response; term limits are restored, the anti-corruption commission is placed under collective oversight, and the message is clear: 'The Party is bigger than any individual'"
     world_state_effects:
       china_power_index: "+0.03"
   instability:
     status: "ESCALATED"
-    description: "Power struggle creates political instability and economic disruption"
-    explanation: "No clear succession plan; factional infighting paralyzes governance"
+    description: "Three factions -- the security hawks, the coastal reformists, and the military -- deadlock for 6 months after Xi's incapacitation; Zhongnanhai leaks reveal fistfights at Standing Committee meetings; provincial governors begin acting autonomously; Shanghai's stock exchange loses 35% of its value; and Guangdong province's governor makes an unauthorized trade deal with Vietnam, prompting Beijing to deploy internal security forces to the provincial capital"
+    explanation: "Xi's concentration of all power in himself means there is no institutional mechanism for succession: every potential heir was deliberately weakened, every independent power center dismantled; when the center suddenly has no occupant, the system Xi built -- which was brilliantly designed for one-man rule -- proves catastrophically fragile without the one man"
     world_state_effects:
       china_power_index: "-0.10"
       global_gdp: "-0.02"
   xi_continues:
     status: "DIVERGENCE"
-    description: "Xi Jinping remains in power into the late 2030s"
-    explanation: "Health permits and no challenger emerges; Xi rules as paramount leader past 80"
+    description: "Xi Jinping appears at the October 2035 National Day parade looking thin but alert, personally reviewing 12,000 PLA troops from a modified standing platform; at 82, he has outlasted every foreign leader who predicted his demise, and his grip on the party shows no sign of loosening; foreign intelligence agencies privately assess he could rule until death, with no succession planned or desired"
+    explanation: "Xi has studied Mao, Deng, and Putin: the lesson is that stepping down is more dangerous than staying; every potential successor is a potential assassin, and retirement means vulnerability to prosecution for the many enemies created over two decades of purges; his health -- reportedly maintained by a team of 40 physicians -- becomes the single most consequential variable in global geopolitics"
     world_state_effects:
       china_power_index: "-0.02"
   democratic_opening:
     status: "DIVERGENCE"
-    description: "Significant democratic reforms begin in China"
-    explanation: "Economic pressures and new leadership create space for limited democratic experimentation"
+    description: "New general secretary Lin Huaqiu permits direct elections for village and county-level offices in 6 pilot provinces; independent candidates win 40% of contested seats in Zhejiang; investigative journalists are allowed to report on local corruption without prior censorship; and a 'Civic Dialogue Platform' on Weibo allows moderated public criticism of policy (though not the party itself)"
+    explanation: "The democratic opening is calculated, not principled: Lin needs popular legitimacy to govern without Xi's personal authority, and controlled elections at local levels provide a pressure valve for grievances without threatening central power; the model draws on Singapore and Taiwan's gradual democratization, and party theorists frame it as 'socialism with Chinese characteristics entering a new developmental stage'"
     world_state_effects:
       china_power_index: "+0.05"
       global_democracy_index: "+0.05"

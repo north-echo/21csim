@@ -2,9 +2,12 @@ id: "2078_last_great_war"
 year_month: "2078-01"
 title: "Last Great War"
 description: >
-  Whether a major conflict erupts in the latter 21st century. The most
-  dangerous potential flashpoint for great power war, with nuclear, cyber,
-  and autonomous weapons in play.
+  In 2077, a miscalibrated early-warning satellite over the Indian Ocean
+  triggered simultaneous nuclear alerts in three nations for 14 minutes.
+  Pakistani General Amir Raza later testified that his hand was on the launch
+  key when the system corrected itself. "Fourteen minutes," he told the
+  inquiry board. "That's how long it took for 200 million people to almost
+  die and never know they were in danger."
 domain: "security"
 confidence: "LOW"
 variable: "last_great_war_status"
@@ -22,42 +25,42 @@ conditional: null
 outcomes:
   no_war:
     status: "DIVERGENCE"
-    description: "No major great power conflict materializes; deterrence and diplomacy hold"
+    description: "The 'Long Peace' extends into its ninth decade. Nuclear arsenals have shrunk to 500 warheads globally; autonomous weapons are constrained by treaty; and the economic interdependence between the blocs makes war financially suicidal. Japanese peace researcher Dr. Sakura Mori attributes it to exhaustion: 'We didn't choose peace. We just ran out of reasons to fight that were worth the cost.'"
     world_state_effects:
       conflict_deaths: "+0"
       nuclear_risk_level: "-0.05"
       existential_risk_cumulative: "-0.05"
   limited_conflict:
     status: "ESCALATED"
-    description: "Brief but intense conventional conflict between major powers; quickly contained"
+    description: "The 'Nine-Day War' of 2078 between the Atlantic Union and the Shanghai Pact over orbital resource rights killed 48,000 military personnel, destroyed two space stations, and ended when both sides' AI military advisors simultaneously recommended ceasefire. The Treaty of Reykjavik was signed 72 hours later. Veterans of the war, which lasted barely longer than a vacation, struggle to explain it to their children."
     world_state_effects:
       conflict_deaths: "+50000"
       nuclear_risk_level: "+0.10"
       existential_risk_cumulative: "+0.05"
   nuclear_exchange:
     status: "ESCALATED"
-    description: "Limited nuclear exchange devastates multiple cities; global order shattered"
+    description: "Three warheads detonated: one over Taipei, one over Vladivostok, one intercepted 12 kilometers above the Sea of Japan. Taipei ceased to exist in 4.7 seconds; 2.8 million people died in the fireball. The 'Black Week' that followed saw the global economy contract 40% and 14 governments fall. Survivor Lin Wei-Chen, who was 8 years old and shielded by a concrete overpass, became the face of the aftermath; her radiation burns are visible in every photograph taken of her since."
     world_state_effects:
       conflict_deaths: "+5000000"
       nuclear_risk_level: "+0.40"
       existential_risk_cumulative: "+0.30"
   cyber_war:
     status: "ESCALATED"
-    description: "Major cyber war disrupts global infrastructure; physical casualties limited but economic devastation widespread"
+    description: "The 'Silent War' of 2078 lasted six months and was fought entirely in cyberspace. No bullets were fired, but power grids in 30 countries failed, $14 trillion in digital assets were erased, and 3 million people died from medical system failures, starvation, and cold. The attackers were never definitively identified; cybersecurity analyst Olamide Adesanya of Nigeria estimates at least four state actors were involved. 'It was the first war,' she wrote, 'where victory was indistinguishable from defeat.'"
     world_state_effects:
       conflict_deaths: "+10000"
       nuclear_risk_level: "+0.05"
       existential_risk_cumulative: "+0.08"
   proxy_conflict:
     status: "ESCALATED"
-    description: "Great powers fight through proxies and autonomous systems in developing regions"
+    description: "Central Africa, Central Asia, and the Pacific Islands serve as battlegrounds for great powers fighting through autonomous drone swarms and local militias. The 'Invisible Wars' generate no headlines in the capital cities that sponsor them; Congolese journalist Grace Mwamba's documentary 'Someone Else's War' -- showing AI-guided weapons striking a school in Goma -- was viewed 3 billion times and changed nothing."
     world_state_effects:
       conflict_deaths: "+100000"
       nuclear_risk_level: "+0.05"
       existential_risk_cumulative: "+0.03"
   cold_war:
     status: "DIVERGENCE"
-    description: "Sustained cold war between major blocs; tense but no direct military conflict"
+    description: "The 'Digital Iron Curtain' separates the world's two internet systems; citizens of the Shanghai Pact cannot access Atlantic Union networks and vice versa. Spy satellites photograph each other photographing each other in an orbital hall of mirrors. Both sides maintain 'doomsday' AI systems on hair-trigger alert. The tension is boring, constant, and punctuated by small crises that make the world hold its breath for a week before forgetting. It has been like this for 20 years."
     world_state_effects:
       conflict_deaths: "+0"
       nuclear_risk_level: "+0.15"

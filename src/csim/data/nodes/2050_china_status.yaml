@@ -2,9 +2,12 @@ id: "2050_china_status"
 year_month: "2050-01"
 title: "China at Mid-Century"
 description: >
-  China's trajectory at the half-century mark. Whether it has become the dominant
-  superpower, democratized, fragmented, or settled into a new equilibrium
-  defines the global power structure.
+  China at 50 years since Xi: population 1.28 billion and falling, median age 52,
+  GDP per capita still 60% of the US but total GDP roughly equal. The Bund in
+  Shanghai gleams with AI-designed skyscrapers; rural Gansu province still lacks
+  reliable broadband. The question that defined the early century -- 'will China
+  surpass America?' -- has given way to a more interesting one: 'what kind of
+  power has China become?'
 domain: "regional"
 confidence: "LOW"
 variable: "china_status"
@@ -22,36 +25,36 @@ conditional: null
 outcomes:
   superpower:
     status: "DIVERGENCE"
-    description: "China becomes the dominant global superpower surpassing the US economically and militarily"
+    description: "China's GDP reaches $48 trillion, 20% above the US; the PLAN operates 6 aircraft carriers and controls the South China Sea unchallenged; the digital yuan processes 60% of Asian trade. Beijing hosts the 2050 World Expo under the theme 'Harmony Through Strength' -- a phrase that makes Washington's strategic planners reach for antacids."
     world_state_effects:
       us_china_tension_index: "+0.08"
       us_global_standing: "-0.08"
   declined:
     status: "DIVERGENCE"
-    description: "Demographic decline and economic stagnation diminish China's global influence"
+    description: "China's working-age population has shrunk by 240 million since its peak; 400 million citizens are over 65 with a pension system designed for a younger country. Ghost cities dot the interior, their apartments empty and crumbling. GDP growth turns negative for the first time, and the Party's legitimacy -- always built on prosperity -- cracks audibly."
     world_state_effects:
       us_china_tension_index: "-0.05"
       us_global_standing: "+0.03"
   democratic:
     status: "DIVERGENCE"
-    description: "China transitions to democratic governance; US-China rivalry transforms into cooperation"
+    description: "Eight years after the first village elections, China holds its first national parliamentary election. Voter turnout: 82%. The new People's Congress includes factory workers, tech entrepreneurs, Tibetan monks, and a former Tiananmen student protester now 84 years old, who weeps at the podium. The US President calls it 'the most hopeful day of the century.'"
     world_state_effects:
       global_democracy_index: "+0.08"
       us_china_tension_index: "-0.10"
   techno_state:
     status: "DIVERGENCE"
-    description: "China perfects AI-driven techno-authoritarian governance model exported globally"
+    description: "China's 'Smart Nation 4.0' system governs 1.28 billion people through AI-optimized resource allocation, predictive policing, and algorithmic social management. Crime is nearly zero; economic efficiency is world-leading; artistic expression is pre-screened by algorithm. Twenty-four nations license the system; Beijing calls it 'governance beyond democracy.' Western commentators call it 'the Brave New World, manufactured in Shenzhen.'"
     world_state_effects:
       global_democracy_index: "-0.05"
       us_china_tension_index: "+0.05"
   fragmented:
     status: "ESCALATED"
-    description: "China fractures into competing regions; global instability follows"
+    description: "Guangdong, Shanghai, and Zhejiang form the 'Coastal Republic'; Sichuan and Yunnan declare a 'Southwestern Federation'; Tibet reasserts independence under Indian protection; Xinjiang fragments into competing factions. The PLA splits along regional lines, and 1.28 billion people wake up in a country that no longer has a single functioning government. Global supply chains, dependent on Chinese manufacturing, seize up overnight."
     world_state_effects:
       us_china_tension_index: "+0.10"
       conflict_deaths: "+30000"
   regional_power:
     status: "DIVERGENCE"
-    description: "China settles as a strong regional power without global hegemonic ambitions"
+    description: "Burdened by demographics and satisfied by regional dominance, China quietly abandons its bid for global hegemony. The PLAN patrols the Western Pacific but not the Atlantic; the Belt and Road Initiative is complete but no longer expanding. Premier Liu describes China's role as 'a civilization that leads by example, not by force' -- a doctrine that relieves the world and frustrates Chinese nationalists equally."
     world_state_effects:
       us_china_tension_index: "-0.03"

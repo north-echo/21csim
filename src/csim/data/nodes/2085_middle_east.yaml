@@ -2,9 +2,11 @@ id: "2085_middle_east"
 year_month: "2085-01"
 title: "Middle East 2085"
 description: >
-  The Middle East's trajectory deep into the post-oil era. Whether the region
-  has found a new identity, prosperity, and stability or remains troubled
-  by its historical legacies.
+  The last generation that remembers the oil era is dying. In Riyadh, a museum
+  dedicated to the petroleum age attracts schoolchildren who stare at crude oil
+  samples the way their ancestors once stared at dinosaur bones -- as relics of
+  an incomprehensible past. Curator Dr. Khalid al-Rashid tells them: "This black
+  liquid built your grandparents' world and nearly destroyed your own."
 domain: "geopolitics"
 confidence: "LOW"
 variable: "middle_east_status_2085"
@@ -22,25 +24,25 @@ conditional: null
 outcomes:
   transformed:
     status: "DIVERGENCE"
-    description: "Region completely transformed from its 2000s character; prosperous and stable"
+    description: "Dubai's vertical quantum computing district employs 300,000 engineers; Beirut has become the Mediterranean's cultural capital; and the Israeli-Palestinian Federation, improbably, works. GDP per capita across the region exceeds the global average for the first time in history. Saudi novelist Hanan al-Mutairi's 'The Second Nahda' -- comparing the transformation to the 19th-century Arab Renaissance -- won the Nobel Prize in Literature."
     world_state_effects: {}
   integrated:
     status: "DIVERGENCE"
-    description: "Middle Eastern nations integrated into broader economic and political blocs"
+    description: "Turkey is a full member of the European Federation; the Gulf states belong to the South Asian Alliance; and North Africa is part of the Nairobi Compact. The 'Middle East' as a geopolitical concept has dissolved, its nations absorbed into larger structures. Egyptian political scientist Dr. Mariam Fawzy notes with irony that 'the region that invented civilization was the first to stop being a region.'"
     world_state_effects: {}
   conflict:
     status: "ESCALATED"
-    description: "Ongoing low-level conflicts and instability persist despite decades of international engagement"
+    description: "The autonomous drone patrols over Aleppo have continued without interruption for 30 years. A generation of Syrian children has grown up under the sound of buzzing rotors the way previous generations grew up under artillery. Red Cross worker Jean-Baptiste Morel, who has served three tours in the region, calls it 'the war that forgot how to end -- not violent enough for the world to intervene, not peaceful enough for anyone to go home.'"
     world_state_effects: {}
   green_economy:
     status: "DIVERGENCE"
-    description: "Region leverages solar resources and geographic position to lead in green energy exports"
+    description: "The 'Solar Crescent' now generates 25% of global electricity; the undersea superconducting cables to Europe, India, and East Africa are the largest infrastructure project in history. Omani energy minister Dr. Said al-Busaidi controls more energy than OPEC ever did, but from photons instead of petroleum. His office overlooks a solar field so vast it's visible from orbit, a silver sea stretching to every horizon."
     world_state_effects: {}
   irrelevant:
     status: "DIVERGENCE"
-    description: "Region has lost geopolitical significance as energy sources diversified globally"
+    description: "No major power has maintained a military base in the Middle East since 2076. The region's population has declined by 30% as young people emigrate to the climate-stable north. Dubai's once-gleaming towers are half-occupied; the Burj Khalifa was converted into vertical housing for climate refugees from Bangladesh. A travel blogger's viral post -- 'The Middle East Is the World's Most Beautiful Ghost Town' -- was accurate enough to sting."
     world_state_effects: {}
   cultural_center:
     status: "DIVERGENCE"
-    description: "Region becomes a global cultural and intellectual center bridging East and West"
+    description: "The 'New Andalusia' -- as cultural historians call the region's renaissance -- has produced the century's most celebrated literary movement, three Nobel laureates in a decade, and the world's most-visited museum (the Mosul Institute of Human Heritage, built on the ruins of what ISIS destroyed 70 years earlier). Iraqi architect Zaha Hadid III designed the building as 'a wound that became a window.'"
     world_state_effects: {}

@@ -2,10 +2,12 @@ id: "2050_space_solar_power"
 year_month: "2050-06"
 title: "Space Solar Power"
 description: >
-  Orbital solar power stations beam energy to Earth via microwave or laser.
-  Unlimited clean energy from space could transform the global energy mix,
-  but requires massive orbital construction and wireless power transmission
-  at scale.
+  JAXA and ESA's joint 'SunBridge' prototype -- a 400-meter solar collector in
+  geosynchronous orbit -- transmits 1 megawatt of power via microwave beam to a
+  receiving antenna in the Mojave Desert. Project lead Dr. Hiroshi Watanabe watches
+  the rectenna light up from a control room in Tsukuba: "We just wirelessly
+  transmitted energy through 36,000 kilometers of vacuum. The sun never sets on
+  a solar panel in orbit."
 domain: "technology"
 confidence: "LOW"
 variable: "space_solar_power_status"
@@ -22,15 +24,15 @@ conditional: null
 outcomes:
   demonstration_success:
     status: "DIVERGENCE"
-    description: "First megawatt-scale space solar power station demonstrates viable beamed energy"
-    explanation: "Orbital platform successfully transmits solar energy to ground receiver; proof of concept achieved"
+    description: "SunBridge transmits 2.4 MW continuously for 90 days, proving the concept beyond doubt. Microwave beam precision hits 99.97% accuracy on a 3-km receiving antenna; local birds learn to avoid the warm zone. Dr. Watanabe receives the Nobel Prize in Physics; SoftBank and Saudi PIF announce a $180 billion joint venture to build the first gigawatt-scale orbital power station."
+    explanation: "The key breakthrough was a phased-array microwave transmitter that maintains beam coherence across 36,000 km, combined with launch costs low enough to make orbital construction economically conceivable."
     world_state_effects:
       space_development_index: "+0.08"
       renewable_energy_share: "+0.02"
   commercial_deployment:
     status: "DIVERGENCE"
-    description: "Multiple gigawatt-scale space solar power stations operational; significant energy contribution"
-    explanation: "Automated in-orbit construction and efficient microwave transmission make space solar competitive"
+    description: "Six orbital power stations deliver 18 GW to ground rectennas in the Sahara, Australian Outback, Gobi Desert, and west Texas -- enough to power 40 million homes with 24/7 baseload clean energy. Electricity costs from space solar drop to $0.03/kWh, competitive with terrestrial renewables but available regardless of weather or time of day. The energy scarcity era is ending."
+    explanation: "Autonomous robotic construction in orbit, enabled by space manufacturing advances, allows stations to self-assemble from modular components, cutting costs 90% compared to Earth-launched assembly."
     world_state_effects:
       space_development_index: "+0.15"
       renewable_energy_share: "+0.05"
@@ -39,21 +41,21 @@ outcomes:
       2065_climate_verdict.stabilized: "+0.03"
   technically_feasible:
     status: "DIVERGENCE"
-    description: "Technology works but deployment remains limited to pilot projects"
-    explanation: "Engineering challenges solved but scale-up costs keep space solar marginal vs terrestrial renewables"
+    description: "SunBridge works flawlessly but the business case does not close: a gigawatt-scale orbital station costs $140 billion to build versus $12 billion for equivalent terrestrial solar-plus-storage. Three pilot projects demonstrate the technology in Japan, Saudi Arabia, and Brazil, but investors cannot justify the 10x cost premium. Space solar remains technically brilliant and economically marginal."
+    explanation: "Terrestrial renewable costs continued their exponential decline while orbital construction costs plateaued, keeping space solar in the 'wonderful but unaffordable' category alongside supersonic air travel."
     world_state_effects:
       space_development_index: "+0.05"
       renewable_energy_share: "+0.01"
   too_expensive:
     status: "DIVERGENCE"
-    description: "Space solar power cannot compete with terrestrial renewables and storage"
-    explanation: "Ground-based solar, wind, and battery storage advance faster than orbital construction costs decline"
+    description: "Perovskite solar cells at $0.08/watt, iron-air batteries storing energy for $8/kWh, and continental-scale supergrids make terrestrial renewables so cheap that orbital power is like building a bridge when the river has already been filled in. Dr. Watanabe graciously concedes: 'We solved the wrong problem. Earth's sun was always enough; we just needed better ways to store it.'"
+    explanation: "The ground-based renewable revolution accelerated faster than anyone in the space solar community projected, with perovskite-silicon tandems hitting 47% efficiency and grid-scale storage costs dropping 95% in 20 years."
     world_state_effects:
       space_development_index: "+0.01"
   weaponization_concerns:
     status: "ESCALATED"
-    description: "Space solar power development halted by fears of directed-energy weapon potential"
-    explanation: "Military implications of orbital energy beams trigger arms control debates and moratoria"
+    description: "When a Pentagon analysis reveals that a 2-GW orbital power station could be retargeted as a microwave weapon capable of incapacitating an entire city, the UN Security Council passes Resolution 2847 imposing a moratorium on all space-based power transmission above 10 MW. China votes yes while secretly continuing its own program; the technology enters the same uneasy limbo as dual-use nuclear reactors."
+    explanation: "The physics of beamed power are identical to the physics of directed-energy weapons -- a fact that space solar advocates spent decades trying to downplay until a leaked military study made it impossible to ignore."
     world_state_effects:
       space_development_index: "+0.02"
       nuclear_risk_level: "+0.02"

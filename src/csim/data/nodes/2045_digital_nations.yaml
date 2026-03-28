@@ -2,9 +2,11 @@ id: "2045_digital_nations"
 year_month: "2045-01"
 title: "Digital Nations"
 description: >
-  The concept of digital-first nations and virtual communities challenges traditional
-  state sovereignty. Whether digital nations gain legal recognition reshapes the
-  nature of citizenship and governance.
+  Balaji Srinivasan's 'Network State' concept, once a fringe libertarian fantasy,
+  now has 14 million declared citizens across 190 physical countries. The largest,
+  'Prospera Global,' operates its own courts, currency, and diplomatic corps from
+  server farms in Iceland and Singapore. Estonia's e-residency program, the
+  granddaddy of them all, has more digital citizens than physical ones.
 domain: "technology"
 confidence: "MEDIUM"
 variable: "digital_nations_status"
@@ -21,28 +23,28 @@ conditional: null
 outcomes:
   emerge:
     status: "DIVERGENCE"
-    description: "Digital nations gain international recognition with virtual territory and citizenship"
+    description: "Prospera Global wins observer status at the UN General Assembly after purchasing a 12-km2 physical enclave in Montenegro. Its 8 million citizen-shareholders elect a president via blockchain vote, issue passports recognized by 23 nations, and run a healthcare system that outperforms most OECD countries through AI diagnostics."
     world_state_effects:
       global_democracy_index: "+0.03"
       governance_model: "+0.08"
   rejected:
     status: "DIVERGENCE"
-    description: "Traditional states reject digital nation concept; physical sovereignty reinforced"
+    description: "France leads a coalition of 90 nations passing the 'Westphalian Reaffirmation' at the UN, declaring sovereignty requires physical territory and 'a people rooted in place.' Digital nation leaders are arrested for tax evasion in six countries simultaneously; Prospera Global's server farms in Singapore are seized by the government at dawn."
     world_state_effects:
       governance_model: "-0.02"
   corporate_states:
     status: "DIVERGENCE"
-    description: "Tech corporations effectively become quasi-states with citizens and services"
+    description: "Apple issues its own currency (AppleCoin), Google provides universal healthcare to 'Alphabet Citizens,' and Amazon's Prime membership includes legal arbitration, insurance, and education. A Brookings study finds that 340 million people worldwide receive more government-like services from tech corporations than from their actual countries of residence."
     world_state_effects:
       inequality_index: "+0.05"
       governance_model: "+0.05"
   virtual_communities:
     status: "DIVERGENCE"
-    description: "Virtual communities flourish without formal statehood; cultural impact significant"
+    description: "Virtual communities of 50,000 to 5 million members organize around shared values -- vegan futurists, open-source engineers, neo-Stoic philosophers -- creating their own holidays, rituals, and mutual aid networks. They don't seek statehood; they simply make the nation-state feel irrelevant to daily life for 200 million people who 'live online and sleep somewhere physical.'"
     world_state_effects:
       governance_model: "+0.03"
   regulatory_limbo:
     status: "DIVERGENCE"
-    description: "Digital nations exist in regulatory gray zone; neither recognized nor prohibited"
+    description: "Governments cannot decide whether digital nations are corporations, clubs, or sovereign entities, so they regulate none of them. Prospera Global's citizens pay taxes to both their digital and physical nations, carry two passports, and exploit legal arbitrage between jurisdictions -- a state of affairs that benefits lawyers more than anyone else."
     world_state_effects:
       governance_model: "+0.01"

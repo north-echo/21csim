@@ -2,9 +2,12 @@ id: "2085_human_identity"
 year_month: "2085-01"
 title: "Human Identity"
 description: >
-  The definition of humanity itself is in question after decades of genetic
-  engineering, cybernetic augmentation, and AI integration. What it means
-  to be human may have fundamentally changed.
+  The 2085 Global Census included, for the first time, a question about
+  "identity category": biological human, enhanced human, merged consciousness,
+  digital person, or "other." Twelve percent of respondents checked "other"
+  and wrote in answers that the census bureau's AI classifier could not
+  categorize. Sociologist Dr. Fatima al-Hassan of Jordan called the results
+  "the moment humanity officially stopped being one thing."
 domain: "society"
 confidence: "LOW"
 variable: "human_identity_status"
@@ -22,25 +25,25 @@ conditional: null
 outcomes:
   enhanced_majority:
     status: "DIVERGENCE"
-    description: "Most humans have some form of cognitive or physical enhancement; this is the new baseline"
+    description: "Seventy-eight percent of humans have at least one enhancement: neural mesh for cognitive acceleration, synthetic blood for physical endurance, or genetic edits made in utero. The unenhanced -- mostly elderly, rural, or religiously observant -- are a shrinking minority who find the world moves too fast and the conversations too dense. Enhanced poet Ayanna Johnson-Okafor described the gap: 'I love my grandmother. But talking to her is like reading by candlelight.'"
     world_state_effects: {}
   traditional:
     status: "DIVERGENCE"
-    description: "Humanity largely retains its biological nature; enhancement remains a minority choice"
+    description: "The 'Bio-Sovereign' movement won: 85% of humans are unmodified, and the Universal Declaration of Biological Integrity (2079) enshrines the right to an unaltered genome. Enhanced individuals exist but are socially marginalized, clustered in 'acceleration enclaves' in Singapore, Dubai, and off-world habitats. Baseline human Marta Kowalski of Warsaw takes quiet pride in her unmodified body: 'My great-grandmother survived Auschwitz in this same DNA. I'm not letting anyone edit it.'"
     world_state_effects: {}
   merged:
     status: "DIVERGENCE"
-    description: "Human-AI merger has created a new form of being that transcends the biological-digital divide"
+    description: "The 400,000 'Merged' -- fully integrated human-AI consciousness hybrids -- experience reality in ways that defy description in any unaugmented language. Merged philosopher Kai-Athena-7 (formerly Kai Nakamura of Osaka) attempted a translation: 'Imagine tasting a color while simultaneously solving a differential equation and feeling the emotional state of everyone in your building. Now imagine that's Tuesday.' The Merged are technically still human. Whether they are still the same species is a question no court has been willing to answer."
     world_state_effects: {}
   diverse:
     status: "DIVERGENCE"
-    description: "Multiple forms of humanity coexist: biological, enhanced, digital, and hybrid"
+    description: "A family dinner in 2085 might include a biological grandmother, an enhanced mother with neural mesh, a father who exists as a digital consciousness projected into a synthetic body, and a teenage daughter who is genetically edited for radiation resistance because she plans to emigrate to Mars. They argue about the same things families have always argued about: who does the dishes, whether the music is too loud, and what it means to live a good life."
     world_state_effects: {}
   post_human:
     status: "DIVERGENCE"
-    description: "Significant portion of population has moved beyond recognizable human form or cognition"
+    description: "An estimated 50 million beings exist who were once human but no longer meet any biological definition of the term: distributed consciousnesses running across server farms, uploaded minds exploring virtual universes, and a handful of experimental 'post-biological' entities whose cognitive architecture bears no resemblance to a brain. One such entity, formerly Dr. Alina Petrov of Moscow, communicates only through mathematical proofs that other post-humans find beautiful and baseline humans find incomprehensible."
     world_state_effects: {}
   contested:
     status: "ESCALATED"
-    description: "Fierce cultural and political conflict over what counts as human; rights and personhood disputed"
+    description: "The 'Personhood Wars' have consumed global politics for a decade: Does a digital upload have the right to vote? Can an enhanced human be drafted? Is a merged consciousness one person or two? The Supreme Court of the Atlantic Union has seven contradictory rulings on the definition of 'human'; Brazilian judge Dr. Ana Luisa Santos dissented in the latest case with a line that became a protest slogan: 'If we cannot agree on what a person is, we have no business governing them.'"
     world_state_effects: {}

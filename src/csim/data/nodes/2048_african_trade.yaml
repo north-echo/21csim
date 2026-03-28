@@ -2,9 +2,11 @@ id: "2048_african_trade"
 year_month: "2048-01"
 title: "African Trade Integration"
 description: >
-  The African Continental Free Trade Area matures into a major economic bloc or
-  fragments under internal pressures. Africa's trade trajectory determines whether
-  the continent becomes a major economic power.
+  The AfCFTA secretariat in Accra processes $1.8 trillion in intra-African trade
+  annually, up from $68 billion in 2020. The Lagos-Nairobi bullet train carries
+  12 million passengers per year; Rwandan coffee reaches Cape Town markets in 48
+  hours instead of six weeks. But 14 border disputes remain unresolved and Nigeria's
+  customs agency still demands bribes at the Seme crossing.
 domain: "economic"
 confidence: "MEDIUM"
 variable: "african_trade_status"
@@ -21,30 +23,30 @@ conditional: null
 outcomes:
   continental_market:
     status: "DIVERGENCE"
-    description: "Unified African market becomes third largest economic bloc globally"
+    description: "The African single market, with 1.8 billion consumers and $6.4 trillion combined GDP, surpasses the EU as the world's third-largest economic bloc. Kenyan fintech company M-Pesa Global handles 60% of continental transactions; Ethiopian Airlines connects 94 African cities daily. AfCFTA Commissioner Ngozi Adichie-Okonkwo rings the bell at the new Pan-African Stock Exchange in Kigali."
     world_state_effects:
       global_democracy_index: "+0.02"
       inequality_index: "-0.03"
   fragmented:
     status: "DIVERGENCE"
-    description: "Trade integration stalls; Africa remains collection of small disconnected markets"
+    description: "Nigeria and South Africa, the continent's two largest economies, refuse to lower tariffs on each other's manufactured goods. The East African Community imposes visa restrictions on West African workers; the Sahel nations are too unstable to participate. A truck driver crossing from Cameroon to Nigeria still waits 9 days at the border, and the dream of a unified market remains exactly that."
     world_state_effects:
       inequality_index: "+0.02"
   china_dominated:
     status: "DIVERGENCE"
-    description: "Chinese investment dominates African trade infrastructure creating dependency"
+    description: "China owns or operates 34 African ports, 22,000 km of rail, and the continent's dominant mobile payment platform. When Zambia defaults on $14 billion in Chinese loans, Beijing seizes the Copperbelt's mining concessions. Tanzanian journalist Amina Mwangi's investigation 'The Dragon's Embrace' reveals that 73% of AfCFTA's infrastructure was built by Chinese state firms on Chinese terms."
     world_state_effects:
       us_china_tension_index: "+0.03"
       inequality_index: "+0.01"
   independent_growth:
     status: "DIVERGENCE"
-    description: "African nations develop independent industrial capacity and South-South trade"
+    description: "Nigeria's Dangote Group becomes Africa's first $100 billion manufacturer, producing steel, cement, and refined petroleum for continental consumption. Rwanda's drone delivery network, built entirely by East African engineers, becomes a model for rural logistics worldwide. Intra-African trade exceeds trade with any external partner for the first time; 'Made in Africa, for Africa' is not a slogan but a supply chain."
     world_state_effects:
       global_democracy_index: "+0.03"
       inequality_index: "-0.04"
   climate_disrupted:
     status: "ESCALATED"
-    description: "Climate impacts severely disrupt African economic development and trade"
+    description: "A 3-year drought across the Sahel and Horn of Africa destroys 40% of agricultural output; flooding in Mozambique and Nigeria wipes out $180 billion in infrastructure. The Lagos-Nairobi rail line is severed by landslides in three places. Trade volumes crash 35% as supply chains built for a stable climate encounter one that no longer cooperates."
     world_state_effects:
       food_security_index: "-0.08"
       conflict_deaths: "+15000"

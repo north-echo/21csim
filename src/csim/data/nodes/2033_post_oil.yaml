@@ -2,9 +2,10 @@ id: "2033_post_oil"
 year_month: "2033-06"
 title: "Post-Oil Economy Transition"
 description: >
-  The global transition away from oil dependence. How petrostate economies
-  adapt, whether new energy sources replace oil revenue, and whether the
-  transition is orderly or chaotic.
+  OPEC convenes an emergency summit in Riyadh after global oil demand falls
+  below 80 million barrels/day for the first time since 2005. Saudi Aramco's
+  IPO-era valuation of $2 trillion has shrunk to $600 billion. The delegates'
+  hotel, the Ritz-Carlton, is the same one where MBS once imprisoned his rivals.
 domain: "geopolitical"
 confidence: "MEDIUM"
 variable: "post_oil_status"
@@ -35,43 +36,43 @@ conditional: null
 outcomes:
   saudi_succeeds:
     status: "DIVERGENCE"
-    description: "Saudi Arabia successfully diversifies economy beyond oil"
-    explanation: "Vision 2030 and beyond delivers; tourism, tech, and sovereign wealth fund sustain prosperity"
+    description: "NEOM's first phase opens with 400,000 residents; the Saudi Public Investment Fund's $2.4 trillion portfolio generates more revenue than oil exports; Riyadh overtakes Dubai as the Middle East's tech hub, hosting regional headquarters for Google, SAP, and 14 Chinese AI companies"
+    explanation: "MBS's gamble pays off: the $800 billion invested since 2016 in tourism (the Red Sea project hosts 8 million visitors/year), entertainment, and technology creates a post-oil economy before the oil runs out of buyers; the PIF's global investments -- from Lucid Motors to Nintendo -- generate returns that replace crude revenues"
     world_state_effects:
       global_gdp: "+0.01"
       conflict_deaths: "-1000"
   petrostate_collapse:
     status: "ESCALATED"
-    description: "Multiple petrostates face economic collapse as oil demand craters"
-    explanation: "Nigeria, Venezuela, Iraq, and others unable to transition; state failures follow"
+    description: "Nigeria's federal government defaults on $48 billion in sovereign debt; Iraq's Basra province descends into militia warfare over dwindling oil revenue; Angola's ruling party falls in a coup led by army officers whose salaries went unpaid for 4 months; the IMF simultaneously manages 6 petrostate bailouts"
+    explanation: "The common thread is oil revenues that funded everything -- military, civil service, subsidies, patronage networks -- disappearing faster than any alternative revenue base could grow; states built entirely on resource extraction have no administrative capacity to collect taxes, regulate markets, or provide services without petrodollars"
     world_state_effects:
       conflict_deaths: "+30000"
       global_gdp: "-0.01"
   gradual_managed:
     status: "DIVERGENCE"
-    description: "Oil demand declines gradually; most producers adapt over decades"
-    explanation: "Slow enough transition allows adjustment; oil remains relevant but declining"
+    description: "Oil demand falls 2-3% annually rather than the feared cliff; petrochemicals, aviation fuel, and shipping keep Brent above $55/barrel; Saudi Arabia, the UAE, and Norway adjust budgets methodically while smaller producers have 15-20 years to diversify rather than 5"
+    explanation: "The electrification of transport proves slower than optimists predicted -- global EV share reaches only 45% by 2033 -- and petrochemical demand actually grows as developing nations industrialize; the gradual slope gives petrostates a fighting chance at diversification, though the long-term direction is unmistakable"
     world_state_effects:
       climate_temp_anomaly: "+0.03"
       global_gdp: "+0.00"
   oil_renaissance:
     status: "DIVERGENCE"
-    description: "Oil demand rebounds; petrochemicals and aviation maintain strong demand"
-    explanation: "Hard-to-electrify sectors keep oil relevant longer than expected"
+    description: "Global oil demand climbs back to 95 million barrels/day as India's industrial boom, Africa's urbanization, and stubborn aviation and shipping demand overwhelm EV displacement; ExxonMobil's stock triples from its 2030 low, and the 'peak oil demand' narrative is quietly retired from conference agendas"
+    explanation: "The math of 3 billion people in South and Southeast Asia entering the consumer class for the first time defeats the math of rich-world electrification: India alone adds 40 million vehicles annually, most of them ICE; petrochemical demand for plastics, fertilizers, and synthetic materials grows 4% per year, and synthetic aviation fuel proves too expensive to scale"
     world_state_effects:
       climate_temp_anomaly: "+0.08"
       renewable_energy_share: "-0.03"
   regional_conflict:
     status: "ESCALATED"
-    description: "Oil decline triggers resource conflicts in Middle East and Africa"
-    explanation: "Shrinking oil revenues destabilize regimes; proxy wars and civil conflicts escalate"
+    description: "Libya fractures into three warring territories as oil-funded patronage networks collapse; a border war erupts between Sudan and South Sudan over the Heglig oil fields; Iran-backed militias seize Basra's port facilities to control Iraq's remaining export terminal; 42,000 people die in oil-related conflicts in a single year"
+    explanation: "Oil's decline doesn't bring peace -- it brings the opposite: when the pie shrinks, the fight over remaining slices turns violent; regimes that maintained stability through oil-funded bribes and subsidies lose their primary tool of social control, and the resulting power vacuums are filled by armed groups competing for whatever revenue streams remain"
     world_state_effects:
       conflict_deaths: "+40000"
       global_gdp: "-0.02"
   green_hydrogen:
     status: "DIVERGENCE"
-    description: "Green hydrogen economy replaces oil; some producers pivot successfully"
-    explanation: "Solar-rich nations become green hydrogen exporters; new energy geography emerges"
+    description: "Morocco, Chile, and Australia become the 'new Gulf States' -- exporting green hydrogen produced from abundant solar and wind; Oman converts 3 oil terminals to hydrogen export facilities; a pipeline from the Sahara to Southern Europe carries hydrogen that powers German steel mills and Dutch chemical plants"
+    explanation: "Green hydrogen at $1.50/kg finally undercuts natural gas for industrial heat, and the new energy geography rewards countries with sun and wind rather than underground hydrocarbons; Saudi Arabia hedges by building the world's largest green hydrogen plant at NEOM, using its desert advantage to remain an energy exporter even as oil fades"
     world_state_effects:
       climate_temp_anomaly: "-0.05"
       renewable_energy_share: "+0.08"

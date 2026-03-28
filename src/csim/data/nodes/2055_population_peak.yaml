@@ -2,9 +2,12 @@ id: "2055_population_peak"
 year_month: "2055-01"
 title: "Population Peak"
 description: >
-  Global population growth trajectory reaches a turning point. Whether the world
-  peaks at 9 billion or lower, and how fast decline occurs, shapes resource
-  demands and economic models for the rest of the century.
+  The UN Population Division releases its decennial revision from a conference
+  room in New York that smells of stale coffee and historical consequence.
+  Demographer Dr. Maria Santos-Oliveira has spent five years reconciling birth
+  registries from 195 countries. Her headline number -- the moment when more
+  humans die than are born for the first time in 70,000 years of population
+  growth -- will rewrite every economic model on Earth.
 domain: "economic"
 confidence: "LOW"
 variable: "population_peak_status"
@@ -21,26 +24,26 @@ conditional: null
 outcomes:
   peaked_9b:
     status: "DIVERGENCE"
-    description: "Global population peaks near 9 billion and begins gradual decline"
+    description: "Dr. Santos-Oliveira's report confirms peak population of 9.04 billion in 2053, now declining at 0.2% per year. Sub-Saharan Africa is the last region with above-replacement fertility. Japan's population has fallen to 98 million; South Korea's to 42 million. The global median age is 38 and rising. 'Humanity is getting older, wiser, and smaller,' she tells the press. 'We should plan accordingly.'"
     world_state_effects:
       global_population_billions: "+0.50"
   peaked_8_5b:
     status: "DIVERGENCE"
-    description: "Faster fertility decline causes population to peak at 8.5 billion"
+    description: "Population peaked at 8.48 billion in 2049 -- five years earlier and 500 million lower than anyone predicted. The cause: AI-enabled education and smartphone access drove fertility collapse in Africa and South Asia a generation ahead of schedule. A Nigerian woman born in 2025 has 1.8 children on average, down from 5.4 for her grandmother. Dr. Santos-Oliveira calls it 'the fastest demographic transition in human history.'"
     world_state_effects:
       global_population_billions: "+0.10"
   still_growing:
     status: "DIVERGENCE"
-    description: "Population continues growing past 9 billion with no peak in sight"
+    description: "At 9.6 billion and climbing, the population peak remains a mirage. Niger's fertility rate is 5.1; DRC's is 4.8; Nigeria's population alone reaches 440 million. Climate-driven food insecurity and water scarcity collide with the largest generation of young people in history. Dr. Santos-Oliveira's warning is blunt: 'We are adding a billion people per decade to a planet that is already failing to feed the ones it has.'"
     world_state_effects:
       global_population_billions: "+1.00"
   declining_fast:
     status: "DIVERGENCE"
-    description: "Population already declining rapidly; workforce shortages emerge globally"
+    description: "Population peaked at 8.3 billion in 2046 and is now falling at 0.8% per year -- four times faster than any demographer predicted. South Korea has 38 million people and a median age of 58; Italy closes 30% of its primary schools for lack of children. Workforce shortages cripple elder care, agriculture, and construction across the developed world. 'We solved overpopulation,' says Dr. Santos-Oliveira dryly, 'and created underpopulation.'"
     world_state_effects:
       global_population_billions: "-0.30"
   pandemic_reduced:
     status: "ESCALATED"
-    description: "Pandemic or health crisis significantly reduces global population below projections"
+    description: "A synthetic pathogen released accidentally from a gain-of-function lab in 2051 kills 380 million people in 18 months before a universal vaccine is deployed. Global population drops to 8.1 billion -- a figure not seen since 2024. The demographic shock collapses pension systems, empties cities, and creates a generation of orphans. Fertility rates, already low, crash further as survivors lose the will to bring children into a world that just demonstrated how fragile it is."
     world_state_effects:
       global_population_billions: "-0.50"

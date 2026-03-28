@@ -2,9 +2,12 @@ id: "2065_china"
 year_month: "2065-01"
 title: "China 2065"
 description: >
-  China's trajectory after decades of demographic decline, technological
-  competition, and evolving governance. Whether the CCP adapts, transforms,
-  or is replaced.
+  China's population fell below 1 billion in 2063 for the first time since 1980.
+  Entire prefectures in Heilongjiang and Gansu have been officially "returned to
+  nature," their empty apartment blocks visible from space like geometric fossils.
+  Premier-General Zhang Weiming's annual address acknowledged the crisis with a
+  phrase that trended globally: "We built cities for our grandchildren, and our
+  grandchildren never came."
 domain: "geopolitics"
 confidence: "LOW"
 variable: "china_status_2065"
@@ -22,25 +25,25 @@ conditional: null
 outcomes:
   superpower:
     status: "DIVERGENCE"
-    description: "China achieves undisputed superpower status with global economic and military dominance"
+    description: "The Shanghai Cooperative Authority administers the world's largest economic zone; Premier-General Liu Wei's 'harmonious development' model has lifted 400 million above the new poverty line while maintaining single-party control through ubiquitous AI monitoring. Chinese is now the mandatory second language in 62 countries."
     world_state_effects: {}
   democratic:
     status: "DIVERGENCE"
-    description: "China undergoes democratic transition; CCP rule ends through reform or revolution"
+    description: "The 'Chengdu Spring' of 2061 began when 20 million people simultaneously disabled their social credit monitors. Reformist Premier Li Jiayi, a former Tsinghua physicist, negotiated the CCP's dissolution in exchange for amnesty; China's first free election in 2063 produced a coalition government and the world's largest voter turnout: 780 million."
     world_state_effects: {}
   fragmented:
     status: "ESCALATED"
-    description: "Regional tensions and economic stress lead to effective fragmentation of Chinese state"
+    description: "Guangdong declared economic autonomy in 2062 after Beijing diverted its tax revenue to prop up collapsing northeastern provinces. Within two years, Sichuan, Yunnan, and Shanghai followed. The 'Five Chinas' maintain a shared military but operate independent currencies; crossing from Cantonese-speaking Guangdong to Mandarin-speaking Hebei now requires a passport."
     world_state_effects: {}
   techno_empire:
     status: "DIVERGENCE"
-    description: "China becomes a technology-driven authoritarian superstate with pervasive surveillance"
+    description: "The 'Jade Net' -- China's AI governance system -- monitors every transaction, conversation, and biometric reading for 950 million citizens in real-time. Dissident author Xu Lianke, writing from exile in Toronto, described it as 'a country where the walls have ears, the streets have eyes, and the air itself keeps score.' GDP growth is 7% annually; protests are statistically zero."
     world_state_effects: {}
   declined:
     status: "DIVERGENCE"
-    description: "Demographic collapse and economic stagnation reduce China to middle-power status"
+    description: "With a median age of 58 and a workforce that shrank by 300 million in two decades, China's economy contracted for the 11th consecutive year in 2064. The once-gleaming Pudong skyline is dotted with dark towers; real estate blogger Wang Xiaomei's viral series 'Ghost Cities of the East' documented 34 million unoccupied apartments across 200 cities."
     world_state_effects: {}
   regional_hegemon:
     status: "DIVERGENCE"
-    description: "China dominates East Asia but lacks global reach; settles into regional power role"
+    description: "China's 'Near Seas Doctrine' formalized what pragmatists had long advocated: absolute dominance from the Kuril Islands to the Strait of Malacca, benign neglect everywhere else. Admiral Zhao Minghua's Pacific Fleet is the world's largest, but Chinese diplomats no longer attend G-20 summits, and Beijing's last African embassy closed in 2063."
     world_state_effects: {}

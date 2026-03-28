@@ -2,10 +2,12 @@ id: "2038_genetic_enhancement"
 year_month: "2038-03"
 title: "Human Genetic Enhancement Debate"
 description: >
-  Polygenic screening and embryo selection at scale become technically
-  feasible. Parents can select embryos for intelligence, height, disease
-  resistance, and other traits. The line between therapy and enhancement
-  blurs, raising profound questions about equality and human nature.
+  Genomic Prediction, Inc. -- now the world's largest IVF genetics company --
+  offers parents a menu: screen 30 embryos and select for the one with the
+  highest predicted IQ, lowest disease risk, and optimal height. The service
+  costs $24,000. In the first year, 180,000 couples use it. A Beijing
+  geneticist quietly publishes a paper showing that Chinese military
+  academies now require polygenic screening of all candidates.
 domain: "health"
 confidence: "LOW"
 variable: "genetic_enhancement"
@@ -22,27 +24,27 @@ conditional: null
 outcomes:
   limited_disease_screening:
     status: "DIVERGENCE"
-    description: "Polygenic screening limited to serious genetic diseases; enhancement taboo holds"
+    description: "Polygenic screening is universally available for Huntington's, BRCA1/2, sickle cell, and 340 other monogenic diseases, but every attempt to market IQ or appearance selection is met with social opprobrium, medical board sanctions, and in 28 countries, criminal prosecution; the American College of Medical Genetics issues guidelines that 'the purpose of screening is to prevent suffering, not to design children'"
     world_state_effects:
       inequality_index: "+0.01"
       human_augmentation_prevalence: "+0.02"
   widespread_trait_selection:
     status: "DIVERGENCE"
-    description: "Embryo selection for cognitive and physical traits becomes common in wealthy nations"
+    description: "In Singapore, South Korea, and Israel, 40% of IVF cycles now include polygenic trait selection; the first cohort of 'selected' children enters kindergarten in Seoul, and teachers report they are measurably taller and score higher on cognitive assessments; a Stanford bioethicist calculates that within 2 generations, the children of the wealthy will have an average IQ 15 points higher than those of the unscreened population"
     world_state_effects:
       inequality_index: "+0.06"
       human_augmentation_prevalence: "+0.08"
       us_life_expectancy_delta: "+0.5"
   international_ban:
     status: "DIVERGENCE"
-    description: "International treaty bans non-medical embryo selection; enforcement varies"
+    description: "The 'Oviedo Protocol on Human Genetic Integrity,' signed by 92 nations at the Council of Europe, bans embryo selection for non-medical traits and mandates 10-year prison sentences for violators; enforcement is strict in the EU and Japan but nonexistent in Singapore, the UAE, and several Caribbean nations that market themselves as 'reproductive freedom' destinations"
     world_state_effects:
       inequality_index: "-0.01"
       human_augmentation_prevalence: "+0.01"
       global_democracy_index: "+0.01"
   enhancement_arms_race:
     status: "ESCALATED"
-    description: "Nations compete to produce enhanced populations; genetic class divide emerges"
+    description: "China mandates polygenic screening for all government employees and military personnel; Singapore subsidizes trait selection for citizens; a leaked Israeli defense memo discusses 'cognitive advantage programs'; the first generation of genetically selected children -- healthier, taller, with higher tested cognitive ability -- begins to outcompete unselected peers in every measurable domain, creating a biological caste system that no amount of education can bridge"
     world_state_effects:
       inequality_index: "+0.10"
       human_augmentation_prevalence: "+0.12"
@@ -50,7 +52,7 @@ outcomes:
       global_democracy_index: "-0.03"
   equity_framework:
     status: "DIVERGENCE"
-    description: "Public funding makes genetic screening universally available; reduces genetic disease"
+    description: "The NHS offers free polygenic screening and embryo selection to all UK IVF patients, including selection against the top 50 disease-risk polygenic scores; Denmark and the Netherlands follow; the WHO estimates that universal access could eliminate 60% of genetic disease burden within 3 generations; crucially, by making the technology free, governments prevent it from becoming a privilege of the wealthy"
     world_state_effects:
       inequality_index: "-0.02"
       human_augmentation_prevalence: "+0.05"

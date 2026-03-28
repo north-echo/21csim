@@ -2,9 +2,10 @@ id: "2030_japan_population"
 year_month: "2030-06"
 title: "Japan Population Crisis"
 description: >
-  Japan confronts accelerating population decline and aging. How it adapts
-  through technology, immigration, or social restructuring sets a template
-  for other aging societies.
+  Japan's population falls below 120 million for the first time since the 1980s;
+  the village of Nagoro in Tokushima prefecture, famous for its scarecrow residents
+  outnumbering humans, becomes an ironic symbol of the nation's demographic spiral.
+  Prime Minister Ishida convenes an emergency "Future Japan" summit in Osaka.
 domain: "demographics"
 confidence: "MEDIUM"
 variable: "japan_population_status"
@@ -21,32 +22,32 @@ conditional: null
 outcomes:
   robot_care_economy:
     status: "DIVERGENCE"
-    description: "Japan deploys robots and AI extensively in eldercare and services"
-    explanation: "Robotics and automation compensate for shrinking workforce; Japan becomes model for aging societies"
+    description: "SoftBank's 'Kazoku' humanoid caregivers deployed in 14,000 nursing homes across Japan; Toyota's eldercare division surpasses its automotive revenue for the first time"
+    explanation: "Japan's $80 billion annual investment in care robotics since 2027 pays off; 68% of routine eldercare tasks automated, and South Korea, Germany, and Italy begin licensing the model"
     world_state_effects:
       automation_displacement: "+0.05"
       global_gdp: "+0.01"
   immigration_opening:
     status: "DIVERGENCE"
-    description: "Japan significantly relaxes immigration policy to address labor shortages"
-    explanation: "Economic necessity overcomes cultural resistance; Japan accepts millions of immigrants"
+    description: "Diet passes the landmark 'New Japanese Residency Act,' granting 5-year work visas to 2.4 million Filipino, Vietnamese, and Indonesian workers; Shinjuku's Little Manila district becomes Tokyo's fastest-growing neighborhood"
+    explanation: "After Keidanren warns that 1.8 million jobs will go unfilled by 2032, business lobby overwhelms nativist opposition; PM Ishida frames it as 'enriching Japanese civilization, not diluting it'"
     world_state_effects:
       global_gdp: "+0.01"
   managed_decline:
     status: "DIVERGENCE"
-    description: "Japan accepts gradual population decline and restructures institutions accordingly"
-    explanation: "Government focuses on quality of life over growth; pension and healthcare systems reformed"
+    description: "PM Ishida's 'Graceful Contraction' white paper redefines GDP-per-capita as Japan's primary metric; 340 rural municipalities formally merge into regional cooperatives, closing 2,100 schools but tripling per-student spending in the remainder"
+    explanation: "Japan becomes the first major economy to explicitly plan for a smaller population; pension eligibility raised to 70, healthcare rationing introduced through 'quality-adjusted life years' scoring, and the yen strengthens as per-capita wealth rises"
     world_state_effects:
       global_gdp: "-0.01"
   crisis_unmanaged:
     status: "ESCALATED"
-    description: "Japan fails to adapt; economic stagnation and social services collapse"
-    explanation: "Political paralysis prevents reform; healthcare and pension systems overwhelmed"
+    description: "Three prime ministers in 18 months as the LDP splinters over pension reform; Hokkaido's last regional hospital closes in December, forcing patients to fly to Sapporo for emergency care"
+    explanation: "Factional warfare inside the LDP paralyzes the Diet; the pension trust fund draws down reserves at 3x projected rates, and Standard & Poor's downgrades Japanese sovereign debt to A- for the first time"
     world_state_effects:
       global_gdp: "-0.02"
   pronatalist_success:
     status: "DIVERGENCE"
-    description: "Aggressive pronatalist policies partially reverse fertility decline"
-    explanation: "Massive childcare subsidies, work reform, and social support raise fertility toward replacement"
+    description: "Japan's fertility rate ticks up to 1.58 after the 'Kodomo First' program provides $3,200/month per child and guarantees free childcare from birth; the city of Nagareyama, northeast of Tokyo, sees its under-5 population triple in three years"
+    explanation: "Total annual spending reaches $140 billion -- more than Japan's defense budget -- with companies required to offer 6 months' paid parental leave for both parents; demographers caution the uptick may be a tempo effect rather than a true reversal"
     world_state_effects:
       global_gdp: "+0.01"

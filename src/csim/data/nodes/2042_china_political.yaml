@@ -2,9 +2,11 @@ id: "2042_china_political"
 year_month: "2042-01"
 title: "China Political Trajectory"
 description: >
-  China's political system evolves in the post-Xi era. Whether the country
-  liberalizes, doubles down on authoritarianism, or fragments determines the
-  shape of 21st century geopolitics.
+  Seven years after Xi Jinping's death, the Standing Committee's third chairman in
+  five years faces youth unemployment at 34% and a property market that has shed
+  $18 trillion in value. Weibo censors cannot suppress the viral hashtag
+  'WhoGovernsForWhom' fast enough, and provincial Party secretaries in Guangdong
+  and Zhejiang begin making separate trade deals with ASEAN.
 domain: "regional"
 confidence: "MEDIUM"
 variable: "china_political_status"
@@ -36,38 +38,38 @@ conditional: null
 outcomes:
   authoritarian_stable:
     status: "DIVERGENCE"
-    description: "CCP maintains authoritarian control with incremental economic reforms"
+    description: "Chairman Wang Dejiang consolidates power through a purge of 340 provincial officials and a $2 trillion stimulus package that papers over structural rot. The social credit system's 'Harmony Score' now determines access to housing, travel, and medical care for 1.3 billion people."
     world_state_effects:
       global_democracy_index: "-0.02"
       us_china_tension_index: "+0.03"
   gradual_liberalization:
     status: "DIVERGENCE"
-    description: "China slowly opens political system with limited elections and press freedom"
+    description: "Reformist Premier Li Xiuying permits village-level multi-candidate elections in 6 provinces and licenses 23 independent news outlets, including the Shenzhen Free Press. Foreign journalists return to Beijing for the first time in a decade; dissidents cautiously test boundaries that keep shifting outward."
     world_state_effects:
       global_democracy_index: "+0.05"
       us_china_tension_index: "-0.05"
   sudden_transition:
     status: "ESCALATED"
-    description: "Political crisis triggers rapid regime change with uncertain outcome"
+    description: "Protests over contaminated baby formula in Hebei province snowball into a nationwide movement after PLA garrison commander Colonel Zhao Mingfei refuses orders to deploy against civilians in Wuhan. The Standing Committee dissolves itself at 3 AM on a Wednesday; by morning, six different factions claim legitimacy."
     world_state_effects:
       global_democracy_index: "+0.02"
       us_china_tension_index: "+0.08"
   techno_authoritarianism:
     status: "DIVERGENCE"
-    description: "AI-powered surveillance state perfected; social credit system becomes total"
+    description: "SenseTime's 'Skynet 4.0' achieves real-time behavioral prediction for 98.6% of China's population; citizens receive 'pre-crime' warnings on their phones before they commit infractions. A leaked internal document reveals the system reduced petitions to the central government by 91%, but the suicide rate in Xinjiang has tripled."
     world_state_effects:
       global_democracy_index: "-0.05"
       us_china_tension_index: "+0.05"
   fragmentation:
     status: "ESCALATED"
-    description: "Regional tensions fracture China into semi-autonomous zones"
+    description: "Guangdong declares its own currency peg; Sichuan cuts off hydroelectric exports to the eastern seaboard; Tibet's exile government returns to Lhasa under Indian military escort. The PLA splits along regional command lines, and Shanghai's stock exchange suspends trading indefinitely as the renminbi loses 40% in a week."
     world_state_effects:
       global_democracy_index: "+0.01"
       us_china_tension_index: "+0.10"
       conflict_deaths: "+20000"
   hybrid:
     status: "DIVERGENCE"
-    description: "China develops unique hybrid system blending authoritarian control with limited pluralism"
+    description: "The 'Singapore-plus' model emerges: the CCP retains veto power over national security and foreign policy but permits genuine competition among technocratic factions for economic portfolios. Municipal elections in 12 pilot cities produce non-Party mayors for the first time, including a labor activist in Dongguan."
     world_state_effects:
       global_democracy_index: "+0.01"
       us_china_tension_index: "-0.02"

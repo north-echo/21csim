@@ -2,9 +2,13 @@ id: "2055_nuclear_status"
 year_month: "2055-01"
 title: "Nuclear Weapons Status"
 description: >
-  The state of nuclear weapons at mid-century. Whether arsenals have been reduced,
-  proliferated, or normalized as tactical weapons determines the baseline
-  existential risk for the second half of the century.
+  The Bulletin of the Atomic Scientists sets its Doomsday Clock at 45 seconds to
+  midnight -- the closest ever. Nine nations still maintain nuclear arsenals
+  totaling 9,400 warheads; hypersonic delivery systems have reduced warning times
+  to under 5 minutes; and AI-managed launch systems in three countries can
+  authorize retaliation without human input. Arms control expert Dr. Pavel
+  Volkov at SIPRI calculates that humanity has survived the nuclear age so far
+  through 'dumb luck masquerading as deterrence.'
 domain: "security"
 confidence: "LOW"
 variable: "nuclear_status"
@@ -23,43 +27,43 @@ conditional: null
 outcomes:
   reduced_arsenals:
     status: "DIVERGENCE"
-    description: "Major powers reduce arsenals to hundreds of warheads; verification systems robust"
+    description: "The Geneva Grand Bargain's implementation reaches completion: the US, Russia, and China maintain 300 warheads each, verified by AI-monitored satellite inspection and mandatory on-site visits. The decommissioned warheads' plutonium is vitrified at a facility in Mayak, Russia, under IAEA guard. Dr. Volkov moves the Doomsday Clock back to 8 minutes for the first time in 30 years."
     world_state_effects:
       nuclear_risk_level: "-0.10"
       existential_risk_cumulative: "-0.05"
   maintained:
     status: "DIVERGENCE"
-    description: "Nuclear arsenals maintained at current levels; mutual deterrence continues"
+    description: "The nine nuclear states maintain roughly 9,400 warheads in a deterrence framework that has not fundamentally changed since the Cold War. Submarines still patrol the deep oceans; ICBMs still sit in silos in Montana and Siberia; and the entire system depends on no one ever making a mistake. Dr. Volkov calls it 'the most dangerous bet in human history, renewed every single day.'"
     world_state_effects:
       nuclear_risk_level: "+0.02"
   proliferated:
     status: "ESCALATED"
-    description: "Multiple new nuclear states; non-proliferation regime collapsed"
+    description: "Fourteen nations now possess nuclear weapons; Saudi Arabia tested in 2047, followed by Turkey, Egypt, South Korea, and Brazil. Each new entrant claims 'minimum credible deterrence'; collectively, they create a web of first-strike temptations and miscalculation risks that game theorists describe as 'an n-body problem with extinction as the error term.'"
     world_state_effects:
       nuclear_risk_level: "+0.15"
       existential_risk_cumulative: "+0.08"
   used:
     status: "ESCALATED"
-    description: "Nuclear weapon used in conflict; global taboo broken"
+    description: "A 12-kiloton tactical nuclear weapon detonates over a military base in the Kashmir conflict, killing 34,000 people instantly. The 80-year taboo shatters. India and Pakistan exchange threats of escalation; the UN Security Council convenes in emergency session at 2 AM. The mushroom cloud, captured by a hundred smartphones and shared 4 billion times, becomes the image that defines the century."
     world_state_effects:
       nuclear_risk_level: "+0.25"
       existential_risk_cumulative: "+0.15"
       conflict_deaths: "+200000"
   abolished:
     status: "DIVERGENCE"
-    description: "Global nuclear disarmament achieved; verified elimination of all warheads"
+    description: "The last nuclear warhead is dismantled at the Pantex Plant in Amarillo, Texas, on September 21 -- the International Day of Peace. The plutonium pit, serial number W88-7742, is dissolved in acid under the gaze of 200 IAEA inspectors and broadcast live to 5 billion viewers. Dr. Volkov moves the Doomsday Clock to 30 minutes: 'For the first time, the sword is sheathed.'"
     world_state_effects:
       nuclear_risk_level: "-0.20"
       existential_risk_cumulative: "-0.10"
   new_weapons:
     status: "ESCALATED"
-    description: "New types of nuclear weapons developed; miniaturized, EMP-optimized, or space-based"
+    description: "The Pentagon's 'Project Thunderbolt' develops a nuclear-pumped EMP weapon designed to fry electronics across a 2,000-km radius without direct blast casualties; China counters with space-based 'Rods from God' that deliver kinetic energy equivalent to tactical nukes. Each new weapon type circumvents existing arms control language, creating loopholes large enough to drive an arms race through."
     world_state_effects:
       nuclear_risk_level: "+0.10"
       existential_risk_cumulative: "+0.05"
   tactical_normal:
     status: "ESCALATED"
-    description: "Tactical nuclear weapons normalized in military doctrine; use threshold lowered"
+    description: "NATO and Russian military doctrine both incorporate 'escalate to de-escalate' strategies with sub-kiloton tactical weapons. Field commanders in four nations have pre-delegated launch authority. The weapons are small enough -- 0.3 kiloton, smaller than the MOAB -- that military planners have convinced themselves they are 'just big bombs.' Dr. Volkov disagrees: 'There is no such thing as a small nuclear war.'"
     world_state_effects:
       nuclear_risk_level: "+0.12"
       existential_risk_cumulative: "+0.06"

@@ -2,9 +2,11 @@ id: "2049_latin_integration"
 year_month: "2049-01"
 title: "Latin American Integration"
 description: >
-  Latin American nations face a choice between regional integration, great power
-  alignment, or independent paths. The outcome reshapes hemispheric politics
-  and economic development.
+  Brazilian President Isabela Ferreira-Santos and Argentine President Mateo
+  Giordano sign the Montevideo Declaration proposing a 'Union of South American
+  Nations' with shared currency, open borders, and integrated energy grids.
+  Chile, Colombia, and Peru express interest; Venezuela, under its seventh
+  strongman since Chavez, abstains. The US watches nervously from Washington.
 domain: "regional"
 confidence: "MEDIUM"
 variable: "latin_integration_status"
@@ -22,34 +24,34 @@ conditional: null
 outcomes:
   south_american_union:
     status: "DIVERGENCE"
-    description: "South American political and economic union emerges as significant global player"
+    description: "The Union of South American Nations launches with 8 member states, 480 million citizens, and a combined GDP of $8.2 trillion. The 'Real Austral' common currency trades at parity with the euro; a high-speed rail network from Bogota to Buenos Aires breaks ground. UNASUR Commissioner Maria Elena Gutierrez secures a permanent UN Security Council seat for the bloc."
     world_state_effects:
       global_democracy_index: "+0.03"
       inequality_index: "-0.03"
   us_sphere:
     status: "DIVERGENCE"
-    description: "Latin America returns to US sphere of influence through trade and security agreements"
+    description: "The 'Western Hemisphere Free Trade Agreement' eliminates tariffs between the US and 18 Latin American nations; the Pentagon opens joint military bases in Colombia and Peru. In exchange, Washington invests $240 billion in Central American infrastructure and provides visa-free travel for 600 million Latin Americans. Mexico City becomes the Western Hemisphere's second financial center."
     world_state_effects:
       us_global_standing: "+0.03"
   china_influence:
     status: "DIVERGENCE"
-    description: "Chinese investment and trade dominate Latin American economies"
+    description: "China displaces the US as Latin America's largest trade partner in 2046 and never looks back. Chinese-built ports in Santos, Callao, and Cartagena handle 55% of the region's exports; Huawei provides 5G infrastructure to 14 nations; and 80% of Bolivia's lithium ships directly to Shenzhen battery factories. 'We traded one hegemon for another,' sighs a Peruvian economist at the Lima Summit."
     world_state_effects:
       us_china_tension_index: "+0.05"
       us_global_standing: "-0.03"
   independent_paths:
     status: "DIVERGENCE"
-    description: "Nations pursue diverse development models without regional integration"
+    description: "Chile becomes a tech hub, Uruguay a biotech center, Colombia an AI outsourcing powerhouse, and Brazil an agricultural superpower -- each on its own terms, trading with whoever offers the best deal. The Montevideo Declaration gathers dust as national interests consistently override regional solidarity; Latin America succeeds in pieces but never coheres."
     world_state_effects:
       inequality_index: "+0.01"
   conflict:
     status: "ESCALATED"
-    description: "Resource conflicts and political instability prevent regional cooperation"
+    description: "Bolivia and Chile fight a water war over the Silala River; Venezuelan refugees destabilize Colombia and Brazil's border regions; drug trafficking organizations control 30% of Central America's territory. The Montevideo Declaration is abandoned after President Ferreira-Santos is assassinated by narco-linked operatives in Brasilia."
     world_state_effects:
       conflict_deaths: "+8000"
       inequality_index: "+0.04"
   cooperation:
     status: "DIVERGENCE"
-    description: "Issue-specific cooperation on climate, migration, and trade without formal union"
+    description: "Rather than a grand union, pragmatic cooperation emerges: a shared Amazon conservation fund, a unified migration framework for climate refugees, and a lithium producers' cartel modeled on OPEC. The approach lacks headlines but delivers results -- deforestation drops 40% and intra-regional trade grows 12% annually without a single new bureaucracy."
     world_state_effects:
       global_democracy_index: "+0.01"

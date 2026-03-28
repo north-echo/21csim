@@ -2,9 +2,12 @@ id: "2085_world_system"
 year_month: "2085-01"
 title: "World System 2085"
 description: >
-  The dominant global political and economic system as the century nears its
-  end. Whether nation-states persist, transform, or are replaced by new
-  forms of organization.
+  A child born in 2085 has, depending on their parents' choices, citizenship
+  in a nation-state, a regional federation, a digital nation, a corporate
+  polity, or some combination of all four. Political scientist Dr. Obi
+  Nwankwo of Nigeria surveyed 10,000 young people worldwide and found that
+  62% could not name their head of state, but 94% could name the AI system
+  that manages their local infrastructure.
 domain: "geopolitics"
 confidence: "LOW"
 variable: "world_system_2085"
@@ -23,29 +26,29 @@ conditional: null
 outcomes:
   cooperative:
     status: "DIVERGENCE"
-    description: "Nations cooperate extensively on shared challenges while maintaining sovereignty"
+    description: "The 'Concert of Nations' model -- 190 sovereign states cooperating through 40 specialized agencies on climate, AI safety, biodefense, and space -- is messy, redundant, and remarkably effective. French diplomat Dr. Claire Beaumont, who has brokered agreements on three continents, compares it to 'a marriage: nobody is happy, everyone complains, and somehow the dishes get done.'"
     world_state_effects: {}
   competitive:
     status: "DIVERGENCE"
-    description: "Great power competition remains the dominant dynamic in international relations"
+    description: "The Atlantic Union, the Shanghai Pact, and the Nairobi Compact compete for influence across every domain: AI standards, space resources, genetic patents, and cultural exports. Each bloc maintains orbital weapons. Trade wars flare quarterly. Yet none dares cross the line into open conflict -- the economic interdependence is too deep, the weapons too destructive. Indian strategist Gen. Arjun Rao calls it 'a knife fight in a china shop where everyone owns the china.'"
     world_state_effects: {}
   fragmented:
     status: "ESCALATED"
-    description: "Global system fragmented into disconnected blocs with minimal interaction"
+    description: "Three separate internets. Four incompatible currencies. Two distinct AI safety regimes. The blocs have turned inward so completely that a student in Nairobi cannot access a library in Shanghai, and a researcher in Boston needs a six-month visa to attend a conference in Beijing. Historian Dr. Amira Khalil of Cairo calls it 'the new Middle Ages: walled kingdoms, suspicious of strangers, hoarding knowledge behind high barriers.'"
     world_state_effects: {}
   unified:
     status: "DIVERGENCE"
-    description: "Movement toward genuine global unification with shared governance structures"
+    description: "The Earth Federation, ratified by 160 nations in 2083, is the closest thing to a world government humanity has ever produced. President-General Kofi Mensah-Bonsu of Ghana administers a unified climate authority, a global tax system, and the first truly international court with enforcement power. Citizens vote in planetary elections; voter turnout was 71% in 2084. The 33 holdout nations are politely referred to as 'observers' and impolitely referred to as 'the waiting room.'"
     world_state_effects: {}
   ai_managed:
     status: "DIVERGENCE"
-    description: "AI systems manage international coordination, trade, and conflict resolution"
+    description: "The Meridian AI system manages global trade flows, allocates climate remediation budgets, and mediates territorial disputes with an efficiency no human institution ever achieved. The system processed 4 million decisions in 2084; human overrides were requested 200 times and granted 12 times. Political theorist Dr. Javier Moreno of Spain calls it 'government by algorithm: faster, fairer, and utterly soulless.'"
     world_state_effects: {}
   anarchic:
     status: "ESCALATED"
-    description: "No effective global order; power exercised by whoever has the most advanced technology"
+    description: "Power belongs to whoever controls the most advanced AI systems. Three tech conglomerates and two national governments command AI capabilities that effectively constitute sovereignty: they can crash currencies, disable infrastructure, or manipulate public opinion in any nation on Earth within hours. Former UN Secretary-General Yasmin Farah, writing from exile, describes the world as 'a planet of 8 billion people governed by five entities that never asked permission and never will.'"
     world_state_effects: {}
   post_national:
     status: "DIVERGENCE"
-    description: "Nation-states replaced by new organizational forms: city-states, digital nations, or corporate entities"
+    description: "Singapore, Dubai, and Lagos operate as sovereign city-states; the digital nation of 'Luminara' has 200 million citizens and a seat at the reformed UN; and the corporate polity of Orbital Resources Inc. governs 300,000 space residents under its own legal code. A person born in 2085 might hold citizenship in a city, a corporation, and a virtual nation simultaneously. The Westphalian nation-state, born in 1648, is not dead -- but it's sharing the room with successors it wouldn't recognize."
     world_state_effects: {}

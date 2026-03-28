@@ -2,9 +2,11 @@ id: "2045_space_economy"
 year_month: "2045-01"
 title: "Space Economy $1T"
 description: >
-  The space economy approaches or surpasses the one trillion dollar milestone.
-  Whether driven by mining, tourism, manufacturing, or military spending determines
-  the character of humanity's expansion beyond Earth.
+  Morgan Stanley's annual space economy report pegs the sector at $890 billion,
+  up from $400 billion in 2030. SpaceX's Starlink-3 alone generates $120 billion
+  in annual revenue; Blue Origin's orbital hotel charges $2.8 million per week
+  and has a 14-month waitlist. But 43% of space revenue still comes from
+  military contracts, and profitability beyond LEO remains elusive.
 domain: "space"
 confidence: "MEDIUM"
 variable: "space_economy_status"
@@ -35,26 +37,26 @@ conditional: null
 outcomes:
   on_track:
     status: "DIVERGENCE"
-    description: "Space economy reaches $1T on schedule with diverse commercial activities"
+    description: "The space economy crosses $1 trillion on March 14 when Rocket Lab's lunar cargo service delivers its 100th payload. Revenue splits: 30% communications, 25% Earth observation, 20% in-space manufacturing, 15% resource prospecting, 10% tourism. Goldman Sachs opens a 'Space Desk' and JPMorgan launches the first space-sector ETF."
     world_state_effects:
       space_development_index: "+0.10"
   slower:
     status: "DIVERGENCE"
-    description: "Space economy grows but falls short of projections; reaching $1T delayed to 2050s"
+    description: "At $620 billion, the space economy falls 40% short of bullish projections. Orbital tourism stalls after a decompression incident kills three passengers on a Virgin Galactic flight; asteroid mining remains pre-revenue. Analysts quietly revise their $1 trillion target to 2053, calling the original forecasts 'peak hype from the SPAC era.'"
     world_state_effects:
       space_development_index: "+0.05"
   explosive:
     status: "DIVERGENCE"
-    description: "Breakthrough technologies drive space economy far beyond projections"
+    description: "Nuclear thermal propulsion cuts Mars transit to 45 days and a space elevator prototype in Ecuador drops launch costs to $50 per kilogram. The space economy explodes to $2.4 trillion; AstroForge returns the first commercial platinum from asteroid Ryugu, crashing terrestrial platinum prices 60% and making every gold mine on Earth recalculate."
     world_state_effects:
       space_development_index: "+0.20"
   collapsed:
     status: "DIVERGENCE"
-    description: "Space industry consolidation and failures shrink the commercial space sector"
+    description: "A cascade of failures -- Relativity Space bankruptcy, Blue Origin's orbital hotel decommissioned after structural fatigue, three launch vehicle explosions in six months -- triggers a 'space winter.' Venture capital for space startups drops 90%; 140 companies fold. The survivors retreat to proven markets: government contracts and satellite communications."
     world_state_effects:
       space_development_index: "-0.05"
   military_dominated:
     status: "DIVERGENCE"
-    description: "Space economy grows but is dominated by military and surveillance spending"
+    description: "The US Space Force budget reaches $180 billion; China's Space Strategic Force matches it. Together with reconnaissance satellites, anti-satellite weapons, and orbital surveillance platforms, military spending accounts for 58% of all space revenue. Commercial space exists but lives on defense subcontracts; the Space Age looks more like the Arms Race than Star Trek."
     world_state_effects:
       space_development_index: "+0.08"

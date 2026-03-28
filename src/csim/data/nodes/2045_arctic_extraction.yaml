@@ -2,9 +2,11 @@ id: "2045_arctic_extraction"
 year_month: "2045-01"
 title: "Arctic Extraction"
 description: >
-  As Arctic ice retreats, newly accessible resources attract extraction industries.
-  Whether exploitation is regulated, chaotic, or prevented determines environmental
-  and geopolitical outcomes in the far north.
+  The Northern Sea Route carries 340 million tons of cargo annually, more than the
+  Suez Canal. Satellite imagery shows 47 drilling platforms dotting the Barents and
+  Kara Seas where pack ice existed 20 years ago. In Tromsoe, Norwegian marine
+  biologist Dr. Astrid Magnusdottir publishes drone footage of polar bears swimming
+  120 km between vanishing ice floes, too exhausted to hunt.
 domain: "regional"
 confidence: "MEDIUM"
 variable: "arctic_extraction_status"
@@ -22,37 +24,37 @@ conditional: null
 outcomes:
   regulated:
     status: "DIVERGENCE"
-    description: "International framework regulates Arctic resource extraction with environmental standards"
+    description: "The Reykjavik Framework Agreement caps Arctic drilling at 200 licensed sites, mandates zero-discharge waste systems, and designates 40% of newly ice-free waters as marine protected areas. Norwegian state oil fund Equinor leads a consortium that extracts rare earth elements from seabed nodules under continuous environmental monitoring by autonomous submersibles."
     world_state_effects:
       biodiversity_index: "-0.03"
       climate_temp_anomaly: "+0.02"
   unregulated_rush:
     status: "ESCALATED"
-    description: "Uncoordinated resource rush damages Arctic ecosystems and sparks territorial disputes"
+    description: "Russian icebreaker Severny Veter rams a Chinese survey vessel near disputed Wrangel Island; Canadian and Danish patrol boats exchange warning shots over Hans Island's newly accessible mineral deposits. Oil spills from 14 unlicensed drilling sites contaminate 80,000 km2 of Arctic waters, turning the fragile ecosystem into an industrial sacrifice zone."
     world_state_effects:
       biodiversity_index: "-0.10"
       climate_temp_anomaly: "+0.05"
       conflict_deaths: "+3000"
   protected:
     status: "DIVERGENCE"
-    description: "International treaty protects Arctic from extraction; designated as global commons"
+    description: "Inspired by the Antarctic Treaty, 48 nations sign the Arctic Commons Agreement, banning resource extraction north of 70 degrees latitude for 50 years. Enforcement is managed by a fleet of 200 AI-piloted patrol drones. The decision costs an estimated $8 trillion in forgone resources, but ecologist Dr. Magnusdottir calls it 'the most expensive act of sanity in human history.'"
     world_state_effects:
       biodiversity_index: "+0.02"
       climate_temp_anomaly: "-0.01"
   russian_monopoly:
     status: "DIVERGENCE"
-    description: "Russia dominates Arctic extraction through territorial claims and military presence"
+    description: "Russia's 14 nuclear icebreakers and 6 Arctic military bases give it de facto control over 65% of extractable Arctic resources. Norilsk Nickel's offshore platforms pump 2.8 million barrels daily from the Kara Sea; President Volkov declares the Arctic 'Russia's patrimony' and stations hypersonic missiles on Franz Josef Land to enforce the claim."
     world_state_effects:
       biodiversity_index: "-0.06"
       us_china_tension_index: "+0.03"
   tech_unnecessary:
     status: "DIVERGENCE"
-    description: "Technological alternatives make Arctic resource extraction economically unnecessary"
+    description: "Asteroid-mined platinum group metals undercut Arctic deposits by 80%; deep-sea mining in tropical waters proves cheaper and less politically fraught. The last Arctic oil platform, Gazprom's 'Prirazlomnaya-3,' shuts down after crude prices fall below extraction costs. The ice-free Arctic becomes a shipping lane rather than a mine."
     world_state_effects:
       biodiversity_index: "+0.01"
   indigenous_sovereignty:
     status: "DIVERGENCE"
-    description: "Indigenous peoples gain legal sovereignty over Arctic territories and resources"
+    description: "Inuit leader Mary Tootoo Attagutsiak wins a landmark International Court of Justice ruling granting indigenous Arctic nations sovereignty over 3.2 million km2 of newly accessible territory. The Inuit Circumpolar Council, Sami Parliament, and Nenets Assembly form the Arctic Indigenous Federation, issuing their own extraction permits and directing revenues to cultural preservation and climate adaptation."
     world_state_effects:
       biodiversity_index: "+0.03"
       global_democracy_index: "+0.02"

@@ -2,9 +2,11 @@ id: "2035_arctic_governance"
 year_month: "2035-06"
 title: "Arctic Governance Framework"
 description: >
-  How the international community governs the increasingly accessible Arctic
-  as ice retreats. Competition for resources, shipping routes, and strategic
-  positioning intensifies among Arctic and non-Arctic nations.
+  Russian icebreaker Arktika and USCGC Polar Star nearly collide during a
+  standoff over drilling rights in the Lomonosov Ridge; Denmark deploys soldiers
+  to Greenland for the first time since WWII; and a Chinese research vessel
+  conducts 'scientific surveys' suspiciously close to Norwegian gas fields.
+  The melting Arctic is becoming the most contested territory on Earth.
 domain: "geopolitical"
 confidence: "MEDIUM"
 variable: "arctic_governance_status"
@@ -21,36 +23,36 @@ conditional: "arctic_ice_status < 0.50"
 outcomes:
   cooperative_framework:
     status: "DIVERGENCE"
-    description: "Arctic Council evolves into binding governance framework for resource and route management"
-    explanation: "Shared economic interests drive cooperation; new treaty establishes rules for exploitation and protection"
+    description: "The Tromsø Arctic Treaty, signed by all 8 Arctic nations plus China, Japan, and South Korea as observer-participants, establishes binding rules for resource extraction, shipping lanes, and environmental protection; a new Arctic Maritime Authority headquartered in Reykjavik issues permits, enforces safety standards, and mediates disputes through binding arbitration"
+    explanation: "Norway's Prime Minister Ingrid Solberg brokers the deal by convincing Russia that predictable rules benefit its Arctic infrastructure investments more than unconstrained competition; the treaty's revenue-sharing mechanism -- 15% of Arctic resource royalties go to a common fund for indigenous communities and environmental remediation -- gives every party a stake in compliance"
     world_state_effects:
       governance_model: "+0.05"
       conflict_deaths: "+0"
   russian_dominance:
     status: "DIVERGENCE"
-    description: "Russia leverages geography and military presence to dominate Arctic governance"
-    explanation: "Longest Arctic coastline and military buildup give Russia effective control of key areas"
+    description: "Russia operates 14 military bases above the Arctic Circle, fields 40 nuclear-capable icebreakers (more than all other nations combined), and controls the only deep-water ports along the Northern Sea Route; foreign vessels must hire Russian pilots, pay Russian fees, and accept Russian inspection to transit -- making Moscow the de facto gatekeeper of Arctic shipping"
+    explanation: "Geography is destiny: Russia's 24,000km Arctic coastline, combined with three decades of military investment while other nations looked away, gives it an unchallengeable physical presence; NATO protests but lacks icebreakers, ports, or bases to contest Russian control, and the economic cost of building a competing Arctic infrastructure is prohibitive"
     world_state_effects:
       russia_stability: "+0.03"
       nuclear_risk_level: "+0.02"
   resource_rush:
     status: "DIVERGENCE"
-    description: "Unregulated scramble for Arctic resources; multiple competing claims"
-    explanation: "Oil, gas, minerals, and fishing rights contested; Arctic becomes new frontier for competition"
+    description: "Shell, Equinor, Rosneft, and CNOOC all begin exploratory drilling in disputed waters; Canadian and Danish naval vessels confront each other near Hans Island over newly accessible mineral deposits; an unregulated fishing fleet of 200 Chinese trawlers depletes newly ice-free waters off Svalbard, devastating cod and halibut stocks within 2 seasons"
+    explanation: "The absence of binding governance creates a classic tragedy of the commons: every actor has an incentive to extract resources quickly before rules are imposed, and the environmental damage compounds -- oil spill cleanup in Arctic waters is essentially impossible with current technology, and overfishing in newly productive waters depletes stocks before they can be assessed or managed"
     world_state_effects:
       climate_temp_anomaly: "+0.03"
       conflict_deaths: "+2000"
   militarized:
     status: "ESCALATED"
-    description: "Arctic becomes militarized zone with competing naval and air deployments"
-    explanation: "Strategic importance of Arctic routes and resources drives military buildup by multiple nations"
+    description: "Russia deploys hypersonic missiles to Franz Josef Land; the US reactivates the 2nd Fleet for Arctic operations and bases F-35s in Thule, Greenland; China establishes a 'research station' on Svalbard that NATO intelligence identifies as a signals intelligence facility; Norway and Finland report near-daily Russian submarine transits through their waters"
+    explanation: "The Arctic becomes the new front line of great-power competition: the opening ocean creates both a potential invasion corridor (submarine-launched ballistic missiles have shorter flight times from Arctic waters) and a resource prize worth militarizing; the Scandinavian nations find themselves on the front line of a confrontation they did not seek, spending 3% of GDP on defense for the first time since WWII"
     world_state_effects:
       nuclear_risk_level: "+0.05"
       conflict_deaths: "+1000"
   environmental_protection:
     status: "DIVERGENCE"
-    description: "Strong environmental protections limit Arctic exploitation"
-    explanation: "Antarctic Treaty-like framework protects Arctic environment; resource extraction heavily restricted"
+    description: "A coalition of Nordic nations, indigenous Inuit organizations, and environmental groups pushes through the 'Arctic Sanctuary Treaty' designating 40% of the newly ice-free Arctic Ocean as a marine protected area; commercial fishing is banned north of 80 degrees, oil drilling prohibited within 200km of any ice shelf, and transit ships required to use clean fuel and discharge zero waste"
+    explanation: "The campaign is led by Inuit activist Sheila Watt-Cloutier's successor, 28-year-old Nunavut filmmaker Amaruq Ikkusik, whose documentary 'The Last Ice' wins the Academy Award and shifts public opinion; the treaty's enforcement depends on satellite monitoring and port-state controls rather than Arctic naval patrols, making it achievable even without Russian cooperation"
     world_state_effects:
       climate_temp_anomaly: "-0.02"
       governance_model: "+0.03"

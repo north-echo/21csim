@@ -2,9 +2,11 @@ id: "2032_ai_governance"
 year_month: "2032-06"
 title: "AI Governance Framework"
 description: >
-  How the world governs increasingly powerful AI systems. Whether international
-  cooperation, national regulation, or corporate self-governance prevails
-  in managing transformative AI capabilities.
+  An AI system at DeepMind autonomously designs and patents a novel solar cell
+  material without human direction, triggering a Supreme Court case (USPTO v.
+  Alphabet) on whether a machine can be an inventor. Meanwhile, China's State
+  Council AI office has 4,300 employees and the EU AI Act is on its third major
+  revision. The governance gap widens as the technology accelerates.
 domain: "technology"
 confidence: "MEDIUM"
 variable: "ai_governance_status"
@@ -48,46 +50,46 @@ conditional: null
 outcomes:
   fragmented_national:
     status: "DIVERGENCE"
-    description: "Each major power develops its own AI governance; no global standard"
-    explanation: "US, EU, and China pursue divergent regulatory approaches creating a patchwork system"
+    description: "The US relies on voluntary industry commitments and sector-specific rules; the EU enforces its AI Act with 4% global-revenue fines; China mandates CCP committee seats on every AI company board; India builds its own framework prioritizing 'digital sovereignty' -- four incompatible regimes governing one global technology"
+    explanation: "An AI model trained in San Francisco, fine-tuned in Bangalore, and deployed in Frankfurt faces three different legal regimes; multinational companies maintain separate model versions for each jurisdiction, and researchers warn the fragmentation is creating 'regulatory moats' that entrench incumbents"
     world_state_effects:
       governance_model: "+0.02"
       ai_development_year_offset: "+0"
   international_treaty:
     status: "DIVERGENCE"
-    description: "International AI governance treaty ratified by major powers"
-    explanation: "IAEA-like body for AI emerges; binding safety standards and verification protocols"
+    description: "The Geneva AI Accord, signed in November 2032 by the US, China, EU, India, and 67 other nations, creates the International AI Safety Agency (IASA) headquartered in Singapore with authority to audit frontier models, mandate kill-switches, and suspend deployments; former Estonian PM Kaja Kallas appointed first director-general"
+    explanation: "Two catalysts force the deal: a near-catastrophic AI-generated bioweapon design leaked on 4chan in 2031, and China's calculation that international rules would constrain American private-sector advantages more than its own state-directed program; verification protocols modeled on nuclear inspections require compute-facility access"
     world_state_effects:
       governance_model: "+0.10"
       existential_risk_cumulative: "-0.05"
       ai_development_year_offset: "-1"
   corporate_controlled:
     status: "DIVERGENCE"
-    description: "Big tech companies effectively self-regulate AI development"
-    explanation: "Governments unable to keep pace; corporate governance structures fill the vacuum"
+    description: "The 'Frontier Model Forum' -- Google, Anthropic, Microsoft, Meta, and Baidu -- sets de facto global AI standards; their joint safety board reviews every model above 10^27 FLOP before release, and governments quietly defer to its rulings because no regulator has the technical staff to disagree"
+    explanation: "Congressional testimony by the heads of three AI labs reveals that the entire US government employs fewer AI safety researchers than any single major lab; the EU's AI Office contracts its technical reviews to the same companies it regulates, creating a fox-guarding-henhouse dynamic that critics call 'regulatory surrender'"
     world_state_effects:
       governance_model: "-0.05"
       inequality_index: "+0.05"
       ai_development_year_offset: "+1"
   open_global_commons:
     status: "DIVERGENCE"
-    description: "AI development treated as global commons with open access and shared safety research"
-    explanation: "Open-source movement prevails; international collaboration on safety becomes the norm"
+    description: "The 'Open Frontier Alliance' -- 340 universities and 12 governments led by France's Mistral, India's IIT consortium, and Brazil's LNCC -- releases frontier models as public goods; safety research shared in real-time through a CERN-like international laboratory in Geneva with 2,400 researchers from 60 nations"
+    explanation: "French President's insistence that 'AI is too important to be left to California' builds a coalition; the open approach proves safer than expected because thousands of researchers can probe for vulnerabilities simultaneously, and the democratized access neutralizes the strategic advantage that drove the AI arms race"
     world_state_effects:
       governance_model: "+0.08"
       existential_risk_cumulative: "-0.03"
   authoritarian_advantage:
     status: "DIVERGENCE"
-    description: "Authoritarian states gain AI advantage through unrestricted development"
-    explanation: "Democracies constrained by regulation; China and others advance faster with fewer constraints"
+    description: "China's 'Heavenly Wisdom' system, trained on the surveillance data of 1.4 billion citizens with no consent constraints, achieves capabilities that Western labs cannot match; Saudi Arabia's NEOM deploys AI governance with no democratic oversight; Singapore's AI-run city services outperform every democracy's equivalent"
+    explanation: "The authoritarian advantage is structural: no ethics boards, no GDPR, no public debate, and unlimited access to behavioral data from surveillance states; a leaked NSA assessment warns that China's AI capabilities have 'decisively surpassed' the US in computer vision, predictive policing, and autonomous systems"
     world_state_effects:
       governance_model: "-0.08"
       surveillance_state_index: "+0.10"
       global_democracy_index: "-0.03"
   governance_failure:
     status: "ESCALATED"
-    description: "No effective governance emerges; AI development proceeds without guardrails"
-    explanation: "Regulatory capture, geopolitical competition, and pace of change prevent meaningful governance"
+    description: "Four successive UN AI governance summits end without agreement; every major AI bill in Congress dies in committee after $480 million in industry lobbying; an autonomous trading system causes a 22-minute flash crash that erases $6 trillion in global equity value, and still no regulator has authority to prevent the next one"
+    explanation: "The governance vacuum is not accidental -- it is the equilibrium outcome of companies that profit from speed, nations that fear falling behind, and a technology that evolves faster than any legislative process; each stakeholder has rational reasons not to move first, producing a collective action failure of historic proportions"
     world_state_effects:
       governance_model: "-0.10"
       existential_risk_cumulative: "+0.08"

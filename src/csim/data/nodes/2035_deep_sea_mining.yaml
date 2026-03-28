@@ -2,9 +2,11 @@ id: "2035_deep_sea_mining"
 year_month: "2035-06"
 title: "Deep Sea Mining"
 description: >
-  Whether commercial deep-sea mining of polymetallic nodules and rare earth
-  elements proceeds, and under what regulatory framework. Balances resource
-  needs against environmental risks to ocean ecosystems.
+  The Metals Company's robotic collector harvests polymetallic nodules from the
+  Clarion-Clipperton Zone at 4,500m depth in the Pacific -- each nodule the size
+  of a potato, containing manganese, nickel, cobalt, and copper formed over millions
+  of years. Marine biologist Dr. Diva Amon calls it 'strip-mining the most pristine
+  ecosystem left on Earth.' Battery manufacturers call it 'essential.'
 domain: "technology"
 confidence: "MEDIUM"
 variable: "deep_sea_mining_status"
@@ -21,34 +23,34 @@ conditional: null
 outcomes:
   commercial_operations:
     status: "DIVERGENCE"
-    description: "Large-scale commercial deep-sea mining operations begin"
-    explanation: "Demand for EV battery minerals and rare earths drives seabed mining despite environmental concerns"
+    description: "The Metals Company, China Minmetals, and a Korean-Japanese consortium operate 14 collection vessels across the Pacific, harvesting 8 million tonnes of nodules annually; the cobalt and nickel produced supply 12% of global battery materials; seabed mining towns spring up in Tonga and the Cook Islands, which earn $800 million/year in royalties from their exclusive economic zones"
+    explanation: "The economics become compelling once battery demand outstrips terrestrial mining capacity: seabed nodules contain more cobalt than all land-based reserves combined, and collection requires no blasting, no acid processing, and no child labor -- advantages that EV manufacturers use to market 'ethically sourced' ocean minerals, even as marine scientists document the destruction of deep-sea ecosystems that take centuries to recover"
     world_state_effects:
       global_gdp: "+0.01"
       renewable_energy_share: "+0.02"
   environmental_ban:
     status: "DIVERGENCE"
-    description: "International moratorium or ban on deep-sea mining"
-    explanation: "Scientific evidence of ecosystem damage and environmental movement pressure block exploitation"
+    description: "A coalition of 34 nations led by Chile, France, and Palau pushes through a 30-year moratorium at the International Seabed Authority after a Greenpeace expedition films the devastation left by pilot mining operations: seafloor sediment plumes visible from space, destroyed sponge gardens that were 10,000 years old, and a 90% decline in deep-sea fish within mining zones"
+    explanation: "The viral footage -- narrated by David Attenborough in his final public appearance before retirement at 109 -- generates enough public outrage to overcome industry lobbying; BMW, Volvo, and Samsung join the moratorium campaign to protect their green brand images, and recycling advances reduce virgin mineral demand enough to make the ban economically survivable"
     world_state_effects:
       governance_model: "+0.02"
   limited_regulated:
     status: "DIVERGENCE"
-    description: "Limited deep-sea mining under strict environmental regulation"
-    explanation: "ISA establishes tight regulatory framework; mining proceeds at small scale with monitoring"
+    description: "The ISA issues 6 mining licenses with strict conditions: real-time environmental monitoring by independent observers, 30% of each license area preserved as untouched reference zones, mandatory sediment plume containment, and $500 million environmental bonds per operator; annual extraction is capped at 3 million tonnes -- enough to matter for mineral supply but not enough to devastate the seabed"
+    explanation: "The regulated approach represents a genuine compromise brokered by Fiji's ISA delegation: environmental groups accept that some mining is necessary for the energy transition, industry accepts that unlimited extraction would destroy its social license, and the monitoring data generated creates the first real baseline for deep-sea ecosystem science"
     world_state_effects:
       global_gdp: "+0.005"
       governance_model: "+0.01"
   technology_fails:
     status: "DIVERGENCE"
-    description: "Deep-sea mining technology proves unreliable at commercial scale"
-    explanation: "Engineering challenges at extreme depth prevent economically viable extraction"
+    description: "The Metals Company's collector vehicle fails catastrophically at 4,800m depth when hydraulic lines burst under pressure, sinking a $340 million piece of equipment; China Minmetals' riser system -- the pipe connecting seabed to surface -- collapses in moderate seas, dumping 2,000 tonnes of sediment in a toxic plume; both companies' share prices collapse and no insurer will underwrite the next attempt"
+    explanation: "Operating heavy machinery at pressures 400x surface in near-freezing water with zero visibility turns out to be an engineering challenge of a different order than proponents acknowledged: everything corrodes faster, seals fail unpredictably, and a single mechanical failure at depth is unrecoverable; the deep ocean proves, once again, to be far more hostile than optimistic business plans assumed"
     world_state_effects:
       global_gdp: "+0.00"
   conflict_over_resources:
     status: "ESCALATED"
-    description: "Disputes over seabed mining rights create international tensions"
-    explanation: "Competing claims to mineral-rich seabed areas generate confrontations between nations"
+    description: "China deploys naval escorts alongside its mining vessels in areas claimed by the Philippines under UNCLOS; Tonga and the Cook Islands threaten to leave the ISA after their royalty rates are cut; a confrontation between Chinese and Japanese survey ships near the Ogasawara Trench escalates to warning shots, the first naval exchange of fire in the Pacific since WWII"
+    explanation: "The seabed contains $16 trillion in estimated mineral wealth, making it the largest unclaimed resource on Earth; the ISA's licensing system collapses under the weight of overlapping claims and great-power pressure, and the deep ocean becomes a new theater of geopolitical competition where naval power, not law, determines who mines where"
     world_state_effects:
       conflict_deaths: "+1000"
       governance_model: "-0.02"

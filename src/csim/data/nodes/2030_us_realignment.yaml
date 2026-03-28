@@ -2,9 +2,10 @@ id: "2030_us_realignment"
 year_month: "2030-06"
 title: "US Political Realignment"
 description: >
-  The American political landscape undergoes structural realignment as
-  demographic shifts, economic changes, and cultural divides reshape
-  party coalitions and electoral dynamics.
+  The 2030 midterms deliver the most scrambled electoral map since 1932:
+  union plumbers in Youngstown vote alongside Silicon Valley engineers,
+  while suburban Dallas doctors share a ballot line with Montana ranchers.
+  Both parties' internal coalitions are tearing at the seams.
 domain: "geopolitical"
 confidence: "MEDIUM"
 variable: "us_realignment_status"
@@ -34,35 +35,35 @@ conditional: null
 outcomes:
   class_based:
     status: "DIVERGENCE"
-    description: "US politics realigns along class lines; working-class vs professional-class"
-    explanation: "Economic inequality becomes primary axis; both parties lose traditional bases"
+    description: "Ohio teamster leader Marco DeSantis and former Amazon warehouse organizer Keisha Washington co-found the 'Working Families Caucus' that sweeps 38 House seats; the GOP loses rural whites without college degrees for the first time since Nixon"
+    explanation: "AI displacement and the gig economy collapse the old culture-war coalitions; a Pew survey finds 71% of Americans now identify their political interests by income bracket rather than party, and both the DNC and RNC lose a third of their donor base"
     world_state_effects:
       us_polarization: "+0.03"
       inequality_index: "-0.02"
   urban_rural_permanent:
     status: "DIVERGENCE"
-    description: "Urban-rural divide becomes permanent structural feature of American politics"
-    explanation: "Geographic sorting entrenches; two Americas with incompatible policy preferences"
+    description: "Not a single congressional district within 50 miles of a metro area with 500,000+ people votes Republican; not a single district more than 100 miles from one votes Democrat; the two Americas now have separate de facto policy regimes on guns, abortion, climate, and education"
+    explanation: "Geographic sorting accelerates as remote workers cluster in blue metros and red exurbs harden culturally; the Brookings Institution maps show two archipelagos of governance that share a currency and military but little else"
     world_state_effects:
       us_polarization: "+0.05"
   multiparty_emergence:
     status: "DIVERGENCE"
-    description: "Third and fourth parties gain significant electoral power"
-    explanation: "Ranked choice voting adoption or party splits create viable multi-party competition"
+    description: "The Forward Party wins 4 Senate seats and 22 House seats after ranked-choice voting passes in 14 states; former Republican governor Larry Chen of Arizona and former Democratic congresswoman Aaliyah Brooks of Michigan become its co-chairs"
+    explanation: "Alaska and Maine's ranked-choice experiments spread like wildfire after 2028; the 'exhausted middle' finally has a viable vehicle, and Gallup records the first-ever poll where more Americans identify with a third party than with the Democrats"
     world_state_effects:
       us_polarization: "-0.05"
       global_democracy_index: "+0.02"
   one_party_dominance:
     status: "DIVERGENCE"
-    description: "One party achieves dominant position through demographic advantage"
-    explanation: "Demographic shifts give one party structural advantage in electoral college and Senate"
+    description: "Democrats hold 58 Senate seats, the House, and 34 governorships after Texas flips blue in 2028; the GOP is locked out of the presidency for three consecutive cycles and RNC chair Vivek Ramaswamy publishes an op-ed titled 'We Are a Regional Party Now'"
+    explanation: "Latino and Asian-American population growth in Sun Belt suburbs overwhelms Republican margins in rural counties; the Electoral College math becomes nearly impossible for the GOP without winning Pennsylvania AND Georgia AND Arizona simultaneously"
     world_state_effects:
       us_polarization: "+0.02"
       global_democracy_index: "-0.02"
   continued_polarization:
     status: "DIVERGENCE"
-    description: "Polarization continues without realignment; gridlock deepens"
-    explanation: "Existing party structures persist despite internal contradictions; governance dysfunction worsens"
+    description: "The 117th through 121st Congresses pass fewer bills than any stretch since the Civil War; a government shutdown lasting 47 days in 2030 closes national parks during peak summer season, costing gateway communities $2.1 billion"
+    explanation: "Neither party can assemble a governing majority, but neither fractures either; the filibuster survives, gerrymandering entrenches safe seats, and the Supreme Court blocks every structural reform; America governs by executive order and continuing resolution"
     world_state_effects:
       us_polarization: "+0.08"
       global_democracy_index: "-0.03"

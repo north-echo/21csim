@@ -2,9 +2,11 @@ id: "2044_space_law"
 year_month: "2044-01"
 title: "Space Law Framework"
 description: >
-  As space activity expands, the legal framework governing resource extraction,
-  territorial claims, and military use of space requires resolution. The outcome
-  shapes whether space becomes cooperative commons or contested frontier.
+  When a Chinese mining probe and a SpaceX prospector both land on the same
+  platinum-rich asteroid 16 Psyche within 72 hours of each other, the question
+  of who owns what in space becomes urgent. The 1967 Outer Space Treaty, written
+  when the Moon was a Cold War trophy rather than real estate, has no answer for
+  two corporations pointing lasers at the same rock.
 domain: "space"
 confidence: "MEDIUM"
 variable: "space_law_status"
@@ -21,31 +23,31 @@ conditional: null
 outcomes:
   un_framework:
     status: "DIVERGENCE"
-    description: "UN-led framework establishes comprehensive space law covering resources and sovereignty"
+    description: "Costa Rican diplomat Isabella Vargas-Chen brokers the Vienna Space Accords after 14 months of negotiation, establishing a 'deep seabed mining' model for space: resources belong to humanity, with extraction licenses auctioned and 12% royalties funding a global development fund."
     world_state_effects:
       space_development_index: "+0.05"
       global_democracy_index: "+0.02"
   bilateral:
     status: "DIVERGENCE"
-    description: "US-China bilateral agreements form the basis of de facto space law"
+    description: "In a secret meeting at the Shangri-La Hotel in Singapore, US and Chinese negotiators divide the inner solar system into 'zones of primary interest' -- effectively splitting the asteroid belt and lunar poles between them. The EU, India, and smaller spacefaring nations are furious but lack the launch capacity to contest the arrangement."
     world_state_effects:
       space_development_index: "+0.03"
       us_china_tension_index: "-0.03"
   corporate_rules:
     status: "DIVERGENCE"
-    description: "Corporate lobbying shapes space law to favor private exploitation of resources"
+    description: "SpaceX, Blue Origin, and AstroForge spend $4.1 billion lobbying the US Congress, which passes the 'Space Homestead Act' granting mineral rights to any entity that establishes a continuous presence on a celestial body. Planetary Resources CEO Adaora Nwosu-Klein stakes the first legal claim on asteroid Bennu from her Houston office."
     world_state_effects:
       space_development_index: "+0.08"
       inequality_index: "+0.03"
   no_agreement:
     status: "DIVERGENCE"
-    description: "Nations fail to agree on space governance; lawless frontier persists"
+    description: "The Vienna Space Conference collapses after 11 days when India walks out over lunar south pole rights and Russia refuses to accept inspection protocols. Space becomes the 21st century's Wild West: whoever gets there first, keeps it, and the International Court of Justice has no jurisdiction above the Karman line."
     world_state_effects:
       space_development_index: "-0.02"
       us_china_tension_index: "+0.05"
   militarized:
     status: "ESCALATED"
-    description: "Space becomes militarized domain; weapons deployed and territorial conflicts emerge"
+    description: "China deploys kinetic-kill satellites in lunar orbit; the US Space Force places directed-energy weapons on three orbital platforms. When a Russian inspector satellite 'accidentally' disables a SpaceX fuel depot, the Pentagon classifies the incident as the first act of war in space. Orbital debris from the confrontation renders two popular orbits unusable."
     world_state_effects:
       space_development_index: "+0.05"
       us_china_tension_index: "+0.10"

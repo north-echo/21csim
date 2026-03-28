@@ -2,9 +2,9 @@ id: "2040_antibiotic_crisis"
 year_month: "2040-01"
 title: "Antibiotic Crisis Resolution"
 description: >
-  Antimicrobial resistance reaches critical levels as last-resort antibiotics fail.
-  Whether new treatments emerge or humanity enters a post-antibiotic era determines
-  the future of modern medicine.
+  A 34-year-old schoolteacher in Manchester dies from a urinary tract infection resistant
+  to all 47 known antibiotic classes. Her case, one of 1.2 million annual AMR deaths in
+  Europe alone, forces an emergency G20 summit in Geneva on the "post-antibiotic question."
 domain: "technology"
 confidence: "MEDIUM"
 variable: "antibiotic_crisis_status"
@@ -21,31 +21,31 @@ conditional: null
 outcomes:
   post_antibiotic:
     status: "ESCALATED"
-    description: "Routine infections become lethal again; surgery and chemotherapy become high-risk"
+    description: "Hospitals in Lagos, London, and Los Angeles cancel elective surgeries indefinitely; a knee replacement carries a 12% fatality risk from post-operative infection. Chemotherapy wards empty out as oncologists refuse to suppress immune systems they can no longer protect."
     world_state_effects:
       global_pandemic_deaths: "+200000"
       us_life_expectancy_delta: "-3.0"
   new_class_discovered:
     status: "DIVERGENCE"
-    description: "Novel antibiotic class discovered that overcomes existing resistance mechanisms"
+    description: "Dr. Fatima al-Rashidi's team at King Abdullah University isolates teixobactin-II from a deep-sea vent microbe near the Azores, the first genuinely new antibiotic class in 38 years. Phase III trials show 94% efficacy against pan-resistant Klebsiella."
     world_state_effects:
       global_pandemic_deaths: "-5000"
       us_life_expectancy_delta: "+1.0"
   phage_standard:
     status: "DIVERGENCE"
-    description: "Bacteriophage therapy becomes standard of care, replacing traditional antibiotics"
+    description: "Tbilisi-trained phage therapist Nino Kvaratskhelia becomes the face of the 'viral cure' movement after her cocktails save 340 sepsis patients in a Berlin ICU trial. By year's end, phage libraries in Georgia, Belgium, and Singapore serve 80 countries on demand."
     world_state_effects:
       global_pandemic_deaths: "-10000"
       us_life_expectancy_delta: "+0.5"
   ai_designed:
     status: "DIVERGENCE"
-    description: "AI-designed antimicrobials outpace bacterial evolution; resistance problem solved"
+    description: "DeepMind's AlphaPharm generates 11,000 candidate molecules in 72 hours; 23 prove effective against every resistant pathogen in the WHO priority list. The system redesigns itself faster than bacteria can mutate, ending the evolutionary arms race."
     world_state_effects:
       global_pandemic_deaths: "-15000"
       us_life_expectancy_delta: "+1.5"
   managed_crisis:
     status: "DIVERGENCE"
-    description: "Stewardship programs and new therapies keep resistance manageable but precarious"
+    description: "The WHO's 'Antibiotic Passport' system rations last-resort drugs through a global registry, while India's generic phage manufacturers and Swiss pharmaceutical labs keep resistance rates just below catastrophic thresholds. Doctors describe it as 'playing chess on a shrinking board.'"
     world_state_effects:
       global_pandemic_deaths: "+10000"
       us_life_expectancy_delta: "-0.5"

@@ -2,9 +2,11 @@ id: "2050_africa"
 year_month: "2050-01"
 title: "Africa at Mid-Century"
 description: >
-  Africa at mid-century either realizes its demographic dividend or suffers from
-  climate devastation and conflict. The continent's trajectory determines whether
-  it becomes a major global power or remains marginalized.
+  Africa's population reaches 2.1 billion -- one in four humans is African. Lagos,
+  with 38 million residents, is the world's third-largest city. The continent produces
+  the most college graduates of any region and has the youngest median age on Earth
+  at 24 years. Whether this is a demographic dividend or a demographic time bomb
+  depends entirely on what those young people find when they look for work.
 domain: "regional"
 confidence: "LOW"
 variable: "africa_status"
@@ -22,36 +24,36 @@ conditional: null
 outcomes:
   rising_power:
     status: "DIVERGENCE"
-    description: "Africa emerges as major economic and political power with young, dynamic workforce"
+    description: "Nigeria's GDP surpasses Germany's; Kenya's M-Pesa Global becomes the world's largest fintech company; Ethiopian Airlines is the most profitable carrier on Earth. A young workforce fluent in AI and multilingual by necessity fills the labor gap left by aging populations in Europe and East Asia. Time magazine's 2050 cover: 'The African Century Has Begun.'"
     world_state_effects:
       global_democracy_index: "+0.03"
       inequality_index: "-0.05"
   climate_devastated:
     status: "ESCALATED"
-    description: "Climate change devastates African agriculture and infrastructure; development reversed"
+    description: "The Sahel expands 200 km southward; Lake Chad, once 25,000 km2, is a salt flat visible from space. Crop failures across East Africa displace 120 million people; the Lagos seawall, built for 50-cm sea rise, faces 90 cm and floods the Lekki financial district. Two decades of economic gains are erased in five years of climatic catastrophe."
     world_state_effects:
       food_security_index: "-0.12"
       conflict_deaths: "+25000"
   mixed:
     status: "DIVERGENCE"
-    description: "Africa shows mixed results; some nations thrive while others struggle"
+    description: "Rwanda, Kenya, and Ghana join the ranks of upper-middle-income nations; DRC, South Sudan, and Somalia remain trapped in cycles of conflict and extraction. A child born in Kigali has a life expectancy of 78; one born 400 km away in Goma has 47. The 'two Africas' narrative dominates development discussions, frustrating everyone who knows the continent is actually fifty-four different stories."
     world_state_effects:
       inequality_index: "+0.02"
   industrialized:
     status: "DIVERGENCE"
-    description: "Africa industrializes rapidly; becomes the world's manufacturing floor"
+    description: "As Chinese wages rise and automation makes proximity-to-market less important, 40,000 factories relocate to Ethiopia, Tanzania, and Senegal where labor costs are 1/8th of China's 2040 levels. The 'Made in Africa' label appears on everything from smartphones to electric vehicles. Port Harcourt, Dar es Salaam, and Dakar become the Shenzhens of the 2050s."
     world_state_effects:
       inequality_index: "-0.04"
       climate_temp_anomaly: "+0.03"
   conflict_zone:
     status: "ESCALATED"
-    description: "Resource conflicts and political instability make much of Africa a conflict zone"
+    description: "Water wars between Ethiopia and Egypt over the Nile escalate to cross-border drone strikes; cobalt warlords control 60% of DRC's Katanga province; Nigeria splits along religious lines after a disputed election. UN peacekeeping forces are deployed to 11 African nations simultaneously, the largest commitment in the organization's history."
     world_state_effects:
       conflict_deaths: "+40000"
       global_democracy_index: "-0.03"
   leapfrog:
     status: "DIVERGENCE"
-    description: "Africa leapfrogs industrial era directly to knowledge and green economy"
+    description: "Just as Africa skipped landlines for mobile phones, it skips coal plants for solar microgrids, skip banks for digital wallets, and skips factories for 3D-printing hubs. A Ghanaian engineer designs a solar-powered desalination unit for $400 that provides clean water to a village of 200; the design is open-source and copied 2 million times across the Sahel."
     world_state_effects:
       inequality_index: "-0.06"
       renewable_energy_share: "+0.03"

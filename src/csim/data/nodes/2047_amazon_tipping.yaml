@@ -2,9 +2,11 @@ id: "2047_amazon_tipping"
 year_month: "2047-01"
 title: "Amazon Tipping Point"
 description: >
-  The Amazon rainforest reaches a critical threshold where deforestation and warming
-  risk transforming the world's largest tropical forest into savanna, with massive
-  consequences for global carbon cycling and biodiversity.
+  Brazilian climate scientist Dr. Marcos Cavalcanti publishes satellite data showing
+  the eastern Amazon has stopped generating its own rainfall for the first time in
+  recorded history. Trees in Para state are dying at 3x the replacement rate; the
+  forest's 'flying rivers' -- atmospheric moisture streams that once watered Sao Paulo --
+  have weakened by 60%. The world's largest carbon sink is becoming a carbon source.
 domain: "climate"
 confidence: "MEDIUM"
 variable: "amazon_tipping_status"
@@ -21,31 +23,31 @@ conditional: "climate_temp_anomaly > 1.8"
 outcomes:
   partial_dieback:
     status: "DIVERGENCE"
-    description: "Eastern Amazon transitions to savanna; western Amazon persists but diminished"
+    description: "The eastern Amazon from Maranhao to Mato Grosso transitions to dry savanna over 8 years, releasing 18 gigatons of stored carbon. Cattle ranchers move in where jaguars once hunted. The western Amazon around Manaus survives thanks to Andean moisture, but the forest is 40% smaller and the remaining trees are visibly stressed -- shorter, thinner, producing fewer seeds."
     world_state_effects:
       climate_temp_anomaly: "+0.15"
       biodiversity_index: "-0.12"
   full_dieback:
     status: "ESCALATED"
-    description: "Amazon rainforest collapses entirely, releasing massive carbon stores"
+    description: "The feedback loop becomes irreversible: dying trees release carbon, which raises temperatures, which kills more trees. Within a decade the Amazon emits 40 gigatons of CO2 -- equivalent to four years of global human emissions. Dr. Cavalcanti, weeping at a press conference in Brasilia, calls it 'the death of a 55-million-year-old organism.' The last pink river dolphin is photographed in a shrinking tributary near Tefe."
     world_state_effects:
       climate_temp_anomaly: "+0.35"
       biodiversity_index: "-0.25"
   stabilized:
     status: "DIVERGENCE"
-    description: "Conservation and reduced warming stabilize the Amazon ecosystem"
+    description: "Brazil's 'Amazon Forever' program, funded by $90 billion in international carbon credits, deploys 50,000 forest rangers and AI-monitored drone networks that detect illegal clearing within hours. Combined with global emissions cuts that hold warming below 2C, the forest stabilizes. Dr. Cavalcanti publishes a cautiously optimistic paper titled 'The Amazon Breathes Again.'"
     world_state_effects:
       climate_temp_anomaly: "+0.02"
       biodiversity_index: "-0.03"
   managed_transition:
     status: "DIVERGENCE"
-    description: "Planned reforestation and sustainable agriculture manage the transition"
+    description: "Brazil's Indigenous land management authority, led by Kayapo leader Raoni Metuktire's granddaughter Bepkumy, implements a mosaic landscape strategy: 60% protected forest, 25% agroforestry, 15% sustainable ranching. The forest shrinks but doesn't die; biodiversity corridors connect remaining old growth. It works, but feels like amputating a limb to save the patient."
     world_state_effects:
       climate_temp_anomaly: "+0.08"
       biodiversity_index: "-0.08"
   accelerated_by_fires:
     status: "ESCALATED"
-    description: "Unprecedented fire seasons accelerate dieback beyond natural tipping point"
+    description: "The 2047 fire season burns 380,000 km2 -- an area the size of Japan -- after three consecutive drought years dry out understory that hasn't burned in millennia. Smoke plumes visible from space darken skies over Bogota and Buenos Aires. The fires release 12 gigatons of carbon in a single season and kill an estimated 2.5 billion trees, pushing the ecosystem past any possibility of natural recovery."
     world_state_effects:
       climate_temp_anomaly: "+0.25"
       biodiversity_index: "-0.18"

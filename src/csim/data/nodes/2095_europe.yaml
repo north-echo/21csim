@@ -2,9 +2,12 @@ id: "2095_europe"
 year_month: "2095-01"
 title: "Europe 2095"
 description: >
-  Europe's final form at century's end. Whether the European project achieved
-  its promise of unity, settled into cultural influence, or dissolved under
-  the weight of its contradictions.
+  Europe's median age in 2095 is 61. The continent is a living museum of
+  architectural beauty, maintained by robotic groundskeepers and visited by
+  tourists from younger, louder civilizations. Italian poet Marco Ferrante,
+  92, described it best: "Europe is a grandmother who still dresses beautifully
+  and tells extraordinary stories. Whether the grandchildren are listening
+  is another matter."
 domain: "geopolitics"
 confidence: "LOW"
 variable: "europe_status_2095"
@@ -22,25 +25,25 @@ conditional: null
 outcomes:
   federation:
     status: "DIVERGENCE"
-    description: "Europe is a unified federal state and major global power"
+    description: "The European Federation, population 380 million, is governed from Brussels by President-Commissioner Aleksandra Nowak of Poland, the youngest federation leader at 48. Its unified military, shared currency, and federal tax system make it a superpower by any measure, though its citizens care less about geopolitical rankings than about their mandatory four-day work week. The most telling statistic: Europe has the highest happiness index and the lowest birth rate on Earth, simultaneously."
     world_state_effects: {}
   cultural_power:
     status: "DIVERGENCE"
-    description: "Europe's influence is cultural, educational, and in quality of life; a global model"
+    description: "European universities educate 40 million non-European students annually; European cinema, cuisine, and design set global standards; and the 'European quality of life index' is the benchmark against which every other society measures itself. Europe cannot project military power and doesn't try. Cultural attaché Dr. Sofia Papadopoulos compares it to ancient Athens: 'We lost the empire and kept the influence. The Parthenon outlasted the fleet.'"
     world_state_effects: {}
   dissolved:
     status: "ESCALATED"
-    description: "European unity project collapsed; continent returned to national competition"
+    description: "Twenty-seven sovereign nations, three customs unions, four currencies, and a border infrastructure that employs more people than some of the countries it separates. The EU's dissolution in 2063 was supposed to be temporary; 30 years later, the flags still fly separately. The Brussels district that once housed European institutions is now a conference center and hotel complex. German-Polish novelist Eva Kowalski set her award-winning novel there: 'a ghost story about a dream of unity, told in 24 languages that no longer had a common parliament.'"
     world_state_effects: {}
   superpower:
     status: "DIVERGENCE"
-    description: "United Europe emerged as a military and economic superpower rivaling any other bloc"
+    description: "The European Federation commands the world's most advanced autonomous military, a space program rivaling any other, and an economy built on biotech, quantum computing, and AI ethics consulting. President-Commissioner Nowak told the Global Assessment Conference: 'We spent 70 years being dismissed as a museum. We spent the last 20 proving that the museum had a laboratory in the basement.' European defense drones now patrol three oceans."
     world_state_effects: {}
   social_model:
     status: "DIVERGENCE"
-    description: "European social model recognized as the most successful governance framework globally"
+    description: "The 'Copenhagen Standard' -- universal healthcare, AI-assisted education, 24-hour work weeks, and guaranteed creative sabbaticals -- has been adopted by 60 nations. Europeans live an average of 114 years, work less than any society in history, and produce more art per capita than any civilization ever has. The criticism, delivered by American economist Dr. James Chen, is also telling: 'Europe solved every problem except boredom.'"
     world_state_effects: {}
   diminished:
     status: "DIVERGENCE"
-    description: "Europe has declined in global relevance; aging, slow growth, and internal divisions"
+    description: "Europe's combined GDP is less than India's alone. Its population has fallen from 450 million to 280 million; entire villages in Spain, Italy, and Greece have been reclaimed by forest. The ruins of abandoned towns -- roofless houses, overgrown piazzas -- are hauntingly beautiful and increasingly popular with photographers. European Commissioner for Heritage Dr. Luca Bianchi oversees more ruins than residents in some provinces: 'We are becoming the most elegant cemetery in history.'"
     world_state_effects: {}

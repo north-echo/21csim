@@ -2,9 +2,10 @@ id: "2033_urbanization"
 year_month: "2033-06"
 title: "Global Urbanization Trajectory"
 description: >
-  How the world manages accelerating urbanization as two-thirds of humanity
-  lives in cities. Smart city technology, slum expansion, and urban governance
-  shape billions of lives.
+  Lagos surpasses Tokyo as the world's largest metro area at 41 million people;
+  Dhaka, Kinshasa, and Lahore each add a million residents per year. A satellite
+  photo of nighttime Earth shows Africa's cities blazing where darkness reigned
+  a generation ago. The 21st century is the century of the megacity.
 domain: "demographics"
 confidence: "MEDIUM"
 variable: "urbanization_status"
@@ -21,34 +22,34 @@ conditional: null
 outcomes:
   smart_city_success:
     status: "DIVERGENCE"
-    description: "Smart city technology delivers efficient, livable urban environments"
-    explanation: "AI-managed infrastructure, autonomous transit, and sensor networks improve urban life"
+    description: "Seoul's 'Digital Twin' -- a real-time AI simulation of the entire city -- optimizes traffic flow, energy distribution, and emergency response simultaneously, cutting commute times 35% and energy waste 28%; Barcelona's sensor network detects water leaks within minutes, saving 2 billion liters annually; Kigali becomes Africa's first fully smart-managed city"
+    explanation: "The convergence of cheap sensors, 5G/6G connectivity, and AI optimization transforms urban management from reactive to predictive: cities that invest early see compounding returns in efficiency, livability, and economic productivity; the 'smart city premium' on property values reaches 15-20% in Singapore, Copenhagen, and Medellín"
     world_state_effects:
       global_gdp: "+0.02"
       climate_temp_anomaly: "-0.02"
   slum_expansion:
     status: "DIVERGENCE"
-    description: "Rapid urbanization outpaces infrastructure; slums expand across Global South"
-    explanation: "Billions live in informal settlements without adequate services, sanitation, or safety"
+    description: "Dharavi in Mumbai, once the world's most famous slum, is dwarfed by new informal mega-settlements: Lagos's Makoko waterfront expands to 1.2 million residents on stilts over polluted lagoon water; Dhaka's Korail slum lacks sewage for 800,000 people; an estimated 2.1 billion humans globally live in informal housing without reliable water, sanitation, or electricity"
+    explanation: "Urban population grows by 1.5 million people per week, but infrastructure investment covers perhaps a third of that growth; governments in Nigeria, Bangladesh, and the DRC lack the tax base, administrative capacity, and political will to extend services to informal settlements, creating parallel cities where the formal and informal exist side by side with vastly different life expectancies"
     world_state_effects:
       inequality_index: "+0.05"
       global_gdp: "-0.01"
   urban_heat_crisis:
     status: "ESCALATED"
-    description: "Extreme heat makes major cities periodically uninhabitable"
-    explanation: "Urban heat island effect combined with climate change creates deadly conditions in tropical cities"
+    description: "Karachi records a wet-bulb temperature of 36C for 8 consecutive hours in July 2033, killing 4,200 people in a single day -- mostly outdoor workers and elderly residents without air conditioning; Baghdad, Jacobabad, and Chennai implement 'heat curfews' banning outdoor activity from 10am-4pm for 3 months of the year"
+    explanation: "The urban heat island effect adds 4-8C to already-extreme ambient temperatures, pushing tropical megacities past the threshold of human survivability during peak heat events; cities become seasonal -- functional for 9 months, dangerous for 3 -- and the poor, who cannot afford air conditioning or who must work outdoors, bear the fatal burden"
     world_state_effects:
       conflict_deaths: "+10000"
       climate_temp_anomaly: "+0.03"
   remote_reversal:
     status: "DIVERGENCE"
-    description: "Remote work and virtual presence technology reverses urbanization trend"
-    explanation: "AI-enabled remote work eliminates urban premium; population disperses to smaller communities"
+    description: "Holographic telepresence and AI collaboration tools make physical offices irrelevant for 180 million knowledge workers globally; Boise, Galway, Chiang Mai, and Oaxaca become boomtowns as remote workers flee expensive, crowded metros; Manhattan office vacancy hits 38% and landlords convert towers to vertical farms and micro-apartments"
+    explanation: "The AI-remote-work combination does what COVID only hinted at: when an AI assistant handles scheduling, note-taking, and follow-ups, and a holographic display makes remote meetings indistinguishable from in-person, the case for paying $4,000/month rent in San Francisco evaporates; smaller cities with good broadband, low costs, and high quality of life become the new centers of economic gravity"
     world_state_effects:
       global_gdp: "+0.01"
   mega_city_governance:
     status: "DIVERGENCE"
-    description: "Mega-cities develop autonomous governance structures rivaling nation-states"
-    explanation: "Cities of 30+ million develop independent policy frameworks for climate, immigration, and economy"
+    description: "Lagos Governor Adebayo Ogunlesi signs climate pledges more ambitious than Nigeria's national targets; Tokyo's metropolitan government negotiates a direct trade agreement with Singapore bypassing Japan's foreign ministry; the C40 Cities network, now representing 600 million people, operates a parallel diplomacy that increasingly sets the global agenda"
+    explanation: "Megacities with GDPs larger than most countries -- Tokyo ($2.1T), New York ($1.9T), Shanghai ($1.4T), Lagos ($680B) -- find national governments too slow, too rural-focused, and too captured by fossil fuel interests to address urban needs; they form direct city-to-city partnerships on climate, public health, and technology standards that function as de facto international policy"
     world_state_effects:
       governance_model: "+0.03"

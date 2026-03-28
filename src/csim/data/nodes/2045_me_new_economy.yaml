@@ -2,9 +2,11 @@ id: "2045_me_new_economy"
 year_month: "2045-01"
 title: "Middle East New Economy"
 description: >
-  Middle Eastern nations confront the post-oil economic reality. Whether the region
-  successfully transitions to new industries or faces economic collapse determines
-  stability for hundreds of millions.
+  Saudi Aramco's market cap has fallen 82% from its 2029 peak as global oil demand
+  drops below 40 million barrels per day. In Riyadh, the gleaming NEOM megacity --
+  once promised as a $500 billion tech utopia -- stands half-finished, its glass
+  towers reflecting empty desert. Crown Prince Khalid bin Mohammed faces a choice:
+  reinvent or collapse.
 domain: "regional"
 confidence: "MEDIUM"
 variable: "me_new_economy_status"
@@ -36,34 +38,34 @@ conditional: null
 outcomes:
   hydrogen_economy:
     status: "DIVERGENCE"
-    description: "Gulf states leverage solar resources to become global hydrogen exporters"
+    description: "Saudi Arabia's 'Solar to Hydrogen' initiative covers 22,000 km2 of Empty Quarter desert with photovoltaic arrays feeding the world's largest electrolyzers. Green hydrogen ships depart Jeddah for Rotterdam and Yokohama weekly; the Kingdom earns more from hydrogen in 2047 than it ever earned from oil in a single year."
     world_state_effects:
       middle_east_stability: "+0.10"
       renewable_energy_share: "+0.05"
   tourism_tech:
     status: "DIVERGENCE"
-    description: "Region pivots to tourism, technology hubs, and financial services"
+    description: "Dubai welcomes 48 million tourists annually to climate-controlled megamalls and indoor ski slopes; Abu Dhabi's 'Innovation Island' hosts 2,300 AI startups; Bahrain becomes the Middle Eastern Singapore of fintech. The strategy works for the Gulf's small populations but leaves Egypt's 130 million and Iraq's 65 million untouched."
     world_state_effects:
       middle_east_stability: "+0.05"
   collapse:
     status: "ESCALATED"
-    description: "Economic diversification fails; petrostates face fiscal collapse and social unrest"
+    description: "Saudi Arabia burns through its last sovereign wealth fund reserves; public sector salaries go unpaid for three months. Riots erupt in Jeddah and Dammam; migrant workers, stranded without exit visas or wages, storm the Indian embassy in Riyadh. Kuwait's ruling family flees to London. The petrodollar era ends not with a whimper but a riot."
     world_state_effects:
       middle_east_stability: "-0.15"
       conflict_deaths: "+15000"
   renewed_conflict:
     status: "ESCALATED"
-    description: "Economic stress reignites regional conflicts and proxy wars"
+    description: "Desperate for revenue, Saudi Arabia and Iran compete for control of Iraq's remaining oil infrastructure, funding rival militias in Basra. Yemen's civil war, never truly ended, reignites as UAE-backed forces clash with Iranian proxies over the Bab el-Mandeb strait. Weapons flow freely as bankrupt states sell their arsenals to the highest bidder."
     world_state_effects:
       middle_east_stability: "-0.12"
       conflict_deaths: "+25000"
   diaspora_driven:
     status: "DIVERGENCE"
-    description: "Educated diaspora drives economic transformation through tech and investment"
+    description: "Lebanese-American venture capitalist Rania Khoury launches the $40 billion 'Return Fund,' channeling diaspora wealth into Middle Eastern startups. Iranian-Canadian engineer Dariush Ahmadi builds a 3D-printed housing factory in Isfahan employing 12,000 people. The region's most valuable export turns out to have been its people all along."
     world_state_effects:
       middle_east_stability: "+0.03"
   foreign_dependency:
     status: "DIVERGENCE"
-    description: "Region becomes dependent on Chinese or Western investment and technology"
+    description: "China's Belt and Road 3.0 builds ports, data centers, and solar farms across the Gulf in exchange for 50-year resource concessions. Every new highway in Oman has Chinese signage; Mandarin becomes the third most-studied language in Saudi schools. Critics call it 'colonialism with better infrastructure'; Beijing calls it 'mutual development.'"
     world_state_effects:
       middle_east_stability: "-0.03"

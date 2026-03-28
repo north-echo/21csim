@@ -2,10 +2,11 @@ id: "2031_space_debris_cleanup"
 year_month: "2031-06"
 title: "Space Debris Cleanup Industry"
 description: >
-  As mega-constellations proliferate and Kessler syndrome risk grows, a new
-  industry emerges to actively remove orbital debris. Whether cleanup technology
-  matures fast enough to prevent catastrophic cascading collisions determines
-  the future of orbital access.
+  Astroscale's 'ELSA-M3' servicer successfully deorbits a dead Starlink satellite
+  on live television; meanwhile, the US Space Force tracks 42,000 objects larger than
+  10cm in low Earth orbit -- triple the count from 2025. Swiss startup ClearSpace
+  and Japanese firm Kawasaki Heavy Industries race to scale cleanup operations before
+  the math turns catastrophic.
 domain: "space"
 confidence: "MEDIUM"
 variable: "debris_cleanup_status"
@@ -36,34 +37,34 @@ conditional: null
 outcomes:
   successful_industry:
     status: "DIVERGENCE"
-    description: "Active debris removal becomes a thriving industry; orbital environment stabilized"
-    explanation: "Robotic servicers and laser-based deorbiting prove effective; space agencies contract cleanup firms"
+    description: "Astroscale, ClearSpace, and newcomer Orbital Guardians (a Bangalore-based ISRO spinoff) remove 1,800 objects in 2031 alone; NASA and ESA sign $12 billion in 5-year cleanup contracts, and the tracked debris count falls for the first time in the Space Age"
+    explanation: "Ground-based laser nudging handles small debris while robotic capture vehicles grapple larger objects; the cleanup industry employs 14,000 engineers across Houston, Darmstadt, and Tsukuba, and debris removal fees baked into launch costs create a self-sustaining economic model"
     world_state_effects:
       space_development_index: "+0.06"
     cascading_modifiers:
       2045_space_economy.on_track: "+0.03"
   partial_cleanup:
     status: "DIVERGENCE"
-    description: "Cleanup technology works but cannot keep pace with debris generation"
-    explanation: "Removal missions operational but new launches outpace cleanup; net debris still growing slowly"
+    description: "ClearSpace removes 400 objects per year but SpaceX, Amazon, and China's Guo Wang constellation launch 6,000 new satellites annually; the debris count keeps climbing despite $8 billion in annual cleanup spending -- like bailing out a boat while the hole gets bigger"
+    explanation: "The technology works brilliantly in demos but cannot scale fast enough; each cleanup mission costs $4-8 million per object while launching new satellites costs a fraction of that, creating a perverse incentive structure that the market alone cannot resolve"
     world_state_effects:
       space_development_index: "+0.03"
   technology_fails:
     status: "DIVERGENCE"
-    description: "Debris removal technology proves too expensive or unreliable at scale"
-    explanation: "Prototype missions succeed but economics don't work; orbital environment slowly degrades"
+    description: "Astroscale's stock crashes 68% after its ELSA-M4 servicer accidentally fragments a target into 200 pieces during a capture attempt; ClearSpace's laser system proves ineffective against tumbling objects; investors flee the sector"
+    explanation: "The engineering challenge of grappling unpredictable, spinning debris in vacuum turns out to be far harder than controlled demonstrations suggested; after three high-profile mission failures in 18 months, insurers refuse to underwrite cleanup operations and government contracts dry up"
     world_state_effects:
       space_development_index: "-0.02"
   international_treaty:
     status: "DIVERGENCE"
-    description: "Major space powers sign binding debris mitigation treaty; cleanup funded internationally"
-    explanation: "Near-miss events drive diplomatic consensus; UN Space Sustainability Treaty enacted"
+    description: "After a defunct Russian rocket body nearly collides with the ISS in March 2031 -- forcing emergency evacuation of all 11 crew -- the UN General Assembly passes the Outer Space Sustainability Treaty with binding deorbit requirements, a $25,000 per-satellite launch fee funding cleanup, and mandatory collision insurance"
+    explanation: "Kenyan ambassador to the UN Wanjiku Ndegwa, whose country lost $600 million in crop-monitoring satellite services after a 2030 debris incident, leads the diplomatic push; even China signs after calculating that its own Tiangong-3 station faces a 12% annual collision probability"
     world_state_effects:
       space_development_index: "+0.05"
       global_democracy_index: "+0.01"
   too_late:
     status: "ESCALATED"
-    description: "Debris cascade begins before cleanup technology is ready; LEO access severely restricted"
-    explanation: "Chain reaction in congested orbits outpaces remediation efforts; satellite services disrupted"
+    description: "A collision between a dead Starlink satellite and a Chinese Guo Wang satellite at 550km triggers a cascade that destroys 340 satellites in 72 hours; GPS accuracy degrades to 50-meter precision, aviation navigation systems revert to ground-based backup, and global shipping loses real-time tracking"
+    explanation: "The cascade occurs in the most congested orbital shell before any cleanup firm has achieved operational scale; the debris cloud spreads like ink in water, rendering the 500-600km band unusable for a projected 8-15 years and stranding $90 billion in orbital infrastructure"
     world_state_effects:
       space_development_index: "-0.08"

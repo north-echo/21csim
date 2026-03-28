@@ -2,10 +2,11 @@ id: "2048_asteroid_mining"
 year_month: "2048-06"
 title: "Asteroid Redirect Mission"
 description: >
-  First mission to redirect a near-Earth asteroid into a stable orbit for
-  mining operations. Asteroids contain trillions of dollars worth of platinum
-  group metals, water, and rare earth elements. Success could transform
-  resource economics; failure could set space mining back decades.
+  AstroForge's autonomous spacecraft 'Midas' reaches near-Earth asteroid 2019 UO14,
+  a 340-meter carbonaceous chondrite containing an estimated $11.2 trillion in
+  platinum group metals and rare earths. Mission director Catalina Reyes-Nakamura
+  watches from Houston as ion thrusters fire to begin the 14-month process of
+  nudging 2.8 million tons of rock toward a stable cislunar orbit.
 domain: "space"
 confidence: "LOW"
 variable: "asteroid_mining_status"
@@ -22,35 +23,35 @@ conditional: null
 outcomes:
   successful_redirect:
     status: "DIVERGENCE"
-    description: "Near-Earth asteroid successfully captured and placed in lunar orbit for study and mining"
-    explanation: "Ion propulsion and autonomous guidance systems redirect a 500-ton asteroid; sample analysis confirms resource wealth"
+    description: "After 14 months of continuous thrust, Midas parks asteroid 2019 UO14 in a stable Earth-Moon L2 orbit. Sample analysis confirms 4,200 tons of platinum, 890 tons of rhodium, and 12,000 tons of water ice. Reyes-Nakamura's team celebrates with freeze-dried champagne; mining industry stocks worldwide drop 8% in a single trading session as markets price in the asteroid's implications."
+    explanation: "Solar-electric ion propulsion, refined through two decades of deep-space missions, provides the gentle sustained thrust needed to redirect a multi-million-ton asteroid without fragmenting it."
     world_state_effects:
       space_development_index: "+0.10"
     cascading_modifiers:
       2055_mars_self_sufficient.thriving: "+0.03"
   mining_operational:
     status: "DIVERGENCE"
-    description: "Asteroid mining produces first commercial quantities of platinum group metals"
-    explanation: "Automated extraction and processing in orbit; materials returned to Earth or used in space construction"
+    description: "Autonomous mining robots process 800 tons of asteroid material per month, separating platinum group metals through solar-heated sublimation. The first 12-ton shipment of platinum arrives at the ESA receiving facility in Kourou via re-entry capsule -- more platinum in one delivery than South Africa mines in a year. Terrestrial platinum prices drop 70%; the entire mining economics of southern Africa trembles."
+    explanation: "Space-based extraction avoids the environmental cost of terrestrial mining but creates economic devastation in mining-dependent regions. South African mining unions demand international regulation of 'sky metals.'"
     world_state_effects:
       space_development_index: "+0.15"
       global_gdp_growth_modifier: "+0.01"
   redirect_fails:
     status: "DIVERGENCE"
-    description: "Asteroid redirect mission fails; sets back space mining ambitions by a decade"
-    explanation: "Propulsion system malfunction or targeting error; asteroid escapes capture trajectory"
+    description: "Midas's ion thruster array suffers cascading failures 9 months into the redirect; the asteroid drifts past the capture point and continues into a solar orbit unreachable by current propulsion. The $8.4 billion mission produces nothing but trajectory data. AstroForge's stock drops 94%; Reyes-Nakamura resigns, telling reporters 'space doesn't care about your business plan.'"
+    explanation: "The thruster failure traces to a manufacturing defect in the solar panel wiring harness -- a $200 component that doomed an $8 billion mission. Space mining's economics already demanded perfection; one failure proves the margins cannot absorb risk."
     world_state_effects:
       space_development_index: "-0.03"
   too_expensive:
     status: "DIVERGENCE"
-    description: "Asteroid mining technically possible but economics don't close; terrestrial alternatives cheaper"
-    explanation: "Launch and processing costs exceed the value of returned materials; investors retreat"
+    description: "Midas successfully parks the asteroid but the processing economics are brutal: extracting and returning platinum costs $48,000 per ounce versus $1,200 for terrestrial mining. Deep-sea mining and landfill reclamation using AI robotics prove far cheaper. The asteroid floats in cislunar space like a trillion-dollar savings account nobody can afford to withdraw from."
+    explanation: "The fundamental problem is energy: refining ore in space requires either imported equipment or solar furnaces that take years to build. Meanwhile, Earth-based alternatives keep getting cheaper, moving the goalposts every year."
     world_state_effects:
       space_development_index: "+0.02"
   international_program:
     status: "DIVERGENCE"
-    description: "Multinational asteroid mining program shares costs and resources across space agencies"
-    explanation: "No single nation can afford it alone; UN-brokered consortium pools funding and technology"
+    description: "The International Asteroid Mining Consortium -- US, EU, China, Japan, India, and Brazil -- pools $34 billion for a shared redirect-and-mine mission, splitting extraction rights proportional to contribution. Indian roboticist Dr. Vikram Desai designs the mining platform; Japanese engineers build the ion drive; American mission control guides the operation. Proceeds fund a global development trust."
+    explanation: "When no single nation could justify the cost alone, UN Secretary-General Adeyemi brokered the first truly international space resource venture, modeled on CERN but with a profit motive."
     world_state_effects:
       space_development_index: "+0.08"
       global_democracy_index: "+0.01"

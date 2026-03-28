@@ -2,9 +2,12 @@ id: "2095_final_climate"
 year_month: "2095-01"
 title: "Final Climate State"
 description: >
-  The definitive climate outcome for the 21st century. After nearly a hundred
-  years of emissions, mitigation, and adaptation, the planet's thermal state
-  is assessed.
+  The final WMO Climate Assessment of the 21st century was released on January
+  1, 2095, from the Nairobi Climate Observatory. Lead author Dr. Ibrahima Sow
+  of Senegal, now 82, began his career measuring Sahel rainfall and ends it
+  pronouncing judgment on a century of planetary transformation. His opening
+  line: "We know now what the planet thinks of us. The evidence is in. The
+  verdict is the temperature."
 domain: "climate"
 confidence: "LOW"
 variable: "final_climate_status"
@@ -22,31 +25,31 @@ conditional: null
 outcomes:
   stabilized:
     status: "DIVERGENCE"
-    description: "Climate system stabilized; temperatures no longer rising and within manageable bounds"
+    description: "Global mean temperature: +2.0C above pre-industrial, holding steady for 15 years. The fever broke. Miami survived behind its wall; Bangladesh rebuilt on stilts; the Sahel learned to farm with half the rain. Dr. Sow stood at the podium for a long time before speaking: 'My generation made the mess. Your generation cleaned it up. Both of us should be ashamed and proud in equal measure. That is the correct feeling.'"
     world_state_effects:
       climate_temp_anomaly: "+0.00"
   recovering:
     status: "DIVERGENCE"
-    description: "Active recovery underway with temperatures declining toward pre-industrial levels"
+    description: "Atmospheric CO2: 340 ppm and falling -- below the level when Dr. Sow was born. The direct-air-capture fleet, the rewilded continents, and the orbital mirrors have pulled the planet back from the edge. Temperatures have dropped 0.8C from their peak. Arctic sea ice is reforming for the first time in 40 years; a Danish research vessel photographed thin new ice off Svalbard and the image made grown climatologists cry. 'We are witnessing something unprecedented,' Dr. Sow said. 'A planet forgiving the species that hurt it.'"
     world_state_effects:
       climate_temp_anomaly: "-0.20"
   damaged:
     status: "ESCALATED"
-    description: "Permanent climate damage locked in; some regions uninhabitable, ecosystems irreversibly altered"
+    description: "Sea level: +1.4 meters. Species lost: 40% of all mammals, 60% of amphibians, 90% of coral species. Regions rendered uninhabitable: the Persian Gulf coast, Central India's plains in summer, sub-Saharan Africa's interior. The Maldives exist only as a digital archive and a scattered diaspora. Dr. Sow's report included a section titled 'The Permanent Losses' that runs to 400 pages. 'These pages,' he wrote in the introduction, 'are headstones.'"
     world_state_effects:
       climate_temp_anomaly: "+0.30"
   catastrophic:
     status: "ESCALATED"
-    description: "Runaway warming continues; mass extinction and civilization-threatening conditions"
+    description: "At +4.8C, the planet is unrecognizable. The Amazon is grassland. The Mediterranean is arid steppe. The Ganges Delta is ocean. An estimated 2 billion people have been displaced; 400 million live in climate refugee camps that have become permanent cities. Dr. Sow could not finish reading his report at the podium. He stopped at the section on projected 2100 temperatures, removed his glasses, and said: 'I am sorry. I am sorry that we knew and did not act. I am sorry that I am leaving this to you.' He sat down. Nobody spoke."
     world_state_effects:
       climate_temp_anomaly: "+1.00"
   geoengineered:
     status: "DIVERGENCE"
-    description: "Climate maintained through ongoing geoengineering; stable but artificially dependent"
+    description: "The Climate Maintenance Authority celebrates its 30th anniversary in 2095. Its stratospheric aerosol fleet, orbital mirror array, and ocean alkalinity program hold temperatures at +1.8C -- but the system runs on a $5 trillion annual budget and can never be turned off. Dr. Sow described it as 'the most expensive life-support machine in history, keeping a planet alive that we nearly killed. The bill comes due every year, forever. Our grandchildren will pay it, and their grandchildren after them.'"
     world_state_effects:
       climate_temp_anomaly: "-0.10"
   adapted:
     status: "DIVERGENCE"
-    description: "Climate significantly altered but civilization has fully adapted to new conditions"
+    description: "At +2.6C, Earth is hotter, wetter in some places and drier in others, and home to fewer species than at any point in 66 million years. But humanity lives here -- in floating cities, underground complexes, vertical farms, and climate-controlled habitats. A 10-year-old in 2095 has never seen snow outside a museum display. Dr. Sow's final assessment was philosophical: 'We adapted. We survived. Whether we are living on the same planet our ancestors knew is a matter of definition. The rocks are the same. Everything else has changed.'"
     world_state_effects:
       climate_temp_anomaly: "+0.15"

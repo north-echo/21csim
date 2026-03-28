@@ -2,9 +2,11 @@ id: "2034_israel_palestine"
 year_month: "2034-06"
 title: "Israel-Palestine Resolution"
 description: >
-  The long-term trajectory of the Israel-Palestine conflict. Whether a
-  political resolution emerges, the status quo entrenches, or the
-  situation escalates further.
+  A decade after the 2023-24 Gaza war, 2.8 million Palestinians live under
+  varying degrees of Israeli military control with no political horizon; the
+  International Court of Justice has issued 4 advisory opinions that Israel
+  has ignored; and a generation of Palestinian children who grew up under
+  bombardment are now young adults with nothing to lose.
 domain: "geopolitical"
 confidence: "MEDIUM"
 variable: "israel_palestine_status"
@@ -22,41 +24,41 @@ conditional: null
 outcomes:
   two_state:
     status: "DIVERGENCE"
-    description: "Two-state solution negotiated and implemented"
-    explanation: "International pressure and new leadership on both sides achieve historic compromise"
+    description: "Israeli PM Yair Golan and Palestinian PM Mustafa Barghouti sign the 'Geneva Framework' on the lawn of the Palais des Nations: a demilitarized Palestinian state on 94% of the West Bank with East Jerusalem shared, 120,000 settlers relocated over 10 years with $45 billion in international compensation, and a symbolic return of 100,000 refugees to Israel proper"
+    explanation: "The deal becomes possible only after three preconditions align: a centrist Israeli government elected on a security-and-peace platform after the far-right coalition collapsed, a unified Palestinian leadership that credibly renounces violence, and massive American and Saudi financial guarantees that make the economic transition viable for both sides"
     world_state_effects:
       conflict_deaths: "-5000"
       us_global_standing: "+0.03"
   one_state_reality:
     status: "DIVERGENCE"
-    description: "De facto one-state reality consolidates with unequal rights"
-    explanation: "Settlement expansion and demographic trends make partition impossible; apartheid comparisons intensify"
+    description: "890,000 Israeli settlers now live in the West Bank; the separation barrier has been replaced by AI-monitored checkpoints that use facial recognition; Palestinians require permits to travel between cities; Human Rights Watch and B'Tselem jointly issue a 400-page report concluding 'the conditions for apartheid under international law are met in full'"
+    explanation: "The physical facts on the ground -- roads, settlements, military installations, water infrastructure -- have made partition logistically impossible without massive forced relocation that no Israeli government will undertake; the result is a single territorial entity with two populations living under different legal systems, which the world increasingly refuses to call anything other than what it is"
     world_state_effects:
       conflict_deaths: "+5000"
       us_global_standing: "-0.03"
   confederation:
     status: "DIVERGENCE"
-    description: "Novel confederation model provides shared sovereignty"
-    explanation: "Creative diplomatic framework offers both peoples self-governance within shared geographic space"
+    description: "The 'Land of Canaan Confederation' proposal -- developed by Israeli philosopher Micah Goodman and Palestinian political scientist Dr. Hanan Ashrawi's protege Nadia Hijab -- creates two sovereign governments sharing one territory: open borders, joint economic zone, shared Jerusalem municipality, separate legal and education systems, and a confederal security council"
+    explanation: "The model draws on the Belgian, Bosnian, and Northern Irish precedents while adapting them to the unique territorial entanglement; settlers stay but live under Palestinian municipal jurisdiction, Palestinian refugees return to the confederation (not specifically to Israel), and Jerusalem becomes a 'corpus separatum' administered by a joint council -- messy, imperfect, but functional"
     world_state_effects:
       conflict_deaths: "-3000"
   escalation:
     status: "ESCALATED"
-    description: "Major escalation involving regional powers"
-    explanation: "Conflict expands to draw in Iran, Hezbollah, and potentially other regional actors"
+    description: "A Hezbollah precision-guided missile strike on Haifa's petrochemical complex kills 340 people; Israel retaliates with airstrikes on Beirut's southern suburbs and Iranian nuclear facilities; Iran fires 500 ballistic missiles at Israeli cities, most intercepted by Arrow-4 but 23 reach their targets; the US carrier strike group in the Eastern Mediterranean fires 200 Tomahawk missiles at Iranian military sites"
+    explanation: "The escalation ladder, once climbed, proves impossible to descend: each side's red line triggers the other's, and the conflict draws in Iran directly rather than through proxies; 52,000 people die across four countries in 6 weeks of fighting before an emergency ceasefire brokered by China and India halts the spiral short of nuclear use -- but the region's infrastructure is devastated and the political landscape permanently altered"
     world_state_effects:
       conflict_deaths: "+50000"
       nuclear_risk_level: "+0.03"
   status_quo:
     status: "DIVERGENCE"
-    description: "Conflict continues at low boil; no resolution in sight"
-    explanation: "Neither peace nor full war; periodic flare-ups but fundamental dynamics unchanged"
+    description: "The tenth anniversary of the 2023-24 Gaza war passes with a memorial in Gaza City and a security cabinet meeting in Jerusalem; periodic IDF raids in Jenin and Tulkarm, occasional rocket fire from Gaza, settlement construction continuing at 8,000 units/year; the conflict has become background noise, a permanent low-grade wound that neither kills the patient nor heals"
+    explanation: "Both leaderships find the status quo preferable to the risks of change: Israeli governments gain votes from settlement expansion, Palestinian leaders maintain international sympathy and aid flows as victims, and the human cost -- 200-400 deaths per year, thousands detained, economic stagnation -- is borne by ordinary people whose suffering has become geopolitically invisible"
     world_state_effects:
       conflict_deaths: "+2000"
   international_intervention:
     status: "DIVERGENCE"
-    description: "International peacekeeping force deployed; externally imposed solution"
-    explanation: "UN or multinational force imposes ceasefire and interim governance arrangement"
+    description: "After a particularly deadly IDF operation kills 800 civilians in Rafah, the UN Security Council -- with the US abstaining rather than vetoing for the first time -- authorizes a 35,000-strong multinational protection force; Indonesian, Brazilian, and Indian troops deploy to the West Bank and Gaza under a Chapter VII mandate, with a 5-year timeline to oversee elections for a Palestinian transitional authority"
+    explanation: "The deployment is imperfect and resented by both sides: Israel calls it a violation of sovereignty, Hamas denounces it as occupation by other means, and the peacekeepers face daily friction; but the international community concludes that the parties cannot resolve the conflict themselves, and the combination of protection force, massive reconstruction aid, and a credible political process reduces violence by 90% within the first year"
     world_state_effects:
       conflict_deaths: "-2000"
       us_global_standing: "+0.02"

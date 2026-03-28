@@ -2,9 +2,12 @@ id: "2058_life_extension"
 year_month: "2058-01"
 title: "Life Extension"
 description: >
-  Biomedical advances confront the biology of aging directly. Whether significant
-  life extension is achieved, and for whom, raises profound questions about
-  inequality, pensions, and the meaning of a human lifespan.
+  Dr. Yara Santos at the Buck Institute for Research on Aging publishes results
+  from the first 10-year human trial of senolytics combined with telomere
+  extension therapy. Her 2,400 subjects, average age 68 at enrollment, now have
+  the biomarkers of 50-year-olds: clear arteries, dense bones, sharp cognition.
+  "We have not cured death," she tells Nature, "but we have made aging optional
+  for those who can access the treatment." That last clause is doing a lot of work.
 domain: "technology"
 confidence: "LOW"
 variable: "life_extension_status"
@@ -22,35 +25,35 @@ conditional: null
 outcomes:
   plus_10_years:
     status: "DIVERGENCE"
-    description: "Average lifespan extended by 10 years through anti-aging therapies"
+    description: "Dr. Santos' senolytic-telomere protocol becomes standard of care in OECD nations, covered by national health systems. Average life expectancy in Japan reaches 98; in Scandinavia, 96. Retirement ages rise to 80; a 75-year-old marathoner becomes the face of 'the longevity generation.' Pension systems, designed for people who died at 78, face $40 trillion in unfunded liabilities."
     world_state_effects:
       us_life_expectancy_delta: "+10.0"
       inequality_index: "+0.03"
   plus_20_years:
     status: "DIVERGENCE"
-    description: "Dramatic life extension of 20+ years achieved through cellular reprogramming"
+    description: "Yamanaka factor therapy, refined by Dr. Hiroshi Nakamura at Kyoto University, partially reprograms adult cells to a younger state without causing cancer. Combined with Santos' protocol, human biological age can be reversed by 20 years. A 90-year-old Japanese calligrapher undergoes treatment and resumes teaching; his hands steady, his eyes sharp, his students bewildered by a sensei who looks younger than they do."
     world_state_effects:
       us_life_expectancy_delta: "+20.0"
       inequality_index: "+0.08"
   minimal:
     status: "DIVERGENCE"
-    description: "Aging proves resistant to intervention; gains limited to incremental improvements"
+    description: "After $800 billion in global research spending, the biology of aging proves stubbornly complex: senolytics help joints but not brains; telomere extension increases cancer risk; Yamanaka factors work in mice but cause tumors in 12% of human subjects. Life expectancy gains average 2.3 years -- better than nothing, indistinguishable from improvements in diet and exercise. The longevity revolution delivers a pamphlet where it promised a library."
     world_state_effects:
       us_life_expectancy_delta: "+2.0"
   elite_only:
     status: "DIVERGENCE"
-    description: "Effective life extension exists but costs limit access to the ultra-wealthy"
+    description: "The Santos protocol works beautifully -- but requires quarterly infusions of personalized senolytic cocktails costing $340,000 per year, manufactured in sterile facilities that only 12 clinics worldwide operate. Tech billionaires, Gulf royals, and former heads of state age gracefully in private compounds while the rest of humanity dies on schedule. 'Longevity apartheid' enters the political lexicon."
     world_state_effects:
       us_life_expectancy_delta: "+3.0"
       inequality_index: "+0.15"
   anti_aging_breakthrough:
     status: "DIVERGENCE"
-    description: "Fundamental breakthrough in aging biology makes radical life extension possible for all"
+    description: "Dr. Santos' former postdoc, Nigerian-British biochemist Dr. Adaeze Okonkwo, discovers that a single oral pill -- a combination of rapamycin analogue, NAD+ precursor, and senolytic -- achieves 80% of the full protocol's benefits at a manufacturing cost of $4 per month. Cipla in India begins mass production within a year. For $48 annually, any human on Earth can add 15 healthy years to their life."
     world_state_effects:
       us_life_expectancy_delta: "+15.0"
       inequality_index: "-0.02"
   rejected:
     status: "DIVERGENCE"
-    description: "Society rejects life extension technology on ethical, religious, or ecological grounds"
+    description: "Pope Francis III declares life extension 'contrary to God's design for the human soul'; the Islamic Council of Jurisprudence issues a fatwa against it; Japan's National Ethics Board rules it 'incompatible with intergenerational justice.' Even secular environmentalists object: 'The planet cannot sustain 9 billion people who refuse to die.' In a global referendum organized by the UN, 58% vote against public funding for life extension research."
     world_state_effects:
       us_life_expectancy_delta: "+1.0"

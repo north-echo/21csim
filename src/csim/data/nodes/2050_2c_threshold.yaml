@@ -2,9 +2,11 @@ id: "2050_2c_threshold"
 year_month: "2050-01"
 title: "2C Threshold Status"
 description: >
-  The world reaches the mid-century climate checkpoint. Whether global warming
-  stays under 2 degrees Celsius or exceeds it determines the severity of climate
-  impacts for the rest of the century.
+  The WMO's 2050 Global Climate Report lands on every head of state's desk at 6 AM
+  Geneva time. Lead author Dr. Fatima Benali of the University of Algiers has spent
+  three years compiling data from 14,000 monitoring stations. The single number that
+  matters -- global mean temperature anomaly since pre-industrial -- will determine
+  whether the Paris Agreement was history's greatest achievement or its cruelest lie.
 domain: "climate"
 confidence: "LOW"
 variable: "2c_threshold_status"
@@ -21,26 +23,26 @@ conditional: null
 outcomes:
   under_2c:
     status: "DIVERGENCE"
-    description: "Aggressive mitigation keeps warming below 2C; Paris Agreement targets met"
+    description: "Dr. Benali's report reads +1.8C. The Paris Agreement target holds. Three decades of brutal carbon taxes, $40 trillion in renewable investment, and the premature death of the fossil fuel industry bent the curve just enough. Champagne flows at the UNFCCC headquarters in Bonn, but Benali warns: 'We are not safe. We are merely not yet doomed.'"
     world_state_effects:
       climate_temp_anomaly: "-0.10"
   at_2c:
     status: "DIVERGENCE"
-    description: "Warming reaches exactly 2C; impacts severe but manageable with adaptation"
+    description: "The number reads +2.0C exactly -- the razor's edge. Coral reefs are 70% gone, monsoon patterns permanently shifted, and 340 million people displaced by sea level rise. But industrial agriculture adapts, most cities hold their flood barriers, and humanity has stabilized emissions. 'We hit the guardrail but stayed on the road,' says Benali. The road ahead is rough but navigable."
     world_state_effects:
       climate_temp_anomaly: "+0.05"
   over_2_5c:
     status: "ESCALATED"
-    description: "Warming exceeds 2.5C; tipping points triggered, adaptation increasingly difficult"
+    description: "The report reads +2.6C. The Amazon dieback has begun, Greenland's ice sheet is in irreversible decline, and permafrost methane emissions are self-reinforcing. Benali presents the data in a monotone; halfway through, she removes her glasses and says, 'We have passed thresholds we told you not to pass. What happens next is no longer entirely in our hands.'"
     world_state_effects:
       climate_temp_anomaly: "+0.20"
   over_3c:
     status: "ESCALATED"
-    description: "Warming exceeds 3C; catastrophic and potentially irreversible climate change"
+    description: "The number reads +3.2C. Benali does not present the report; she publishes it silently and withdraws from public life. The world it describes: wet-bulb temperatures exceeding human survivability across South Asia and the Persian Gulf for 45 days per year; global agricultural output down 28%; 1.2 billion people in climate-driven migration. The word 'irreversible' appears 47 times in the executive summary."
     world_state_effects:
       climate_temp_anomaly: "+0.40"
   recovery_path:
     status: "DIVERGENCE"
-    description: "Carbon removal technologies put the world on a path to declining temperatures"
+    description: "The report reads +2.1C -- but falling. Massive direct air capture installations in Iceland, Australia, and Patagonia remove 12 gigatons of CO2 annually; enhanced weathering of olivine across 800,000 km2 of tropical farmland sequesters another 5 gigatons. For the first time since the Industrial Revolution, atmospheric CO2 concentration is declining. Benali allows herself a rare smile: 'We broke it, and now we are fixing it.'"
     world_state_effects:
       climate_temp_anomaly: "-0.20"

@@ -2,9 +2,11 @@ id: "2038_autonomous_weapons"
 year_month: "2038-06"
 title: "Autonomous Weapons Systems"
 description: >
-  The proliferation and governance of fully autonomous lethal weapons systems.
-  Whether international law can constrain weapons that select and engage
-  targets without human intervention.
+  A swarm of 200 Turkish-made Kargu-3 autonomous drones, operating without
+  any human operator, identifies and kills 14 Kurdish militants in northern
+  Syria -- the first confirmed fully autonomous lethal engagement in history.
+  The video, captured by the drones' own cameras, shows target selection,
+  classification, and strike execution in 0.8 seconds. No human touched a button.
 domain: "security"
 confidence: "MEDIUM"
 variable: "autonomous_weapons_status"
@@ -35,36 +37,36 @@ conditional: null
 outcomes:
   proliferation:
     status: "DIVERGENCE"
-    description: "Autonomous weapons deployed by dozens of nations with minimal regulation"
-    explanation: "Arms manufacturers drive adoption; no effective international controls emerge"
+    description: "47 nations operate autonomous weapons systems by 2038, from $500 commercial drones modified with facial recognition to $40 million autonomous fighter jets; Turkey, Israel, China, the UAE, and South Korea are the top exporters; a Rwandan general purchases 10,000 autonomous patrol drones for $18 million -- less than the cost of a single manned helicopter"
+    explanation: "Proliferation follows the same pattern as drones a decade earlier: once major powers deploy, allies demand access, and the export market creates competitive pressure to sell; the absence of any international legal framework means there is no regime to violate, and manufacturers exploit the grey zone between 'human-supervised' and 'fully autonomous' to sell systems that are functionally independent but technically have a human 'in the loop' who rubber-stamps machine decisions"
     world_state_effects:
       nuclear_risk_level: "+0.05"
       drone_warfare_prevalence: "+0.20"
   partial_ban:
     status: "DIVERGENCE"
-    description: "Treaty bans certain categories but loopholes allow continued development"
-    explanation: "International agreement restricts fully autonomous systems but defensive and semi-autonomous systems proliferate"
+    description: "The 'Vienna Protocol on Autonomous Weapons' bans offensive autonomous systems but permits 'defensive' and 'supervised' ones; the US, China, and Russia all sign, then classify their autonomous fighters as 'defensive,' their killer drones as 'human-supervised,' and their autonomous submarine hunters as 'mine countermeasures' -- every prohibited category has an approved synonym"
+    explanation: "The treaty is simultaneously a diplomatic achievement and a masterclass in bad faith: the text bans exactly the weapons every signatory already has, using definitions so narrow that simple relabeling achieves compliance; the Campaign to Stop Killer Robots calls it 'worse than no treaty at all, because it creates the illusion of governance while legitimizing everything it claims to prohibit'"
     world_state_effects:
       nuclear_risk_level: "+0.02"
       drone_warfare_prevalence: "+0.10"
   comprehensive_ban:
     status: "DIVERGENCE"
-    description: "Comprehensive international ban on autonomous lethal weapons"
-    explanation: "Global coalition achieves binding treaty with verification mechanisms"
+    description: "The 'Ottawa-2 Treaty' banning autonomous weapons -- modeled on the 1997 anti-personnel mine ban -- is signed by 124 nations after a campaign led by Nobel laureate Jody Williams' successor, Nigerian roboticist Dr. Ngozi Okonjo; the US, China, and Russia refuse to sign but face trade restrictions on AI components from signatory states, creating economic pressure to comply"
+    explanation: "The ban succeeds through the same mechanism as the landmine treaty: not by convincing major powers to disarm voluntarily, but by creating a global norm that stigmatizes the weapons and restricts the supply chains needed to build them; verification relies on AI-model auditing (checking whether military AI systems have autonomous targeting capabilities) and satellite monitoring of test ranges"
     world_state_effects:
       nuclear_risk_level: "-0.02"
       drone_warfare_prevalence: "+0.03"
   arms_race:
     status: "ESCALATED"
-    description: "Autonomous weapons arms race between major powers"
-    explanation: "US, China, and Russia pour resources into autonomous weapons; escalation dynamics intensify"
+    description: "The Pentagon's $94 billion 'Replicator-3' program fields 40,000 autonomous air and sea drones; China's PLA deploys autonomous submarine swarms in the South China Sea; Russia's 'Lancet-X' loitering munitions operate in wolf packs of 50 without human guidance; each side's systems are designed to overwhelm the other's defenses through speed and numbers no human operator could match"
+    explanation: "The arms race dynamics are terrifyingly straightforward: autonomous weapons that react in milliseconds defeat human-controlled ones that react in seconds; the advantage goes to whoever removes the human from the loop most completely, creating a race to the bottom on human oversight; military strategists warn that autonomous systems fighting each other could escalate a conflict from first shot to full engagement in under 60 seconds, far too fast for any political leader to intervene"
     world_state_effects:
       nuclear_risk_level: "+0.08"
       drone_warfare_prevalence: "+0.25"
   non_state_actors:
     status: "ESCALATED"
-    description: "Autonomous weapons technology acquired by non-state actors and terrorist groups"
-    explanation: "Commercial drone and AI technology enables non-state actors to build autonomous weapons"
+    description: "A Houthi-aligned group in Yemen deploys a swarm of 80 modified commercial drones with open-source facial recognition to attack a Saudi military convoy, killing 28 soldiers; ISIS remnants in the Sahel use autonomous patrol drones to defend territory against the Malian army; and a far-right militia in the US is arrested with 200 autonomously-guided drones configured to target specific individuals identified from social media photos"
+    explanation: "The democratization of AI and drone technology makes autonomous weapons accessible to anyone with $50,000 and a GitHub account: open-source computer vision models combined with commercial drones and 3D-printed munitions create a DIY weapons system that no export control can prevent; the implications for counter-terrorism, law enforcement, and personal security are catastrophic, as the asymmetric advantage shifts permanently toward attackers"
     world_state_effects:
       nuclear_risk_level: "+0.03"
       drone_warfare_prevalence: "+0.15"

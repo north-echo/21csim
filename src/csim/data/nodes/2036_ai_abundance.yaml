@@ -2,8 +2,11 @@ id: "2036_ai_abundance"
 year_month: "2036-06"
 title: "AI-Driven Abundance"
 description: >
-  When AI develops fast AND governance works, abundance follows —
-  but abundance creates its own problems.
+  Global GDP per capita passes $20,000 for the first time in history;
+  AI-driven automation produces goods so cheaply that a basic standard
+  of living costs less per person than at any point in human civilization.
+  The question that keeps philosophers, politicians, and therapists awake
+  at night: what do 8 billion people do when the machines do the work?
 domain: "technology"
 confidence: "LOW"
 variable: "ai_abundance_status"
@@ -19,8 +22,8 @@ conditional: "ai_development_year_offset > 0 AND governance_model > 0.4"
 outcomes:
   meaning_crisis:
     status: "DIVERGENCE"
-    description: "Material abundance achieved but widespread existential malaise; purpose collapses"
-    explanation: "With most labor automated and basic needs met, millions struggle to find meaning; mental health crisis deepens"
+    description: "Japan's suicide rate climbs 40% despite material comfort; 'purpose clinics' in Scandinavia treat a new diagnosis called 'abundance depression'; a bestselling book in 14 languages, 'The Useless Class' by Israeli historian Yuval Harari's student Noa Kirel, argues that evolution designed humans for struggle, not comfort; opioid and alcohol deaths in the US reach 280,000/year"
+    explanation: "Material abundance solves the problem of scarcity but reveals the problem of meaning: when survival requires no effort and work is optional, the structures that gave life purpose -- career, ambition, providing for family -- dissolve; religious communities and craft collectives thrive as people seek pre-industrial sources of meaning, while those without such anchors drift into addiction, virtual reality, and despair"
     world_state_effects:
       automation_displacement: "+0.20"
       inequality_index: "-0.05"
@@ -30,8 +33,8 @@ outcomes:
       global_democracy_index: "-0.03"
   creative_renaissance:
     status: "DIVERGENCE"
-    description: "Freed from toil, humans create; a new golden age of art, science, and culture"
-    explanation: "Universal basic income and AI tools enable mass creativity; scientific breakthroughs accelerate"
+    description: "With basic needs guaranteed by UBI and AI handling routine work, 340 million people worldwide pursue creative and scientific endeavors full-time; a former truck driver in Tennessee publishes a novel that wins the Pulitzer; an amateur astronomer collective in Chile discovers 14 exoplanets; the number of patents filed by individuals (not corporations) triples in 3 years; historians call it 'the New Florence'"
+    explanation: "The creative renaissance draws on historical precedent: the Athenian golden age, the Italian Renaissance, and the Bloomsbury Group all emerged when a class of people was freed from subsistence labor; the difference is scale -- AI democratizes the tools of creation so that anyone with talent and motivation can produce at professional quality, and the results are a cultural explosion that makes the early internet look like a warm-up act"
     world_state_effects:
       automation_displacement: "+0.15"
       inequality_index: "-0.08"
@@ -41,8 +44,8 @@ outcomes:
       global_democracy_index: "+0.03"
   concentration_of_power:
     status: "ESCALATED"
-    description: "AI owners become de facto rulers; corporate power eclipses democratic governance"
-    explanation: "A handful of AI companies control critical infrastructure; governments become dependent on private AI"
+    description: "Three companies -- Alphabet, Microsoft, and a merged Anthropic-OpenAI entity -- control 82% of frontier AI compute; their systems run power grids, financial markets, military logistics, and government services; when a billing dispute causes Microsoft to briefly suspend AI services to the state of Ohio, 4 million people lose access to healthcare scheduling, tax filing, and unemployment benefits for 36 hours"
+    explanation: "The concentration of AI power happens not through conspiracy but through the economics of scale: frontier models require $10+ billion to train, making competition impossible for all but the largest players; governments that outsourced critical functions to AI during the efficiency wave of 2029-2033 discover too late that they have created dependencies they cannot unwind, and the companies that control the AI control, in effect, the functioning of civilization"
     world_state_effects:
       inequality_index: "+0.15"
       global_democracy_index: "-0.08"
@@ -52,8 +55,8 @@ outcomes:
       internet_freedom_index: "-0.08"
   equitable_distribution:
     status: "DIVERGENCE"
-    description: "AI benefits broadly shared through strong governance and public investment"
-    explanation: "International AI dividend, public AI infrastructure, and progressive taxation distribute gains widely"
+    description: "The 'AI Dividend Act,' modeled on Alaska's oil fund and passed in 12 nations, distributes 5% of AI company revenue directly to citizens; India's version pays $140/month to 900 million adults -- modest but transformative in a country where 200 million live on less; the EU's public AI infrastructure provides free access to frontier models for small businesses, researchers, and nonprofits, breaking the monopoly of the tech giants"
+    explanation: "The political architecture of equitable distribution requires three pillars: a tax mechanism (the AI dividend), a public infrastructure (government-funded frontier models that compete with private ones), and international coordination (the G20 AI Commons Agreement that prevents a race to the bottom on AI taxation); no single country implements all three perfectly, but the patchwork prevents the worst concentration scenarios and ensures that AI abundance reaches the bottom billion"
     world_state_effects:
       inequality_index: "-0.12"
       global_gdp_growth_modifier: "*1.07"

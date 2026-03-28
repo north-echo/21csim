@@ -2,9 +2,10 @@ id: "2042_amoc"
 year_month: "2042-01"
 title: "AMOC Collapse"
 description: >
-  The Atlantic Meridional Overturning Circulation faces critical weakening due to
-  sustained warming and Greenland ice melt. Outcome determines European climate
-  stability and global weather patterns for decades.
+  The RAPID array moored at 26.5N in the Atlantic records AMOC flow at 9.3 Sverdrups,
+  down from 17 in 2004. Dr. Ingrid Bjornsson at the Geophysical Institute in Bergen
+  publishes a Nature paper warning that Greenland's 2,400-gigaton meltwater pulse has
+  pushed the thermohaline conveyor to the edge of a nonlinear tipping point.
 domain: "climate"
 confidence: "MEDIUM"
 variable: "amoc_status"
@@ -21,35 +22,35 @@ conditional: "climate_temp_anomaly > 1.8"
 outcomes:
   significant_weakening:
     status: "DIVERGENCE"
-    description: "AMOC weakens by 30-50%, disrupting European climate and Atlantic ecosystems"
+    description: "AMOC flow drops to 8 Sverdrups; Bordeaux's vineyards experience their first failed harvest as average winter temperatures drop 3.5C across Western Europe. Norwegian cod fisheries collapse as nutrient upwelling ceases, while paradoxically, the tropical Atlantic overheats, intensifying Caribbean hurricanes."
     world_state_effects:
       climate_temp_anomaly: "+0.15"
       food_security_index: "-0.10"
       eu_cohesion: "-0.05"
   full_collapse:
     status: "ESCALATED"
-    description: "AMOC shuts down entirely, triggering rapid European cooling and global weather disruption"
+    description: "On February 14, the RAPID array records zero northward flow for the first time in recorded history. Within two winters, London's Thames freezes solid for the first time since 1814; crop failures cascade from Ireland to Poland. The Sahel's monsoon, dependent on Atlantic heat transport, fails catastrophically, displacing 90 million people."
     world_state_effects:
       climate_temp_anomaly: "+0.30"
       food_security_index: "-0.25"
       eu_cohesion: "-0.15"
   stable:
     status: "DIVERGENCE"
-    description: "AMOC remains within historical variability despite warming"
+    description: "Dr. Bjornsson's follow-up study reveals her initial models overweighted Greenland melt; deep-water formation off Labrador proves more resilient than feared. AMOC flow stabilizes at 13 Sverdrups, enough to keep the Gulf Stream warming Northern Europe, and climate scientists breathe their most collective sigh of relief since the ozone layer recovered."
     world_state_effects:
       climate_temp_anomaly: "+0.02"
       food_security_index: "-0.02"
       eu_cohesion: "+0.01"
   temporary_disruption:
     status: "DIVERGENCE"
-    description: "AMOC weakens temporarily but recovers within a decade"
+    description: "AMOC drops to 6 Sverdrups during a massive Greenland melt pulse in 2042-2044, triggering three brutal European winters and a sardine die-off from Portugal to Morocco. But as melt rates plateau, the circulation slowly recovers, reaching 11 Sverdrups by 2051 -- weakened but functional."
     world_state_effects:
       climate_temp_anomaly: "+0.08"
       food_security_index: "-0.05"
       eu_cohesion: "-0.03"
   accelerated_by_greenland:
     status: "ESCALATED"
-    description: "Greenland ice sheet collapse accelerates AMOC disruption beyond model predictions"
+    description: "Jakobshavn Glacier disintegrates in a single summer, calving 280 cubic km of ice into the Labrador Sea in what glaciologists call 'the Big Break.' The freshwater lens suppresses deep-water formation across the entire subpolar gyre; every climate model underestimated this by a factor of three."
     world_state_effects:
       climate_temp_anomaly: "+0.25"
       food_security_index: "-0.18"

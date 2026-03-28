@@ -2,9 +2,11 @@ id: "2036_asean_integration"
 year_month: "2036-06"
 title: "ASEAN Integration Trajectory"
 description: >
-  The future of Southeast Asian regional integration. Whether ASEAN deepens
-  cooperation, aligns with a major power, or fragments under geopolitical
-  pressure from US-China competition.
+  Indonesian President Prabowo's successor hosts the ASEAN summit in the
+  gleaming new capital of Nusantara on Borneo; the bloc's combined GDP has
+  reached $6.2 trillion, making it the world's 4th largest economic zone.
+  But the elephant -- and the dragon -- in the room is the same as always:
+  who does Southeast Asia align with when Washington and Beijing both demand loyalty?
 domain: "geopolitical"
 confidence: "MEDIUM"
 variable: "asean_integration_status"
@@ -21,31 +23,31 @@ conditional: null
 outcomes:
   deeper_integration:
     status: "DIVERGENCE"
-    description: "ASEAN achieves EU-like economic integration with single market elements"
-    explanation: "Economic growth and shared challenges drive deeper institutional cooperation"
+    description: "The ASEAN Economic Community 2.0 eliminates tariffs on 98% of goods, establishes mutual professional license recognition, and launches the 'ASEAN Digital Single Market' with unified data standards; a Thai software engineer can work in Vietnam without a visa, an Indonesian startup can sell across all 10 markets with one registration, and intra-ASEAN trade hits $1.2 trillion"
+    explanation: "The integration is driven by a generation of Southeast Asian entrepreneurs who grew up seeing the EU's single market as the model and China's Belt and Road as the threat: deeper ASEAN integration provides the scale to compete with both giants, and the digital economy -- where ASEAN's 700 million young, tech-savvy consumers are the prize -- provides the economic incentive that older industries lacked"
     world_state_effects:
       global_gdp: "+0.02"
   china_orbit:
     status: "DIVERGENCE"
-    description: "ASEAN drawn into Chinese economic and security orbit"
-    explanation: "RCEP deepens; Chinese investment and military presence make ASEAN a de facto Chinese sphere"
+    description: "Chinese companies control 40% of ASEAN's digital payment infrastructure via Alipay and WeChat Pay; RCEP trade data shows 62% of Southeast Asian exports go to China; Cambodia hosts a permanent PLA Navy facility at Ream; and Indonesia's new Nusantara capital was 70% financed by Chinese state banks -- a fact opposition politicians call 'renting our sovereignty'"
+    explanation: "China's economic gravity proves irresistible: Southeast Asian manufacturers depend on Chinese components, consumers use Chinese apps, governments depend on Chinese infrastructure loans, and militaries increasingly operate Chinese equipment; the 'ASEAN Way' of consensus and non-alignment becomes a polite fiction as practical dependence on Beijing constrains every member state's foreign policy options"
     world_state_effects:
       china_power_index: "+0.03"
   us_aligned:
     status: "DIVERGENCE"
-    description: "ASEAN aligns more closely with US-led Indo-Pacific framework"
-    explanation: "China threat perception and US engagement draw Southeast Asia toward Western alignment"
+    description: "The Philippines, Vietnam, and Indonesia sign the 'Indo-Pacific Security Partnership' with the US, Japan, and Australia; American semiconductor fabs open in Vietnam and Thailand as part of 'friend-shoring'; the US Navy conducts joint patrols with Filipino and Vietnamese vessels in the South China Sea; and $180 billion in US private investment floods the region as companies diversify away from China"
+    explanation: "China's aggressive posture in the South China Sea -- particularly the 2033 standoff with the Philippines at Second Thomas Shoal -- pushes the maritime ASEAN states firmly into the American camp; the US makes the alignment profitable through market access, technology transfer, and investment guarantees, creating an economic alternative to Chinese dependence that makes strategic alignment sustainable"
     world_state_effects:
       us_global_standing: "+0.02"
   independent_bloc:
     status: "DIVERGENCE"
-    description: "ASEAN maintains strategic autonomy as independent power bloc"
-    explanation: "Skillful hedging between great powers preserves ASEAN centrality and independence"
+    description: "Indonesian Foreign Minister Retno Marsudi's successor, Dr. Dewi Lestari, coins the phrase 'bamboo diplomacy -- flexible but unbreakable'; ASEAN buys American weapons and sells to Chinese markets, hosts US military exercises in June and Chinese ones in September, and votes with different great powers on different UN resolutions; the region's GDP growth of 5.8% outpaces both patrons"
+    explanation: "ASEAN's hedging strategy works because both great powers need Southeast Asia more than Southeast Asia needs either: China needs its markets and supply chains, the US needs its strategic geography and diplomatic support; the skill is in never forcing a choice, maintaining enough ambiguity that both sides believe they are winning, while ASEAN extracts maximum investment and technology from the competition"
     world_state_effects:
       governance_model: "+0.02"
   fragmented:
     status: "DIVERGENCE"
-    description: "ASEAN unity fractures as members choose different great power patrons"
-    explanation: "Cambodia and Laos align with China; Philippines and Vietnam with US; consensus collapses"
+    description: "Cambodia and Laos formally join China's 'Community of Shared Destiny' framework; the Philippines signs a mutual defense treaty with the US; Vietnam hedges alone; Indonesia tries to mediate but gives up after the 2036 ASEAN summit in Nusantara collapses without a joint communique for the third consecutive year; Singapore's foreign minister publicly calls ASEAN 'brain-dead,' echoing Macron's description of NATO 17 years earlier"
+    explanation: "The centrifugal forces finally overwhelm the centripetal ones: mainland Southeast Asia's economic dependence on China makes alignment with Beijing rational, while maritime Southeast Asia's security concerns make alignment with Washington essential; the 'ASEAN Way' of consensus required that these contradictions never be acknowledged, and once the facade cracks, the institution becomes a hollow shell"
     world_state_effects:
       global_gdp: "-0.01"

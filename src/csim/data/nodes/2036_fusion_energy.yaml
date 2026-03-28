@@ -2,9 +2,11 @@ id: "2036_fusion_energy"
 year_month: "2036-06"
 title: "Fusion Energy Progress"
 description: >
-  Whether nuclear fusion achieves commercial viability. Decades of research
-  face a critical window as private companies and government projects
-  race toward net energy gain and commercial reactors.
+  Commonwealth Fusion Systems' 'SPARC-2' reactor in Devens, Massachusetts
+  sustains a burning plasma for 47 minutes and produces 3x more energy than
+  it consumes -- the first sustained net energy gain from fusion. CEO Bob Mumgaard
+  uncorks champagne at 2:17 AM while 400 exhausted engineers cheer. The New York
+  Times headline: 'The Sun, Bottled.'
 domain: "technology"
 confidence: "MEDIUM"
 variable: "fusion_energy_status"
@@ -21,36 +23,36 @@ conditional: null
 outcomes:
   commercial_2040:
     status: "DIVERGENCE"
-    description: "First commercial fusion reactor online by 2040"
-    explanation: "Private sector investment and engineering advances deliver on aggressive timelines"
+    description: "Commonwealth Fusion Systems breaks ground on the first commercial fusion plant in Kingsport, Tennessee -- 400MW, enough to power 350,000 homes -- with grid connection targeted for 2039; General Fusion begins construction of a demonstration reactor outside Manchester, UK; and China's CNNC announces plans for 6 fusion plants by 2045; fusion venture capital hits $18 billion in 2036"
+    explanation: "The breakthrough is not the physics (solved by SPARC-2) but the engineering: high-temperature superconducting magnets mass-produced by a Samsung-CFS joint venture bring costs down 60% from prototype levels, and the compact tokamak design fits on 2 acres rather than the 200 acres ITER requires; the fusion industry transitions from research curiosity to energy sector in a single decade"
     world_state_effects:
       renewable_energy_share: "+0.05"
       climate_temp_anomaly: "-0.05"
   delayed_2060:
     status: "DIVERGENCE"
-    description: "Fusion remains 20 years away; commercial viability pushed to 2060s"
-    explanation: "Materials challenges, plasma instabilities, and engineering complexity delay progress"
+    description: "SPARC-2 achieves net energy gain in the lab but the reactor's tungsten first-wall components degrade 5x faster than predicted under sustained neutron bombardment; Commonwealth Fusion Systems pushes its commercial timeline from 2040 to 'early 2050s'; ITER in southern France finally achieves first plasma in 2036 -- 16 years behind schedule and $28 billion over budget"
+    explanation: "The materials problem proves intractable in the near term: no known substance can withstand years of 14 MeV neutron bombardment without becoming brittle and radioactive; the physics works, the engineering works for short pulses, but sustained commercial operation requires materials science breakthroughs that have not yet occurred; fusion remains the energy source of the future, and always will be -- at least for another 20 years"
     world_state_effects:
       renewable_energy_share: "+0.01"
       climate_temp_anomaly: "+0.02"
   breakthrough:
     status: "DIVERGENCE"
-    description: "Revolutionary fusion breakthrough transforms energy economics"
-    explanation: "Novel confinement approach or materials science advance makes fusion dramatically cheaper than expected"
+    description: "A team at TAE Technologies in California demonstrates a hydrogen-boron fusion reactor that produces no neutrons and requires no exotic materials -- aneutronic fusion, the 'holy grail,' achieved through a plasma beam approach that the mainstream fusion community dismissed as impossible; the reactor is the size of a shipping container and could be mass-produced for $50 million each"
+    explanation: "Aneutronic fusion changes everything: no neutron bombardment means no materials degradation, no radioactive waste, and reactors small enough to power individual factories or neighborhoods; the implications ripple across every sector -- unlimited clean energy at near-zero marginal cost would obsolete not just fossil fuels but most of the renewable energy industry that replaced them; energy abundance becomes the defining condition of the mid-21st century"
     world_state_effects:
       renewable_energy_share: "+0.10"
       climate_temp_anomaly: "-0.10"
   abandoned:
     status: "DIVERGENCE"
-    description: "Major fusion programs abandoned; resources redirected to renewables"
-    explanation: "Solar and battery costs drop so fast that fusion investment no longer justified"
+    description: "The EU defunds ITER after a 2036 cost review reveals total spending has reached $42 billion with no commercial reactor in sight; Japan's fusion program merges into its solar-hydrogen initiative; and Vinod Khosla, once fusion's most vocal venture backer, publishes an op-ed titled 'I Was Wrong: Solar Won' noting that solar-plus-battery at $0.012/kWh makes fusion's $0.05/kWh target irrelevant"
+    explanation: "Fusion loses the race to renewables not because it doesn't work but because its competitors got cheap faster: by 2036, solar panels cost $0.10/watt and sodium batteries cost $30/kWh, making it cheaper to blanket deserts with panels and store the energy than to build any kind of thermal power plant; fusion becomes a solution without a problem, technically fascinating but economically unnecessary"
     world_state_effects:
       renewable_energy_share: "+0.03"
       climate_temp_anomaly: "+0.01"
   government_funded:
     status: "DIVERGENCE"
-    description: "Fusion continues as government-funded research without commercial breakthrough"
-    explanation: "ITER and successors demonstrate physics but engineering and economic viability remain distant"
+    description: "ITER achieves first plasma in 2036 and demonstrates net energy gain by 2038, validating 40 years of international research; China's CFETR produces higher performance results at half the cost; but no private company secures the $15 billion needed to build a commercial prototype, and government fusion budgets are quietly held flat at 'research only' levels -- a slow death by insufficient funding"
+    explanation: "Fusion occupies an awkward middle ground: too successful to cancel (the physics works) but too expensive and slow to commercialize (the engineering is a generation away from competitive costs); governments maintain fusion programs as insurance against unforeseen problems with renewables and as sources of national scientific prestige, but no finance minister signs the check to actually build commercial plants"
     world_state_effects:
       renewable_energy_share: "+0.02"
       climate_temp_anomaly: "+0.01"

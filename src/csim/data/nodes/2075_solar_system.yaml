@@ -2,9 +2,11 @@ id: "2075_solar_system"
 year_month: "2075-01"
 title: "Solar System Development"
 description: >
-  The extent of human presence across the solar system. Whether space
-  development has produced thriving colonies, commercial ventures, or
-  remained limited to near-Earth operations.
+  Commander Nikolai Petrov transmitted the first live broadcast from Jupiter's
+  moon Europa in 2074 -- a shaky camera feed showing ice stretching to the
+  horizon under a sky dominated by Jupiter's red eye. "It's the most beautiful
+  and loneliest place I've ever seen," he said, his voice delayed 45 minutes.
+  "I keep forgetting there are 8 billion people listening."
 domain: "technology"
 confidence: "LOW"
 variable: "solar_system_status"
@@ -23,29 +25,29 @@ conditional: "space_development_index > 0.4"
 outcomes:
   colonies:
     status: "DIVERGENCE"
-    description: "Self-sustaining colonies on Moon and Mars with growing populations"
+    description: "Shackleton City (Moon, population 12,000) and Olympus Colony (Mars, population 4,500) are fully self-sustaining -- they grow their own food, manufacture their own tools, and have their own legal systems. The first wedding between a Lunar and Martian citizen took place in 2074 via hologram, with a 22-minute light delay turning the vows into a slow, beautiful call-and-response across 225 million kilometers."
     world_state_effects: {}
   outposts:
     status: "DIVERGENCE"
-    description: "Small research and industrial outposts on several bodies; not self-sustaining"
+    description: "Fourteen outposts scattered across the Moon, Mars, Ceres, and two Jovian moons, staffed by 800 people total who rotate home every 18 months. Each station depends entirely on Earth resupply; the Mars outpost stores 90 days of emergency rations that the crew calls 'the doomsday pantry.' Station psychologist Dr. Mei Chen reports that the most common complaint isn't danger or isolation but 'the smell -- recycled air tastes like old socks.'"
     world_state_effects: {}
   abandoned:
     status: "DIVERGENCE"
-    description: "Early space settlements abandoned due to cost, health risks, or loss of political will"
+    description: "The Mars colony was evacuated in 2071 after three crew deaths from radiation-induced leukemia; the Moon base was mothballed in 2073 when its fusion reactor failed and no government would fund a replacement. The abandoned habitats are monitored by a skeleton crew of robots. Astronaut-turned-memoirist Dr. Lena Johansson wrote: 'We left footprints on two worlds and then walked away. The universe noticed neither our arrival nor our departure.'"
     world_state_effects: {}
   thriving:
     status: "DIVERGENCE"
-    description: "Space civilization flourishing with millions living off-Earth across multiple locations"
+    description: "Two million humans live off-Earth across 40 habitats, stations, and colonies. The O'Neill cylinder 'New Singapore' at L4 has its own stock exchange; Ceres Station processes 50 million tons of asteroid minerals annually; and the Mars city of Borealis, population 200,000, just elected its first native-born governor. Space-born children outnumber immigrants for the first time; they call Earth 'the Old World' without irony."
     world_state_effects: {}
   commercial:
     status: "DIVERGENCE"
-    description: "Space development driven by commercial mining, manufacturing, and tourism"
+    description: "The asteroid mining conglomerate Orbital Resources Inc. posted $800 billion in revenue in 2074, making CEO Hiroshi Tanaka-Williams the wealthiest human in history. Lunar tourism serves 50,000 visitors annually at $200,000 per ticket, and the zero-gravity manufacturing platform 'Forge-7' produces semiconductor crystals of a purity impossible on Earth. Space is not a frontier -- it's a factory floor with a view."
     world_state_effects: {}
   military:
     status: "ESCALATED"
-    description: "Space development primarily military; orbital weapons platforms and strategic outposts"
+    description: "The three major powers maintain 200 orbital weapons platforms, a lunar early-warning base, and competing outposts on Mars that exist primarily to deny the territory to rivals. The 'Orbital Arms Race' consumes $2 trillion annually; US Space Force General Patricia Chen commands 40,000 personnel from a hardened bunker in Colorado. Civilian space access is restricted; the night sky twinkles with weapons disguised as stars."
     world_state_effects: {}
   exploration_only:
     status: "DIVERGENCE"
-    description: "Robotic exploration continues but permanent human presence beyond Earth proves impractical"
+    description: "Five thousand robots explore the solar system on humanity's behalf: crawlers on Mars, submarines under Europa's ice, and atmospheric drones in Venus's clouds. Human bodies proved too fragile, too expensive, and too lonely for space. Roboticist Dr. Kwame Mensah of Ghana, who designed the Europa submarine fleet, argues this is actually better: 'Robots don't get homesick, don't need oxygen, and they send us the pictures for free.'"
     world_state_effects: {}

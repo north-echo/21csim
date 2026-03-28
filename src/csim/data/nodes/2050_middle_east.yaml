@@ -2,9 +2,11 @@ id: "2050_middle_east"
 year_month: "2050-01"
 title: "Middle East at Mid-Century"
 description: >
-  The Middle East at mid-century has either successfully transitioned beyond oil
-  dependence or faces the consequences of failed diversification. The region's
-  stability determines global energy and security dynamics.
+  The last barrel of commercially viable Saudi crude is projected for 2058; UAE's
+  sovereign wealth fund, once $1.4 trillion, has been drawn down to $380 billion.
+  In the old souk of Muscat, merchants who once sold gold and frankincense now sell
+  solar panels and desalination filters. The Middle East's future depends on whether
+  it can build a new economy before the old one's corpse finishes cooling.
 domain: "regional"
 confidence: "LOW"
 variable: "middle_east_status"
@@ -22,35 +24,35 @@ conditional: null
 outcomes:
   post_oil_success:
     status: "DIVERGENCE"
-    description: "Gulf states successfully transition to diversified economies; regional stability achieved"
+    description: "Saudi Arabia's hydrogen exports reach $180 billion annually; Dubai is the world's busiest airport and AI hub; Qatar's education sector attracts 400,000 international students per year. The Abraham Accords, expanded to include 8 nations, create a regional common market. For the first time in a century, the Middle East is known for what it builds rather than what it extracts."
     world_state_effects:
       middle_east_stability: "+0.15"
       renewable_energy_share: "+0.03"
   failed_states:
     status: "ESCALATED"
-    description: "Multiple Middle Eastern states collapse as oil revenues vanish"
+    description: "Iraq's government dissolves after oil revenues can no longer fund the public payroll; Oman's sultanate crumbles; Libya's eastern and western governments both go bankrupt simultaneously. 80 million people across the region face state failure. The Gulf monarchies survive on depleted reserves and harsh austerity, but bread riots in Riyadh signal the end of the social contract."
     world_state_effects:
       middle_east_stability: "-0.20"
       conflict_deaths: "+30000"
   regional_power:
     status: "DIVERGENCE"
-    description: "Middle East emerges as regional power bloc with significant global influence"
+    description: "The Gulf Cooperation Council, expanded to include Jordan and Egypt, commands the world's largest sovereign wealth fund ($3.8 trillion), controls critical shipping chokepoints at Suez and Hormuz, and brokers peace between India and Pakistan. Saudi Foreign Minister Noura al-Otaibi becomes the first Arab woman to chair the UN General Assembly."
     world_state_effects:
       middle_east_stability: "+0.10"
   conflict_zone:
     status: "ESCALATED"
-    description: "Region remains mired in conflict; proxy wars and resource competition continue"
+    description: "The Saudi-Iranian cold war, now over water rights instead of oil, fuels proxy conflicts in Iraq, Yemen, and Lebanon. Turkish-Egyptian rivalry over the Eastern Mediterranean escalates to naval skirmishes. Weapon-laden drones, cheap enough for militias to mass-produce, make every border a potential frontline. The region has swapped the resource that causes the wars but not the wars themselves."
     world_state_effects:
       middle_east_stability: "-0.15"
       conflict_deaths: "+20000"
   green_economy:
     status: "DIVERGENCE"
-    description: "Solar and hydrogen resources make the Middle East a green energy superpower"
+    description: "The Arabian Peninsula's 3,400 hours of annual sunshine become the new oil: 800 GW of installed solar capacity powers electrolyzers producing 40 million tons of green hydrogen annually. Tankers that once carried crude from Ras Tanura now carry liquid hydrogen to Japan and Germany. Ironically, the region that powered the fossil fuel age now powers the clean energy one."
     world_state_effects:
       middle_east_stability: "+0.12"
       renewable_energy_share: "+0.05"
   status_quo:
     status: "DIVERGENCE"
-    description: "Gradual transition continues without dramatic success or failure"
+    description: "The Gulf states muddle through: hydrogen exports growing but slowly, tourism up but seasonal, tech hubs functioning but not world-leading. Oil revenue halves every decade but never quite reaches zero. A Saudi economist coins the term 'the long tail of petroleum' for an economy that is always dying but never quite dead."
     world_state_effects:
       middle_east_stability: "+0.02"

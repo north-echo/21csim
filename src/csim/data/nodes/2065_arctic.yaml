@@ -2,9 +2,11 @@ id: "2065_arctic"
 year_month: "2065-01"
 title: "Arctic 2065"
 description: >
-  The fate of the Arctic region after decades of ice loss. Whether the newly
-  accessible Arctic becomes a governed commons, a zone of exploitation, or
-  a protected wilderness.
+  The last year-round Arctic sea ice vanished in 2058; satellite imagery showed
+  open water at the North Pole on Christmas Day. Inuit elder Mary Uttak of Iqaluit
+  testified before the Arctic Council that her grandchildren "will never know the
+  sound of ice groaning in the dark," a line that became the title of the decade's
+  most-read memoir.
 domain: "geopolitics"
 confidence: "LOW"
 variable: "arctic_status_2065"
@@ -21,21 +23,21 @@ conditional: null
 outcomes:
   governed:
     status: "DIVERGENCE"
-    description: "International Arctic governance framework manages resources, shipping, and environmental protection"
+    description: "The Tromsø Authority, a 12-nation body headquartered in a solar-powered complex above the 70th parallel, manages 14 million square kilometers of open ocean. Director Kaisa Virtanen of Finland oversees 600 patrol vessels and a staff that speaks 23 languages, processing 40,000 shipping permits per year through an ice-free Northwest Passage."
     world_state_effects: {}
   exploited:
     status: "ESCALATED"
-    description: "Arctic nations extract resources aggressively with minimal environmental safeguards"
+    description: "Russian mega-rigs pump methane from thawed permafrost deposits while Canadian mining consortiums blast open nickel seams on Ellesmere Island. The water around Svalbard runs brown with sediment from 14 simultaneous mining operations; Norwegian marine biologist Dr. Henrik Svendsen calls it 'the world's largest open wound.'"
     world_state_effects: {}
   protected:
     status: "DIVERGENCE"
-    description: "Arctic designated as international protected zone; resource extraction banned"
+    description: "The Arctic Global Sanctuary, declared in 2062, is the largest protected area in human history. A ring of autonomous monitoring stations enforces a total ban on extraction. Satellite-tagged bowhead whales -- their population recovering for the first time in 200 years -- have become the sanctuary's unlikely mascot, featured on the new $100 global reserve note."
     world_state_effects: {}
   contested:
     status: "ESCALATED"
-    description: "Competing territorial claims and militarization make the Arctic a flashpoint for great power conflict"
+    description: "Russia, Canada, and China maintain competing naval bases within 200 kilometers of each other near the Lomonosov Ridge. In 2063, a Canadian destroyer and a Chinese icebreaker collided in disputed waters; both crews were rescued by a Norwegian fishing trawler whose captain, Bjorn Larssen, was later nominated for the Nobel Peace Prize."
     world_state_effects: {}
   irrelevant:
     status: "DIVERGENCE"
-    description: "Technological change makes Arctic resources and shipping routes less strategically important"
+    description: "Fusion power and asteroid mining made Arctic hydrocarbons worthless by 2060; the hyperloop network made Arctic shipping routes redundant. The region is now mostly visited by climate tourists and grief ecologists. The abandoned Russian oil platform 'Prirazlomnaya-7' has become the world's strangest bird sanctuary."
     world_state_effects: {}

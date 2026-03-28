@@ -2,9 +2,12 @@ id: "2068_interstellar_probe"
 year_month: "2068-06"
 title: "Interstellar Probe"
 description: >
-  The status of humanity's first attempt to send a probe beyond the solar system.
-  Whether breakthrough propulsion or patient engineering makes interstellar
-  exploration possible within a human lifetime.
+  The Breakthrough Starshot II probe, a 4-gram wafer equipped with a lightsail
+  and powered by a 100-gigawatt laser array in the Atacama Desert, reached 15%
+  of light speed on April 22, 2067. Chilean schoolteacher María Consuelo Ríos,
+  who watched the launch from her classroom in Antofagasta, told her students:
+  "That little thing is now the fastest object humans have ever made, and it's
+  smaller than your lunch."
 domain: "technology"
 confidence: "LOW"
 variable: "interstellar_probe_status"
@@ -22,31 +25,31 @@ conditional: null
 outcomes:
   launched:
     status: "DIVERGENCE"
-    description: "Interstellar probe launched toward nearest star system using advanced propulsion"
+    description: "The probe 'Messenger' is en route to Proxima Centauri at 18% of light speed, expected to arrive in 2091. It carries a camera, a spectrometer, and a golden chip containing the DNA sequences of 10,000 species and a message in 300 languages. Mission director Dr. Oluwaseun Adebayo checks the telemetry feed every morning from her office in Abuja; the signal takes 4 hours to reach her and arrives as a whisper."
     world_state_effects:
       space_development_index: "+0.15"
   planned:
     status: "DIVERGENCE"
-    description: "Detailed plans and funding in place for interstellar probe launch within a decade"
+    description: "The Interstellar Consortium -- a 40-nation partnership headquartered in Geneva -- has committed $200 billion to a 2078 launch. The laser array is under construction across the Sahara, visible from space as a geometric scar across the desert. Chief engineer Dr. Priyanka Sharma of India says the hardest part isn't the physics; it's 'convincing 40 finance ministers to fund something whose results their grandchildren won't live to see.'"
     world_state_effects:
       space_development_index: "+0.08"
   impossible:
     status: "DIVERGENCE"
-    description: "Physics and engineering constraints make interstellar travel impractical for foreseeable future"
+    description: "After three failed propulsion concepts and a $90 billion lightsail project cancelled in 2065, the scientific consensus is bleak. Physicist Dr. Marcus Chen-Williams published a paper titled 'The Wall' demonstrating that no plausible energy source can accelerate even a gram-scale probe to useful interstellar velocities. 'The stars,' he wrote, 'are for looking at. Perhaps that was always the point.'"
     world_state_effects:
       space_development_index: "-0.02"
   breakthrough_propulsion:
     status: "DIVERGENCE"
-    description: "New physics enables propulsion far beyond current capabilities; interstellar travel becomes feasible"
+    description: "Dr. Aisha Patel's 2066 paper on quantum vacuum energy extraction -- initially dismissed as 'beautiful nonsense' -- was experimentally confirmed at CERN in 2068. The implications stagger: a drive using this principle could reach Alpha Centauri in 8 years. Patel, who is 31 and grew up in a one-room flat in Leicester, says she got the idea 'during a very boring lecture on thermodynamics.'"
     world_state_effects:
       space_development_index: "+0.25"
   unnecessary:
     status: "DIVERGENCE"
-    description: "Advanced telescopes and remote sensing make physical probes unnecessary for stellar exploration"
+    description: "The 'Kepler's Eye' orbital interferometer array, spanning 12,000 kilometers, can image exoplanet surfaces at 10-meter resolution. Astronomer Dr. Tomoko Ishikawa published the first photograph of a forest on Proxima Centauri b -- or what appears to be a forest. 'Why send a probe,' she asked, 'when we can sit at home and watch alien trees grow?'"
     world_state_effects:
       space_development_index: "+0.03"
   international_project:
     status: "DIVERGENCE"
-    description: "Global cooperative project to build and launch interstellar probe unites nations"
+    description: "The 'Humanity Probe' project, proposed by the UN in 2064, became the largest cooperative engineering effort in history: 190 nations contributing components, 2 million engineers from 80 countries. The probe carries a chip with the name of every human alive at the time of launch. Nigerian poet Chimamanda Okafor-Achebe wrote the inscription: 'We were here. We wondered. We reached.'"
     world_state_effects:
       space_development_index: "+0.12"

@@ -2,10 +2,10 @@ id: "2030_space_tourism"
 year_month: "2030-06"
 title: "Space Tourism Mainstream"
 description: >
-  Space tourism evolves from billionaire vanity flights to a growing industry.
-  Blue Origin, Virgin Galactic, and SpaceX civilian flights bring hundreds of
-  people to space annually. Price points and safety records determine whether
-  it becomes a real industry or a niche curiosity.
+  Blue Origin's 'New Glenn Tourist' vehicle launches its 200th passenger from
+  Cape Canaveral; a Nigerian oil heiress, a retired Osaka schoolteacher, and
+  a 19-year-old TikTok creator share a cabin. The question shifts from 'who
+  can go' to 'should this many rockets be burning this much fuel.'
 domain: "space"
 confidence: "MEDIUM"
 variable: "space_tourism_status"
@@ -36,35 +36,35 @@ conditional: null
 outcomes:
   mainstream_suborbital:
     status: "DIVERGENCE"
-    description: "Suborbital tourism hits thousands of passengers per year; ticket prices drop below $100K"
-    explanation: "Competition drives costs down; safety record builds public confidence in commercial spaceflight"
+    description: "Virgin Galactic's Mojave terminal processes 40 flights per week; Blue Origin undercuts them at $89,000 a seat; 4,200 people reach space in a single year, more than all government astronauts in history combined"
+    explanation: "Reusable vehicle economics follow the airline playbook -- fill the seats, cut the price; three consecutive years without a fatality builds insurance industry confidence, and Lloyd's of London begins offering standard space tourism policies"
     world_state_effects:
       space_development_index: "+0.05"
     cascading_modifiers:
       2045_space_economy.on_track: "+0.03"
   orbital_hotels:
     status: "DIVERGENCE"
-    description: "First orbital hotel opens; multi-day stays in space become available to wealthy tourists"
-    explanation: "Commercial space stations pivot from research to hospitality; SpaceX Dragon and Starliner serve as taxis"
+    description: "Vast Space opens 'Haven-1' orbital hotel at 400km altitude: 6 suites with floor-to-ceiling Earth-view windows, a zero-gravity bar, and a 14-day stay priced at $28 million; fully booked through 2032 within 72 hours"
+    explanation: "SpaceX Dragon ferries guests up on biweekly rotations; the station's Instagram account gains 90 million followers in its first month, and three separate reality TV shows compete for filming rights"
     world_state_effects:
       space_development_index: "+0.08"
     cascading_modifiers:
       2045_space_economy.explosive: "+0.03"
   fatal_accident_setback:
     status: "ESCALATED"
-    description: "Fatal tourist accident triggers regulatory crackdown; industry growth stalls for years"
-    explanation: "Loss of civilian passengers in high-profile incident destroys public confidence"
+    description: "A Virgin Galactic suborbital vehicle breaks apart during re-entry over New Mexico, killing all six passengers including 31-year-old Indian tech founder Priya Mehta; her final livestream, watched by 12 million people, goes dark at 62km altitude"
+    explanation: "FAA grounds all commercial human spaceflight for 11 months; Congress passes the 'Mehta Safety Act' requiring triple-redundant life support and government-certified pilots; ticket insurers withdraw from the market and three smaller operators fold"
     world_state_effects:
       space_development_index: "-0.03"
   niche_luxury:
     status: "DIVERGENCE"
-    description: "Space tourism remains an ultra-luxury niche; fewer than 100 tourists per year"
-    explanation: "Costs remain above $500K; market limited to the ultra-wealthy"
+    description: "Only 73 tourists fly in 2030, each paying $650,000 or more; the passenger manifest reads like the Forbes 400 -- hedge fund managers, tech founders, a Saudi prince -- prompting the Economist to call it 'the world's most expensive selfie opportunity'"
+    explanation: "Vehicle reusability hits diminishing returns on cost reduction; the addressable market for half-million-dollar thrill rides turns out to be narrow, and operators pivot to satellite deployment as their primary revenue while keeping tourism as a prestige sideshow"
     world_state_effects:
       space_development_index: "+0.02"
   regulatory_shutdown:
     status: "DIVERGENCE"
-    description: "Safety concerns and environmental objections lead to heavy regulation; tourism effectively grounded"
-    explanation: "Multiple incidents and climate activism against rocket emissions restrict commercial launches"
+    description: "EU bans leisure spaceflight from European soil over carbon emissions; a Greenpeace blockade of the Boca Chica launch site goes viral; the UN Environmental Programme calculates that 1,000 annual tourist launches would produce more black carbon than all of sub-Saharan Africa"
+    explanation: "The 'Fly Less' climate movement turns its fire on rockets after largely winning the fight against short-haul aviation; even the FAA imposes a 200-launch annual cap for tourist flights, making the economics unworkable for all but SpaceX"
     world_state_effects:
       space_development_index: "-0.02"
