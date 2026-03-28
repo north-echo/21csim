@@ -65,11 +65,11 @@ export class SoundEngine {
   };
 
   static MOOD_SETTINGS = {
-    hopeful:      { filterFreq: 2000, padAttack: 2, padRelease: 4, arpVol: -18, padVol: -14, bassVol: -24, bpm: 72 },
-    neutral:      { filterFreq: 1200, padAttack: 3, padRelease: 5, arpVol: -22, padVol: -16, bassVol: -26, bpm: 60 },
-    tense:        { filterFreq: 800,  padAttack: 1.5, padRelease: 3, arpVol: -16, padVol: -12, bassVol: -20, bpm: 90 },
-    dark:         { filterFreq: 400,  padAttack: 4, padRelease: 6, arpVol: -28, padVol: -18, bassVol: -18, bpm: 48 },
-    transcendent: { filterFreq: 4000, padAttack: 1, padRelease: 3, arpVol: -14, padVol: -12, bassVol: -26, bpm: 100 },
+    hopeful:      { filterFreq: 2000, padAttack: 2, padRelease: 4, arpVol: -10, padVol: -8,  bassVol: -16, bpm: 72 },
+    neutral:      { filterFreq: 1200, padAttack: 3, padRelease: 5, arpVol: -14, padVol: -10, bassVol: -18, bpm: 60 },
+    tense:        { filterFreq: 800,  padAttack: 1.5, padRelease: 3, arpVol: -8,  padVol: -6,  bassVol: -14, bpm: 90 },
+    dark:         { filterFreq: 400,  padAttack: 4, padRelease: 6, arpVol: -20, padVol: -12, bassVol: -12, bpm: 48 },
+    transcendent: { filterFreq: 4000, padAttack: 1, padRelease: 3, arpVol: -6,  padVol: -6,  bassVol: -18, bpm: 100 },
   };
 
   // Bars per chord cycle
@@ -480,6 +480,7 @@ export class SoundEngine {
 
     if (transport.state !== 'started') {
       transport.start();
+      console.log(`[21csim] Ambient score started: mood=${this.currentMood}, bpm=${settings.bpm}`);
     }
   }
 
