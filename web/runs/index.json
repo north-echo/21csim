@@ -1,5 +1,16 @@
 [
   {
+    "file": "/runs/seed_44.json",
+    "seed": 44,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0,
+    "percentile": 50.0,
+    "total_divergences": 212,
+    "tags": [],
+    "event_count": 279
+  },
+  {
     "file": "/runs/seed_53.json",
     "seed": 53,
     "headline": "The Quiet Century: Full recession; unemployment hits 8%",
@@ -9,28 +20,6 @@
     "total_divergences": 216,
     "tags": [],
     "event_count": 281
-  },
-  {
-    "file": "/runs/seed_139.json",
-    "seed": 139,
-    "headline": "The Dark Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5562,
-    "percentile": 50.0,
-    "total_divergences": 215,
-    "tags": [],
-    "event_count": 283
-  },
-  {
-    "file": "/runs/seed_273.json",
-    "seed": 273,
-    "headline": "The Dark Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.6258,
-    "percentile": 50.0,
-    "total_divergences": 205,
-    "tags": [],
-    "event_count": 267
   },
   {
     "file": "/runs/seed_491.json",
@@ -44,37 +33,15 @@
     "event_count": 288
   },
   {
-    "file": "/runs/seed_638.json",
-    "seed": 638,
-    "headline": "The Dark Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.6969,
+    "file": "/runs/seed_589.json",
+    "seed": 589,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
     "percentile": 50.0,
-    "total_divergences": 197,
+    "total_divergences": 220,
     "tags": [],
-    "event_count": 272
-  },
-  {
-    "file": "/runs/seed_786.json",
-    "seed": 786,
-    "headline": "The Long Collapse Century: 2000 US Presidential Election",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4634,
-    "percentile": 50.0,
-    "total_divergences": 199,
-    "tags": [],
-    "event_count": 272
-  },
-  {
-    "file": "/runs/seed_790.json",
-    "seed": 790,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4524,
-    "percentile": 50.0,
-    "total_divergences": 197,
-    "tags": [],
-    "event_count": 265
+    "event_count": 282
   },
   {
     "file": "/runs/seed_888.json",
@@ -84,17 +51,6 @@
     "composite_score": -0.0,
     "percentile": 50.0,
     "total_divergences": 216,
-    "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_903.json",
-    "seed": 903,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4729,
-    "percentile": 50.0,
-    "total_divergences": 226,
     "tags": [],
     "event_count": 286
   },
@@ -121,70 +77,48 @@
     "event_count": 283
   },
   {
-    "file": "/runs/seed_1241.json",
-    "seed": 1241,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4496,
+    "file": "/runs/seed_1672.json",
+    "seed": 1672,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
-    "total_divergences": 204,
+    "total_divergences": 211,
+    "tags": [],
+    "event_count": 281
+  },
+  {
+    "file": "/runs/seed_1718.json",
+    "seed": 1718,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 212,
     "tags": [],
     "event_count": 280
   },
   {
-    "file": "/runs/seed_1363.json",
-    "seed": 1363,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4785,
+    "file": "/runs/seed_1754.json",
+    "seed": 1754,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1202,
     "percentile": 50.0,
-    "total_divergences": 197,
+    "total_divergences": 207,
     "tags": [],
-    "event_count": 268
+    "event_count": 281
   },
   {
-    "file": "/runs/seed_1517.json",
-    "seed": 1517,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4675,
+    "file": "/runs/seed_1883.json",
+    "seed": 1883,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 217,
+    "total_divergences": 213,
     "tags": [],
-    "event_count": 279
-  },
-  {
-    "file": "/runs/seed_1623.json",
-    "seed": 1623,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4431,
-    "percentile": 50.0,
-    "total_divergences": 208,
-    "tags": [],
-    "event_count": 274
-  },
-  {
-    "file": "/runs/seed_1699.json",
-    "seed": 1699,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4458,
-    "percentile": 50.0,
-    "total_divergences": 215,
-    "tags": [],
-    "event_count": 285
-  },
-  {
-    "file": "/runs/seed_1906.json",
-    "seed": 1906,
-    "headline": "The Long Collapse Century: China Joins WTO",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4692,
-    "percentile": 50.0,
-    "total_divergences": 203,
-    "tags": [],
-    "event_count": 272
+    "event_count": 286
   },
   {
     "file": "/runs/seed_2222.json",
@@ -220,26 +154,15 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_2727.json",
-    "seed": 2727,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4859,
+    "file": "/runs/seed_2834.json",
+    "seed": 2834,
+    "headline": "The Troubled Century: All four flights hit targets including US Capitol",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
     "percentile": 50.0,
-    "total_divergences": 204,
+    "total_divergences": 218,
     "tags": [],
-    "event_count": 268
-  },
-  {
-    "file": "/runs/seed_2766.json",
-    "seed": 2766,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4269,
-    "percentile": 50.0,
-    "total_divergences": 219,
-    "tags": [],
-    "event_count": 279
+    "event_count": 285
   },
   {
     "file": "/runs/seed_3139.json",
@@ -253,26 +176,15 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_3182.json",
-    "seed": 3182,
-    "headline": "The Long Collapse Century: All four flights hit targets including US Capitol",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.432,
+    "file": "/runs/seed_3209.json",
+    "seed": 3209,
+    "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 207,
+    "total_divergences": 210,
     "tags": [],
-    "event_count": 284
-  },
-  {
-    "file": "/runs/seed_3231.json",
-    "seed": 3231,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4873,
-    "percentile": 50.0,
-    "total_divergences": 219,
-    "tags": [],
-    "event_count": 285
+    "event_count": 286
   },
   {
     "file": "/runs/seed_3323.json",
@@ -286,26 +198,26 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_3710.json",
-    "seed": 3710,
-    "headline": "The Long Collapse Century: All four flights hit targets including US Capitol",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4278,
+    "file": "/runs/seed_3692.json",
+    "seed": 3692,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0,
     "percentile": 50.0,
-    "total_divergences": 208,
+    "total_divergences": 205,
     "tags": [],
-    "event_count": 282
+    "event_count": 278
   },
   {
-    "file": "/runs/seed_4043.json",
-    "seed": 4043,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4362,
+    "file": "/runs/seed_3891.json",
+    "seed": 3891,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
     "percentile": 50.0,
-    "total_divergences": 214,
+    "total_divergences": 216,
     "tags": [],
-    "event_count": 287
+    "event_count": 285
   },
   {
     "file": "/runs/seed_4140.json",
@@ -319,17 +231,6 @@
     "event_count": 283
   },
   {
-    "file": "/runs/seed_4415.json",
-    "seed": 4415,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4237,
-    "percentile": 50.0,
-    "total_divergences": 213,
-    "tags": [],
-    "event_count": 285
-  },
-  {
     "file": "/runs/seed_4641.json",
     "seed": 4641,
     "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
@@ -341,13 +242,13 @@
     "event_count": 239
   },
   {
-    "file": "/runs/seed_4805.json",
-    "seed": 4805,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.428,
+    "file": "/runs/seed_4669.json",
+    "seed": 4669,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 214,
+    "total_divergences": 213,
     "tags": [],
     "event_count": 281
   },
@@ -374,24 +275,13 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_5431.json",
-    "seed": 5431,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5225,
+    "file": "/runs/seed_5534.json",
+    "seed": 5534,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 217,
-    "tags": [],
-    "event_count": 279
-  },
-  {
-    "file": "/runs/seed_5492.json",
-    "seed": 5492,
-    "headline": "The Long Collapse Century: UN inspections continue; no military action taken",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.43,
-    "percentile": 50.0,
-    "total_divergences": 198,
+    "total_divergences": 216,
     "tags": [],
     "event_count": 285
   },
@@ -407,6 +297,17 @@
     "event_count": 287
   },
   {
+    "file": "/runs/seed_5698.json",
+    "seed": 5698,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0003,
+    "percentile": 50.0,
+    "total_divergences": 216,
+    "tags": [],
+    "event_count": 286
+  },
+  {
     "file": "/runs/seed_5766.json",
     "seed": 5766,
     "headline": "The Quiet Century: Recession triggers financial regulation reform",
@@ -418,15 +319,26 @@
     "event_count": 283
   },
   {
-    "file": "/runs/seed_6296.json",
-    "seed": 6296,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4697,
+    "file": "/runs/seed_5816.json",
+    "seed": 5816,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 195,
+    "total_divergences": 208,
     "tags": [],
-    "event_count": 271
+    "event_count": 284
+  },
+  {
+    "file": "/runs/seed_5915.json",
+    "seed": 5915,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
+    "percentile": 50.0,
+    "total_divergences": 222,
+    "tags": [],
+    "event_count": 287
   },
   {
     "file": "/runs/seed_6374.json",
@@ -436,6 +348,28 @@
     "composite_score": 0.08,
     "percentile": 50.0,
     "total_divergences": 202,
+    "tags": [],
+    "event_count": 282
+  },
+  {
+    "file": "/runs/seed_6572.json",
+    "seed": 6572,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 203,
+    "tags": [],
+    "event_count": 282
+  },
+  {
+    "file": "/runs/seed_6589.json",
+    "seed": 6589,
+    "headline": "The Quiet Century: 9/11 plot disrupted before execution",
+    "outcome_class": "RADICALLY-DIFFERENT",
+    "composite_score": 0.0002,
+    "percentile": 50.0,
+    "total_divergences": 222,
     "tags": [],
     "event_count": 282
   },
@@ -451,26 +385,26 @@
     "event_count": 281
   },
   {
-    "file": "/runs/seed_7078.json",
-    "seed": 7078,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4661,
+    "file": "/runs/seed_7332.json",
+    "seed": 7332,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 216,
+    "total_divergences": 211,
     "tags": [],
-    "event_count": 284
+    "event_count": 278
   },
   {
-    "file": "/runs/seed_7586.json",
-    "seed": 7586,
-    "headline": "The Dark Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5479,
+    "file": "/runs/seed_7697.json",
+    "seed": 7697,
+    "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1202,
     "percentile": 50.0,
-    "total_divergences": 209,
+    "total_divergences": 214,
     "tags": [],
-    "event_count": 286
+    "event_count": 282
   },
   {
     "file": "/runs/seed_7937.json",
@@ -484,15 +418,15 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_8003.json",
-    "seed": 8003,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4586,
+    "file": "/runs/seed_7975.json",
+    "seed": 7975,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 205,
+    "total_divergences": 212,
     "tags": [],
-    "event_count": 281
+    "event_count": 282
   },
   {
     "file": "/runs/seed_8076.json",
@@ -506,6 +440,17 @@
     "event_count": 285
   },
   {
+    "file": "/runs/seed_8102.json",
+    "seed": 8102,
+    "headline": "The Quiet Century: 2000 US Presidential Election",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
+    "percentile": 50.0,
+    "total_divergences": 214,
+    "tags": [],
+    "event_count": 282
+  },
+  {
     "file": "/runs/seed_8260.json",
     "seed": 8260,
     "headline": "The Quiet Century: Iraq War Decision",
@@ -513,6 +458,28 @@
     "composite_score": 0.0,
     "percentile": 50.0,
     "total_divergences": 212,
+    "tags": [],
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_8302.json",
+    "seed": 8302,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
+    "percentile": 50.0,
+    "total_divergences": 227,
+    "tags": [],
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_8330.json",
+    "seed": 8330,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 213,
     "tags": [],
     "event_count": 285
   },
@@ -528,15 +495,26 @@
     "event_count": 247
   },
   {
-    "file": "/runs/seed_8428.json",
-    "seed": 8428,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4237,
+    "file": "/runs/seed_8914.json",
+    "seed": 8914,
+    "headline": "The Troubled Century: 2000 US Presidential Election",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
     "percentile": 50.0,
-    "total_divergences": 207,
+    "total_divergences": 201,
     "tags": [],
-    "event_count": 283
+    "event_count": 281
+  },
+  {
+    "file": "/runs/seed_8919.json",
+    "seed": 8919,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 284
   },
   {
     "file": "/runs/seed_8935.json",
@@ -550,17 +528,6 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_8992.json",
-    "seed": 8992,
-    "headline": "The Long Collapse Century: Post-9/11 Security Architecture",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4812,
-    "percentile": 50.0,
-    "total_divergences": 215,
-    "tags": [],
-    "event_count": 286
-  },
-  {
     "file": "/runs/seed_9012.json",
     "seed": 9012,
     "headline": "The Troubled Century: Al Gore wins after full Florida recount",
@@ -570,39 +537,6 @@
     "total_divergences": 209,
     "tags": [],
     "event_count": 284
-  },
-  {
-    "file": "/runs/seed_9022.json",
-    "seed": 9022,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.463,
-    "percentile": 50.0,
-    "total_divergences": 208,
-    "tags": [],
-    "event_count": 280
-  },
-  {
-    "file": "/runs/seed_9071.json",
-    "seed": 9071,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4211,
-    "percentile": 50.0,
-    "total_divergences": 206,
-    "tags": [],
-    "event_count": 268
-  },
-  {
-    "file": "/runs/seed_9272.json",
-    "seed": 9272,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4496,
-    "percentile": 50.0,
-    "total_divergences": 218,
-    "tags": [],
-    "event_count": 281
   },
   {
     "file": "/runs/seed_9572.json",
@@ -627,26 +561,37 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_10103.json",
-    "seed": 10103,
-    "headline": "The Long Collapse Century: All four flights hit targets including US Capitol",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4366,
+    "file": "/runs/seed_9654.json",
+    "seed": 9654,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0003,
     "percentile": 50.0,
-    "total_divergences": 223,
+    "total_divergences": 212,
     "tags": [],
     "event_count": 284
   },
   {
-    "file": "/runs/seed_10160.json",
-    "seed": 10160,
-    "headline": "The Dark Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5126,
+    "file": "/runs/seed_9923.json",
+    "seed": 9923,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 217,
+    "total_divergences": 207,
     "tags": [],
-    "event_count": 282
+    "event_count": 284
+  },
+  {
+    "file": "/runs/seed_10067.json",
+    "seed": 10067,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 285
   },
   {
     "file": "/runs/seed_10268.json",
@@ -660,22 +605,33 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_10459.json",
-    "seed": 10459,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5082,
+    "file": "/runs/seed_10376.json",
+    "seed": 10376,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 199,
     "tags": [],
-    "event_count": 282
+    "event_count": 281
   },
   {
-    "file": "/runs/seed_10703.json",
-    "seed": 10703,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4277,
+    "file": "/runs/seed_10411.json",
+    "seed": 10411,
+    "headline": "The Troubled Century: 2000 US Presidential Election",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0404,
+    "percentile": 50.0,
+    "total_divergences": 212,
+    "tags": [],
+    "event_count": 280
+  },
+  {
+    "file": "/runs/seed_10566.json",
+    "seed": 10566,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
     "total_divergences": 211,
     "tags": [],
@@ -693,17 +649,6 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_10800.json",
-    "seed": 10800,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4373,
-    "percentile": 50.0,
-    "total_divergences": 213,
-    "tags": [],
-    "event_count": 283
-  },
-  {
     "file": "/runs/seed_11160.json",
     "seed": 11160,
     "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
@@ -713,6 +658,17 @@
     "total_divergences": 226,
     "tags": [],
     "event_count": 286
+  },
+  {
+    "file": "/runs/seed_11213.json",
+    "seed": 11213,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
+    "percentile": 50.0,
+    "total_divergences": 214,
+    "tags": [],
+    "event_count": 285
   },
   {
     "file": "/runs/seed_11268.json",
@@ -737,15 +693,15 @@
     "event_count": 283
   },
   {
-    "file": "/runs/seed_11652.json",
-    "seed": 11652,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4529,
+    "file": "/runs/seed_11385.json",
+    "seed": 11385,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 210,
+    "total_divergences": 202,
     "tags": [],
-    "event_count": 287
+    "event_count": 280
   },
   {
     "file": "/runs/seed_11687.json",
@@ -759,57 +715,35 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_11766.json",
-    "seed": 11766,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4301,
+    "file": "/runs/seed_11937.json",
+    "seed": 11937,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1502,
     "percentile": 50.0,
-    "total_divergences": 205,
+    "total_divergences": 214,
     "tags": [],
-    "event_count": 286
+    "event_count": 282
   },
   {
-    "file": "/runs/seed_11807.json",
-    "seed": 11807,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4348,
+    "file": "/runs/seed_12007.json",
+    "seed": 12007,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 212,
-    "tags": [],
-    "event_count": 285
-  },
-  {
-    "file": "/runs/seed_12389.json",
-    "seed": 12389,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4533,
-    "percentile": 50.0,
-    "total_divergences": 208,
-    "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_12418.json",
-    "seed": 12418,
-    "headline": "The Long Collapse Century: All four flights hit targets including US Capitol",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4873,
-    "percentile": 50.0,
-    "total_divergences": 222,
+    "total_divergences": 215,
     "tags": [],
     "event_count": 283
   },
   {
-    "file": "/runs/seed_12427.json",
-    "seed": 12427,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4401,
+    "file": "/runs/seed_12072.json",
+    "seed": 12072,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
     "percentile": 50.0,
-    "total_divergences": 213,
+    "total_divergences": 212,
     "tags": [],
     "event_count": 286
   },
@@ -847,48 +781,48 @@
     "event_count": 287
   },
   {
-    "file": "/runs/seed_13263.json",
-    "seed": 13263,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
+    "file": "/runs/seed_12773.json",
+    "seed": 12773,
+    "headline": "The Quiet Century: 9/11 plot disrupted before execution",
     "outcome_class": "EXTINCTION",
-    "composite_score": -0.4233,
+    "composite_score": 0.005,
+    "percentile": 50.0,
+    "total_divergences": 207,
+    "tags": [],
+    "event_count": 272
+  },
+  {
+    "file": "/runs/seed_12948.json",
+    "seed": 12948,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0404,
+    "percentile": 50.0,
+    "total_divergences": 206,
+    "tags": [],
+    "event_count": 280
+  },
+  {
+    "file": "/runs/seed_13171.json",
+    "seed": 13171,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
     "total_divergences": 208,
     "tags": [],
-    "event_count": 268
+    "event_count": 278
   },
   {
-    "file": "/runs/seed_13378.json",
-    "seed": 13378,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5281,
+    "file": "/runs/seed_13237.json",
+    "seed": 13237,
+    "headline": "The Quiet Century: China rejected from WTO; pursues bilateral trade",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 212,
+    "total_divergences": 211,
     "tags": [],
-    "event_count": 284
-  },
-  {
-    "file": "/runs/seed_13512.json",
-    "seed": 13512,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4732,
-    "percentile": 50.0,
-    "total_divergences": 199,
-    "tags": [],
-    "event_count": 279
-  },
-  {
-    "file": "/runs/seed_13540.json",
-    "seed": 13540,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4495,
-    "percentile": 50.0,
-    "total_divergences": 212,
-    "tags": [],
-    "event_count": 279
+    "event_count": 287
   },
   {
     "file": "/runs/seed_13575.json",
@@ -902,6 +836,17 @@
     "event_count": 278
   },
   {
+    "file": "/runs/seed_13617.json",
+    "seed": 13617,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
+    "percentile": 50.0,
+    "total_divergences": 204,
+    "tags": [],
+    "event_count": 284
+  },
+  {
     "file": "/runs/seed_13976.json",
     "seed": 13976,
     "headline": "The Troubled Century: 9/11 plot disrupted before execution",
@@ -913,26 +858,26 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_14030.json",
-    "seed": 14030,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4631,
+    "file": "/runs/seed_14135.json",
+    "seed": 14135,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0003,
     "percentile": 50.0,
-    "total_divergences": 213,
+    "total_divergences": 211,
     "tags": [],
-    "event_count": 284
+    "event_count": 282
   },
   {
-    "file": "/runs/seed_14120.json",
-    "seed": 14120,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4238,
+    "file": "/runs/seed_14255.json",
+    "seed": 14255,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 213,
+    "total_divergences": 218,
     "tags": [],
-    "event_count": 286
+    "event_count": 282
   },
   {
     "file": "/runs/seed_14311.json",
@@ -968,39 +913,6 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_14417.json",
-    "seed": 14417,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4541,
-    "percentile": 50.0,
-    "total_divergences": 218,
-    "tags": [],
-    "event_count": 282
-  },
-  {
-    "file": "/runs/seed_14787.json",
-    "seed": 14787,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4315,
-    "percentile": 50.0,
-    "total_divergences": 223,
-    "tags": [],
-    "event_count": 285
-  },
-  {
-    "file": "/runs/seed_14830.json",
-    "seed": 14830,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4305,
-    "percentile": 50.0,
-    "total_divergences": 202,
-    "tags": [],
-    "event_count": 282
-  },
-  {
     "file": "/runs/seed_14934.json",
     "seed": 14934,
     "headline": "The Quiet Century: Full recession; unemployment hits 8%",
@@ -1010,6 +922,17 @@
     "total_divergences": 212,
     "tags": [],
     "event_count": 277
+  },
+  {
+    "file": "/runs/seed_15030.json",
+    "seed": 15030,
+    "headline": "The Troubled Century: All four flights hit targets including US Capitol",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
+    "percentile": 50.0,
+    "total_divergences": 211,
+    "tags": [],
+    "event_count": 278
   },
   {
     "file": "/runs/seed_15138.json",
@@ -1023,26 +946,37 @@
     "event_count": 288
   },
   {
-    "file": "/runs/seed_15738.json",
-    "seed": 15738,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4987,
+    "file": "/runs/seed_15567.json",
+    "seed": 15567,
+    "headline": "The Quiet Century: 9/11 plot disrupted before execution",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 219,
+    "total_divergences": 224,
     "tags": [],
-    "event_count": 285
+    "event_count": 288
   },
   {
-    "file": "/runs/seed_15884.json",
-    "seed": 15884,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5188,
+    "file": "/runs/seed_15685.json",
+    "seed": 15685,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0003,
+    "percentile": 50.0,
+    "total_divergences": 214,
+    "tags": [],
+    "event_count": 287
+  },
+  {
+    "file": "/runs/seed_15811.json",
+    "seed": 15811,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
     "total_divergences": 213,
     "tags": [],
-    "event_count": 287
+    "event_count": 280
   },
   {
     "file": "/runs/seed_16044.json",
@@ -1056,6 +990,28 @@
     "event_count": 284
   },
   {
+    "file": "/runs/seed_16117.json",
+    "seed": 16117,
+    "headline": "The Troubled Century: 9/11 plot disrupted before execution",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 212,
+    "tags": [],
+    "event_count": 282
+  },
+  {
+    "file": "/runs/seed_16218.json",
+    "seed": 16218,
+    "headline": "The Troubled Century: China Joins WTO",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
+    "percentile": 50.0,
+    "total_divergences": 216,
+    "tags": [],
+    "event_count": 288
+  },
+  {
     "file": "/runs/seed_16284.json",
     "seed": 16284,
     "headline": "The Quiet Century: Al Gore wins after full Florida recount",
@@ -1065,6 +1021,28 @@
     "total_divergences": 215,
     "tags": [],
     "event_count": 283
+  },
+  {
+    "file": "/runs/seed_16379.json",
+    "seed": 16379,
+    "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1201,
+    "percentile": 50.0,
+    "total_divergences": 218,
+    "tags": [],
+    "event_count": 280
+  },
+  {
+    "file": "/runs/seed_16409.json",
+    "seed": 16409,
+    "headline": "The Troubled Century: China rejected from WTO; pursues bilateral trade",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
+    "percentile": 50.0,
+    "total_divergences": 218,
+    "tags": [],
+    "event_count": 288
   },
   {
     "file": "/runs/seed_16436.json",
@@ -1089,17 +1067,6 @@
     "event_count": 279
   },
   {
-    "file": "/runs/seed_16470.json",
-    "seed": 16470,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4518,
-    "percentile": 50.0,
-    "total_divergences": 215,
-    "tags": [],
-    "event_count": 283
-  },
-  {
     "file": "/runs/seed_17102.json",
     "seed": 17102,
     "headline": "The Quiet Century: Al Gore wins after full Florida recount",
@@ -1111,15 +1078,15 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_17261.json",
-    "seed": 17261,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5498,
+    "file": "/runs/seed_17321.json",
+    "seed": 17321,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
     "percentile": 50.0,
-    "total_divergences": 221,
+    "total_divergences": 208,
     "tags": [],
-    "event_count": 287
+    "event_count": 285
   },
   {
     "file": "/runs/seed_17384.json",
@@ -1131,6 +1098,17 @@
     "total_divergences": 209,
     "tags": [],
     "event_count": 279
+  },
+  {
+    "file": "/runs/seed_17448.json",
+    "seed": 17448,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
+    "percentile": 50.0,
+    "total_divergences": 207,
+    "tags": [],
+    "event_count": 282
   },
   {
     "file": "/runs/seed_17924.json",
@@ -1155,15 +1133,37 @@
     "event_count": 283
   },
   {
-    "file": "/runs/seed_18290.json",
-    "seed": 18290,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4291,
+    "file": "/runs/seed_18078.json",
+    "seed": 18078,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 213,
+    "total_divergences": 210,
     "tags": [],
-    "event_count": 281
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_18082.json",
+    "seed": 18082,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
+    "percentile": 50.0,
+    "total_divergences": 220,
+    "tags": [],
+    "event_count": 287
+  },
+  {
+    "file": "/runs/seed_18190.json",
+    "seed": 18190,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
+    "percentile": 50.0,
+    "total_divergences": 216,
+    "tags": [],
+    "event_count": 288
   },
   {
     "file": "/runs/seed_18309.json",
@@ -1177,92 +1177,48 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_18461.json",
-    "seed": 18461,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
+    "file": "/runs/seed_18313.json",
+    "seed": 18313,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
     "outcome_class": "EXTINCTION",
-    "composite_score": -0.4252,
+    "composite_score": -0.0044,
     "percentile": 50.0,
-    "total_divergences": 202,
+    "total_divergences": 221,
     "tags": [],
-    "event_count": 271
+    "event_count": 279
   },
   {
-    "file": "/runs/seed_18667.json",
-    "seed": 18667,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4491,
+    "file": "/runs/seed_18697.json",
+    "seed": 18697,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 222,
     "tags": [],
-    "event_count": 288
+    "event_count": 284
   },
   {
-    "file": "/runs/seed_19008.json",
-    "seed": 19008,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.447,
+    "file": "/runs/seed_18739.json",
+    "seed": 18739,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 212,
-    "tags": [],
-    "event_count": 281
-  },
-  {
-    "file": "/runs/seed_19073.json",
-    "seed": 19073,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5541,
-    "percentile": 50.0,
-    "total_divergences": 209,
-    "tags": [],
-    "event_count": 281
-  },
-  {
-    "file": "/runs/seed_19154.json",
-    "seed": 19154,
-    "headline": "The Long Collapse Century: All four flights hit targets including US Capitol",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4325,
-    "percentile": 50.0,
-    "total_divergences": 213,
-    "tags": [],
-    "event_count": 283
-  },
-  {
-    "file": "/runs/seed_19579.json",
-    "seed": 19579,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4375,
-    "percentile": 50.0,
-    "total_divergences": 217,
-    "tags": [],
-    "event_count": 283
-  },
-  {
-    "file": "/runs/seed_19610.json",
-    "seed": 19610,
-    "headline": "The Dark Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5711,
-    "percentile": 50.0,
-    "total_divergences": 211,
+    "total_divergences": 220,
     "tags": [],
     "event_count": 285
   },
   {
-    "file": "/runs/seed_19687.json",
-    "seed": 19687,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4425,
+    "file": "/runs/seed_19406.json",
+    "seed": 19406,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
     "percentile": 50.0,
-    "total_divergences": 211,
+    "total_divergences": 221,
     "tags": [],
-    "event_count": 282
+    "event_count": 289
   },
   {
     "file": "/runs/seed_19836.json",
@@ -1272,6 +1228,17 @@
     "composite_score": -0.1502,
     "percentile": 50.0,
     "total_divergences": 222,
+    "tags": [],
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_19883.json",
+    "seed": 19883,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
+    "percentile": 50.0,
+    "total_divergences": 221,
     "tags": [],
     "event_count": 285
   },
@@ -1287,26 +1254,26 @@
     "event_count": 283
   },
   {
-    "file": "/runs/seed_19950.json",
-    "seed": 19950,
-    "headline": "The Long Collapse Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4748,
+    "file": "/runs/seed_20223.json",
+    "seed": 20223,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0401,
     "percentile": 50.0,
-    "total_divergences": 208,
+    "total_divergences": 217,
     "tags": [],
-    "event_count": 283
+    "event_count": 281
   },
   {
-    "file": "/runs/seed_20280.json",
-    "seed": 20280,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.6424,
+    "file": "/runs/seed_20238.json",
+    "seed": 20238,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 210,
+    "total_divergences": 217,
     "tags": [],
-    "event_count": 283
+    "event_count": 282
   },
   {
     "file": "/runs/seed_20385.json",
@@ -1320,48 +1287,37 @@
     "event_count": 281
   },
   {
-    "file": "/runs/seed_20776.json",
-    "seed": 20776,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4618,
+    "file": "/runs/seed_21054.json",
+    "seed": 21054,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 201,
+    "total_divergences": 213,
     "tags": [],
-    "event_count": 270
+    "event_count": 282
   },
   {
-    "file": "/runs/seed_21055.json",
-    "seed": 21055,
-    "headline": "The Long Collapse Century: China Joins WTO",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4292,
+    "file": "/runs/seed_21160.json",
+    "seed": 21160,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 205,
+    "total_divergences": 223,
     "tags": [],
-    "event_count": 277
+    "event_count": 281
   },
   {
-    "file": "/runs/seed_21056.json",
-    "seed": 21056,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.463,
+    "file": "/runs/seed_21324.json",
+    "seed": 21324,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
     "percentile": 50.0,
-    "total_divergences": 206,
+    "total_divergences": 219,
     "tags": [],
-    "event_count": 273
-  },
-  {
-    "file": "/runs/seed_21304.json",
-    "seed": 21304,
-    "headline": "The Long Collapse Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4267,
-    "percentile": 50.0,
-    "total_divergences": 204,
-    "tags": [],
-    "event_count": 280
+    "event_count": 285
   },
   {
     "file": "/runs/seed_21379.json",
@@ -1371,17 +1327,6 @@
     "composite_score": 0.0,
     "percentile": 50.0,
     "total_divergences": 220,
-    "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_21430.json",
-    "seed": 21430,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.501,
-    "percentile": 50.0,
-    "total_divergences": 214,
     "tags": [],
     "event_count": 286
   },
@@ -1397,70 +1342,15 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_21986.json",
-    "seed": 21986,
-    "headline": "The Dark Century: All four flights hit targets including US Capitol",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5281,
+    "file": "/runs/seed_21983.json",
+    "seed": 21983,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 204,
+    "total_divergences": 206,
     "tags": [],
-    "event_count": 267
-  },
-  {
-    "file": "/runs/seed_22140.json",
-    "seed": 22140,
-    "headline": "The Dark Century: China Joins WTO",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.6266,
-    "percentile": 50.0,
-    "total_divergences": 221,
-    "tags": [],
-    "event_count": 283
-  },
-  {
-    "file": "/runs/seed_22287.json",
-    "seed": 22287,
-    "headline": "The Long Collapse Century: All four flights hit targets including US Capitol",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4685,
-    "percentile": 50.0,
-    "total_divergences": 214,
-    "tags": [],
-    "event_count": 281
-  },
-  {
-    "file": "/runs/seed_22347.json",
-    "seed": 22347,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4238,
-    "percentile": 50.0,
-    "total_divergences": 209,
-    "tags": [],
-    "event_count": 288
-  },
-  {
-    "file": "/runs/seed_22383.json",
-    "seed": 22383,
-    "headline": "The Dark Century: China WTO accession delayed to 2006",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.6815,
-    "percentile": 50.0,
-    "total_divergences": 193,
-    "tags": [],
-    "event_count": 270
-  },
-  {
-    "file": "/runs/seed_22534.json",
-    "seed": 22534,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4456,
-    "percentile": 50.0,
-    "total_divergences": 218,
-    "tags": [],
-    "event_count": 288
+    "event_count": 284
   },
   {
     "file": "/runs/seed_22559.json",
@@ -1474,48 +1364,59 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_22706.json",
-    "seed": 22706,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4981,
+    "file": "/runs/seed_22735.json",
+    "seed": 22735,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
     "percentile": 50.0,
-    "total_divergences": 195,
+    "total_divergences": 211,
     "tags": [],
-    "event_count": 266
+    "event_count": 285
   },
   {
-    "file": "/runs/seed_22714.json",
-    "seed": 22714,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4602,
+    "file": "/runs/seed_22736.json",
+    "seed": 22736,
+    "headline": "The Troubled Century: All four flights hit targets including US Capitol",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 208,
+    "total_divergences": 216,
+    "tags": [],
+    "event_count": 287
+  },
+  {
+    "file": "/runs/seed_23061.json",
+    "seed": 23061,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
+    "percentile": 50.0,
+    "total_divergences": 218,
     "tags": [],
     "event_count": 286
   },
   {
-    "file": "/runs/seed_22885.json",
-    "seed": 22885,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4273,
+    "file": "/runs/seed_23445.json",
+    "seed": 23445,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 211,
+    "total_divergences": 205,
     "tags": [],
-    "event_count": 282
+    "event_count": 284
   },
   {
-    "file": "/runs/seed_23432.json",
-    "seed": 23432,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4886,
+    "file": "/runs/seed_23530.json",
+    "seed": 23530,
+    "headline": "The Troubled Century: All four flights hit targets including US Capitol",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
     "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 216,
     "tags": [],
-    "event_count": 279
+    "event_count": 285
   },
   {
     "file": "/runs/seed_23964.json",
@@ -1529,48 +1430,48 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_23992.json",
-    "seed": 23992,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4267,
+    "file": "/runs/seed_24780.json",
+    "seed": 24780,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 212,
-    "tags": [],
-    "event_count": 270
-  },
-  {
-    "file": "/runs/seed_24091.json",
-    "seed": 24091,
-    "headline": "The Long Collapse Century: China Joins WTO",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4628,
-    "percentile": 50.0,
-    "total_divergences": 206,
+    "total_divergences": 219,
     "tags": [],
     "event_count": 281
   },
   {
-    "file": "/runs/seed_24711.json",
-    "seed": 24711,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4813,
+    "file": "/runs/seed_24876.json",
+    "seed": 24876,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 204,
+    "total_divergences": 220,
     "tags": [],
-    "event_count": 275
+    "event_count": 286
   },
   {
-    "file": "/runs/seed_24744.json",
-    "seed": 24744,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5155,
+    "file": "/runs/seed_24972.json",
+    "seed": 24972,
+    "headline": "The Quiet Century: All four flights hit targets including US Capitol",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
-    "total_divergences": 226,
+    "total_divergences": 221,
     "tags": [],
-    "event_count": 288
+    "event_count": 286
+  },
+  {
+    "file": "/runs/seed_25061.json",
+    "seed": 25061,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
+    "percentile": 50.0,
+    "total_divergences": 201,
+    "tags": [],
+    "event_count": 280
   },
   {
     "file": "/runs/seed_25255.json",
@@ -1584,81 +1485,59 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_25585.json",
-    "seed": 25585,
-    "headline": "The Dark Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5372,
+    "file": "/runs/seed_25375.json",
+    "seed": 25375,
+    "headline": "The Quiet Century: 9/11 plot disrupted before execution",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 195,
+    "total_divergences": 210,
     "tags": [],
-    "event_count": 262
+    "event_count": 283
   },
   {
-    "file": "/runs/seed_26162.json",
-    "seed": 26162,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4677,
+    "file": "/runs/seed_25970.json",
+    "seed": 25970,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 202,
+    "total_divergences": 215,
     "tags": [],
-    "event_count": 286
+    "event_count": 287
   },
   {
-    "file": "/runs/seed_26403.json",
-    "seed": 26403,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4914,
+    "file": "/runs/seed_25976.json",
+    "seed": 25976,
+    "headline": "The Troubled Century: 9/11 plot disrupted before execution",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
     "percentile": 50.0,
-    "total_divergences": 209,
-    "tags": [],
-    "event_count": 274
-  },
-  {
-    "file": "/runs/seed_26472.json",
-    "seed": 26472,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5459,
-    "percentile": 50.0,
-    "total_divergences": 202,
-    "tags": [],
-    "event_count": 266
-  },
-  {
-    "file": "/runs/seed_26480.json",
-    "seed": 26480,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.422,
-    "percentile": 50.0,
-    "total_divergences": 214,
+    "total_divergences": 201,
     "tags": [],
     "event_count": 281
   },
   {
-    "file": "/runs/seed_26687.json",
-    "seed": 26687,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4352,
+    "file": "/runs/seed_26132.json",
+    "seed": 26132,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
     "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 221,
     "tags": [],
-    "event_count": 286
+    "event_count": 289
   },
   {
-    "file": "/runs/seed_26701.json",
-    "seed": 26701,
-    "headline": "The Dark Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.56,
+    "file": "/runs/seed_26338.json",
+    "seed": 26338,
+    "headline": "The Troubled Century: All four flights hit targets including US Capitol",
+    "outcome_class": "RADICALLY-DIFFERENT",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 207,
+    "total_divergences": 224,
     "tags": [],
-    "event_count": 284
+    "event_count": 287
   },
   {
     "file": "/runs/seed_26730.json",
@@ -1672,26 +1551,37 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_26857.json",
-    "seed": 26857,
-    "headline": "The Dark Century: Post-9/11 Security Architecture",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5729,
+    "file": "/runs/seed_26885.json",
+    "seed": 26885,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 209,
+    "total_divergences": 219,
     "tags": [],
-    "event_count": 282
+    "event_count": 283
   },
   {
-    "file": "/runs/seed_27355.json",
-    "seed": 27355,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4916,
+    "file": "/runs/seed_26912.json",
+    "seed": 26912,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0003,
     "percentile": 50.0,
-    "total_divergences": 218,
+    "total_divergences": 221,
     "tags": [],
-    "event_count": 288
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_27365.json",
+    "seed": 27365,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
+    "percentile": 50.0,
+    "total_divergences": 208,
+    "tags": [],
+    "event_count": 281
   },
   {
     "file": "/runs/seed_27498.json",
@@ -1705,39 +1595,6 @@
     "event_count": 281
   },
   {
-    "file": "/runs/seed_27504.json",
-    "seed": 27504,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.433,
-    "percentile": 50.0,
-    "total_divergences": 222,
-    "tags": [],
-    "event_count": 285
-  },
-  {
-    "file": "/runs/seed_27630.json",
-    "seed": 27630,
-    "headline": "The Dark Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5261,
-    "percentile": 50.0,
-    "total_divergences": 205,
-    "tags": [],
-    "event_count": 276
-  },
-  {
-    "file": "/runs/seed_27731.json",
-    "seed": 27731,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4389,
-    "percentile": 50.0,
-    "total_divergences": 223,
-    "tags": [],
-    "event_count": 286
-  },
-  {
     "file": "/runs/seed_27800.json",
     "seed": 27800,
     "headline": "The Quiet Century: Al Gore wins after full Florida recount",
@@ -1749,26 +1606,48 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_28111.json",
-    "seed": 28111,
-    "headline": "The Long Collapse Century: Post-9/11 Security Architecture",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.455,
+    "file": "/runs/seed_27951.json",
+    "seed": 27951,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 217,
+    "tags": [],
+    "event_count": 286
+  },
+  {
+    "file": "/runs/seed_28026.json",
+    "seed": 28026,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
     "total_divergences": 211,
     "tags": [],
-    "event_count": 283
+    "event_count": 281
   },
   {
-    "file": "/runs/seed_28184.json",
-    "seed": 28184,
-    "headline": "The Long Collapse Century: All four flights hit targets including US Capitol",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4643,
+    "file": "/runs/seed_28303.json",
+    "seed": 28303,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "RADICALLY-DIFFERENT",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 214,
+    "total_divergences": 222,
     "tags": [],
-    "event_count": 288
+    "event_count": 282
+  },
+  {
+    "file": "/runs/seed_28333.json",
+    "seed": 28333,
+    "headline": "The Troubled Century: 2000 US Presidential Election",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
+    "percentile": 50.0,
+    "total_divergences": 208,
+    "tags": [],
+    "event_count": 280
   },
   {
     "file": "/runs/seed_28797.json",
@@ -1804,15 +1683,15 @@
     "event_count": 280
   },
   {
-    "file": "/runs/seed_28888.json",
-    "seed": 28888,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4454,
+    "file": "/runs/seed_28936.json",
+    "seed": 28936,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 216,
+    "total_divergences": 223,
     "tags": [],
-    "event_count": 285
+    "event_count": 284
   },
   {
     "file": "/runs/seed_28978.json",
@@ -1837,6 +1716,17 @@
     "event_count": 283
   },
   {
+    "file": "/runs/seed_29189.json",
+    "seed": 29189,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
+    "percentile": 50.0,
+    "total_divergences": 220,
+    "tags": [],
+    "event_count": 286
+  },
+  {
     "file": "/runs/seed_29193.json",
     "seed": 29193,
     "headline": "The Troubled Century: September 11 Attacks",
@@ -1848,59 +1738,37 @@
     "event_count": 280
   },
   {
-    "file": "/runs/seed_29754.json",
-    "seed": 29754,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4352,
+    "file": "/runs/seed_29609.json",
+    "seed": 29609,
+    "headline": "The Quiet Century: 2000 US Presidential Election",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1201,
     "percentile": 50.0,
-    "total_divergences": 208,
+    "total_divergences": 223,
     "tags": [],
-    "event_count": 285
+    "event_count": 284
   },
   {
-    "file": "/runs/seed_29789.json",
-    "seed": 29789,
-    "headline": "The Dark Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5184,
+    "file": "/runs/seed_29641.json",
+    "seed": 29641,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
     "percentile": 50.0,
-    "total_divergences": 206,
+    "total_divergences": 215,
     "tags": [],
-    "event_count": 280
+    "event_count": 281
   },
   {
-    "file": "/runs/seed_29958.json",
-    "seed": 29958,
-    "headline": "The Dark Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5128,
+    "file": "/runs/seed_29787.json",
+    "seed": 29787,
+    "headline": "The Quiet Century: 2000 US Presidential Election",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 199,
+    "total_divergences": 217,
     "tags": [],
-    "event_count": 273
-  },
-  {
-    "file": "/runs/seed_30114.json",
-    "seed": 30114,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4288,
-    "percentile": 50.0,
-    "total_divergences": 225,
-    "tags": [],
-    "event_count": 288
-  },
-  {
-    "file": "/runs/seed_30306.json",
-    "seed": 30306,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4244,
-    "percentile": 50.0,
-    "total_divergences": 205,
-    "tags": [],
-    "event_count": 278
+    "event_count": 281
   },
   {
     "file": "/runs/seed_30474.json",
@@ -1914,15 +1782,48 @@
     "event_count": 289
   },
   {
-    "file": "/runs/seed_30804.json",
-    "seed": 30804,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4209,
+    "file": "/runs/seed_30841.json",
+    "seed": 30841,
+    "headline": "The Quiet Century: China WTO accession delayed to 2006",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
+    "percentile": 50.0,
+    "total_divergences": 221,
+    "tags": [],
+    "event_count": 287
+  },
+  {
+    "file": "/runs/seed_30865.json",
+    "seed": 30865,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0404,
     "percentile": 50.0,
     "total_divergences": 218,
     "tags": [],
+    "event_count": 284
+  },
+  {
+    "file": "/runs/seed_31182.json",
+    "seed": 31182,
+    "headline": "The Troubled Century: 9/11 plot disrupted before execution",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
+    "percentile": 50.0,
+    "total_divergences": 212,
+    "tags": [],
     "event_count": 282
+  },
+  {
+    "file": "/runs/seed_31226.json",
+    "seed": 31226,
+    "headline": "The Quiet Century: China WTO accession delayed to 2006",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
+    "percentile": 50.0,
+    "total_divergences": 211,
+    "tags": [],
+    "event_count": 286
   },
   {
     "file": "/runs/seed_31740.json",
@@ -1936,114 +1837,26 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_32085.json",
-    "seed": 32085,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4773,
+    "file": "/runs/seed_32420.json",
+    "seed": 32420,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
-    "total_divergences": 220,
+    "total_divergences": 213,
     "tags": [],
-    "event_count": 285
+    "event_count": 279
   },
   {
-    "file": "/runs/seed_32126.json",
-    "seed": 32126,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4717,
+    "file": "/runs/seed_32731.json",
+    "seed": 32731,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 218,
+    "total_divergences": 216,
     "tags": [],
-    "event_count": 287
-  },
-  {
-    "file": "/runs/seed_32630.json",
-    "seed": 32630,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4389,
-    "percentile": 50.0,
-    "total_divergences": 182,
-    "tags": [],
-    "event_count": 269
-  },
-  {
-    "file": "/runs/seed_32749.json",
-    "seed": 32749,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.441,
-    "percentile": 50.0,
-    "total_divergences": 218,
-    "tags": [],
-    "event_count": 276
-  },
-  {
-    "file": "/runs/seed_32855.json",
-    "seed": 32855,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4668,
-    "percentile": 50.0,
-    "total_divergences": 215,
-    "tags": [],
-    "event_count": 282
-  },
-  {
-    "file": "/runs/seed_32960.json",
-    "seed": 32960,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4319,
-    "percentile": 50.0,
-    "total_divergences": 206,
-    "tags": [],
-    "event_count": 280
-  },
-  {
-    "file": "/runs/seed_33237.json",
-    "seed": 33237,
-    "headline": "The Dark Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5253,
-    "percentile": 50.0,
-    "total_divergences": 206,
-    "tags": [],
-    "event_count": 268
-  },
-  {
-    "file": "/runs/seed_33473.json",
-    "seed": 33473,
-    "headline": "The Dark Century: China Joins WTO",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5339,
-    "percentile": 50.0,
-    "total_divergences": 207,
-    "tags": [],
-    "event_count": 280
-  },
-  {
-    "file": "/runs/seed_33612.json",
-    "seed": 33612,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4383,
-    "percentile": 50.0,
-    "total_divergences": 219,
-    "tags": [],
-    "event_count": 282
-  },
-  {
-    "file": "/runs/seed_33928.json",
-    "seed": 33928,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5575,
-    "percentile": 50.0,
-    "total_divergences": 200,
-    "tags": [],
-    "event_count": 270
+    "event_count": 286
   },
   {
     "file": "/runs/seed_34066.json",
@@ -2068,37 +1881,15 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_34297.json",
-    "seed": 34297,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4235,
+    "file": "/runs/seed_34352.json",
+    "seed": 34352,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 208,
+    "total_divergences": 223,
     "tags": [],
-    "event_count": 282
-  },
-  {
-    "file": "/runs/seed_34303.json",
-    "seed": 34303,
-    "headline": "The Long Collapse Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4238,
-    "percentile": 50.0,
-    "total_divergences": 197,
-    "tags": [],
-    "event_count": 266
-  },
-  {
-    "file": "/runs/seed_34327.json",
-    "seed": 34327,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.424,
-    "percentile": 50.0,
-    "total_divergences": 200,
-    "tags": [],
-    "event_count": 266
+    "event_count": 286
   },
   {
     "file": "/runs/seed_34524.json",
@@ -2112,17 +1903,6 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_34758.json",
-    "seed": 34758,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4282,
-    "percentile": 50.0,
-    "total_divergences": 215,
-    "tags": [],
-    "event_count": 281
-  },
-  {
     "file": "/runs/seed_34780.json",
     "seed": 34780,
     "headline": "The Troubled Century: Al Gore wins after full Florida recount",
@@ -2134,15 +1914,26 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_35276.json",
-    "seed": 35276,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.433,
+    "file": "/runs/seed_35244.json",
+    "seed": 35244,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 168,
+    "total_divergences": 198,
     "tags": [],
-    "event_count": 240
+    "event_count": 282
+  },
+  {
+    "file": "/runs/seed_35464.json",
+    "seed": 35464,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
+    "percentile": 50.0,
+    "total_divergences": 203,
+    "tags": [],
+    "event_count": 282
   },
   {
     "file": "/runs/seed_35497.json",
@@ -2156,81 +1947,48 @@
     "event_count": 280
   },
   {
-    "file": "/runs/seed_36117.json",
-    "seed": 36117,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4648,
+    "file": "/runs/seed_36535.json",
+    "seed": 36535,
+    "headline": "The Troubled Century: Full recession; unemployment hits 8%",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 176,
-    "tags": [],
-    "event_count": 249
-  },
-  {
-    "file": "/runs/seed_36166.json",
-    "seed": 36166,
-    "headline": "The Dark Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5462,
-    "percentile": 50.0,
-    "total_divergences": 216,
-    "tags": [],
-    "event_count": 285
-  },
-  {
-    "file": "/runs/seed_36581.json",
-    "seed": 36581,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4344,
-    "percentile": 50.0,
-    "total_divergences": 196,
-    "tags": [],
-    "event_count": 274
-  },
-  {
-    "file": "/runs/seed_36757.json",
-    "seed": 36757,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4478,
-    "percentile": 50.0,
-    "total_divergences": 222,
-    "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_37195.json",
-    "seed": 37195,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4236,
-    "percentile": 50.0,
-    "total_divergences": 209,
-    "tags": [],
-    "event_count": 280
-  },
-  {
-    "file": "/runs/seed_37584.json",
-    "seed": 37584,
-    "headline": "The Long Collapse Century: China Joins WTO",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4287,
-    "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 198,
     "tags": [],
     "event_count": 282
   },
   {
-    "file": "/runs/seed_37623.json",
-    "seed": 37623,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4777,
+    "file": "/runs/seed_37127.json",
+    "seed": 37127,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
-    "total_divergences": 197,
+    "total_divergences": 216,
     "tags": [],
-    "event_count": 281
+    "event_count": 279
+  },
+  {
+    "file": "/runs/seed_37175.json",
+    "seed": 37175,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1502,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 283
+  },
+  {
+    "file": "/runs/seed_37475.json",
+    "seed": 37475,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
+    "percentile": 50.0,
+    "total_divergences": 218,
+    "tags": [],
+    "event_count": 284
   },
   {
     "file": "/runs/seed_37699.json",
@@ -2266,26 +2024,37 @@
     "event_count": 281
   },
   {
-    "file": "/runs/seed_38250.json",
-    "seed": 38250,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4465,
+    "file": "/runs/seed_38049.json",
+    "seed": 38049,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
     "percentile": 50.0,
-    "total_divergences": 213,
+    "total_divergences": 215,
     "tags": [],
-    "event_count": 281
+    "event_count": 286
   },
   {
-    "file": "/runs/seed_38546.json",
-    "seed": 38546,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4749,
+    "file": "/runs/seed_38066.json",
+    "seed": 38066,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
     "percentile": 50.0,
-    "total_divergences": 202,
+    "total_divergences": 199,
     "tags": [],
-    "event_count": 272
+    "event_count": 283
+  },
+  {
+    "file": "/runs/seed_38257.json",
+    "seed": 38257,
+    "headline": "The Quiet Century: 2000 US Presidential Election",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 211,
+    "tags": [],
+    "event_count": 280
   },
   {
     "file": "/runs/seed_38652.json",
@@ -2299,6 +2068,28 @@
     "event_count": 281
   },
   {
+    "file": "/runs/seed_38867.json",
+    "seed": 38867,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1203,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 282
+  },
+  {
+    "file": "/runs/seed_39238.json",
+    "seed": 39238,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
+    "percentile": 50.0,
+    "total_divergences": 211,
+    "tags": [],
+    "event_count": 282
+  },
+  {
     "file": "/runs/seed_39694.json",
     "seed": 39694,
     "headline": "The Quiet Century: Al Gore wins after full Florida recount",
@@ -2308,6 +2099,17 @@
     "total_divergences": 217,
     "tags": [],
     "event_count": 284
+  },
+  {
+    "file": "/runs/seed_39707.json",
+    "seed": 39707,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
+    "percentile": 50.0,
+    "total_divergences": 210,
+    "tags": [],
+    "event_count": 281
   },
   {
     "file": "/runs/seed_39857.json",
@@ -2321,6 +2123,28 @@
     "event_count": 287
   },
   {
+    "file": "/runs/seed_39881.json",
+    "seed": 39881,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0003,
+    "percentile": 50.0,
+    "total_divergences": 210,
+    "tags": [],
+    "event_count": 280
+  },
+  {
+    "file": "/runs/seed_39956.json",
+    "seed": 39956,
+    "headline": "The Troubled Century: 9/11 plot disrupted before execution",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0401,
+    "percentile": 50.0,
+    "total_divergences": 208,
+    "tags": [],
+    "event_count": 285
+  },
+  {
     "file": "/runs/seed_40103.json",
     "seed": 40103,
     "headline": "The Troubled Century: Al Gore wins after full Florida recount",
@@ -2330,6 +2154,17 @@
     "total_divergences": 221,
     "tags": [],
     "event_count": 282
+  },
+  {
+    "file": "/runs/seed_40163.json",
+    "seed": 40163,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 216,
+    "tags": [],
+    "event_count": 284
   },
   {
     "file": "/runs/seed_40302.json",
@@ -2354,37 +2189,15 @@
     "event_count": 283
   },
   {
-    "file": "/runs/seed_40586.json",
-    "seed": 40586,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.433,
+    "file": "/runs/seed_40601.json",
+    "seed": 40601,
+    "headline": "The Troubled Century: Full recession; unemployment hits 8%",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
     "percentile": 50.0,
-    "total_divergences": 213,
+    "total_divergences": 217,
     "tags": [],
-    "event_count": 281
-  },
-  {
-    "file": "/runs/seed_41055.json",
-    "seed": 41055,
-    "headline": "The Dark Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5212,
-    "percentile": 50.0,
-    "total_divergences": 212,
-    "tags": [],
-    "event_count": 276
-  },
-  {
-    "file": "/runs/seed_41146.json",
-    "seed": 41146,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4398,
-    "percentile": 50.0,
-    "total_divergences": 200,
-    "tags": [],
-    "event_count": 272
+    "event_count": 287
   },
   {
     "file": "/runs/seed_41157.json",
@@ -2398,15 +2211,15 @@
     "event_count": 280
   },
   {
-    "file": "/runs/seed_41310.json",
-    "seed": 41310,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4646,
+    "file": "/runs/seed_41286.json",
+    "seed": 41286,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0003,
     "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 211,
     "tags": [],
-    "event_count": 284
+    "event_count": 283
   },
   {
     "file": "/runs/seed_41429.json",
@@ -2420,15 +2233,26 @@
     "event_count": 280
   },
   {
-    "file": "/runs/seed_41444.json",
-    "seed": 41444,
-    "headline": "The Long Collapse Century: Post-9/11 Security Architecture",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4553,
+    "file": "/runs/seed_41632.json",
+    "seed": 41632,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 187,
+    "total_divergences": 215,
     "tags": [],
-    "event_count": 250
+    "event_count": 280
+  },
+  {
+    "file": "/runs/seed_41771.json",
+    "seed": 41771,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
+    "percentile": 50.0,
+    "total_divergences": 213,
+    "tags": [],
+    "event_count": 283
   },
   {
     "file": "/runs/seed_41830.json",
@@ -2436,6 +2260,28 @@
     "headline": "The Troubled Century: Al Gore wins after full Florida recount",
     "outcome_class": "MUDDLING-THROUGH",
     "composite_score": -0.0,
+    "percentile": 50.0,
+    "total_divergences": 219,
+    "tags": [],
+    "event_count": 286
+  },
+  {
+    "file": "/runs/seed_41834.json",
+    "seed": 41834,
+    "headline": "The Quiet Century: Recession triggers financial regulation reform",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
+    "percentile": 50.0,
+    "total_divergences": 198,
+    "tags": [],
+    "event_count": 279
+  },
+  {
+    "file": "/runs/seed_42459.json",
+    "seed": 42459,
+    "headline": "The Troubled Century: 9/11 plot disrupted before execution",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
     "total_divergences": 219,
     "tags": [],
@@ -2475,48 +2321,92 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_43414.json",
-    "seed": 43414,
-    "headline": "The Long Collapse Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4866,
+    "file": "/runs/seed_42850.json",
+    "seed": 42850,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 214,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 281
+  },
+  {
+    "file": "/runs/seed_43559.json",
+    "seed": 43559,
+    "headline": "The Troubled Century: 2000 US Presidential Election",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0404,
+    "percentile": 50.0,
+    "total_divergences": 218,
     "tags": [],
     "event_count": 286
   },
   {
-    "file": "/runs/seed_43797.json",
-    "seed": 43797,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.447,
+    "file": "/runs/seed_43566.json",
+    "seed": 43566,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0404,
     "percentile": 50.0,
-    "total_divergences": 208,
+    "total_divergences": 213,
     "tags": [],
-    "event_count": 274
+    "event_count": 282
   },
   {
-    "file": "/runs/seed_43943.json",
-    "seed": 43943,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4356,
-    "percentile": 50.0,
-    "total_divergences": 215,
-    "tags": [],
-    "event_count": 283
-  },
-  {
-    "file": "/runs/seed_44180.json",
-    "seed": 44180,
-    "headline": "The Long Collapse Century: China rejected from WTO; pursues bilateral trade",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4255,
+    "file": "/runs/seed_43568.json",
+    "seed": 43568,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
     "total_divergences": 204,
     "tags": [],
     "event_count": 283
+  },
+  {
+    "file": "/runs/seed_43819.json",
+    "seed": 43819,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
+    "percentile": 50.0,
+    "total_divergences": 217,
+    "tags": [],
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_43966.json",
+    "seed": 43966,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0404,
+    "percentile": 50.0,
+    "total_divergences": 206,
+    "tags": [],
+    "event_count": 284
+  },
+  {
+    "file": "/runs/seed_44216.json",
+    "seed": 44216,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
+    "percentile": 50.0,
+    "total_divergences": 226,
+    "tags": [],
+    "event_count": 286
+  },
+  {
+    "file": "/runs/seed_44498.json",
+    "seed": 44498,
+    "headline": "The Troubled Century: 9/11 plot disrupted before execution",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
+    "percentile": 50.0,
+    "total_divergences": 208,
+    "tags": [],
+    "event_count": 280
   },
   {
     "file": "/runs/seed_44940.json",
@@ -2530,15 +2420,26 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_45002.json",
-    "seed": 45002,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4845,
+    "file": "/runs/seed_44978.json",
+    "seed": 44978,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "RADICALLY-DIFFERENT",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 212,
+    "total_divergences": 223,
     "tags": [],
-    "event_count": 278
+    "event_count": 281
+  },
+  {
+    "file": "/runs/seed_45067.json",
+    "seed": 45067,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
+    "percentile": 50.0,
+    "total_divergences": 214,
+    "tags": [],
+    "event_count": 283
   },
   {
     "file": "/runs/seed_45268.json",
@@ -2552,17 +2453,6 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_45313.json",
-    "seed": 45313,
-    "headline": "The Dark Century: China rejected from WTO; pursues bilateral trade",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5111,
-    "percentile": 50.0,
-    "total_divergences": 216,
-    "tags": [],
-    "event_count": 285
-  },
-  {
     "file": "/runs/seed_45362.json",
     "seed": 45362,
     "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
@@ -2574,59 +2464,26 @@
     "event_count": 283
   },
   {
-    "file": "/runs/seed_45493.json",
-    "seed": 45493,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5198,
+    "file": "/runs/seed_45856.json",
+    "seed": 45856,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
     "percentile": 50.0,
-    "total_divergences": 206,
-    "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_45526.json",
-    "seed": 45526,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4219,
-    "percentile": 50.0,
-    "total_divergences": 220,
-    "tags": [],
-    "event_count": 284
-  },
-  {
-    "file": "/runs/seed_46244.json",
-    "seed": 46244,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4609,
-    "percentile": 50.0,
-    "total_divergences": 209,
-    "tags": [],
-    "event_count": 278
-  },
-  {
-    "file": "/runs/seed_46271.json",
-    "seed": 46271,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5348,
-    "percentile": 50.0,
-    "total_divergences": 210,
+    "total_divergences": 207,
     "tags": [],
     "event_count": 283
   },
   {
-    "file": "/runs/seed_46375.json",
-    "seed": 46375,
-    "headline": "The Long Collapse Century: Columbia Shuttle Disaster",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4341,
+    "file": "/runs/seed_46141.json",
+    "seed": 46141,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 219,
+    "total_divergences": 223,
     "tags": [],
-    "event_count": 288
+    "event_count": 281
   },
   {
     "file": "/runs/seed_46477.json",
@@ -2651,17 +2508,6 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_46680.json",
-    "seed": 46680,
-    "headline": "The Dark Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5662,
-    "percentile": 50.0,
-    "total_divergences": 213,
-    "tags": [],
-    "event_count": 286
-  },
-  {
     "file": "/runs/seed_46736.json",
     "seed": 46736,
     "headline": "The Near-Miss Century: Al Gore wins after full Florida recount",
@@ -2684,15 +2530,15 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_46937.json",
-    "seed": 46937,
-    "headline": "The Long Collapse Century: All four flights hit targets including US Capitol",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4899,
+    "file": "/runs/seed_47252.json",
+    "seed": 47252,
+    "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 218,
+    "total_divergences": 213,
     "tags": [],
-    "event_count": 281
+    "event_count": 280
   },
   {
     "file": "/runs/seed_47524.json",
@@ -2706,26 +2552,26 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_47835.json",
-    "seed": 47835,
-    "headline": "The Long Collapse Century: China rejected from WTO; pursues bilateral trade",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4759,
-    "percentile": 50.0,
-    "total_divergences": 202,
-    "tags": [],
-    "event_count": 282
-  },
-  {
-    "file": "/runs/seed_47925.json",
-    "seed": 47925,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4332,
+    "file": "/runs/seed_47528.json",
+    "seed": 47528,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
     "total_divergences": 215,
     "tags": [],
-    "event_count": 284
+    "event_count": 277
+  },
+  {
+    "file": "/runs/seed_47952.json",
+    "seed": 47952,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
+    "percentile": 50.0,
+    "total_divergences": 214,
+    "tags": [],
+    "event_count": 285
   },
   {
     "file": "/runs/seed_48272.json",
@@ -2739,26 +2585,15 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_48820.json",
-    "seed": 48820,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4587,
+    "file": "/runs/seed_48612.json",
+    "seed": 48612,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "RADICALLY-DIFFERENT",
+    "composite_score": -0.0002,
     "percentile": 50.0,
     "total_divergences": 223,
     "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_48863.json",
-    "seed": 48863,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4349,
-    "percentile": 50.0,
-    "total_divergences": 219,
-    "tags": [],
-    "event_count": 284
+    "event_count": 283
   },
   {
     "file": "/runs/seed_48975.json",
@@ -2772,15 +2607,37 @@
     "event_count": 280
   },
   {
-    "file": "/runs/seed_49296.json",
-    "seed": 49296,
-    "headline": "The Long Collapse Century: 2000 US Presidential Election",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4232,
+    "file": "/runs/seed_49005.json",
+    "seed": 49005,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 231,
+    "total_divergences": 208,
+    "tags": [],
+    "event_count": 280
+  },
+  {
+    "file": "/runs/seed_49169.json",
+    "seed": 49169,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0003,
+    "percentile": 50.0,
+    "total_divergences": 216,
     "tags": [],
     "event_count": 282
+  },
+  {
+    "file": "/runs/seed_49356.json",
+    "seed": 49356,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 286
   },
   {
     "file": "/runs/seed_49599.json",
@@ -2792,17 +2649,6 @@
     "total_divergences": 208,
     "tags": [],
     "event_count": 279
-  },
-  {
-    "file": "/runs/seed_49600.json",
-    "seed": 49600,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4419,
-    "percentile": 50.0,
-    "total_divergences": 225,
-    "tags": [],
-    "event_count": 285
   },
   {
     "file": "/runs/seed_49638.json",
@@ -2827,15 +2673,26 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_49878.json",
-    "seed": 49878,
-    "headline": "The Long Collapse Century: China rejected from WTO; pursues bilateral trade",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4288,
+    "file": "/runs/seed_49901.json",
+    "seed": 49901,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 226,
+    "total_divergences": 228,
     "tags": [],
     "event_count": 285
+  },
+  {
+    "file": "/runs/seed_49924.json",
+    "seed": 49924,
+    "headline": "The Troubled Century: All four flights hit targets including US Capitol",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
+    "percentile": 50.0,
+    "total_divergences": 223,
+    "tags": [],
+    "event_count": 284
   },
   {
     "file": "/runs/seed_49926.json",
@@ -2849,37 +2706,37 @@
     "event_count": 287
   },
   {
-    "file": "/runs/seed_50178.json",
-    "seed": 50178,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4396,
+    "file": "/runs/seed_50097.json",
+    "seed": 50097,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 214,
+    "total_divergences": 205,
     "tags": [],
-    "event_count": 286
+    "event_count": 281
   },
   {
-    "file": "/runs/seed_50320.json",
-    "seed": 50320,
-    "headline": "The Dark Century: China WTO accession delayed to 2006",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5755,
+    "file": "/runs/seed_50409.json",
+    "seed": 50409,
+    "headline": "The Quiet Century: 9/11 plot disrupted before execution",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 202,
+    "total_divergences": 212,
     "tags": [],
-    "event_count": 273
+    "event_count": 282
   },
   {
-    "file": "/runs/seed_50713.json",
-    "seed": 50713,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4483,
+    "file": "/runs/seed_50546.json",
+    "seed": 50546,
+    "headline": "The Quiet Century: Recession triggers financial regulation reform",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 218,
+    "total_divergences": 216,
     "tags": [],
-    "event_count": 287
+    "event_count": 282
   },
   {
     "file": "/runs/seed_50746.json",
@@ -2893,15 +2750,37 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_50853.json",
-    "seed": 50853,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4799,
+    "file": "/runs/seed_50926.json",
+    "seed": 50926,
+    "headline": "The Troubled Century: All four flights hit targets including US Capitol",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 205,
     "tags": [],
-    "event_count": 287
+    "event_count": 284
+  },
+  {
+    "file": "/runs/seed_51009.json",
+    "seed": 51009,
+    "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0,
+    "percentile": 50.0,
+    "total_divergences": 211,
+    "tags": [],
+    "event_count": 280
+  },
+  {
+    "file": "/runs/seed_51084.json",
+    "seed": 51084,
+    "headline": "The Quiet Century: Recession triggers financial regulation reform",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 225,
+    "tags": [],
+    "event_count": 282
   },
   {
     "file": "/runs/seed_51127.json",
@@ -2913,28 +2792,6 @@
     "total_divergences": 203,
     "tags": [],
     "event_count": 283
-  },
-  {
-    "file": "/runs/seed_51265.json",
-    "seed": 51265,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4548,
-    "percentile": 50.0,
-    "total_divergences": 215,
-    "tags": [],
-    "event_count": 287
-  },
-  {
-    "file": "/runs/seed_51381.json",
-    "seed": 51381,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4228,
-    "percentile": 50.0,
-    "total_divergences": 225,
-    "tags": [],
-    "event_count": 288
   },
   {
     "file": "/runs/seed_51653.json",
@@ -2959,13 +2816,13 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_51866.json",
-    "seed": 51866,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4439,
+    "file": "/runs/seed_51956.json",
+    "seed": 51956,
+    "headline": "The Troubled Century: 9/11 plot disrupted before execution",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
     "percentile": 50.0,
-    "total_divergences": 211,
+    "total_divergences": 230,
     "tags": [],
     "event_count": 283
   },
@@ -2981,17 +2838,6 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_52143.json",
-    "seed": 52143,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4613,
-    "percentile": 50.0,
-    "total_divergences": 173,
-    "tags": [],
-    "event_count": 240
-  },
-  {
     "file": "/runs/seed_52146.json",
     "seed": 52146,
     "headline": "The Near-Miss Century: Recession triggers financial regulation reform",
@@ -3001,6 +2847,28 @@
     "total_divergences": 223,
     "tags": [],
     "event_count": 283
+  },
+  {
+    "file": "/runs/seed_52460.json",
+    "seed": 52460,
+    "headline": "The Troubled Century: China Joins WTO",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 223,
+    "tags": [],
+    "event_count": 280
+  },
+  {
+    "file": "/runs/seed_52473.json",
+    "seed": 52473,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
+    "percentile": 50.0,
+    "total_divergences": 222,
+    "tags": [],
+    "event_count": 285
   },
   {
     "file": "/runs/seed_52696.json",
@@ -3014,26 +2882,15 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_52756.json",
-    "seed": 52756,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4314,
+    "file": "/runs/seed_52729.json",
+    "seed": 52729,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1203,
     "percentile": 50.0,
-    "total_divergences": 223,
+    "total_divergences": 209,
     "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_52809.json",
-    "seed": 52809,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4477,
-    "percentile": 50.0,
-    "total_divergences": 192,
-    "tags": [],
-    "event_count": 266
+    "event_count": 283
   },
   {
     "file": "/runs/seed_52889.json",
@@ -3047,15 +2904,15 @@
     "event_count": 280
   },
   {
-    "file": "/runs/seed_53468.json",
-    "seed": 53468,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4947,
+    "file": "/runs/seed_53038.json",
+    "seed": 53038,
+    "headline": "The Quiet Century: Opioid Crisis",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1201,
     "percentile": 50.0,
-    "total_divergences": 209,
+    "total_divergences": 205,
     "tags": [],
-    "event_count": 278
+    "event_count": 279
   },
   {
     "file": "/runs/seed_53840.json",
@@ -3091,15 +2948,59 @@
     "event_count": 287
   },
   {
-    "file": "/runs/seed_54158.json",
-    "seed": 54158,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4695,
+    "file": "/runs/seed_53974.json",
+    "seed": 53974,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 220,
+    "total_divergences": 218,
     "tags": [],
-    "event_count": 280
+    "event_count": 287
+  },
+  {
+    "file": "/runs/seed_54061.json",
+    "seed": 54061,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
+    "percentile": 50.0,
+    "total_divergences": 208,
+    "tags": [],
+    "event_count": 283
+  },
+  {
+    "file": "/runs/seed_54090.json",
+    "seed": 54090,
+    "headline": "The Quiet Century: 2000 US Presidential Election",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 217,
+    "tags": [],
+    "event_count": 283
+  },
+  {
+    "file": "/runs/seed_54185.json",
+    "seed": 54185,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 283
+  },
+  {
+    "file": "/runs/seed_54527.json",
+    "seed": 54527,
+    "headline": "The Troubled Century: All four flights hit targets including US Capitol",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
+    "percentile": 50.0,
+    "total_divergences": 207,
+    "tags": [],
+    "event_count": 285
   },
   {
     "file": "/runs/seed_54828.json",
@@ -3124,6 +3025,17 @@
     "event_count": 279
   },
   {
+    "file": "/runs/seed_54891.json",
+    "seed": 54891,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
+    "percentile": 50.0,
+    "total_divergences": 209,
+    "tags": [],
+    "event_count": 284
+  },
+  {
     "file": "/runs/seed_54920.json",
     "seed": 54920,
     "headline": "The Near-Miss Century: 9/11 plot disrupted before execution",
@@ -3135,15 +3047,15 @@
     "event_count": 281
   },
   {
-    "file": "/runs/seed_54941.json",
-    "seed": 54941,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4412,
+    "file": "/runs/seed_55456.json",
+    "seed": 55456,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 210,
+    "total_divergences": 213,
     "tags": [],
-    "event_count": 284
+    "event_count": 288
   },
   {
     "file": "/runs/seed_55655.json",
@@ -3157,15 +3069,26 @@
     "event_count": 279
   },
   {
-    "file": "/runs/seed_55773.json",
-    "seed": 55773,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4796,
+    "file": "/runs/seed_55878.json",
+    "seed": 55878,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "RADICALLY-DIFFERENT",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 211,
+    "total_divergences": 229,
     "tags": [],
-    "event_count": 281
+    "event_count": 284
+  },
+  {
+    "file": "/runs/seed_55951.json",
+    "seed": 55951,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
+    "percentile": 50.0,
+    "total_divergences": 214,
+    "tags": [],
+    "event_count": 284
   },
   {
     "file": "/runs/seed_55964.json",
@@ -3179,48 +3102,26 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_56369.json",
-    "seed": 56369,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4632,
-    "percentile": 50.0,
-    "total_divergences": 211,
-    "tags": [],
-    "event_count": 284
-  },
-  {
-    "file": "/runs/seed_56722.json",
-    "seed": 56722,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.435,
-    "percentile": 50.0,
-    "total_divergences": 229,
-    "tags": [],
-    "event_count": 284
-  },
-  {
-    "file": "/runs/seed_56779.json",
-    "seed": 56779,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5291,
+    "file": "/runs/seed_55972.json",
+    "seed": 55972,
+    "headline": "The Quiet Century: Recession triggers financial regulation reform",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0003,
     "percentile": 50.0,
     "total_divergences": 219,
     "tags": [],
-    "event_count": 287
+    "event_count": 281
   },
   {
-    "file": "/runs/seed_57184.json",
-    "seed": 57184,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4345,
+    "file": "/runs/seed_56324.json",
+    "seed": 56324,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
     "percentile": 50.0,
-    "total_divergences": 227,
+    "total_divergences": 221,
     "tags": [],
-    "event_count": 286
+    "event_count": 285
   },
   {
     "file": "/runs/seed_57202.json",
@@ -3234,6 +3135,17 @@
     "event_count": 285
   },
   {
+    "file": "/runs/seed_57208.json",
+    "seed": 57208,
+    "headline": "The Troubled Century: Opioid Crisis",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
+    "percentile": 50.0,
+    "total_divergences": 203,
+    "tags": [],
+    "event_count": 281
+  },
+  {
     "file": "/runs/seed_57212.json",
     "seed": 57212,
     "headline": "The Quiet Century: Al Gore wins after full Florida recount",
@@ -3245,37 +3157,26 @@
     "event_count": 271
   },
   {
-    "file": "/runs/seed_57446.json",
-    "seed": 57446,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4506,
+    "file": "/runs/seed_57373.json",
+    "seed": 57373,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 213,
+    "total_divergences": 212,
     "tags": [],
-    "event_count": 286
+    "event_count": 285
   },
   {
-    "file": "/runs/seed_57501.json",
-    "seed": 57501,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4633,
+    "file": "/runs/seed_57388.json",
+    "seed": 57388,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 197,
+    "total_divergences": 208,
     "tags": [],
-    "event_count": 268
-  },
-  {
-    "file": "/runs/seed_57517.json",
-    "seed": 57517,
-    "headline": "The Dark Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5141,
-    "percentile": 50.0,
-    "total_divergences": 222,
-    "tags": [],
-    "event_count": 287
+    "event_count": 281
   },
   {
     "file": "/runs/seed_57701.json",
@@ -3289,15 +3190,48 @@
     "event_count": 277
   },
   {
-    "file": "/runs/seed_58306.json",
-    "seed": 58306,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4782,
+    "file": "/runs/seed_58245.json",
+    "seed": 58245,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0401,
     "percentile": 50.0,
-    "total_divergences": 219,
+    "total_divergences": 218,
+    "tags": [],
+    "event_count": 287
+  },
+  {
+    "file": "/runs/seed_58351.json",
+    "seed": 58351,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 209,
+    "tags": [],
+    "event_count": 286
+  },
+  {
+    "file": "/runs/seed_58522.json",
+    "seed": 58522,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0404,
+    "percentile": 50.0,
+    "total_divergences": 218,
     "tags": [],
     "event_count": 284
+  },
+  {
+    "file": "/runs/seed_58631.json",
+    "seed": 58631,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 287
   },
   {
     "file": "/runs/seed_58794.json",
@@ -3322,17 +3256,6 @@
     "event_count": 287
   },
   {
-    "file": "/runs/seed_58882.json",
-    "seed": 58882,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4327,
-    "percentile": 50.0,
-    "total_divergences": 208,
-    "tags": [],
-    "event_count": 282
-  },
-  {
     "file": "/runs/seed_58893.json",
     "seed": 58893,
     "headline": "The Quiet Century: Al Gore wins after full Florida recount",
@@ -3342,6 +3265,28 @@
     "total_divergences": 222,
     "tags": [],
     "event_count": 284
+  },
+  {
+    "file": "/runs/seed_58968.json",
+    "seed": 58968,
+    "headline": "The Quiet Century: Post-9/11 Security Architecture",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
+    "percentile": 50.0,
+    "total_divergences": 199,
+    "tags": [],
+    "event_count": 282
+  },
+  {
+    "file": "/runs/seed_59059.json",
+    "seed": 59059,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 220,
+    "tags": [],
+    "event_count": 286
   },
   {
     "file": "/runs/seed_59101.json",
@@ -3355,13 +3300,13 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_59319.json",
-    "seed": 59319,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4364,
+    "file": "/runs/seed_59595.json",
+    "seed": 59595,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
     "percentile": 50.0,
-    "total_divergences": 212,
+    "total_divergences": 214,
     "tags": [],
     "event_count": 282
   },
@@ -3375,39 +3320,6 @@
     "total_divergences": 219,
     "tags": [],
     "event_count": 282
-  },
-  {
-    "file": "/runs/seed_59723.json",
-    "seed": 59723,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4541,
-    "percentile": 50.0,
-    "total_divergences": 218,
-    "tags": [],
-    "event_count": 284
-  },
-  {
-    "file": "/runs/seed_59737.json",
-    "seed": 59737,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4373,
-    "percentile": 50.0,
-    "total_divergences": 212,
-    "tags": [],
-    "event_count": 289
-  },
-  {
-    "file": "/runs/seed_59929.json",
-    "seed": 59929,
-    "headline": "The Long Collapse Century: China WTO accession delayed to 2006",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4754,
-    "percentile": 50.0,
-    "total_divergences": 202,
-    "tags": [],
-    "event_count": 279
   },
   {
     "file": "/runs/seed_59951.json",
@@ -3432,48 +3344,48 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_60084.json",
-    "seed": 60084,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4434,
+    "file": "/runs/seed_60132.json",
+    "seed": 60132,
+    "headline": "The Troubled Century: 9/11 plot disrupted before execution",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0404,
     "percentile": 50.0,
-    "total_divergences": 213,
+    "total_divergences": 227,
     "tags": [],
-    "event_count": 280
+    "event_count": 289
   },
   {
-    "file": "/runs/seed_60683.json",
-    "seed": 60683,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4474,
+    "file": "/runs/seed_60331.json",
+    "seed": 60331,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0,
     "percentile": 50.0,
-    "total_divergences": 212,
+    "total_divergences": 217,
     "tags": [],
-    "event_count": 281
+    "event_count": 287
   },
   {
-    "file": "/runs/seed_60786.json",
-    "seed": 60786,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4591,
+    "file": "/runs/seed_60744.json",
+    "seed": 60744,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 211,
-    "tags": [],
-    "event_count": 281
-  },
-  {
-    "file": "/runs/seed_60860.json",
-    "seed": 60860,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4365,
-    "percentile": 50.0,
-    "total_divergences": 206,
+    "total_divergences": 220,
     "tags": [],
     "event_count": 282
+  },
+  {
+    "file": "/runs/seed_60777.json",
+    "seed": 60777,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1202,
+    "percentile": 50.0,
+    "total_divergences": 236,
+    "tags": [],
+    "event_count": 284
   },
   {
     "file": "/runs/seed_61027.json",
@@ -3487,26 +3399,15 @@
     "event_count": 272
   },
   {
-    "file": "/runs/seed_61203.json",
-    "seed": 61203,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4347,
+    "file": "/runs/seed_61452.json",
+    "seed": 61452,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
-    "total_divergences": 212,
+    "total_divergences": 214,
     "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_61283.json",
-    "seed": 61283,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4854,
-    "percentile": 50.0,
-    "total_divergences": 223,
-    "tags": [],
-    "event_count": 288
+    "event_count": 279
   },
   {
     "file": "/runs/seed_61528.json",
@@ -3520,15 +3421,26 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_61692.json",
-    "seed": 61692,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5588,
+    "file": "/runs/seed_61577.json",
+    "seed": 61577,
+    "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 193,
+    "total_divergences": 213,
     "tags": [],
-    "event_count": 271
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_61759.json",
+    "seed": 61759,
+    "headline": "The Quiet Century: Recession triggers financial regulation reform",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
+    "percentile": 50.0,
+    "total_divergences": 218,
+    "tags": [],
+    "event_count": 284
   },
   {
     "file": "/runs/seed_61909.json",
@@ -3542,15 +3454,15 @@
     "event_count": 287
   },
   {
-    "file": "/runs/seed_62306.json",
-    "seed": 62306,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4557,
+    "file": "/runs/seed_62177.json",
+    "seed": 62177,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 194,
+    "total_divergences": 204,
     "tags": [],
-    "event_count": 271
+    "event_count": 284
   },
   {
     "file": "/runs/seed_62430.json",
@@ -3586,114 +3498,26 @@
     "event_count": 287
   },
   {
-    "file": "/runs/seed_62746.json",
-    "seed": 62746,
-    "headline": "The Long Collapse Century: 2000 US Presidential Election",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.487,
-    "percentile": 50.0,
-    "total_divergences": 211,
-    "tags": [],
-    "event_count": 285
-  },
-  {
-    "file": "/runs/seed_62807.json",
-    "seed": 62807,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4865,
-    "percentile": 50.0,
-    "total_divergences": 194,
-    "tags": [],
-    "event_count": 267
-  },
-  {
-    "file": "/runs/seed_63141.json",
-    "seed": 63141,
-    "headline": "The Long Collapse Century: China Joins WTO",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4689,
-    "percentile": 50.0,
-    "total_divergences": 204,
-    "tags": [],
-    "event_count": 273
-  },
-  {
-    "file": "/runs/seed_63202.json",
-    "seed": 63202,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4979,
-    "percentile": 50.0,
-    "total_divergences": 221,
-    "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_63479.json",
-    "seed": 63479,
-    "headline": "The Long Collapse Century: 2000 US Presidential Election",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4371,
-    "percentile": 50.0,
-    "total_divergences": 211,
-    "tags": [],
-    "event_count": 267
-  },
-  {
-    "file": "/runs/seed_63636.json",
-    "seed": 63636,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4775,
+    "file": "/runs/seed_63020.json",
+    "seed": 63020,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0003,
     "percentile": 50.0,
     "total_divergences": 216,
-    "tags": [],
-    "event_count": 280
-  },
-  {
-    "file": "/runs/seed_63918.json",
-    "seed": 63918,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4707,
-    "percentile": 50.0,
-    "total_divergences": 218,
-    "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_63996.json",
-    "seed": 63996,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4594,
-    "percentile": 50.0,
-    "total_divergences": 206,
-    "tags": [],
-    "event_count": 282
-  },
-  {
-    "file": "/runs/seed_64052.json",
-    "seed": 64052,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4771,
-    "percentile": 50.0,
-    "total_divergences": 221,
     "tags": [],
     "event_count": 288
   },
   {
-    "file": "/runs/seed_64403.json",
-    "seed": 64403,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5916,
+    "file": "/runs/seed_64738.json",
+    "seed": 64738,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
     "percentile": 50.0,
-    "total_divergences": 229,
+    "total_divergences": 221,
     "tags": [],
-    "event_count": 284
+    "event_count": 282
   },
   {
     "file": "/runs/seed_64785.json",
@@ -3707,15 +3531,15 @@
     "event_count": 280
   },
   {
-    "file": "/runs/seed_64898.json",
-    "seed": 64898,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4233,
+    "file": "/runs/seed_64909.json",
+    "seed": 64909,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
     "total_divergences": 218,
     "tags": [],
-    "event_count": 284
+    "event_count": 282
   },
   {
     "file": "/runs/seed_65281.json",
@@ -3740,6 +3564,17 @@
     "event_count": 285
   },
   {
+    "file": "/runs/seed_65393.json",
+    "seed": 65393,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1203,
+    "percentile": 50.0,
+    "total_divergences": 219,
+    "tags": [],
+    "event_count": 283
+  },
+  {
     "file": "/runs/seed_65565.json",
     "seed": 65565,
     "headline": "The Troubled Century: Al Gore wins after full Florida recount",
@@ -3749,6 +3584,17 @@
     "total_divergences": 210,
     "tags": [],
     "event_count": 287
+  },
+  {
+    "file": "/runs/seed_65632.json",
+    "seed": 65632,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 223,
+    "tags": [],
+    "event_count": 285
   },
   {
     "file": "/runs/seed_66041.json",
@@ -3762,17 +3608,6 @@
     "event_count": 283
   },
   {
-    "file": "/runs/seed_66249.json",
-    "seed": 66249,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4603,
-    "percentile": 50.0,
-    "total_divergences": 215,
-    "tags": [],
-    "event_count": 287
-  },
-  {
     "file": "/runs/seed_66602.json",
     "seed": 66602,
     "headline": "The Quiet Century: Al Gore wins after full Florida recount",
@@ -3784,81 +3619,81 @@
     "event_count": 279
   },
   {
-    "file": "/runs/seed_66771.json",
-    "seed": 66771,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4857,
+    "file": "/runs/seed_66702.json",
+    "seed": 66702,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 218,
+    "total_divergences": 220,
     "tags": [],
     "event_count": 285
   },
   {
-    "file": "/runs/seed_66849.json",
-    "seed": 66849,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4337,
+    "file": "/runs/seed_66782.json",
+    "seed": 66782,
+    "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1203,
     "percentile": 50.0,
-    "total_divergences": 217,
+    "total_divergences": 210,
     "tags": [],
-    "event_count": 284
+    "event_count": 285
   },
   {
-    "file": "/runs/seed_67234.json",
-    "seed": 67234,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4547,
-    "percentile": 50.0,
-    "total_divergences": 226,
-    "tags": [],
-    "event_count": 287
-  },
-  {
-    "file": "/runs/seed_67470.json",
-    "seed": 67470,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4632,
+    "file": "/runs/seed_66879.json",
+    "seed": 66879,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
     "total_divergences": 215,
     "tags": [],
-    "event_count": 280
+    "event_count": 282
   },
   {
-    "file": "/runs/seed_67626.json",
-    "seed": 67626,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4697,
+    "file": "/runs/seed_67152.json",
+    "seed": 67152,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
     "percentile": 50.0,
-    "total_divergences": 218,
+    "total_divergences": 204,
     "tags": [],
-    "event_count": 286
+    "event_count": 282
   },
   {
-    "file": "/runs/seed_68483.json",
-    "seed": 68483,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4587,
+    "file": "/runs/seed_67371.json",
+    "seed": 67371,
+    "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 217,
+    "total_divergences": 207,
     "tags": [],
-    "event_count": 284
+    "event_count": 285
   },
   {
-    "file": "/runs/seed_68716.json",
-    "seed": 68716,
-    "headline": "The Dark Century: September 11 Attacks",
+    "file": "/runs/seed_67894.json",
+    "seed": 67894,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
+    "percentile": 50.0,
+    "total_divergences": 214,
+    "tags": [],
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_68130.json",
+    "seed": 68130,
+    "headline": "The Troubled Century: September 11 Attacks",
     "outcome_class": "EXTINCTION",
-    "composite_score": -0.5167,
+    "composite_score": -0.0055,
     "percentile": 50.0,
     "total_divergences": 199,
     "tags": [],
-    "event_count": 269
+    "event_count": 271
   },
   {
     "file": "/runs/seed_68766.json",
@@ -3872,37 +3707,26 @@
     "event_count": 281
   },
   {
-    "file": "/runs/seed_69161.json",
-    "seed": 69161,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4389,
+    "file": "/runs/seed_68989.json",
+    "seed": 68989,
+    "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1202,
     "percentile": 50.0,
-    "total_divergences": 211,
+    "total_divergences": 217,
     "tags": [],
-    "event_count": 274
+    "event_count": 283
   },
   {
-    "file": "/runs/seed_69260.json",
-    "seed": 69260,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4501,
+    "file": "/runs/seed_69925.json",
+    "seed": 69925,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 220,
     "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_69859.json",
-    "seed": 69859,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4433,
-    "percentile": 50.0,
-    "total_divergences": 202,
-    "tags": [],
-    "event_count": 268
+    "event_count": 288
   },
   {
     "file": "/runs/seed_69949.json",
@@ -3916,81 +3740,59 @@
     "event_count": 287
   },
   {
-    "file": "/runs/seed_69962.json",
-    "seed": 69962,
-    "headline": "The Dark Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5671,
+    "file": "/runs/seed_70245.json",
+    "seed": 70245,
+    "headline": "The Troubled Century: Full recession; unemployment hits 8%",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 216,
+    "total_divergences": 210,
     "tags": [],
-    "event_count": 285
+    "event_count": 283
   },
   {
-    "file": "/runs/seed_70296.json",
-    "seed": 70296,
-    "headline": "The Dark Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5352,
+    "file": "/runs/seed_70408.json",
+    "seed": 70408,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
-    "total_divergences": 207,
+    "total_divergences": 202,
     "tags": [],
-    "event_count": 284
+    "event_count": 280
   },
   {
-    "file": "/runs/seed_70652.json",
-    "seed": 70652,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4924,
+    "file": "/runs/seed_70575.json",
+    "seed": 70575,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 204,
-    "tags": [],
-    "event_count": 270
-  },
-  {
-    "file": "/runs/seed_70851.json",
-    "seed": 70851,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4998,
-    "percentile": 50.0,
-    "total_divergences": 217,
-    "tags": [],
-    "event_count": 285
-  },
-  {
-    "file": "/runs/seed_71063.json",
-    "seed": 71063,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4812,
-    "percentile": 50.0,
-    "total_divergences": 222,
+    "total_divergences": 206,
     "tags": [],
     "event_count": 281
   },
   {
-    "file": "/runs/seed_71128.json",
-    "seed": 71128,
-    "headline": "The Long Collapse Century: 2000 US Presidential Election",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4738,
+    "file": "/runs/seed_70658.json",
+    "seed": 70658,
+    "headline": "The Quiet Century: Opioid Crisis",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 222,
+    "total_divergences": 208,
     "tags": [],
-    "event_count": 287
+    "event_count": 280
   },
   {
-    "file": "/runs/seed_71208.json",
-    "seed": 71208,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4882,
+    "file": "/runs/seed_71247.json",
+    "seed": 71247,
+    "headline": "The Troubled Century: China rejected from WTO; pursues bilateral trade",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 207,
+    "total_divergences": 214,
     "tags": [],
-    "event_count": 268
+    "event_count": 282
   },
   {
     "file": "/runs/seed_71384.json",
@@ -4015,26 +3817,48 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_71675.json",
-    "seed": 71675,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4936,
+    "file": "/runs/seed_71636.json",
+    "seed": 71636,
+    "headline": "The Troubled Century: Post-9/11 Security Architecture",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 221,
+    "total_divergences": 219,
     "tags": [],
-    "event_count": 281
+    "event_count": 284
   },
   {
-    "file": "/runs/seed_71806.json",
-    "seed": 71806,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4237,
+    "file": "/runs/seed_71886.json",
+    "seed": 71886,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
-    "total_divergences": 203,
+    "total_divergences": 212,
     "tags": [],
-    "event_count": 280
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_72045.json",
+    "seed": 72045,
+    "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 218,
+    "tags": [],
+    "event_count": 283
+  },
+  {
+    "file": "/runs/seed_72221.json",
+    "seed": 72221,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
+    "percentile": 50.0,
+    "total_divergences": 218,
+    "tags": [],
+    "event_count": 286
   },
   {
     "file": "/runs/seed_72312.json",
@@ -4048,15 +3872,15 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_72589.json",
-    "seed": 72589,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4996,
+    "file": "/runs/seed_72576.json",
+    "seed": 72576,
+    "headline": "The Troubled Century: All four flights hit targets including US Capitol",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 210,
+    "total_divergences": 203,
     "tags": [],
-    "event_count": 285
+    "event_count": 280
   },
   {
     "file": "/runs/seed_72630.json",
@@ -4070,6 +3894,17 @@
     "event_count": 285
   },
   {
+    "file": "/runs/seed_72753.json",
+    "seed": 72753,
+    "headline": "The Quiet Century: Recession triggers financial regulation reform",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 214,
+    "tags": [],
+    "event_count": 281
+  },
+  {
     "file": "/runs/seed_73009.json",
     "seed": 73009,
     "headline": "The Quiet Century: Recession triggers financial regulation reform",
@@ -4079,28 +3914,6 @@
     "total_divergences": 220,
     "tags": [],
     "event_count": 286
-  },
-  {
-    "file": "/runs/seed_73071.json",
-    "seed": 73071,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4671,
-    "percentile": 50.0,
-    "total_divergences": 199,
-    "tags": [],
-    "event_count": 283
-  },
-  {
-    "file": "/runs/seed_73154.json",
-    "seed": 73154,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4946,
-    "percentile": 50.0,
-    "total_divergences": 217,
-    "tags": [],
-    "event_count": 285
   },
   {
     "file": "/runs/seed_73282.json",
@@ -4114,37 +3927,48 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_73351.json",
-    "seed": 73351,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.468,
+    "file": "/runs/seed_73451.json",
+    "seed": 73451,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 206,
+    "total_divergences": 217,
     "tags": [],
-    "event_count": 288
+    "event_count": 286
   },
   {
-    "file": "/runs/seed_73492.json",
-    "seed": 73492,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.453,
+    "file": "/runs/seed_73454.json",
+    "seed": 73454,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 214,
+    "total_divergences": 208,
     "tags": [],
-    "event_count": 277
+    "event_count": 282
   },
   {
-    "file": "/runs/seed_73513.json",
-    "seed": 73513,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4573,
+    "file": "/runs/seed_73502.json",
+    "seed": 73502,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 199,
+    "total_divergences": 219,
     "tags": [],
-    "event_count": 267
+    "event_count": 287
+  },
+  {
+    "file": "/runs/seed_73606.json",
+    "seed": 73606,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0003,
+    "percentile": 50.0,
+    "total_divergences": 212,
+    "tags": [],
+    "event_count": 283
   },
   {
     "file": "/runs/seed_73647.json",
@@ -4158,26 +3982,37 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_73770.json",
-    "seed": 73770,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4652,
+    "file": "/runs/seed_73889.json",
+    "seed": 73889,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 222,
+    "total_divergences": 207,
+    "tags": [],
+    "event_count": 282
+  },
+  {
+    "file": "/runs/seed_74059.json",
+    "seed": 74059,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 215,
     "tags": [],
     "event_count": 285
   },
   {
-    "file": "/runs/seed_74104.json",
-    "seed": 74104,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4313,
+    "file": "/runs/seed_74312.json",
+    "seed": 74312,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "RADICALLY-DIFFERENT",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 220,
+    "total_divergences": 226,
     "tags": [],
-    "event_count": 287
+    "event_count": 284
   },
   {
     "file": "/runs/seed_74534.json",
@@ -4191,15 +4026,15 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_74677.json",
-    "seed": 74677,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.425,
+    "file": "/runs/seed_74654.json",
+    "seed": 74654,
+    "headline": "The Quiet Century: 2000 US Presidential Election",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 222,
+    "total_divergences": 212,
     "tags": [],
-    "event_count": 287
+    "event_count": 280
   },
   {
     "file": "/runs/seed_74823.json",
@@ -4213,48 +4048,26 @@
     "event_count": 281
   },
   {
-    "file": "/runs/seed_74903.json",
-    "seed": 74903,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4285,
+    "file": "/runs/seed_74838.json",
+    "seed": 74838,
+    "headline": "The Troubled Century: China Joins WTO",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 222,
+    "total_divergences": 206,
     "tags": [],
-    "event_count": 285
+    "event_count": 284
   },
   {
-    "file": "/runs/seed_74929.json",
-    "seed": 74929,
-    "headline": "The Long Collapse Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4706,
+    "file": "/runs/seed_75291.json",
+    "seed": 75291,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
     "percentile": 50.0,
-    "total_divergences": 209,
+    "total_divergences": 204,
     "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_74975.json",
-    "seed": 74975,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4679,
-    "percentile": 50.0,
-    "total_divergences": 219,
-    "tags": [],
-    "event_count": 288
-  },
-  {
-    "file": "/runs/seed_75054.json",
-    "seed": 75054,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4225,
-    "percentile": 50.0,
-    "total_divergences": 209,
-    "tags": [],
-    "event_count": 280
+    "event_count": 283
   },
   {
     "file": "/runs/seed_75432.json",
@@ -4279,6 +4092,17 @@
     "event_count": 285
   },
   {
+    "file": "/runs/seed_75489.json",
+    "seed": 75489,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 285
+  },
+  {
     "file": "/runs/seed_75746.json",
     "seed": 75746,
     "headline": "The Quiet Century: September 11 Attacks",
@@ -4290,26 +4114,59 @@
     "event_count": 272
   },
   {
-    "file": "/runs/seed_76824.json",
-    "seed": 76824,
-    "headline": "The Long Collapse Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.475,
+    "file": "/runs/seed_76548.json",
+    "seed": 76548,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 217,
+    "total_divergences": 212,
     "tags": [],
-    "event_count": 275
+    "event_count": 281
   },
   {
-    "file": "/runs/seed_76884.json",
-    "seed": 76884,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4289,
+    "file": "/runs/seed_76602.json",
+    "seed": 76602,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0,
     "percentile": 50.0,
-    "total_divergences": 213,
+    "total_divergences": 221,
     "tags": [],
-    "event_count": 269
+    "event_count": 286
+  },
+  {
+    "file": "/runs/seed_76686.json",
+    "seed": 76686,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "EXTINCTION",
+    "composite_score": 0.0025,
+    "percentile": 50.0,
+    "total_divergences": 171,
+    "tags": [],
+    "event_count": 247
+  },
+  {
+    "file": "/runs/seed_76881.json",
+    "seed": 76881,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 218,
+    "tags": [],
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_76914.json",
+    "seed": 76914,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
+    "percentile": 50.0,
+    "total_divergences": 199,
+    "tags": [],
+    "event_count": 284
   },
   {
     "file": "/runs/seed_76919.json",
@@ -4323,59 +4180,81 @@
     "event_count": 288
   },
   {
-    "file": "/runs/seed_76974.json",
-    "seed": 76974,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5861,
+    "file": "/runs/seed_77092.json",
+    "seed": 77092,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
-    "total_divergences": 216,
+    "total_divergences": 205,
     "tags": [],
-    "event_count": 281
+    "event_count": 287
   },
   {
-    "file": "/runs/seed_77367.json",
-    "seed": 77367,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4374,
+    "file": "/runs/seed_77231.json",
+    "seed": 77231,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 220,
+    "total_divergences": 212,
     "tags": [],
-    "event_count": 286
+    "event_count": 282
   },
   {
-    "file": "/runs/seed_78025.json",
-    "seed": 78025,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4589,
+    "file": "/runs/seed_78009.json",
+    "seed": 78009,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 220,
-    "tags": [],
-    "event_count": 290
-  },
-  {
-    "file": "/runs/seed_78596.json",
-    "seed": 78596,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4226,
-    "percentile": 50.0,
-    "total_divergences": 208,
+    "total_divergences": 210,
     "tags": [],
     "event_count": 283
   },
   {
-    "file": "/runs/seed_78716.json",
-    "seed": 78716,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4593,
+    "file": "/runs/seed_78168.json",
+    "seed": 78168,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0,
     "percentile": 50.0,
-    "total_divergences": 204,
+    "total_divergences": 216,
     "tags": [],
-    "event_count": 271
+    "event_count": 284
+  },
+  {
+    "file": "/runs/seed_78456.json",
+    "seed": 78456,
+    "headline": "The Quiet Century: China rejected from WTO; pursues bilateral trade",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 209,
+    "tags": [],
+    "event_count": 281
+  },
+  {
+    "file": "/runs/seed_78706.json",
+    "seed": 78706,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
+    "percentile": 50.0,
+    "total_divergences": 213,
+    "tags": [],
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_78901.json",
+    "seed": 78901,
+    "headline": "The Troubled Century: Full recession; unemployment hits 8%",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
+    "percentile": 50.0,
+    "total_divergences": 198,
+    "tags": [],
+    "event_count": 279
   },
   {
     "file": "/runs/seed_78946.json",
@@ -4387,6 +4266,39 @@
     "total_divergences": 216,
     "tags": [],
     "event_count": 280
+  },
+  {
+    "file": "/runs/seed_78979.json",
+    "seed": 78979,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
+    "percentile": 50.0,
+    "total_divergences": 197,
+    "tags": [],
+    "event_count": 280
+  },
+  {
+    "file": "/runs/seed_79004.json",
+    "seed": 79004,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 217,
+    "tags": [],
+    "event_count": 280
+  },
+  {
+    "file": "/runs/seed_79268.json",
+    "seed": 79268,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
+    "percentile": 50.0,
+    "total_divergences": 210,
+    "tags": [],
+    "event_count": 279
   },
   {
     "file": "/runs/seed_79270.json",
@@ -4411,15 +4323,15 @@
     "event_count": 276
   },
   {
-    "file": "/runs/seed_79722.json",
-    "seed": 79722,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.44,
+    "file": "/runs/seed_79734.json",
+    "seed": 79734,
+    "headline": "The Quiet Century: Recession triggers financial regulation reform",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0003,
     "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 210,
     "tags": [],
-    "event_count": 286
+    "event_count": 283
   },
   {
     "file": "/runs/seed_79802.json",
@@ -4433,15 +4345,15 @@
     "event_count": 279
   },
   {
-    "file": "/runs/seed_80075.json",
-    "seed": 80075,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4648,
+    "file": "/runs/seed_79874.json",
+    "seed": 79874,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 212,
+    "total_divergences": 221,
     "tags": [],
-    "event_count": 281
+    "event_count": 286
   },
   {
     "file": "/runs/seed_80128.json",
@@ -4455,37 +4367,37 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_80410.json",
-    "seed": 80410,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4446,
+    "file": "/runs/seed_80337.json",
+    "seed": 80337,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0003,
     "percentile": 50.0,
-    "total_divergences": 209,
+    "total_divergences": 219,
     "tags": [],
-    "event_count": 282
+    "event_count": 286
   },
   {
-    "file": "/runs/seed_80518.json",
-    "seed": 80518,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.485,
-    "percentile": 50.0,
-    "total_divergences": 203,
-    "tags": [],
-    "event_count": 278
-  },
-  {
-    "file": "/runs/seed_80588.json",
-    "seed": 80588,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4551,
+    "file": "/runs/seed_80407.json",
+    "seed": 80407,
+    "headline": "The Quiet Century: Recession triggers financial regulation reform",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
     "total_divergences": 225,
     "tags": [],
-    "event_count": 283
+    "event_count": 286
+  },
+  {
+    "file": "/runs/seed_80444.json",
+    "seed": 80444,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0,
+    "percentile": 50.0,
+    "total_divergences": 210,
+    "tags": [],
+    "event_count": 284
   },
   {
     "file": "/runs/seed_80725.json",
@@ -4497,17 +4409,6 @@
     "total_divergences": 217,
     "tags": [],
     "event_count": 286
-  },
-  {
-    "file": "/runs/seed_80790.json",
-    "seed": 80790,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4835,
-    "percentile": 50.0,
-    "total_divergences": 198,
-    "tags": [],
-    "event_count": 269
   },
   {
     "file": "/runs/seed_81148.json",
@@ -4532,6 +4433,17 @@
     "event_count": 281
   },
   {
+    "file": "/runs/seed_81326.json",
+    "seed": 81326,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
+    "percentile": 50.0,
+    "total_divergences": 225,
+    "tags": [],
+    "event_count": 278
+  },
+  {
     "file": "/runs/seed_81388.json",
     "seed": 81388,
     "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
@@ -4541,28 +4453,6 @@
     "total_divergences": 207,
     "tags": [],
     "event_count": 281
-  },
-  {
-    "file": "/runs/seed_81402.json",
-    "seed": 81402,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4561,
-    "percentile": 50.0,
-    "total_divergences": 215,
-    "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_81862.json",
-    "seed": 81862,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4555,
-    "percentile": 50.0,
-    "total_divergences": 206,
-    "tags": [],
-    "event_count": 279
   },
   {
     "file": "/runs/seed_81921.json",
@@ -4576,26 +4466,15 @@
     "event_count": 279
   },
   {
-    "file": "/runs/seed_82404.json",
-    "seed": 82404,
-    "headline": "The Dark Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5335,
+    "file": "/runs/seed_82049.json",
+    "seed": 82049,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0003,
     "percentile": 50.0,
-    "total_divergences": 197,
+    "total_divergences": 211,
     "tags": [],
-    "event_count": 271
-  },
-  {
-    "file": "/runs/seed_82509.json",
-    "seed": 82509,
-    "headline": "The Long Collapse Century: Opioid Crisis",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4749,
-    "percentile": 50.0,
-    "total_divergences": 224,
-    "tags": [],
-    "event_count": 287
+    "event_count": 279
   },
   {
     "file": "/runs/seed_82729.json",
@@ -4609,15 +4488,26 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_83043.json",
-    "seed": 83043,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.424,
+    "file": "/runs/seed_82788.json",
+    "seed": 82788,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 219,
+    "total_divergences": 202,
     "tags": [],
-    "event_count": 286
+    "event_count": 279
+  },
+  {
+    "file": "/runs/seed_82979.json",
+    "seed": 82979,
+    "headline": "The Troubled Century: Post-9/11 Security Architecture",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
+    "percentile": 50.0,
+    "total_divergences": 218,
+    "tags": [],
+    "event_count": 287
   },
   {
     "file": "/runs/seed_83180.json",
@@ -4631,59 +4521,48 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_83441.json",
-    "seed": 83441,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4382,
+    "file": "/runs/seed_83945.json",
+    "seed": 83945,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 207,
+    "total_divergences": 210,
+    "tags": [],
+    "event_count": 288
+  },
+  {
+    "file": "/runs/seed_84125.json",
+    "seed": 84125,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
+    "percentile": 50.0,
+    "total_divergences": 212,
+    "tags": [],
+    "event_count": 282
+  },
+  {
+    "file": "/runs/seed_84141.json",
+    "seed": 84141,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
+    "percentile": 50.0,
+    "total_divergences": 221,
     "tags": [],
     "event_count": 284
   },
   {
-    "file": "/runs/seed_84003.json",
-    "seed": 84003,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.485,
+    "file": "/runs/seed_84177.json",
+    "seed": 84177,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
-    "total_divergences": 214,
-    "tags": [],
-    "event_count": 287
-  },
-  {
-    "file": "/runs/seed_84017.json",
-    "seed": 84017,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.451,
-    "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 209,
     "tags": [],
     "event_count": 283
-  },
-  {
-    "file": "/runs/seed_84060.json",
-    "seed": 84060,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4355,
-    "percentile": 50.0,
-    "total_divergences": 210,
-    "tags": [],
-    "event_count": 280
-  },
-  {
-    "file": "/runs/seed_84157.json",
-    "seed": 84157,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4271,
-    "percentile": 50.0,
-    "total_divergences": 215,
-    "tags": [],
-    "event_count": 282
   },
   {
     "file": "/runs/seed_84350.json",
@@ -4697,17 +4576,6 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_84443.json",
-    "seed": 84443,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4486,
-    "percentile": 50.0,
-    "total_divergences": 205,
-    "tags": [],
-    "event_count": 280
-  },
-  {
     "file": "/runs/seed_84447.json",
     "seed": 84447,
     "headline": "The Quiet Century: Al Gore wins after full Florida recount",
@@ -4717,28 +4585,6 @@
     "total_divergences": 209,
     "tags": [],
     "event_count": 279
-  },
-  {
-    "file": "/runs/seed_84517.json",
-    "seed": 84517,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.547,
-    "percentile": 50.0,
-    "total_divergences": 202,
-    "tags": [],
-    "event_count": 282
-  },
-  {
-    "file": "/runs/seed_84555.json",
-    "seed": 84555,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4658,
-    "percentile": 50.0,
-    "total_divergences": 209,
-    "tags": [],
-    "event_count": 273
   },
   {
     "file": "/runs/seed_84611.json",
@@ -4752,26 +4598,15 @@
     "event_count": 281
   },
   {
-    "file": "/runs/seed_84633.json",
-    "seed": 84633,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4252,
+    "file": "/runs/seed_85261.json",
+    "seed": 85261,
+    "headline": "The Troubled Century: China WTO accession delayed to 2006",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 213,
+    "total_divergences": 214,
     "tags": [],
-    "event_count": 282
-  },
-  {
-    "file": "/runs/seed_84750.json",
-    "seed": 84750,
-    "headline": "The Long Collapse Century: Post-9/11 Security Architecture",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.448,
-    "percentile": 50.0,
-    "total_divergences": 209,
-    "tags": [],
-    "event_count": 284
+    "event_count": 285
   },
   {
     "file": "/runs/seed_85541.json",
@@ -4785,26 +4620,37 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_85692.json",
-    "seed": 85692,
-    "headline": "The Long Collapse Century: Recession triggers financial regulation reform",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.442,
+    "file": "/runs/seed_85683.json",
+    "seed": 85683,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1202,
     "percentile": 50.0,
-    "total_divergences": 217,
+    "total_divergences": 223,
     "tags": [],
     "event_count": 284
   },
   {
-    "file": "/runs/seed_86234.json",
-    "seed": 86234,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5644,
+    "file": "/runs/seed_85810.json",
+    "seed": 85810,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 204,
+    "total_divergences": 213,
     "tags": [],
-    "event_count": 284
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_86204.json",
+    "seed": 86204,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
+    "percentile": 50.0,
+    "total_divergences": 217,
+    "tags": [],
+    "event_count": 285
   },
   {
     "file": "/runs/seed_86316.json",
@@ -4818,6 +4664,17 @@
     "event_count": 281
   },
   {
+    "file": "/runs/seed_86535.json",
+    "seed": 86535,
+    "headline": "The Troubled Century: Columbia Shuttle Disaster",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
+    "percentile": 50.0,
+    "total_divergences": 211,
+    "tags": [],
+    "event_count": 279
+  },
+  {
     "file": "/runs/seed_86573.json",
     "seed": 86573,
     "headline": "The Troubled Century: Al Gore wins after full Florida recount",
@@ -4827,17 +4684,6 @@
     "total_divergences": 207,
     "tags": [],
     "event_count": 282
-  },
-  {
-    "file": "/runs/seed_86715.json",
-    "seed": 86715,
-    "headline": "The Long Collapse Century: China rejected from WTO; pursues bilateral trade",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4209,
-    "percentile": 50.0,
-    "total_divergences": 216,
-    "tags": [],
-    "event_count": 286
   },
   {
     "file": "/runs/seed_87009.json",
@@ -4851,15 +4697,26 @@
     "event_count": 282
   },
   {
-    "file": "/runs/seed_87249.json",
-    "seed": 87249,
-    "headline": "The Long Collapse Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4318,
+    "file": "/runs/seed_87134.json",
+    "seed": 87134,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
     "percentile": 50.0,
-    "total_divergences": 220,
+    "total_divergences": 207,
     "tags": [],
     "event_count": 285
+  },
+  {
+    "file": "/runs/seed_87267.json",
+    "seed": 87267,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1502,
+    "percentile": 50.0,
+    "total_divergences": 221,
+    "tags": [],
+    "event_count": 282
   },
   {
     "file": "/runs/seed_87332.json",
@@ -4873,37 +4730,26 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_87346.json",
-    "seed": 87346,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4488,
+    "file": "/runs/seed_87665.json",
+    "seed": 87665,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
-    "total_divergences": 209,
+    "total_divergences": 219,
     "tags": [],
-    "event_count": 285
+    "event_count": 288
   },
   {
-    "file": "/runs/seed_87658.json",
-    "seed": 87658,
-    "headline": "The Dark Century: Tech sector rebounds quickly; moderate rate cuts",
+    "file": "/runs/seed_87818.json",
+    "seed": 87818,
+    "headline": "The Quiet Century: 9/11 plot disrupted before execution",
     "outcome_class": "EXTINCTION",
-    "composite_score": -0.6633,
+    "composite_score": 0.0026,
     "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 175,
     "tags": [],
-    "event_count": 284
-  },
-  {
-    "file": "/runs/seed_88114.json",
-    "seed": 88114,
-    "headline": "The Dark Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5522,
-    "percentile": 50.0,
-    "total_divergences": 204,
-    "tags": [],
-    "event_count": 287
+    "event_count": 237
   },
   {
     "file": "/runs/seed_88127.json",
@@ -4917,26 +4763,15 @@
     "event_count": 283
   },
   {
-    "file": "/runs/seed_88711.json",
-    "seed": 88711,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4404,
+    "file": "/runs/seed_88164.json",
+    "seed": 88164,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 219,
+    "total_divergences": 211,
     "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_88750.json",
-    "seed": 88750,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4507,
-    "percentile": 50.0,
-    "total_divergences": 209,
-    "tags": [],
-    "event_count": 285
+    "event_count": 279
   },
   {
     "file": "/runs/seed_88960.json",
@@ -4961,17 +4796,6 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_89310.json",
-    "seed": 89310,
-    "headline": "The Long Collapse Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4983,
-    "percentile": 50.0,
-    "total_divergences": 210,
-    "tags": [],
-    "event_count": 286
-  },
-  {
     "file": "/runs/seed_89339.json",
     "seed": 89339,
     "headline": "The Quiet Century: Al Gore wins after full Florida recount",
@@ -4983,26 +4807,37 @@
     "event_count": 286
   },
   {
-    "file": "/runs/seed_89613.json",
-    "seed": 89613,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4211,
+    "file": "/runs/seed_89345.json",
+    "seed": 89345,
+    "headline": "The Troubled Century: 2000 US Presidential Election",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0003,
     "percentile": 50.0,
-    "total_divergences": 215,
+    "total_divergences": 212,
     "tags": [],
     "event_count": 282
   },
   {
-    "file": "/runs/seed_89737.json",
-    "seed": 89737,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.474,
+    "file": "/runs/seed_89711.json",
+    "seed": 89711,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
     "percentile": 50.0,
-    "total_divergences": 219,
+    "total_divergences": 223,
     "tags": [],
-    "event_count": 285
+    "event_count": 283
+  },
+  {
+    "file": "/runs/seed_89781.json",
+    "seed": 89781,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 278
   },
   {
     "file": "/runs/seed_89916.json",
@@ -5016,46 +4851,57 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_89976.json",
-    "seed": 89976,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4319,
+    "file": "/runs/seed_90008.json",
+    "seed": 90008,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
+    "percentile": 50.0,
+    "total_divergences": 207,
+    "tags": [],
+    "event_count": 281
+  },
+  {
+    "file": "/runs/seed_90099.json",
+    "seed": 90099,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
     "percentile": 50.0,
     "total_divergences": 222,
     "tags": [],
-    "event_count": 286
+    "event_count": 284
   },
   {
-    "file": "/runs/seed_90040.json",
-    "seed": 90040,
-    "headline": "The Dark Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5824,
+    "file": "/runs/seed_90279.json",
+    "seed": 90279,
+    "headline": "The Quiet Century: Recession triggers financial regulation reform",
+    "outcome_class": "TRANSCENDENCE",
+    "composite_score": 0.1202,
+    "percentile": 50.0,
+    "total_divergences": 209,
+    "tags": [],
+    "event_count": 284
+  },
+  {
+    "file": "/runs/seed_90556.json",
+    "seed": 90556,
+    "headline": "The Troubled Century: Full recession; unemployment hits 8%",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
     "percentile": 50.0,
     "total_divergences": 210,
     "tags": [],
-    "event_count": 285
+    "event_count": 284
   },
   {
-    "file": "/runs/seed_90383.json",
-    "seed": 90383,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5487,
+    "file": "/runs/seed_90605.json",
+    "seed": 90605,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0003,
     "percentile": 50.0,
-    "total_divergences": 205,
-    "tags": [],
-    "event_count": 280
-  },
-  {
-    "file": "/runs/seed_90565.json",
-    "seed": 90565,
-    "headline": "The Long Collapse Century: Post-9/11 Security Architecture",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4815,
-    "percentile": 50.0,
-    "total_divergences": 217,
+    "total_divergences": 213,
     "tags": [],
     "event_count": 280
   },
@@ -5082,13 +4928,13 @@
     "event_count": 285
   },
   {
-    "file": "/runs/seed_91548.json",
-    "seed": 91548,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4326,
+    "file": "/runs/seed_91462.json",
+    "seed": 91462,
+    "headline": "The Troubled Century: All four flights hit targets including US Capitol",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0402,
     "percentile": 50.0,
-    "total_divergences": 224,
+    "total_divergences": 214,
     "tags": [],
     "event_count": 287
   },
@@ -5104,26 +4950,125 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_91944.json",
-    "seed": 91944,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4272,
+    "file": "/runs/seed_91602.json",
+    "seed": 91602,
+    "headline": "The Troubled Century: 2000 US Presidential Election",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1503,
     "percentile": 50.0,
-    "total_divergences": 211,
+    "total_divergences": 216,
+    "tags": [],
+    "event_count": 284
+  },
+  {
+    "file": "/runs/seed_91721.json",
+    "seed": 91721,
+    "headline": "The Near-Miss Century: Recession triggers financial regulation reform",
+    "outcome_class": "GOLDEN-AGE",
+    "composite_score": 0.2026,
+    "percentile": 50.0,
+    "total_divergences": 212,
+    "tags": [],
+    "event_count": 282
+  },
+  {
+    "file": "/runs/seed_92255.json",
+    "seed": 92255,
+    "headline": "The Troubled Century: 9/11 plot disrupted before execution",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
+    "percentile": 50.0,
+    "total_divergences": 218,
+    "tags": [],
+    "event_count": 286
+  },
+  {
+    "file": "/runs/seed_92584.json",
+    "seed": 92584,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "EXTINCTION",
+    "composite_score": -0.0024,
+    "percentile": 50.0,
+    "total_divergences": 199,
+    "tags": [],
+    "event_count": 272
+  },
+  {
+    "file": "/runs/seed_92588.json",
+    "seed": 92588,
+    "headline": "The Quiet Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
+    "percentile": 50.0,
+    "total_divergences": 202,
+    "tags": [],
+    "event_count": 279
+  },
+  {
+    "file": "/runs/seed_92616.json",
+    "seed": 92616,
+    "headline": "The Troubled Century: 9/11 plot disrupted before execution",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 223,
+    "tags": [],
+    "event_count": 283
+  },
+  {
+    "file": "/runs/seed_93210.json",
+    "seed": 93210,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 284
+  },
+  {
+    "file": "/runs/seed_93327.json",
+    "seed": 93327,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "CATASTROPHE",
+    "composite_score": -0.1504,
+    "percentile": 50.0,
+    "total_divergences": 195,
+    "tags": [],
+    "event_count": 283
+  },
+  {
+    "file": "/runs/seed_93452.json",
+    "seed": 93452,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
+    "percentile": 50.0,
+    "total_divergences": 217,
     "tags": [],
     "event_count": 281
   },
   {
-    "file": "/runs/seed_92003.json",
-    "seed": 92003,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5536,
+    "file": "/runs/seed_93632.json",
+    "seed": 93632,
+    "headline": "The Troubled Century: Recession triggers financial regulation reform",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 225,
+    "total_divergences": 211,
     "tags": [],
-    "event_count": 283
+    "event_count": 279
+  },
+  {
+    "file": "/runs/seed_93874.json",
+    "seed": 93874,
+    "headline": "The Quiet Century: Full recession; unemployment hits 8%",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
+    "percentile": 50.0,
+    "total_divergences": 216,
+    "tags": [],
+    "event_count": 284
   },
   {
     "file": "/runs/seed_93892.json",
@@ -5159,15 +5104,15 @@
     "event_count": 280
   },
   {
-    "file": "/runs/seed_94391.json",
-    "seed": 94391,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.499,
+    "file": "/runs/seed_94447.json",
+    "seed": 94447,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0003,
     "percentile": 50.0,
-    "total_divergences": 216,
+    "total_divergences": 217,
     "tags": [],
-    "event_count": 281
+    "event_count": 287
   },
   {
     "file": "/runs/seed_94506.json",
@@ -5181,17 +5126,6 @@
     "event_count": 283
   },
   {
-    "file": "/runs/seed_94537.json",
-    "seed": 94537,
-    "headline": "The Dark Century: China WTO accession delayed to 2006",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5019,
-    "percentile": 50.0,
-    "total_divergences": 210,
-    "tags": [],
-    "event_count": 285
-  },
-  {
     "file": "/runs/seed_94813.json",
     "seed": 94813,
     "headline": "The Troubled Century: Al Gore wins after full Florida recount",
@@ -5203,26 +5137,70 @@
     "event_count": 278
   },
   {
-    "file": "/runs/seed_94831.json",
-    "seed": 94831,
-    "headline": "The Long Collapse Century: Tech sector rebounds quickly; moderate rate cuts",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4269,
+    "file": "/runs/seed_94977.json",
+    "seed": 94977,
+    "headline": "The Quiet Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
     "percentile": 50.0,
     "total_divergences": 202,
     "tags": [],
     "event_count": 285
   },
   {
-    "file": "/runs/seed_95442.json",
-    "seed": 95442,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4987,
+    "file": "/runs/seed_95317.json",
+    "seed": 95317,
+    "headline": "The Troubled Century: Post-9/11 Security Architecture",
+    "outcome_class": "RADICALLY-DIFFERENT",
+    "composite_score": -0.0002,
     "percentile": 50.0,
-    "total_divergences": 194,
+    "total_divergences": 230,
     "tags": [],
-    "event_count": 268
+    "event_count": 288
+  },
+  {
+    "file": "/runs/seed_95450.json",
+    "seed": 95450,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
+    "percentile": 50.0,
+    "total_divergences": 235,
+    "tags": [],
+    "event_count": 284
+  },
+  {
+    "file": "/runs/seed_95585.json",
+    "seed": 95585,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0002,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 285
+  },
+  {
+    "file": "/runs/seed_95749.json",
+    "seed": 95749,
+    "headline": "The Troubled Century: 9/11 plot disrupted before execution",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0404,
+    "percentile": 50.0,
+    "total_divergences": 223,
+    "tags": [],
+    "event_count": 286
+  },
+  {
+    "file": "/runs/seed_95772.json",
+    "seed": 95772,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 285
   },
   {
     "file": "/runs/seed_95901.json",
@@ -5236,6 +5214,17 @@
     "event_count": 285
   },
   {
+    "file": "/runs/seed_95950.json",
+    "seed": 95950,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0002,
+    "percentile": 50.0,
+    "total_divergences": 206,
+    "tags": [],
+    "event_count": 286
+  },
+  {
     "file": "/runs/seed_96010.json",
     "seed": 96010,
     "headline": "The Troubled Century: Full recession; unemployment hits 8%",
@@ -5247,26 +5236,15 @@
     "event_count": 281
   },
   {
-    "file": "/runs/seed_96123.json",
-    "seed": 96123,
-    "headline": "The Long Collapse Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4422,
+    "file": "/runs/seed_96038.json",
+    "seed": 96038,
+    "headline": "The Troubled Century: September 11 Attacks",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 218,
+    "total_divergences": 211,
     "tags": [],
-    "event_count": 288
-  },
-  {
-    "file": "/runs/seed_96212.json",
-    "seed": 96212,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4289,
-    "percentile": 50.0,
-    "total_divergences": 199,
-    "tags": [],
-    "event_count": 274
+    "event_count": 280
   },
   {
     "file": "/runs/seed_96300.json",
@@ -5278,6 +5256,28 @@
     "total_divergences": 207,
     "tags": [],
     "event_count": 285
+  },
+  {
+    "file": "/runs/seed_96529.json",
+    "seed": 96529,
+    "headline": "The Quiet Century: China rejected from WTO; pursues bilateral trade",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
+    "percentile": 50.0,
+    "total_divergences": 222,
+    "tags": [],
+    "event_count": 286
+  },
+  {
+    "file": "/runs/seed_96541.json",
+    "seed": 96541,
+    "headline": "The Quiet Century: China WTO accession delayed to 2006",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": 0.0001,
+    "percentile": 50.0,
+    "total_divergences": 217,
+    "tags": [],
+    "event_count": 283
   },
   {
     "file": "/runs/seed_97011.json",
@@ -5302,15 +5302,26 @@
     "event_count": 278
   },
   {
-    "file": "/runs/seed_97840.json",
-    "seed": 97840,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4675,
+    "file": "/runs/seed_97627.json",
+    "seed": 97627,
+    "headline": "The Troubled Century: China Joins WTO",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0404,
     "percentile": 50.0,
-    "total_divergences": 211,
+    "total_divergences": 206,
     "tags": [],
-    "event_count": 281
+    "event_count": 287
+  },
+  {
+    "file": "/runs/seed_97651.json",
+    "seed": 97651,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0404,
+    "percentile": 50.0,
+    "total_divergences": 215,
+    "tags": [],
+    "event_count": 286
   },
   {
     "file": "/runs/seed_97927.json",
@@ -5324,103 +5335,70 @@
     "event_count": 281
   },
   {
-    "file": "/runs/seed_98046.json",
-    "seed": 98046,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5997,
+    "file": "/runs/seed_98087.json",
+    "seed": 98087,
+    "headline": "The Quiet Century: China Joins WTO",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0801,
     "percentile": 50.0,
-    "total_divergences": 209,
+    "total_divergences": 216,
     "tags": [],
-    "event_count": 288
+    "event_count": 280
   },
   {
-    "file": "/runs/seed_98117.json",
-    "seed": 98117,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5665,
+    "file": "/runs/seed_98226.json",
+    "seed": 98226,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 212,
-    "tags": [],
-    "event_count": 288
-  },
-  {
-    "file": "/runs/seed_98196.json",
-    "seed": 98196,
-    "headline": "The Long Collapse Century: 9/11 plot disrupted before execution",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4236,
-    "percentile": 50.0,
-    "total_divergences": 210,
-    "tags": [],
-    "event_count": 288
-  },
-  {
-    "file": "/runs/seed_98272.json",
-    "seed": 98272,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.428,
-    "percentile": 50.0,
-    "total_divergences": 220,
+    "total_divergences": 211,
     "tags": [],
     "event_count": 284
   },
   {
-    "file": "/runs/seed_98283.json",
-    "seed": 98283,
-    "headline": "The Long Collapse Century: Full recession; unemployment hits 8%",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4976,
+    "file": "/runs/seed_98354.json",
+    "seed": 98354,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 205,
+    "total_divergences": 208,
     "tags": [],
-    "event_count": 274
+    "event_count": 286
   },
   {
-    "file": "/runs/seed_98364.json",
-    "seed": 98364,
-    "headline": "The Long Collapse Century: September 11 Attacks",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4242,
+    "file": "/runs/seed_98849.json",
+    "seed": 98849,
+    "headline": "The Troubled Century: Tech sector rebounds quickly; moderate rate cuts",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 213,
-    "tags": [],
-    "event_count": 287
-  },
-  {
-    "file": "/runs/seed_98518.json",
-    "seed": 98518,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4376,
-    "percentile": 50.0,
-    "total_divergences": 212,
+    "total_divergences": 209,
     "tags": [],
     "event_count": 281
   },
   {
-    "file": "/runs/seed_98624.json",
-    "seed": 98624,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5036,
+    "file": "/runs/seed_98850.json",
+    "seed": 98850,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
     "percentile": 50.0,
-    "total_divergences": 211,
+    "total_divergences": 222,
     "tags": [],
-    "event_count": 281
+    "event_count": 285
   },
   {
-    "file": "/runs/seed_98790.json",
-    "seed": 98790,
-    "headline": "The Dark Century: 2000 US Presidential Election",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5413,
+    "file": "/runs/seed_99168.json",
+    "seed": 99168,
+    "headline": "The Quiet Century: Al Gore wins after full Florida recount",
+    "outcome_class": "PROGRESS",
+    "composite_score": 0.0802,
     "percentile": 50.0,
-    "total_divergences": 216,
+    "total_divergences": 209,
     "tags": [],
-    "event_count": 288
+    "event_count": 281
   },
   {
     "file": "/runs/seed_99323.json",
@@ -5434,28 +5412,6 @@
     "event_count": 281
   },
   {
-    "file": "/runs/seed_99347.json",
-    "seed": 99347,
-    "headline": "The Long Collapse Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.467,
-    "percentile": 50.0,
-    "total_divergences": 213,
-    "tags": [],
-    "event_count": 286
-  },
-  {
-    "file": "/runs/seed_99469.json",
-    "seed": 99469,
-    "headline": "The Long Collapse Century: China rejected from WTO; pursues bilateral trade",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.4224,
-    "percentile": 50.0,
-    "total_divergences": 207,
-    "tags": [],
-    "event_count": 284
-  },
-  {
     "file": "/runs/seed_99486.json",
     "seed": 99486,
     "headline": "The Near-Miss Century: Full recession; unemployment hits 8%",
@@ -5465,6 +5421,17 @@
     "total_divergences": 229,
     "tags": [],
     "event_count": 284
+  },
+  {
+    "file": "/runs/seed_99543.json",
+    "seed": 99543,
+    "headline": "The Troubled Century: Full recession; unemployment hits 8%",
+    "outcome_class": "MUDDLING-THROUGH",
+    "composite_score": -0.0001,
+    "percentile": 50.0,
+    "total_divergences": 200,
+    "tags": [],
+    "event_count": 281
   },
   {
     "file": "/runs/seed_99588.json",
@@ -5489,14 +5456,14 @@
     "event_count": 284
   },
   {
-    "file": "/runs/seed_99947.json",
-    "seed": 99947,
-    "headline": "The Dark Century: Al Gore wins after full Florida recount",
-    "outcome_class": "EXTINCTION",
-    "composite_score": -0.5157,
+    "file": "/runs/seed_99704.json",
+    "seed": 99704,
+    "headline": "The Troubled Century: Al Gore wins after full Florida recount",
+    "outcome_class": "DECLINE",
+    "composite_score": -0.0403,
     "percentile": 50.0,
-    "total_divergences": 200,
+    "total_divergences": 224,
     "tags": [],
-    "event_count": 282
+    "event_count": 285
   }
 ]
