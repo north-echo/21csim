@@ -513,7 +513,7 @@ export class Viewer {
         <span class="year-badge">${month}</span>
         <span class="event-title">${this._esc(event.title)}</span>
         <span class="status-badge ${statusClass}">${event.status}</span>
-        <button class="event-share-btn" title="Copy permalink" aria-label="Share this event" data-url="${this._escAttr(shareUrl)}">\u{1F517}</button>
+        <button class="event-share-btn" title="Copy permalink" aria-label="Share this event" data-url="${this._escAttr(shareUrl)}">↗</button>
       </div>
       <div class="event-description">${this._esc(event.description)}</div>
       ${explanationHtml}
@@ -580,7 +580,7 @@ export class Viewer {
           shareBtn.textContent = '\u2713';
           setTimeout(() => {
             shareBtn.classList.remove('copied');
-            shareBtn.textContent = '\u{1F517}';
+            shareBtn.textContent = '↗';
           }, 2000);
         }).catch(() => {
           // Fallback: select text in a temp input
@@ -594,7 +594,7 @@ export class Viewer {
           shareBtn.textContent = '\u2713';
           setTimeout(() => {
             shareBtn.classList.remove('copied');
-            shareBtn.textContent = '\u{1F517}';
+            shareBtn.textContent = '↗';
           }, 2000);
         });
       });
