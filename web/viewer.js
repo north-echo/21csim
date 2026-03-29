@@ -492,7 +492,7 @@ export class Viewer {
       const catalogNode = this._catalog[event.node_id];
       const histBranch = catalogNode.branches.find(b => b.status === 'HISTORICAL');
       if (histBranch) {
-        historicalHtml = `<div class="event-historical-comparison">\u2194 In our timeline: ${this._esc(histBranch.description)}</div>`;
+        historicalHtml = `<button class="event-historical-toggle">\u2194 In our timeline</button><div class="event-historical-comparison" style="display:none">${this._esc(histBranch.description)}</div>`;
       }
     }
 
@@ -542,6 +542,20 @@ export class Viewer {
         textSpan.textContent = event.narration;
         narEl.insertBefore(textSpan, narEl.firstChild);
       }
+    }
+
+    // "In our timeline" toggle
+    const histToggle = card.querySelector('.event-historical-toggle');
+    if (histToggle) {
+      histToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const comp = card.querySelector('.event-historical-comparison');
+        if (comp) {
+          const showing = comp.style.display !== 'none';
+          comp.style.display = showing ? 'none' : 'block';
+          histToggle.classList.toggle('open', !showing);
+        }
+      });
     }
 
     // Voice playback button
