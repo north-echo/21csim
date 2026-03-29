@@ -101,12 +101,16 @@ class App {
   }
 
   async _init() {
+    // Load nodes catalog for causal chain, comparison features
+    this.viewer.loadCatalog();
+
     const runs = await this.selector.loadIndex('/runs/index.json');
 
     // Check for /century/{seed} path or ?seed=XXXX query param
     const pathMatch = window.location.pathname.match(/\/century\/(\d+)/);
     const params = new URLSearchParams(window.location.search);
     const seedParam = pathMatch ? pathMatch[1] : params.get('seed');
+    const eventParam = params.get('event');
     if (seedParam && runs.length > 0) {
       const target = runs.find(r => String(r.seed) === seedParam);
       if (target) {
@@ -115,7 +119,13 @@ class App {
           const resp = await fetch(target.file);
           if (resp.ok) {
             const data = await resp.json();
-            this._loadRun(data);
+            // Feature 2: If event param present, seek to that event
+            if (eventParam !== null) {
+              const eventIdx = parseInt(eventParam, 10);
+              this._loadRun(data, eventIdx);
+            } else {
+              this._loadRun(data);
+            }
             return;
           }
         } catch (e) {
@@ -205,7 +215,7 @@ class App {
     }
   }
 
-  _loadRun(data) {
+  _loadRun(data, seekEventIdx) {
     this.currentRun = data;
     this.viewer.loadRun(data);
 
@@ -223,6 +233,20 @@ class App {
     // Hide empty state
     const empty = document.getElementById('empty-state');
     if (empty) empty.style.display = 'none';
+
+    // Feature 2: If seeking to a specific event, fast-forward there then start playback
+    if (seekEventIdx !== undefined && seekEventIdx >= 0 && seekEventIdx < data.events.length) {
+      // Wait for catalog to load so "In Our Timeline" shows during seek
+      this.viewer.loadCatalog().then(() => {
+        this.viewer.seekToEvent(seekEventIdx);
+        // Start playback from this point
+        setTimeout(() => {
+          this.viewer.play();
+          this.controls.setPlayState(true);
+        }, 500);
+      });
+      return;
+    }
 
     // Auto-play
     setTimeout(() => {

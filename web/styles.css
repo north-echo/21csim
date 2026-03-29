@@ -991,6 +991,153 @@ html, body {
   .narration-toast { bottom: 90px; font-size: 12px; padding: 8px 14px; max-width: 90vw; }
 }
 
+/* ── Feature 1: Causal Chain Expanded Panel ── */
+.event-card { cursor: pointer; }
+.event-card.chain-open { border-color: var(--accent); }
+
+.event-expanded {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  animation: expandAppear 0.25s ease;
+}
+
+@keyframes expandAppear {
+  from { opacity: 0; max-height: 0; }
+  to { opacity: 1; max-height: 600px; }
+}
+
+.chain-section {
+  margin-bottom: 10px;
+}
+
+.chain-section:last-child {
+  margin-bottom: 0;
+}
+
+.chain-heading {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.chain-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  margin-bottom: 3px;
+  background: rgba(96,128,255,0.04);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.chain-link:hover {
+  border-color: var(--accent);
+  background: rgba(96,128,255,0.08);
+}
+
+.chain-link-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.chain-link-desc {
+  width: 100%;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.chain-none {
+  font-size: 11px;
+  color: #555570;
+  font-style: italic;
+  padding: 2px 0;
+}
+
+.chain-impact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+}
+
+.chain-impact-item {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--bg);
+}
+
+.chain-impact-item.positive { color: #40c040; }
+.chain-impact-item.negative { color: #ff4444; }
+
+/* ── Feature 2: Share Button & Event Highlight ── */
+.event-share-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-dim);
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: color 0.2s, background 0.2s;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.event-share-btn:hover {
+  color: var(--accent);
+  background: rgba(96,128,255,0.1);
+}
+
+.event-share-btn.copied {
+  color: #40c040;
+}
+
+.event-highlighted {
+  box-shadow: 0 0 12px 3px rgba(96,128,255,0.35), 0 0 24px 6px rgba(96,128,255,0.15);
+  border-color: var(--accent) !important;
+  animation: eventGlow 3s ease-out;
+}
+
+@keyframes eventGlow {
+  0% { box-shadow: 0 0 16px 6px rgba(96,128,255,0.5), 0 0 32px 12px rgba(96,128,255,0.25); }
+  100% { box-shadow: 0 0 0 0 rgba(96,128,255,0); }
+}
+
+/* ── Feature 3: "In Our Timeline" Comparison ── */
+.event-historical-comparison {
+  font-size: 11px;
+  color: #606078;
+  margin-top: 4px;
+  padding-left: 4px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* ── Responsive adjustments for new features ── */
+@media (max-width: 768px) {
+  .event-expanded { margin-top: 8px; padding-top: 8px; }
+  .chain-link { padding: 4px 6px; }
+  .chain-impact-item { font-size: 9px; }
+  .event-historical-comparison { font-size: 10px; }
+}
+
+@media (max-width: 600px) {
+  .event-share-btn { font-size: 11px; }
+  .chain-link { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .chain-impact-list { gap: 3px 6px; }
+}
+
 /* ── Utility ── */
 .hidden { display: none !important; }
 .cursor-blink::after {

@@ -23,7 +23,7 @@ def load_api_key():
 
 
 VOICE = "onyx"
-MODEL = "tts-1-hd"
+MODEL = "tts-1"
 OUTPUT_DIR = Path("web/audio")
 TOP_N = 200
 

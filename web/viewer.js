@@ -21,6 +21,26 @@ export class Viewer {
     this.currentEraName = null;
 
     this.worldState = {};
+    this._catalog = null;
+    this._catalogPromise = null;
+  }
+
+  // Load nodes catalog (cached)
+  loadCatalog() {
+    if (this._catalog) return Promise.resolve(this._catalog);
+    if (this._catalogPromise) return this._catalogPromise;
+    this._catalogPromise = fetch('/nodes-catalog.json')
+      .then(r => r.ok ? r.json() : [])
+      .then(data => {
+        // Build lookup map by node id
+        this._catalog = {};
+        for (const node of data) {
+          this._catalog[node.id] = node;
+        }
+        return this._catalog;
+      })
+      .catch(() => { this._catalog = {}; return this._catalog; });
+    return this._catalogPromise;
   }
 
   static INITIAL_STATE = {
@@ -184,6 +204,35 @@ export class Viewer {
     this.dashboard.update(this.worldState, null);
     if (this.onProgress) this.onProgress(this.currentIndex + 1, this.events.length);
     if (wasPlaying) this.play();
+  }
+
+  seekToEvent(targetIdx) {
+    if (!this.run) return;
+    if (targetIdx < 0 || targetIdx >= this.events.length) return;
+    this.pause();
+    this.currentIndex = -1;
+    this.worldState = { ...Viewer.INITIAL_STATE };
+    this.timelineEl.innerHTML = '';
+    this.dashboard.reset();
+    this.lastDecade = null;
+    this.lastYearMonth = null;
+    this.currentEraName = null;
+    this._clearTypewriters();
+    // Show all events up to target instantly (no animation)
+    for (let i = 0; i <= targetIdx; i++) {
+      this._showEvent(i, false);
+    }
+    this.currentIndex = targetIdx;
+    this.lastYearMonth = this.events[targetIdx].year_month;
+    this.dashboard.update(this.worldState, null);
+    if (this.onProgress) this.onProgress(this.currentIndex + 1, this.events.length);
+    // Highlight the target event with a glow
+    const cards = this.timelineEl.querySelectorAll('.event-card');
+    const targetCard = cards[cards.length - 1];
+    if (targetCard) {
+      targetCard.classList.add('event-highlighted');
+      targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
 
   get isPlaying() { return this.playing; }
@@ -434,7 +483,17 @@ export class Viewer {
     // Build explanation line
     let explanationHtml = '';
     if (event.explanation && event.status !== 'HISTORICAL') {
-      explanationHtml = `<div class="event-explanation">↳ ${this._esc(event.explanation)}</div>`;
+      explanationHtml = `<div class="event-explanation">\u21b3 ${this._esc(event.explanation)}</div>`;
+    }
+
+    // Feature 3: "In Our Timeline" comparison for non-HISTORICAL events
+    let historicalHtml = '';
+    if (event.status !== 'HISTORICAL' && this._catalog && this._catalog[event.node_id]) {
+      const catalogNode = this._catalog[event.node_id];
+      const histBranch = catalogNode.branches.find(b => b.status === 'HISTORICAL');
+      if (histBranch) {
+        historicalHtml = `<div class="event-historical-comparison">\u2194 In our timeline: ${this._esc(histBranch.description)}</div>`;
+      }
     }
 
     // Build narration line with optional voice playback
@@ -446,15 +505,23 @@ export class Viewer {
         `</div>`;
     }
 
+    // Feature 2: Share button
+    const shareUrl = `https://21csim.com/?seed=${this.run.seed}&event=${idx}`;
+
     card.innerHTML = `
       <div class="event-header">
         <span class="year-badge">${month}</span>
         <span class="event-title">${this._esc(event.title)}</span>
         <span class="status-badge ${statusClass}">${event.status}</span>
+        <button class="event-share-btn" title="Copy permalink" aria-label="Share this event" data-url="${this._escAttr(shareUrl)}">\u{1F517}</button>
       </div>
       <div class="event-description">${this._esc(event.description)}</div>
       ${explanationHtml}
+      ${historicalHtml}
       ${narrationHtml}`;
+
+    // Store event index on card for causal chain lookups
+    card.dataset.eventIndex = idx;
 
     this.timelineEl.appendChild(card);
 
@@ -502,6 +569,44 @@ export class Viewer {
       }
     }
 
+    // Feature 2: Share button handler
+    const shareBtn = card.querySelector('.event-share-btn');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const url = shareBtn.dataset.url;
+        navigator.clipboard.writeText(url).then(() => {
+          shareBtn.classList.add('copied');
+          shareBtn.textContent = '\u2713';
+          setTimeout(() => {
+            shareBtn.classList.remove('copied');
+            shareBtn.textContent = '\u{1F517}';
+          }, 2000);
+        }).catch(() => {
+          // Fallback: select text in a temp input
+          const tmp = document.createElement('input');
+          tmp.value = url;
+          document.body.appendChild(tmp);
+          tmp.select();
+          document.execCommand('copy');
+          document.body.removeChild(tmp);
+          shareBtn.classList.add('copied');
+          shareBtn.textContent = '\u2713';
+          setTimeout(() => {
+            shareBtn.classList.remove('copied');
+            shareBtn.textContent = '\u{1F517}';
+          }, 2000);
+        });
+      });
+    }
+
+    // Feature 1: Causal chain click handler
+    card.addEventListener('click', (e) => {
+      // Don't trigger on button clicks
+      if (e.target.closest('button')) return;
+      this._toggleCausalChain(card, idx);
+    });
+
     // Auto-scroll only if user is near the bottom (not scrolled up reading)
     if (animate) {
       const el = this.timelineEl;
@@ -510,6 +615,114 @@ export class Viewer {
         card.scrollIntoView({ behavior: 'smooth', block: 'end' });
       }
     }
+  }
+
+  _toggleCausalChain(card, idx) {
+    // Toggle: if already expanded, collapse
+    const existing = card.querySelector('.event-expanded');
+    if (existing) {
+      existing.remove();
+      card.classList.remove('chain-open');
+      return;
+    }
+
+    const event = this.events[idx];
+    if (!this._catalog) return; // catalog not loaded yet
+
+    const catalogNode = this._catalog[event.node_id];
+    card.classList.add('chain-open');
+
+    const panel = document.createElement('div');
+    panel.className = 'event-expanded';
+
+    // --- Caused by ---
+    let causedByHtml = '<div class="chain-section"><div class="chain-heading">Caused by</div>';
+    if (catalogNode && catalogNode.dependencies && catalogNode.dependencies.length > 0) {
+      const depIds = [...new Set(catalogNode.dependencies)];
+      let foundAny = false;
+      for (const depId of depIds) {
+        // Find this dependency in earlier events
+        for (let i = 0; i < idx; i++) {
+          if (this.events[i].node_id === depId) {
+            foundAny = true;
+            causedByHtml += this._chainLink(i, this.events[i]);
+            break; // only first occurrence
+          }
+        }
+      }
+      if (!foundAny) causedByHtml += '<div class="chain-none">No upstream events in this run</div>';
+    } else {
+      causedByHtml += '<div class="chain-none">No dependencies</div>';
+    }
+    causedByHtml += '</div>';
+
+    // --- Led to ---
+    let ledToHtml = '<div class="chain-section"><div class="chain-heading">Led to</div>';
+    // Find nodes that list this event's node_id in their dependencies
+    const downstreamIds = [];
+    for (const [nodeId, node] of Object.entries(this._catalog)) {
+      if (node.dependencies && node.dependencies.includes(event.node_id)) {
+        downstreamIds.push(nodeId);
+      }
+    }
+    let foundDownstream = false;
+    if (downstreamIds.length > 0) {
+      for (let i = idx + 1; i < this.events.length; i++) {
+        if (downstreamIds.includes(this.events[i].node_id)) {
+          // Only show if this event has been displayed (i <= currentIndex)
+          if (i <= this.currentIndex) {
+            foundDownstream = true;
+            ledToHtml += this._chainLink(i, this.events[i]);
+          }
+        }
+      }
+    }
+    if (!foundDownstream) ledToHtml += '<div class="chain-none">No downstream events shown yet</div>';
+    ledToHtml += '</div>';
+
+    // --- Impact ---
+    let impactHtml = '<div class="chain-section"><div class="chain-heading">Impact</div>';
+    const delta = event.world_state_delta || {};
+    const deltaEntries = Object.entries(delta);
+    if (deltaEntries.length > 0) {
+      impactHtml += '<div class="chain-impact-list">';
+      for (const [key, val] of deltaEntries) {
+        const label = key.replace(/_/g, ' ');
+        const sign = val > 0 ? '+' : '';
+        const cls = val > 0 ? 'positive' : 'negative';
+        impactHtml += `<span class="chain-impact-item ${cls}">${this._esc(label)}: ${sign}${typeof val === 'number' ? (Number.isInteger(val) ? val : val.toFixed(3)) : val}</span>`;
+      }
+      impactHtml += '</div>';
+    } else {
+      impactHtml += '<div class="chain-none">No world state changes</div>';
+    }
+    impactHtml += '</div>';
+
+    panel.innerHTML = causedByHtml + ledToHtml + impactHtml;
+    card.appendChild(panel);
+
+    // Add click handlers for chain links to scroll to that event
+    panel.querySelectorAll('.chain-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const targetIdx = parseInt(link.dataset.eventIndex, 10);
+        const targetCard = this.timelineEl.querySelector(`.event-card[data-event-index="${targetIdx}"]`);
+        if (targetCard) {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          targetCard.classList.add('event-highlighted');
+          setTimeout(() => targetCard.classList.remove('event-highlighted'), 3000);
+        }
+      });
+    });
+  }
+
+  _chainLink(idx, event) {
+    const statusClass = 'status-' + event.status;
+    return `<div class="chain-link" data-event-index="${idx}">` +
+      `<span class="chain-link-title">${this._esc(event.title)}</span>` +
+      `<span class="status-badge ${statusClass}" style="font-size:9px;">${event.status}</span>` +
+      `<span class="chain-link-desc">${this._esc(event.description)}</span>` +
+      `</div>`;
   }
 
   _showEraBanner(eraName, decade, animate) {
