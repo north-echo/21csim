@@ -6,6 +6,8 @@ A command-line tool and web viewer that models the major inflection points of th
 
 Each run produces a plausible alternate 21st century. Batch runs reveal which decisions had the most leverage over how the century turned out.
 
+Credit to https://github.com/mraml for the simulator inspiration.
+
 ## Quick Start
 
 ```bash
