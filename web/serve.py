@@ -91,6 +91,35 @@ class SimViewerHandler(http.server.SimpleHTTPRequestHandler):
             self.send_error(404, f"Run not found: {filename}")
             return
 
+        # Serve /api/reality — current reality state
+        if self.path == "/api/reality":
+            reality_path = PROJECT_ROOT / "src" / "csim" / "data" / "reality_2026.yaml"
+            if reality_path.exists():
+                import yaml
+                with open(reality_path) as f:
+                    data = yaml.safe_load(f)
+                # Include update log metadata
+                log_path = PROJECT_ROOT / "src" / "csim" / "data" / "reality_stream_log.json"
+                if log_path.exists():
+                    try:
+                        log = json.loads(log_path.read_text())
+                        data["_stream_log"] = log[-5:]  # Last 5 updates
+                    except (json.JSONDecodeError, ValueError):
+                        pass
+                self._serve_json(data)
+            else:
+                self.send_error(404, "Reality file not found")
+            return
+
+        # Serve /api/reality/log — full update history
+        if self.path == "/api/reality/log":
+            log_path = PROJECT_ROOT / "src" / "csim" / "data" / "reality_stream_log.json"
+            if log_path.exists():
+                self._serve_file(log_path, "application/json")
+            else:
+                self._serve_json([])
+            return
+
         # Everything else: serve from web directory
         super().do_GET()
 

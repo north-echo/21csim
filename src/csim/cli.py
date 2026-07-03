@@ -3,10 +3,9 @@
 from __future__ import annotations
 
 import json
-import sys
+import os
 from enum import Enum
 from pathlib import Path
-from typing import Optional
 
 import typer
 
@@ -72,13 +71,13 @@ def run(
     speed: SpeedPreset = typer.Option(SpeedPreset.fast, help="Playback speed"),
     detail: DetailLevel = typer.Option(DetailLevel.standard, help="Detail level"),
     divergences_only: bool = typer.Option(False, "--divergences-only", help="Only show divergences"),
-    domain: Optional[str] = typer.Option(None, help="Filter by domain"),
+    domain: str | None = typer.Option(None, help="Filter by domain"),
     no_pause: bool = typer.Option(False, "--no-pause", help="Skip timing delays"),
     sound: bool = typer.Option(False, "--sound", help="Enable audio cues"),
     format: OutputFormat = typer.Option(OutputFormat.terminal, "--format", help="Output format"),
     narrate: bool = typer.Option(True, "--narrate/--no-narrate", help="Enable/disable AI narration"),
-    provider: Optional[str] = typer.Option(None, "--provider", help="Force provider: ollama|claude|none"),
-    model: Optional[str] = typer.Option(None, "--model", help="Override model name"),
+    provider: str | None = typer.Option(None, "--provider", help="Force provider: ollama|claude|none"),
+    model: str | None = typer.Option(None, "--model", help="Override model name"),
     no_ai: bool = typer.Option(False, "--no-ai", help="Disable AI narration (alias for --provider none)"),
     from_reality: bool = typer.Option(False, "--from-reality", help="Start from real 2026 world state"),
 ) -> None:
@@ -152,7 +151,7 @@ def run(
 @app.command()
 def batch(
     iterations: int = typer.Option(1000, help="Number of simulations"),
-    output: Optional[Path] = typer.Option(None, help="Output JSON file path"),
+    output: Path | None = typer.Option(None, help="Output JSON file path"),
     parallel: int = typer.Option(1, help="Number of parallel workers"),
     format: OutputFormat = typer.Option(OutputFormat.terminal, "--format", help="Output format"),
     from_reality: bool = typer.Option(False, "--from-reality", help="Start from real 2026 world state"),
@@ -194,10 +193,11 @@ def diff(
     seed_b: int = typer.Argument(..., help="Second seed"),
 ) -> None:
     """Compare two simulation runs."""
+    from rich.console import Console
+
     from csim.analysis import diff_runs
     from csim.engine import simulate
     from csim.graph import build_graph
-    from rich.console import Console
 
     data_dir = _get_data_dir()
     graph = build_graph(data_dir)
@@ -226,10 +226,11 @@ def sensitivity(
     iterations: int = typer.Option(1000, help="Number of simulations"),
 ) -> None:
     """Analyze sensitivity of outcomes to a specific node."""
-    from csim.analysis import sensitivity_analysis
-    from csim.graph import build_graph
     from rich.console import Console
     from rich.table import Table
+
+    from csim.analysis import sensitivity_analysis
+    from csim.graph import build_graph
 
     data_dir = _get_data_dir()
     graph = build_graph(data_dir)
@@ -265,10 +266,11 @@ def what_if(
     iterations: int = typer.Option(1000, help="Number of simulations"),
 ) -> None:
     """Run what-if analysis with forced branch selections."""
+    from rich.console import Console
+
     from csim.analysis import what_if_analysis
     from csim.graph import build_graph
     from csim.renderer import render_batch_summary
-    from rich.console import Console
 
     data_dir = _get_data_dir()
     graph = build_graph(data_dir)
@@ -298,15 +300,16 @@ def export_library(
     count: int = typer.Option(200, help="Number of curated seeds"),
     candidates: int = typer.Option(100_000, help="Candidate pool size"),
     narrate: bool = typer.Option(False, "--narrate", help="Generate AI narrations"),
-    narrator_provider: Optional[str] = typer.Option(None, "--narrator-provider", help="Provider: claude|ollama"),
-    narrator_model: Optional[str] = typer.Option(None, "--narrator-model", help="Model override"),
+    narrator_provider: str | None = typer.Option(None, "--narrator-provider", help="Provider: claude|ollama"),
+    narrator_model: str | None = typer.Option(None, "--narrator-model", help="Model override"),
     output: Path = typer.Option(Path("src/csim/data/curated"), help="Output directory"),
 ) -> None:
     """Generate curated seed library with optional narration."""
     import asyncio
+
     from csim.engine import simulate, simulate_batch
-    from csim.graph import build_graph
     from csim.exporter import export_outcome_json
+    from csim.graph import build_graph
 
     data_dir = _get_data_dir()
     graph = build_graph(data_dir)
@@ -352,7 +355,7 @@ def export_library(
         # Calculate proportional fill per class
         total_unselected = sum(len(v) for v in unselected_by_class.values())
         if total_unselected > 0:
-            for cls, pool in unselected_by_class.items():
+            for pool in unselected_by_class.values():
                 share = max(1, int(remaining * len(pool) / total_unselected))
                 # Sort by score diversity within class
                 pool.sort(key=lambda o: abs(o.composite_score))
@@ -415,6 +418,99 @@ def export_library(
         export_outcome_json(outcome, out_path)
 
     typer.echo(f"\nExported {len(selected_outcomes)} runs to {runs_dir}")
+
+
+@app.command(name="update-reality")
+def update_reality(
+    days_back: int = typer.Option(7, help="Days of news to fetch"),
+    dry_run: bool = typer.Option(False, "--dry-run", help="Show changes without applying"),
+    provider: str | None = typer.Option(None, "--provider", help="LLM provider: claude|ollama"),
+    model: str | None = typer.Option(None, "--model", help="Override model name"),
+    newsapi_key: str | None = typer.Option(None, "--newsapi-key", envvar="NEWSAPI_KEY", help="NewsAPI.org key"),
+) -> None:
+    """Fetch world news and update reality state via LLM analysis."""
+    import asyncio
+
+    from rich.console import Console
+    from rich.table import Table
+
+    from csim.llm import resolve_provider
+    from csim.reality_stream import export_reality_snapshot, run_reality_stream
+
+    console = Console()
+    data_dir = _get_data_dir()
+
+    # Resolve API key
+    api_key = newsapi_key or os.environ.get("NEWSAPI_KEY", "")
+    if not api_key:
+        # Try .env file
+        from pathlib import Path
+        for candidate in [Path.cwd() / ".env", Path(__file__).parent.parent.parent / ".env"]:
+            if candidate.exists():
+                for line in candidate.read_text().splitlines():
+                    if line.strip().startswith("NEWSAPI_KEY="):
+                        api_key = line.split("=", 1)[1].strip().strip("\"'")
+                        break
+            if api_key:
+                break
+
+    if not api_key:
+        console.print("[red]Error:[/] NEWSAPI_KEY not set. Get one at https://newsapi.org")
+        raise typer.Exit(1)
+
+    # Resolve LLM provider
+    llm = resolve_provider(provider)
+    if model and hasattr(llm, 'model'):
+        llm.model = model
+    if not llm.is_available():
+        console.print("[red]Error:[/] LLM provider not available. Set ANTHROPIC_API_KEY or use --provider ollama")
+        raise typer.Exit(1)
+
+    console.print(f"[bold]Reality Stream[/] — fetching {days_back} days of news...")
+    console.print(f"Analyst: {llm.model_name()}")
+
+    if dry_run:
+        console.print("[yellow]DRY RUN[/] — no files will be modified\n")
+
+    # Run the stream
+    result = asyncio.run(run_reality_stream(
+        data_dir=data_dir,
+        provider=llm,
+        newsapi_key=api_key,
+        days_back=days_back,
+        dry_run=dry_run,
+    ))
+
+    # Display results
+    console.print(f"\nProcessed [bold]{result['news_count']}[/] news articles")
+    console.print(f"[dim]{result['reasoning']}[/]\n")
+
+    if result["dimension_updates"]:
+        table = Table(title="World State Updates")
+        table.add_column("Dimension", style="bold")
+        table.add_column("New Value", justify="right")
+        for dim, val in sorted(result["dimension_updates"].items()):
+            table.add_row(dim, f"{val}")
+        console.print(table)
+    else:
+        console.print("[dim]No dimension changes.[/]")
+
+    if result["new_nodes"]:
+        console.print(f"\n[bold]{len(result['new_nodes'])} new event nodes:[/]")
+        for node in result["new_nodes"]:
+            console.print(f"  • {node.get('year_month', '?')} — {node.get('title', node.get('id', '?'))}")
+    else:
+        console.print("\n[dim]No new event nodes.[/]")
+
+    if dry_run:
+        console.print("\n[yellow]No files modified (dry run).[/]")
+    else:
+        console.print("\n[green]✓ reality_2026.yaml updated[/]")
+        # Export static snapshot for the production site (static host, no /api)
+        web_dir = Path(__file__).parent.parent.parent / "web"
+        if web_dir.is_dir():
+            snapshot = export_reality_snapshot(data_dir, web_dir / "reality.json")
+            console.print(f"[green]✓ exported[/] {snapshot}")
 
 
 if __name__ == "__main__":
