@@ -106,6 +106,9 @@ class App {
 
     const runs = await this.selector.loadIndex('/runs/index.json');
 
+    // Keep hero stats honest and rotate featured seeds from the live index
+    this._refreshHero(runs);
+
     // Check for /century/{seed} path or ?seed=XXXX query param
     const pathMatch = window.location.pathname.match(/\/century\/(\d+)/);
     const params = new URLSearchParams(window.location.search);
@@ -136,6 +139,32 @@ class App {
 
     // Don't auto-open selector — the hero landing page is the default view
     // Users can click "Watch a Random Century" or "Runs" to get started
+  }
+
+  _refreshHero(runs) {
+    if (!runs || runs.length === 0) return;
+
+    const seedStat = document.getElementById('stat-seeds');
+    if (seedStat) seedStat.textContent = String(runs.length);
+
+    // Rotate featured seeds: one good, one bad, one strange — fresh picks each visit
+    const groups = [
+      ['GOLDEN-AGE', 'PROGRESS'],
+      ['EXTINCTION', 'CATASTROPHE'],
+      ['TRANSCENDENCE', 'RADICALLY-DIFFERENT'],
+    ];
+    const links = document.querySelectorAll('.featured-seed');
+    groups.forEach((verdicts, i) => {
+      const link = links[i];
+      if (!link) return;
+      const pool = runs.filter(r => verdicts.includes(r.outcome_class));
+      if (pool.length === 0) return;
+      const pick = pool[Math.floor(Math.random() * pool.length)];
+      link.href = `?seed=${pick.seed}`;
+      link.dataset.verdict = pick.outcome_class;
+      link.textContent = `Seed ${pick.seed}`;
+      link.title = pick.headline || '';
+    });
   }
 
   _ensureSoundInit() {
