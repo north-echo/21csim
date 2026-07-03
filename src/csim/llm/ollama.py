@@ -5,8 +5,8 @@ from __future__ import annotations
 import json
 import urllib.error
 import urllib.request
-from csim.llm.base import LLMProvider
 
+from csim.llm.base import LLMProvider
 
 # Preferred models in priority order
 _PREFERRED_MODELS = [

@@ -1,10 +1,11 @@
 """Tests for the simulation engine."""
 
-import pytest
 from pathlib import Path
 
+import pytest
+
+from csim.engine import sample, simulate, simulate_batch
 from csim.graph import build_graph
-from csim.engine import simulate, simulate_batch, sample
 from csim.models import EventStatus, OutcomeClass
 
 DATA_DIR = Path(__file__).parent.parent / "src" / "csim" / "data"
@@ -25,7 +26,7 @@ class TestDeterminism:
         assert a.headline == b.headline
         assert a.outcome_class == b.outcome_class
         assert len(a.events) == len(b.events)
-        for ea, eb in zip(a.events, b.events):
+        for ea, eb in zip(a.events, b.events, strict=True):
             assert ea.branch_taken == eb.branch_taken
             assert ea.node_id == eb.node_id
 
@@ -137,5 +138,5 @@ class TestBatch:
     def test_batch_leverage(self, graph):
         result = simulate_batch(graph, iterations=100)
         assert len(result.highest_leverage_nodes) > 0
-        for node_id, r2 in result.highest_leverage_nodes:
+        for _node_id, r2 in result.highest_leverage_nodes:
             assert 0 <= r2 <= 1.0

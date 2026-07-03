@@ -2,14 +2,14 @@
 
 import pytest
 
+from csim.models import OutcomeClass
 from csim.world_state import (
     WorldState,
+    _evaluate_condition,
     apply_effects,
     classify_outcome,
     compute_composite_score,
-    _evaluate_condition,
 )
-from csim.models import OutcomeClass
 
 
 class TestApplyEffects:
@@ -62,7 +62,7 @@ class TestApplyEffects:
 
     def test_unknown_dimension_ignored(self):
         state = WorldState()
-        new = apply_effects(state, {"nonexistent_dim": "+0.50"})
+        apply_effects(state, {"nonexistent_dim": "+0.50"})
         # Should not raise
 
     def test_immutability(self):

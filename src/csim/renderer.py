@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import sys
 import time
-from dataclasses import fields
 
 from rich.console import Console
 from rich.panel import Panel
@@ -12,7 +11,7 @@ from rich.table import Table
 from rich.text import Text
 
 from csim.models import EventStatus, OutcomeClass, SimEvent, SimOutcome
-from csim.world_state import WorldState, _HISTORICAL_BASELINES, compute_composite_score
+from csim.world_state import _HISTORICAL_BASELINES, WorldState, compute_composite_score
 
 console = Console()
 
@@ -131,9 +130,6 @@ def render_event(event: SimEvent, detail: str = "standard", width: int = 100) ->
     title_text = Text()
     title_text.append(f" {month}  ", style="bold white")
     title_text.append(event.title, style="bold white")
-
-    # Status tag right-aligned
-    status_text = Text(status_label, style=status_style)
 
     if width >= 100:
         # Full layout
@@ -334,7 +330,7 @@ def render_cinema(outcome: SimOutcome, speed: int = 600, detail: str = "standard
     current_era = ""
     last_ym = None
 
-    for i, event in enumerate(outcome.events):
+    for event in outcome.events:
         # Filter
         if divergences_only and event.status == EventStatus.HISTORICAL:
             continue
@@ -438,7 +434,6 @@ def render_sprint(outcome: SimOutcome) -> None:
 
 def render_batch_summary(result) -> None:
     """Render batch mode summary."""
-    from csim.models import BatchResult
 
     console.print("\n[bold white]Century Verdicts:[/]")
 
@@ -472,8 +467,8 @@ def render_batch_summary(result) -> None:
 
 def _getch() -> str:
     """Read a single character from stdin without waiting for Enter."""
-    import tty
     import termios
+    import tty
     fd = sys.stdin.fileno()
     old = termios.tcgetattr(fd)
     try:
@@ -625,7 +620,7 @@ def render_interactive(outcome: SimOutcome, detail: str = "standard",
             elif ch in ('s', 'S'):
                 console.print("[bold]  Skip to year: [/]", end="")
                 # Read year with echoing
-                import termios, tty
+                import termios
                 fd = sys.stdin.fileno()
                 old = termios.tcgetattr(fd)
                 termios.tcsetattr(fd, termios.TCSADRAIN, old)

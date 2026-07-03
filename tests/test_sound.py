@@ -14,7 +14,7 @@ class TestSoundEngine:
         engine = SoundEngine(enabled=True)
         if engine.enabled:  # May be disabled if no player found
             assert len(engine._cues) == 8
-            for name, path in engine._cues.items():
+            for path in engine._cues.values():
                 assert path.exists()
                 assert path.stat().st_size > 0
             engine.shutdown()

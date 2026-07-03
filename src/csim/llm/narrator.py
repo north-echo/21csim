@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from csim.llm.base import LLMProvider
 from csim.llm.cache import cache_narration, load_cached_narration, load_curated_narration
-from csim.llm.prompts import build_local_prompt, build_claude_prompt
+from csim.llm.prompts import build_claude_prompt, build_local_prompt
 from csim.models import SimEvent
 
 

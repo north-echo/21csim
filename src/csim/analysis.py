@@ -2,12 +2,10 @@
 
 from __future__ import annotations
 
-from pathlib import Path
-
 import numpy as np
 
 from csim.engine import simulate, simulate_batch
-from csim.models import BatchResult, OutcomeClass, SimOutcome
+from csim.models import BatchResult, SimOutcome
 
 
 def sensitivity_analysis(
@@ -68,7 +66,7 @@ def what_if_analysis(
     Returns (baseline_result, overridden_result).
     """
     import copy
-    import networkx as nx
+
 
     seeds = list(range(iterations))
 

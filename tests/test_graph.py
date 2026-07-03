@@ -1,7 +1,8 @@
 """Tests for graph construction and dependency resolution."""
 
-import pytest
 from pathlib import Path
+
+import pytest
 
 from csim.graph import build_graph, get_modified_distribution, is_reachable, validate_probabilities
 from csim.world_state import WorldState

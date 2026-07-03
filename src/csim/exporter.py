@@ -3,11 +3,10 @@
 from __future__ import annotations
 
 import json
-from dataclasses import asdict, fields
+from dataclasses import fields
 from pathlib import Path
-from typing import Any
 
-from csim.models import BatchResult, OutcomeClass, SimEvent, SimOutcome
+from csim.models import BatchResult, SimEvent, SimOutcome
 from csim.world_state import WorldState
 
 

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from csim.world_state import WorldState
@@ -41,27 +41,27 @@ class SimEvent:
     branch_taken: str
     domain: str
     probability_of_branch: float
-    explanation: Optional[str] = None
-    delta: Optional[str] = None
+    explanation: str | None = None
+    delta: str | None = None
     world_state_delta: dict = field(default_factory=dict)
     is_high_impact: bool = False
     confidence: str = "HIGH"
-    narration: Optional[str] = None
-    narration_source: Optional[str] = None
+    narration: str | None = None
+    narration_source: str | None = None
 
 
 @dataclass
 class SimOutcome:
     seed: int
     events: list[SimEvent] = field(default_factory=list)
-    final_state: Optional[WorldState] = None
+    final_state: WorldState | None = None
     outcome_class: OutcomeClass = OutcomeClass.MUDDLING_THROUGH
     headline: str = ""
     composite_score: float = 0.0
     percentile: float = 50.0
     total_divergences: int = 0
-    first_divergence_year: Optional[str] = None
-    largest_divergence_node: Optional[str] = None
+    first_divergence_year: str | None = None
+    largest_divergence_node: str | None = None
     causal_chains: dict = field(default_factory=dict)
     tags: list[str] = field(default_factory=list)
 

@@ -4,8 +4,7 @@ from __future__ import annotations
 
 import copy
 import re
-from dataclasses import dataclass, field, fields
-from typing import Optional
+from dataclasses import dataclass, fields
 
 from csim.models import EventStatus, OutcomeClass
 
@@ -80,8 +79,8 @@ class WorldState:
 
     # ── Meta ──
     total_divergences: int = 0
-    first_divergence_year: Optional[str] = None
-    largest_divergence: Optional[str] = None
+    first_divergence_year: str | None = None
+    largest_divergence: str | None = None
 
 
 # Ranges for clamping float dimensions (dimension_name -> (min, max))
@@ -388,19 +387,12 @@ def classify_outcome(state: WorldState, events: list) -> OutcomeClass:
 
 def generate_headline(state: WorldState, events: list) -> str:
     """Generate a one-line alternate history headline."""
-    from csim.models import EventStatus
 
     composite = compute_composite_score(state)
     divergences = [e for e in events if e.status != EventStatus.HISTORICAL]
 
     if not divergences:
         return "The Historical Century: Everything Happened As It Did"
-
-    # Find the largest-impact divergence
-    largest = max(divergences, key=lambda e: abs(sum(
-        float(str(v).lstrip("+*")) if isinstance(v, str) and v[0] in "+-*" else 0.0
-        for v in e.world_state_delta.values()
-    )) if e.world_state_delta else 0.0)
 
     # Determine adjective based on composite
     if composite > 0.7:

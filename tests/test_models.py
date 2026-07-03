@@ -1,6 +1,6 @@
 """Tests for data models."""
 
-from csim.models import EventStatus, OutcomeClass, SimEvent, SimOutcome, BatchResult
+from csim.models import BatchResult, EventStatus, OutcomeClass, SimEvent, SimOutcome
 
 
 class TestEnums:

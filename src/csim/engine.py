@@ -5,13 +5,11 @@ from __future__ import annotations
 import copy
 import os
 from multiprocessing import Pool
-from pathlib import Path
-from typing import Optional
 
 import networkx as nx
 import numpy as np
 
-from csim.graph import build_graph, get_modified_distribution, is_reachable
+from csim.graph import get_modified_distribution, is_reachable
 from csim.models import BatchResult, EventStatus, SimEvent, SimOutcome
 from csim.world_state import (
     WorldState,
@@ -35,8 +33,8 @@ def sample(distribution: dict[str, float], rng: np.random.Generator) -> str:
 def simulate(
     graph: nx.DiGraph,
     seed: int,
-    initial_state: Optional[WorldState] = None,
-    locked_results: Optional[dict[str, str]] = None,
+    initial_state: WorldState | None = None,
+    locked_results: dict[str, str] | None = None,
 ) -> SimOutcome:
     """Core simulation loop for a single run.
 
@@ -192,8 +190,8 @@ def simulate(
 def _simulate_worker(
     graph_data: dict,
     seed: int,
-    initial_state: Optional[WorldState] = None,
-    locked_results: Optional[dict[str, str]] = None,
+    initial_state: WorldState | None = None,
+    locked_results: dict[str, str] | None = None,
 ) -> SimOutcome:
     """Worker function for parallel batch simulation.
 
@@ -208,10 +206,10 @@ def _simulate_worker(
 def simulate_batch(
     graph: nx.DiGraph,
     iterations: int,
-    seeds: Optional[list[int]] = None,
+    seeds: list[int] | None = None,
     parallel: int = 1,
-    initial_state: Optional[WorldState] = None,
-    locked_results: Optional[dict[str, str]] = None,
+    initial_state: WorldState | None = None,
+    locked_results: dict[str, str] | None = None,
 ) -> BatchResult:
     """Run N simulations, optionally parallelized."""
     if seeds is None:
@@ -317,7 +315,7 @@ def _compute_leverage(result: BatchResult) -> None:
             continue
         overall_mean = np.mean([o.composite_score for o in result.outcomes])
         between_var = sum(
-            n * (m - overall_mean) ** 2 for m, n in zip(group_means, group_sizes)
+            n * (m - overall_mean) ** 2 for m, n in zip(group_means, group_sizes, strict=False)
         ) / sum(group_sizes)
         r_squared = min(between_var / overall_var, 1.0)
         leverage.append((node_id, r_squared))

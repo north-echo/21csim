@@ -48,7 +48,7 @@ def build_graph(scenario_dir: Path) -> nx.DiGraph:
                 G.add_edge(upstream, node_id, dep_data=dep if isinstance(dep, dict) else {"node": upstream})
 
         # Also parse cascading_modifiers in outcomes to build edges
-        for branch_name, outcome in (data.get("outcomes") or {}).items():
+        for outcome in (data.get("outcomes") or {}).values():
             if not isinstance(outcome, dict):
                 continue
             for target_spec in (outcome.get("cascading_modifiers") or {}).keys():

@@ -1,18 +1,16 @@
 """Tests for LLM narration layer."""
 
 import asyncio
-from pathlib import Path
-from unittest.mock import AsyncMock, patch
+from unittest.mock import patch
 
 import pytest
 
-from csim.llm.base import LLMProvider
-from csim.llm.null import NullProvider
-from csim.llm.resolver import resolve_provider
-from csim.llm.prompts import build_local_prompt, build_claude_prompt, build_headline_prompt
-from csim.llm.cache import cache_narration, load_cached_narration, _CACHE_DIR
+from csim.llm.cache import cache_narration, load_cached_narration
 from csim.llm.narrator import get_narration, should_narrate
-from csim.models import SimEvent, EventStatus
+from csim.llm.null import NullProvider
+from csim.llm.prompts import build_claude_prompt, build_headline_prompt, build_local_prompt
+from csim.llm.resolver import resolve_provider
+from csim.models import EventStatus, SimEvent
 
 
 @pytest.fixture
