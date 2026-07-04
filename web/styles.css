@@ -1207,3 +1207,99 @@ html, body {
 .life-whisper.bad { color: #ff8070; }
 .life-whisper.bad .life-age { background: #ff8070; }
 #timeline-panel.life-off .life-whisper { display: none; }
+
+/* ── Forge mode: decision overlay ── */
+#forge-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 4, 8, 0.88);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  padding: 20px;
+}
+#forge-overlay.open { display: flex; }
+.forge-modal {
+  background: var(--bg-card, #0e0e16);
+  border: 1px solid #c49a28;
+  border-radius: 10px;
+  max-width: 620px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 26px 28px;
+  animation: eventAppear 0.3s ease forwards;
+}
+.forge-kicker {
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c49a28;
+  margin-bottom: 8px;
+}
+.forge-title {
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  font-size: 20px;
+  color: #f0f0ff;
+  margin-bottom: 10px;
+}
+.forge-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #a0a0b0;
+  margin-bottom: 18px;
+}
+.forge-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.forge-option {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  text-align: left;
+  background: #12121c;
+  border: 1px solid #23232f;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #d0d0d8;
+  font-size: 13.5px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.forge-option:hover, .forge-option:focus-visible {
+  border-color: #c49a28;
+  background: #16161f;
+  outline: none;
+}
+.forge-prob {
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #c49a28;
+  min-width: 38px;
+  flex-shrink: 0;
+}
+.forge-tag {
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #666680;
+  border: 1px solid #2a2a3a;
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+.forge-fate {
+  width: 100%;
+  background: transparent;
+  border: 1px dashed #44445a;
+  border-radius: 6px;
+  padding: 9px;
+  color: #666680;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.forge-fate:hover, .forge-fate:focus-visible { color: #a0a0b0; border-color: #666680; outline: none; }

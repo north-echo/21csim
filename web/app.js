@@ -6,6 +6,7 @@ import { Controls } from './controls.js';
 import { Selector } from './selector.js';
 import { SoundEngine } from './sound.js';
 import { initNav } from './nav.js';
+import { Forge } from './forge.js';
 
 const VERDICT_COLORS = {
   'GOLDEN-AGE': '#ffd700',
@@ -47,6 +48,13 @@ class App {
     // Sound toggle button
     this._addSoundToggle();
 
+    // Forge (interactive) mode controller
+    this.forge = new Forge({
+      viewer: this.viewer,
+      controls: this.controls,
+      onRunReplaced: (run) => { this.currentRun = run; },
+    });
+
     // Selector
     this.selector = new Selector({
       overlayEl: document.getElementById('selector-overlay'),
@@ -77,6 +85,13 @@ class App {
         e.preventDefault();
         this._ensureSoundInit();
         this._loadRandomRun();
+        return;
+      }
+      // "Forge a Century" button — interactive mode
+      if (e.target.id === 'btn-forge' || e.target.closest('#btn-forge')) {
+        e.preventDefault();
+        this._ensureSoundInit();
+        this._startForge();
         return;
       }
       // Featured seed links
@@ -112,6 +127,14 @@ class App {
     // Check for /century/{seed} path or ?seed=XXXX query param
     const pathMatch = window.location.pathname.match(/\/century\/(\d+)/);
     const params = new URLSearchParams(window.location.search);
+
+    // ?forge=SEED&d=node.branch~... — replay or continue a forged century
+    const forgeParams = Forge.parseShareParams(params);
+    if (forgeParams) {
+      this._startForge(forgeParams.seed, forgeParams.locks);
+      return;
+    }
+
     const seedParam = pathMatch ? pathMatch[1] : params.get('seed');
     const eventParam = params.get('event');
     if (seedParam && runs.length > 0) {
@@ -183,6 +206,7 @@ class App {
   }
 
   _resetToLanding() {
+    if (this.forge) this.forge.stop();
     this.viewer.stop();
     this.selector.close();
     this.currentRun = null;
@@ -244,11 +268,7 @@ class App {
     }
   }
 
-  _loadRun(data, seekEventIdx) {
-    this.currentRun = data;
-    this.viewer.loadRun(data);
-
-    // Update top bar
+  _setRunInfo(data) {
     const runInfo = document.getElementById('run-info');
     const color = VERDICT_COLORS[data.outcome_class] || '#888';
     runInfo.innerHTML = `
@@ -258,6 +278,39 @@ class App {
       </span>
       <span class="headline">${this._esc(data.headline)}</span>
     `;
+  }
+
+  async _startForge(seed, locks) {
+    try {
+      const run = await this.forge.start(seed, locks);
+      this.currentRun = run;
+      this.viewer.loadRun(run);
+
+      // No verdict spoilers: the century is unwritten until it finishes
+      const runInfo = document.getElementById('run-info');
+      runInfo.innerHTML = `
+        <span class="seed">Forge #${this._esc(String(run.seed))}</span>
+        <span class="headline" style="color: var(--text-dim);">An unwritten century — your call at the hinges</span>
+      `;
+
+      const empty = document.getElementById('empty-state');
+      if (empty) empty.style.display = 'none';
+      window.history.replaceState({}, '', `/?forge=${run.seed}`);
+
+      setTimeout(() => {
+        this.viewer.play();
+        this.controls.setPlayState(true);
+      }, 300);
+    } catch (e) {
+      console.warn('Forge failed to start', e);
+    }
+  }
+
+  _loadRun(data, seekEventIdx) {
+    if (this.forge) this.forge.stop();
+    this.currentRun = data;
+    this.viewer.loadRun(data);
+    this._setRunInfo(data);
 
     // Hide empty state
     const empty = document.getElementById('empty-state');
@@ -342,6 +395,11 @@ class App {
   }
 
   _onRunComplete(run) {
+    // Forge: the century is written now — reveal verdict and freeze the URL
+    if (this.forge && this.forge.active) {
+      this._setRunInfo(run);
+      window.history.replaceState({}, '', this.forge.shareUrl().replace('https://21csim.com', ''));
+    }
     // Play verdict sound
     if (this.sound && this.sound.enabled) {
       this.sound.stopDrone();
@@ -379,6 +437,7 @@ class App {
       { label: 'Renewable Share', value: ((fs.renewable_energy_share || 0) * 100).toFixed(1) + '%' },
     ];
 
+    const forgeActive = this.forge && this.forge.active;
     modal.innerHTML = `
       <div class="verdict-large" style="color: ${color};">${this._esc(run.outcome_class)}</div>
       <div class="headline-large">${this._esc(run.headline)}</div>
@@ -390,8 +449,21 @@ class App {
           </div>
         `).join('')}
       </div>
-      <button class="ctrl-btn" id="btn-close-summary" style="margin: 0 auto; padding: 8px 24px;">Close</button>
+      <div style="display: flex; gap: 10px; justify-content: center;">
+        ${forgeActive ? '<button class="ctrl-btn" id="btn-share-forge" style="padding: 8px 24px;">Copy timeline link</button>' : ''}
+        <button class="ctrl-btn" id="btn-close-summary" style="padding: 8px 24px;">Close</button>
+      </div>
     `;
+
+    const shareBtn = modal.querySelector('#btn-share-forge');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(this.forge.shareUrl()).then(() => {
+          shareBtn.textContent = '\u2713 Copied';
+          setTimeout(() => { shareBtn.textContent = 'Copy timeline link'; }, 2000);
+        }).catch(() => {});
+      });
+    }
 
     modal.querySelector('#btn-close-summary').addEventListener('click', () => {
       overlay.classList.remove('open');

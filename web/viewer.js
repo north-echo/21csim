@@ -30,6 +30,10 @@ export class Viewer {
     this.persona = null;
     this._nextMomentIdx = 0;
     this.lifeThreadOn = localStorage.getItem('lifeThread') !== 'off';
+
+    // Forge mode: called with the next event index before it renders;
+    // returning true halts playback (the forge shows a decision overlay)
+    this.interceptor = null;
   }
 
   // Load nodes catalog (cached)
@@ -359,6 +363,10 @@ export class Viewer {
       if (this.onComplete) this.onComplete(this.run);
       return;
     }
+    if (this.interceptor && this.interceptor(nextIdx)) {
+      this.pause();
+      return;
+    }
     this._showEvent(nextIdx, true);
     this.currentIndex = nextIdx;
     this.lastYearMonth = this.events[nextIdx].year_month;
@@ -668,6 +676,26 @@ export class Viewer {
       el.innerHTML = `<span class="life-age">${m.age}</span>${this._esc(m.text)}`;
       this.timelineEl.appendChild(el);
     }
+  }
+
+  // Forge mode: swap in a re-simulated run whose events match the already-
+  // rendered prefix — the timeline keeps its cards, only the future changes
+  refreshRun(runData) {
+    this.run = runData;
+    this.events = runData.events || [];
+    try {
+      this.persona = buildPersona(runData);
+      // Re-sync the flush cursor: moments up to the current playback year
+      // were already rendered from the previous run's persona
+      const curYear = this.lastYearMonth ? parseInt(this.lastYearMonth.slice(0, 4), 10) : 0;
+      const moments = this.persona ? this.persona.moments : [];
+      let i = 0;
+      while (i < moments.length && moments[i].year <= curYear) i++;
+      this._nextMomentIdx = i;
+    } catch (e) {
+      /* keep previous persona */
+    }
+    if (this.onProgress) this.onProgress(this.currentIndex + 1, this.events.length);
   }
 
   setLifeThread(on) {

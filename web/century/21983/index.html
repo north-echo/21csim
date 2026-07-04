@@ -16,7 +16,7 @@
   <meta name="twitter:title" content="The Quiet Century: Al Gore wins after full Florida recount — Seed 21983 | 21csim">
   <meta name="twitter:description" content="MUDDLING-THROUGH: an alternate 21st century that became a century of muddling through, diverging from ours 206 times. Watch it unfold.">
   <meta name="twitter:image" content="https://21csim.com/og/default.png">
-  <link rel="stylesheet" href="/styles.css?v=3">
+  <link rel="stylesheet" href="/styles.css?v=4">
   <style>
     /* Hero landing page — inline to guarantee load */
     #empty-state { display:flex; align-items:center; justify-content:center; height:100%; padding:40px 20px; overflow-y:auto; }
@@ -31,6 +31,10 @@
     .hero-cta { display:inline-block; padding:12px 32px; background:#c49a28; color:#06060a; font-size:15px; font-weight:700; border:none; border-radius:6px; cursor:pointer; letter-spacing:0.5px; transition:background 0.2s,transform 0.1s; margin-bottom:24px; }
     .hero-cta:hover { background:#d4aa38; transform:scale(1.02); }
     .hero-cta:active { transform:scale(0.98); }
+    .hero-cta-row { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:24px; }
+    .hero-cta-row .hero-cta { margin-bottom:0; }
+    .hero-cta-alt { background:transparent; color:#c49a28; border:1px solid #c49a28; }
+    .hero-cta-alt:hover { background:#c49a2822; }
     .hero-featured { display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:20px; flex-wrap:wrap; }
     .featured-label { font-size:12px; color:#555570; }
     .featured-seed { font-family:'JetBrains Mono','Fira Code','SF Mono',monospace; font-size:12px; padding:4px 10px; border:1px solid #2a2a3a; border-radius:4px; color:#d0d0d8; text-decoration:none; transition:border-color 0.2s,background 0.2s; }
@@ -74,7 +78,10 @@
               <div class="hero-stat"><span class="stat-num">8</span><span class="stat-label">Verdict Types</span></div>
               <div class="hero-stat"><span class="stat-num">32</span><span class="stat-label">Dimensions</span></div>
             </div>
-            <button class="hero-cta" id="btn-random-run">Watch a Random Century</button>
+            <div class="hero-cta-row">
+              <button class="hero-cta" id="btn-random-run">Watch a Random Century</button>
+              <button class="hero-cta hero-cta-alt" id="btn-forge">Forge Your Own</button>
+            </div>
             <div class="hero-featured">
               <span class="featured-label">Featured:</span>
               <a class="featured-seed" data-verdict="PROGRESS" href="?seed=53">Seed 53</a>
@@ -109,7 +116,7 @@
   </div>
 
   <script src="/vendor/Tone.min.js"></script>
-  <script type="module" src="/app.js?v=5"></script>
+  <script type="module" src="/app.js?v=6"></script>
   <script>
     // Dashboard toggle for mobile
     document.addEventListener('DOMContentLoaded', () => {
