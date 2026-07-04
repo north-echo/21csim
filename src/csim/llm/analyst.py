@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 
 from csim.llm.base import LLMProvider
 from csim.world_state import _CLAMP_RANGES, _INT_DIMENSIONS, _clamp
@@ -198,6 +199,7 @@ async def analyze_news(
         raise ValueError(f"LLM returned invalid JSON: {e}\nResponse: {text[:500]}") from e
 
     result["dimension_updates"] = validate_dimension_updates(result.get("dimension_updates", {}))
+    result["new_nodes"] = validate_new_nodes(result.get("new_nodes", []))
 
     return result
 
@@ -224,4 +226,31 @@ def validate_dimension_updates(updates: dict) -> dict:
             valid[dim] = _clamp(num, dim)
         else:
             valid[dim] = num
+    return valid
+
+
+_NODE_ID_RE = re.compile(r"^20\d{2}_[a-z0-9_]+$")
+_YEAR_MONTH_RE = re.compile(r"^20\d{2}-(0[1-9]|1[0-2])$")
+_VALID_DOMAINS = {"geopolitical", "economic", "technology", "security", "climate", "social", "shock"}
+
+
+def validate_new_nodes(nodes: list) -> list[dict]:
+    """Drop malformed nodes and unknown-dimension effects before they hit disk."""
+    valid = []
+    for node in nodes:
+        if not isinstance(node, dict):
+            continue
+        if not _NODE_ID_RE.match(str(node.get("id", ""))):
+            continue
+        if not _YEAR_MONTH_RE.match(str(node.get("year_month", ""))):
+            continue
+        if not node.get("title") or not node.get("description"):
+            continue
+        if node.get("domain") not in _VALID_DOMAINS:
+            node["domain"] = "geopolitical"
+        effects = node.get("world_state_effects") or {}
+        node["world_state_effects"] = {
+            dim: val for dim, val in effects.items() if dim in DIMENSION_DESCRIPTIONS
+        }
+        valid.append(node)
     return valid

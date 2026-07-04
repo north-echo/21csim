@@ -248,3 +248,47 @@ def test_export_reality_snapshot(data_dir, tmp_path):
     assert snapshot["reality"]["middle_east_stability"] == 0.4
     assert len(snapshot["stream_log"]) == 1
     assert "generated" in snapshot
+
+
+# ── validate_new_nodes ──
+
+
+def test_validate_new_nodes_accepts_well_formed():
+    from csim.llm.analyst import validate_new_nodes
+
+    nodes = validate_new_nodes([{
+        "id": "2026_test_war",
+        "year_month": "2026-06",
+        "title": "Test War",
+        "description": "d",
+        "domain": "geopolitical",
+        "world_state_effects": {"middle_east_stability": "-0.1", "bogus_dim": "+1"},
+    }])
+    assert len(nodes) == 1
+    # Unknown-dimension effects are stripped
+    assert nodes[0]["world_state_effects"] == {"middle_east_stability": "-0.1"}
+
+
+def test_validate_new_nodes_rejects_malformed():
+    from csim.llm.analyst import validate_new_nodes
+
+    bad = [
+        {"id": "no_year_prefix", "year_month": "2026-06", "title": "t", "description": "d"},
+        {"id": "2026_ok", "year_month": "June 2026", "title": "t", "description": "d"},
+        {"id": "2026_ok", "year_month": "2026-06", "title": "", "description": "d"},
+        "not a dict",
+    ]
+    assert validate_new_nodes(bad) == []
+
+
+def test_validate_new_nodes_defaults_unknown_domain():
+    from csim.llm.analyst import validate_new_nodes
+
+    nodes = validate_new_nodes([{
+        "id": "2026_thing",
+        "year_month": "2026-01",
+        "title": "t",
+        "description": "d",
+        "domain": "vibes",
+    }])
+    assert nodes[0]["domain"] == "geopolitical"

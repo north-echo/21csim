@@ -513,5 +513,69 @@ def update_reality(
             console.print(f"[green]✓ exported[/] {snapshot}")
 
 
+@app.command(name="apply-reality-updates")
+def apply_reality_updates(
+    updates_file: Path = typer.Argument(..., help="JSON file with dimension_updates, new_nodes, reasoning"),
+    dry_run: bool = typer.Option(False, "--dry-run", help="Validate and show changes without writing"),
+) -> None:
+    """Apply a pre-computed reality update authored outside the API path.
+
+    Same validation and file writes as update-reality, but the analysis JSON
+    is supplied directly — e.g. authored by Claude Code from web research —
+    so no NewsAPI or Anthropic API calls are made.
+    """
+    from rich.console import Console
+    from rich.table import Table
+
+    from csim.llm.analyst import validate_dimension_updates, validate_new_nodes
+    from csim.reality_stream import export_reality_snapshot, update_reality
+
+    console = Console()
+    data_dir = _get_data_dir()
+
+    raw = json.loads(updates_file.read_text())
+    proposed_dims = raw.get("dimension_updates", {}) or {}
+    proposed_nodes = raw.get("new_nodes", []) or []
+    reasoning = raw.get("reasoning", "")
+
+    dims = validate_dimension_updates(proposed_dims)
+    nodes = validate_new_nodes(proposed_nodes)
+
+    rejected_dims = sorted(set(proposed_dims) - set(dims))
+    rejected_nodes = [n.get("id", "?") for n in proposed_nodes if isinstance(n, dict)]
+    rejected_nodes = sorted(set(rejected_nodes) - {n["id"] for n in nodes})
+    if rejected_dims:
+        console.print(f"[yellow]Rejected dimensions:[/] {', '.join(rejected_dims)}")
+    if rejected_nodes:
+        console.print(f"[yellow]Rejected nodes:[/] {', '.join(rejected_nodes)}")
+
+    if dims:
+        table = Table(title="World State Updates")
+        table.add_column("Dimension", style="bold")
+        table.add_column("Proposed", justify="right")
+        table.add_column("Applied (clamped)", justify="right")
+        for dim, val in sorted(dims.items()):
+            table.add_row(dim, f"{proposed_dims.get(dim)}", f"{val}")
+        console.print(table)
+    else:
+        console.print("[dim]No dimension changes.[/]")
+
+    if nodes:
+        console.print(f"\n[bold]{len(nodes)} new event nodes:[/]")
+        for node in nodes:
+            console.print(f"  • {node['year_month']} — {node['title']}")
+
+    if dry_run:
+        console.print("\n[yellow]No files modified (dry run).[/]")
+        return
+
+    update_reality(data_dir, dims, nodes, update_log={"reasoning": reasoning})
+    console.print("\n[green]✓ reality_2026.yaml updated[/]")
+    web_dir = Path(__file__).parent.parent.parent / "web"
+    if web_dir.is_dir():
+        snapshot = export_reality_snapshot(data_dir, web_dir / "reality.json")
+        console.print(f"[green]✓ exported[/] {snapshot}")
+
+
 if __name__ == "__main__":
     app()
