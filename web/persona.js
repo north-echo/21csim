@@ -5,16 +5,106 @@
 // are chosen by the run's world state at each life stage. Deterministic per
 // seed; pure templates, no network calls.
 
-const NAMES = [
-  ['Maya Okafor', 'she', 'her'], ['Daniel Reyes', 'he', 'his'],
-  ['Sofia Lindqvist', 'she', 'her'], ['Wei Zhang', 'he', 'his'],
-  ['Amara Diallo', 'she', 'her'], ['Lucas Ferreira', 'he', 'his'],
-  ['Yuki Tanaka', 'she', 'her'], ['Omar Haddad', 'he', 'his'],
+// Locales, roughly population-weighted, each with culturally matched names.
+// city = short prose form; place = birth-line form. surF overrides surnames
+// for women where the language genders them (Russian, etc.).
+const LOCALES = [
+  { w: 17, city: 'Chengdu', place: 'Chengdu, China',
+    f: ['Jing', 'Fang', 'Xiuying', 'Na'], m: ['Wei', 'Jun', 'Hao', 'Ming'],
+    sur: ['Zhang', 'Wang', 'Li', 'Chen', 'Liu'] },
+  { w: 18, city: 'Jaipur', place: 'Jaipur, India',
+    f: ['Priya', 'Ananya', 'Divya', 'Kavya'], m: ['Arjun', 'Rahul', 'Vikram', 'Aditya'],
+    sur: ['Sharma', 'Patel', 'Reddy', 'Singh', 'Iyer'] },
+  { w: 4, city: 'Columbus', place: 'Columbus, Ohio',
+    f: ['Emily', 'Madison', 'Ava'], m: ['Jacob', 'Tyler', 'Ethan'],
+    sur: ['Miller', 'Johnson', 'Davis', 'Martinez'] },
+  { w: 3.5, city: 'Surabaya', place: 'Surabaya, Indonesia',
+    f: ['Dewi', 'Siti', 'Putri'], m: ['Budi', 'Agus', 'Eko'],
+    sur: ['Santoso', 'Wijaya', 'Saputra'] },
+  { w: 3, city: 'Lahore', place: 'Lahore, Pakistan',
+    f: ['Ayesha', 'Fatima', 'Zainab'], m: ['Ali', 'Hassan', 'Bilal'],
+    sur: ['Khan', 'Ahmed', 'Malik'] },
+  { w: 3.5, city: 'Lagos', place: 'Lagos, Nigeria',
+    f: ['Chiamaka', 'Amina', 'Folake'], m: ['Chinedu', 'Emeka', 'Ibrahim'],
+    sur: ['Okafor', 'Adeyemi', 'Bello', 'Eze'] },
+  { w: 3, city: 'Recife', place: 'Recife, Brazil',
+    f: ['Ana', 'Juliana', 'Camila'], m: ['Lucas', 'Gabriel', 'Rafael'],
+    sur: ['Silva', 'Santos', 'Oliveira', 'Ferreira'] },
+  { w: 2.5, city: 'Dhaka', place: 'Dhaka, Bangladesh',
+    f: ['Nusrat', 'Taslima', 'Farhana'], m: ['Rakib', 'Tanvir', 'Imran'],
+    sur: ['Rahman', 'Hossain', 'Islam'] },
+  { w: 2, city: 'Kazan', place: 'Kazan, Russia',
+    f: ['Anastasia', 'Olga', 'Daria'], m: ['Dmitri', 'Sergei', 'Ivan'],
+    sur: ['Ivanov', 'Petrov', 'Smirnov'], surF: ['Ivanova', 'Petrova', 'Smirnova'] },
+  { w: 2, city: 'Guadalajara', place: 'Guadalajara, Mexico',
+    f: ['Sofía', 'Valentina', 'Ximena'], m: ['Diego', 'Santiago', 'Alejandro'],
+    sur: ['Hernández', 'García', 'Reyes'] },
+  { w: 1.8, city: 'Osaka', place: 'Osaka, Japan',
+    f: ['Yui', 'Sakura', 'Hana'], m: ['Haruto', 'Ren', 'Daiki'],
+    sur: ['Tanaka', 'Sato', 'Yamamoto'] },
+  { w: 2, city: 'Addis Ababa', place: 'Addis Ababa, Ethiopia',
+    f: ['Selam', 'Hiwot', 'Meron'], m: ['Dawit', 'Bereket', 'Yonas'],
+    sur: ['Tesfaye', 'Abebe', 'Girma'] },
+  { w: 2, city: 'Cebu City', place: 'Cebu City, Philippines',
+    f: ['Maria', 'Angelica', 'Jasmine'], m: ['Jose', 'Marco', 'Paolo'],
+    sur: ['Santos', 'Reyes', 'dela Cruz'] },
+  { w: 2, city: 'Alexandria', place: 'Alexandria, Egypt',
+    f: ['Mariam', 'Nour', 'Salma'], m: ['Omar', 'Ahmed', 'Youssef'],
+    sur: ['Hassan', 'Ibrahim', 'Mahmoud'] },
+  { w: 1.8, city: 'Da Nang', place: 'Da Nang, Vietnam',
+    f: ['Linh', 'Mai', 'Huong'], m: ['Minh', 'Duc', 'Quan'],
+    sur: ['Nguyen', 'Tran', 'Le'] },
+  { w: 1.5, city: 'Izmir', place: 'Izmir, Turkey',
+    f: ['Zeynep', 'Elif', 'Merve'], m: ['Mehmet', 'Emre', 'Can'],
+    sur: ['Yılmaz', 'Demir', 'Kaya'] },
+  { w: 1.5, city: 'Isfahan', place: 'Isfahan, Iran',
+    f: ['Zahra', 'Niloufar', 'Sara'], m: ['Reza', 'Amir', 'Hossein'],
+    sur: ['Hosseini', 'Ahmadi', 'Karimi'] },
+  { w: 1.2, city: 'Leipzig', place: 'Leipzig, Germany',
+    f: ['Lena', 'Mia', 'Hannah'], m: ['Finn', 'Jonas', 'Lukas'],
+    sur: ['Müller', 'Schmidt', 'Weber'] },
+  { w: 1.2, city: 'Manchester', place: 'Manchester, England',
+    f: ['Olivia', 'Amelia', 'Grace'], m: ['Oliver', 'Harry', 'Callum'],
+    sur: ['Taylor', 'Walker', 'Hughes'] },
+  { w: 1.2, city: 'Marseille', place: 'Marseille, France',
+    f: ['Léa', 'Chloé', 'Manon'], m: ['Hugo', 'Louis', 'Théo'],
+    sur: ['Martin', 'Bernard', 'Dubois'] },
+  { w: 1.5, city: 'Nairobi', place: 'Nairobi, Kenya',
+    f: ['Wanjiru', 'Achieng', 'Njeri'], m: ['Kamau', 'Otieno', 'Kiprop'],
+    sur: ['Mwangi', 'Odhiambo', 'Njoroge'] },
+  { w: 1, city: 'Busan', place: 'Busan, South Korea',
+    f: ['Ji-woo', 'Seo-yeon', 'Ha-eun'], m: ['Min-jun', 'Ji-ho', 'Do-yun'],
+    sur: ['Kim', 'Lee', 'Park'] },
+  { w: 1, city: 'Medellín', place: 'Medellín, Colombia',
+    f: ['Isabella', 'Mariana', 'Camila'], m: ['Juan', 'Andrés', 'Sebastián'],
+    sur: ['Rodríguez', 'Gómez', 'López'] },
+  { w: 1.5, city: 'Kinshasa', place: 'Kinshasa, DR Congo',
+    f: ['Esperance', 'Grace', 'Chantal'], m: ['Emmanuel', 'Patrice', 'Dieudonné'],
+    sur: ['Ilunga', 'Mbuyi', 'Kalala'] },
 ];
-const HOMETOWNS = [
-  'Columbus, Ohio', 'Rotterdam', 'Lagos', 'Chengdu',
-  'São Paulo', 'Nairobi', 'Osaka', 'Manchester',
-];
+const TOTAL_WEIGHT = LOCALES.reduce((t, l) => t + l.w, 0);
+
+function pickIdentity(rng) {
+  let roll = rng() * TOTAL_WEIGHT;
+  let locale = LOCALES[LOCALES.length - 1];
+  for (const l of LOCALES) {
+    roll -= l.w;
+    if (roll <= 0) { locale = l; break; }
+  }
+  const female = rng() < 0.5;
+  const givens = female ? locale.f : locale.m;
+  const surs = (female && locale.surF) ? locale.surF : locale.sur;
+  const given = givens[Math.floor(rng() * givens.length)];
+  const sur = surs[Math.floor(rng() * surs.length)];
+  return {
+    name: `${given} ${sur}`,
+    first: given,
+    pron: female ? 'she' : 'he',
+    poss: female ? 'her' : 'his',
+    city: locale.city,
+    place: locale.place,
+  };
+}
 
 // Matches Viewer.INITIAL_STATE for the dimensions the life thread reads
 const BASELINE = {
@@ -75,9 +165,7 @@ function findHinge(events) {
 export function buildPersona(run) {
   const seed = run.seed;
   const rng = mulberry32(seed);
-  const [name, pron, poss] = NAMES[seed % NAMES.length];
-  const first = name.split(' ')[0];
-  const home = HOMETOWNS[seed % HOMETOWNS.length];
+  const { name, first, pron, poss, city, place } = pickIdentity(rng);
   const events = run.events || [];
   if (events.length === 0) return null;
   const tl = stateTimeline(events);
@@ -102,7 +190,7 @@ export function buildPersona(run) {
     }
   };
 
-  add(0, `${name} is born in ${home} in ${B}.`, 'neutral');
+  add(0, `${name} is born in ${place} in ${B}.`, 'neutral');
 
   // Witness moment, pinned directly under the hinge event's card
   const hingeAge = hingeYear - B;
@@ -145,7 +233,7 @@ export function buildPersona(run) {
   } else if (s.global_gdp_growth_modifier < 0.95) {
     add(18, `${first} graduates into a recession and starts university on loans and a warehouse job.`, 'bad');
   } else {
-    add(18, `${first} graduates and leaves ${home} for university, the first in the family to go far for it.`, 'good');
+    add(18, `${first} graduates and leaves ${city} for university, the first in the family to go far for it.`, 'good');
   }
 
   s = stateAt(tl, B + 24);
@@ -205,5 +293,5 @@ export function buildPersona(run) {
   }
 
   moments.sort((a, b) => a.year - b.year || a.age - b.age);
-  return { profile: { name, hometown: home, birthYear: B }, moments };
+  return { profile: { name, hometown: place, birthYear: B }, moments };
 }
