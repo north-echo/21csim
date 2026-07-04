@@ -1,5 +1,7 @@
 // viewer.js -- Cinematic event playback engine
 
+import { buildPersona } from './persona.js';
+
 export class Viewer {
   constructor({ timelineEl, dashboard, sound, onProgress, onComplete, onEraChange }) {
     this.timelineEl = timelineEl;
@@ -23,6 +25,11 @@ export class Viewer {
     this.worldState = {};
     this._catalog = null;
     this._catalogPromise = null;
+
+    // Life thread: one life, generated per run, shown as quiet annotations
+    this.persona = null;
+    this._nextMomentIdx = 0;
+    this.lifeThreadOn = localStorage.getItem('lifeThread') !== 'off';
   }
 
   // Load nodes catalog (cached)
@@ -82,6 +89,13 @@ export class Viewer {
     this.stop();
     this.run = runData;
     this.events = runData.events || [];
+    try {
+      this.persona = buildPersona(runData);
+    } catch (e) {
+      this.persona = null;
+    }
+    this._nextMomentIdx = 0;
+    this.timelineEl.classList.toggle('life-off', !this.lifeThreadOn);
     this.currentIndex = -1;
     this.lastDecade = null;
     this.lastYearMonth = null;
@@ -90,6 +104,7 @@ export class Viewer {
     this._toastShown = false;
     this.worldState = { ...Viewer.INITIAL_STATE };
     this.timelineEl.innerHTML = '';
+    this._nextMomentIdx = 0;
     this.dashboard.reset();
     this.dashboard.update(this.worldState, null);
     this._clearTypewriters();
@@ -102,6 +117,7 @@ export class Viewer {
       this.currentIndex = -1;
       this.worldState = { ...Viewer.INITIAL_STATE };
       this.timelineEl.innerHTML = '';
+      this._nextMomentIdx = 0;
       this.dashboard.reset();
       this.dashboard.update(this.worldState, null);
       this.lastDecade = null;
@@ -171,6 +187,7 @@ export class Viewer {
     this.currentIndex = -1;
     this.worldState = { ...Viewer.INITIAL_STATE };
     this.timelineEl.innerHTML = '';
+    this._nextMomentIdx = 0;
     this.dashboard.reset();
     this.lastDecade = null;
     this.lastYearMonth = null;
@@ -192,6 +209,7 @@ export class Viewer {
     this.currentIndex = -1;
     this.worldState = { ...Viewer.INITIAL_STATE };
     this.timelineEl.innerHTML = '';
+    this._nextMomentIdx = 0;
     this.dashboard.reset();
     this.lastDecade = null;
     this.lastYearMonth = null;
@@ -213,6 +231,7 @@ export class Viewer {
     this.currentIndex = -1;
     this.worldState = { ...Viewer.INITIAL_STATE };
     this.timelineEl.innerHTML = '';
+    this._nextMomentIdx = 0;
     this.dashboard.reset();
     this.lastDecade = null;
     this.lastYearMonth = null;
@@ -273,6 +292,7 @@ export class Viewer {
     const nextIdx = this.currentIndex + 1;
     if (nextIdx >= this.events.length) {
       this.pause();
+      this._flushLifeMoments(2100, true);
       if (this.onComplete) this.onComplete(this.run);
       return;
     }
@@ -335,6 +355,7 @@ export class Viewer {
     const nextIdx = this.currentIndex + 1;
     if (nextIdx >= this.events.length) {
       this.pause();
+      this._flushLifeMoments(2100, true);
       if (this.onComplete) this.onComplete(this.run);
       return;
     }
@@ -525,6 +546,9 @@ export class Viewer {
 
     this.timelineEl.appendChild(card);
 
+    // Life thread: surface any moments up to this event's year
+    this._flushLifeMoments(year, animate, idx);
+
     // Typewriter for narration (use a text span to avoid destroying the play button)
     if (animate && event.narration) {
       const narEl = card.querySelector('.event-narration');
@@ -629,6 +653,28 @@ export class Viewer {
         card.scrollIntoView({ behavior: 'smooth', block: 'end' });
       }
     }
+  }
+
+  _flushLifeMoments(uptoYear, animate, eventIdx) {
+    if (!this.persona) return;
+    const moments = this.persona.moments;
+    const canShow = (m) => m.year < uptoYear ||
+      (m.year === uptoYear && (m.eventIndex === undefined || m.eventIndex <= (eventIdx ?? Infinity)));
+    while (this._nextMomentIdx < moments.length && canShow(moments[this._nextMomentIdx])) {
+      const m = moments[this._nextMomentIdx++];
+      const el = document.createElement('div');
+      el.className = 'life-whisper' + (m.tone === 'bad' ? ' bad' : '');
+      if (!animate) el.style.animation = 'none';
+      el.innerHTML = `<span class="life-age">${m.age}</span>${this._esc(m.text)}`;
+      this.timelineEl.appendChild(el);
+    }
+  }
+
+  setLifeThread(on) {
+    this.lifeThreadOn = on;
+    localStorage.setItem('lifeThread', on ? 'on' : 'off');
+    this.timelineEl.classList.toggle('life-off', !on);
+    return on;
   }
 
   _toggleCausalChain(card, idx) {

@@ -22,6 +22,7 @@ export class Controls {
         <button class="speed-btn" data-speed="2" aria-label="Speed 2x" aria-pressed="false">2x</button>
         <button class="speed-btn" data-speed="4" aria-label="Speed 4x" aria-pressed="false">4x</button>
       </div>
+      <button class="ctrl-btn" id="btn-life" title="Toggle life thread — follow one person through this century" aria-label="Toggle life thread" aria-pressed="true">Life</button>
       <div id="progress-container">
         <div id="progress-track" role="slider" aria-label="Playback progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><div id="progress-fill"></div></div>
         <span id="progress-text" aria-live="off">--</span>
@@ -60,6 +61,25 @@ export class Controls {
       const frac = (e.clientX - rect.left) / rect.width;
       this.viewer.seekTo(Math.max(0, Math.min(1, frac)));
     });
+
+    // Life thread toggle
+    this.btnLife = this.container.querySelector('#btn-life');
+    const syncLife = (on) => {
+      this.btnLife.classList.toggle('active', on);
+      this.btnLife.setAttribute('aria-pressed', String(on));
+      this.btnLife.style.opacity = on ? '1' : '0.5';
+    };
+    syncLife(this.viewer.lifeThreadOn);
+    this.btnLife.addEventListener('click', () => {
+      syncLife(this.viewer.setLifeThread(!this.viewer.lifeThreadOn));
+    });
+  }
+
+  _fmtYM(ym) {
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const parts = (ym || '').split('-');
+    const m = parseInt(parts[1], 10) - 1;
+    return months[m] ? `${months[m]}-${parts[0]}` : (parts[0] || '--');
   }
 
   _togglePlay() {
@@ -134,7 +154,7 @@ export class Controls {
       const lastEvent = this.viewer.events[this.viewer.events.length - 1];
       const curYear = currentEvent?.year_month || firstYear;
       const endYear = lastEvent?.year_month || '';
-      this.progressText.textContent = `${curYear} \u2192 ${endYear}`;
+      this.progressText.textContent = `${this._fmtYM(curYear)} \u2192 ${this._fmtYM(endYear)}`;
     }
   }
 

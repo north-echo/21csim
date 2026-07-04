@@ -1178,3 +1178,32 @@ html, body {
   white-space: nowrap;
   border: 0;
 }
+
+/* ── Life thread: quiet annotations beneath world events ── */
+.life-whisper {
+  font-size: 12.5px;
+  font-style: italic;
+  color: #8fd0b8;
+  opacity: 0.72;
+  margin: 2px 0 10px 18px;
+  animation: whisperAppear 0.5s ease backwards;
+  animation-delay: 0.2s;
+}
+@keyframes whisperAppear {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 0.72; transform: none; }
+}
+.life-whisper .life-age {
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 700;
+  color: #06060a;
+  background: #8fd0b8;
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-right: 8px;
+}
+.life-whisper.bad { color: #ff8070; }
+.life-whisper.bad .life-age { background: #ff8070; }
+#timeline-panel.life-off .life-whisper { display: none; }
