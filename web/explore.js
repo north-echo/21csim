@@ -300,6 +300,13 @@ function escHtml(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+const FMT_MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmtYM(ym) {
+  const parts = String(ym || '').split('-');
+  const mi = parseInt(parts[1], 10) - 1;
+  return FMT_MON[mi] ? `${FMT_MON[mi]}-${parts[0]}` : (parts[0] || '?');
+}
+
 // ════════════════════════════════════════════════════════════════
 // Data Loading
 // ════════════════════════════════════════════════════════════════
@@ -749,7 +756,7 @@ function renderLeverage(runs) {
 
     html += `<div class="leverage-item">`;
     html += `<div class="leverage-rank">${i + 1}</div>`;
-    html += `<div><div class="leverage-node-name">${escHtml(item.title)}</div><div class="leverage-node-year">${item.year.slice(0, 7)} &middot; ${item.nodeId}</div></div>`;
+    html += `<div><div class="leverage-node-name">${escHtml(item.title)}</div><div class="leverage-node-year">${fmtYM(item.year)} &middot; ${item.nodeId}</div></div>`;
 
     // Branch distribution bars
     html += `<div class="leverage-branches">`;
