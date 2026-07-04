@@ -48,11 +48,19 @@ judgment in-session; the tested Python pipeline does validation, clamping, and f
    Review what would be applied/rejected, then run it again without `--dry-run`.
    Never edit `reality_2026.yaml` by hand — the CLI clamps values and keeps the log.
 
-5. **Deploy.** Commit the changed files (`src/csim/data/reality_2026.yaml`,
-   `src/csim/data/reality_stream_log.json`, any new `src/csim/data/nodes/*.yaml`,
-   `web/reality.json`) with a message summarizing the update, and push to main
-   (pushing deploys 21csim.com). If this is an interactive session rather than a
-   scheduled run, confirm with the user before pushing.
+5. **Open a PR — never push to main.** Main deploys 21csim.com; the user
+   reviews every reality update before it goes live.
+   - Create a branch named `reality-update/YYYY-MM-DD` (today's date).
+   - Commit the changed files (`src/csim/data/reality_2026.yaml`,
+     `src/csim/data/reality_stream_log.json`, any new
+     `src/csim/data/nodes/*.yaml`, `web/reality.json`) with a message
+     summarizing the update.
+   - Push the branch and open a PR with `gh pr create`. The PR body must list:
+     each dimension change as `old -> new` with the news driving it, any new
+     nodes with one-line rationale, and the sources consulted (URLs).
+   - If a `reality-update/*` PR from a previous week is still open, note that
+     in the new PR body ("supersedes #N") rather than merging or closing
+     anything yourself.
 
 6. **Report.** Summarize: dimensions changed (old -> new), nodes added, and the
    reasoning — in plain language.
