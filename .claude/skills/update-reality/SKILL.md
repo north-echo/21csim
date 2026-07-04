@@ -40,10 +40,11 @@ judgment in-session; the tested Python pipeline does validation, clamping, and f
      `cascading_modifiers`. Most weeks produce zero new nodes.
    - `reasoning`: 2-3 sentences citing the events behind the changes.
 
-4. **Apply through the validated pipeline.** Write the JSON to the scratchpad
-   (e.g. `updates.json`), then:
+4. **Apply through the validated pipeline.** Write the JSON to a temp path
+   (e.g. `updates.json`), then run the project CLI — `.venv/bin/21csim` if a
+   venv exists, otherwise install first (`pip install -e .`) and use `21csim`:
    ```
-   .venv/bin/21csim apply-reality-updates <path>/updates.json --dry-run
+   21csim apply-reality-updates <path>/updates.json --dry-run
    ```
    Review what would be applied/rejected, then run it again without `--dry-run`.
    Never edit `reality_2026.yaml` by hand — the CLI clamps values and keeps the log.
