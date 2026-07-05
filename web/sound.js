@@ -132,9 +132,9 @@ export class SoundEngine {
     }).connect(this.masterVol);
 
     this.bellSynth = new Tone.MetalSynth({
-      frequency: 200, envelope: { attack: 0.01, decay: 2, release: 1 },
+      frequency: 200, envelope: { attack: 0.01, decay: 1.2, release: 0.8 },
       harmonicity: 5.1, modulationIndex: 16, resonance: 4000, octaves: 1.5,
-      volume: -20,
+      volume: -25,
     }).connect(this.reverb);
 
     this.fmSynth = new Tone.FMSynth({
@@ -216,13 +216,20 @@ export class SoundEngine {
 
   eraTransition() {
     if (!this.enabled || !this.initialized) return;
-    // Sustained bell chord with reverb swell
-    this.bellSynth.triggerAttackRelease('16n');
 
-    // Layer with pad chord
+    // Rate limit: one sting per 8s max — at high playback speeds era banners
+    // arrive fast enough to stack gongs over the ambient bed
+    const now = performance.now();
+    if (this._lastEraSting && now - this._lastEraSting < 8000) return;
+    this._lastEraSting = now;
+
+    // Bell accent, kept under the ambient bed (soft velocity)
+    this.bellSynth.triggerAttackRelease('16n', undefined, 0.6);
+
+    // Gentle pad swell rather than a full second chord over the loop
     const chords = SoundEngine.CHORDS[this.currentMood] || SoundEngine.CHORDS.neutral;
     const chord = chords[0];
-    this.padSynth.triggerAttackRelease(chord, '2n');
+    this.padSynth.triggerAttackRelease(chord, '2n', undefined, 0.45);
 
     // Trigger mood reassessment on next updateMood call
   }
