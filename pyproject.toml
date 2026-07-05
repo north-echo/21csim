@@ -2,6 +2,7 @@
 name = "21csim"
 version = "0.1.0"
 description = "Monte Carlo counterfactual simulator for 21st century world history (2000-2100)"
+license = { file = "LICENSE" }
 requires-python = ">=3.11"
 dependencies = [
     "typer>=0.12",

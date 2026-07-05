@@ -1,0 +1,30 @@
+21csim Simulation Data & Creative Assets License
+
+Copyright (c) 2026 Christopher Lusk
+
+The simulation data and creative assets in this repository are licensed under
+the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+license (CC BY-NC-SA 4.0):
+
+    https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+This covers, without limitation:
+
+  - src/csim/data/nodes/        — the event node library (definitions,
+                                  probability distributions, world-state
+                                  effects, cascading modifiers)
+  - src/csim/data/curated/      — curated simulation runs and narrations
+  - src/csim/data/reality_2026.yaml and reality stream outputs
+  - data/training/              — narration training corpora
+  - web/runs/, web/nodes-catalog.json, web/nodes-sim.json, web/batch-10k.json
+  - web/audio/                  — voice narration recordings
+  - web/og/                     — social card images
+  - web/century/                — generated per-run pages (embedded run data)
+
+In plain terms: you may share and adapt this material for noncommercial
+purposes, provided you credit "21csim (Christopher Lusk, 21csim.com)" and
+license your derivatives under the same terms. Commercial use requires
+separate written permission.
+
+The SOFTWARE in this repository (engine, CLI, web viewer code, scripts) is
+separately licensed under the MIT License — see LICENSE.

@@ -124,4 +124,14 @@ python scripts/generate_century_pages.py  # after regenerating the run library
 
 ## License
 
-MIT
+Split license:
+
+- **Code** (engine, CLI, web viewer, scripts) — [MIT](LICENSE). Use it for anything.
+- **Simulation data & creative assets** (the node library, curated runs,
+  narrations, audio, social cards) — [CC BY-NC-SA 4.0](LICENSE-DATA).
+  Share and adapt with attribution for noncommercial purposes; commercial
+  use of the data requires permission.
+
+The node library is the research product of this project — hundreds of
+hand-calibrated probability distributions and cascade structures. The split
+keeps the engine open while protecting that work from commercial reuse.
