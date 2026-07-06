@@ -2,12 +2,6 @@ MIT License
 
 Copyright (c) 2026 Christopher Lusk
 
-This license applies to the SOFTWARE in this repository — the simulation
-engine, CLI, web viewer code, and build scripts. It does NOT apply to the
-simulation data and creative assets (event node definitions, curated runs,
-narrations, audio, and social card images), which are licensed separately
-under CC BY-NC-SA 4.0 — see LICENSE-DATA.
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights

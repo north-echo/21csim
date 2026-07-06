@@ -27,4 +27,6 @@ license your derivatives under the same terms. Commercial use requires
 separate written permission.
 
 The SOFTWARE in this repository (engine, CLI, web viewer code, scripts) is
-separately licensed under the MIT License — see LICENSE.
+separately licensed under the MIT License — see LICENSE-MIT. The MIT grant
+applies only to the software; the material listed above is licensed
+exclusively under the terms in this file.

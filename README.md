@@ -1,6 +1,8 @@
 # 21csim
 
 [![CI](https://github.com/north-echo/21csim/actions/workflows/ci.yml/badge.svg)](https://github.com/north-echo/21csim/actions/workflows/ci.yml)
+[![Code: MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE-MIT)
+[![Data: CC BY-NC-SA 4.0](https://img.shields.io/badge/data-CC%20BY--NC--SA%204.0-blue.svg)](LICENSE-DATA)
 
 Monte Carlo counterfactual simulator for 21st century world history (2000–2100). Live at **[21csim.com](https://21csim.com)**.
 
@@ -126,7 +128,7 @@ python scripts/generate_century_pages.py  # after regenerating the run library
 
 Split license:
 
-- **Code** (engine, CLI, web viewer, scripts) — [MIT](LICENSE). Use it for anything.
+- **Code** (engine, CLI, web viewer, scripts) — [MIT](LICENSE-MIT). Use it for anything.
 - **Simulation data & creative assets** (the node library, curated runs,
   narrations, audio, social cards) — [CC BY-NC-SA 4.0](LICENSE-DATA).
   Share and adapt with attribution for noncommercial purposes; commercial
