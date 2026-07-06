@@ -1,0 +1,76 @@
+name: Regenerate century pages
+
+# Keeps the per-seed share pages and sitemap in sync with their inputs
+# (the index.html template and the run library). Branch protection on main
+# requires the "test" check on every commit, and the Actions bot can't
+# bypass it — so this pushes the regen commit to a staging branch, waits
+# for its CI to go green, then fast-forwards main to the same SHA (which
+# protection allows for commits with passing checks).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - web/index.html
+      - web/runs/**
+      - scripts/generate_century_pages.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  checks: read
+
+concurrency:
+  group: century-regen
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate pages
+        run: python3 scripts/generate_century_pages.py
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          git add -A web/century web/sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Century pages already up to date"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Regenerate century pages"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Stage and wait for required check
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git push -f origin HEAD:refs/heads/century-regen
+          sha="${{ steps.commit.outputs.sha }}"
+          echo "Waiting for 'test' check on $sha..."
+          for i in $(seq 1 40); do
+            conclusion=$(gh api "repos/${{ github.repository }}/commits/$sha/check-runs" \
+              --jq '.check_runs[] | select(.name == "test") | .conclusion // "pending"' | head -1)
+            echo "  attempt $i: ${conclusion:-not started}"
+            if [ "$conclusion" = "success" ]; then exit 0; fi
+            if [ "$conclusion" = "failure" ] || [ "$conclusion" = "cancelled" ]; then
+              echo "Required check failed on staging branch"; exit 1
+            fi
+            sleep 15
+          done
+          echo "Timed out waiting for check"; exit 1
+
+      - name: Fast-forward main
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          git push origin HEAD:main
+          git push origin --delete century-regen || true
