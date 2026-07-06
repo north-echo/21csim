@@ -292,3 +292,38 @@ def test_validate_new_nodes_defaults_unknown_domain():
         "domain": "vibes",
     }])
     assert nodes[0]["domain"] == "geopolitical"
+
+
+# ── Format stability ──
+
+
+def test_write_reality_yaml_is_idempotent(data_dir):
+    """Rewriting an already-generated file must produce byte-identical output
+    (modulo the timestamp header) so weekly PRs only diff real changes."""
+    import re
+
+    data = {"year": 2026, "us_polarization": 0.72, "global_gdp_growth_modifier": 1.0,
+            "russia_stability": 0.29, "conflict_deaths": 1_503_000,
+            "ai_development_year_offset": 5, "climate_temp_anomaly": 1.3}
+    path = data_dir / "reality_2026.yaml"
+
+    strip_ts = lambda s: re.sub(r"# Last update:.*", "", s)  # noqa: E731
+    _write_reality_yaml(path, data)
+    first = strip_ts(path.read_text())
+    _write_reality_yaml(path, yaml.safe_load(path.read_text()))
+    second = strip_ts(path.read_text())
+    assert first == second
+
+
+def test_fmt_value_canonical():
+    from csim.reality_stream import _fmt_value
+
+    assert _fmt_value(0.3) == "0.3"
+    assert _fmt_value(0.32) == "0.32"
+    assert _fmt_value(1.0) == "1.0"          # stays a YAML float
+    assert _fmt_value(1_503_000) == "1503000"
+    assert _fmt_value(5) == "5"
+    assert _fmt_value(0.30000000000000004) == "0.3"  # float noise squashed
+    # Round-trips as the same type and value
+    assert yaml.safe_load(f"x: {_fmt_value(1.0)}")["x"] == 1.0
+    assert isinstance(yaml.safe_load(f"x: {_fmt_value(1.0)}")["x"], float)

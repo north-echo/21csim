@@ -175,6 +175,20 @@ def update_reality(
     return reality_path
 
 
+def _fmt_value(v) -> str:
+    """Canonical number formatting so rewrites don't churn the git diff.
+
+    Floats print with at most 4 decimals, trailing zeros trimmed, but always
+    keep one decimal so YAML round-trips them as floats (1.0, not 1).
+    """
+    if isinstance(v, float):
+        s = f"{v:.4f}".rstrip("0")
+        if s.endswith("."):
+            s += "0"
+        return s
+    return str(v)
+
+
 def _write_reality_yaml(path: Path, data: dict) -> None:
     """Write reality YAML preserving structure."""
     # Write with comments for major sections
@@ -227,7 +241,7 @@ def _write_reality_yaml(path: Path, data: dict) -> None:
         lines.append(f"# ── {cat_name} ──")
         for dim in dims:
             if dim in data:
-                lines.append(f"{dim}: {data[dim]}")
+                lines.append(f"{dim}: {_fmt_value(data[dim])}")
         lines.append("")
 
     path.write_text("\n".join(lines))
