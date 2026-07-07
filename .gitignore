@@ -11,3 +11,6 @@ build/
 *.swo
 *~
 node_modules/
+
+# Internal design docs live outside the repo (~/Documents/21csim-specs)
+/21csim-*.md
