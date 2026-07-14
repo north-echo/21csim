@@ -1,0 +1,39 @@
+id: 2026_hormuz_crisis
+year_month: 2026-07
+title: 'US-Iran War Resumes: Strait of Hormuz Crisis'
+description: The June US-brokered ceasefire (Islamabad Memorandum) that ended the
+  US-Israel war on Iran collapses within weeks. On 7 July two tankers (the Qatari
+  LNG carrier Al Rekayat and Saudi-flagged supertanker Wedyan) are struck in the Strait
+  of Hormuz; the US reimposes sanctions on Iranian oil and CENTCOM launches hundreds
+  of strikes on Iranian military sites near the strait, with Iran's IRGC retaliating
+  against US bases in Kuwait, Jordan and Bahrain. The US and Iran openly contest control
+  of the waterway - CENTCOM calls it open, Tehran calls it closed. Strait traffic
+  collapses to ~6 crossings per 12h (vs 18-22 daily), Brent crude jumps back above
+  $78 (highest since 22 June), reversing the return to pre-war prices, and Israel
+  simultaneously breaches its own June Lebanon truce with deadly strikes on Nabatieh.
+domain: geopolitical
+confidence: HIGH
+distribution:
+  type: categorical
+  options:
+    hormuz_crisis: 1.0
+outcomes:
+  hormuz_crisis:
+    status: HISTORICAL
+    description: The June US-brokered ceasefire (Islamabad Memorandum) that ended
+      the US-Israel war on Iran collapses within weeks. On 7 July two tankers (the
+      Qatari LNG carrier Al Rekayat and Saudi-flagged supertanker Wedyan) are struck
+      in the Strait of Hormuz; the US reimposes sanctions on Iranian oil and CENTCOM
+      launches hundreds of strikes on Iranian military sites near the strait, with
+      Iran's IRGC retaliating against US bases in Kuwait, Jordan and Bahrain. The
+      US and Iran openly contest control of the waterway - CENTCOM calls it open,
+      Tehran calls it closed. Strait traffic collapses to ~6 crossings per 12h (vs
+      18-22 daily), Brent crude jumps back above $78 (highest since 22 June), reversing
+      the return to pre-war prices, and Israel simultaneously breaches its own June
+      Lebanon truce with deadly strikes on Nabatieh.
+    world_state_effects:
+      middle_east_stability: '-0.07'
+      nuclear_risk_level: '+0.03'
+      supply_chain_resilience: '-0.03'
+      conflict_deaths: '+2500'
+      global_gdp_growth_modifier: '*0.99'

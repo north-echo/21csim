@@ -11,5 +11,18 @@
     },
     "new_nodes": [],
     "reasoning": "Week of 2026-06-29 to 07-06. Russia escalated massively against Kyiv (Jul 2 and Jul 6 barrages: 351 drones + 68 missiles in one night, all 29 ballistic missiles hitting through failing air defenses; ~40+ civilians killed), while Ukraine's long-range strikes on Russian oil/fuel infrastructure caused severe shortages and pressured Moscow, and Poland scrambled jets / Finland restricted airspace (NATO spillover risk): lifts nuclear_risk_level and drone_warfare_prevalence, nudges russia_stability down, and increments cumulative conflict_deaths. Venezuela's twin M7.2/M7.5 earthquakes (Jun 24-25, ~2,954 confirmed dead, 41,000 missing, $6.7B / ~6% of GDP damage, strongest in a century) drag latin_america_stability down as the toll climbed through the week. A cluster of frontier AI releases (Claude Sonnet 5 on Jun 30, GPT-5.6 preview, Grok 4.5 at 1.5T parameters) plus record $510B H1-2026 VC and Nvidia's ~$1T chip-demand pipeline mark continued acceleration, so ai_development_year_offset ticks from 4 to 5 (also correcting a baseline that still described the 2024 GPT-4/Claude-3 era). Deliberately excluded: the Iran/Khamenei state funeral this week is the ceremonial coda to a war that ended with a mid-June ceasefire (oil already back to ~$72), so it is outside this week's window; equity markets sat at record highs with only routine AI-stock profit-taking, no systemic move."
+  },
+  {
+    "timestamp": "2026-07-13T13:14:27.047275+00:00",
+    "dimension_updates": {
+      "middle_east_stability": 0.18,
+      "nuclear_risk_level": 0.35,
+      "supply_chain_resilience": 0.52,
+      "conflict_deaths": 1505500
+    },
+    "new_nodes": [
+      "2026_hormuz_crisis"
+    ],
+    "reasoning": "Week of 2026-07-06 to 07-13. The dominant event is the collapse of the June US-Iran ceasefire (Islamabad Memorandum): on 7 July two tankers were struck in the Strait of Hormuz, the US reimposed oil sanctions and CENTCOM ran hundreds of strikes on Iranian military sites, Iran hit US bases in Kuwait/Jordan/Bahrain, and both sides openly contested control of the strait - Brent surged back above $78 and Hormuz traffic fell to ~6 crossings per 12h (vs 18-22 daily). Israel also breached its June Lebanon truce (deadly strikes on Nabatieh). This drives middle_east_stability 0.25->0.18, nuclear_risk_level 0.32->0.35, and supply_chain_resilience 0.55->0.52, and is recorded as a new node (2026_hormuz_crisis). Russia-Ukraine continued at high tempo (mass strikes on Kyiv for a third time in a week, ~20 killed on the eve of the NATO Ankara summit), adding to cumulative conflict_deaths (1,503,000->1,505,500) alongside the Gulf and Lebanon casualties. Excluded: continued frontier-AI releases (GPT-5.6, Grok 4.5, Gemini 2.5 Pro Deep Think) are real but do not warrant a second integer tick to ai_development_year_offset one week after it moved 4->5; equity markets stayed resilient (stocks up on the week, AI shares leading) with no systemic move, so no growth-modifier change; the Venezuela earthquake toll kept climbing but was already priced into latin_america_stability last week."
   }
 ]
