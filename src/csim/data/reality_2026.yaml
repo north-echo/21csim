@@ -1,5 +1,5 @@
 # Real-world values — auto-updated by reality stream
-# Last update: 2026-08-17 13:15 UTC
+# Last update: 2026-08-24 13:15 UTC
 year: 2026
 
 # ── Geopolitical ──
@@ -8,16 +8,16 @@ eu_cohesion: 0.55
 us_global_standing: 0.55
 china_power_index: 0.52
 russia_stability: 0.24
-middle_east_stability: 0.16
+middle_east_stability: 0.14
 india_power_index: 0.3
 latin_america_stability: 0.38
 
 # ── Economic ──
-global_gdp_growth_modifier: 1.03
+global_gdp_growth_modifier: 1.02
 inequality_index: 0.62
 us_debt_gdp_ratio: 1.2
 crypto_market_cap_trillion: 2.5
-supply_chain_resilience: 0.47
+supply_chain_resilience: 0.45
 
 # ── Technology ──
 ai_development_year_offset: 5
@@ -27,7 +27,7 @@ human_augmentation_prevalence: 0.03
 space_development_index: 0.08
 
 # ── Security ──
-nuclear_risk_level: 0.32
+nuclear_risk_level: 0.34
 terrorism_threat_index: 0.25
 surveillance_state_index: 0.4
 global_cyber_damage_annual_b: 10.0
@@ -44,7 +44,7 @@ arctic_ice_status: 0.68
 
 # ── Human / Social ──
 global_pandemic_deaths: 7000000
-conflict_deaths: 1522000
+conflict_deaths: 1525000
 opioid_deaths_cumulative: 700000
 global_democracy_index: 0.52
 us_institutional_trust: 0.25
