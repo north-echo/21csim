@@ -1,26 +1,26 @@
 {
-  "generated": "2026-08-24T13:15:00.093159+00:00",
+  "generated": "2026-08-31T13:16:26.529503+00:00",
   "reality": {
     "year": 2026,
     "us_polarization": 0.72,
     "eu_cohesion": 0.55,
     "us_global_standing": 0.55,
     "china_power_index": 0.52,
-    "russia_stability": 0.24,
-    "middle_east_stability": 0.14,
+    "russia_stability": 0.23,
+    "middle_east_stability": 0.15,
     "india_power_index": 0.3,
     "latin_america_stability": 0.38,
-    "global_gdp_growth_modifier": 1.02,
+    "global_gdp_growth_modifier": 1.03,
     "inequality_index": 0.62,
     "us_debt_gdp_ratio": 1.2,
     "crypto_market_cap_trillion": 2.5,
-    "supply_chain_resilience": 0.45,
+    "supply_chain_resilience": 0.47,
     "ai_development_year_offset": 5,
     "internet_freedom_index": 0.58,
     "social_media_penetration": 0.62,
     "human_augmentation_prevalence": 0.03,
     "space_development_index": 0.08,
-    "nuclear_risk_level": 0.34,
+    "nuclear_risk_level": 0.33,
     "terrorism_threat_index": 0.25,
     "surveillance_state_index": 0.4,
     "global_cyber_damage_annual_b": 10.0,
@@ -30,10 +30,10 @@
     "sea_level_rise_meters": 0.1,
     "biodiversity_index": 0.55,
     "water_stress_index": 0.38,
-    "food_security_index": 0.72,
+    "food_security_index": 0.71,
     "arctic_ice_status": 0.68,
     "global_pandemic_deaths": 7000000,
-    "conflict_deaths": 1525000,
+    "conflict_deaths": 1529000,
     "opioid_deaths_cumulative": 700000,
     "global_democracy_index": 0.52,
     "us_institutional_trust": 0.25,
@@ -54,19 +54,6 @@
     "existential_risk_cumulative": 0.08
   },
   "stream_log": [
-    {
-      "timestamp": "2026-07-27T13:18:35.297523+00:00",
-      "dimension_updates": {
-        "supply_chain_resilience": 0.45,
-        "middle_east_stability": 0.14,
-        "global_gdp_growth_modifier": 1.0,
-        "nuclear_risk_level": 0.34,
-        "russia_stability": 0.27,
-        "conflict_deaths": 1512500
-      },
-      "new_nodes": [],
-      "reasoning": "Week of 2026-07-20 to 07-27. The 2026 Strait of Hormuz crisis widened before turning: supply disruption spread from Hormuz to the Red Sea (a second major shipping chokepoint now contested for Saudi crude), oil surged ~40% on the month with Brent near $96-100, and after nearly two weeks of intensifying US bombing of Iran the very end of the week produced the first genuine de-escalation - the US paused strikes for two straight days (Jul 25-26), Iran reciprocated, and interim-ceasefire talks resumed via Oman/Pakistan/China mediation (Brent fell ~4% Friday to ~$97 on the news but stayed ~+10% on the week). The naval blockade nonetheless still held (ships redirected/disabled/boarded Saturday). Net: supply_chain_resilience 0.48->0.45 (second chokepoint disrupted), middle_east_stability 0.15->0.14 (Red Sea widening and peak-intensity bombing defined most of the week; the nascent, unconsummated pause keeps the slip small), global_gdp_growth_modifier 1.01->1.00 (sustained ~$100 oil bit harder - S&P -0.6%, Nasdaq -2% on the week, recession odds elevated), and nuclear_risk_level 0.35->0.34 (first mutual de-escalation in the conflict, though the blockade continues). Russia-Ukraine intensified on the deep-strike front: Ukraine flew one of its largest barrages (Russia claimed 571 drones downed in a night) and sparked a major fire at a Wildberries warehouse near St Petersburg, deepening fuel shortages and pressure on Putin, so russia_stability 0.28->0.27; two-front high-intensity combat (US-Iran bombing, Ukraine/Russia exchanges killing dozens, Lebanon) lifts cumulative conflict_deaths 1,509,000->1,512,500. Excluded: the frontier-AI wave continued (Claude Opus 5 on Jul 24, GPT-5.6 Sol/Terra/Luna, Grok 4.5, Kimi K3 - '4 frontier models in 3 weeks') but does not warrant another integer ai_development_year_offset tick three weeks after the 4->5 move; the de-escalation is treated as a development within the existing 2026_hormuz_crisis node, not a new discrete event, so no new nodes - a signed ceasefire next week would be."
-    },
     {
       "timestamp": "2026-08-03T13:21:08.454378+00:00",
       "dimension_updates": {
@@ -116,6 +103,20 @@
       },
       "new_nodes": [],
       "reasoning": "Week of 2026-08-17 to 08-24. Last week's Hormuz optimism collapsed: the 60-day US-Iran memorandum of understanding expired Aug 17 and Trump ruled out extending the ceasefire, declared no talks were underway (Aug 18), threatened to 'bomb the shit out of' Oman if it obstructed reopening the strait, and posted a 'New US Territory' image claiming 'total control' of Hormuz, while a senior Iranian official said Tehran would shift to a 'fully offensive' posture and mount a 'timely and precise' attack to break the US naval blockade (a carrier group was en route to replace USS Lincoln; the UAE detected a missile threat Aug 18). The Iran-Oman shipping framework announced last week did NOT translate into any reopening - Iran's preconditions (lift the blockade, withdraw US forces, permanently end the war) remain unmet and the blockade held all week. Markets re-priced the escalation: Brent surged ~6% to ~$94 (a second straight ~6% weekly gain, fully reversing the prior week's -7% relief rally), Houthis struck another Saudi vessel in the Red Sea, and Israel ramped up strikes on Lebanon and hit the Abu al-Duhur airbase in Syria. This reverses last week's tentative improvements: middle_east_stability 0.16->0.14 (deal collapsed, MOU expired, offensive threats, Lebanon/Syria widening - though Pezeshkian's Aug 21 signal that Tehran wants the war to end soon keeps the slip contained), nuclear_risk_level 0.32->0.34 (MOU lapse, 'fully offensive' threat, carrier surge and UAE missile scare), and supply_chain_resilience 0.47->0.45 (Brent back to ~$94, strait firmly not reopening, blockade entrenched). Macro turned mildly risk-off: the S&P 500 fell ~1.4% on the week to ~2% below its record as the Philadelphia semiconductor index dropped ~5% on rising Treasury yields, Fed-independence worries ahead of Kevin Warsh's Jackson Hole address, and the renewed oil bid - so global_gdp_growth_modifier eases 1.03->1.02, partially unwinding last week's tick. Russia-Ukraine ground on at high tempo (mutual missile/drone barrages killing civilians; Russian strikes have damaged 300+ Ukrainian fuel stations over six months) with only limited diplomacy - Moscow said it is 'ready for new ideas' but only ones matching Putin's existing goals - so two-front combat lifts cumulative conflict_deaths 1,522,000->1,525,000 while russia_stability holds at 0.24 (the grind and the tentative Russian openness roughly offset, no decisive single-week mover). Excluded/watched: no new node - the Hormuz re-escalation is a development within the existing 2026_hormuz_crisis node, not a discrete era-defining event; Trump's 'very positive' outreach to Kim Jong-un and the scaled-down US-South Korea exercises are a minor Korea de-escalation with no clean structural dimension and are offset by the Iran nuclear-risk move; frontier-AI activity stayed incremental (GPT-5.6 Sol/Luna updates, Claude Sonnet 5 pricing made permanent, Grok Imagine Image 2.0, Meta Muse Spark) after late-July flagships already counted, so no ai_development_year_offset tick; and the Indonesia M7.7 Flores earthquake (~70 dead) and record Japan/South Korea rainfall predate this window (Aug 13-14) and map to no clean global structural dimension at meaningful magnitude."
+    },
+    {
+      "timestamp": "2026-08-31T13:16:26.522229+00:00",
+      "dimension_updates": {
+        "middle_east_stability": 0.15,
+        "nuclear_risk_level": 0.33,
+        "supply_chain_resilience": 0.47,
+        "global_gdp_growth_modifier": 1.03,
+        "russia_stability": 0.23,
+        "conflict_deaths": 1529000,
+        "food_security_index": 0.71
+      },
+      "new_nodes": [],
+      "reasoning": "Week of 2026-08-24 to 08-31. The 2026 Strait of Hormuz crisis cooled from an acute military standoff into an economic/sanctions confrontation: the US has not struck Iranian targets since late July and Trump canceled a planned attack citing progress in ceasefire negotiations, Iran's and Oman's foreign ministers met Aug 25 to firm up the shipping-corridor understanding, and crude flows through Hormuz recovered to ~6-8M bbl/day, so Brent fell ~5% on the week to ~$89-90 (from ~$94). This eases middle_east_stability 0.14->0.15, nuclear_risk_level 0.34->0.33, and supply_chain_resilience 0.45->0.47 - moves kept small because the blockade nominally holds, Iran still calls the strait 'closed' with its preconditions unmet, and tankers were still hit this week (the LNG carrier Gaslog Shanghai and another vessel near Oman). Markets recovered on the oil relief and a strong Nvidia earnings beat (S&P 500 back to ~7,731, Nasdaq +1.6% on the day, PMI 51.0 still expansionary), lifting global_gdp_growth_modifier 1.02->1.03 and partially unwinding last week's risk-off tick. Russia-Ukraine ran at record intensity: Zelensky said Russia fired ~2,000 attack drones, 1,600+ glide bombs and 31 missiles (including North Korean ballistic) in one week, an Aug 29 strike on a warehouse west of Kyiv killed 38 with several missing, and Russia's MoD signaled a renewed winter energy-infrastructure campaign - lifting cumulative conflict_deaths 1,525,000->1,529,000. Ukraine's deep-strike campaign escalated onto Russia's export economy - drone attacks suspended all three major grain terminals at Novorossiysk (cutting August Russian grain exports by an estimated 0.7-1.2M tonnes, potentially below 2M vs 5.7M a year ago) alongside a Leningrad Oblast oil refinery and a Krasnodar airbase - nudging russia_stability 0.24->0.23. That Black Sea disruption, atop Northern-Hemisphere drought that cut European wheat an estimated 8-10M tonnes, drove wheat +12% on the week to its highest since Feb 2023 (+54% YTD, with corn also at multi-year highs), so food_security_index eases 0.72->0.71 - the first genuine structural food-supply signal in the stream. Excluded/watched: no new node - the Hormuz de-escalation is a shift within the existing 2026_hormuz_crisis node, not a signed ceasefire or discrete era-defining event, and the grain shock is a development within the ongoing 2022_russia_ukraine war; the US-Venezuela oil-access framework and a Dominican Republic-Venezuela diplomatic thaw are geopolitically notable but not a clean structural mover on latin_america_stability this week; frontier-AI activity stayed incremental (Alibaba Qwen 3.8-Max at 2.4T params, DeepSeek-V4-Flash, GPT-5.6 Luna, Meta Muse Spark, plus a first AI-piloted F-16 test flight) after late-July flagships already counted, so no ai_development_year_offset tick; and South Korea's record 42.5C heat maps to no clean global structural dimension at meaningful magnitude this week."
     }
   ]
 }
