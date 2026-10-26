@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T13:06:27.213080+00:00",
+  "generated": "2026-10-26T13:35:01.395147+00:00",
   "reality": {
     "year": 2026,
     "us_polarization": 0.72,
@@ -7,20 +7,20 @@
     "us_global_standing": 0.55,
     "china_power_index": 0.52,
     "russia_stability": 0.2,
-    "middle_east_stability": 0.1,
+    "middle_east_stability": 0.09,
     "india_power_index": 0.3,
     "latin_america_stability": 0.38,
-    "global_gdp_growth_modifier": 0.99,
+    "global_gdp_growth_modifier": 0.98,
     "inequality_index": 0.62,
     "us_debt_gdp_ratio": 1.2,
     "crypto_market_cap_trillion": 2.5,
-    "supply_chain_resilience": 0.41,
+    "supply_chain_resilience": 0.39,
     "ai_development_year_offset": 5,
     "internet_freedom_index": 0.58,
     "social_media_penetration": 0.62,
     "human_augmentation_prevalence": 0.03,
     "space_development_index": 0.08,
-    "nuclear_risk_level": 0.37,
+    "nuclear_risk_level": 0.39,
     "terrorism_threat_index": 0.25,
     "surveillance_state_index": 0.4,
     "global_cyber_damage_annual_b": 10.0,
@@ -33,7 +33,7 @@
     "food_security_index": 0.71,
     "arctic_ice_status": 0.68,
     "global_pandemic_deaths": 7000000,
-    "conflict_deaths": 1554000,
+    "conflict_deaths": 1557500,
     "opioid_deaths_cumulative": 700000,
     "global_democracy_index": 0.52,
     "us_institutional_trust": 0.25,
@@ -54,16 +54,6 @@
     "existential_risk_cumulative": 0.08
   },
   "stream_log": [
-    {
-      "timestamp": "2026-09-21T13:12:46.347386+00:00",
-      "dimension_updates": {
-        "nuclear_risk_level": 0.38,
-        "global_gdp_growth_modifier": 1.0,
-        "conflict_deaths": 1540000
-      },
-      "new_nodes": [],
-      "reasoning": "Week of 2026-09-14 to 09-21. The NATO-Russia spillover that opened with the Sep 10 Poland drone incursion broadened to the Baltics: on Sep 19 three armed Russian MiG-31s violated Estonian airspace near Vaindloo for ~12 minutes (transponders off, no flight plan), NATO scrambled Italian F-35s plus Swedish/Finnish jets, and Estonia invoked NATO Article 4 - the second Article 4 consultation by a NATO member in two weeks. Poland's Tusk told parliament Russia may strike NATO territory 'in a matter of months' and European intelligence services echoed the warning, while in the Gulf Iran again fired ballistic missiles at a US aircraft carrier and the US destroyed three more Iranian oil tankers (Sep 17-18). This compounding spillover lifts nuclear_risk_level 0.37->0.38 (small tick: still Article 4 consultations, not Article 5 or a NATO-Russia war). On macro, the Fed delivered its first rate hike since 2023 on Sep 16, +25bps to 3.75-4%, explicitly to combat oil-driven inflation (Chair Warsh: inflation 'still too high,' more hikes possible), and equities fell on the decision day (a fifth straight Fed-day decline) with recession odds elevated - monetary tightening into a sustained oil shock is a fresh structural growth drag, so global_gdp_growth_modifier eases 1.01->1.00. Sustained two-front combat (daily Russian strikes on Kyiv/Odesa/Zaporizhzhia with casualties, plus the Gulf tanker war) lifts cumulative conflict_deaths 1,536,500->1,540,000. Held steady: middle_east_stability stays 0.12 and supply_chain_resilience 0.43 - the Strait of Hormuz remained effectively closed all week (the IEA's 'largest supply disruption in the history of the global oil market') and the tanker war continued, but Brent eased modestly off its peak (~$107 Sep 10 to ~$104 Sep 18), so the acute chokepoint stress neither worsened nor resolved, no decisive single-week mover; russia_stability holds at 0.22, the Estonia escalation being external aggression scored via nuclear_risk rather than a fresh internal-stability shock. No new node: the Estonia incursion, like the Poland one, drew Article 4 consultations rather than Article 5 and no NATO-Russia war, so it is scored structurally via nuclear_risk_level and treated as a development within the ongoing Russia-Ukraine thread, consistent with this log's node discipline (a direct NATO-Russia war or a signed ceasefire would warrant one). Watched but not scored: the frontier-AI cadence stayed incremental this week (GPT Image 2.5 variants, Gemini 3.8 Flash Cyber uptake) after the early-September flagship wave (GPT-6 Astra, Claude Fable 5.1, Gemini 3.8 Flash) already counted, so no ai_development_year_offset tick; Super Typhoon Ragasa formed Sep 18 but its Philippines/Taiwan/China landfalls fall Sep 22-24 (next window); and the Fed hike, while a genuine macro turning point, is a monetary-policy action scored via the growth modifier rather than an era-defining discrete node."
-    },
     {
       "timestamp": "2026-09-28T13:13:10.077304+00:00",
       "dimension_updates": {
@@ -108,6 +98,18 @@
       },
       "new_nodes": [],
       "reasoning": "Week of 2026-10-12 to 10-19. The dominant development was a sharp escalation of the 2026 Strait of Hormuz war to a new threshold: Iran's maritime campaign hit a record tempo, ships began actually SINKING rather than merely being damaged. The Singapore-flagged container ship GFS Pride sank on Oct 14 (Iran's IRGC claimed a sea mine; shipping-security analysts and CNN assessed a drone strike as more likely) and a second cargo ship was reported sunk by Oct 15, with 20+ vessels attacked across Hormuz/the Gulf in October (9+ since Sunday Oct 11), 3 seafarers injured and 2 missing, and crude flows crashing again. Brent crude touched ~$110 on Oct 16 \u2014 a fresh cycle high breaking above the September ~$107 peak. This drives supply_chain_resilience 0.43->0.41 (the chokepoint stress decisively worsened after three weeks of holding at 0.43 \u2014 ships sinking, oil flows crashing, Brent at a new cycle high) and middle_east_stability 0.11->0.10 (war escalated to vessel sinkings and record attack tempo; kept to -0.01 because the dimension is already deep in crisis territory and the US stayed notably restrained \u2014 CENTCOM reports ~97% of transits succeed, 'little US response,' Trump holding fire before the Nov 3 midterms). global_gdp_growth_modifier eases 1.00->0.99 \u2014 the first sub-trend reading \u2014 on a genuinely stagflationary, risk-off week: the fresh ~$110 oil shock transmitted into markets as the S&P 500 fell ~2% and the Nasdaq ~4%+ (their worst week since June, chip index -11.4% on an AI selloff), wholesale inflation posted its biggest gain since 2022 with CPI ~3.7%, and the 10-year Treasury yield spiked to ~5.33% (a multi-year high), with only the Dow eking out a second straight weekly gain on rotation out of tech. On Russia-Ukraine, the Trump-brokered 'energy ceasefire' announced Oct 11 collapsed rather than consummating: it was never signed (Kremlin said only 'consultations ongoing'), Russia struck 6+ Ukrainian energy facilities after the announcement, and by Oct 15 Zelenskyy told the FT that Ukraine would resume strikes on Russian energy targets after a three-day Washington-requested pause, continuing the deep-strike campaign against a Russian refining sector Kyiv already claims is ~51% offline \u2014 so russia_stability eases 0.21->0.20 on the sustained, resuming economic degradation. Sustained two-front high-intensity combat (the Hormuz/Gulf maritime war, daily Russia-Ukraine strikes, Yemen/Red Sea) lifts cumulative conflict_deaths 1,550,500->1,554,000 on the established ~3,500/week tempo. Held steady: nuclear_risk_level stays 0.37 \u2014 the maritime escalation is captured via middle_east_stability and supply_chain_resilience, and the strategic-escalation axis was relatively quiet (no fresh US kinetic strikes on Iran, no US-Iran carrier exchange, and no new NATO-Russia airspace incident this week), with Trump's no-strike-before-midterms restraint still holding, so last week's easing to 0.37 is unchanged. No new node: ship sinkings and a record attack tempo are a severe development within the existing 2026_hormuz_crisis node, not a discrete era-defining event, and the Russia-Ukraine energy truce collapsed unsigned rather than becoming a consummated ceasefire (a signed agreement would warrant a node), consistent with this log's node discipline. Watched but not scored: the frontier-AI cadence stayed incremental (xAI Grok Voice 3.0 on Oct 14, Meta Muse Spark and IFM Jais 3 on Oct 15; Google's Gemini 4 is in post-training, not yet released) after the early-September flagship wave already counted, so no ai_development_year_offset tick, and the AI-valuation selloff is a markets signal scored via the growth modifier; no cyber-damage surge accompanied the autonomous-cyber theme, so global_cyber_damage_annual_b holds at 10.0; and no major earthquake or climate catastrophe landed in-window (early-October seismicity was routine, H5N1 poultry spread continued), mapping to no clean global structural dimension at meaningful magnitude this week."
+    },
+    {
+      "timestamp": "2026-10-26T13:35:01.388563+00:00",
+      "dimension_updates": {
+        "middle_east_stability": 0.09,
+        "nuclear_risk_level": 0.39,
+        "supply_chain_resilience": 0.39,
+        "global_gdp_growth_modifier": 0.98,
+        "conflict_deaths": 1557500
+      },
+      "new_nodes": [],
+      "reasoning": "Week of 2026-10-19 to 10-26. Two threads defined the week: a record-tempo escalation of the 2026 Strait of Hormuz war and the first concrete US-Israel preparations to strike Iran since summer. On ~Oct 22 Iran's state media/IRGC claimed seven oil tankers were struck or mined in a single day - if confirmed, the largest single-day vessel toll since the war began in February - amid a record October attack tempo (28+ attacks in the month, 11+ VLCCs hit in October, 30+ damaged since February per a Reuters review of IMO/MarineTraffic data). Commercial transit collapsed to ~4 vessels/day vs a typical ~85 (IMF PortWatch, Oct 18), with 135 ships having turned around since the Jul 14 blockade began. This drives supply_chain_resilience 0.41->0.39 (the chokepoint stress decisively worsened again - record attack tempo, a seven-tanker day, traffic crashing to single digits) and middle_east_stability 0.10->0.09 (war escalated to a new threshold, plus continuing Houthi strikes on Saudi airports/Aramco facilities; kept to -0.01 because the dimension is already deep in crisis territory and the US stayed restrained, holding kinetic fire until after the Nov 3 midterms). The fresh oil shock lifted Brent to a new cycle high ~$114.72-116.72 on Oct 23 (highest since April/May, +~3-5% on the week, breaking above the ~$110 Oct 16 and ~$107 September peaks) before easing ~2% to ~$115 by Oct 26 on tentative de-escalation hopes/profit-taking; markets turned risk-off and stagflationary (S&P 500 ~7,623.68 Friday, ~-0.5% on the week with nearly 3 of 4 stocks falling and energy the only winner, Nasdaq ~25,955), so global_gdp_growth_modifier eases 0.99->0.98 as the renewed ~$115 oil shock transmits further - a small tick because equities fell far less than last week's -2%/-4% rout and oil came off its high by Friday. The week's sharpest strategic-escalation signal lifts nuclear_risk_level 0.37->0.39: the New York Times reported the US and Israel have drafted detailed plans for a brief (~3-day) intensive campaign against Iran after the Nov 3 midterms explicitly targeting NUCLEAR SITES, energy infrastructure and missile/drone capabilities, Trump and Netanyahu renewed strike threats (Trump weighing a deal vs. 'finish them off'), and Iran threatened a broader response including strikes on data centers and undersea communications cables - the most concrete pre-kinetic, nuclear-relevant buildup against a latent-nuclear adversary in weeks, scored +0.02 (more concrete than the +0.01 third-carrier buildup or the Poland/Estonia incursions), partially reversing recent easing. Sustained two-front high-intensity combat (the Hormuz/Gulf maritime war with seven tankers hit and seafarer casualties, Houthi strikes on Saudi Arabia, daily Russia-Ukraine strikes killing civilians in Kyiv/Kharkiv, and Pakistani airstrikes in Afghanistan with reported civilian deaths) lifts cumulative conflict_deaths 1,554,000->1,557,500 on the established ~3,500/week tempo. Held steady: russia_stability stays 0.20 - the week was diplomacy-dominated (Zelensky-Witkoff-Stubb-Store talks in Oslo Oct 20, Kushner remote; Witkoff also met Putin in Moscow) with souring US-Ukraine ties (Trump again called for a new Ukraine leader; Kyiv accused Washington of leveraging aid/tech access to pressure it to halt refinery strikes, and the US reportedly asked for a strike pause), so despite the ongoing deep-strike campaign there was no fresh discrete internal shock to Russia this week, and the US pressure to pause refinery strikes slightly offsets - no decisive single-week mover. No new node: the Hormuz escalation (seven-tanker day, record tempo) is a severe development within the existing 2026_hormuz_crisis node, and the US-Israel strike plans are drafted contingency plans, not a consummated event - an actual major US/Israeli strike on Iranian nuclear sites, or a signed US-Iran or Russia-Ukraine ceasefire, would warrant a node - consistent with this log's node discipline. Watched but not scored: no confirmed frontier-AI flagship landed in-window (Gemini 4 still in post-training) after the early-September wave already counted, so no ai_development_year_offset tick and global_cyber_damage_annual_b holds at 10.0 absent an actual cyber-damage surge; Venezuela opposition leader Maria Corina Machado's return from exile, Brazil's presidential vote, renewed France unrest, the UK North Sea gas approval, and Uganda's 21-day quarantine over the DRC Ebola outbreak were geopolitically/epidemiologically notable but map to no clean global structural dimension at meaningful magnitude this week."
     }
   ]
 }
