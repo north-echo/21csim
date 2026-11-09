@@ -1,5 +1,5 @@
 # Real-world values — auto-updated by reality stream
-# Last update: 2026-11-02 13:30 UTC
+# Last update: 2026-11-09 13:21 UTC
 year: 2026
 
 # ── Geopolitical ──
@@ -8,16 +8,16 @@ eu_cohesion: 0.55
 us_global_standing: 0.55
 china_power_index: 0.52
 russia_stability: 0.2
-middle_east_stability: 0.09
+middle_east_stability: 0.11
 india_power_index: 0.3
 latin_america_stability: 0.38
 
 # ── Economic ──
-global_gdp_growth_modifier: 0.97
+global_gdp_growth_modifier: 0.98
 inequality_index: 0.62
 us_debt_gdp_ratio: 1.2
 crypto_market_cap_trillion: 2.5
-supply_chain_resilience: 0.38
+supply_chain_resilience: 0.41
 
 # ── Technology ──
 ai_development_year_offset: 5
@@ -27,7 +27,7 @@ human_augmentation_prevalence: 0.03
 space_development_index: 0.08
 
 # ── Security ──
-nuclear_risk_level: 0.39
+nuclear_risk_level: 0.37
 terrorism_threat_index: 0.25
 surveillance_state_index: 0.4
 global_cyber_damage_annual_b: 10.0
@@ -44,10 +44,10 @@ arctic_ice_status: 0.68
 
 # ── Human / Social ──
 global_pandemic_deaths: 7000000
-conflict_deaths: 1561000
+conflict_deaths: 1564000
 opioid_deaths_cumulative: 700000
 global_democracy_index: 0.52
-us_institutional_trust: 0.25
+us_institutional_trust: 0.26
 misinformation_severity: 0.65
 racial_justice_index: 0.42
 gender_equity_index: 0.52
@@ -57,7 +57,7 @@ median_age_global: 30.5
 automation_displacement: 0.15
 
 # ── Governance / Structure ──
-governance_model: 0.48
+governance_model: 0.49
 us_unity_index: 0.35
 europe_federation_index: 0.25
 china_regime_type: 0.1
