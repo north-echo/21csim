@@ -36,7 +36,7 @@ dependencies:
 conditional: null
 outcomes:
   tension_no_conflict:
-    status: "DIVERGENCE"
+    status: "HISTORICAL"
     description: "Heightened tensions but no military action"
     world_state_effects:
       nuclear_risk_level: "+0.03"
