@@ -35,7 +35,7 @@ dependencies:
 conditional: null
 outcomes:
   orderly_transition:
-    status: "PLAUSIBLE"
+    status: "HISTORICAL"
     description: "Managed migration to post-quantum standards with minimal disruption"
     world_state_effects:
       global_cyber_damage_annual_b: "+2.0"

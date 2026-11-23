@@ -47,7 +47,7 @@ outcomes:
     cascading_modifiers:
       2032_moon_base.us_only: "+0.10"
   delayed_2030:
-    status: "DIVERGENCE"
+    status: "HISTORICAL"
     description: "Artemis lunar landing slips to 2030 due to technical and funding delays"
     explanation: "HLS development challenges and congressional budget fights push timeline back"
     world_state_effects:
