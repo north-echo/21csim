@@ -49,6 +49,13 @@ judgment in-session; the tested Python pipeline does validation, clamping, and f
    Review what would be applied/rejected, then run it again without `--dry-run`.
    Never edit `reality_2026.yaml` by hand — the CLI clamps values and keeps the log.
 
+   The CLI also auto-writes a lightweight **weekly "reality pulse" node**
+   (`src/csim/data/nodes/YYYY_reality_YYYYMMDD.yaml`) that records this week's
+   dimension deltas so the update lands on the simulated timeline as a locked
+   historical event — this is separate from the era-defining `new_nodes` you
+   author. An empty-week update (no dimension changes) writes no pulse node.
+   Pass `--no-pulse` to suppress it. Commit the pulse node file with the rest.
+
 5. **Open a PR — never push to main.** Main deploys 21csim.com; the user
    reviews every reality update before it goes live.
    - Create a branch named `reality-update/YYYY-MM-DD` (today's date).

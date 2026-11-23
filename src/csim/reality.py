@@ -39,7 +39,13 @@ def load_reality(data_dir: Path) -> tuple[WorldState, dict[str, str]]:
         if key in ws_field_names:
             setattr(state, key, value)
 
-    # ── Determine locked results for pre-2026 nodes ──
+    # The reality snapshot represents the world as of the present day. Anything
+    # dated in or before the reality year has already happened; later nodes are
+    # the future being simulated.
+    reality_year = int(reality_data.get("year", 2026))
+    future_cutoff = f"{reality_year + 1}-01"  # first year_month that is "future"
+
+    # ── Determine locked results for settled (historical) nodes ──
     locked_results: dict[str, str] = {}
     nodes_dir = data_dir / "nodes"
 
@@ -57,8 +63,8 @@ def load_reality(data_dir: Path) -> tuple[WorldState, dict[str, str]]:
         if not year_month:
             continue
 
-        # Only lock nodes before 2026-01
-        if year_month >= "2026-01":
+        # Future nodes (after the reality year) stay probabilistic.
+        if year_month >= future_cutoff:
             continue
 
         node_id = node_data["id"]
@@ -66,12 +72,35 @@ def load_reality(data_dir: Path) -> tuple[WorldState, dict[str, str]]:
         if not isinstance(outcomes, dict) or not outcomes:
             continue
 
-        # Pick the HISTORICAL branch if one exists
-        historical_branch = _find_historical_branch(outcomes)
-        if historical_branch is not None:
-            locked_results[node_id] = historical_branch
+        if year_month < f"{reality_year}-01":
+            # Strictly pre-reality-year: lock to the historical outcome, falling
+            # back to the most-likely branch (preserves long-standing behaviour).
+            branch = _find_historical_branch(outcomes)
+        else:
+            # Within the reality year itself, lock ONLY nodes that carry an
+            # explicit HISTORICAL branch (settled reality-stream events such as
+            # 2026_hormuz_crisis and the weekly reality-pulse nodes). Genuine
+            # present-year forecasts with no historical outcome (e.g. the Taiwan
+            # or Artemis nodes) are left to be sampled, not pinned to a guess.
+            branch = _find_explicit_historical_branch(outcomes)
+
+        if branch is not None:
+            locked_results[node_id] = branch
 
     return state, locked_results
+
+
+def _find_explicit_historical_branch(outcomes: dict) -> str | None:
+    """Return the branch explicitly marked ``status: HISTORICAL``, else None.
+
+    Unlike :func:`_find_historical_branch`, this does NOT fall back to the
+    highest-probability branch — absence of a HISTORICAL branch means the event
+    is an unresolved forecast that should keep being sampled.
+    """
+    for branch_name, branch_data in outcomes.items():
+        if isinstance(branch_data, dict) and branch_data.get("status", "") == "HISTORICAL":
+            return branch_name
+    return None
 
 
 def _find_historical_branch(outcomes: dict) -> str | None:

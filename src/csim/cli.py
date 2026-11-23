@@ -95,7 +95,10 @@ def run(
         initial_state, locked_results = load_reality(data_dir)
         typer.echo(f"Starting from reality: {len(locked_results)} nodes locked to historical outcomes")
 
-    outcome = simulate(graph, seed, initial_state=initial_state, locked_results=locked_results)
+    outcome = simulate(
+        graph, seed, initial_state=initial_state, locked_results=locked_results,
+        apply_locked_effects=not from_reality,
+    )
 
     # Resolve narration provider
     llm_provider = None
@@ -172,7 +175,8 @@ def batch(
 
     typer.echo(f"Running {iterations} simulations...")
     result = simulate_batch(graph, iterations, parallel=parallel,
-                            initial_state=initial_state, locked_results=locked_results)
+                            initial_state=initial_state, locked_results=locked_results,
+                            apply_locked_effects=not from_reality)
 
     if format == OutputFormat.json or output:
         from csim.exporter import export_batch_json, serialize_batch
@@ -427,6 +431,7 @@ def update_reality(
     provider: str | None = typer.Option(None, "--provider", help="LLM provider: claude|ollama"),
     model: str | None = typer.Option(None, "--model", help="Override model name"),
     newsapi_key: str | None = typer.Option(None, "--newsapi-key", envvar="NEWSAPI_KEY", help="NewsAPI.org key"),
+    pulse: bool = typer.Option(True, "--pulse/--no-pulse", help="Also emit a weekly reality-pulse timeline node"),
 ) -> None:
     """Fetch world news and update reality state via LLM analysis."""
     import asyncio
@@ -479,6 +484,7 @@ def update_reality(
         newsapi_key=api_key,
         days_back=days_back,
         dry_run=dry_run,
+        emit_pulse=pulse,
     ))
 
     # Display results
@@ -517,6 +523,7 @@ def update_reality(
 def apply_reality_updates(
     updates_file: Path = typer.Argument(..., help="JSON file with dimension_updates, new_nodes, reasoning"),
     dry_run: bool = typer.Option(False, "--dry-run", help="Validate and show changes without writing"),
+    pulse: bool = typer.Option(True, "--pulse/--no-pulse", help="Also emit a weekly reality-pulse timeline node"),
 ) -> None:
     """Apply a pre-computed reality update authored outside the API path.
 
@@ -524,11 +531,12 @@ def apply_reality_updates(
     is supplied directly — e.g. authored by Claude Code from web research —
     so no NewsAPI or Anthropic API calls are made.
     """
+    import yaml
     from rich.console import Console
     from rich.table import Table
 
     from csim.llm.analyst import validate_dimension_updates, validate_new_nodes
-    from csim.reality_stream import export_reality_snapshot, update_reality
+    from csim.reality_stream import build_weekly_node, export_reality_snapshot, update_reality
 
     console = Console()
     data_dir = _get_data_dir()
@@ -565,11 +573,23 @@ def apply_reality_updates(
         for node in nodes:
             console.print(f"  • {node['year_month']} — {node['title']}")
 
+    if pulse:
+        from datetime import UTC, datetime
+        preview = build_weekly_node(
+            yaml.safe_load((data_dir / "reality_2026.yaml").read_text()),
+            dims, reasoning, datetime.now(UTC),
+        )
+        if preview is not None:
+            console.print(
+                f"\n[bold]Weekly pulse node:[/] {preview['id']} "
+                f"({preview['domain']}) — effects on {len(preview['world_state_effects'])} dimension(s)"
+            )
+
     if dry_run:
         console.print("\n[yellow]No files modified (dry run).[/]")
         return
 
-    update_reality(data_dir, dims, nodes, update_log={"reasoning": reasoning})
+    update_reality(data_dir, dims, nodes, update_log={"reasoning": reasoning}, emit_pulse=pulse)
     console.print("\n[green]✓ reality_2026.yaml updated[/]")
     web_dir = Path(__file__).parent.parent.parent / "web"
     if web_dir.is_dir():
