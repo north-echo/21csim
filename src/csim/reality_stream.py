@@ -111,12 +111,133 @@ def _fetch_newsapi(url: str, api_key: str) -> list[dict]:
 
 # ── Reality Update ──
 
+# Which simulation domain each dimension belongs to, for tagging the weekly
+# pulse node. Valid domains match csim.llm.analyst._VALID_DOMAINS.
+_DIMENSION_DOMAINS: dict[str, str] = {
+    # Geopolitical
+    "us_polarization": "geopolitical", "eu_cohesion": "geopolitical",
+    "us_global_standing": "geopolitical", "china_power_index": "geopolitical",
+    "russia_stability": "geopolitical", "middle_east_stability": "geopolitical",
+    "india_power_index": "geopolitical", "latin_america_stability": "geopolitical",
+    # Economic
+    "global_gdp_growth_modifier": "economic", "inequality_index": "economic",
+    "us_debt_gdp_ratio": "economic", "crypto_market_cap_trillion": "economic",
+    "supply_chain_resilience": "economic",
+    # Technology
+    "ai_development_year_offset": "technology", "internet_freedom_index": "technology",
+    "social_media_penetration": "technology", "human_augmentation_prevalence": "technology",
+    "space_development_index": "technology",
+    # Security
+    "nuclear_risk_level": "security", "terrorism_threat_index": "security",
+    "surveillance_state_index": "security", "global_cyber_damage_annual_b": "security",
+    "drone_warfare_prevalence": "security",
+    # Climate / Environment
+    "climate_temp_anomaly": "climate", "renewable_energy_share": "climate",
+    "sea_level_rise_meters": "climate", "biodiversity_index": "climate",
+    "water_stress_index": "climate", "food_security_index": "climate",
+    "arctic_ice_status": "climate",
+    # Human / Social
+    "global_pandemic_deaths": "social", "conflict_deaths": "social",
+    "opioid_deaths_cumulative": "social", "global_democracy_index": "social",
+    "us_institutional_trust": "social", "misinformation_severity": "social",
+    "racial_justice_index": "social", "gender_equity_index": "social",
+    "us_life_expectancy_delta": "social", "global_population_billions": "social",
+    "median_age_global": "social", "automation_displacement": "social",
+    # Governance / Structure (no dedicated domain → geopolitical)
+    "governance_model": "geopolitical", "us_unity_index": "geopolitical",
+    "europe_federation_index": "geopolitical", "china_regime_type": "geopolitical",
+    "middle_east_post_oil": "geopolitical", "arctic_sovereignty_resolved": "geopolitical",
+    "africa_development_index": "geopolitical",
+    # Existential
+    "existential_risk_cumulative": "shock",
+}
+
+# Tie-break order when a week touches several domains equally.
+_DOMAIN_PRIORITY = ("shock", "security", "geopolitical", "economic", "climate", "technology", "social")
+
+# Integer dimensions whose deltas are whole numbers (mirrors world_state._INT_DIMENSIONS).
+_INT_DELTA_DIMS = {
+    "global_pandemic_deaths", "conflict_deaths", "opioid_deaths_cumulative",
+    "ai_development_year_offset",
+}
+
+
+def _fmt_delta(delta: float, dim: str) -> str:
+    """Format a numeric delta as a signed effect string (e.g. '+0.01', '-3000')."""
+    if dim in _INT_DELTA_DIMS:
+        return f"{int(round(delta)):+d}"
+    s = f"{delta:+.4f}".rstrip("0")
+    if s.endswith("."):
+        s += "0"
+    return s
+
+
+def _dominant_domain(dims: dict) -> str:
+    """Pick the domain tag for a pulse node from the dimensions it touched."""
+    counts: dict[str, int] = {}
+    for dim in dims:
+        domain = _DIMENSION_DOMAINS.get(dim)
+        if domain:
+            counts[domain] = counts.get(domain, 0) + 1
+    if not counts:
+        return "geopolitical"
+    top = max(counts.values())
+    winners = [d for d, c in counts.items() if c == top]
+    for domain in _DOMAIN_PRIORITY:
+        if domain in winners:
+            return domain
+    return winners[0]
+
+
+def build_weekly_node(
+    reality_before: dict,
+    dimension_updates: dict[str, float],
+    reasoning: str,
+    now: datetime,
+) -> dict | None:
+    """Build a lightweight HISTORICAL "reality pulse" node for the week.
+
+    The node records the week's dimension changes as delta effects and carries
+    the analyst reasoning as its description, so each weekly update lands on the
+    simulated timeline as a visible (locked, historical) event rather than only
+    nudging the present-day baseline. Returns None when there is nothing to
+    record (an empty-week update).
+    """
+    effects: dict[str, str] = {}
+    for dim, new_val in dimension_updates.items():
+        if dim == "year":
+            continue
+        old_val = reality_before.get(dim)
+        if old_val is None:
+            continue  # brand-new dimension: no delta to express
+        try:
+            delta = float(new_val) - float(old_val)
+        except (TypeError, ValueError):
+            continue
+        if delta == 0:
+            continue
+        effects[dim] = _fmt_delta(delta, dim)
+
+    if not effects:
+        return None
+
+    date_str = now.strftime("%Y-%m-%d")
+    return {
+        "id": f"{now.year}_reality_{now.strftime('%Y%m%d')}",
+        "year_month": now.strftime("%Y-%m"),
+        "title": f"Reality pulse: week of {date_str}",
+        "description": (reasoning or "").strip() or f"Weekly reality-stream update ({date_str}).",
+        "domain": _dominant_domain(effects),
+        "world_state_effects": effects,
+    }
+
 
 def update_reality(
     data_dir: Path,
     dimension_updates: dict[str, float],
     new_nodes: list[dict],
     update_log: dict | None = None,
+    emit_pulse: bool = True,
 ) -> Path:
     """Apply updates to the rolling reality YAML and write new node files.
 
@@ -125,6 +246,9 @@ def update_reality(
         dimension_updates: Dict of dimension -> new absolute value
         new_nodes: List of node dicts to write as YAML files
         update_log: Optional metadata to append to the update log
+        emit_pulse: When True, also write a lightweight weekly "reality pulse"
+            node capturing this update's dimension deltas, so the week appears
+            as an event on the simulated timeline (see build_weekly_node).
 
     Returns:
         Path to updated reality file
@@ -134,6 +258,9 @@ def update_reality(
     # Load current reality
     with open(reality_path) as f:
         reality = yaml.safe_load(f)
+
+    reality_before = dict(reality)  # snapshot for pulse-node deltas
+    now = datetime.now(UTC)
 
     # Apply dimension updates
     for dim, value in dimension_updates.items():
@@ -154,6 +281,18 @@ def update_reality(
             node_yaml = build_node_yaml(node)
             node_path.write_text(node_yaml)
 
+    # Write the weekly reality-pulse node so the week lands on the timeline.
+    pulse_id = None
+    if emit_pulse:
+        pulse_node = build_weekly_node(
+            reality_before, dimension_updates, (update_log or {}).get("reasoning", ""), now
+        )
+        if pulse_node is not None:
+            pulse_id = pulse_node["id"]
+            pulse_path = nodes_dir / f"{pulse_id}.yaml"
+            if not pulse_path.exists():
+                pulse_path.write_text(build_node_yaml(pulse_node))
+
     # Append to update log
     log_path = data_dir / "reality_stream_log.json"
     log_entries = []
@@ -164,9 +303,10 @@ def update_reality(
             log_entries = []
 
     log_entry = {
-        "timestamp": datetime.now(UTC).isoformat(),
+        "timestamp": now.isoformat(),
         "dimension_updates": dimension_updates,
         "new_nodes": [n["id"] for n in new_nodes],
+        "pulse_node": pulse_id,
         "reasoning": (update_log or {}).get("reasoning", ""),
     }
     log_entries.append(log_entry)
@@ -284,6 +424,7 @@ async def run_reality_stream(
     newsapi_key: str,
     days_back: int = 7,
     dry_run: bool = False,
+    emit_pulse: bool = True,
 ) -> dict:
     """Full reality stream cycle: fetch news → analyze → update.
 
@@ -333,6 +474,7 @@ async def run_reality_stream(
             result.get("dimension_updates", {}),
             result.get("new_nodes", []),
             update_log={"reasoning": result.get("reasoning", "")},
+            emit_pulse=emit_pulse,
         )
 
     return {

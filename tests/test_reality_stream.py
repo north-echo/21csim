@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+from datetime import UTC, datetime
 
 import pytest
 import yaml
@@ -17,7 +18,10 @@ from csim.llm.analyst import (
 )
 from csim.llm.base import LLMProvider
 from csim.reality_stream import (
+    _dominant_domain,
+    _fmt_delta,
     _write_reality_yaml,
+    build_weekly_node,
     export_reality_snapshot,
     update_reality,
 )
@@ -313,6 +317,85 @@ def test_write_reality_yaml_is_idempotent(data_dir):
     _write_reality_yaml(path, yaml.safe_load(path.read_text()))
     second = strip_ts(path.read_text())
     assert first == second
+
+
+# ── Weekly reality-pulse node (A) ──
+
+
+def test_fmt_delta_float_and_int():
+    assert _fmt_delta(-0.02, "middle_east_stability") == "-0.02"
+    assert _fmt_delta(0.01, "nuclear_risk_level") == "+0.01"
+    assert _fmt_delta(0.5, "supply_chain_resilience") == "+0.5"
+    assert _fmt_delta(3000, "conflict_deaths") == "+3000"
+    assert _fmt_delta(-2500.0, "conflict_deaths") == "-2500"
+
+
+def test_dominant_domain_picks_most_touched():
+    # two geopolitical dims vs one economic -> geopolitical wins
+    assert _dominant_domain(
+        {"russia_stability": 1, "us_global_standing": 1, "supply_chain_resilience": 1}
+    ) == "geopolitical"
+    assert _dominant_domain({}) == "geopolitical"
+
+
+def test_build_weekly_node_computes_deltas():
+    now = datetime(2026, 11, 23, tzinfo=UTC)
+    before = {"middle_east_stability": 0.13, "nuclear_risk_level": 0.37, "conflict_deaths": 1_567_000}
+    updates = {"middle_east_stability": 0.11, "nuclear_risk_level": 0.36, "conflict_deaths": 1_570_000}
+    node = build_weekly_node(before, updates, "Week of 2026-11-16 to 11-23.", now)
+
+    assert node["id"] == "2026_reality_20261123"
+    assert node["year_month"] == "2026-11"
+    assert node["world_state_effects"] == {
+        "middle_east_stability": "-0.02",
+        "nuclear_risk_level": "-0.01",
+        "conflict_deaths": "+3000",
+    }
+    assert "2026-11-16" in node["description"]
+    # Round-trips through build_node_yaml as a locked HISTORICAL event.
+    parsed = yaml.safe_load(build_node_yaml(node))
+    assert parsed["distribution"]["options"] == {"reality_20261123": 1.0}
+    assert parsed["outcomes"]["reality_20261123"]["status"] == "HISTORICAL"
+
+
+def test_build_weekly_node_none_when_no_change():
+    now = datetime(2026, 11, 23, tzinfo=UTC)
+    # Values identical to before -> zero deltas -> no pulse node.
+    assert build_weekly_node({"x": 0.5}, {}, "", now) is None
+    assert build_weekly_node({"middle_east_stability": 0.11}, {"middle_east_stability": 0.11}, "", now) is None
+
+
+def test_update_reality_emits_pulse_node(data_dir):
+    update_reality(
+        data_dir,
+        {"middle_east_stability": 0.3, "conflict_deaths": 1_502_000},
+        [],
+        update_log={"reasoning": "stuff happened"},
+    )
+    log = json.loads((data_dir / "reality_stream_log.json").read_text())
+    pulse_id = log[-1]["pulse_node"]
+    assert pulse_id and pulse_id.startswith("2026_reality_")
+
+    pulse_path = data_dir / "nodes" / f"{pulse_id}.yaml"
+    assert pulse_path.exists()
+    parsed = yaml.safe_load(pulse_path.read_text())
+    branch = next(iter(parsed["outcomes"]))
+    effects = parsed["outcomes"][branch]["world_state_effects"]
+    assert effects == {"middle_east_stability": "-0.1", "conflict_deaths": "+2000"}
+
+
+def test_update_reality_no_pulse_when_disabled(data_dir):
+    update_reality(data_dir, {"middle_east_stability": 0.3}, [], emit_pulse=False)
+    log = json.loads((data_dir / "reality_stream_log.json").read_text())
+    assert log[-1]["pulse_node"] is None
+    pulse_files = [p for p in (data_dir / "nodes").glob("*.yaml") if "reality_" in p.name]
+    assert pulse_files == []
+
+
+def test_update_reality_empty_week_no_pulse(data_dir):
+    update_reality(data_dir, {}, [], update_log={"reasoning": "quiet week"})
+    log = json.loads((data_dir / "reality_stream_log.json").read_text())
+    assert log[-1]["pulse_node"] is None
 
 
 def test_fmt_value_canonical():

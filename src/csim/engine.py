@@ -35,6 +35,7 @@ def simulate(
     seed: int,
     initial_state: WorldState | None = None,
     locked_results: dict[str, str] | None = None,
+    apply_locked_effects: bool = True,
 ) -> SimOutcome:
     """Core simulation loop for a single run.
 
@@ -55,8 +56,14 @@ def simulate(
         seed: RNG seed for reproducibility.
         initial_state: If provided, use instead of default year-2000 WorldState.
         locked_results: If provided, a dict of node_id -> branch that should be
-            used instead of sampling.  World-state effects from locked nodes
-            are still applied.
+            used instead of sampling.
+        apply_locked_effects: When True (default, a from-year-2000 run) the
+            world-state effects of locked historical nodes are applied as the
+            timeline is replayed.  When False (a ``--from-reality`` run) they are
+            skipped: ``initial_state`` already encodes the cumulative effect of
+            everything up to the present, so re-applying each historical node's
+            deltas on top of it would double-count ~26 years of history.  Locked
+            events still appear on the timeline; they just don't move the state.
     """
     rng = np.random.default_rng(seed)
     state = copy.copy(initial_state) if initial_state is not None else WorldState()
@@ -113,8 +120,9 @@ def simulate(
         if isinstance(outcome_data, dict):
             effects = outcome_data.get("world_state_effects", {}) or {}
 
+        is_locked = bool(locked_results) and node_id in locked_results
         old_state = copy.copy(state)
-        if effects:
+        if effects and not (is_locked and not apply_locked_effects):
             state = apply_effects(state, effects)
 
         # Track divergences
@@ -192,6 +200,7 @@ def _simulate_worker(
     seed: int,
     initial_state: WorldState | None = None,
     locked_results: dict[str, str] | None = None,
+    apply_locked_effects: bool = True,
 ) -> SimOutcome:
     """Worker function for parallel batch simulation.
 
@@ -200,7 +209,10 @@ def _simulate_worker(
     graph never needs to be pickled directly.
     """
     graph = nx.node_link_graph(graph_data)
-    return simulate(graph, seed, initial_state=initial_state, locked_results=locked_results)
+    return simulate(
+        graph, seed, initial_state=initial_state, locked_results=locked_results,
+        apply_locked_effects=apply_locked_effects,
+    )
 
 
 def simulate_batch(
@@ -210,6 +222,7 @@ def simulate_batch(
     parallel: int = 1,
     initial_state: WorldState | None = None,
     locked_results: dict[str, str] | None = None,
+    apply_locked_effects: bool = True,
 ) -> BatchResult:
     """Run N simulations, optionally parallelized."""
     if seeds is None:
@@ -222,11 +235,12 @@ def simulate_batch(
         with Pool(workers) as pool:
             outcomes = pool.starmap(
                 _simulate_worker,
-                [(graph_data, s, initial_state, locked_results) for s in seeds],
+                [(graph_data, s, initial_state, locked_results, apply_locked_effects) for s in seeds],
             )
     else:
         outcomes = [
-            simulate(graph, s, initial_state=initial_state, locked_results=locked_results)
+            simulate(graph, s, initial_state=initial_state, locked_results=locked_results,
+                     apply_locked_effects=apply_locked_effects)
             for s in seeds
         ]
 
